@@ -1,0 +1,52 @@
+# This is the list of SCRIVA authors for copyright purposes.
+
+Sabrina Gemignani
+Barbara Simone
+Simona Rotolo
+Laura Veneruso
+Silvia Cordero
+Erika Caggiano
+Valeria Foco
+Serena Ghirlandi
+Alessia Tavella
+Laura Fossi
+Sandra Governi
+Michele Greco
+Jessica Cacciatore
+Alessandro Verner
+Antonello Navarretta
+Diego Sanmartino
+Daniela Piazza
+Valeria Foco
+Giuseppe Iacovone
+Marco Chessa
+Marco Panepinto
+Alberto Cavallero
+Ivana Atzori
+Paolo Loddo
+Arjel Dragoj
+Antonio Grussu
+Giordano Torelli
+Diego Sabbagh
+Stefano Diana
+Lorenzo Fantini
+Michele Greco
+Roberto Orrù
+Ismaele Bottelli
+Debora Ferroni
+Sonia Muzzolon
+Davide Scutiero
+Paolo Derchi
+Valentina Volpe
+Andrea Vergari
+Paolo Piedepalumbo
+Stefano Subbacchi
+Pierluigi Spedicato
+Andrea Cossu
+Enrico Del Piano
+Giuseppe Massimo Olivieri
+
+# This does not necessarily list everyone who has contributed code, since in
+# some cases, their employer may be the copyright holder.  To see the full list 
+# of contributors, see the revision history in source control.
+
