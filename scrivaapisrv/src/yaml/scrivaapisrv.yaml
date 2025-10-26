@@ -1,0 +1,1076 @@
+
+##
+# ========================LICENSE_START=================================
+# 
+# Copyright (C) 2025 Regione Piemonte
+# 
+# SPDX-FileCopyrightText: Copyright 2025 | Regione Piemonte
+# SPDX-License-Identifier: EUPL-1.2
+# =========================LICENSE_END==================================
+##
+swagger: '2.0'
+info:
+  title: scriva-api
+  description: Servizi di fruizione SCRIVA
+  version: v1
+host: "tst-scrivaapisrv.csi.it"
+basePath: "/scrivaapisrv/api/v1"
+schemes:
+  - "http"
+paths:
+  '/ping':
+    get:
+      tags:
+        - "Ping"
+      operationId: ping
+      parameters: [ ]
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/Ping'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/documenti-pubblicati':
+    get:
+      tags:
+        - "Documenti"
+      operationId: getDocumentiPubblicati
+      parameters:
+        - in: header
+          name: X-Request-Auth
+          description: Oggetto di tipo OperationContext in formato Json e codificato in base64. Deve contenere le informazioni di login per accedere ai servizi SCRIVA.
+          type: string
+        - in: header
+          name: X-Request-Id
+          description: Identificativo univoco della richiesta. Utilizzato per identificare e tracciare una singola chiamata.
+          type: string
+        - format: int64
+          in: query
+          name: id_istanza
+          description: Identificativo dell'istanza.
+          type: integer
+        - in: query
+          name: cod_allegato
+          description: Codice dell'allegato da recuperare.
+          type: string
+        - in: query
+          name: cod_classe_allegato
+          description: Codice della classe degli allegati da recuperare.
+          type: string
+        - in: query
+          name: cod_categoria_allegato
+          description: Codice delle categorie degli allegato da recuperare.
+          type: string
+        - in: query
+          name: cod_tipologia_allegato
+          description: Codice della tipologia degli allegati da recuperare.
+          type: string
+        - default: 'FALSE'
+          in: query
+          name: flg_link_documento
+          description: Se impostato a TRUE riporta tra gli attributi anche il link del documento (url_documento). Se quest’ultimo non è un documento pubblicato/non riservato, il sistema fornisce un link temporaneo di 15 minuti.
+          type: string
+        - default: 1
+          format: int32
+          in: query
+          name: offset
+          description: Indica l’indice nel dataset (posizione) del primo elemento ritornato nella pagina.
+          type: integer
+        - default: 20
+          format: int32
+          in: query
+          name: limit
+          description: Indica il numero massimo di record restituiti.
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/PubDocIstanzaExtendedDTO'
+        '403':
+          description: Authentication error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/pratiche-istruttoria':
+    post:
+      tags:
+        - "Pratiche Istruttoria"
+      consumes:
+        - application/json
+      operationId: gestionePraticheIstruttoria
+      description: >
+        Servizio per la gestione delle pratiche in istruttoria
+           >
+             In base ai parametri passati, le attività che potrà svolgere il servizio sono le seguenti:
+               •	Aggiornamento metadati istanza
+               •	Aggiornamento metadati documenti
+               •	Inserimento file binari documenti passati tramite link
+               •	Tracciatura evento, e qualora l’evento lo richieda, cambio di stato dell’istanza.
+      parameters:
+        - in: header
+          name: X-Request-Auth
+          description: Oggetto di tipo OperationContext in formato Json e codificato in base64. Deve contenere le informazioni di login per accedere ai servizi SCRIVA.
+          type: string
+        - in: header
+          name: X-Request-Id
+          description: Identificativo univoco della richiesta. Utilizzato per identificare e tracciare una singola chiamata.
+          type: string
+        - in: query
+          name: cod_istanza
+          description: Identificativo SCRIVA dell'Istanza
+          type: string
+        - in: query
+          name: cod_tipo_evento
+          description: Evento da tracciare
+          type: string
+        - default: false
+          in: query
+          name: flag_codice_pratica
+          description: se TRUE il servizio genererà un codice pratica da assegnare all’istanza
+          type: boolean
+        - default: false
+          in: query
+          name: flag_pubblica_pratica
+          description: se TRUE il servizio pubblicherà l’istanza e i relativi allegati
+          type: boolean
+        - in: body
+          name: PraticaIstruttoria
+          schema:
+            $ref: '#/definitions/PraticaIstruttoriaDTO'
+          description: >
+            L'oggetto in input è opzionale ma richiesto.
+            Qualora non si debbano passare informazioni, valorizzare con "{}".
+            Si compone di 2 elementi:
+              •	dati_istanza : metadati istanza
+              •	dati_documento : metadati documenti ed eventuali link da cui scaricare i file da allegare (array).
+
+            Esempio di metadati dell'istanza sotto forma di stringa json
+              >
+                {
+                  "cod_istanza": "VER-2021-0090",
+                  "data_inizio_osservazione": "2022-08-13 00:00:00",
+                  "data_fine_osservazione": "2022-09-12 23:59:59"
+                }
+
+            Esempio di metadati del documento sotto forma di stringa json (anche se è solo un elemento deve essere contenuto all'interno di un array)
+              >
+                [
+                  {
+                    "tipologia_allegato": {
+                      "cod_tipologia_allegato": "NOTA_OSS"
+                    },
+                    "cod_allegato": "uuidCOSMO",
+                    "flg_riservato": true,
+                    "flg_da_pubblicare": false,
+                    "nome_allegato": "documento.pdf",
+                    "note": "Nota riguardante il documento",
+                    "titolo_allegato": "Titolo Allegato",
+                    "autore_allegato": "Autore Allegato",
+                    "num_protocollo_allegato": "Prot032022",
+                    "data_protocollo_allegato": "2022-08-12 14:23:49",
+                    "link_documento": "/documenti/e9b70bdf-2a0c-4501-8cc6-987b4b99ac71/contenuto"
+                  }
+                ]
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation (return empty object "{}").
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '409':
+          description: Item state conflicts.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti':
+    get:
+      tags:
+        - "Soggetti"
+      operationId: getSoggetti
+      description: >
+        Servizio per il recupero dei Soggetti dal sistema SCRIVA
+           >
+             le combinazioni di parametri ammesse sono:
+              • id_soggetto
+              • codice_fiscale + tipo_soggetto
+              • codice_fiscale + tipo_soggetto + cod_adempimento
+              • codice_fiscale + tipo_soggetto + codice_fiscale_impresa
+      parameters:
+        - in: header
+          name: X-Request-Auth
+          description: Oggetto di tipo OperationContext in formato Json e codificato in base64. Deve contenere le informazioni di login per accedere ai servizi SCRIVA.
+          type: string
+        - in: header
+          name: X-Request-Id
+          description: Identificativo univoco della richiesta. Utilizzato per identificare e tracciare una singola chiamata.
+          type: string
+        - format: int64
+          in: query
+          name: id_soggetto
+          description: Identificativo SCRIVA del Soggetto.
+          required: false
+          type: integer
+        - in: query
+          name: codice_fiscale
+          description: Codice Fiscale del Soggetto.
+          required: false
+          type: string
+        - in: query
+          name: tipo_soggetto
+          description: >
+            Tipologia del Soggetto.
+              >
+                I valori possibili sono
+                  • PF (Persona Fisica)
+                  • PG (Persona Giuridica di Diritto Privato)
+                  • PB (Persona Giuridica di Diritto Pubblico)
+          required: false
+          type: string
+        - in: query
+          name: cod_adempimento
+          description: >
+            Tipologia dell' Adempimento.
+              >
+                I valori possibili sono
+                  • VER (Verifica di assoggettabilità a VIA)
+                  • VPR (Valutazione Preliminare)
+                  • VAL (Valutazione di Impatto Ambientale)
+                  • SCO (Definizione contenuti SIA)
+                  • OTT (Verifica di Ottemperanza)
+                  • PRO (Proroga dei termini)
+                  • DER (Concessione di attingimento)
+                  • ...
+          required: false
+          type: string
+        - in: query
+          name: codice_fiscale_impresa
+          description: Codice Fiscale dell' Impresa.
+          required: false
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoExtendedDTO'
+            type: array
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Soggetti"
+      consumes:
+        - application/json
+      operationId: saveSoggetto
+      description: >
+        Servizio per inserimento/aggiornamento di un Soggetto nel sistema SCRIVA
+      parameters:
+        - in: header
+          name: X-Request-Auth
+          description: Oggetto di tipo OperationContext in formato Json e codificato in base64. Deve contenere le informazioni di login per accedere ai servizi SCRIVA.
+          type: string
+        - in: header
+          name: X-Request-Id
+          description: Identificativo univoco della richiesta. Utilizzato per identificare e tracciare una singola chiamata.
+          type: string
+        - in: body
+          name: body
+          description: Metadati del soggetto da inserire/aggiornare
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '409':
+          description: Item state conflicts.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+definitions:
+  CategoriaAllegatoDTO:
+    properties:
+      cod_categoria_allegato:
+        type: string
+        description: Codice categoria di appartenenza del documento
+        example: ALTRA-DOC
+      des_categoria_allegato:
+        type: string
+        description: Descrizione categoria di appartenenza del documento
+        example: Ulteriore documentazione
+    type: object
+  ClasseAllegatoDTO:
+    properties:
+      cod_classe_allegato:
+        type: string
+        description: Codice della classe di appartenenza del documento
+        example: ELAB_PROGETTUALI
+      des_classe_allegato:
+        type: string
+        description: Descrizione della classe di appartenenza del documento
+        example: Elaborati progettuali
+    type: object
+  ComuneExtendedDTO:
+    properties:
+      cap_comune:
+        type: string
+        description: CAP del comune
+        example: 10121
+      cod_belfiore_comune:
+        type: string
+        example: L219
+      cod_istat_comune:
+        type: string
+        description: Codice Istat del comune
+        example: 001272
+      data_fine_validita:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      denom_comune:
+        type: string
+        description: denominazione del comune
+        example: Torino
+      dt_id_comune:
+        format: int64
+        type: integer
+      dt_id_comune_next:
+        format: int64
+        type: integer
+      dt_id_comune_prev:
+        format: int64
+        type: integer
+      id_comune:
+        format: int64
+        type: integer
+        description: Identificativo SCRIVA del comune
+      id_provincia:
+        format: int64
+        type: integer
+        description: Identificativo SCRIVA della provincia
+      provincia:
+        $ref: '#/definitions/ProvinciaExtendedDTO'
+    type: object
+  NazioneDTO:
+    properties:
+      cod_belfiore_nazione:
+        type: string
+      cod_iso2:
+        type: string
+      cod_istat_nazione:
+        type: string
+      data_fine_validita:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      denom_nazione:
+        type: string
+      dt_id_stato:
+        format: int64
+        type: integer
+      dt_id_stato_next:
+        format: int64
+        type: integer
+      dt_id_stato_prev:
+        format: int64
+        type: integer
+      id_nazione:
+        format: int64
+        type: integer
+      id_origine:
+        format: int64
+        type: integer
+    type: object
+  Ping:
+    properties:
+      label:
+        type: string
+        description: Etichetta identificativa servizio
+        example: "Database"
+      status:
+        type: string
+        description: Stao del servizio
+        example: "OK"
+    type: object
+  OrganoTecnicoDTO:
+    properties:
+      des_direzione_competente:
+        type: string
+        description: Descrizione della direzione competente
+        example:
+      des_rappresentante_nucleo:
+        type: string
+        description: Descrizione del rappresentante nucleo
+        example:
+      des_responsabile_procedimento:
+        type: string
+        description: Descrizione del responsabile del procedimento
+        example: Mario Rossi
+    type: object
+  PraticaIstruttoriaDTO:
+    properties:
+      dati_documento:
+        type: array
+        items:
+          $ref: '#/definitions/PubDocIstanzaLinkDTO'
+      dati_istanza:
+        $ref: '#/definitions/PubIstanzaDTO'
+    type: object
+  ProcedimentoStataleDTO:
+    properties:
+      data_consegna_doc_esterna:
+        format: date-time
+        type: string
+      data_pubblicazione_esterna:
+        format: date-time
+        type: string
+      url_portale_esterno:
+        type: string
+    type: object
+  ProvinciaExtendedDTO:
+    properties:
+      cod_provincia:
+        type: string
+      data_fine_validita:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      denom_provincia:
+        type: string
+      flg_limitrofa:
+        type: boolean
+      id_provincia:
+        format: int64
+        type: integer
+      id_regione:
+        format: int64
+        type: integer
+      ordinamento_adempi_provincia:
+        format: int32
+        type: integer
+      regione:
+        $ref: '#/definitions/RegioneExtendedDTO'
+      sigla_provincia:
+        type: string
+    type: object
+  PubAdempimentoDTO:
+    properties:
+      cod_adempimento:
+        type: string
+      cod_tipo_adempimento:
+        type: string
+      des_adempimento:
+        type: string
+      des_tipo_adempimento:
+        type: string
+    type: object
+  PubCompetenzaTerritorioDTO:
+    properties:
+      cap_competenza:
+        type: string
+      cod_competenza_territorio:
+        type: string
+      comune_competenza:
+        $ref: '#/definitions/ComuneExtendedDTO'
+      data_fine_validita:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      des_competenza_territorio:
+        type: string
+      des_mail_pec:
+        type: string
+      id_competenza_territorio:
+        format: int64
+        type: integer
+      indirizzo_competenza:
+        type: string
+      num_civico_indirizzo:
+        type: string
+      orario:
+        type: string
+      responsabile:
+        type: string
+      sito_web:
+        type: string
+      tipo_competenza:
+        $ref: '#/definitions/TipoCompetenzaDTO'
+    type: object
+  PubDocIstanzaExtendedDTO:
+    properties:
+      autore_allegato:
+        type: string
+        description: Autore del documento
+        example: Mario Rossi
+      classe_allegato:
+        $ref: '#/definitions/ClasseAllegatoDTO'
+        description: Classe di appartenenza del documento
+      cod_allegato:
+        type: string
+        description: Codice univoco del documento
+        example: VER-2022-0035
+      cod_allegato_padre:
+        type: string
+        description: Codice univoco del documento padre
+        example: VER-2022-0034
+      data_protocollo_allegato:
+        format: date-time
+        type: string
+        description: Data di protocollazione del documento
+        example: 2022-08-15 14:23:49
+      data_pubblicazione:
+        format: date-time
+        type: string
+        description: Data di pubblicazione del documento
+        example: 2022-08-22 15:23:49
+      dimensione_upload:
+        format: int64
+        type: integer
+        description: Dimensione del file del documento
+        example: 1912
+      flg_cancellato:
+        type: boolean
+        description: Flag cancellazione logica
+        example: false
+      flg_da_pubblicare:
+        type: boolean
+        description: Flag che indica se il documento dovrà essere pubblicato
+        example: false
+      flg_riservato:
+        type: boolean
+        description: Flag che indica se la visione del documento è riservata
+        example: false
+      id_allegato_istanza:
+        format: int64
+        type: integer
+        description: Identificativo univoco del documento
+        example: 134
+      id_allegato_padre:
+        format: int64
+        type: integer
+        description: Identificativo univoco del documento padre
+        example: 133
+      id_istanza:
+        format: int64
+        type: integer
+        description: Identificativo univoco dell'istanza cui fa riferimento il documento
+        example: 46
+      ind_firma:
+        format: int32
+        type: integer
+        description: Indicatore di firma digitale ricavato da INDEX
+        example: 1
+      nome_allegato:
+        type: string
+        description: Nome del documento
+        example: Nome documento
+      note:
+        type: string
+        description: Note relative al documento
+        example: Documento progetto
+      num_protocollo_allegato:
+        type: string
+        description: Numero di protocollo del documento
+        example : Prot772022
+      tipo_integra_allegato:
+        $ref: '#/definitions/TipoIntegraAllegatoDTO'
+      tipologia_allegato:
+        $ref: '#/definitions/TipologiaAllegatoExtendedDTO'
+      titolo_allegato:
+        type: string
+        description: Titolo del documento
+        example: Titolo
+      url_documento:
+        type: string
+        description: Url per il download del documento
+        example: https://www.liberliber.eu/mediateca/libri/d/de_amicis/cuore/pdf/de_amicis_cuore.pdf
+    type: object
+  PubDocIstanzaLinkDTO:
+    properties:
+      autore_allegato:
+        type: string
+        description: Autore del documento
+        example: Mario Rossi
+      classe_allegato:
+        $ref: '#/definitions/ClasseAllegatoDTO'
+        description: Classe di appartenenza del documento
+      cod_allegato:
+        type: string
+        description: Codice univoco del documento
+        example: VER-2022-0035
+      cod_allegato_padre:
+        type: string
+        description: Codice univoco del documento padre
+        example: VER-2022-0034
+      data_protocollo_allegato:
+        format: date-time
+        type: string
+        description: Data di protocollazione del documento
+        example: 2022-08-15 14:23:49
+      data_pubblicazione:
+        format: date-time
+        type: string
+        description: Data di pubblicazione del documento
+        example: 2022-08-22 15:23:49
+      dimensione_upload:
+        format: int64
+        type: integer
+        description: Dimensione del file del documento
+        example: 1912
+      flg_cancellato:
+        type: boolean
+        description: Flag cancellazione logica
+        example: false
+      flg_da_pubblicare:
+        type: boolean
+        description: Flag che indica se il documento dovrà essere pubblicato
+        example: false
+      flg_riservato:
+        type: boolean
+        description: Flag che indica se la visione del documento è riservata
+        example: false
+      id_allegato_istanza:
+        format: int64
+        type: integer
+        description: Identificativo univoco del documento
+        example: 134
+      id_allegato_padre:
+        format: int64
+        type: integer
+        description: Identificativo univoco del documento padre
+        example: 133
+      id_istanza:
+        format: int64
+        type: integer
+        description: Identificativo univoco dell'istanza cui fa riferimento il documento
+        example: 46
+      ind_firma:
+        format: int32
+        type: integer
+        description: Indicatore di firma digitale ricavato da INDEX
+        example: 1
+      nome_allegato:
+        type: string
+        description: Nome del documento
+        example: Nome documento
+      note:
+        type: string
+        description: Note relative al documento
+        example: Documento progetto
+      num_protocollo_allegato:
+        type: string
+        description: Numero di protocollo del documento
+        example : Prot772022
+      tipo_integra_allegato:
+        $ref: '#/definitions/TipoIntegraAllegatoDTO'
+      tipologia_allegato:
+        $ref: '#/definitions/TipologiaAllegatoExtendedDTO'
+      titolo_allegato:
+        type: string
+        description: Titolo del documento
+        example: Titolo
+      url_documento:
+        type: string
+        description: Url per il download del documento
+        example: https://www.liberliber.eu/mediateca/libri/d/de_amicis/cuore/pdf/de_amicis_cuore.pdf
+      link_documento:
+        type: string
+        description: Path COSMO per effetuare il download del documento da inserire in SCRIVA
+        example: /documenti/e9b70bdf-2a0c-4501-8cc6-987b4b99ac71/contenuto
+    type: object
+  PubIstanzaDTO:
+    properties:
+      adempimento:
+        $ref: '#/definitions/PubAdempimentoDTO'
+      cod_istanza:
+        type: string
+        description: Codice univoco dell'istanza
+        example:
+      cod_pratica:
+        type: string
+        description: Codice della pratica
+      competenza_territorio:
+        items:
+          $ref: '#/definitions/PubCompetenzaTerritorioDTO'
+        type: array
+      data_fine_osservazione:
+        format: date-time
+        type: string
+        description: Data entro la quale è possibile effetuare osservazioni sull'istanza
+        example: 2022-09-12 23:59:59
+      data_inizio_osservazione:
+        format: date-time
+        type: string
+        description: Data a partire dalla quale è possibile effetuare osservazioni sull'istanza
+        example: 2022-08-13 00:00:00
+      data_inserimento_istanza:
+        format: date-time
+        type: string
+        description: Data di inserimento dell'istanza
+        example: 2022-08-10 20:59:11
+      data_inserimento_pratica:
+        format: date-time
+        type: string
+        description: Data di inserimento della pratica
+        example: 2022-08-11 20:59:11
+      data_modifica_istanza:
+        format: date-time
+        type: string
+        description: Data di modifica dell'istanza
+        example: 2022-08-11 20:59:11
+      data_modifica_pratica:
+        format: date-time
+        type: string
+        description: Data di modifica della pratica
+        example: 2022-08-11 20:59:11
+      data_protocollo:
+        format: date-time
+        type: string
+        description: Data di protocollazione della pratica
+        example: 2022-08-11 20:59:11
+      data_pubblicazione:
+        format: date-time
+        type: string
+        description: Data di pubblicazione della pratica
+        example: 2022-08-11 20:59:11
+      data_pubblicazione_esterna:
+        format: date-time
+        type: string
+        description: Data di pubblicazione esterna della pratica
+        example: 2022-08-11 20:59:11
+      data_scadenza_procedimento:
+        format: date-time
+        type: string
+        description: Data di scadenza del procedimento
+        example: 2022-08-11 20:59:11
+      des_esito_procedimento:
+        type: string
+        description: Descrizione esito del procedimento
+      des_esito_procedimento_statale:
+        type: string
+        description: Descrizione esito del procedimento statale
+      des_stato_procedimento_statale:
+        type: string
+        description: Descrizione stato del procedimento statale
+        example: CONCLUSO
+      des_stato_sintesi_pagamento:
+        type: string
+        description: Descrizione stato dei pagamenti
+        example: DA EFFETTUARE
+      flg_osservazione:
+        type: boolean
+      id_istanza:
+        format: int64
+        type: integer
+        description: Identificativo univoco dell'istanza
+        example: 42
+      numero_protocollo:
+        type: string
+        description: Numero protocollazione della pratica
+        example: Prot102022
+      organo_tecnico:
+        $ref: '#/definitions/OrganoTecnicoDTO'
+      procedimento_statale:
+        $ref: '#/definitions/ProcedimentoStataleDTO'
+      stato_istanza:
+        $ref: '#/definitions/PubStatoIstanzaDTO'
+    type: object
+  PubStatoIstanzaDTO:
+    properties:
+      cod_stato_istanza:
+        type: string
+        description: Codice stato istanza
+        example: IN CORSO
+      des_stato_istanza:
+        type: string
+        description: Descrizione stato istanza
+        example: In corso
+      label_stato:
+        type: string
+        description: Etichetta stato istanza
+        example: In corso
+    type: object
+  RegioneExtendedDTO:
+    properties:
+      cod_regione:
+        type: string
+      data_fine_validita:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      denom_regione:
+        type: string
+      id_nazione:
+        format: int64
+        type: integer
+      id_regione:
+        format: int64
+        type: integer
+      nazione:
+        $ref: '#/definitions/NazioneDTO'
+    type: object
+  SoggettoExtendedDTO:
+    properties:
+      cap_residenza:
+        type: string
+      cap_sede_legale:
+        type: string
+      cf_soggetto:
+        type: string
+      citta_estera_nascita:
+        type: string
+      citta_estera_residenza:
+        type: string
+      citta_estera_sede_legale:
+        type: string
+      cognome:
+        type: string
+      comune_nascita:
+        $ref: '#/definitions/ComuneExtendedDTO'
+      comune_residenza:
+        $ref: '#/definitions/ComuneExtendedDTO'
+      comune_sede_legale:
+        $ref: '#/definitions/ComuneExtendedDTO'
+      data_aggiornamento:
+        format: date-time
+        type: string
+      data_cessazione_soggetto:
+        format: date-time
+        type: string
+      data_nascita_soggetto:
+        format: date-time
+        type: string
+      den_anno_cciaa:
+        format: int32
+        type: integer
+      den_numero_cciaa:
+        type: string
+      den_provincia_cciaa:
+        type: string
+      den_soggetto:
+        type: string
+      des_email:
+        type: string
+      des_localita:
+        type: string
+      des_pec:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_comune_nascita:
+        format: int64
+        type: integer
+      id_comune_residenza:
+        format: int64
+        type: integer
+      id_comune_sede_legale:
+        format: int64
+        type: integer
+      id_masterdata:
+        format: int64
+        type: integer
+      id_masterdata_origine:
+        format: int64
+        type: integer
+      id_nazione_nascita:
+        format: int64
+        type: integer
+      id_nazione_residenza:
+        format: int64
+        type: integer
+      id_nazione_sede_legale:
+        format: int64
+        type: integer
+      id_soggetto:
+        format: int64
+        type: integer
+      id_tipo_natura_giuridica:
+        format: int64
+        type: integer
+      id_tipo_soggetto:
+        format: int64
+        type: integer
+      indirizzo_soggetto:
+        type: string
+      nazione_nascita:
+        $ref: '#/definitions/NazioneDTO'
+      nazione_residenza:
+        $ref: '#/definitions/NazioneDTO'
+      nazione_sede_legale:
+        $ref: '#/definitions/NazioneDTO'
+      nome:
+        type: string
+      num_cellulare:
+        type: string
+      num_civico_indirizzo:
+        type: string
+      num_telefono:
+        type: string
+      partita_iva_soggetto:
+        type: string
+      tipo_natura_giuridica:
+        $ref: '#/definitions/TipoNaturaGiuridicaDTO'
+      tipo_soggetto:
+        $ref: '#/definitions/TipoSoggettoDTO'
+    type: object
+  TipoCompetenzaDTO:
+    properties:
+      cod_tipo_competenza:
+        type: string
+      des_tipo_competenza:
+        type: string
+      des_tipo_competenza_estesa:
+        type: string
+      id_tipo_competenza:
+        format: int64
+        type: integer
+      ordinamento_tipo_competenza:
+        format: int32
+        type: integer
+    type: object
+  TipoIntegraAllegatoDTO:
+    properties:
+      cod_tipo_integra_allegato:
+        type: string
+        description: Codice tipologia integrazione documento
+        example: P
+      des_tipo_integra_allegato:
+        type: string
+        description: Descrizione tipologia integrazione documento
+        example: Integrazione di perfezionamento
+    type: object
+  TipologiaAllegatoExtendedDTO:
+    properties:
+      categoria_allegato:
+        $ref: '#/definitions/CategoriaAllegatoDTO'
+      cod_tipologia_allegato:
+        type: string
+        description: Codice tipologia documento
+        example: ATTO_FIN
+      des_tipologia_allegato:
+        type: string
+        description: Descrizione tipologia documento
+        example: Atto finale
+    type: object
+  TipoNaturaGiuridicaDTO:
+    properties:
+      cod_tipo_natura_giuridica:
+        type: string
+      des_tipo_natura_giuridica:
+        type: string
+      flg_pubblico:
+        type: boolean
+      id_tipo_natura_giuridica:
+        format: int64
+        type: integer
+      ordinamento_tipo_natura_giu:
+        format: int64
+        type: integer
+      sigla_tipo_natura_giuridica:
+        type: string
+    type: object
+  TipoSoggettoDTO:
+    properties:
+      cod_tipo_soggetto:
+        type: string
+      des_tipo_soggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_tipo_soggetto:
+        format: int64
+        type: integer
+    type: object
+  ErrorDTO:
+    properties:
+      status:
+        type: string
+        description: Codice di stato HTTP
+        example: 500
+      code:
+        type: string
+        description: Codice di errore SCRIVA
+        example: E100
+      title:
+        type: string
+        description: Descrizione del messaggio
+        example: Si è verificato un errore nella richiesta. Si prega di riprovare successivamente.
+      detail:
+        type: object
+        additionalProperties:
+          type: string
+        description: In caso di errori multipli i dettagli degli errori verificatisi
+      links:
+        type: array
+        items:
+          type: string
+        description: Eventuale link con descrizione dell'errore
+    type: object
+x-components: { }
