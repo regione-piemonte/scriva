@@ -1,0 +1,275 @@
+[
+    {
+        "id": 1,
+        "cod_rp_tipo_rifiuto": "1.1.",
+        "cod_attivit_rec": "1.1.3.",
+        "descrizione": "Recupero zinco, piombo, rame, mediante cicli termici, idrometallurgici ed elettrochimici, previo eventuale lavaggio chimico fisico [R4]",
+        "descrizione_estesa": "1.1.3. - Recupero zinco, piombo, rame, mediante cicli termici, idrometallurgici ed elettrochimici, previo eventuale lavaggio chimico fisico [R4]"
+    },
+    {
+        "id": 2,
+        "cod_rp_tipo_rifiuto": "1.2.",
+        "cod_attivit_rec": "1.2.3.a",
+        "descrizione": "Raffinerie o fonderie di seconda fusione [R4]",
+        "descrizione_estesa": "1.2.3.a - Raffinerie o fonderie di seconda fusione [R4]"
+    },
+    {
+        "id": 3,
+        "cod_rp_tipo_rifiuto": "1.2.",
+        "cod_attivit_rec": "1.2.3.b",
+        "descrizione": "Idrometallurgia per il recupero dei metalli [R4]",
+        "descrizione_estesa": "1.2.3.b - Idrometallurgia per il recupero dei metalli [R4]"
+    },
+    {
+        "id": 4,
+        "cod_rp_tipo_rifiuto": "1.2.",
+        "cod_attivit_rec": "1.2.3.c ",
+        "descrizione": "Ciclo termico dello zinco",
+        "descrizione_estesa": "1.2.3.c  - Ciclo termico dello zinco"
+    },
+    {
+        "id": 5,
+        "cod_rp_tipo_rifiuto": "1.3.",
+        "cod_attivit_rec": "1.3.3.",
+        "descrizione": "Rifusione nella metallurgia secondaria del piombo [R4]",
+        "descrizione_estesa": "1.3.3. - Rifusione nella metallurgia secondaria del piombo [R4]"
+    },
+    {
+        "id": 6,
+        "cod_rp_tipo_rifiuto": "1.4.",
+        "cod_attivit_rec": "1.4.3.a",
+        "descrizione": "Recupero al ciclo termico o idrometallurgico delle componenti metalliche a base di piombo ottenute mediante pretrattamento di frantumazione e vagliatura per la separazione delle componenti plastiche[R4]",
+        "descrizione_estesa": "1.4.3.a - Recupero al ciclo termico o idrometallurgico delle componenti metalliche a base di piombo ottenute mediante pretrattamento di frantumazione e vagliatura per la separazione delle componenti plastiche[R4]"
+    },
+    {
+        "id": 7,
+        "cod_rp_tipo_rifiuto": "1.4.",
+        "cod_attivit_rec": "1.4.3.b",
+        "descrizione": "Decantazione, filtrazione e/o concentrazione dell’acido solforico [R5]",
+        "descrizione_estesa": "1.4.3.b - Decantazione, filtrazione e/o concentrazione dell’acido solforico [R5]"
+    },
+    {
+        "id": 8,
+        "cod_rp_tipo_rifiuto": "1.5.",
+        "cod_attivit_rec": "1.5.3.",
+        "descrizione": "Metallurgia per il recupero del piombo, fusione e raffinazione [R4]",
+        "descrizione_estesa": "1.5.3. - Metallurgia per il recupero del piombo, fusione e raffinazione [R4]"
+    },
+    {
+        "id": 9,
+        "cod_rp_tipo_rifiuto": "1.6.",
+        "cod_attivit_rec": "1.6.3.",
+        "descrizione": "Ciclo termico primario e secondario dello zinco per il recupero di zinco, piombo e altri metalli [R4]",
+        "descrizione_estesa": "1.6.3. - Ciclo termico primario e secondario dello zinco per il recupero di zinco, piombo e altri metalli [R4]"
+    },
+    {
+        "id": 10,
+        "cod_rp_tipo_rifiuto": "2.1.",
+        "cod_attivit_rec": "2.1.3.",
+        "descrizione": "Recupero elettrolitico e successiva fusione dei metalli recuperati [R4]",
+        "descrizione_estesa": "2.1.3. - Recupero elettrolitico e successiva fusione dei metalli recuperati [R4]"
+    },
+    {
+        "id": 11,
+        "cod_rp_tipo_rifiuto": "2.2.",
+        "cod_attivit_rec": "2.2.3.",
+        "descrizione": "Pirotrattamento, fusione delle ceneri, raffinazione per via elettrolitica e/o idrometallurgia, in alternativa o in parziale sostituzione, separazione dei Sali di argento mediante dissoluzione chimica [R4]",
+        "descrizione_estesa": "2.2.3. - Pirotrattamento, fusione delle ceneri, raffinazione per via elettrolitica e/o idrometallurgia, in alternativa o in parziale sostituzione, separazione dei Sali di argento mediante dissoluzione chimica [R4]"
+    },
+    {
+        "id": 12,
+        "cod_rp_tipo_rifiuto": "3.1.",
+        "cod_attivit_rec": "3.1.3.a",
+        "descrizione": "Metallurgia termica dell’alluminio primario e secondario previa macinazione con mulino a martelli e vaglio per la separazione della granella di alluminio, degli altri metalli presenti e delle polveri contenenti prevalentemente ossido di alluminio [R4].",
+        "descrizione_estesa": "3.1.3.a - Metallurgia termica dell’alluminio primario e secondario previa macinazione con mulino a martelli e vaglio per la separazione della granella di alluminio, degli altri metalli presenti e delle polveri contenenti prevalentemente ossido di alluminio [R4]."
+    },
+    {
+        "id": 13,
+        "cod_rp_tipo_rifiuto": "3.1.",
+        "cod_attivit_rec": "3.1.3.b",
+        "descrizione": "Idrometallurgia mediante celle elettrolitiche [R4]",
+        "descrizione_estesa": "3.1.3.b - Idrometallurgia mediante celle elettrolitiche [R4]"
+    },
+    {
+        "id": 14,
+        "cod_rp_tipo_rifiuto": "3.2.",
+        "cod_attivit_rec": "3.2.3.a",
+        "descrizione": "Metallurgia termica dell’alluminio primario e secondario previa macinazione con mulino a martelli e vaglio per la separazione della granella di alluminio, degli altri metalli presenti e delle polveri contenenti prevalentemente ossido di alluminio [R4] e recupero dei Sali di cloruro di sodio e cloruro di sodio e potassio da utilizzare ne forno rotativo [R5]",
+        "descrizione_estesa": "3.2.3.a - Metallurgia termica dell’alluminio primario e secondario previa macinazione con mulino a martelli e vaglio per la separazione della granella di alluminio, degli altri metalli presenti e delle polveri contenenti prevalentemente ossido di alluminio [R4] e recupero dei Sali di cloruro di sodio e cloruro di sodio e potassio da utilizzare ne forno rotativo [R5]"
+    },
+    {
+        "id": 15,
+        "cod_rp_tipo_rifiuto": "3.2.",
+        "cod_attivit_rec": "3.2.3.b",
+        "descrizione": "Idrometallurgia mediante celle elettrolitiche [R4]",
+        "descrizione_estesa": "3.2.3.b - Idrometallurgia mediante celle elettrolitiche [R4]"
+    },
+    {
+        "id": 16,
+        "cod_rp_tipo_rifiuto": "3.3.",
+        "cod_attivit_rec": "3.3.3.",
+        "descrizione": "Recupero di metalli in impianti di seconda fusione [R4]",
+        "descrizione_estesa": "3.3.3. - Recupero di metalli in impianti di seconda fusione [R4]"
+    },
+    {
+        "id": 17,
+        "cod_rp_tipo_rifiuto": "4.1.",
+        "cod_attivit_rec": "4.1.3.",
+        "descrizione": "Utilizzo nell’industria chimica per la produzione di ossicloruri e/o solfati di rame mediante reazione con acido cloridrico e/ o solforico [R5]",
+        "descrizione_estesa": "4.1.3. - Utilizzo nell’industria chimica per la produzione di ossicloruri e/o solfati di rame mediante reazione con acido cloridrico e/ o solforico [R5]"
+    },
+    {
+        "id": 18,
+        "cod_rp_tipo_rifiuto": "4.2.",
+        "cod_attivit_rec": "4.2.3.",
+        "descrizione": "Recupero nella fonderia del piombo secondario [R4]",
+        "descrizione_estesa": "4.2.3. - Recupero nella fonderia del piombo secondario [R4]"
+    },
+    {
+        "id": 19,
+        "cod_rp_tipo_rifiuto": "4.3.",
+        "cod_attivit_rec": "4.3.3.",
+        "descrizione": "Estrazione con tricloroetilene e centrifugazione della polvere di rame; recupero nell’industria chimica [R4]",
+        "descrizione_estesa": "4.3.3. - Estrazione con tricloroetilene e centrifugazione della polvere di rame; recupero nell’industria chimica [R4]"
+    },
+    {
+        "id": 20,
+        "cod_rp_tipo_rifiuto": "4.4.",
+        "cod_attivit_rec": "4.4.3.a",
+        "descrizione": "Riciclo sotto forma di ossidi nella metallurgia primaria dello zinco mediante il ciclo termico e idrometallurgico [R4]",
+        "descrizione_estesa": "4.4.3.a - Riciclo sotto forma di ossidi nella metallurgia primaria dello zinco mediante il ciclo termico e idrometallurgico [R4]"
+    },
+    {
+        "id": 21,
+        "cod_rp_tipo_rifiuto": "4.4.",
+        "cod_attivit_rec": "4.4.3.b",
+        "descrizione": "Metallurgia del ciclo termico primario e secondario del piombo e dello zinco [R4]",
+        "descrizione_estesa": "4.4.3.b - Metallurgia del ciclo termico primario e secondario del piombo e dello zinco [R4]"
+    },
+    {
+        "id": 22,
+        "cod_rp_tipo_rifiuto": "5.1.",
+        "cod_attivit_rec": "5.1.3.a",
+        "descrizione": "Recupero di ossido di alluminio, mediante dissoluzione del rifiuto in soluzione caustica [R4]",
+        "descrizione_estesa": "5.1.3.a - Recupero di ossido di alluminio, mediante dissoluzione del rifiuto in soluzione caustica [R4]"
+    },
+    {
+        "id": 23,
+        "cod_rp_tipo_rifiuto": "5.1.",
+        "cod_attivit_rec": "5.1.3.b",
+        "descrizione": "Utilizzo come flocculante a base di solfato di alluminio, mediante soluzione concentrata di acido solforico [R5]",
+        "descrizione_estesa": "5.1.3.b - Utilizzo come flocculante a base di solfato di alluminio, mediante soluzione concentrata di acido solforico [R5]"
+    },
+    {
+        "id": 24,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_attivit_rec": "5.2.3.a",
+        "descrizione": "Industria chimica e siderurgica per la produzione di: ossidi e Sali di ferro, Sali di rame, di ammoniaca e di acido cloridrico. [R5]",
+        "descrizione_estesa": "5.2.3.a - Industria chimica e siderurgica per la produzione di: ossidi e Sali di ferro, Sali di rame, di ammoniaca e di acido cloridrico. [R5]"
+    },
+    {
+        "id": 25,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_attivit_rec": "5.2.3.b",
+        "descrizione": "Rigenerazione acidi e produzione e rigenerazione di soluzioni per incisione di circuiti stampati [R6]",
+        "descrizione_estesa": "5.2.3.b - Rigenerazione acidi e produzione e rigenerazione di soluzioni per incisione di circuiti stampati [R6]"
+    },
+    {
+        "id": 26,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_attivit_rec": "5.2.3.c",
+        "descrizione": "Utilizzo come reagente per depurazione acque industriali, se esente da elementi non abbattibili dall’impianto di depurazione [R6]",
+        "descrizione_estesa": "5.2.3.c - Utilizzo come reagente per depurazione acque industriali, se esente da elementi non abbattibili dall’impianto di depurazione [R6]"
+    },
+    {
+        "id": 27,
+        "cod_rp_tipo_rifiuto": "5.3.",
+        "cod_attivit_rec": "5.3.3.",
+        "descrizione": "Piroscissione con riscaldamento diretto a T 1100° C [R5]",
+        "descrizione_estesa": "5.3.3. - Piroscissione con riscaldamento diretto a T 1100° C [R5]"
+    },
+    {
+        "id": 28,
+        "cod_rp_tipo_rifiuto": "5.4.",
+        "cod_attivit_rec": "5.4.3.",
+        "descrizione": "Industria chimica per la produzione di acido solforico [R5]",
+        "descrizione_estesa": "5.4.3. - Industria chimica per la produzione di acido solforico [R5]"
+    },
+    {
+        "id": 29,
+        "cod_rp_tipo_rifiuto": "5.5.",
+        "cod_attivit_rec": "5.5.3.",
+        "descrizione": "Separazione chimico-fisica delle impurezze; separazione    delle    particelle    solide    mediante vaporizzazione della soluzione per l’ottenimento di soluzioni di acido cloridrico e soluzioni di cloruro di zinco [R5]",
+        "descrizione_estesa": "5.5.3. - Separazione chimico-fisica delle impurezze; separazione    delle    particelle    solide    mediante vaporizzazione della soluzione per l’ottenimento di soluzioni di acido cloridrico e soluzioni di cloruro di zinco [R5]"
+    },
+    {
+        "id": 30,
+        "cod_rp_tipo_rifiuto": "6.1.",
+        "cod_attivit_rec": "6.1.3",
+        "descrizione": "Distillazione e rettifica per la purificazione dei singoli solventi [R2]",
+        "descrizione_estesa": "6.1.3 - Distillazione e rettifica per la purificazione dei singoli solventi [R2]"
+    },
+    {
+        "id": 31,
+        "cod_rp_tipo_rifiuto": "6.2.",
+        "cod_attivit_rec": "6.2.3.",
+        "descrizione": "Recupero del solvente tramite distillazione mediante rettifica frazionata [R2]",
+        "descrizione_estesa": "6.2.3. - Recupero del solvente tramite distillazione mediante rettifica frazionata [R2]"
+    },
+    {
+        "id": 32,
+        "cod_rp_tipo_rifiuto": "6.3.",
+        "cod_attivit_rec": "6.3.3.a",
+        "descrizione": "Rigenerazione mediante distillazione [R2]",
+        "descrizione_estesa": "6.3.3.a - Rigenerazione mediante distillazione [R2]"
+    },
+    {
+        "id": 33,
+        "cod_rp_tipo_rifiuto": "6.3.",
+        "cod_attivit_rec": "6.3.3.b",
+        "descrizione": "Riutilizzazione diretta come solventi per impieghi che richiedono un minor grado di purezza del solvente [R2]",
+        "descrizione_estesa": "6.3.3.b - Riutilizzazione diretta come solventi per impieghi che richiedono un minor grado di purezza del solvente [R2]"
+    },
+    {
+        "id": 34,
+        "cod_rp_tipo_rifiuto": "6.4.",
+        "cod_attivit_rec": "6.4.3.",
+        "descrizione": "Produzione di percloroetilene e tetracloruro di carbonio in sostituzione del cloro [R2]",
+        "descrizione_estesa": "6.4.3. - Produzione di percloroetilene e tetracloruro di carbonio in sostituzione del cloro [R2]"
+    },
+    {
+        "id": 35,
+        "cod_rp_tipo_rifiuto": "6.6.",
+        "cod_attivit_rec": "6.6.3.",
+        "descrizione": "Messa in riserva (R13) per la separazione fisica della miscela acqua-idrocarburi per decantazione e trattamento successivo   di centrifugazione e miscelazione con oli combustibili [R3] in impianti non operanti ai sensi del regio decreto 30 marzo 1942, n. 327, definito come Codice della Navigazione",
+        "descrizione_estesa": "6.6.3. - Messa in riserva (R13) per la separazione fisica della miscela acqua-idrocarburi per decantazione e trattamento successivo   di centrifugazione e miscelazione con oli combustibili [R3] in impianti non operanti ai sensi del regio decreto 30 marzo 1942, n. 327, definito come Codice della Navigazione"
+    },
+    {
+        "id": 36,
+        "cod_rp_tipo_rifiuto": "7.1.",
+        "cod_attivit_rec": "7.1.3.",
+        "descrizione": "Trattamento termico di rigenerazione diretta. Le partite di carboni attivi esausti provenienti da processi produttivi diversi devono essere rigenerate separatamente [R5]",
+        "descrizione_estesa": "7.1.3. - Trattamento termico di rigenerazione diretta. Le partite di carboni attivi esausti provenienti da processi produttivi diversi devono essere rigenerate separatamente [R5]"
+    },
+    {
+        "id": 37,
+        "cod_rp_tipo_rifiuto": "7.2.",
+        "cod_attivit_rec": "7.2.3.",
+        "descrizione": "Distillazione per il recupero del solvente [R2]",
+        "descrizione_estesa": "7.2.3. - Distillazione per il recupero del solvente [R2]"
+    },
+    {
+        "id": 38,
+        "cod_rp_tipo_rifiuto": "7.3.",
+        "cod_attivit_rec": "7.3.3.a",
+        "descrizione": "Neutralizzazione di acque reflue acide o soluzioni acide [R5]",
+        "descrizione_estesa": "7.3.3.a - Neutralizzazione di acque reflue acide o soluzioni acide [R5]"
+    },
+    {
+        "id": 39,
+        "cod_rp_tipo_rifiuto": "7.3.",
+        "cod_attivit_rec": "7.3.3.b",
+        "descrizione": "Correttore di pH [R5]",
+        "descrizione_estesa": "7.3.3.b - Correttore di pH [R5]"
+    }
+]

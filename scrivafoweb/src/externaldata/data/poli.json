@@ -1,0 +1,548 @@
+[
+    {
+        "comparto": "1",
+        "nomePolo": "Verbania",
+        "codicePolo": "O01090",
+        "descrizionePolo": "O01090-Verbania"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Caprile",
+        "codicePolo": "B01028",
+        "descrizionePolo": "B01028-Caprile"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "La Loggia-2",
+        "codicePolo": "T01083",
+        "descrizionePolo": "T01083-La Loggia-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Bellinzago Novarese",
+        "codicePolo": "N01062",
+        "descrizionePolo": "N01062-Bellinzago Novarese"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Valdieri",
+        "codicePolo": "C03055",
+        "descrizionePolo": "C03055-Valdieri"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Pianezza",
+        "codicePolo": "T01089",
+        "descrizionePolo": "T01089-Pianezza"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Bagnasco-1",
+        "codicePolo": "C03065",
+        "descrizionePolo": "C03065-Bagnasco-1"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Cisterna Asti",
+        "codicePolo": "S03023",
+        "descrizionePolo": "S03023-Cisterna Asti"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Casalgrasso",
+        "codicePolo": "C01029",
+        "descrizionePolo": "C01029-Casalgrasso"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Maggiora",
+        "codicePolo": "N01063",
+        "descrizionePolo": "N01063-Maggiora"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Momo",
+        "codicePolo": "N01071",
+        "descrizionePolo": "N01071-Momo"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Trecate-Cerano",
+        "codicePolo": "N01067",
+        "descrizionePolo": "N01067-Trecate-Cerano"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Pontestura",
+        "codicePolo": "A03018",
+        "descrizionePolo": "A03018-Pontestura"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Malvicino",
+        "codicePolo": "A01011",
+        "descrizionePolo": "A01011-Malvicino"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Casale Monferrato",
+        "codicePolo": "A01005",
+        "descrizionePolo": "A01005-Casale Monferrato"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Frassineto Po",
+        "codicePolo": "A01006",
+        "descrizionePolo": "A01006-Frassineto Po"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Cherasco-Bra",
+        "codicePolo": "C01031",
+        "descrizionePolo": "C01031-Cherasco-Bra"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Cherasco",
+        "codicePolo": "C01039",
+        "descrizionePolo": "C01039-Cherasco"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "San Michele Mondovi'",
+        "codicePolo": "C01042",
+        "descrizionePolo": "C01042-San Michele Mondovi'"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castellazzo Bormida",
+        "codicePolo": "A01001",
+        "descrizionePolo": "A01001-Castellazzo Bormida"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Brusasco",
+        "codicePolo": "T01100",
+        "descrizionePolo": "T01100-Brusasco"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Fossano-2",
+        "codicePolo": "C01038",
+        "descrizionePolo": "C01038-Fossano-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Scarnafigi-Ruffia-Villanova",
+        "codicePolo": "C01037",
+        "descrizionePolo": "C01037-Scarnafigi-Ruffia-Villanova"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Villanova Mondovi-2",
+        "codicePolo": "C03063",
+        "descrizionePolo": "C03063-Villanova Mondovi-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Isola SantAntonio",
+        "codicePolo": "A01009",
+        "descrizionePolo": "A01009-Isola SantAntonio"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Carignano-Carmagnola-2",
+        "codicePolo": "T01092",
+        "descrizionePolo": "T01092-Carignano-Carmagnola-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Rondissone-Montanaro",
+        "codicePolo": "T01070",
+        "descrizionePolo": "T01070-Rondissone-Montanaro"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Moncalieri",
+        "codicePolo": "T01091",
+        "descrizionePolo": "T01091-Moncalieri"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "La Loggia-1",
+        "codicePolo": "T01071",
+        "descrizionePolo": "T01071-La Loggia-1"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Ottiglio",
+        "codicePolo": "A03019",
+        "descrizionePolo": "A03019-Ottiglio"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Bagnasco-2",
+        "codicePolo": "C01035",
+        "descrizionePolo": "C01035-Bagnasco-2"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Moncalvo",
+        "codicePolo": "S03024",
+        "descrizionePolo": "S03024-Moncalvo"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Calliano",
+        "codicePolo": "S03027",
+        "descrizionePolo": "S03027-Calliano"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Cavour-2",
+        "codicePolo": "T01088",
+        "descrizionePolo": "T01088-Cavour-2"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Niella tanaro",
+        "codicePolo": "C03066",
+        "descrizionePolo": "C03066-Niella tanaro"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Boschetto",
+        "codicePolo": "T01101",
+        "descrizionePolo": "T01101-Boschetto"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Romentino",
+        "codicePolo": "N01065",
+        "descrizionePolo": "N01065-Romentino"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Bassignana",
+        "codicePolo": "A03017",
+        "descrizionePolo": "A03017-Bassignana"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castelnuovo-Bormida-Cassine-1",
+        "codicePolo": "A01008",
+        "descrizionePolo": "A01008-Castelnuovo-Bormida-Cassine-1"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Sezzadio",
+        "codicePolo": "A01002",
+        "descrizionePolo": "A01002-Sezzadio"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Asti-2",
+        "codicePolo": "S01020",
+        "descrizionePolo": "S01020-Asti-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "BorgoSanMartino",
+        "codicePolo": "A01003",
+        "descrizionePolo": "A01003-BorgoSanMartino"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Alessandria-2",
+        "codicePolo": "A01004",
+        "descrizionePolo": "A01004-Alessandria-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Alessandria-1",
+        "codicePolo": "A01007",
+        "descrizionePolo": "A01007-Alessandria-1"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Capriata Orba",
+        "codicePolo": "A01018",
+        "descrizionePolo": "A01018-Capriata Orba"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castelnuovo-Bormida-Cassine-2",
+        "codicePolo": "A01019",
+        "descrizionePolo": "A01019-Castelnuovo-Bormida-Cassine-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castellazzo Bormida 2",
+        "codicePolo": "A01022",
+        "descrizionePolo": "A01022-Castellazzo Bormida 2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Tortona",
+        "codicePolo": "A01026",
+        "descrizionePolo": "A01026-Tortona"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Murisengo",
+        "codicePolo": "A03014",
+        "descrizionePolo": "A03014-Murisengo"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Govone",
+        "codicePolo": "C01030",
+        "descrizionePolo": "C01030-Govone"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Fossano-1",
+        "codicePolo": "C01041",
+        "descrizionePolo": "C01041-Fossano-1"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Roccavione",
+        "codicePolo": "C01043",
+        "descrizionePolo": "C01043-Roccavione"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Mergozzo-Gravellona",
+        "codicePolo": "O01091",
+        "descrizionePolo": "O01091-Mergozzo-Gravellona"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Rovasenda-Murisengo-Brusnengo",
+        "codicePolo": "V03001",
+        "descrizionePolo": "V03001-Rovasenda-Murisengo-Brusnengo"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Santhia",
+        "codicePolo": "V01110",
+        "descrizionePolo": "V01110-Santhia"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Tronzano Vercellese",
+        "codicePolo": "V01109",
+        "descrizionePolo": "V01109-Tronzano Vercellese"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Quarona",
+        "codicePolo": "V01008",
+        "descrizionePolo": "V01008-Quarona"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Villastellone_Carignano_Carmagnola",
+        "codicePolo": "T01072",
+        "descrizionePolo": "T01072-Villastellone_Carignano_Carmagnola"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "La Loggia-Carignano",
+        "codicePolo": "T01075",
+        "descrizionePolo": "T01075-La Loggia-Carignano"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Carignano-Carmagnola-1",
+        "codicePolo": "T01076",
+        "descrizionePolo": "T01076-Carignano-Carmagnola-1"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Rivalta",
+        "codicePolo": "T01081",
+        "descrizionePolo": "T01081-Rivalta"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Collegno-Druento",
+        "codicePolo": "T01085",
+        "descrizionePolo": "T01085-Collegno-Druento"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castiglione",
+        "codicePolo": "T01102",
+        "descrizionePolo": "T01102-Castiglione"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Cambiano",
+        "codicePolo": "T03089",
+        "descrizionePolo": "T03089-Cambiano"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Vicoforte-2",
+        "codicePolo": "C01046",
+        "descrizionePolo": "C01046-Vicoforte-2"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Scarnafigi",
+        "codicePolo": "C01115",
+        "descrizionePolo": "C01115-Scarnafigi"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Rossana",
+        "codicePolo": "C03051",
+        "descrizionePolo": "C03051-Rossana"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Barnezzo",
+        "codicePolo": "C03052",
+        "descrizionePolo": "C03052-Barnezzo"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Frabosa Sottana",
+        "codicePolo": "C03056",
+        "descrizionePolo": "C03056-Frabosa Sottana"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Dogliani",
+        "codicePolo": "C03057",
+        "descrizionePolo": "C03057-Dogliani"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Pianfei",
+        "codicePolo": "C03059",
+        "descrizionePolo": "C03059-Pianfei"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Vernante",
+        "codicePolo": "C03060",
+        "descrizionePolo": "C03060-Vernante"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Roccavione-Robilante",
+        "codicePolo": "C03064",
+        "descrizionePolo": "C03064-Roccavione-Robilante"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Momo-Briona",
+        "codicePolo": "N01064",
+        "descrizionePolo": "N01064-Momo-Briona"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Cameri",
+        "codicePolo": "N01066",
+        "descrizionePolo": "N01066-Cameri"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Varallo Pombia",
+        "codicePolo": "N01069",
+        "descrizionePolo": "N01069-Varallo Pombia"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Oleggio",
+        "codicePolo": "N01070",
+        "descrizionePolo": "N01070-Oleggio"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Castagnole-Magliano-Neive",
+        "codicePolo": "S01021",
+        "descrizionePolo": "S01021-Castagnole-Magliano-Neive"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Asti-3",
+        "codicePolo": "S01022",
+        "descrizionePolo": "S01022-Asti-3"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Cocconato",
+        "codicePolo": "S03025",
+        "descrizionePolo": "S03025-Cocconato"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Roccavione-Robilante-Roaschia",
+        "codicePolo": "C03053",
+        "descrizionePolo": "C03053-Roccavione-Robilante-Roaschia"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Roaschia",
+        "codicePolo": "C03054",
+        "descrizionePolo": "C03054-Roaschia"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Guazzora",
+        "codicePolo": "A01025",
+        "descrizionePolo": "A01025-Guazzora"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Alba-Santavittoria_roddi",
+        "codicePolo": "C01033",
+        "descrizionePolo": "C01033-Alba-Santavittoria_roddi"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Alba-Barbaresco-Megliano",
+        "codicePolo": "C01032",
+        "descrizionePolo": "C01032-Alba-Barbaresco-Megliano"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Casal Cermelli - Frugarolo",
+        "codicePolo": "A01012",
+        "descrizionePolo": "A01012-Casal Cermelli - Frugarolo"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Cavaglia-Alice Castello",
+        "codicePolo": "V01111",
+        "descrizionePolo": "V01111-Cavaglia-Alice Castello"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Torrette",
+        "codicePolo": "A01021",
+        "descrizionePolo": "A01021-Torrette"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Vicoforte-1",
+        "codicePolo": "C01045",
+        "descrizionePolo": "C01045-Vicoforte-1"
+    },
+    {
+        "comparto": "1",
+        "nomePolo": "Caraglio",
+        "codicePolo": "C01040",
+        "descrizionePolo": "C01040-Caraglio"
+    },
+    {
+        "comparto": "3",
+        "nomePolo": "Poirino",
+        "codicePolo": "T03088",
+        "descrizionePolo": "T03088-Poirino"
+    }
+]

@@ -1,0 +1,198 @@
+[
+    {
+        "id": 1,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_provenienza": "1.1.1.",
+        "descrizione": "Impianti di abbattimento fumi di fonderia da cubilotti, dei forni di fusione degli ottoni, dei forni di fusione del rame primario e rottame di rame, dei forni di fusione del piombo secondario e sue leghe",
+        "descrizione_estesa": "1.1.1. - Impianti di abbattimento fumi di fonderia da cubilotti, dei forni di fusione degli ottoni, dei forni di fusione del rame primario e rottame di rame, dei forni di fusione del piombo secondario e sue leghe"
+    },
+    {
+        "id": 2,
+        "cod_rp_tipo_rifiuto": "1.2",
+        "cod_provenienza": "1.2.1.",
+        "descrizione": "Impianti di abbattimento polveri e fumi dei forni fusori di rame, zinco e leghe; impianti di laminazione a caldo; preparazione delle torniture",
+        "descrizione_estesa": "1.2.1. - Impianti di abbattimento polveri e fumi dei forni fusori di rame, zinco e leghe; impianti di laminazione a caldo; preparazione delle torniture"
+    },
+    {
+        "id": 3,
+        "cod_rp_tipo_rifiuto": "1.3",
+        "cod_provenienza": "1.3.1.",
+        "descrizione": "Scarificazione dei bagni di fusione di leghe stagno – piombo nell’industria metallurgica ",
+        "descrizione_estesa": "1.3.1. - Scarificazione dei bagni di fusione di leghe stagno – piombo nell’industria metallurgica "
+    },
+    {
+        "id": 4,
+        "cod_rp_tipo_rifiuto": "1.4",
+        "cod_provenienza": "1.4.1.",
+        "descrizione": "Raccolta finalizzata di batterie al piombo esauste; selezione di qualità da industria produzione accumulatori",
+        "descrizione_estesa": "1.4.1. - Raccolta finalizzata di batterie al piombo esauste; selezione di qualità da industria produzione accumulatori"
+    },
+    {
+        "id": 5,
+        "cod_rp_tipo_rifiuto": "1.5",
+        "cod_provenienza": "1.5.1.",
+        "descrizione": "Forno di fusione del piombo secondario",
+        "descrizione_estesa": "1.5.1. - Forno di fusione del piombo secondario"
+    },
+    {
+        "id": 6,
+        "cod_rp_tipo_rifiuto": "1.6",
+        "cod_provenienza": "1.6.1.",
+        "descrizione": "Ciclo idrometallurgico primario e secondario dello zinco",
+        "descrizione_estesa": "1.6.1. - Ciclo idrometallurgico primario e secondario dello zinco"
+    },
+    {
+        "id": 7,
+        "cod_rp_tipo_rifiuto": "2.1",
+        "cod_provenienza": "2.1.1.",
+        "descrizione": "Attività cinefotoradiografica e radiografica.",
+        "descrizione_estesa": "2.1.1. - Attività cinefotoradiografica e radiografica."
+    },
+    {
+        "id": 8,
+        "cod_rp_tipo_rifiuto": "2.2",
+        "cod_provenienza": "2.2.1.",
+        "descrizione": "Attività cinefotoradiografica",
+        "descrizione_estesa": "2.2.1. - Attività cinefotoradiografica"
+    },
+    {
+        "id": 9,
+        "cod_rp_tipo_rifiuto": "3.1",
+        "cod_provenienza": "3.1.1.",
+        "descrizione": "Industria metallurgica, produzione e fusione di leghe di alluminio",
+        "descrizione_estesa": "3.1.1. - Industria metallurgica, produzione e fusione di leghe di alluminio"
+    },
+    {
+        "id": 10,
+        "cod_rp_tipo_rifiuto": "3.2",
+        "cod_provenienza": "3.2.1.",
+        "descrizione": "Industria metallurgica dell’alluminio (impianto di riciclo con forno rotativo dei sottoprodotti – rottami – di fusione dell’alluminio)",
+        "descrizione_estesa": "3.2.1. - Industria metallurgica dell’alluminio (impianto di riciclo con forno rotativo dei sottoprodotti – rottami – di fusione dell’alluminio)"
+    },
+    {
+        "id": 11,
+        "cod_rp_tipo_rifiuto": "3.3",
+        "cod_provenienza": "3.3.1.",
+        "descrizione": "Industrie di produzione di piombo e zinco dei minerali primari; metallurgia termica dei metalli non ferrosi.",
+        "descrizione_estesa": "3.3.1. - Industrie di produzione di piombo e zinco dei minerali primari; metallurgia termica dei metalli non ferrosi."
+    },
+    {
+        "id": 12,
+        "cod_rp_tipo_rifiuto": "4.1",
+        "cod_provenienza": "4.1.1.",
+        "descrizione": "Attività di incisione dei circuiti stampati; residui di lavorazioni di soluzioni a base di rame.",
+        "descrizione_estesa": "4.1.1. - Attività di incisione dei circuiti stampati; residui di lavorazioni di soluzioni a base di rame."
+    },
+    {
+        "id": 13,
+        "cod_rp_tipo_rifiuto": "4.2",
+        "cod_provenienza": "4.2.1.",
+        "descrizione": "Ciclo di produzione del piombo secondario mediante recupero degli accumulatori al piombo esausti; ciclo di trattamento primario degli ossidi di zinco e piombo; ciclo di produzione di accumulatori al piombo.",
+        "descrizione_estesa": "4.2.1. - Ciclo di produzione del piombo secondario mediante recupero degli accumulatori al piombo esausti; ciclo di trattamento primario degli ossidi di zinco e piombo; ciclo di produzione di accumulatori al piombo."
+    },
+    {
+        "id": 14,
+        "cod_rp_tipo_rifiuto": "4.3",
+        "cod_provenienza": "4.3.1.",
+        "descrizione": "Cicli di trafilatura di vergella di rame elettrolitico; ciclo di laminazione a freddo di barre e vergella di rame elettrolitico.",
+        "descrizione_estesa": "4.3.1. - Cicli di trafilatura di vergella di rame elettrolitico; ciclo di laminazione a freddo di barre e vergella di rame elettrolitico."
+    },
+    {
+        "id": 15,
+        "cod_rp_tipo_rifiuto": "4.4",
+        "cod_provenienza": "4.4.1.",
+        "descrizione": "Impianti di abbattimento polveri ad umido.",
+        "descrizione_estesa": "4.4.1. - Impianti di abbattimento polveri ad umido."
+    },
+    {
+        "id": 16,
+        "cod_rp_tipo_rifiuto": "5.1",
+        "cod_provenienza": "5.1.1.",
+        "descrizione": "Pulizia chimica delle superfici di manufatti di leghe di alluminio",
+        "descrizione_estesa": "5.1.1. - Pulizia chimica delle superfici di manufatti di leghe di alluminio"
+    },
+    {
+        "id": 17,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_provenienza": "5.2.1.",
+        "descrizione": "Industria chimica; bagni di decapaggio di industria galvanica e di materiale ferroso; industria elettronica di produzione di circuiti stampati.",
+        "descrizione_estesa": "5.2.1. - Industria chimica; bagni di decapaggio di industria galvanica e di materiale ferroso; industria elettronica di produzione di circuiti stampati."
+    },
+    {
+        "id": 18,
+        "cod_rp_tipo_rifiuto": "5.3",
+        "cod_provenienza": "5.3.1.",
+        "descrizione": "Industria chimica e petrolchimica",
+        "descrizione_estesa": "5.3.1. - Industria chimica e petrolchimica"
+    },
+    {
+        "id": 19,
+        "cod_rp_tipo_rifiuto": "5.4",
+        "cod_provenienza": "5.4.1.",
+        "descrizione": "Industria chimica e petrolifera ",
+        "descrizione_estesa": "5.4.1. - Industria chimica e petrolifera "
+    },
+    {
+        "id": 20,
+        "cod_rp_tipo_rifiuto": "5.5",
+        "cod_provenienza": "5.5.1.",
+        "descrizione": "Decapaggio di attrezzature e/o manufatti metallici",
+        "descrizione_estesa": "5.5.1. - Decapaggio di attrezzature e/o manufatti metallici"
+    },
+    {
+        "id": 21,
+        "cod_rp_tipo_rifiuto": "6.1",
+        "cod_provenienza": "6.1.1.",
+        "descrizione": "Produzioni di sali sodici di antibiotici sterili nell’industria farmaceutica. ",
+        "descrizione_estesa": "6.1.1. - Produzioni di sali sodici di antibiotici sterili nell’industria farmaceutica. "
+    },
+    {
+        "id": 22,
+        "cod_rp_tipo_rifiuto": "6.2",
+        "cod_provenienza": "6.2.1.",
+        "descrizione": "Industria delle finte pelli poliuretaniche ottenute mediante coagulazione e spalmatura",
+        "descrizione_estesa": "6.2.1. - Industria delle finte pelli poliuretaniche ottenute mediante coagulazione e spalmatura"
+    },
+    {
+        "id": 23,
+        "cod_rp_tipo_rifiuto": "6.3",
+        "cod_provenienza": "6.3.1.",
+        "descrizione": "Sgrassaggio pezzi meccanici, pulizia metalli ed operazioni di sverniciatura, lavaggio macchine per la verniciatura e produzione di similpelle, tintolavanderia; industria elettronica.",
+        "descrizione_estesa": "6.3.1. - Sgrassaggio pezzi meccanici, pulizia metalli ed operazioni di sverniciatura, lavaggio macchine per la verniciatura e produzione di similpelle, tintolavanderia; industria elettronica."
+    },
+    {
+        "id": 24,
+        "cod_rp_tipo_rifiuto": "6.4",
+        "cod_provenienza": "6.4.1.",
+        "descrizione": "Produzione di cmv (vinilcloruro monomero).",
+        "descrizione_estesa": "6.4.1. - Produzione di cmv (vinilcloruro monomero)."
+    },
+    {
+        "id": 25,
+        "cod_rp_tipo_rifiuto": "6.6",
+        "cod_provenienza": "6.6.1.",
+        "descrizione": "Sentina delle navi",
+        "descrizione_estesa": "6.6.1. - Sentina delle navi"
+    },
+    {
+        "id": 26,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_provenienza": "7.1.1.",
+        "descrizione": "Processi produttivi industriali e artigianali, incenerimento o pirolisi rifiuti urbani e assimilati",
+        "descrizione_estesa": "7.1.1. - Processi produttivi industriali e artigianali, incenerimento o pirolisi rifiuti urbani e assimilati"
+    },
+    {
+        "id": 27,
+        "cod_rp_tipo_rifiuto": "7.2",
+        "cod_provenienza": "7.1.2.",
+        "descrizione": "Industria del legno; industria del mobile in genere; falegnameria, carpenteria e carrozzeria; industria dell’alluminio, industria automobilistica.",
+        "descrizione_estesa": "7.1.2. - Industria del legno; industria del mobile in genere; falegnameria, carpenteria e carrozzeria; industria dell’alluminio, industria automobilistica."
+    },
+    {
+        "id": 28,
+        "cod_rp_tipo_rifiuto": "7.3",
+        "cod_provenienza": "7.1.3.",
+        "descrizione": "Industria chimica per la produzione di acetilene da carburo di ca",
+        "descrizione_estesa": "7.1.3. - Industria chimica per la produzione di acetilene da carburo di ca"
+    }
+]

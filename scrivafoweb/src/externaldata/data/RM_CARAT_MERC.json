@@ -1,0 +1,2312 @@
+[
+    {
+        "id": 1,
+        "cod_rm_tipo_rifiuto": "1. 1",
+        "cod_caratt_merc": "1. 1. 4 a) ",
+        "descrizione": " carta, cartone e cartoncino nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1. 1. 4 a) - carta, cartone e cartoncino nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 2,
+        "cod_rm_tipo_rifiuto": "1. 1",
+        "cod_caratt_merc": "1. 1. 4 b) ",
+        "descrizione": " materie prime secondarie per lindustria cartaria rispondenti alle specifiche delle norme UNI_EN 643",
+        "descrizione_estesa": "1. 1. 4 b) - materie prime secondarie per lindustria cartaria rispondenti alle specifiche delle norme UNI_EN 643"
+    },
+    {
+        "id": 3,
+        "cod_rm_tipo_rifiuto": "1. 2",
+        "cod_caratt_merc": "1. 2. 4 a) ",
+        "descrizione": " carta e cartone nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1. 2. 4 a) - carta e cartone nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 4,
+        "cod_rm_tipo_rifiuto": "1. 2",
+        "cod_caratt_merc": "1. 2. 4 b) ",
+        "descrizione": " materie prime secondarie per lindustria cartaria rispondenti alle specifiche delle norme UNI_EN",
+        "descrizione_estesa": "1. 2. 4 b) - materie prime secondarie per lindustria cartaria rispondenti alle specifiche delle norme UNI_EN"
+    },
+    {
+        "id": 5,
+        "cod_rm_tipo_rifiuto": "2.1",
+        "cod_caratt_merc": "2.1.3 a) ",
+        "descrizione": " recupero diretto nell'industria vetraria [R5]",
+        "descrizione_estesa": "2.1.3 a) - recupero diretto nell'industria vetraria [R5]"
+    },
+    {
+        "id": 6,
+        "cod_rm_tipo_rifiuto": "2.1",
+        "cod_caratt_merc": "2.1.3 b) ",
+        "descrizione": " messa in riserva [R13] per la produzione di materie prime secondarie per l'industria vetraria mediante cernitamanuale, vagliatura, frantumazione e/o macinazione, separazione metalli magnetici, asportazione dei materiali leggeri,separazione automatica metalli non magnetici, separazione automatica corpi opachi, per l'ottenimento di rottame divetro pronto al forno con le seguenti caratteristiche: Pb <0,3 ppm sull'eluato effettuato in base ai criteri riportati nel Dm21/3/73 'Disciplina igienica degli imballaggi, recipienti, utensili destinati a venire in contatto con le sostanze alimentario con sostanze di uso personale' e successive modifiche e integrazioni (Supplemento G.U. n. 104 del 20 aprile 1973);per il rottame di vetro di colore misto pronto al forno: materiale solido costituito da rottame di vetro sodio_calcico congranulometria >3 mm, ceramica e porcellana <0,01%, pietre <0,02%, metalli magnetici <0,002%, metalli amagnetici 7<0,01%, materiali organici <0,1%, altri vetri 0,5%, umidi",
+        "descrizione_estesa": "2.1.3 b) - messa in riserva [R13] per la produzione di materie prime secondarie per l'industria vetraria mediante cernitamanuale, vagliatura, frantumazione e/o macinazione, separazione metalli magnetici, asportazione dei materiali leggeri,separazione automatica metalli non magnetici, separazione automatica corpi opachi, per l'ottenimento di rottame divetro pronto al forno con le seguenti caratteristiche: Pb <0,3 ppm sull'eluato effettuato in base ai criteri riportati nel Dm21/3/73 'Disciplina igienica degli imballaggi, recipienti, utensili destinati a venire in contatto con le sostanze alimentario con sostanze di uso personale' e successive modifiche e integrazioni (Supplemento G.U. n. 104 del 20 aprile 1973);per il rottame di vetro di colore misto pronto al forno: materiale solido costituito da rottame di vetro sodio_calcico congranulometria >3 mm, ceramica e porcellana <0,01%, pietre <0,02%, metalli magnetici <0,002%, metalli amagnetici 7<0,01%, materiali organici <0,1%, altri vetri 0,5%, umidi"
+    },
+    {
+        "id": 7,
+        "cod_rm_tipo_rifiuto": "2.1",
+        "cod_caratt_merc": "2.1.3 c) ",
+        "descrizione": " messa in riserva [R13] per la produzione di materie prime secondarie per l'edilizia, per la formazione di rilevati e sottofondi stradali, riempimenti e colmature, come strato isolante e di appoggio per tubature, condutture e pavimentazioni anche stradali e come materiale di drenaggio, mediante cernita manuale, vagliatura, frantumazione e/o macinazione, separazione metalli magnetici, asportazione dei materiali leggeri, separazione automatica metalli non magnetici, separazione automatica corpi opachi, analisi del contenuto in metalli pesanti, e verifica dei limiti di cui al test di cessione effettuato sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R5]",
+        "descrizione_estesa": "2.1.3 c) - messa in riserva [R13] per la produzione di materie prime secondarie per l'edilizia, per la formazione di rilevati e sottofondi stradali, riempimenti e colmature, come strato isolante e di appoggio per tubature, condutture e pavimentazioni anche stradali e come materiale di drenaggio, mediante cernita manuale, vagliatura, frantumazione e/o macinazione, separazione metalli magnetici, asportazione dei materiali leggeri, separazione automatica metalli non magnetici, separazione automatica corpi opachi, analisi del contenuto in metalli pesanti, e verifica dei limiti di cui al test di cessione effettuato sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R5]"
+    },
+    {
+        "id": 8,
+        "cod_rm_tipo_rifiuto": "2. 2",
+        "cod_caratt_merc": "2. 2. 4 a) ",
+        "descrizione": " manufatti in vetro",
+        "descrizione_estesa": "2. 2. 4 a) - manufatti in vetro"
+    },
+    {
+        "id": 9,
+        "cod_rm_tipo_rifiuto": "2. 2",
+        "cod_caratt_merc": "2. 2. 4 b) ",
+        "descrizione": " materia prima secondaria conformi alle specifiche del vetro pronto al forno fissate dalle CCIAA di Roma e Milano destinate alla produzione di vetro, carta vetro e materiali abrasivi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "2. 2. 4 b) - materia prima secondaria conformi alle specifiche del vetro pronto al forno fissate dalle CCIAA di Roma e Milano destinate alla produzione di vetro, carta vetro e materiali abrasivi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 10,
+        "cod_rm_tipo_rifiuto": "2. 3",
+        "cod_caratt_merc": "2. 3. 4 a) ",
+        "descrizione": " materia prima secondaria per la produzione del cristallo",
+        "descrizione_estesa": "2. 3. 4 a) - materia prima secondaria per la produzione del cristallo"
+    },
+    {
+        "id": 11,
+        "cod_rm_tipo_rifiuto": "2. 3",
+        "cod_caratt_merc": "2. 3. 4 b) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "2. 3. 4 b) - conglomerati cementizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 12,
+        "cod_rm_tipo_rifiuto": "2. 4",
+        "cod_caratt_merc": "2. 4. 4 ",
+        "descrizione": " manufatti di vetro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "2. 4. 4 - manufatti di vetro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 13,
+        "cod_rm_tipo_rifiuto": "3. 1",
+        "cod_caratt_merc": "3. 1. 4 a) ",
+        "descrizione": " metalli ferrosi o leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 1. 4 a) - metalli ferrosi o leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 14,
+        "cod_rm_tipo_rifiuto": "3. 1",
+        "cod_caratt_merc": "3. 1. 4 b) ",
+        "descrizione": " sali inorganici di ferro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 1. 4 b) - sali inorganici di ferro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 15,
+        "cod_rm_tipo_rifiuto": "3. 1",
+        "cod_caratt_merc": "3. 1. 4 c) ",
+        "descrizione": " materia prima secondaria per lindustria metallurgica conforme alle specifiche CECA, AISI, CAEF e UNI",
+        "descrizione_estesa": "3. 1. 4 c) - materia prima secondaria per lindustria metallurgica conforme alle specifiche CECA, AISI, CAEF e UNI"
+    },
+    {
+        "id": 16,
+        "cod_rm_tipo_rifiuto": "3. 2",
+        "cod_caratt_merc": "3. 2. 4 a) ",
+        "descrizione": " metalli o leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 2. 4 a) - metalli o leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 17,
+        "cod_rm_tipo_rifiuto": "3. 2",
+        "cod_caratt_merc": "3. 2. 4 b) ",
+        "descrizione": " sali inorganici di rame nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 2. 4 b) - sali inorganici di rame nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 18,
+        "cod_rm_tipo_rifiuto": "3. 2",
+        "cod_caratt_merc": "3. 2. 4 e) ",
+        "descrizione": " materia prima secondaria per lindustria metallurgica, conforme alle specifiche UNI ed EURO",
+        "descrizione_estesa": "3. 2. 4 e) - materia prima secondaria per lindustria metallurgica, conforme alle specifiche UNI ed EURO"
+    },
+    {
+        "id": 19,
+        "cod_rm_tipo_rifiuto": "3. 3",
+        "cod_caratt_merc": "3. 3. 4 ",
+        "descrizione": " alluminio granulare conforme alle norme UNI 3950",
+        "descrizione_estesa": "3. 3. 4 - alluminio granulare conforme alle norme UNI 3950"
+    },
+    {
+        "id": 20,
+        "cod_rm_tipo_rifiuto": "3. 4",
+        "cod_caratt_merc": "3. 4. 4 ",
+        "descrizione": " metalli preziosi e leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 4. 4 - metalli preziosi e leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 21,
+        "cod_rm_tipo_rifiuto": "3. 5",
+        "cod_caratt_merc": "3. 5. 4 ",
+        "descrizione": " contenitori metallici per il reimpiego tal quali per gli usi originari",
+        "descrizione_estesa": "3. 5. 4 - contenitori metallici per il reimpiego tal quali per gli usi originari"
+    },
+    {
+        "id": 22,
+        "cod_rm_tipo_rifiuto": "3. 6",
+        "cod_caratt_merc": "3. 6. 4 a) ",
+        "descrizione": " pallini di piombo utilizzabili per gli scopi originali esenti da rifiuti estranei",
+        "descrizione_estesa": "3. 6. 4 a) - pallini di piombo utilizzabili per gli scopi originali esenti da rifiuti estranei"
+    },
+    {
+        "id": 23,
+        "cod_rm_tipo_rifiuto": "3. 6",
+        "cod_caratt_merc": "3. 6. 4 b) ",
+        "descrizione": " manufatti in piombo nelle forme usualmente commercializzato",
+        "descrizione_estesa": "3. 6. 4 b) - manufatti in piombo nelle forme usualmente commercializzato"
+    },
+    {
+        "id": 24,
+        "cod_rm_tipo_rifiuto": "3. 7",
+        "cod_caratt_merc": "3. 7. 4 a), b) ",
+        "descrizione": " manufatti di metallo duro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3. 7. 4 a), b) - manufatti di metallo duro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 25,
+        "cod_rm_tipo_rifiuto": "3. 8",
+        "cod_caratt_merc": "3. 8. 4 ",
+        "descrizione": " metalli preziosi e rame puri nelle forme usualmente commmercializzate",
+        "descrizione_estesa": "3. 8. 4 - metalli preziosi e rame puri nelle forme usualmente commmercializzate"
+    },
+    {
+        "id": 26,
+        "cod_rm_tipo_rifiuto": "3. 9",
+        "cod_caratt_merc": "3. 9. 4 ",
+        "descrizione": " metalli preziosi e rame sotto forma di lingotti",
+        "descrizione_estesa": "3. 9. 4 - metalli preziosi e rame sotto forma di lingotti"
+    },
+    {
+        "id": 27,
+        "cod_rm_tipo_rifiuto": "3.10",
+        "cod_caratt_merc": "3.10. 4 ",
+        "descrizione": " acciaio, argento in forma di lingotti",
+        "descrizione_estesa": "3.10. 4 - acciaio, argento in forma di lingotti"
+    },
+    {
+        "id": 28,
+        "cod_rm_tipo_rifiuto": "3.11",
+        "cod_caratt_merc": "3.11. 4 a) ",
+        "descrizione": " argento in lingotti o graniglia, nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3.11. 4 a) - argento in lingotti o graniglia, nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 29,
+        "cod_rm_tipo_rifiuto": "3.11",
+        "cod_caratt_merc": "3.11. 4 b) ",
+        "descrizione": " film di triacetato di cellulosa e/o poliestere nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3.11. 4 b) - film di triacetato di cellulosa e/o poliestere nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 30,
+        "cod_rm_tipo_rifiuto": "3.12",
+        "cod_caratt_merc": "3.12. 4 ",
+        "descrizione": " metalli preziosi (Au, Ag, Pt, Pd, Rh) e rame puro sotto forma di lingotti",
+        "descrizione_estesa": "3.12. 4 - metalli preziosi (Au, Ag, Pt, Pd, Rh) e rame puro sotto forma di lingotti"
+    },
+    {
+        "id": 31,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 a) e b) ",
+        "descrizione": " singoli metalli nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 1. 4 a) e b) - singoli metalli nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 32,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 c) ",
+        "descrizione": " conglomerati bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 1. 4 c) - conglomerati bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 33,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 d) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 1. 4 d) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 34,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 e) ",
+        "descrizione": " vetri nelle forme usualmente commercializzate non per uso alimentare o ospedaliero",
+        "descrizione_estesa": "4. 1. 4 e) - vetri nelle forme usualmente commercializzate non per uso alimentare o ospedaliero"
+    },
+    {
+        "id": 35,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 f) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 1. 4 f) - conglomerati cementizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 36,
+        "cod_rm_tipo_rifiuto": "4. 1",
+        "cod_caratt_merc": "4. 1. 4 g) ",
+        "descrizione": " conglomerati idraulici catalizzati per pavimentazioni stradali nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 1. 4 g) - conglomerati idraulici catalizzati per pavimentazioni stradali nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 37,
+        "cod_rm_tipo_rifiuto": " 4. 1",
+        "cod_caratt_merc": " 4. 1. 4 g) ",
+        "descrizione": " conglomerati idraulici catalizzati per pavimentazioni stradali nelle forme usualmente commercializzate",
+        "descrizione_estesa": " 4. 1. 4 g) - conglomerati idraulici catalizzati per pavimentazioni stradali nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 38,
+        "cod_rm_tipo_rifiuto": "4. 2",
+        "cod_caratt_merc": "4. 2. 4 ",
+        "descrizione": " malte bituminose e conglomerati bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 2. 4 - malte bituminose e conglomerati bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 39,
+        "cod_rm_tipo_rifiuto": "4. 3",
+        "cod_caratt_merc": "4. 3. 4 ",
+        "descrizione": " rame, zinco e loro leghe nelle forme usualmente commercializzate; ossicloruro e/o solfato di rame nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 3. 4 - rame, zinco e loro leghe nelle forme usualmente commercializzate; ossicloruro e/o solfato di rame nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 40,
+        "cod_rm_tipo_rifiuto": "4. 4",
+        "cod_caratt_merc": "4. 4. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 4. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 41,
+        "cod_rm_tipo_rifiuto": "4. 4",
+        "cod_caratt_merc": "4. 4. 4 b) ",
+        "descrizione": " conglomerati cementizi e bituminosi per ledilizia e laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 4. 4 b) - conglomerati cementizi e bituminosi per ledilizia e laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 42,
+        "cod_rm_tipo_rifiuto": "4. 4",
+        "cod_caratt_merc": "4. 4. 4 c) ",
+        "descrizione": " vetro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 4. 4 c) - vetro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 43,
+        "cod_rm_tipo_rifiuto": "4. 4",
+        "cod_caratt_merc": "4. 4. 4 d) ",
+        "descrizione": " metalli ferrosi e leghe metalliche nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 4. 4 d) - metalli ferrosi e leghe metalliche nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 44,
+        "cod_rm_tipo_rifiuto": "4. 5",
+        "cod_caratt_merc": "4. 5. 4 a) ",
+        "descrizione": " sali di zinco organici ed inorganici, ossidi misti di zinco e piombo nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 5. 4 a) - sali di zinco organici ed inorganici, ossidi misti di zinco e piombo nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 45,
+        "cod_rm_tipo_rifiuto": "4. 5",
+        "cod_caratt_merc": "4. 5. 4 b) ",
+        "descrizione": " zinco nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 5. 4 b) - zinco nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 46,
+        "cod_rm_tipo_rifiuto": " 4. 6",
+        "cod_caratt_merc": " 4. 6. 4 a) ",
+        "descrizione": " ossidi misti di zinco e piombo per la produzione di metalli nelle forme usualmente commercializzate",
+        "descrizione_estesa": " 4. 6. 4 a) - ossidi misti di zinco e piombo per la produzione di metalli nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 47,
+        "cod_rm_tipo_rifiuto": "4. 6",
+        "cod_caratt_merc": "4. 6. 4 b) e c) ",
+        "descrizione": " zinco nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 6. 4 b) e c) - zinco nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 48,
+        "cod_rm_tipo_rifiuto": "4. 7",
+        "cod_caratt_merc": "4. 7. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 7. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 49,
+        "cod_rm_tipo_rifiuto": "4. 7",
+        "cod_caratt_merc": "4. 7. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4. 7. 4 b) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 50,
+        "cod_rm_tipo_rifiuto": "5. 1",
+        "cod_caratt_merc": "5. 1. 4 ",
+        "descrizione": " metalli o leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 1. 4 - metalli o leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 51,
+        "cod_rm_tipo_rifiuto": "5.2",
+        "cod_caratt_merc": "5.2. 4 ",
+        "descrizione": " componenti di mezzi mobili rotabili per trasporto terrestre (assali, ruote, ecc.) utilizzabili per lo scopo originario; metalli o leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.2. 4 - componenti di mezzi mobili rotabili per trasporto terrestre (assali, ruote, ecc.) utilizzabili per lo scopo originario; metalli o leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 52,
+        "cod_rm_tipo_rifiuto": "5.3",
+        "cod_caratt_merc": "5.3. 4 ",
+        "descrizione": " metalli in forma spugnosa con elevato grado di purezza",
+        "descrizione_estesa": "5.3. 4 - metalli in forma spugnosa con elevato grado di purezza"
+    },
+    {
+        "id": 53,
+        "cod_rm_tipo_rifiuto": "5. 4",
+        "cod_caratt_merc": "5. 4. 4 ",
+        "descrizione": " metalli preziosi puri nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 4. 4 - metalli preziosi puri nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 54,
+        "cod_rm_tipo_rifiuto": "5. 5",
+        "cod_caratt_merc": "5. 5. 4 ",
+        "descrizione": " metalli preziosi puri; metalli ferrosi e leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 5. 4 - metalli preziosi puri; metalli ferrosi e leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 55,
+        "cod_rm_tipo_rifiuto": "5. 6",
+        "cod_caratt_merc": "5. 6. 4 a) ",
+        "descrizione": " metalli preziosi e altri metalli ferrosi e non ferrosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 6. 4 a) - metalli preziosi e altri metalli ferrosi e non ferrosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 56,
+        "cod_rm_tipo_rifiuto": "5. 6",
+        "cod_caratt_merc": "5. 6. 4 b) ",
+        "descrizione": " prodotti plastici e in gomma nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 6. 4 b) - prodotti plastici e in gomma nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 57,
+        "cod_rm_tipo_rifiuto": "5. 7",
+        "cod_caratt_merc": "5. 7. 4 ",
+        "descrizione": " alluminio e piombo nelle forme usualmente commercializzate, prodotti plastici e in gomma nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 7. 4 - alluminio e piombo nelle forme usualmente commercializzate, prodotti plastici e in gomma nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 58,
+        "cod_rm_tipo_rifiuto": "5. 8",
+        "cod_caratt_merc": "5. 8. 4 ",
+        "descrizione": " rame e piombo nelle forme usualmente commercializzate; prodotti plastici e in gomma nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 8. 4 - rame e piombo nelle forme usualmente commercializzate; prodotti plastici e in gomma nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 59,
+        "cod_rm_tipo_rifiuto": "5. 9",
+        "cod_caratt_merc": "5. 9. 4 ",
+        "descrizione": " manufatti in plastica nelle forme usualmente commercializzate; metalli e leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5. 9. 4 - manufatti in plastica nelle forme usualmente commercializzate; metalli e leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 60,
+        "cod_rm_tipo_rifiuto": "5.10",
+        "cod_caratt_merc": "5.10. 4 ",
+        "descrizione": " rame, zinco e leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.10. 4 - rame, zinco e leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 61,
+        "cod_rm_tipo_rifiuto": "5.11",
+        "cod_caratt_merc": "5.11. 4 ",
+        "descrizione": " rame e sue leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.11. 4 - rame e sue leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 62,
+        "cod_rm_tipo_rifiuto": "5.12",
+        "cod_caratt_merc": "5.12. 4 ",
+        "descrizione": " acciai, rame e zinco nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.12. 4 - acciai, rame e zinco nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 63,
+        "cod_rm_tipo_rifiuto": "5.13",
+        "cod_caratt_merc": "5.13. 4 ",
+        "descrizione": " acciaio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.13. 4 - acciaio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 64,
+        "cod_rm_tipo_rifiuto": " 5.14",
+        "cod_caratt_merc": " 5.14. 4 a) e b) ",
+        "descrizione": " ghisa e acciaio nelle forme usualmente commercializzate; cloruri di ferro nelle forme usualmente commercializzate",
+        "descrizione_estesa": " 5.14. 4 a) e b) - ghisa e acciaio nelle forme usualmente commercializzate; cloruri di ferro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 65,
+        "cod_rm_tipo_rifiuto": "5.14",
+        "cod_caratt_merc": "5.14. 4 c) ",
+        "descrizione": " manufatti di cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.14. 4 c) - manufatti di cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 66,
+        "cod_rm_tipo_rifiuto": "5.14",
+        "cod_caratt_merc": "5.14. 4 d) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.14. 4 d) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 67,
+        "cod_rm_tipo_rifiuto": "5.16",
+        "cod_caratt_merc": "5.16. 4 ",
+        "descrizione": " componenti elettrici ed elettronici nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.16. 4 - componenti elettrici ed elettronici nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 68,
+        "cod_rm_tipo_rifiuto": "5.17",
+        "cod_caratt_merc": "5.17. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.17. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 69,
+        "cod_rm_tipo_rifiuto": "5.17",
+        "cod_caratt_merc": "5.17. 4 b) ",
+        "descrizione": " vetro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.17. 4 b) - vetro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 70,
+        "cod_rm_tipo_rifiuto": "5.17",
+        "cod_caratt_merc": "5.17. 4 c) ",
+        "descrizione": " calcestruzzi conglomerati cementizi e bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.17. 4 c) - calcestruzzi conglomerati cementizi e bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 71,
+        "cod_rm_tipo_rifiuto": "5.17",
+        "cod_caratt_merc": "5.17. 4 d) ",
+        "descrizione": " conglomerati idraulici catalizzati nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.17. 4 d) - conglomerati idraulici catalizzati nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 72,
+        "cod_rm_tipo_rifiuto": "5.18",
+        "cod_caratt_merc": "5.18. 4 a) ",
+        "descrizione": " ghisa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.18. 4 a) - ghisa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 73,
+        "cod_rm_tipo_rifiuto": "5.18",
+        "cod_caratt_merc": "5.18. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.18. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 74,
+        "cod_rm_tipo_rifiuto": "5.18",
+        "cod_caratt_merc": "5.18. 4 c) ",
+        "descrizione": " calcestruzzi e conglomerati cementizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.18. 4 c) - calcestruzzi e conglomerati cementizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 75,
+        "cod_rm_tipo_rifiuto": "5.19",
+        "cod_caratt_merc": "5.19. 4 ",
+        "descrizione": " metalli ferrosi e non ferrosi nelle forme usualmente commercializzate; prodotti e materiali plastici e in gomma nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.19. 4 - metalli ferrosi e non ferrosi nelle forme usualmente commercializzate; prodotti e materiali plastici e in gomma nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 76,
+        "cod_rm_tipo_rifiuto": "6. 1",
+        "cod_caratt_merc": "6. 1. 4 ",
+        "descrizione": " materie prime secondarie conformi alle specifiche UNIPLAST_UNI 10667 e prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 1. 4 - materie prime secondarie conformi alle specifiche UNIPLAST_UNI 10667 e prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 77,
+        "cod_rm_tipo_rifiuto": "6. 2",
+        "cod_caratt_merc": "6. 2. 4 ",
+        "descrizione": " materie prime secondarie conformi alle specifiche UNIPLAST_UNI 10667 e prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 2. 4 - materie prime secondarie conformi alle specifiche UNIPLAST_UNI 10667 e prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 78,
+        "cod_rm_tipo_rifiuto": "6. 3",
+        "cod_caratt_merc": "6. 3. 4 ",
+        "descrizione": " ABS di seconda qualità",
+        "descrizione_estesa": "6. 3. 4 - ABS di seconda qualità"
+    },
+    {
+        "id": 79,
+        "cod_rm_tipo_rifiuto": "6. 4",
+        "cod_caratt_merc": "6. 4. 4 ",
+        "descrizione": " prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 4. 4 - prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 80,
+        "cod_rm_tipo_rifiuto": "6. 5",
+        "cod_caratt_merc": "6. 5. 4 ",
+        "descrizione": " prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 5. 4 - prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 81,
+        "cod_rm_tipo_rifiuto": "6. 6",
+        "cod_caratt_merc": "6. 6. 4 ",
+        "descrizione": " prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 6. 4 - prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 82,
+        "cod_rm_tipo_rifiuto": "6. 7",
+        "cod_caratt_merc": "6. 7. 4 ",
+        "descrizione": " collanti e adesivi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 7. 4 - collanti e adesivi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 83,
+        "cod_rm_tipo_rifiuto": "6. 8",
+        "cod_caratt_merc": "6. 8. 4 ",
+        "descrizione": " pannelli fonoassorbenti e termoisolanti nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6. 8. 4 - pannelli fonoassorbenti e termoisolanti nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 84,
+        "cod_rm_tipo_rifiuto": "6.10",
+        "cod_caratt_merc": "6.10. 4 ",
+        "descrizione": " adesivi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.10. 4 - adesivi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 85,
+        "cod_rm_tipo_rifiuto": "6.11",
+        "cod_caratt_merc": "6.11. 4 ",
+        "descrizione": " prodotti in plastica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.11. 4 - prodotti in plastica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 86,
+        "cod_rm_tipo_rifiuto": "6.12",
+        "cod_caratt_merc": "6.12. 4 a) e b) ",
+        "descrizione": " poliammide 6 nelle forme usualmente commercializzate; caprolattame monomero nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.12. 4 a) e b) - poliammide 6 nelle forme usualmente commercializzate; caprolattame monomero nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 87,
+        "cod_rm_tipo_rifiuto": "7. 1",
+        "cod_caratt_merc": "7. 1. 4 ",
+        "descrizione": " materie prime secondarie perledilizia con caratteristiche conformi allallegato C della circolare del Ministero dellambiente e della tutela del territorio 15 luglio 2005, n. UL/2005/5205",
+        "descrizione_estesa": "7. 1. 4 - materie prime secondarie perledilizia con caratteristiche conformi allallegato C della circolare del Ministero dellambiente e della tutela del territorio 15 luglio 2005, n. UL/2005/5205"
+    },
+    {
+        "id": 88,
+        "cod_rm_tipo_rifiuto": "7. 2",
+        "cod_caratt_merc": "7. 2. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 2. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 89,
+        "cod_rm_tipo_rifiuto": "7. 2",
+        "cod_caratt_merc": "7. 2. 4 b) e c) ",
+        "descrizione": " conglomerati cementizi e bituminosi e malte ardesiache",
+        "descrizione_estesa": "7. 2. 4 b) e c) - conglomerati cementizi e bituminosi e malte ardesiache"
+    },
+    {
+        "id": 90,
+        "cod_rm_tipo_rifiuto": "7. 3",
+        "cod_caratt_merc": "7. 3. 4 a) ",
+        "descrizione": " prodotti e impasti ceramici e laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 3. 4 a) - prodotti e impasti ceramici e laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 91,
+        "cod_rm_tipo_rifiuto": "7. 3",
+        "cod_caratt_merc": "7. 3. 4 b) ",
+        "descrizione": " materiale lapideo nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 3. 4 b) - materiale lapideo nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 92,
+        "cod_rm_tipo_rifiuto": "7. 4",
+        "cod_caratt_merc": "7. 4. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 4. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 93,
+        "cod_rm_tipo_rifiuto": "7. 4",
+        "cod_caratt_merc": "7. 4. 4 b) ",
+        "descrizione": " prodotti ceramici e laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 4. 4 b) - prodotti ceramici e laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 94,
+        "cod_rm_tipo_rifiuto": " 7. 5",
+        "cod_caratt_merc": " 7. 5. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": " 7. 5. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 95,
+        "cod_rm_tipo_rifiuto": "7. 5",
+        "cod_caratt_merc": "7. 5. 4 b) ",
+        "descrizione": " conglomerati per ledilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 5. 4 b) - conglomerati per ledilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 96,
+        "cod_rm_tipo_rifiuto": "7. 6",
+        "cod_caratt_merc": "7. 6. 4 a) ",
+        "descrizione": " onglomerato bituminoso nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 6. 4 a) - onglomerato bituminoso nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 97,
+        "cod_rm_tipo_rifiuto": "7. 6",
+        "cod_caratt_merc": "7. 6. 4 b) ",
+        "descrizione": " materiali per costruzioni nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 6. 4 b) - materiali per costruzioni nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 98,
+        "cod_rm_tipo_rifiuto": "7. 7",
+        "cod_caratt_merc": "7. 7. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 7. 4 - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 99,
+        "cod_rm_tipo_rifiuto": "7. 8",
+        "cod_caratt_merc": "7. 8. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 8. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 100,
+        "cod_rm_tipo_rifiuto": "7. 8",
+        "cod_caratt_merc": "7. 8. 4 b) ",
+        "descrizione": " materiali refrattari nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 8. 4 b) - materiali refrattari nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 101,
+        "cod_rm_tipo_rifiuto": "7. 8",
+        "cod_caratt_merc": "7. 8. 4 c) ",
+        "descrizione": " calcestruzzi, conglomerati cementizi e bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 8. 4 c) - calcestruzzi, conglomerati cementizi e bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 102,
+        "cod_rm_tipo_rifiuto": "7. 9",
+        "cod_caratt_merc": "7. 9. 4 a) ",
+        "descrizione": " leghe di carburo di silicio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 9. 4 a) - leghe di carburo di silicio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 103,
+        "cod_rm_tipo_rifiuto": "7. 9",
+        "cod_caratt_merc": "7. 9. 4 b) ",
+        "descrizione": " refrattari nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 9. 4 b) - refrattari nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 104,
+        "cod_rm_tipo_rifiuto": "7. 9",
+        "cod_caratt_merc": "7. 9. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 9. 4 c) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 105,
+        "cod_rm_tipo_rifiuto": "7. 9",
+        "cod_caratt_merc": "7. 9. 4 d) ",
+        "descrizione": " calcestruzzo, conglomerati cementizi e bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7. 9. 4 d) - calcestruzzo, conglomerati cementizi e bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 106,
+        "cod_rm_tipo_rifiuto": "7.10",
+        "cod_caratt_merc": "7.10. 4 a) ",
+        "descrizione": " calce idraulica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.10. 4 a) - calce idraulica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 107,
+        "cod_rm_tipo_rifiuto": "7.10",
+        "cod_caratt_merc": "7.10. 4 b) ",
+        "descrizione": " conglomerati bituminosi; nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.10. 4 b) - conglomerati bituminosi; nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 108,
+        "cod_rm_tipo_rifiuto": "7.10",
+        "cod_caratt_merc": "7.10. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.10. 4 c) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 109,
+        "cod_rm_tipo_rifiuto": "7.10",
+        "cod_caratt_merc": "7.10. 4 d) ",
+        "descrizione": " abrasivi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.10. 4 d) - abrasivi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 110,
+        "cod_rm_tipo_rifiuto": "7.11",
+        "cod_caratt_merc": "7.11. 4 a) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.11. 4 a) - conglomerati cementizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 111,
+        "cod_rm_tipo_rifiuto": "7.11",
+        "cod_caratt_merc": "7.11. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.11. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 112,
+        "cod_rm_tipo_rifiuto": "7.12",
+        "cod_caratt_merc": "7.12. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.12. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 113,
+        "cod_rm_tipo_rifiuto": "7.12",
+        "cod_caratt_merc": "7.12. 4 b) ",
+        "descrizione": " materiale e manufatti per ledilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.12. 4 b) - materiale e manufatti per ledilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 114,
+        "cod_rm_tipo_rifiuto": "7.13",
+        "cod_caratt_merc": "7.13. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.13. 4 - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 115,
+        "cod_rm_tipo_rifiuto": "7.14",
+        "cod_caratt_merc": "7.14. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.14. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 116,
+        "cod_rm_tipo_rifiuto": "7.15",
+        "cod_caratt_merc": "7.15. 4 a) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.15. 4 a) - laterizi e argilla espansa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 117,
+        "cod_rm_tipo_rifiuto": "7.15",
+        "cod_caratt_merc": "7.15. 4 b) ",
+        "descrizione": " aggregati artificiali nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.15. 4 b) - aggregati artificiali nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 118,
+        "cod_rm_tipo_rifiuto": "7.15",
+        "cod_caratt_merc": "7.15. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate [R5]",
+        "descrizione_estesa": "7.15. 4 c) - cemento nelle forme usualmente commercializzate [R5]"
+    },
+    {
+        "id": 119,
+        "cod_rm_tipo_rifiuto": "7.16",
+        "cod_caratt_merc": "7.16. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.16. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 120,
+        "cod_rm_tipo_rifiuto": "7.16",
+        "cod_caratt_merc": "7.16. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.16. 4 b) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 121,
+        "cod_rm_tipo_rifiuto": "7.17",
+        "cod_caratt_merc": "7.17. 4 a) ",
+        "descrizione": " calce idraulica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.17. 4 a) - calce idraulica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 122,
+        "cod_rm_tipo_rifiuto": "7.17",
+        "cod_caratt_merc": "7.17. 4 b) ",
+        "descrizione": " conglomerati e manufatti per ledilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.17. 4 b) - conglomerati e manufatti per ledilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 123,
+        "cod_rm_tipo_rifiuto": "7.17",
+        "cod_caratt_merc": "7.17. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.17. 4 c) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 124,
+        "cod_rm_tipo_rifiuto": "7.17",
+        "cod_caratt_merc": "7.17. 4 d) ",
+        "descrizione": " ghisa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.17. 4 d) - ghisa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 125,
+        "cod_rm_tipo_rifiuto": "7.18",
+        "cod_caratt_merc": "7.18. 4 a) ",
+        "descrizione": " calce idraulica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.18. 4 a) - calce idraulica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 126,
+        "cod_rm_tipo_rifiuto": "7.18",
+        "cod_caratt_merc": "7.18. 4 b) ",
+        "descrizione": " conglomerati e manufatti per l’edilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.18. 4 b) - conglomerati e manufatti per l’edilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 127,
+        "cod_rm_tipo_rifiuto": "7.18",
+        "cod_caratt_merc": "7.18. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.18. 4 c) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 128,
+        "cod_rm_tipo_rifiuto": "7.19",
+        "cod_caratt_merc": "7.19. 4 a) ",
+        "descrizione": " prodotti ceramici nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.19. 4 a) - prodotti ceramici nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 129,
+        "cod_rm_tipo_rifiuto": "7.19",
+        "cod_caratt_merc": "7.19. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.19. 4 b) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 130,
+        "cod_rm_tipo_rifiuto": "7.20",
+        "cod_caratt_merc": "7.20. 4 ",
+        "descrizione": " metalli non ferrosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.20. 4 - metalli non ferrosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 131,
+        "cod_rm_tipo_rifiuto": "7.21",
+        "cod_caratt_merc": "7.21. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.21. 4 - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 132,
+        "cod_rm_tipo_rifiuto": "7.22",
+        "cod_caratt_merc": "7.22. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.22. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 133,
+        "cod_rm_tipo_rifiuto": "7.22",
+        "cod_caratt_merc": "7.22. 4 b) ",
+        "descrizione": " prodotti per ledilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.22. 4 b) - prodotti per ledilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 134,
+        "cod_rm_tipo_rifiuto": "7.23",
+        "cod_caratt_merc": "7.23. 4 a) ",
+        "descrizione": " bottoni o altri manufatti simili nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.23. 4 a) - bottoni o altri manufatti simili nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 135,
+        "cod_rm_tipo_rifiuto": "7.23",
+        "cod_caratt_merc": "7.23. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.23. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 136,
+        "cod_rm_tipo_rifiuto": "7.24",
+        "cod_caratt_merc": "7.24. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.24. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 137,
+        "cod_rm_tipo_rifiuto": "7.24",
+        "cod_caratt_merc": "7.24. 4 b) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente prodotte",
+        "descrizione_estesa": "7.24. 4 b) - conglomerati cementizi nelle forme usualmente prodotte"
+    },
+    {
+        "id": 138,
+        "cod_rm_tipo_rifiuto": "7.24",
+        "cod_caratt_merc": "7.24. 4 c) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.24. 4 c) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 139,
+        "cod_rm_tipo_rifiuto": "7.24",
+        "cod_caratt_merc": "7.24. 4 d) ",
+        "descrizione": " asfalto e conglomerati bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.24. 4 d) - asfalto e conglomerati bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 140,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 141,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 b) ",
+        "descrizione": " calce idraulica nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 b) - calce idraulica nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 142,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 c) ",
+        "descrizione": " sabbie di fonderia",
+        "descrizione_estesa": "7.25. 4 c) - sabbie di fonderia"
+    },
+    {
+        "id": 143,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 d) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 d) - laterizi e argilla espansa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 144,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 e) ",
+        "descrizione": " conglomerati per ledilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 e) - conglomerati per ledilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 145,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 f) ",
+        "descrizione": " vetro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 f) - vetro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 146,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 g) ",
+        "descrizione": " materiali e/o prodotti ceramici nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 g) - materiali e/o prodotti ceramici nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 147,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_caratt_merc": "7.25. 4 h) ",
+        "descrizione": " conglomerati bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.25. 4 h) - conglomerati bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 148,
+        "cod_rm_tipo_rifiuto": "7.26",
+        "cod_caratt_merc": "7.26. 4 ",
+        "descrizione": " polveri di quarzo di varia granulometria per uso edile e lavorazione idropitture",
+        "descrizione_estesa": "7.26. 4 - polveri di quarzo di varia granulometria per uso edile e lavorazione idropitture"
+    },
+    {
+        "id": 149,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 150,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 b) ",
+        "descrizione": " calcestruzzo nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 b) - calcestruzzo nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 151,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 c) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 c) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 152,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 d) ",
+        "descrizione": " conglomerati per edilizia nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 d) - conglomerati per edilizia nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 153,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 e) ",
+        "descrizione": " vetro nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 e) - vetro nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 154,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_caratt_merc": "7.27. 4 f) ",
+        "descrizione": " conglomerati bituminosi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.27. 4 f) - conglomerati bituminosi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 155,
+        "cod_rm_tipo_rifiuto": "7.28",
+        "cod_caratt_merc": "7.28. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.28. 4 - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 156,
+        "cod_rm_tipo_rifiuto": "7.29",
+        "cod_caratt_merc": "7.29. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.29. 4 - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 157,
+        "cod_rm_tipo_rifiuto": "7.30",
+        "cod_caratt_merc": "7.30. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.30. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 158,
+        "cod_rm_tipo_rifiuto": "7.31",
+        "cod_caratt_merc": "7.31. 4 ",
+        "descrizione": " prodotti ceramici e/o laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.31. 4 - prodotti ceramici e/o laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 159,
+        "cod_rm_tipo_rifiuto": "7.31-bis",
+        "cod_caratt_merc": "7.31-bis. 4 ",
+        "descrizione": " prodotti ceramici nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.31-bis. 4 - prodotti ceramici nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 160,
+        "cod_rm_tipo_rifiuto": "8. 1",
+        "cod_caratt_merc": "8. 1. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "8. 1. 4 - non applicabile"
+    },
+    {
+        "id": 161,
+        "cod_rm_tipo_rifiuto": "8. 2",
+        "cod_caratt_merc": "8. 2. 4 ",
+        "descrizione": " carta, carta catramata e cartone nelle forme usualmente commercializzate",
+        "descrizione_estesa": "8. 2. 4 - carta, carta catramata e cartone nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 162,
+        "cod_rm_tipo_rifiuto": "8. 3",
+        "cod_caratt_merc": "8. 3. 4 ",
+        "descrizione": " grasso di lana nelle forme usualmente commercializzate",
+        "descrizione_estesa": "8. 3. 4 - grasso di lana nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 163,
+        "cod_rm_tipo_rifiuto": "8. 4",
+        "cod_caratt_merc": "8. 4. 4 ",
+        "descrizione": " materie prime secondarie per l’industria tessile conformi alle specifiche merceologiche delle CCIAA di Milano e Firenze",
+        "descrizione_estesa": "8. 4. 4 - materie prime secondarie per l’industria tessile conformi alle specifiche merceologiche delle CCIAA di Milano e Firenze"
+    },
+    {
+        "id": 164,
+        "cod_rm_tipo_rifiuto": "8. 5",
+        "cod_caratt_merc": "8. 5. 4 a) ",
+        "descrizione": " cuoio rigenerato, cuoio torrefatto",
+        "descrizione_estesa": "8. 5. 4 a) - cuoio rigenerato, cuoio torrefatto"
+    },
+    {
+        "id": 165,
+        "cod_rm_tipo_rifiuto": "8. 5",
+        "cod_caratt_merc": "8. 5. 4 b) ",
+        "descrizione": " manufatti in cuoio e in pelle di limitate dimensioni",
+        "descrizione_estesa": "8. 5. 4 b) - manufatti in cuoio e in pelle di limitate dimensioni"
+    },
+    {
+        "id": 166,
+        "cod_rm_tipo_rifiuto": "8.6",
+        "cod_caratt_merc": "8.6. 4 ",
+        "descrizione": " cuoio rigenerato adatto al riutilizzo nell’industria manifatturiera",
+        "descrizione_estesa": "8.6. 4 - cuoio rigenerato adatto al riutilizzo nell’industria manifatturiera"
+    },
+    {
+        "id": 167,
+        "cod_rm_tipo_rifiuto": "8. 7",
+        "cod_caratt_merc": "8. 7. 4 a) ",
+        "descrizione": " articoli di cuoio ricostituito",
+        "descrizione_estesa": "8. 7. 4 a) - articoli di cuoio ricostituito"
+    },
+    {
+        "id": 168,
+        "cod_rm_tipo_rifiuto": "8. 7",
+        "cod_caratt_merc": "8. 7. 4 b) ",
+        "descrizione": " colle nelle forme usualmente commercializzate",
+        "descrizione_estesa": "8. 7. 4 b) - colle nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 169,
+        "cod_rm_tipo_rifiuto": "8. 7",
+        "cod_caratt_merc": "8. 7. 4 c) ",
+        "descrizione": " cartoni speciali nelle forme usualmente commercializzate",
+        "descrizione_estesa": "8. 7. 4 c) - cartoni speciali nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 170,
+        "cod_rm_tipo_rifiuto": "8. 8",
+        "cod_caratt_merc": "8. 8. 4 ",
+        "descrizione": " colle, gelatine e idrolizzati proteici nelle forme usualmente commercializzate",
+        "descrizione_estesa": "8. 8. 4 - colle, gelatine e idrolizzati proteici nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 171,
+        "cod_rm_tipo_rifiuto": "8. 9",
+        "cod_caratt_merc": "8. 9. 4 a) ",
+        "descrizione": " indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati utilizzabili direttamente in cicli di consumo",
+        "descrizione_estesa": "8. 9. 4 a) - indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati utilizzabili direttamente in cicli di consumo"
+    },
+    {
+        "id": 172,
+        "cod_rm_tipo_rifiuto": "8. 9",
+        "cod_caratt_merc": "8. 9. 4 b) ",
+        "descrizione": " materie prime secondarie per l’industria tessile conformi alle specifiche delle CCIAA di Milano e Firenze",
+        "descrizione_estesa": "8. 9. 4 b) - materie prime secondarie per l’industria tessile conformi alle specifiche delle CCIAA di Milano e Firenze"
+    },
+    {
+        "id": 173,
+        "cod_rm_tipo_rifiuto": "9. 1",
+        "cod_caratt_merc": "9. 1. 4 a) ",
+        "descrizione": " manufatti a base legno e sughero nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 1. 4 a) - manufatti a base legno e sughero nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 174,
+        "cod_rm_tipo_rifiuto": "9. 1",
+        "cod_caratt_merc": "9. 1. 4 b) ",
+        "descrizione": " pasta di carta e carta nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 1. 4 b) - pasta di carta e carta nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 175,
+        "cod_rm_tipo_rifiuto": "9. 1",
+        "cod_caratt_merc": "9. 1. 4 c) ",
+        "descrizione": " pannelli nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 1. 4 c) - pannelli nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 176,
+        "cod_rm_tipo_rifiuto": "9. 2",
+        "cod_caratt_merc": "9. 2. 4 ",
+        "descrizione": " legno variamente cippato, granulati e cascami di sughero, tondelli in conformità alle specifiche fissate dalle CCIAA di Milano e Bolzano",
+        "descrizione_estesa": "9. 2. 4 - legno variamente cippato, granulati e cascami di sughero, tondelli in conformità alle specifiche fissate dalle CCIAA di Milano e Bolzano"
+    },
+    {
+        "id": 177,
+        "cod_rm_tipo_rifiuto": "9. 5",
+        "cod_caratt_merc": "9. 5. 4 ",
+        "descrizione": " pannelli di particelle nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 5. 4 - pannelli di particelle nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 178,
+        "cod_rm_tipo_rifiuto": "9. 6",
+        "cod_caratt_merc": "9. 6. 4 a) ",
+        "descrizione": " laminato nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 6. 4 a) - laminato nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 179,
+        "cod_rm_tipo_rifiuto": "9. 6",
+        "cod_caratt_merc": "9. 6. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 6. 4 b) - laterizi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 180,
+        "cod_rm_tipo_rifiuto": "9. 6",
+        "cod_caratt_merc": "9. 6. 4 c) ",
+        "descrizione": " pannelli e componenti per l’arredamento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "9. 6. 4 c) - pannelli e componenti per l’arredamento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 181,
+        "cod_rm_tipo_rifiuto": "10. 1",
+        "cod_caratt_merc": "10. 1. 4 a) e b) ",
+        "descrizione": " manufatti in gomma nelle forme usualmente commercializzate",
+        "descrizione_estesa": "10. 1. 4 a) e b) - manufatti in gomma nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 182,
+        "cod_rm_tipo_rifiuto": "10. 1",
+        "cod_caratt_merc": "10. 1. 4 c) ",
+        "descrizione": " bitumi modificati nelle forme usualmente commercializzate",
+        "descrizione_estesa": "10. 1. 4 c) - bitumi modificati nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 183,
+        "cod_rm_tipo_rifiuto": "10. 1",
+        "cod_caratt_merc": "10. 1. 4 d) ",
+        "descrizione": " parabordi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "10. 1. 4 d) - parabordi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 184,
+        "cod_rm_tipo_rifiuto": "10. 2",
+        "cod_caratt_merc": "10. 2. 4 a) ",
+        "descrizione": " manufatti in gomma nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "10. 2. 4 a) - manufatti in gomma nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 185,
+        "cod_rm_tipo_rifiuto": "10. 2",
+        "cod_caratt_merc": "10. 2. 4 b) e c) ",
+        "descrizione": " bitumi e parabordi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "10. 2. 4 b) e c) - bitumi e parabordi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 186,
+        "cod_rm_tipo_rifiuto": "11. 1",
+        "cod_caratt_merc": "11. 1. 4 ",
+        "descrizione": " olio non alimentare nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11. 1. 4 - olio non alimentare nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 187,
+        "cod_rm_tipo_rifiuto": "11. 2",
+        "cod_caratt_merc": "11. 2. 4 a) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11. 2. 4 a) - laterizi e argilla espansa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 188,
+        "cod_rm_tipo_rifiuto": "11. 2",
+        "cod_caratt_merc": "11. 2. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11. 2. 4 b) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 189,
+        "cod_rm_tipo_rifiuto": "11. 3",
+        "cod_caratt_merc": "11. 3. 4 ",
+        "descrizione": " olio non alimentare nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11. 3. 4 - olio non alimentare nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 190,
+        "cod_rm_tipo_rifiuto": "11. 4",
+        "cod_caratt_merc": "11. 4. 4 a) ",
+        "descrizione": " prodotti dellindustria saponiera e dei tensioattivi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11. 4. 4 a) - prodotti dellindustria saponiera e dei tensioattivi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 191,
+        "cod_rm_tipo_rifiuto": "11. 4",
+        "cod_caratt_merc": "11. 4. 4 b) ",
+        "descrizione": " gomma nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11. 4. 4 b) - gomma nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 192,
+        "cod_rm_tipo_rifiuto": "11. 4",
+        "cod_caratt_merc": "11. 4. 4 c) ",
+        "descrizione": " cartoni catramati nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11. 4. 4 c) - cartoni catramati nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 193,
+        "cod_rm_tipo_rifiuto": "11. 4",
+        "cod_caratt_merc": "11. 4. 4 d) ",
+        "descrizione": " inchiostri da stampa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11. 4. 4 d) - inchiostri da stampa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 194,
+        "cod_rm_tipo_rifiuto": "11. 5",
+        "cod_caratt_merc": "11. 5. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "11. 5. 4 - non applicabile"
+    },
+    {
+        "id": 195,
+        "cod_rm_tipo_rifiuto": "11. 6",
+        "cod_caratt_merc": "11. 6. 4 ",
+        "descrizione": " acido tartarico e sali nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11. 6. 4 - acido tartarico e sali nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 196,
+        "cod_rm_tipo_rifiuto": "11. 7",
+        "cod_caratt_merc": "11. 7. 4 ",
+        "descrizione": " tartrati nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11. 7. 4 - tartrati nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 197,
+        "cod_rm_tipo_rifiuto": "11. 8",
+        "cod_caratt_merc": "11. 8. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "11. 8. 4 - non applicabile"
+    },
+    {
+        "id": 198,
+        "cod_rm_tipo_rifiuto": "11. 9",
+        "cod_caratt_merc": "11. 9. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "11. 9. 4 - non applicabile"
+    },
+    {
+        "id": 199,
+        "cod_rm_tipo_rifiuto": "11.10",
+        "cod_caratt_merc": "11.10. 4 a) ",
+        "descrizione": " laminati di tabacco omogeneizzato",
+        "descrizione_estesa": "11.10. 4 a) - laminati di tabacco omogeneizzato"
+    },
+    {
+        "id": 200,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 a) ",
+        "descrizione": " grassi colati nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11.11. 4 a) - grassi colati nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 201,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 b) ",
+        "descrizione": " argilla espansa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "11.11. 4 b) - argilla espansa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 202,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 c) ",
+        "descrizione": " inchiostri da stampa nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11.11. 4 c) - inchiostri da stampa nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 203,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 d) ",
+        "descrizione": " distaccante per casseforme;",
+        "descrizione_estesa": "11.11. 4 d) - distaccante per casseforme;"
+    },
+    {
+        "id": 204,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 e) ",
+        "descrizione": " lubrificanti nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "11.11. 4 e) - lubrificanti nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 205,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_caratt_merc": "11.11. 4 f) ",
+        "descrizione": " prodotti dell’industria saponiera e dei tensioattivi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11.11. 4 f) - prodotti dell’industria saponiera e dei tensioattivi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 206,
+        "cod_rm_tipo_rifiuto": "11.12",
+        "cod_caratt_merc": "11.12. 4 ",
+        "descrizione": " lastre e/o pannelli estrusi monostrato e/o multistrato di spessore variabile esente da esano residuo nelle forme e dimensioni usualmente commercializzate; pannelli di particelle rivestiti e/o nobilitati da termoformare esenti da esano residuo nelle forme usualmente commercializzate; manufatti per l’industria delle costruzioni esenti da esano residuo nelle forme e dimensioni usualmente commercializzate.",
+        "descrizione_estesa": "11.12. 4 - lastre e/o pannelli estrusi monostrato e/o multistrato di spessore variabile esente da esano residuo nelle forme e dimensioni usualmente commercializzate; pannelli di particelle rivestiti e/o nobilitati da termoformare esenti da esano residuo nelle forme usualmente commercializzate; manufatti per l’industria delle costruzioni esenti da esano residuo nelle forme e dimensioni usualmente commercializzate."
+    },
+    {
+        "id": 207,
+        "cod_rm_tipo_rifiuto": "11.13",
+        "cod_caratt_merc": "11.13. 4 ",
+        "descrizione": " carta e cartone nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "11.13. 4 - carta e cartone nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 208,
+        "cod_rm_tipo_rifiuto": "11.14",
+        "cod_caratt_merc": "11.14. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "11.14. 4 - non applicabile"
+    },
+    {
+        "id": 209,
+        "cod_rm_tipo_rifiuto": "12. 1",
+        "cod_caratt_merc": "12. 1. 4 a) ",
+        "descrizione": " pasta di carta e carta di bassa qualità nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 1. 4 a) - pasta di carta e carta di bassa qualità nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 210,
+        "cod_rm_tipo_rifiuto": "12. 1",
+        "cod_caratt_merc": "12. 1. 4 b) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate",
+        "descrizione_estesa": "12. 1. 4 b) - laterizi e argilla espansa nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 211,
+        "cod_rm_tipo_rifiuto": "12. 1",
+        "cod_caratt_merc": "12. 1. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 1. 4 c) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 212,
+        "cod_rm_tipo_rifiuto": "12. 1",
+        "cod_caratt_merc": "12. 1. 4 d) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 1. 4 d) - conglomerati cementizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 213,
+        "cod_rm_tipo_rifiuto": "12. 1",
+        "cod_caratt_merc": "12. 1. 4 e) ",
+        "descrizione": " pannelli in fibra nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 1. 4 e) - pannelli in fibra nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 214,
+        "cod_rm_tipo_rifiuto": "12. 2",
+        "cod_caratt_merc": "12. 2. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "12. 2. 4 - non applicabile"
+    },
+    {
+        "id": 215,
+        "cod_rm_tipo_rifiuto": "12. 3",
+        "cod_caratt_merc": "12. 3. 4 a) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 3. 4 a) - conglomerati cementizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 216,
+        "cod_rm_tipo_rifiuto": "12. 3",
+        "cod_caratt_merc": "12. 3. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 3. 4 b) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 217,
+        "cod_rm_tipo_rifiuto": "12. 3",
+        "cod_caratt_merc": "12. 3. 4 c) ",
+        "descrizione": " prodotti cartari nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 3. 4 c) - prodotti cartari nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 218,
+        "cod_rm_tipo_rifiuto": "12. 3",
+        "cod_caratt_merc": "12. 3. 4 d) ",
+        "descrizione": " idropitture.",
+        "descrizione_estesa": "12. 3. 4 d) - idropitture."
+    },
+    {
+        "id": 219,
+        "cod_rm_tipo_rifiuto": "12. 4",
+        "cod_caratt_merc": "12. 4. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "12. 4. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 220,
+        "cod_rm_tipo_rifiuto": "12. 4",
+        "cod_caratt_merc": "12. 4. 4 b) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzati;",
+        "descrizione_estesa": "12. 4. 4 b) - conglomerati cementizi nelle forme usualmente commercializzati;"
+    },
+    {
+        "id": 221,
+        "cod_rm_tipo_rifiuto": "12. 4",
+        "cod_caratt_merc": "12. 4. 4 c) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 4. 4 c) - laterizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 222,
+        "cod_rm_tipo_rifiuto": "12. 4",
+        "cod_caratt_merc": "12. 4. 4 d) ",
+        "descrizione": " prodotti ceramici nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 4. 4 d) - prodotti ceramici nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 223,
+        "cod_rm_tipo_rifiuto": "12. 5",
+        "cod_caratt_merc": "12. 5. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 5. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 224,
+        "cod_rm_tipo_rifiuto": "12. 6",
+        "cod_caratt_merc": "12. 6. 4 a) ",
+        "descrizione": " piastrelle nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 6. 4 a) - piastrelle nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 225,
+        "cod_rm_tipo_rifiuto": "12. 6",
+        "cod_caratt_merc": "12. 6. 4 b) ",
+        "descrizione": " impasti ceramici nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 6. 4 b) - impasti ceramici nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 226,
+        "cod_rm_tipo_rifiuto": "12. 6",
+        "cod_caratt_merc": "12. 6. 4 c) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 6. 4 c) - laterizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 227,
+        "cod_rm_tipo_rifiuto": "12. 6",
+        "cod_caratt_merc": "12. 6. 4 d) ",
+        "descrizione": " smalti per l’industria ceramica nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 6. 4 d) - smalti per l’industria ceramica nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 228,
+        "cod_rm_tipo_rifiuto": "12. 6",
+        "cod_caratt_merc": "12. 6. 4 e) ",
+        "descrizione": " cemento.",
+        "descrizione_estesa": "12. 6. 4 e) - cemento."
+    },
+    {
+        "id": 229,
+        "cod_rm_tipo_rifiuto": "12. 7",
+        "cod_caratt_merc": "12. 7. 4 a) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 7. 4 a) - laterizi e argilla espansa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 230,
+        "cod_rm_tipo_rifiuto": "12. 7",
+        "cod_caratt_merc": "12. 7. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 7. 4 b) - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 231,
+        "cod_rm_tipo_rifiuto": "12. 8",
+        "cod_caratt_merc": "12. 8. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12. 8. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 232,
+        "cod_rm_tipo_rifiuto": "12. 8",
+        "cod_caratt_merc": "12. 8. 4 b) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12. 8. 4 b) - laterizi e argilla espansa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 233,
+        "cod_rm_tipo_rifiuto": "12. 9",
+        "cod_caratt_merc": "12. 9. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "12. 9. 4 - non applicabile"
+    },
+    {
+        "id": 234,
+        "cod_rm_tipo_rifiuto": "12.10",
+        "cod_caratt_merc": "12.10. 4 ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.10. 4 - laterizi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 235,
+        "cod_rm_tipo_rifiuto": "12.11",
+        "cod_caratt_merc": "12.11. 4 a) ",
+        "descrizione": " ghisa nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12.11. 4 a) - ghisa nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 236,
+        "cod_rm_tipo_rifiuto": "12.11",
+        "cod_caratt_merc": "12.11. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente prodotte;",
+        "descrizione_estesa": "12.11. 4 b) - cemento nelle forme usualmente prodotte;"
+    },
+    {
+        "id": 237,
+        "cod_rm_tipo_rifiuto": "12.11",
+        "cod_caratt_merc": "12.11. 4 c) ",
+        "descrizione": " conglomerati di calcestruzzo e cementizi nelle forme usualmente prodotte;",
+        "descrizione_estesa": "12.11. 4 c) - conglomerati di calcestruzzo e cementizi nelle forme usualmente prodotte;"
+    },
+    {
+        "id": 238,
+        "cod_rm_tipo_rifiuto": "12.11",
+        "cod_caratt_merc": "12.11. 4 d) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12.11. 4 d) - laterizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 239,
+        "cod_rm_tipo_rifiuto": "12.12",
+        "cod_caratt_merc": "12.12. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12.12. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 240,
+        "cod_rm_tipo_rifiuto": "12.12",
+        "cod_caratt_merc": "12.12. 4 b) ",
+        "descrizione": " prodotti per ledilizia nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.12. 4 b) - prodotti per ledilizia nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 241,
+        "cod_rm_tipo_rifiuto": "12.12",
+        "cod_caratt_merc": "12.12. 4 c) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.12. 4 c) - laterizi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 242,
+        "cod_rm_tipo_rifiuto": "12.12",
+        "cod_caratt_merc": "12.12. 4 d) ",
+        "descrizione": " conglomerati bituminosi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.12. 4 d) - conglomerati bituminosi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 243,
+        "cod_rm_tipo_rifiuto": "12.13",
+        "cod_caratt_merc": "12.13. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "12.13. 4 a) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 244,
+        "cod_rm_tipo_rifiuto": "12.13",
+        "cod_caratt_merc": "12.13. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.13. 4 b) - laterizi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 245,
+        "cod_rm_tipo_rifiuto": "12.14",
+        "cod_caratt_merc": "12.14. 4 a) ",
+        "descrizione": " sali di alluminio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "12.14. 4 a) - sali di alluminio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 246,
+        "cod_rm_tipo_rifiuto": "12.14",
+        "cod_caratt_merc": "12.14. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "12.14. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 247,
+        "cod_rm_tipo_rifiuto": "12.15",
+        "cod_caratt_merc": "12.15. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "12.15. 4 - non applicabile"
+    },
+    {
+        "id": 248,
+        "cod_rm_tipo_rifiuto": "12.16",
+        "cod_caratt_merc": "12.16. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12.16. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 249,
+        "cod_rm_tipo_rifiuto": "12.16",
+        "cod_caratt_merc": "12.16. 4 b) ",
+        "descrizione": " prodotti per l’edilizia nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.16. 4 b) - prodotti per l’edilizia nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 250,
+        "cod_rm_tipo_rifiuto": "12.16",
+        "cod_caratt_merc": "12.16. 4 c) ",
+        "descrizione": " acciaio e ghisa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.16. 4 c) - acciaio e ghisa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 251,
+        "cod_rm_tipo_rifiuto": "12.17",
+        "cod_caratt_merc": "12.17. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "12.17. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 252,
+        "cod_rm_tipo_rifiuto": "12.17",
+        "cod_caratt_merc": "12.17. 4 b) ",
+        "descrizione": " prodotti per l’edilizia nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.17. 4 b) - prodotti per l’edilizia nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 253,
+        "cod_rm_tipo_rifiuto": "12.17",
+        "cod_caratt_merc": "12.17. 4 c) ",
+        "descrizione": " acciaio e ghisa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.17. 4 c) - acciaio e ghisa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 254,
+        "cod_rm_tipo_rifiuto": "12.18",
+        "cod_caratt_merc": "12.18. 4 ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "12.18. 4 - laterizi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 255,
+        "cod_rm_tipo_rifiuto": "13. 1",
+        "cod_caratt_merc": "13. 1. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13. 1. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 256,
+        "cod_rm_tipo_rifiuto": "13. 1",
+        "cod_caratt_merc": "13. 1. 4 b) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13. 1. 4 b) - conglomerati cementizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 257,
+        "cod_rm_tipo_rifiuto": "13. 1",
+        "cod_caratt_merc": "13. 1. 4 c) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 1. 4 c) - laterizi e argilla espansa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 258,
+        "cod_rm_tipo_rifiuto": "13. 2",
+        "cod_caratt_merc": "13. 2. 4 a) ",
+        "descrizione": " conglomerati cementizi nelle forme usualmente prodotte;",
+        "descrizione_estesa": "13. 2. 4 a) - conglomerati cementizi nelle forme usualmente prodotte;"
+    },
+    {
+        "id": 259,
+        "cod_rm_tipo_rifiuto": "13. 2",
+        "cod_caratt_merc": "13. 2. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "13. 2. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 260,
+        "cod_rm_tipo_rifiuto": "13. 2",
+        "cod_caratt_merc": "13. 2. 4 c) ",
+        "descrizione": " laterizi e argilla espansa nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 2. 4 c) - laterizi e argilla espansa nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 261,
+        "cod_rm_tipo_rifiuto": "13. 3",
+        "cod_caratt_merc": "13. 3. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 3. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 262,
+        "cod_rm_tipo_rifiuto": "13. 4",
+        "cod_caratt_merc": "13. 4. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "13. 4. 4 - non applicabile"
+    },
+    {
+        "id": 263,
+        "cod_rm_tipo_rifiuto": "13. 5",
+        "cod_caratt_merc": "13. 5. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 5. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 264,
+        "cod_rm_tipo_rifiuto": "13. 6",
+        "cod_caratt_merc": "13. 6. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13. 6. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 265,
+        "cod_rm_tipo_rifiuto": "13. 6",
+        "cod_caratt_merc": "13. 6. 4 b) ",
+        "descrizione": " manufatti per ledilizia nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 6. 4 b) - manufatti per ledilizia nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 266,
+        "cod_rm_tipo_rifiuto": "13. 7",
+        "cod_caratt_merc": "13. 7. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13. 7. 4 a) - cemento nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 267,
+        "cod_rm_tipo_rifiuto": "13. 7",
+        "cod_caratt_merc": "13. 7. 4 b) ",
+        "descrizione": " gesso nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 7. 4 b) - gesso nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 268,
+        "cod_rm_tipo_rifiuto": "13. 8",
+        "cod_caratt_merc": "13. 8. 4 a) ",
+        "descrizione": " solfato di calcio parzialmente biidrato, granulato o in polvere, nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 8. 4 a) - solfato di calcio parzialmente biidrato, granulato o in polvere, nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 269,
+        "cod_rm_tipo_rifiuto": "13. 8",
+        "cod_caratt_merc": "13. 8. 4 b) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "13. 8. 4 b) - cemento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 270,
+        "cod_rm_tipo_rifiuto": "13. 9",
+        "cod_caratt_merc": "13. 9. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13. 9. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 271,
+        "cod_rm_tipo_rifiuto": "13.10",
+        "cod_caratt_merc": "13.10. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.10. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 272,
+        "cod_rm_tipo_rifiuto": "13.11",
+        "cod_caratt_merc": "13.11. 4 a) ",
+        "descrizione": " calce idraulica nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.11. 4 a) - calce idraulica nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 273,
+        "cod_rm_tipo_rifiuto": "13.11",
+        "cod_caratt_merc": "13.11. 4 b) ",
+        "descrizione": " conglomerati per ledilizia nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.11. 4 b) - conglomerati per ledilizia nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 274,
+        "cod_rm_tipo_rifiuto": "13.11",
+        "cod_caratt_merc": "13.11. 4 c) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.11. 4 c) - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 275,
+        "cod_rm_tipo_rifiuto": "13.12",
+        "cod_caratt_merc": "13.12. 4 a) ",
+        "descrizione": " zolfo in pani o simili nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.12. 4 a) - zolfo in pani o simili nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 276,
+        "cod_rm_tipo_rifiuto": "13.12",
+        "cod_caratt_merc": "13.12. 4 b) ",
+        "descrizione": " soluzione di acido solforico nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.12. 4 b) - soluzione di acido solforico nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 277,
+        "cod_rm_tipo_rifiuto": "13.13",
+        "cod_caratt_merc": "13.13. 4 a) ",
+        "descrizione": " acido solforico nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.13. 4 a) - acido solforico nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 278,
+        "cod_rm_tipo_rifiuto": "13.13",
+        "cod_caratt_merc": "13.13. 4 b) ",
+        "descrizione": " biossido di zolfo nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.13. 4 b) - biossido di zolfo nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 279,
+        "cod_rm_tipo_rifiuto": "13.14",
+        "cod_caratt_merc": "13.14. 4 d) ",
+        "descrizione": " zolfo in pani o simili nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.14. 4 d) - zolfo in pani o simili nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 280,
+        "cod_rm_tipo_rifiuto": "13.14",
+        "cod_caratt_merc": "13.14. 4 e) ",
+        "descrizione": " acido solforico, polisolfuro di bario e calcio in soluzione nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.14. 4 e) - acido solforico, polisolfuro di bario e calcio in soluzione nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 281,
+        "cod_rm_tipo_rifiuto": "13.15",
+        "cod_caratt_merc": "13.15. 4 ",
+        "descrizione": " bario nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.15. 4 - bario nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 282,
+        "cod_rm_tipo_rifiuto": "13.16",
+        "cod_caratt_merc": "13.16. 4 a) ",
+        "descrizione": " cemento nelle forme usualmente prodotte;",
+        "descrizione_estesa": "13.16. 4 a) - cemento nelle forme usualmente prodotte;"
+    },
+    {
+        "id": 283,
+        "cod_rm_tipo_rifiuto": "13.16",
+        "cod_caratt_merc": "13.16. 4 b) ",
+        "descrizione": " laterizi nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.16. 4 b) - laterizi nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 284,
+        "cod_rm_tipo_rifiuto": "13.16",
+        "cod_caratt_merc": "13.16. 4 c) ",
+        "descrizione": " carbonato di bario a basso titolo nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.16. 4 c) - carbonato di bario a basso titolo nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 285,
+        "cod_rm_tipo_rifiuto": "13.17",
+        "cod_caratt_merc": "13.17. 4 ",
+        "descrizione": " ossido di antimonio nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.17. 4 - ossido di antimonio nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 286,
+        "cod_rm_tipo_rifiuto": "13.18",
+        "cod_caratt_merc": "13.18. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.18. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 287,
+        "cod_rm_tipo_rifiuto": "13.18.bis",
+        "cod_caratt_merc": "13.18.bis. 4 ",
+        "descrizione": " cenere di pirite: ossidi di ferro artificiali in forma solida granulata nelle dimensioni di 0_6 mm contenenti Fe2O3 60_100%; SiO2 5_15%; A12O3 0.5_1.5%; CaO 5_ 10%; MgO 0.5_2%; S 3_6%; As < 0.09% quale additivo apportatore di ferro per la produzione di cemento conforme alla normativa UNI EN 197/1.",
+        "descrizione_estesa": "13.18.bis. 4 - cenere di pirite: ossidi di ferro artificiali in forma solida granulata nelle dimensioni di 0_6 mm contenenti Fe2O3 60_100%; SiO2 5_15%; A12O3 0.5_1.5%; CaO 5_ 10%; MgO 0.5_2%; S 3_6%; As < 0.09% quale additivo apportatore di ferro per la produzione di cemento conforme alla normativa UNI EN 197/1."
+    },
+    {
+        "id": 288,
+        "cod_rm_tipo_rifiuto": "13.19",
+        "cod_caratt_merc": "13.19. 4 ",
+        "descrizione": " smalto porcellanato pronto alluso di II e III scelta nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.19. 4 - smalto porcellanato pronto alluso di II e III scelta nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 289,
+        "cod_rm_tipo_rifiuto": "13.20",
+        "cod_caratt_merc": "13.20. 4 ",
+        "descrizione": " contenitore in materiale plastico e metallico con toner, inchiostro o nastro inchiostrato nelle forme usualmente commercializzate, etichettato in conformità al Dm 28/1/92.",
+        "descrizione_estesa": "13.20. 4 - contenitore in materiale plastico e metallico con toner, inchiostro o nastro inchiostrato nelle forme usualmente commercializzate, etichettato in conformità al Dm 28/1/92."
+    },
+    {
+        "id": 290,
+        "cod_rm_tipo_rifiuto": "13.21",
+        "cod_caratt_merc": "13.21. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "13.21. 4 - non applicabile"
+    },
+    {
+        "id": 291,
+        "cod_rm_tipo_rifiuto": "13.22",
+        "cod_caratt_merc": "13.22. 4 ",
+        "descrizione": " macchine fotografiche monouso nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.22. 4 - macchine fotografiche monouso nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 292,
+        "cod_rm_tipo_rifiuto": "13.23",
+        "cod_caratt_merc": "13.23. 4 a) ",
+        "descrizione": " solfato di rame nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.23. 4 a) - solfato di rame nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 293,
+        "cod_rm_tipo_rifiuto": "13.23",
+        "cod_caratt_merc": "13.23. 4 b) ",
+        "descrizione": " soluzioni per incisione di circuiti stampati nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.23. 4 b) - soluzioni per incisione di circuiti stampati nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 294,
+        "cod_rm_tipo_rifiuto": "13.24",
+        "cod_caratt_merc": "13.24. 4 ",
+        "descrizione": " cere nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.24. 4 - cere nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 295,
+        "cod_rm_tipo_rifiuto": "13.25",
+        "cod_caratt_merc": "13.25. 4 ",
+        "descrizione": " calcio solfato in granuli per utilizzo nei cementifici al posto del gesso.",
+        "descrizione_estesa": "13.25. 4 - calcio solfato in granuli per utilizzo nei cementifici al posto del gesso."
+    },
+    {
+        "id": 296,
+        "cod_rm_tipo_rifiuto": "13.26",
+        "cod_caratt_merc": "13.26. 4 a) ",
+        "descrizione": " ghisa nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.26. 4 a) - ghisa nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 297,
+        "cod_rm_tipo_rifiuto": "13.26",
+        "cod_caratt_merc": "13.26. 4 b) ",
+        "descrizione": " acciai nelle forme usualmente commercializzate;",
+        "descrizione_estesa": "13.26. 4 b) - acciai nelle forme usualmente commercializzate;"
+    },
+    {
+        "id": 298,
+        "cod_rm_tipo_rifiuto": "13.26",
+        "cod_caratt_merc": "13.26. 4 c) ",
+        "descrizione": " elettrodi nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.26. 4 c) - elettrodi nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 299,
+        "cod_rm_tipo_rifiuto": "13.26",
+        "cod_caratt_merc": "13.26. 4 d) ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.26. 4 d) - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 300,
+        "cod_rm_tipo_rifiuto": "13.27",
+        "cod_caratt_merc": "13.27. 4 ",
+        "descrizione": " cemento nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "13.27. 4 - cemento nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 301,
+        "cod_rm_tipo_rifiuto": "13.28",
+        "cod_caratt_merc": "13.28. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "13.28. 4 - non applicabile"
+    },
+    {
+        "id": 302,
+        "cod_rm_tipo_rifiuto": "14. 1",
+        "cod_caratt_merc": "14. 1. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "14. 1. 4 - non applicabile"
+    },
+    {
+        "id": 303,
+        "cod_rm_tipo_rifiuto": "15. 1",
+        "cod_caratt_merc": "15. 1. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "15. 1. 4 - non applicabile"
+    },
+    {
+        "id": 304,
+        "cod_rm_tipo_rifiuto": "16. 1.A ",
+        "cod_caratt_merc": "16. 1.A .4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1.A .4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 305,
+        "cod_rm_tipo_rifiuto": "16. 1.B",
+        "cod_caratt_merc": "16. 1.B.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1.B.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 306,
+        "cod_rm_tipo_rifiuto": "16. 1. C ",
+        "cod_caratt_merc": "16. 1. C .4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. C .4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 307,
+        "cod_rm_tipo_rifiuto": "16. 1. D",
+        "cod_caratt_merc": "16. 1. D.4 ",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. D.4 - Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 308,
+        "cod_rm_tipo_rifiuto": "16. 1.E",
+        "cod_caratt_merc": "16. 1.E. 4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1.E. 4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 309,
+        "cod_rm_tipo_rifiuto": "16. 1.F",
+        "cod_caratt_merc": "16. 1.F.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1.F.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 310,
+        "cod_rm_tipo_rifiuto": "16. 1. G",
+        "cod_caratt_merc": "16. 1. G.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. G.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 311,
+        "cod_rm_tipo_rifiuto": "16. 1. H",
+        "cod_caratt_merc": "16. 1. H.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. H.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 312,
+        "cod_rm_tipo_rifiuto": "16. 1. I",
+        "cod_caratt_merc": "16. 1. I.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. I.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 313,
+        "cod_rm_tipo_rifiuto": "16. 1. J",
+        "cod_caratt_merc": "16. 1. J.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. J.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 314,
+        "cod_rm_tipo_rifiuto": "16. 1. K",
+        "cod_caratt_merc": "16. 1. K.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. K.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 315,
+        "cod_rm_tipo_rifiuto": "16. 1. L",
+        "cod_caratt_merc": "16. 1. L.4",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. L.4- Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 316,
+        "cod_rm_tipo_rifiuto": "16. 1.M",
+        "cod_caratt_merc": "16. 1.M.4 ",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1.M.4 - Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 317,
+        "cod_rm_tipo_rifiuto": "16. 1. N",
+        "cod_caratt_merc": "16. 1. N.4 ",
+        "descrizione": " Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748.",
+        "descrizione_estesa": "16. 1. N.4 - Compost con le caratteristiche indicate negli allegati alla legge 19 ottobre 1984, n. 748."
+    },
+    {
+        "id": 318,
+        "cod_rm_tipo_rifiuto": "17. 1",
+        "cod_caratt_merc": "17. 1. 4 ",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "17. 1. 4 - non applicabile"
+    },
+    {
+        "id": 319,
+        "cod_rm_tipo_rifiuto": "18. 1",
+        "cod_caratt_merc": "18. 1. 4 ",
+        "descrizione": " Fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano l’utilizzo dei rifiuti di cui al punto 18.1.",
+        "descrizione_estesa": "18. 1. 4 - Fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano l’utilizzo dei rifiuti di cui al punto 18.1."
+    },
+    {
+        "id": 320,
+        "cod_rm_tipo_rifiuto": "18. 2",
+        "cod_caratt_merc": "18. 2. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.2.",
+        "descrizione_estesa": "18. 2. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.2."
+    },
+    {
+        "id": 321,
+        "cod_rm_tipo_rifiuto": "18. 3",
+        "cod_caratt_merc": "18. 3. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.3.",
+        "descrizione_estesa": "18. 3. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.3."
+    },
+    {
+        "id": 322,
+        "cod_rm_tipo_rifiuto": "18. 4",
+        "cod_caratt_merc": "18. 4. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.4.",
+        "descrizione_estesa": "18. 4. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.4."
+    },
+    {
+        "id": 323,
+        "cod_rm_tipo_rifiuto": "18. 5",
+        "cod_caratt_merc": "18. 5. 4 ",
+        "descrizione": " fertilizzanti conformi alla L. 9 ottobre 1984, n. 748,",
+        "descrizione_estesa": "18. 5. 4 - fertilizzanti conformi alla L. 9 ottobre 1984, n. 748,"
+    },
+    {
+        "id": 324,
+        "cod_rm_tipo_rifiuto": "18. 6",
+        "cod_caratt_merc": "18. 6. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.6.",
+        "descrizione_estesa": "18. 6. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.6."
+    },
+    {
+        "id": 325,
+        "cod_rm_tipo_rifiuto": "18. 7",
+        "cod_caratt_merc": "18. 7. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.7.",
+        "descrizione_estesa": "18. 7. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.7."
+    },
+    {
+        "id": 326,
+        "cod_rm_tipo_rifiuto": "18. 8",
+        "cod_caratt_merc": "18. 8. 4 ",
+        "descrizione": " fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.8.",
+        "descrizione_estesa": "18. 8. 4 - fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.8."
+    },
+    {
+        "id": 327,
+        "cod_rm_tipo_rifiuto": "18. 9",
+        "cod_caratt_merc": "18. 9. 4 ",
+        "descrizione": " fertilizzanti conformi alla legge 19 ottobre 1984, n.748, che prevedano lutilizzo dei rifiuti di cui al punto 18.9.",
+        "descrizione_estesa": "18. 9. 4 - fertilizzanti conformi alla legge 19 ottobre 1984, n.748, che prevedano lutilizzo dei rifiuti di cui al punto 18.9."
+    },
+    {
+        "id": 328,
+        "cod_rm_tipo_rifiuto": "18.10",
+        "cod_caratt_merc": "18.10. 4 ",
+        "descrizione": " fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.10.",
+        "descrizione_estesa": "18.10. 4 - fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.10."
+    },
+    {
+        "id": 329,
+        "cod_rm_tipo_rifiuto": "18.11",
+        "cod_caratt_merc": "18.11. 4 ",
+        "descrizione": " fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.11.",
+        "descrizione_estesa": "18.11. 4 - fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano lutilizzo dei rifiuti di cui al punto 18.11."
+    },
+    {
+        "id": 330,
+        "cod_rm_tipo_rifiuto": "18.12",
+        "cod_caratt_merc": "18.12. 4 ",
+        "descrizione": " fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano l’utilizzo dei rifiuti di cui al punto 18.12.",
+        "descrizione_estesa": "18.12. 4 - fertilizzante conforme alla legge 19 ottobre 1984, n. 748, che prevedano l’utilizzo dei rifiuti di cui al punto 18.12."
+    }
+]

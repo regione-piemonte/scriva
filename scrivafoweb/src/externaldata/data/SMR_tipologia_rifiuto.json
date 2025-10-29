@@ -1,0 +1,1148 @@
+[
+    {
+        "id": 1,
+        "cod_smr_tipo_rifiuto": "1.1 ",
+        "descrizione": " rifiuti di carta, cartone e cartoncino, inclusi poliaccoppiati, anche imballaggi",
+        "descrizione_estesa": "1.1 - rifiuti di carta, cartone e cartoncino, inclusi poliaccoppiati, anche imballaggi"
+    },
+    {
+        "id": 2,
+        "cod_smr_tipo_rifiuto": "1.2",
+        "descrizione": " scarti di pannolini e assorbenti",
+        "descrizione_estesa": "1.2- scarti di pannolini e assorbenti"
+    },
+    {
+        "id": 3,
+        "cod_smr_tipo_rifiuto": " 2.1 ",
+        "descrizione": " imballaggi, vetro di scarto ed altri rifiuti e frammenti di vetro ",
+        "descrizione_estesa": " 2.1 - imballaggi, vetro di scarto ed altri rifiuti e frammenti di vetro "
+    },
+    {
+        "id": 4,
+        "cod_smr_tipo_rifiuto": "2.2",
+        "descrizione": " vetro di scarto e frammenti di vetro da ricerca medica e veterinaria",
+        "descrizione_estesa": "2.2- vetro di scarto e frammenti di vetro da ricerca medica e veterinaria"
+    },
+    {
+        "id": 5,
+        "cod_smr_tipo_rifiuto": "2.3",
+        "descrizione": " rottame fine di cristallo ",
+        "descrizione_estesa": "2.3- rottame fine di cristallo "
+    },
+    {
+        "id": 6,
+        "cod_smr_tipo_rifiuto": "2.4",
+        "descrizione": " rifiuti di fibre di vetro",
+        "descrizione_estesa": "2.4- rifiuti di fibre di vetro"
+    },
+    {
+        "id": 7,
+        "cod_smr_tipo_rifiuto": "3.1 ",
+        "descrizione": "rifiuti di ferro, acciaio e ghisa e, limitatamente ai cascami di lavorazioni, rifiuti identificati dai codici ",
+        "descrizione_estesa": "3.1 -rifiuti di ferro, acciaio e ghisa e, limitatamente ai cascami di lavorazioni, rifiuti identificati dai codici "
+    },
+    {
+        "id": 8,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "descrizione": " rifiuti di metalli non ferrosi o loro leghe e, limitatamente ai cascami di lavorazioni i rifiuti individuati dai seguenti codici ",
+        "descrizione_estesa": "3.2- rifiuti di metalli non ferrosi o loro leghe e, limitatamente ai cascami di lavorazioni i rifiuti individuati dai seguenti codici "
+    },
+    {
+        "id": 9,
+        "cod_smr_tipo_rifiuto": "3.3 ",
+        "descrizione": " sfridi o scarti di imballaggio in alluminio, e di accoppiati carta plastica e metalli",
+        "descrizione_estesa": "3.3 - sfridi o scarti di imballaggio in alluminio, e di accoppiati carta plastica e metalli"
+    },
+    {
+        "id": 10,
+        "cod_smr_tipo_rifiuto": " 3.4 ",
+        "descrizione": " rifiuti e rottami di metalli preziosi e loro leghe ",
+        "descrizione_estesa": " 3.4 - rifiuti e rottami di metalli preziosi e loro leghe "
+    },
+    {
+        "id": 11,
+        "cod_smr_tipo_rifiuto": "3.5 ",
+        "descrizione": " rifiuti costituiti da imballaggi, fusti, latte, vuoti, lattine di materiali ferrosi e non ferrosi e acciaio anche stagnato",
+        "descrizione_estesa": "3.5 - rifiuti costituiti da imballaggi, fusti, latte, vuoti, lattine di materiali ferrosi e non ferrosi e acciaio anche stagnato"
+    },
+    {
+        "id": 12,
+        "cod_smr_tipo_rifiuto": " 3.6",
+        "descrizione": " pallini di piombo rifiuti ",
+        "descrizione_estesa": " 3.6- pallini di piombo rifiuti "
+    },
+    {
+        "id": 13,
+        "cod_smr_tipo_rifiuto": "3.7",
+        "descrizione": " rifiuti di lavorazioni, muratura e rottami di metalli ",
+        "descrizione_estesa": "3.7- rifiuti di lavorazioni, muratura e rottami di metalli "
+    },
+    {
+        "id": 14,
+        "cod_smr_tipo_rifiuto": "3.8 ",
+        "descrizione": " puliture di industrie di metalli preziosi ",
+        "descrizione_estesa": "3.8 - puliture di industrie di metalli preziosi "
+    },
+    {
+        "id": 15,
+        "cod_smr_tipo_rifiuto": "3.9 ",
+        "descrizione": " rifiuti costituiti da refrattari, crogioli e scorie vetrose di fusione dei metalli preziosi ",
+        "descrizione_estesa": "3.9 - rifiuti costituiti da refrattari, crogioli e scorie vetrose di fusione dei metalli preziosi "
+    },
+    {
+        "id": 16,
+        "cod_smr_tipo_rifiuto": "3.10 ",
+        "descrizione": " pile all'ossido di argento",
+        "descrizione_estesa": "3.10 - pile all'ossido di argento"
+    },
+    {
+        "id": 17,
+        "cod_smr_tipo_rifiuto": " 3.11",
+        "descrizione": " rifiuti costituiti da pellicole e carte per fotografia contenenti argento e suoi composti ",
+        "descrizione_estesa": " 3.11- rifiuti costituiti da pellicole e carte per fotografia contenenti argento e suoi composti "
+    },
+    {
+        "id": 18,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "descrizione": " rottami metallici e plastici contenenti due danni preziosi ( Au, Ag, Pt, Pd, Rh, Ru, Ir, ecc)  ",
+        "descrizione_estesa": "3.12- rottami metallici e plastici contenenti due danni preziosi ( Au, Ag, Pt, Pd, Rh, Ru, Ir, ecc)  "
+    },
+    {
+        "id": 19,
+        "cod_smr_tipo_rifiuto": "4. 1 ",
+        "descrizione": " scorie provenienti dall'industria della metallurgia dei metalli non ferrosi, ad esclusione di quelle provenienti dalla metallurgia termica del Pb, Al e Zn, scorie dalla produzione del fosforo, scoria Cubilot",
+        "descrizione_estesa": "4. 1 - scorie provenienti dall'industria della metallurgia dei metalli non ferrosi, ad esclusione di quelle provenienti dalla metallurgia termica del Pb, Al e Zn, scorie dalla produzione del fosforo, scoria Cubilot"
+    },
+    {
+        "id": 20,
+        "cod_smr_tipo_rifiuto": "4.2",
+        "descrizione": " scorie di fusione da recupero di metalli preziosi",
+        "descrizione_estesa": "4.2- scorie di fusione da recupero di metalli preziosi"
+    },
+    {
+        "id": 21,
+        "cod_smr_tipo_rifiuto": " 4.3 ",
+        "descrizione": " schiumatore, granelle e colaticchi di rame secondario e sue leghe",
+        "descrizione_estesa": " 4.3 - schiumatore, granelle e colaticchi di rame secondario e sue leghe"
+    },
+    {
+        "id": 22,
+        "cod_smr_tipo_rifiuto": "4. 4 ",
+        "descrizione": " scorie di acciaieria, scorie provenienti dalla fusione in forni elettrici, a combustibile o in convertitori a ossigeno di leghe di metalli ferrosi e dai successivi trattamenti di affinazione delle stesse",
+        "descrizione_estesa": "4. 4 - scorie di acciaieria, scorie provenienti dalla fusione in forni elettrici, a combustibile o in convertitori a ossigeno di leghe di metalli ferrosi e dai successivi trattamenti di affinazione delle stesse"
+    },
+    {
+        "id": 23,
+        "cod_smr_tipo_rifiuto": "4.5",
+        "descrizione": " schiumature povere di ZN ",
+        "descrizione_estesa": "4.5- schiumature povere di ZN "
+    },
+    {
+        "id": 24,
+        "cod_smr_tipo_rifiuto": "4.6",
+        "descrizione": " polvere di zinco e colaticci di recupero",
+        "descrizione_estesa": "4.6- polvere di zinco e colaticci di recupero"
+    },
+    {
+        "id": 25,
+        "cod_smr_tipo_rifiuto": "4.7",
+        "descrizione": " polvere di allumina",
+        "descrizione_estesa": "4.7- polvere di allumina"
+    },
+    {
+        "id": 26,
+        "cod_smr_tipo_rifiuto": "5. 1 ",
+        "descrizione": " parti di autoveic.,di veic. a motore,di rimorchi e simili,risultanti da operaz. di messa in sicurez. di cui all'art.46 del Dlgs 5Feb1997,n.22 e successive modifiche e integraz. e al Dlgs 24Giu2003,n.209,e privati di pneumatici e delle compon. plast. recuperab.",
+        "descrizione_estesa": "5. 1 - parti di autoveic.,di veic. a motore,di rimorchi e simili,risultanti da operaz. di messa in sicurez. di cui all'art.46 del Dlgs 5Feb1997,n.22 e successive modifiche e integraz. e al Dlgs 24Giu2003,n.209,e privati di pneumatici e delle compon. plast. recuperab."
+    },
+    {
+        "id": 27,
+        "cod_smr_tipo_rifiuto": "5. 2 ",
+        "descrizione": " parti di mezzi mobili rotabili per trasporti terrestri prive di amianto e risultanti da operazioni di messa in sicurezza autorizzate ai sensi dell'articolo 28 del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni",
+        "descrizione_estesa": "5. 2 - parti di mezzi mobili rotabili per trasporti terrestri prive di amianto e risultanti da operazioni di messa in sicurezza autorizzate ai sensi dell'articolo 28 del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni"
+    },
+    {
+        "id": 28,
+        "cod_smr_tipo_rifiuto": "5. 3 ",
+        "descrizione": " catalizzatori esausti a base di: nichel, ossido di nichel, nichel/ molibdeno, nichel raney, molibdeno, cobalto, cobalto/molibdeno, ossido di manganese, rame, ferro, zinco/ferro, silicoalluminati, sottoposti a lavaggio e disattivazione ai fini della sicurezza",
+        "descrizione_estesa": "5. 3 - catalizzatori esausti a base di: nichel, ossido di nichel, nichel/ molibdeno, nichel raney, molibdeno, cobalto, cobalto/molibdeno, ossido di manganese, rame, ferro, zinco/ferro, silicoalluminati, sottoposti a lavaggio e disattivazione ai fini della sicurezza"
+    },
+    {
+        "id": 29,
+        "cod_smr_tipo_rifiuto": "5. 4 ",
+        "descrizione": " catalizzatori esausti a base di: Pt, Pd, Rh, Ru, Ir, Au, Ag, etc. su supporto inerte di carbone, allumina, silicati, zeolite, carbonato di calcio, solfato di bario, materiale refrattario, etc. sottoposti a lavaggio e disattivati ai fini della sicurezza",
+        "descrizione_estesa": "5. 4 - catalizzatori esausti a base di: Pt, Pd, Rh, Ru, Ir, Au, Ag, etc. su supporto inerte di carbone, allumina, silicati, zeolite, carbonato di calcio, solfato di bario, materiale refrattario, etc. sottoposti a lavaggio e disattivati ai fini della sicurezza"
+    },
+    {
+        "id": 30,
+        "cod_smr_tipo_rifiuto": "5.5",
+        "descrizione": " marmitte catalitiche esauste contenenti metalli preziosi",
+        "descrizione_estesa": "5.5- marmitte catalitiche esauste contenenti metalli preziosi"
+    },
+    {
+        "id": 31,
+        "cod_smr_tipo_rifiuto": "5.6 ",
+        "descrizione": "rottami elettrici ed elettronici contenenti e non metalli preziosi ",
+        "descrizione_estesa": "5.6 -rottami elettrici ed elettronici contenenti e non metalli preziosi "
+    },
+    {
+        "id": 32,
+        "cod_smr_tipo_rifiuto": "5.7 ",
+        "descrizione": "spezzoni di cavo con il conduttore di alluminio ricoperto ",
+        "descrizione_estesa": "5.7 -spezzoni di cavo con il conduttore di alluminio ricoperto "
+    },
+    {
+        "id": 33,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "descrizione": " spezzoni di cavo di rame ricoperto ",
+        "descrizione_estesa": "5.8- spezzoni di cavo di rame ricoperto "
+    },
+    {
+        "id": 34,
+        "cod_smr_tipo_rifiuto": "5.9",
+        "descrizione": " spezzoni di cavo di fibra ottica ricoperta di tipo dielettrico (A), semi dielettrico (B) metallico (C)",
+        "descrizione_estesa": "5.9- spezzoni di cavo di fibra ottica ricoperta di tipo dielettrico (A), semi dielettrico (B) metallico (C)"
+    },
+    {
+        "id": 35,
+        "cod_smr_tipo_rifiuto": "5.10",
+        "descrizione": " fili di ottone e fanghi di molazza",
+        "descrizione_estesa": "5.10- fili di ottone e fanghi di molazza"
+    },
+    {
+        "id": 36,
+        "cod_smr_tipo_rifiuto": "5 11",
+        "descrizione": " terra di rame e di ottone",
+        "descrizione_estesa": "5 11- terra di rame e di ottone"
+    },
+    {
+        "id": 37,
+        "cod_smr_tipo_rifiuto": "5.12",
+        "descrizione": " rifiuto di trattamento di scorie di ottone",
+        "descrizione_estesa": "5.12- rifiuto di trattamento di scorie di ottone"
+    },
+    {
+        "id": 38,
+        "cod_smr_tipo_rifiuto": "5 13",
+        "descrizione": " ferro da cernita calamita",
+        "descrizione_estesa": "5 13- ferro da cernita calamita"
+    },
+    {
+        "id": 39,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "descrizione": " scaglie di laminazione e stampaggio",
+        "descrizione_estesa": "5.14- scaglie di laminazione e stampaggio"
+    },
+    {
+        "id": 40,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "descrizione": " apparecchi elettrici, elettrotecnici ed elettronici, rottami elettrici ed elettronici contenenti e non metalli preziosi",
+        "descrizione_estesa": "5.16- apparecchi elettrici, elettrotecnici ed elettronici, rottami elettrici ed elettronici contenenti e non metalli preziosi"
+    },
+    {
+        "id": 41,
+        "cod_smr_tipo_rifiuto": "5.17 ",
+        "descrizione": "loppa d'altoforno non rispondente agli standard delle norme UNI ENV 197 /1",
+        "descrizione_estesa": "5.17 -loppa d'altoforno non rispondente agli standard delle norme UNI ENV 197 /1"
+    },
+    {
+        "id": 42,
+        "cod_smr_tipo_rifiuto": "5.18",
+        "descrizione": " residui di minerali di ferro",
+        "descrizione_estesa": "5.18- residui di minerali di ferro"
+    },
+    {
+        "id": 43,
+        "cod_smr_tipo_rifiuto": "5.19 ",
+        "descrizione": " apparecchi domestici, apparecchiature e macchinari post consumo non contenenti sostanze lesive dell'ozono stratosferico di cui alla legge 549/93 o HFC",
+        "descrizione_estesa": "5.19 - apparecchi domestici, apparecchiature e macchinari post consumo non contenenti sostanze lesive dell'ozono stratosferico di cui alla legge 549/93 o HFC"
+    },
+    {
+        "id": 44,
+        "cod_smr_tipo_rifiuto": "6. 1 ",
+        "descrizione": " rifiuti di plastica, imballaggi usati in plastica compresi i contenitori per liquidi, con esclusione dei contenitori per fitofarmaci e per presidi medico_chirurgici",
+        "descrizione_estesa": "6. 1 - rifiuti di plastica, imballaggi usati in plastica compresi i contenitori per liquidi, con esclusione dei contenitori per fitofarmaci e per presidi medico_chirurgici"
+    },
+    {
+        "id": 45,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "descrizione": " sfridi, scarti, polveri e rifiuti di materie plastiche e fibre sintetiche",
+        "descrizione_estesa": "6.2- sfridi, scarti, polveri e rifiuti di materie plastiche e fibre sintetiche"
+    },
+    {
+        "id": 46,
+        "cod_smr_tipo_rifiuto": "6.3",
+        "descrizione": " fanghi polimerici di ABS",
+        "descrizione_estesa": "6.3- fanghi polimerici di ABS"
+    },
+    {
+        "id": 47,
+        "cod_smr_tipo_rifiuto": "6.4",
+        "descrizione": " resine a scambio ionico esauste",
+        "descrizione_estesa": "6.4- resine a scambio ionico esauste"
+    },
+    {
+        "id": 48,
+        "cod_smr_tipo_rifiuto": "6.5",
+        "descrizione": " paraurti e plance di autoveicoli in materie plastiche",
+        "descrizione_estesa": "6.5- paraurti e plance di autoveicoli in materie plastiche"
+    },
+    {
+        "id": 49,
+        "cod_smr_tipo_rifiuto": "6.6",
+        "descrizione": " imbottiture sedili in poliuretano espanso",
+        "descrizione_estesa": "6.6- imbottiture sedili in poliuretano espanso"
+    },
+    {
+        "id": 50,
+        "cod_smr_tipo_rifiuto": "6.7 ",
+        "descrizione": "Scagli di alcool polivinilico",
+        "descrizione_estesa": "6.7 -Scagli di alcool polivinilico"
+    },
+    {
+        "id": 51,
+        "cod_smr_tipo_rifiuto": "6.8",
+        "descrizione": " polveri di “buffing” e cascami di tessuto non tessuto",
+        "descrizione_estesa": "6.8- polveri di “buffing” e cascami di tessuto non tessuto"
+    },
+    {
+        "id": 52,
+        "cod_smr_tipo_rifiuto": "6.10 ",
+        "descrizione": "sfridi, scarti e rifiuti di polivinil butirrale",
+        "descrizione_estesa": "6.10 -sfridi, scarti e rifiuti di polivinil butirrale"
+    },
+    {
+        "id": 53,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "descrizione": " pannelli sportelli auto",
+        "descrizione_estesa": "6.11- pannelli sportelli auto"
+    },
+    {
+        "id": 54,
+        "cod_smr_tipo_rifiuto": "6.12",
+        "descrizione": " rifiuti di caprolattame",
+        "descrizione_estesa": "6.12- rifiuti di caprolattame"
+    },
+    {
+        "id": 55,
+        "cod_smr_tipo_rifiuto": "7. 1 ",
+        "descrizione": " rif. costit. da laterizi,intonaci e conglomer. di cemento arm. e non,comprese traverse e traversoni ferrov. e pali in calcestr. armato proven. da linee ferrov.,telemat. ed elettr. e framm. di rivestim. strad., purché privi di amianto",
+        "descrizione_estesa": "7. 1 - rif. costit. da laterizi,intonaci e conglomer. di cemento arm. e non,comprese traverse e traversoni ferrov. e pali in calcestr. armato proven. da linee ferrov.,telemat. ed elettr. e framm. di rivestim. strad., purché privi di amianto"
+    },
+    {
+        "id": 56,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "descrizione": " rifiuti di rocce da cave autorizzate",
+        "descrizione_estesa": "7.2- rifiuti di rocce da cave autorizzate"
+    },
+    {
+        "id": 57,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "descrizione": " sfridi e scarti di prodotti ceramici crudi smaltati e cotti",
+        "descrizione_estesa": "7.3- sfridi e scarti di prodotti ceramici crudi smaltati e cotti"
+    },
+    {
+        "id": 58,
+        "cod_smr_tipo_rifiuto": "7.4 ",
+        "descrizione": "sfridi di laterizio cotto ed argilla espansa",
+        "descrizione_estesa": "7.4 -sfridi di laterizio cotto ed argilla espansa"
+    },
+    {
+        "id": 59,
+        "cod_smr_tipo_rifiuto": "7.5",
+        "descrizione": " sabbie esauste",
+        "descrizione_estesa": "7.5- sabbie esauste"
+    },
+    {
+        "id": 60,
+        "cod_smr_tipo_rifiuto": "7.6",
+        "descrizione": " conglomerato bituminoso, frammenti di piattelli per il tiro al volo",
+        "descrizione_estesa": "7.6- conglomerato bituminoso, frammenti di piattelli per il tiro al volo"
+    },
+    {
+        "id": 61,
+        "cod_smr_tipo_rifiuto": "7.7",
+        "descrizione": " rifiuti costituiti da carbonati ed idrati di calcio, silici colloidali",
+        "descrizione_estesa": "7.7- rifiuti costituiti da carbonati ed idrati di calcio, silici colloidali"
+    },
+    {
+        "id": 62,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "descrizione": " rifiuti di refrattari, rifiuti di refrattari da forni per processi ad alta temperatura",
+        "descrizione_estesa": "7.8- rifiuti di refrattari, rifiuti di refrattari da forni per processi ad alta temperatura"
+    },
+    {
+        "id": 63,
+        "cod_smr_tipo_rifiuto": "7.9",
+        "descrizione": " scarti di refrattari a base di carburo di silicio",
+        "descrizione_estesa": "7.9- scarti di refrattari a base di carburo di silicio"
+    },
+    {
+        "id": 64,
+        "cod_smr_tipo_rifiuto": "7.10",
+        "descrizione": " sabbie abrasive di scarto e granulati, rottami e scarti di mole abrasive",
+        "descrizione_estesa": "7.10- sabbie abrasive di scarto e granulati, rottami e scarti di mole abrasive"
+    },
+    {
+        "id": 65,
+        "cod_smr_tipo_rifiuto": "7.11 ",
+        "descrizione": "pietrisco tolto d'opera",
+        "descrizione_estesa": "7.11 -pietrisco tolto d'opera"
+    },
+    {
+        "id": 66,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "descrizione": " calchi in gesso esausto ",
+        "descrizione_estesa": "7.12- calchi in gesso esausto "
+    },
+    {
+        "id": 67,
+        "cod_smr_tipo_rifiuto": "7.13",
+        "descrizione": " sfridi di produzione di pannelli di gesso, demolizione edifici",
+        "descrizione_estesa": "7.13- sfridi di produzione di pannelli di gesso, demolizione edifici"
+    },
+    {
+        "id": 68,
+        "cod_smr_tipo_rifiuto": "7.14",
+        "descrizione": " detriti di perforazione",
+        "descrizione_estesa": "7.14- detriti di perforazione"
+    },
+    {
+        "id": 69,
+        "cod_smr_tipo_rifiuto": "7.15",
+        "descrizione": " fanghi di perforazione",
+        "descrizione_estesa": "7.15- fanghi di perforazione"
+    },
+    {
+        "id": 70,
+        "cod_smr_tipo_rifiuto": "7.16",
+        "descrizione": " calci di defecazione",
+        "descrizione_estesa": "7.16- calci di defecazione"
+    },
+    {
+        "id": 71,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "descrizione": " rifiuti costituiti da pietrisco di vagliatura del calcare",
+        "descrizione_estesa": "7.17- rifiuti costituiti da pietrisco di vagliatura del calcare"
+    },
+    {
+        "id": 72,
+        "cod_smr_tipo_rifiuto": "7.18",
+        "descrizione": " scarti da vagliatura latte di calce",
+        "descrizione_estesa": "7.18- scarti da vagliatura latte di calce"
+    },
+    {
+        "id": 73,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "descrizione": " inerti da tinkal",
+        "descrizione_estesa": "7.19- inerti da tinkal"
+    },
+    {
+        "id": 74,
+        "cod_smr_tipo_rifiuto": "7.20",
+        "descrizione": " rifiuti e rottami di cemento",
+        "descrizione_estesa": "7.20- rifiuti e rottami di cemento"
+    },
+    {
+        "id": 75,
+        "cod_smr_tipo_rifiuto": "7.21",
+        "descrizione": " pomice esausta",
+        "descrizione_estesa": "7.21- pomice esausta"
+    },
+    {
+        "id": 76,
+        "cod_smr_tipo_rifiuto": "7.22",
+        "descrizione": " rifiuti da abbattimento fumi di industrie siderurgiche (silica fumes)",
+        "descrizione_estesa": "7.22- rifiuti da abbattimento fumi di industrie siderurgiche (silica fumes)"
+    },
+    {
+        "id": 77,
+        "cod_smr_tipo_rifiuto": "7.23",
+        "descrizione": " conchiglie ",
+        "descrizione_estesa": "7.23- conchiglie "
+    },
+    {
+        "id": 78,
+        "cod_smr_tipo_rifiuto": "7.24",
+        "descrizione": " scorri vetrose da gassificazione di carbone",
+        "descrizione_estesa": "7.24- scorri vetrose da gassificazione di carbone"
+    },
+    {
+        "id": 79,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "descrizione": " terre e sabbie esauste di fonderia di seconda fusione dei metalli ferrosi",
+        "descrizione_estesa": "7.25- terre e sabbie esauste di fonderia di seconda fusione dei metalli ferrosi"
+    },
+    {
+        "id": 80,
+        "cod_smr_tipo_rifiuto": "7.26",
+        "descrizione": " rottami di quarzo puro",
+        "descrizione_estesa": "7.26- rottami di quarzo puro"
+    },
+    {
+        "id": 81,
+        "cod_smr_tipo_rifiuto": "7.27",
+        "descrizione": " materiali fini da filtri aspirazioni polveri di fonderia di ghisa e da rigenerazione sabbia",
+        "descrizione_estesa": "7.27- materiali fini da filtri aspirazioni polveri di fonderia di ghisa e da rigenerazione sabbia"
+    },
+    {
+        "id": 82,
+        "cod_smr_tipo_rifiuto": "7.28",
+        "descrizione": " supporti inerti di catalizzatori",
+        "descrizione_estesa": "7.28- supporti inerti di catalizzatori"
+    },
+    {
+        "id": 83,
+        "cod_smr_tipo_rifiuto": "7.29",
+        "descrizione": " rifiuti di lana di vetro e lana di roccia",
+        "descrizione_estesa": "7.29- rifiuti di lana di vetro e lana di roccia"
+    },
+    {
+        "id": 84,
+        "cod_smr_tipo_rifiuto": "7.30",
+        "descrizione": " sabbia e conchiglie che residuano dalla vagliatura dei rifiuti provenienti dalla pulizia degli arenili",
+        "descrizione_estesa": "7.30- sabbia e conchiglie che residuano dalla vagliatura dei rifiuti provenienti dalla pulizia degli arenili"
+    },
+    {
+        "id": 85,
+        "cod_smr_tipo_rifiuto": "7.31",
+        "descrizione": " terre da coltivo, derivanti da pulizia di materiali vegetali eduli e dalla battitura della lana sucida",
+        "descrizione_estesa": "7.31- terre da coltivo, derivanti da pulizia di materiali vegetali eduli e dalla battitura della lana sucida"
+    },
+    {
+        "id": 86,
+        "cod_smr_tipo_rifiuto": "7.31 bis",
+        "descrizione": " terra di rocce e scavo",
+        "descrizione_estesa": "7.31 bis- terra di rocce e scavo"
+    },
+    {
+        "id": 87,
+        "cod_smr_tipo_rifiuto": "8.1",
+        "descrizione": " olio di follone",
+        "descrizione_estesa": "8.1- olio di follone"
+    },
+    {
+        "id": 88,
+        "cod_smr_tipo_rifiuto": "8.2 ",
+        "descrizione": "peluria e pelucchi tessili",
+        "descrizione_estesa": "8.2 -peluria e pelucchi tessili"
+    },
+    {
+        "id": 89,
+        "cod_smr_tipo_rifiuto": "8.3",
+        "descrizione": " refluo contenente grasso di lana",
+        "descrizione_estesa": "8.3- refluo contenente grasso di lana"
+    },
+    {
+        "id": 90,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "descrizione": " rifiuti di materiali tessili compositi e dalla lavorazione di fibre naturali, sintetiche e artificiali",
+        "descrizione_estesa": "8.4- rifiuti di materiali tessili compositi e dalla lavorazione di fibre naturali, sintetiche e artificiali"
+    },
+    {
+        "id": 91,
+        "cod_smr_tipo_rifiuto": "8.5",
+        "descrizione": " trucioli, ritagli e altri rifiuti di cuoio",
+        "descrizione_estesa": "8.5- trucioli, ritagli e altri rifiuti di cuoio"
+    },
+    {
+        "id": 92,
+        "cod_smr_tipo_rifiuto": "8.6",
+        "descrizione": " scarti solidi conciati al vegetale",
+        "descrizione_estesa": "8.6- scarti solidi conciati al vegetale"
+    },
+    {
+        "id": 93,
+        "cod_smr_tipo_rifiuto": "8.7",
+        "descrizione": " rifiuti di smerigliatura, rasatura",
+        "descrizione_estesa": "8.7- rifiuti di smerigliatura, rasatura"
+    },
+    {
+        "id": 94,
+        "cod_smr_tipo_rifiuto": "8.8",
+        "descrizione": " carniccio di scarnatura rasatura, spaccatura e pezzamatura in pelo",
+        "descrizione_estesa": "8.8- carniccio di scarnatura rasatura, spaccatura e pezzamatura in pelo"
+    },
+    {
+        "id": 95,
+        "cod_smr_tipo_rifiuto": "8.9",
+        "descrizione": " indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati post_consumo",
+        "descrizione_estesa": "8.9- indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati post_consumo"
+    },
+    {
+        "id": 96,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "descrizione": " scarti di legno e sughero, imballaggi di legno",
+        "descrizione_estesa": "9.1- scarti di legno e sughero, imballaggi di legno"
+    },
+    {
+        "id": 97,
+        "cod_smr_tipo_rifiuto": "9.2",
+        "descrizione": " scarti di legno e sughero, imballaggi di legno",
+        "descrizione_estesa": "9.2- scarti di legno e sughero, imballaggi di legno"
+    },
+    {
+        "id": 98,
+        "cod_smr_tipo_rifiuto": "9.5",
+        "descrizione": " black liquor",
+        "descrizione_estesa": "9.5- black liquor"
+    },
+    {
+        "id": 99,
+        "cod_smr_tipo_rifiuto": "9.6",
+        "descrizione": " rifiuti di carte decorative impregnate",
+        "descrizione_estesa": "9.6- rifiuti di carte decorative impregnate"
+    },
+    {
+        "id": 100,
+        "cod_smr_tipo_rifiuto": "10.1",
+        "descrizione": " cascami e scarti di produzione, rifiuti di polvere e granuli",
+        "descrizione_estesa": "10.1- cascami e scarti di produzione, rifiuti di polvere e granuli"
+    },
+    {
+        "id": 101,
+        "cod_smr_tipo_rifiuto": "10.2",
+        "descrizione": " pneumatici non ricostruibili, camere d'aria non riparabili ed altri scarti di gomma",
+        "descrizione_estesa": "10.2- pneumatici non ricostruibili, camere d'aria non riparabili ed altri scarti di gomma"
+    },
+    {
+        "id": 102,
+        "cod_smr_tipo_rifiuto": "11. 1 ",
+        "descrizione": " morchie, fecce e fondami di serbatoi di stoccaggio; reflui liquidi, terre e farine fossili coadiuvanti di decolorazione di oli e grassi, panelli filtrazione grassi; scarti e fondami di raffinazione dell'industria degli oli, dei grassi vegetali e animali",
+        "descrizione_estesa": "11. 1 - morchie, fecce e fondami di serbatoi di stoccaggio; reflui liquidi, terre e farine fossili coadiuvanti di decolorazione di oli e grassi, panelli filtrazione grassi; scarti e fondami di raffinazione dell'industria degli oli, dei grassi vegetali e animali"
+    },
+    {
+        "id": 103,
+        "cod_smr_tipo_rifiuto": "11.2",
+        "descrizione": " terre e farine fossili disoleate",
+        "descrizione_estesa": "11.2- terre e farine fossili disoleate"
+    },
+    {
+        "id": 104,
+        "cod_smr_tipo_rifiuto": "11.3",
+        "descrizione": " carte esauste da filtrazione oli",
+        "descrizione_estesa": "11.3- carte esauste da filtrazione oli"
+    },
+    {
+        "id": 105,
+        "cod_smr_tipo_rifiuto": "11.4",
+        "descrizione": " reflui liquidi dall'industria di raffinazione degli oli, dei grassi vegetali e animali",
+        "descrizione_estesa": "11.4- reflui liquidi dall'industria di raffinazione degli oli, dei grassi vegetali e animali"
+    },
+    {
+        "id": 106,
+        "cod_smr_tipo_rifiuto": "11.5",
+        "descrizione": " foglie di the esauste",
+        "descrizione_estesa": "11.5- foglie di the esauste"
+    },
+    {
+        "id": 107,
+        "cod_smr_tipo_rifiuto": "11.6",
+        "descrizione": " tartaro grezzo",
+        "descrizione_estesa": "11.6- tartaro grezzo"
+    },
+    {
+        "id": 108,
+        "cod_smr_tipo_rifiuto": "11.7",
+        "descrizione": " vinacce e fecce esauste",
+        "descrizione_estesa": "11.7- vinacce e fecce esauste"
+    },
+    {
+        "id": 109,
+        "cod_smr_tipo_rifiuto": "11.8",
+        "descrizione": " guscetta di cotone",
+        "descrizione_estesa": "11.8- guscetta di cotone"
+    },
+    {
+        "id": 110,
+        "cod_smr_tipo_rifiuto": "11.9",
+        "descrizione": " rifiuti di cloruro di sodio",
+        "descrizione_estesa": "11.9- rifiuti di cloruro di sodio"
+    },
+    {
+        "id": 111,
+        "cod_smr_tipo_rifiuto": "11.10",
+        "descrizione": " rifiuti misti della lavorazione del tabacco",
+        "descrizione_estesa": "11.10- rifiuti misti della lavorazione del tabacco"
+    },
+    {
+        "id": 112,
+        "cod_smr_tipo_rifiuto": "11.11",
+        "descrizione": " oli esausti vegetali ed animali",
+        "descrizione_estesa": "11.11- oli esausti vegetali ed animali"
+    },
+    {
+        "id": 113,
+        "cod_smr_tipo_rifiuto": "11.12",
+        "descrizione": " sanza esausta di oliva (polpa o farina)",
+        "descrizione_estesa": "11.12- sanza esausta di oliva (polpa o farina)"
+    },
+    {
+        "id": 114,
+        "cod_smr_tipo_rifiuto": "11.13",
+        "descrizione": " scarti e sfridi di granaglia per uso zootecnico",
+        "descrizione_estesa": "11.13- scarti e sfridi di granaglia per uso zootecnico"
+    },
+    {
+        "id": 115,
+        "cod_smr_tipo_rifiuto": "11.14",
+        "descrizione": " reflui di cloruro di sodio in soluzione",
+        "descrizione_estesa": "11.14- reflui di cloruro di sodio in soluzione"
+    },
+    {
+        "id": 116,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "descrizione": " fanghi da industria cartaria",
+        "descrizione_estesa": "12.1- fanghi da industria cartaria"
+    },
+    {
+        "id": 117,
+        "cod_smr_tipo_rifiuto": "12.2",
+        "descrizione": " fanghi di dragaggio",
+        "descrizione_estesa": "12.2- fanghi di dragaggio"
+    },
+    {
+        "id": 118,
+        "cod_smr_tipo_rifiuto": "12.3",
+        "descrizione": " fanghi e polveri da segagione e lavorazione pietre, marmi e ardesia",
+        "descrizione_estesa": "12.3- fanghi e polveri da segagione e lavorazione pietre, marmi e ardesia"
+    },
+    {
+        "id": 119,
+        "cod_smr_tipo_rifiuto": "12.4",
+        "descrizione": " fanghi e polveri da segagione molatura e lavorazione granito",
+        "descrizione_estesa": "12.4- fanghi e polveri da segagione molatura e lavorazione granito"
+    },
+    {
+        "id": 120,
+        "cod_smr_tipo_rifiuto": "12.5",
+        "descrizione": " marmoresine",
+        "descrizione_estesa": "12.5- marmoresine"
+    },
+    {
+        "id": 121,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "descrizione": " fanghi, acque, polveri e rifiuti solidi da processi di lavorazione e depurazione acque ed emissioni aeriformi da industria ceramica ",
+        "descrizione_estesa": "12.6- fanghi, acque, polveri e rifiuti solidi da processi di lavorazione e depurazione acque ed emissioni aeriformi da industria ceramica "
+    },
+    {
+        "id": 122,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "descrizione": " fanghi costituiti da inerti",
+        "descrizione_estesa": "12.7- fanghi costituiti da inerti"
+    },
+    {
+        "id": 123,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "descrizione": " fanghi da trattamento acque di processo",
+        "descrizione_estesa": "12.8- fanghi da trattamento acque di processo"
+    },
+    {
+        "id": 124,
+        "cod_smr_tipo_rifiuto": " 12.9",
+        "descrizione": " fango secco di natura sabbiosa",
+        "descrizione_estesa": " 12.9- fango secco di natura sabbiosa"
+    },
+    {
+        "id": 125,
+        "cod_smr_tipo_rifiuto": "12.10",
+        "descrizione": " fanghi da lavorazione lana sucida",
+        "descrizione_estesa": "12.10- fanghi da lavorazione lana sucida"
+    },
+    {
+        "id": 126,
+        "cod_smr_tipo_rifiuto": "12.11",
+        "descrizione": " fanghi da processi di pulizia manufatti in acciaio, decantazione acque di raffreddamento dei processi dell'industria siderurgica",
+        "descrizione_estesa": "12.11- fanghi da processi di pulizia manufatti in acciaio, decantazione acque di raffreddamento dei processi dell'industria siderurgica"
+    },
+    {
+        "id": 127,
+        "cod_smr_tipo_rifiuto": "12.12",
+        "descrizione": " fanghi da abbattimento polveri da lavorazioni terre per fonderie di metalli ferrosi",
+        "descrizione_estesa": "12.12- fanghi da abbattimento polveri da lavorazioni terre per fonderie di metalli ferrosi"
+    },
+    {
+        "id": 128,
+        "cod_smr_tipo_rifiuto": "12.13 ",
+        "descrizione": " fanghi da impianti di decantazione, chiarificazione e decarbonatazione delle acque per la preparazione di acqua potabile o di acqua addolcita, demineralizzata per uso industriale",
+        "descrizione_estesa": "12.13 - fanghi da impianti di decantazione, chiarificazione e decarbonatazione delle acque per la preparazione di acqua potabile o di acqua addolcita, demineralizzata per uso industriale"
+    },
+    {
+        "id": 129,
+        "cod_smr_tipo_rifiuto": "12.14",
+        "descrizione": " fanghi da trattamento sul posto degli effluenti ",
+        "descrizione_estesa": "12.14- fanghi da trattamento sul posto degli effluenti "
+    },
+    {
+        "id": 130,
+        "cod_smr_tipo_rifiuto": "12.15",
+        "descrizione": " fanghi da cottura e da lavaggio del legno vergine",
+        "descrizione_estesa": "12.15- fanghi da cottura e da lavaggio del legno vergine"
+    },
+    {
+        "id": 131,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "descrizione": " fanghi di trattamento acque reflue industriali",
+        "descrizione_estesa": "12.16- fanghi di trattamento acque reflue industriali"
+    },
+    {
+        "id": 132,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "descrizione": " fanghi da trattamento acque di processo e da abbattimento emissioni aeriformi da industria siderurgica e metalmeccanica",
+        "descrizione_estesa": "12.17- fanghi da trattamento acque di processo e da abbattimento emissioni aeriformi da industria siderurgica e metalmeccanica"
+    },
+    {
+        "id": 133,
+        "cod_smr_tipo_rifiuto": "12 18",
+        "descrizione": " fanghi di depurazione di acque di risulta delle lavorazioni del cuoio essiccati",
+        "descrizione_estesa": "12 18- fanghi di depurazione di acque di risulta delle lavorazioni del cuoio essiccati"
+    },
+    {
+        "id": 134,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "descrizione": " ceneri dalla combustione di carbone e lignite, anche additivati con calcare e da combustione con esclusione dei rifiuti urbani ed assimilati tal quale",
+        "descrizione_estesa": "13.1- ceneri dalla combustione di carbone e lignite, anche additivati con calcare e da combustione con esclusione dei rifiuti urbani ed assimilati tal quale"
+    },
+    {
+        "id": 135,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "descrizione": " ceneri dalla combustione di biomasse (paglia, vinacce) ed affini, legno, pannelli, fanghi di cantiere",
+        "descrizione_estesa": "13.2- ceneri dalla combustione di biomasse (paglia, vinacce) ed affini, legno, pannelli, fanghi di cantiere"
+    },
+    {
+        "id": 136,
+        "cod_smr_tipo_rifiuto": "13.3",
+        "descrizione": " ceneri pesanti da incenerimento di rifiuti solidi urbani e assimilati e da CDR",
+        "descrizione_estesa": "13.3- ceneri pesanti da incenerimento di rifiuti solidi urbani e assimilati e da CDR"
+    },
+    {
+        "id": 137,
+        "cod_smr_tipo_rifiuto": "13.4",
+        "descrizione": " abrasivo granulato",
+        "descrizione_estesa": "13.4- abrasivo granulato"
+    },
+    {
+        "id": 138,
+        "cod_smr_tipo_rifiuto": "13.5",
+        "descrizione": " rifiuti di solfato di calcio da pigmenti inorganici",
+        "descrizione_estesa": "13.5- rifiuti di solfato di calcio da pigmenti inorganici"
+    },
+    {
+        "id": 139,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "descrizione": " gessi chimici da desolforazione di effluenti liquidi e gassosi",
+        "descrizione_estesa": "13.6- gessi chimici da desolforazione di effluenti liquidi e gassosi"
+    },
+    {
+        "id": 140,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "descrizione": " gessi chimici",
+        "descrizione_estesa": "13.7- gessi chimici"
+    },
+    {
+        "id": 141,
+        "cod_smr_tipo_rifiuto": "13.8",
+        "descrizione": " anidrite",
+        "descrizione_estesa": "13.8- anidrite"
+    },
+    {
+        "id": 142,
+        "cod_smr_tipo_rifiuto": "13.9",
+        "descrizione": " rifiuti di solfato di calcio da depurazione soluzioni di cloruro di sodio",
+        "descrizione_estesa": "13.9- rifiuti di solfato di calcio da depurazione soluzioni di cloruro di sodio"
+    },
+    {
+        "id": 143,
+        "cod_smr_tipo_rifiuto": "13.10",
+        "descrizione": " biscotti flouritici",
+        "descrizione_estesa": "13.10- biscotti flouritici"
+    },
+    {
+        "id": 144,
+        "cod_smr_tipo_rifiuto": "13.11",
+        "descrizione": " silicato bicalcico",
+        "descrizione_estesa": "13.11- silicato bicalcico"
+    },
+    {
+        "id": 145,
+        "cod_smr_tipo_rifiuto": "13.12",
+        "descrizione": " zolfo in croste e pannelli e zolfo rifiuto",
+        "descrizione_estesa": "13.12- zolfo in croste e pannelli e zolfo rifiuto"
+    },
+    {
+        "id": 146,
+        "cod_smr_tipo_rifiuto": "13.13",
+        "descrizione": " rifiuti di pasta di zolfo",
+        "descrizione_estesa": "13.13- rifiuti di pasta di zolfo"
+    },
+    {
+        "id": 147,
+        "cod_smr_tipo_rifiuto": "13.14",
+        "descrizione": " zolfo umido",
+        "descrizione_estesa": "13.14- zolfo umido"
+    },
+    {
+        "id": 148,
+        "cod_smr_tipo_rifiuto": "13.15",
+        "descrizione": " rifiuti di bario solfato grezzo",
+        "descrizione_estesa": "13.15- rifiuti di bario solfato grezzo"
+    },
+    {
+        "id": 149,
+        "cod_smr_tipo_rifiuto": "13.16",
+        "descrizione": " rifiuti di minerali di bario ridotti",
+        "descrizione_estesa": "13.16- rifiuti di minerali di bario ridotti"
+    },
+    {
+        "id": 150,
+        "cod_smr_tipo_rifiuto": "13.17",
+        "descrizione": " rifiuti di ossido di antimonio",
+        "descrizione_estesa": "13.17- rifiuti di ossido di antimonio"
+    },
+    {
+        "id": 151,
+        "cod_smr_tipo_rifiuto": "13.18",
+        "descrizione": " polveri di ossidi di ferro",
+        "descrizione_estesa": "13.18- polveri di ossidi di ferro"
+    },
+    {
+        "id": 152,
+        "cod_smr_tipo_rifiuto": "13.18 bis",
+        "descrizione": " polveri di ossido di ferro fuori specifica",
+        "descrizione_estesa": "13.18 bis- polveri di ossido di ferro fuori specifica"
+    },
+    {
+        "id": 153,
+        "cod_smr_tipo_rifiuto": "13.19",
+        "descrizione": " sfridi e scarti di smalto porcellanato",
+        "descrizione_estesa": "13.19- sfridi e scarti di smalto porcellanato"
+    },
+    {
+        "id": 154,
+        "cod_smr_tipo_rifiuto": "13.20 ",
+        "descrizione": "gruppo cartuccia toner per stampanti laser, contenitori toner per fotocopiatrici, cartucce per stampanti fax e calcolatrici a getto di inchiostro, cartucce nastri per stampanti ad aghi",
+        "descrizione_estesa": "13.20 -gruppo cartuccia toner per stampanti laser, contenitori toner per fotocopiatrici, cartucce per stampanti fax e calcolatrici a getto di inchiostro, cartucce nastri per stampanti ad aghi"
+    },
+    {
+        "id": 155,
+        "cod_smr_tipo_rifiuto": "13.21 ",
+        "descrizione": "cloruro di sodio greggio",
+        "descrizione_estesa": "13.21 -cloruro di sodio greggio"
+    },
+    {
+        "id": 156,
+        "cod_smr_tipo_rifiuto": "13.22",
+        "descrizione": " macchine fotografiche monouso",
+        "descrizione_estesa": "13.22- macchine fotografiche monouso"
+    },
+    {
+        "id": 157,
+        "cod_smr_tipo_rifiuto": "13.23 ",
+        "descrizione": "soluzioni da incisione dei circuiti stampati",
+        "descrizione_estesa": "13.23 -soluzioni da incisione dei circuiti stampati"
+    },
+    {
+        "id": 158,
+        "cod_smr_tipo_rifiuto": "13 24",
+        "descrizione": " sfridi di paraffina",
+        "descrizione_estesa": "13 24- sfridi di paraffina"
+    },
+    {
+        "id": 159,
+        "cod_smr_tipo_rifiuto": "13.25",
+        "descrizione": " calcio solfato in granuli 60_ 90% da processo chimico a base di acido solforico e calcio idrata",
+        "descrizione_estesa": "13.25- calcio solfato in granuli 60_ 90% da processo chimico a base di acido solforico e calcio idrata"
+    },
+    {
+        "id": 160,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "descrizione": "rifiuti a base di carbone costituiti da scarti di catodi anodi, spezzoni di carbone amorfo, coke, calcinato di petrolio, suole di carbonio usate materiali incombustibili dell'alluminio",
+        "descrizione_estesa": "13.26-rifiuti a base di carbone costituiti da scarti di catodi anodi, spezzoni di carbone amorfo, coke, calcinato di petrolio, suole di carbonio usate materiali incombustibili dell'alluminio"
+    },
+    {
+        "id": 161,
+        "cod_smr_tipo_rifiuto": " 13.27",
+        "descrizione": " rifiuti da depurazioni fumi dell'industria dei laterizi",
+        "descrizione_estesa": " 13.27- rifiuti da depurazioni fumi dell'industria dei laterizi"
+    },
+    {
+        "id": 162,
+        "cod_smr_tipo_rifiuto": "13.28",
+        "descrizione": " soluzione reflua a base di solfuro di sodio",
+        "descrizione_estesa": "13.28- soluzione reflua a base di solfuro di sodio"
+    },
+    {
+        "id": 163,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "descrizione": " rifiuti solidi urbani o speciali non pericolosi ad esclusioni delle frazioni derivanti da raccolta differenziata",
+        "descrizione_estesa": "14.1- rifiuti solidi urbani o speciali non pericolosi ad esclusioni delle frazioni derivanti da raccolta differenziata"
+    },
+    {
+        "id": 164,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "descrizione": " frazione organica da RSU e rifiuti speciali non pericolosi a matrice organica, recuperabili con processi di digestione anaerobica",
+        "descrizione_estesa": "15.1- frazione organica da RSU e rifiuti speciali non pericolosi a matrice organica, recuperabili con processi di digestione anaerobica"
+    },
+    {
+        "id": 165,
+        "cod_smr_tipo_rifiuto": "16.1 A",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da frazione organica dei rifiuti solidi urbani raccolta separatamente",
+        "descrizione_estesa": "16.1 A- rifiuti compostabili per la produzione di compost di qualità composti da frazione organica dei rifiuti solidi urbani raccolta separatamente"
+    },
+    {
+        "id": 166,
+        "cod_smr_tipo_rifiuto": "16.1 B ",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti dai rifiuti vegetali di coltivazioni agricole",
+        "descrizione_estesa": "16.1 B - rifiuti compostabili per la produzione di compost di qualità composti dai rifiuti vegetali di coltivazioni agricole"
+    },
+    {
+        "id": 167,
+        "cod_smr_tipo_rifiuto": "16.1 C",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da segatura, trucioli, frammenti di legno virgola di sughero",
+        "descrizione_estesa": "16.1 C- rifiuti compostabili per la produzione di compost di qualità composti da segatura, trucioli, frammenti di legno virgola di sughero"
+    },
+    {
+        "id": 168,
+        "cod_smr_tipo_rifiuto": "16.1 D",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da rifiuti vegetali derivanti da attività agro_industriali",
+        "descrizione_estesa": "16.1 D- rifiuti compostabili per la produzione di compost di qualità composti da rifiuti vegetali derivanti da attività agro_industriali"
+    },
+    {
+        "id": 169,
+        "cod_smr_tipo_rifiuto": "16. 1.E ",
+        "descrizione": " Rifiuti compostabili per la produzione di compost di qualità composti da Rifiuti tessili di origine vegetale cascami e scarti di cotone, cascami e scarti di lino, cascami e scarti di iuta, cascami e scarti di canapa",
+        "descrizione_estesa": "16. 1.E - Rifiuti compostabili per la produzione di compost di qualità composti da Rifiuti tessili di origine vegetale cascami e scarti di cotone, cascami e scarti di lino, cascami e scarti di iuta, cascami e scarti di canapa"
+    },
+    {
+        "id": 170,
+        "cod_smr_tipo_rifiuto": "16. 1.F ",
+        "descrizione": " Rifiuti compostabili per la produzione di compost di qualità composti da Rifiuti tessili di origine animale cascami e scarti di lana, cascami e scarti di seta",
+        "descrizione_estesa": "16. 1.F - Rifiuti compostabili per la produzione di compost di qualità composti da Rifiuti tessili di origine animale cascami e scarti di lana, cascami e scarti di seta"
+    },
+    {
+        "id": 171,
+        "cod_smr_tipo_rifiuto": "16. 1.G ",
+        "descrizione": " Rifiuti compostabili per la produzione di compost di qualità composti da deiezioni animali da sole o in miscela con materiale di lettiera o frazioni della stessa ottenute attraverso processi di separazione",
+        "descrizione_estesa": "16. 1.G - Rifiuti compostabili per la produzione di compost di qualità composti da deiezioni animali da sole o in miscela con materiale di lettiera o frazioni della stessa ottenute attraverso processi di separazione"
+    },
+    {
+        "id": 172,
+        "cod_smr_tipo_rifiuto": "16.1.H",
+        "descrizione": "rifiuti compostabili di qualità composti da scarti di legno non impregnato",
+        "descrizione_estesa": "16.1.H-rifiuti compostabili di qualità composti da scarti di legno non impregnato"
+    },
+    {
+        "id": 173,
+        "cod_smr_tipo_rifiuto": "16.1.I",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da carta e cartoni delle forme usualmente commercializzate",
+        "descrizione_estesa": "16.1.I- rifiuti compostabili per la produzione di compost di qualità composti da carta e cartoni delle forme usualmente commercializzate"
+    },
+    {
+        "id": 174,
+        "cod_smr_tipo_rifiuto": "16.1.J",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da fibra e fanghi di carta",
+        "descrizione_estesa": "16.1.J- rifiuti compostabili per la produzione di compost di qualità composti da fibra e fanghi di carta"
+    },
+    {
+        "id": 175,
+        "cod_smr_tipo_rifiuto": "16.1.K",
+        "descrizione": "rifiuti compostabili per la produzione di compost di qualità composti da contenuto dei prestomaci",
+        "descrizione_estesa": "16.1.K-rifiuti compostabili per la produzione di compost di qualità composti da contenuto dei prestomaci"
+    },
+    {
+        "id": 176,
+        "cod_smr_tipo_rifiuto": "16.1.L",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da rifiuti ligno cellulosici derivanti dalla manutenzione del verde ornamentale",
+        "descrizione_estesa": "16.1.L- rifiuti compostabili per la produzione di compost di qualità composti da rifiuti ligno cellulosici derivanti dalla manutenzione del verde ornamentale"
+    },
+    {
+        "id": 177,
+        "cod_smr_tipo_rifiuto": "16.1.M",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità composti da fanghi di depurazione, fanghi di depurazione delle industrie alimentari",
+        "descrizione_estesa": "16.1.M- rifiuti compostabili per la produzione di compost di qualità composti da fanghi di depurazione, fanghi di depurazione delle industrie alimentari"
+    },
+    {
+        "id": 178,
+        "cod_smr_tipo_rifiuto": "16.1.N",
+        "descrizione": " rifiuti compostabili per la produzione di compost di qualità componenti da ceneri di combustione di sanse esauste e di scarti vegetali con le caratteristiche di cui al punto 18 .11",
+        "descrizione_estesa": "16.1.N- rifiuti compostabili per la produzione di compost di qualità componenti da ceneri di combustione di sanse esauste e di scarti vegetali con le caratteristiche di cui al punto 18 .11"
+    },
+    {
+        "id": 179,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "descrizione": " rifiuti solidi urbani ed assimilabili ad esclusione frazioni gene derivanti da raccolta differenziata, combustibile da rifiuti (CDR)",
+        "descrizione_estesa": "17.1- rifiuti solidi urbani ed assimilabili ad esclusione frazioni gene derivanti da raccolta differenziata, combustibile da rifiuti (CDR)"
+    },
+    {
+        "id": 180,
+        "cod_smr_tipo_rifiuto": "18.1",
+        "descrizione": " ossa, residui di pulitura delle ossa corna e unghie penne e piume residui carnei, sangue, residui di pesce crisalidi",
+        "descrizione_estesa": "18.1- ossa, residui di pulitura delle ossa corna e unghie penne e piume residui carnei, sangue, residui di pesce crisalidi"
+    },
+    {
+        "id": 181,
+        "cod_smr_tipo_rifiuto": "18.2",
+        "descrizione": " scarti con la peluria e pelucchi di lana e altre fibre di origine animale, rifilature e scarsi di pelo",
+        "descrizione_estesa": "18.2- scarti con la peluria e pelucchi di lana e altre fibre di origine animale, rifilature e scarsi di pelo"
+    },
+    {
+        "id": 182,
+        "cod_smr_tipo_rifiuto": "18.3",
+        "descrizione": " scarti soldi della lavorazione conciaria",
+        "descrizione_estesa": "18.3- scarti soldi della lavorazione conciaria"
+    },
+    {
+        "id": 183,
+        "cod_smr_tipo_rifiuto": "18.4",
+        "descrizione": " borlande",
+        "descrizione_estesa": "18.4- borlande"
+    },
+    {
+        "id": 184,
+        "cod_smr_tipo_rifiuto": "18.5",
+        "descrizione": " panelli",
+        "descrizione_estesa": "18.5- panelli"
+    },
+    {
+        "id": 185,
+        "cod_smr_tipo_rifiuto": "18.6",
+        "descrizione": " acque di vegetazione delle olive",
+        "descrizione_estesa": "18.6- acque di vegetazione delle olive"
+    },
+    {
+        "id": 186,
+        "cod_smr_tipo_rifiuto": "18.7",
+        "descrizione": " calce di defecazione e ceneri di calce",
+        "descrizione_estesa": "18.7- calce di defecazione e ceneri di calce"
+    },
+    {
+        "id": 187,
+        "cod_smr_tipo_rifiuto": "18.8",
+        "descrizione": " scorie di defosforilazione",
+        "descrizione_estesa": "18.8- scorie di defosforilazione"
+    },
+    {
+        "id": 188,
+        "cod_smr_tipo_rifiuto": "18.9",
+        "descrizione": " solfato di calcio precipitato, solfato ferroso, gesso di defecazione",
+        "descrizione_estesa": "18.9- solfato di calcio precipitato, solfato ferroso, gesso di defecazione"
+    },
+    {
+        "id": 189,
+        "cod_smr_tipo_rifiuto": "18. 10",
+        "descrizione": " fosfato precipitato",
+        "descrizione_estesa": "18. 10- fosfato precipitato"
+    },
+    {
+        "id": 190,
+        "cod_smr_tipo_rifiuto": "18.11 ",
+        "descrizione": "ceneri di combustione da sanza esausta e da materiali organici vari di origine naturale",
+        "descrizione_estesa": "18.11 -ceneri di combustione da sanza esausta e da materiali organici vari di origine naturale"
+    },
+    {
+        "id": 191,
+        "cod_smr_tipo_rifiuto": "18.12",
+        "descrizione": " deiezioni animali",
+        "descrizione_estesa": "18.12- deiezioni animali"
+    }
+]

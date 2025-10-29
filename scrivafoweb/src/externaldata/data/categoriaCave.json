@@ -1,0 +1,398 @@
+[
+    {
+        "litotipo": "Alabastro",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "I",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Ardesia",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "D",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Arenaria",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "B",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Argilla",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "A",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Basalto",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Beola",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "G",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Brecce",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Brecce e puddinghe",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Calcare",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "E",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Calcarenite",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "E",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Calcescisti",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "D",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Conglomerati",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Detrito di falda",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "V",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Diabase",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Diaspri e scisti",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Diorite",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Dolomia",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "E",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Gabbro",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Gesso",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "F",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Gneiss",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "G",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Granito",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Inerte",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Inerti alluvionali",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Marmo",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "I",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Marmo bianco",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "I",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Marmo colorato",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "I",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Marne",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "A",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Materiale Alluvionale",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Materiale Morenico",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "O",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Pietra di Langa",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "B",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Pietra di Luserna",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "G",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Porfido",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Quarzite",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "G",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Quarzo",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "L",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "RIOLITI DI ALTERAZIONE",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sabbia e ghiaia",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sabbie per riempimento",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "U",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sabbie Silicee",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "Q",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sabbione calcareo",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "M",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Serizzo",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "G",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Serpentina",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "S",
+        "categoria": "categoria cave",
+        "categoriaOnere": "a. sabbie e ghiaie per calcestruzzi, conglomerati bituminosi, tout-venant per riempimenti e sottofondi, materiali per pietrischi e sabbie",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sienite",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "H",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    },
+    {
+        "litotipo": "Torba",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "R",
+        "categoria": "categoria cave",
+        "categoriaOnere": "c. argille, calcari per usi industriali, gessi, sabbie silicee e torba",
+        "CategoriaCanoneConcessioneCava": "INERTI E MAT.INDUSTRIALI",
+        "usoPrimario": "Uso industriale"
+    },
+    {
+        "litotipo": "Travertino",
+        "classificazione": "NON METALLI",
+        "codiceBDAE": "I",
+        "categoria": "categoria cave",
+        "categoriaOnere": "b. pietre ornamentali",
+        "CategoriaCanoneConcessioneCava": "MARMI E ALTRE PIETRE ORNAMENTALI",
+        "usoPrimario": "per pietre ornamentali"
+    }
+]

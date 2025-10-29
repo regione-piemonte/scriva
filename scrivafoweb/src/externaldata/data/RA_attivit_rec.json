@@ -1,0 +1,842 @@
+[
+    {
+        "id": 1,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3 a ",
+        "descrizione": "cementifici[R5]",
+        "descrizione_estesa": "4.4.3 a -cementifici[R5]"
+    },
+    {
+        "id": 2,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3. b ",
+        "descrizione": "produzione di conglomerati cementizi e bituminosi pe l’edilizia e laterizi [R5]",
+        "descrizione_estesa": "4.4.3. b -produzione di conglomerati cementizi e bituminosi pe l’edilizia e laterizi [R5]"
+    },
+    {
+        "id": 3,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3. C",
+        "descrizione": " industria vetraria [R5]",
+        "descrizione_estesa": "4.4.3. C- industria vetraria [R5]"
+    },
+    {
+        "id": 4,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3 D ",
+        "descrizione": "Acciaierie e fonderie di prima e seconda fusione per il recupero di materiali ferrosi e non ferrosi [R4]",
+        "descrizione_estesa": "4.4.3 D -Acciaierie e fonderie di prima e seconda fusione per il recupero di materiali ferrosi e non ferrosi [R4]"
+    },
+    {
+        "id": 5,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3 E ",
+        "descrizione": "formazione di rilevati, sottofondi stradali e massicciate ferroviarie (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "4.4.3 E -formazione di rilevati, sottofondi stradali e massicciate ferroviarie (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 6,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3 F",
+        "descrizione": " utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "4.4.3 F- utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 7,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_attivit_rec": "4.4.3G",
+        "descrizione": "utilizzo per copertura di discariche per RSU; la percentuale di rifiuti utilizzabile in miscela con la materia prima nondovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5];",
+        "descrizione_estesa": "4.4.3G-utilizzo per copertura di discariche per RSU; la percentuale di rifiuti utilizzabile in miscela con la materia prima nondovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5];"
+    },
+    {
+        "id": 8,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3 A",
+        "descrizione": " Cementifici [R5]",
+        "descrizione_estesa": "5.17.3 A- Cementifici [R5]"
+    },
+    {
+        "id": 9,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3. B",
+        "descrizione": " Industria del vetro [R5]",
+        "descrizione_estesa": "5.17.3. B- Industria del vetro [R5]"
+    },
+    {
+        "id": 10,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3. C",
+        "descrizione": " produzione di calcestruzzo, conglomerati cementizi e bituminosi[R5]",
+        "descrizione_estesa": "5.17.3. C- produzione di calcestruzzo, conglomerati cementizi e bituminosi[R5]"
+    },
+    {
+        "id": 11,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3.D",
+        "descrizione": " traduzione di conglomerati idraulici catalizzati [R5]",
+        "descrizione_estesa": "5.17.3.D- traduzione di conglomerati idraulici catalizzati [R5]"
+    },
+    {
+        "id": 12,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3.E",
+        "descrizione": " formazione di rilevati, sottofondi stradali e massicciate ferroviarie, anche addittivati in miscele con altri rifiuti per cui è previsto questo tipo di recupero (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5];",
+        "descrizione_estesa": "5.17.3.E- formazione di rilevati, sottofondi stradali e massicciate ferroviarie, anche addittivati in miscele con altri rifiuti per cui è previsto questo tipo di recupero (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5];"
+    },
+    {
+        "id": 13,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_attivit_rec": "5.17.3.F",
+        "descrizione": "utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10];",
+        "descrizione_estesa": "5.17.3.F-utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10];"
+    },
+    {
+        "id": 14,
+        "cod_ra_tipo_rifiuto": "7.13",
+        "cod_attivit_rec": "7. 1.3. A",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] per la produzione di materie prime secondarie per l'edilizia, mediante fasi meccaniche e tecnologicamente interconnesse di macinazione, vagliatura, selezione granulometrica e separazione della frazione metallica e delle frazioni indesiderate per l'ottenimento di frazioni inerti di natura lapidea a granulometria idonea e selezionata, con eluato del test di cessione conforme a quanto previsto in allegato 3 al presente decreto [R5];",
+        "descrizione_estesa": "7. 1.3. A- messa in riserva di rifiuti inerti [R13] per la produzione di materie prime secondarie per l'edilizia, mediante fasi meccaniche e tecnologicamente interconnesse di macinazione, vagliatura, selezione granulometrica e separazione della frazione metallica e delle frazioni indesiderate per l'ottenimento di frazioni inerti di natura lapidea a granulometria idonea e selezionata, con eluato del test di cessione conforme a quanto previsto in allegato 3 al presente decreto [R5];"
+    },
+    {
+        "id": 15,
+        "cod_ra_tipo_rifiuto": "7.13",
+        "cod_attivit_rec": "7. 1.3. B",
+        "descrizione": " utilizzo per recuperi ambientali previo trattamento di cui al punto a) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R10]",
+        "descrizione_estesa": "7. 1.3. B- utilizzo per recuperi ambientali previo trattamento di cui al punto a) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R10]"
+    },
+    {
+        "id": 16,
+        "cod_ra_tipo_rifiuto": "7.13",
+        "cod_attivit_rec": "7. 1.3. C",
+        "descrizione": " utilizzo per la realizzazione di rilevati e sottofondi stradali e ferroviari e aeroportuali, piazzali industriali previo trattamento di cui al punto a) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R5].",
+        "descrizione_estesa": "7. 1.3. C- utilizzo per la realizzazione di rilevati e sottofondi stradali e ferroviari e aeroportuali, piazzali industriali previo trattamento di cui al punto a) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto [R5]."
+    },
+    {
+        "id": 17,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3 A",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "7.2.3 A- cementifici [R5]"
+    },
+    {
+        "id": 18,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3.B",
+        "descrizione": " utilizzo del granulato terza soluzioni di conglomerati cementizi e bituminosi [R5]",
+        "descrizione_estesa": "7.2.3.B- utilizzo del granulato terza soluzioni di conglomerati cementizi e bituminosi [R5]"
+    },
+    {
+        "id": 19,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3.C",
+        "descrizione": " utilizzo per isolamenti e impermealizzazioni e ardesia espansa",
+        "descrizione_estesa": "7.2.3.C- utilizzo per isolamenti e impermealizzazioni e ardesia espansa"
+    },
+    {
+        "id": 20,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3.D",
+        "descrizione": " ove necessario frantumazione; macinazione, vagliatura; eventuale omogeneizzazione e integrazione con materia prima inerte, anche nell'industria lapidea [R5]",
+        "descrizione_estesa": "7.2.3.D- ove necessario frantumazione; macinazione, vagliatura; eventuale omogeneizzazione e integrazione con materia prima inerte, anche nell'industria lapidea [R5]"
+    },
+    {
+        "id": 21,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3 e) ",
+        "descrizione": " utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.2.3 e) - utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 22,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_attivit_rec": "7.2.3 f) ",
+        "descrizione": " utilizzo per realizzazione di rilevati e sottofondi stradali e ferroviari e aeroportuali, piazzali industriali previoeventuale trattamento di cui al punto d) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5];",
+        "descrizione_estesa": "7.2.3 f) - utilizzo per realizzazione di rilevati e sottofondi stradali e ferroviari e aeroportuali, piazzali industriali previoeventuale trattamento di cui al punto d) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5];"
+    },
+    {
+        "id": 23,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_attivit_rec": "7.4.3 a) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: a) recupero in cementifici [R5]",
+        "descrizione_estesa": "7.4.3 a) - messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: a) recupero in cementifici [R5]"
+    },
+    {
+        "id": 24,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_attivit_rec": "7.4.3 b) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: b) recupero nell'industria ceramica e dei laterizi [R5]",
+        "descrizione_estesa": "7.4.3 b) - messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: b) recupero nell'industria ceramica e dei laterizi [R5]"
+    },
+    {
+        "id": 25,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_attivit_rec": "7.4.3 c) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: c) eventuale omogeneizzazione e integrazione con materia prima inerte nell'industria lapidea [R5];",
+        "descrizione_estesa": "7.4.3 c) - messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: c) eventuale omogeneizzazione e integrazione con materia prima inerte nell'industria lapidea [R5];"
+    },
+    {
+        "id": 26,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_attivit_rec": "7.4.3 d) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: d) realizzazione di rilevati e sottofondi stradali e piazzali industriali previo eventuale trattamento di cui al punto c) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5];",
+        "descrizione_estesa": "7.4.3 d) - messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: d) realizzazione di rilevati e sottofondi stradali e piazzali industriali previo eventuale trattamento di cui al punto c) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5];"
+    },
+    {
+        "id": 27,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_attivit_rec": "7.4.3 e) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: e) recuperi ambientali previo eventuale trattamento di cui al punto c) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.4.3 e) - messa in riserva di rifiuti inerti [R13] con frantumazione; macinazione, vagliatura per sottoporre i rifiuti alle seguenti operazioni di recupero: e) recuperi ambientali previo eventuale trattamento di cui al punto c) (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 28,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_attivit_rec": "7.11.3 a) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: a) recupero nell'industria della produzione di conglomerati cementizi [R5]",
+        "descrizione_estesa": "7.11.3 a) - messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: a) recupero nell'industria della produzione di conglomerati cementizi [R5]"
+    },
+    {
+        "id": 29,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_attivit_rec": "7.11.3 b) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: b) recupero nei cementifici [R5]",
+        "descrizione_estesa": "7.11.3 b) - messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: b) recupero nei cementifici [R5]"
+    },
+    {
+        "id": 30,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_attivit_rec": "7.11.3 c) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: c) frantumazione, macinazione ed omogeneizzazione e integrazione con materia prima inerte nell'industria lapidea [R5]",
+        "descrizione_estesa": "7.11.3 c) - messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: c) frantumazione, macinazione ed omogeneizzazione e integrazione con materia prima inerte nell'industria lapidea [R5]"
+    },
+    {
+        "id": 31,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_attivit_rec": "7.11.3 d) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: d) formazione di rilevati, sottofondi stradali e piazzali industriali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "7.11.3 d) - messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: d) formazione di rilevati, sottofondi stradali e piazzali industriali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 32,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_attivit_rec": "7.11.3 e) ",
+        "descrizione": " messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: e) recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.11.3 e) - messa in riserva di rifiuti inerti [R13] con separazione delle frazioni indesiderate e della eventuale frazione metallica per sottoporla all'operazione di recupero nell'industria metallurgica [R4] e per sottoporre la frazione inerte alle seguenti operazioni di recupero: e) recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 33,
+        "cod_ra_tipo_rifiuto": "7.14",
+        "cod_attivit_rec": "7.14. 3 A",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "7.14. 3 A- cementifici [R5]"
+    },
+    {
+        "id": 34,
+        "cod_ra_tipo_rifiuto": "7.14",
+        "cod_attivit_rec": "7.14.3 b) ",
+        "descrizione": " utilizzo per recuperi ambientali, previa eventuale desalinizzazione (il recupero è subordinato all'esecuzione del test dicessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.14.3 b) - utilizzo per recuperi ambientali, previa eventuale desalinizzazione (il recupero è subordinato all'esecuzione del test dicessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 35,
+        "cod_ra_tipo_rifiuto": "7.14",
+        "cod_attivit_rec": "7.14.3 c) ",
+        "descrizione": " utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima nondovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5].",
+        "descrizione_estesa": "7.14.3 c) - utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima nondovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal qualesecondo il metodo in allegato 3 al presente decreto) [R5]."
+    },
+    {
+        "id": 36,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_attivit_rec": "7.15.3 a) ",
+        "descrizione": " industria dei laterizi nell'impasto e industria di produzione dell'argilla espansa, previa eventuale disidratazione e desalinizzazione [R5]",
+        "descrizione_estesa": "7.15.3 a) - industria dei laterizi nell'impasto e industria di produzione dell'argilla espansa, previa eventuale disidratazione e desalinizzazione [R5]"
+    },
+    {
+        "id": 37,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_attivit_rec": "7.15.3 b) ",
+        "descrizione": " produzione di aggregati artificiali mediante processo termico di sinterizzazione [R5]",
+        "descrizione_estesa": "7.15.3 b) - produzione di aggregati artificiali mediante processo termico di sinterizzazione [R5]"
+    },
+    {
+        "id": 38,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_attivit_rec": "7.15.3 c) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "7.15.3 c) - cementifici [R5]"
+    },
+    {
+        "id": 39,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_attivit_rec": "7.15.3 d) ",
+        "descrizione": " utilizzo per recuperi ambientali previa eventuale disidratazione e desalinizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10].",
+        "descrizione_estesa": "7.15.3 d) - utilizzo per recuperi ambientali previa eventuale disidratazione e desalinizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10]."
+    },
+    {
+        "id": 40,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_attivit_rec": "7.15.3 e) ",
+        "descrizione": " utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD)[R5]:",
+        "descrizione_estesa": "7.15.3 e) - utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD)[R5]:"
+    },
+    {
+        "id": 41,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 a) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "7.16.3 a) - cementifici [R5]"
+    },
+    {
+        "id": 42,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 b) ",
+        "descrizione": " industria dei laterizi nell'impasto, previa eventuale disidratazione [R5]",
+        "descrizione_estesa": "7.16.3 b) - industria dei laterizi nell'impasto, previa eventuale disidratazione [R5]"
+    },
+    {
+        "id": 43,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 c) ",
+        "descrizione": " riutilizzo per recuperi ambientali, previa eventuale disidratazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10]",
+        "descrizione_estesa": "7.16.3 c) - riutilizzo per recuperi ambientali, previa eventuale disidratazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10]"
+    },
+    {
+        "id": 44,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 d) ",
+        "descrizione": " realizzazione di rilevati e sottofondi stradali, previa eventuale disidratazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R5]",
+        "descrizione_estesa": "7.16.3 d) - realizzazione di rilevati e sottofondi stradali, previa eventuale disidratazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R5]"
+    },
+    {
+        "id": 45,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 e) ",
+        "descrizione": " neutralizzazione di acque acide, previa eventuale disidratazione [R5]",
+        "descrizione_estesa": "7.16.3 e) - neutralizzazione di acque acide, previa eventuale disidratazione [R5]"
+    },
+    {
+        "id": 46,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_attivit_rec": "7.16.3 f) ",
+        "descrizione": " impermeabilizzazione dei bacini di decantazione delle acque [R5]",
+        "descrizione_estesa": "7.16.3 f) - impermeabilizzazione dei bacini di decantazione delle acque [R5]"
+    },
+    {
+        "id": 47,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 a) ",
+        "descrizione": " produzione calce idraulica [R5]",
+        "descrizione_estesa": "7.17.3 a) - produzione calce idraulica [R5]"
+    },
+    {
+        "id": 48,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 b) ",
+        "descrizione": " produzione conglomerati cementizi, calcestruzzi e manufatti per edilizia [R5]",
+        "descrizione_estesa": "7.17.3 b) - produzione conglomerati cementizi, calcestruzzi e manufatti per edilizia [R5]"
+    },
+    {
+        "id": 49,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 c) ",
+        "descrizione": " cementifici, come aggiunta al clinker, come additivo nella carica al forno per la produzione di cementi ferrici [R5]",
+        "descrizione_estesa": "7.17.3 c) - cementifici, come aggiunta al clinker, come additivo nella carica al forno per la produzione di cementi ferrici [R5]"
+    },
+    {
+        "id": 50,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 d) ",
+        "descrizione": " industria siderurgica nella preparazione della carica dell'altoforno [R5]",
+        "descrizione_estesa": "7.17.3 d) - industria siderurgica nella preparazione della carica dell'altoforno [R5]"
+    },
+    {
+        "id": 51,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 e) ",
+        "descrizione": " formazione di rilevati e sottofondi stradali previa eventuale frantumazione del rifiuto (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "7.17.3 e) - formazione di rilevati e sottofondi stradali previa eventuale frantumazione del rifiuto (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 52,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_attivit_rec": "7.17.3 f) ",
+        "descrizione": " riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.17.3 f) - riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 53,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 a) ",
+        "descrizione": " produzione di calce idraulica [R5]",
+        "descrizione_estesa": "7.18.3 a) - produzione di calce idraulica [R5]"
+    },
+    {
+        "id": 54,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 b) ",
+        "descrizione": " produzione conglomerati e manufatti per l'edilizia [R5]",
+        "descrizione_estesa": "7.18.3 b) - produzione conglomerati e manufatti per l'edilizia [R5]"
+    },
+    {
+        "id": 55,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 c) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "7.18.3 c) - cementifici [R5]"
+    },
+    {
+        "id": 56,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 d) ",
+        "descrizione": " realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "7.18.3 d) - realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 57,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 e) ",
+        "descrizione": " attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.18.3 e) - attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 58,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 f) ",
+        "descrizione": " utilizzo come reagente per la desolforazione dei fumi di combustione [R7]",
+        "descrizione_estesa": "7.18.3 f) - utilizzo come reagente per la desolforazione dei fumi di combustione [R7]"
+    },
+    {
+        "id": 59,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_attivit_rec": "7.18.3 g) ",
+        "descrizione": " trattamento delle acque reflue se esente da elementi non abbattibili dall'impianto di depurazione [R7]",
+        "descrizione_estesa": "7.18.3 g) - trattamento delle acque reflue se esente da elementi non abbattibili dall'impianto di depurazione [R7]"
+    },
+    {
+        "id": 60,
+        "cod_ra_tipo_rifiuto": "7.3",
+        "cod_attivit_rec": "7.30.3 a) ",
+        "descrizione": " messa in riserva di rifiuti (R13) con vagliatura, pulizia e drenaggio e captazione delle acque di eluizione e di percolazione, eventuale separazione della frazione costituita da conchiglie con materiale estraneo <10% per sottoporre il rifiuto alle seguenti operazioni di recupero: a) cementifici [R5]",
+        "descrizione_estesa": "7.30.3 a) - messa in riserva di rifiuti (R13) con vagliatura, pulizia e drenaggio e captazione delle acque di eluizione e di percolazione, eventuale separazione della frazione costituita da conchiglie con materiale estraneo <10% per sottoporre il rifiuto alle seguenti operazioni di recupero: a) cementifici [R5]"
+    },
+    {
+        "id": 61,
+        "cod_ra_tipo_rifiuto": "7.3",
+        "cod_attivit_rec": "7.30.3 b) ",
+        "descrizione": " messa in riserva di rifiuti (R13) con vagliatura, pulizia e drenaggio e captazione delle acque di eluizione e di percolazione, eventuale separazione della frazione costituita da conchiglie con materiale estraneo <10% per sottoporre il rifiuto alle seguenti operazioni di recupero: b) ripascimento di arenili soggetti a fenomeni erosivi [R10];",
+        "descrizione_estesa": "7.30.3 b) - messa in riserva di rifiuti (R13) con vagliatura, pulizia e drenaggio e captazione delle acque di eluizione e di percolazione, eventuale separazione della frazione costituita da conchiglie con materiale estraneo <10% per sottoporre il rifiuto alle seguenti operazioni di recupero: b) ripascimento di arenili soggetti a fenomeni erosivi [R10];"
+    },
+    {
+        "id": 62,
+        "cod_ra_tipo_rifiuto": "7.31",
+        "cod_attivit_rec": "7.31.3 a) ",
+        "descrizione": " industria della ceramica e dei laterizi [R5]",
+        "descrizione_estesa": "7.31.3 a) - industria della ceramica e dei laterizi [R5]"
+    },
+    {
+        "id": 63,
+        "cod_ra_tipo_rifiuto": "7.31",
+        "cod_attivit_rec": "7.31.3 b) ",
+        "descrizione": " utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10]",
+        "descrizione_estesa": "7.31.3 b) - utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R10]"
+    },
+    {
+        "id": 64,
+        "cod_ra_tipo_rifiuto": "7.31",
+        "cod_attivit_rec": "7.31.3 c) ",
+        "descrizione": " formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R5]",
+        "descrizione_estesa": "7.31.3 c) - formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto ad esclusione del parametro COD) [R5]"
+    },
+    {
+        "id": 65,
+        "cod_ra_tipo_rifiuto": "7.31.BIS",
+        "cod_attivit_rec": "7.31bis.3 a) ",
+        "descrizione": " industria della ceramica e dei laterizi [R5]",
+        "descrizione_estesa": "7.31bis.3 a) - industria della ceramica e dei laterizi [R5]"
+    },
+    {
+        "id": 66,
+        "cod_ra_tipo_rifiuto": "7.31.BIS",
+        "cod_attivit_rec": "7.31bis.3 b) ",
+        "descrizione": " utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "7.31bis.3 b) - utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 67,
+        "cod_ra_tipo_rifiuto": "7.31.BIS",
+        "cod_attivit_rec": "7.31bis.3 c) ",
+        "descrizione": " formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "7.31bis.3 c) - formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 68,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_attivit_rec": "11.2.3 a) ",
+        "descrizione": " industria dei laterizi e dell'argilla espansa, se esenti da solventi residuali aggiunti per il recupero degli oli [R5]",
+        "descrizione_estesa": "11.2.3 a) - industria dei laterizi e dell'argilla espansa, se esenti da solventi residuali aggiunti per il recupero degli oli [R5]"
+    },
+    {
+        "id": 69,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_attivit_rec": "11.2.3 b) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "11.2.3 b) - cementifici [R5]"
+    },
+    {
+        "id": 70,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_attivit_rec": "11.2.3 c) ",
+        "descrizione": " attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "11.2.3 c) - attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 71,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_attivit_rec": "11.2.3 d) ",
+        "descrizione": " utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso; (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "11.2.3 d) - utilizzo per copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso; (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 72,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 a) ",
+        "descrizione": " industria cartaria per produzione pasta di carta e di carta di bassa qualità [R3]",
+        "descrizione_estesa": "12.1.3 a) - industria cartaria per produzione pasta di carta e di carta di bassa qualità [R3]"
+    },
+    {
+        "id": 73,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 b) ",
+        "descrizione": " industria dei laterizi e dell'argilla espansa [R5]",
+        "descrizione_estesa": "12.1.3 b) - industria dei laterizi e dell'argilla espansa [R5]"
+    },
+    {
+        "id": 74,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 c) ",
+        "descrizione": " cementifici [R5] [con esclusione del rifiuto 030311]",
+        "descrizione_estesa": "12.1.3 c) - cementifici [R5] [con esclusione del rifiuto 030311]"
+    },
+    {
+        "id": 75,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 d) ",
+        "descrizione": " produzione di conglomerati cementizi [con esclusione del rifiuto 030311]",
+        "descrizione_estesa": "12.1.3 d) - produzione di conglomerati cementizi [con esclusione del rifiuto 030311]"
+    },
+    {
+        "id": 76,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 e) ",
+        "descrizione": " produzione di pannelli in fibra [con esclusione del rifiuto 030311] [R3]",
+        "descrizione_estesa": "12.1.3 e) - produzione di pannelli in fibra [con esclusione del rifiuto 030311] [R3]"
+    },
+    {
+        "id": 77,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 f) ",
+        "descrizione": " industria saponiera e dei tensioattivi[R9]. reimpiego nel settore della produzione e del riciclaggio di materie plastiche caricate con polvere di legno, produzione del pannello di particelle, previa vagliatura ed essiccazione [R3]. industria cartaria [R3]. industria conciaria come preservante [R5].a) industria cartaria per produzione pasta di carta e di carta di bassa qualità [R3];b) industria dei laterizi e dell'argilla espansa [R5];",
+        "descrizione_estesa": "12.1.3 f) - industria saponiera e dei tensioattivi[R9]. reimpiego nel settore della produzione e del riciclaggio di materie plastiche caricate con polvere di legno, produzione del pannello di particelle, previa vagliatura ed essiccazione [R3]. industria cartaria [R3]. industria conciaria come preservante [R5].a) industria cartaria per produzione pasta di carta e di carta di bassa qualità [R3];b) industria dei laterizi e dell'argilla espansa [R5];"
+    },
+    {
+        "id": 78,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_attivit_rec": "12.1.3 g) ",
+        "descrizione": " utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.1.3 g) - utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 79,
+        "cod_ra_tipo_rifiuto": "12.2",
+        "cod_attivit_rec": "12.2.3 a) ",
+        "descrizione": " formazione di rilevati e sottofondi stradali previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.2.3 a) - formazione di rilevati e sottofondi stradali previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 80,
+        "cod_ra_tipo_rifiuto": "12.2",
+        "cod_attivit_rec": "12.2.3 b) ",
+        "descrizione": " esecuzione di terrapieni e arginature, ad esclusione delle opere a contatto diretto o indiretto con l'ambiente marino, previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5].",
+        "descrizione_estesa": "12.2.3 b) - esecuzione di terrapieni e arginature, ad esclusione delle opere a contatto diretto o indiretto con l'ambiente marino, previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]."
+    },
+    {
+        "id": 81,
+        "cod_ra_tipo_rifiuto": "12.2",
+        "cod_attivit_rec": "12.2.3 c) ",
+        "descrizione": " utilizzo per riprofilare porzioni della morfometria della zona d'alveo interessata, previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.2.3 c) - utilizzo per riprofilare porzioni della morfometria della zona d'alveo interessata, previo essiccamento ed eventuale igienizzazione (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 82,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 a) ",
+        "descrizione": " produzione conglomerati cementizi [R5]",
+        "descrizione_estesa": "12.3.3 a) - produzione conglomerati cementizi [R5]"
+    },
+    {
+        "id": 83,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 b) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "12.3.3 b) - cementifici [R5]"
+    },
+    {
+        "id": 84,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 c) ",
+        "descrizione": " industria cartaria [R5]",
+        "descrizione_estesa": "12.3.3 c) - industria cartaria [R5]"
+    },
+    {
+        "id": 85,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 d) ",
+        "descrizione": " produzione idropitture [R5]",
+        "descrizione_estesa": "12.3.3 d) - produzione idropitture [R5]"
+    },
+    {
+        "id": 86,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 e) ",
+        "descrizione": " realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.3.3 e) - realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 87,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 f) ",
+        "descrizione": " attività di recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.3.3 f) - attività di recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 88,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 g) ",
+        "descrizione": " neutralizzazione di rifiuti acidi [R5]",
+        "descrizione_estesa": "12.3.3 g) - neutralizzazione di rifiuti acidi [R5]"
+    },
+    {
+        "id": 89,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 h) ",
+        "descrizione": " utilizzo come reagente per la desolforazione fumi di combustione [R7]",
+        "descrizione_estesa": "12.3.3 h) - utilizzo come reagente per la desolforazione fumi di combustione [R7]"
+    },
+    {
+        "id": 90,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_attivit_rec": "12.3.3 i) ",
+        "descrizione": " utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [",
+        "descrizione_estesa": "12.3.3 i) - utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) ["
+    },
+    {
+        "id": 91,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 a) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: a) cementifici [R5]",
+        "descrizione_estesa": "12.4.3 a) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: a) cementifici [R5]"
+    },
+    {
+        "id": 92,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 b) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: b) produzione di conglomerati cementizi [R5]",
+        "descrizione_estesa": "12.4.3 b) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: b) produzione di conglomerati cementizi [R5]"
+    },
+    {
+        "id": 93,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 c) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: c) industria dei laterizi in aggiunta all'impasto con impiego limitato al 5% sul secco [R5]",
+        "descrizione_estesa": "12.4.3 c) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: c) industria dei laterizi in aggiunta all'impasto con impiego limitato al 5% sul secco [R5]"
+    },
+    {
+        "id": 94,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 d) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: d) industria della ceramica [R5]",
+        "descrizione_estesa": "12.4.3 d) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: d) industria della ceramica [R5]"
+    },
+    {
+        "id": 95,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 e) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: e) realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.4.3 e) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: e) realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 96,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 f) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: f) utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.4.3 f) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: f) utilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 97,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_attivit_rec": "12.4.3 g) ",
+        "descrizione": " previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: g) utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.4.3 g) - previa eventuale disidratazione, essiccazione, vagliatura, micronizzazione, compattazione, deferrizzazione: g) utilizzo per la copertura di discariche per RSU; la percentuale di rifiuto utilizzabile in miscela con la materia prima non dovrà essere superiore al 30% in peso (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 98,
+        "cod_ra_tipo_rifiuto": "12.7",
+        "cod_attivit_rec": "12.7.3 a) ",
+        "descrizione": " previa eventuale disidratazione: a) industria dei laterizi in aggiunta all'impasto, industria dell'argilla espansa [R5]",
+        "descrizione_estesa": "12.7.3 a) - previa eventuale disidratazione: a) industria dei laterizi in aggiunta all'impasto, industria dell'argilla espansa [R5]"
+    },
+    {
+        "id": 99,
+        "cod_ra_tipo_rifiuto": "12.7",
+        "cod_attivit_rec": "12.7.3 b) ",
+        "descrizione": " previa eventuale disidratazione: b) cementifici [R5]",
+        "descrizione_estesa": "12.7.3 b) - previa eventuale disidratazione: b) cementifici [R5]"
+    },
+    {
+        "id": 100,
+        "cod_ra_tipo_rifiuto": "12.7",
+        "cod_attivit_rec": "12.7.3 c) ",
+        "descrizione": " previa eventuale disidratazione: c) recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.7.3 c) - previa eventuale disidratazione: c) recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 101,
+        "cod_ra_tipo_rifiuto": "12.9",
+        "cod_attivit_rec": "12.9.3 a) ",
+        "descrizione": " recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.9.3 a) - recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 102,
+        "cod_ra_tipo_rifiuto": "12.9",
+        "cod_attivit_rec": "12.9.3 b) ",
+        "descrizione": " formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.9.3 b) - formazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 103,
+        "cod_ra_tipo_rifiuto": "12.15",
+        "cod_attivit_rec": "12.15.3 a) ",
+        "descrizione": " realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "12.15.3 a) - realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    },
+    {
+        "id": 104,
+        "cod_ra_tipo_rifiuto": "12.15",
+        "cod_attivit_rec": "12.15.3 b) ",
+        "descrizione": " attività di recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]",
+        "descrizione_estesa": "12.15.3 b) - attività di recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R10]"
+    },
+    {
+        "id": 105,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_attivit_rec": "13.2.3 a) ",
+        "descrizione": " produzione di conglomerati cementizi [R5]",
+        "descrizione_estesa": "13.2.3 a) - produzione di conglomerati cementizi [R5]"
+    },
+    {
+        "id": 106,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_attivit_rec": "13.2.3 b) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "13.2.3 b) - cementifici [R5]"
+    },
+    {
+        "id": 107,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_attivit_rec": "13.2.3 c) ",
+        "descrizione": " industria dei laterizi e dell'argilla espansa [R5]",
+        "descrizione_estesa": "13.2.3 c) - industria dei laterizi e dell'argilla espansa [R5]"
+    },
+    {
+        "id": 108,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_attivit_rec": "13.2.3 d) ",
+        "descrizione": " formazione di rilevati e riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) con esclusione delle ceneri derivanti dalla combustione dei rifiuti di cui ai punti 9.5 e 9.6 del presente allegato [R5] [R10];",
+        "descrizione_estesa": "13.2.3 d) - formazione di rilevati e riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) con esclusione delle ceneri derivanti dalla combustione dei rifiuti di cui ai punti 9.5 e 9.6 del presente allegato [R5] [R10];"
+    },
+    {
+        "id": 109,
+        "cod_ra_tipo_rifiuto": "13.6",
+        "cod_attivit_rec": "13.6.3 a) ",
+        "descrizione": " cementifici come aggiunta al clinker [R5]",
+        "descrizione_estesa": "13.6.3 a) - cementifici come aggiunta al clinker [R5]"
+    },
+    {
+        "id": 110,
+        "cod_ra_tipo_rifiuto": "13.6",
+        "cod_attivit_rec": "13.6.3 b) ",
+        "descrizione": " produzione di prodotti per l'edilizia in generale [R5]",
+        "descrizione_estesa": "13.6.3 b) - produzione di prodotti per l'edilizia in generale [R5]"
+    },
+    {
+        "id": 111,
+        "cod_ra_tipo_rifiuto": "13.6",
+        "cod_attivit_rec": "13.6.3 c) ",
+        "descrizione": " formazione di rilevati [R5] e riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto, ad esclusione del parametro solfati) [R10]",
+        "descrizione_estesa": "13.6.3 c) - formazione di rilevati [R5] e riutilizzo per recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto, ad esclusione del parametro solfati) [R10]"
+    },
+    {
+        "id": 112,
+        "cod_ra_tipo_rifiuto": "13.7",
+        "cod_attivit_rec": "13.7.3 a) ",
+        "descrizione": " cementifici in aggiunta al clinker (il titolo di CaSO4.2H2O o di CaSO4 nei gessi deve essere rispettivamente uguale o superiore al 52% e al 50% sulla sostanza secca; i quantitativi massimi utilizzabili non devono superare il 6% sul totale della materia prima della miscela tal quale) [R5]",
+        "descrizione_estesa": "13.7.3 a) - cementifici in aggiunta al clinker (il titolo di CaSO4.2H2O o di CaSO4 nei gessi deve essere rispettivamente uguale o superiore al 52% e al 50% sulla sostanza secca; i quantitativi massimi utilizzabili non devono superare il 6% sul totale della materia prima della miscela tal quale) [R5]"
+    },
+    {
+        "id": 113,
+        "cod_ra_tipo_rifiuto": "13.7",
+        "cod_attivit_rec": "13.7.3 b) ",
+        "descrizione": " industria dei gessi (il titolo in CaSO4.2H2O deve essere uguale o superiore al 70% sulla sostanza secca) [R5]",
+        "descrizione_estesa": "13.7.3 b) - industria dei gessi (il titolo in CaSO4.2H2O deve essere uguale o superiore al 70% sulla sostanza secca) [R5]"
+    },
+    {
+        "id": 114,
+        "cod_ra_tipo_rifiuto": "13.7",
+        "cod_attivit_rec": "13.7.3 c) ",
+        "descrizione": " attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto, ad esclusione del parametro solfati) [R10]",
+        "descrizione_estesa": "13.7.3 c) - attività di recupero ambientale (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto, ad esclusione del parametro solfati) [R10]"
+    },
+    {
+        "id": 115,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 a) ",
+        "descrizione": " produzione di calce idraulica [R5]",
+        "descrizione_estesa": "13.11.3 a) - produzione di calce idraulica [R5]"
+    },
+    {
+        "id": 116,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 b) ",
+        "descrizione": " produzione di conglomerati per l'edilizia [R5]",
+        "descrizione_estesa": "13.11.3 b) - produzione di conglomerati per l'edilizia [R5]"
+    },
+    {
+        "id": 117,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 c) ",
+        "descrizione": " cementifici [R5]",
+        "descrizione_estesa": "13.11.3 c) - cementifici [R5]"
+    },
+    {
+        "id": 118,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 d) ",
+        "descrizione": " neutralizzazione acque reflue, se esente da elementi non abbattibili dal depuratore [R5]",
+        "descrizione_estesa": "13.11.3 d) - neutralizzazione acque reflue, se esente da elementi non abbattibili dal depuratore [R5]"
+    },
+    {
+        "id": 119,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 e) ",
+        "descrizione": " recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) con esclusione delle ceneri derivanti dalla combustione dei rifiuti di cui ai punti 9.5 e 9.6 del presente allegato) [R10]",
+        "descrizione_estesa": "13.11.3 e) - recuperi ambientali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) con esclusione delle ceneri derivanti dalla combustione dei rifiuti di cui ai punti 9.5 e 9.6 del presente allegato) [R10]"
+    },
+    {
+        "id": 120,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_attivit_rec": "13.11.3 f) ",
+        "descrizione": " realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]",
+        "descrizione_estesa": "13.11.3 f) - realizzazione di rilevati e sottofondi stradali (il recupero è subordinato all'esecuzione del test di cessione sul rifiuto tal quale secondo il metodo in allegato 3 al presente decreto) [R5]"
+    }
+]

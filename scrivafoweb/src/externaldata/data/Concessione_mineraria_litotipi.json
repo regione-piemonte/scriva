@@ -1,0 +1,298 @@
+[
+    {
+        "litotipo": "Afnio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Argento",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Argilla per porcellana e terraglia forte",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Argille con grado di refrattarietà superiore a 1630°C",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Barite",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Bentonite",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Berillio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Caolino",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Combustibili fossili solidi",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Farina Fossile",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Feldspati",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Ferro",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Fluidi geotermici",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "T",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso energetico"
+    },
+    {
+        "litotipo": "Fluorite",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Fosfati, Fosforite, Fosforo",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "gas (anidride carbonica, azoto, elio, ecc.)",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Germanio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Granati",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Magnesite",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Marna da cemento",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Metalloidi (Arsenico, Antimonio, Bismuto)",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Niobio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Minerali di bario e di stronzio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Olivina",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Oro e minerali auriferi associati",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "pietre preziose",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Piombo e Zinco",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Rocce asfaltiche e bituminose",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Salgemma",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Sali alcalini e magnesiaci",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Scandio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Steatite",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Talco",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Tantalio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Terre da sbianca",
+        "classificazione": "NON METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Uranio, Torio e altri metalli radioattivi",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    },
+    {
+        "litotipo": "Vanadio",
+        "classificazione": "METALLI",
+        "codice_BDAE": "C",
+        "categoria_miniera": "minerali da miniera 1° categoria  R.D.1443/1927",
+        "categoria_onere": "d. minerali appartenenti alla prima categoria ai sensi del R. D. 1443/1927",
+        "uso_primario": "Uso industriale"
+    }
+]

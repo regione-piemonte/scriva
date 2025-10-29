@@ -1,0 +1,121 @@
+[
+    {
+        "id": 1,
+        "cod_re_tipo_rifiuto": 1,
+        "cod_attivit_rec": "1.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 1 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "1.3 - Il recupero energetico del rifiuto di cui al punto 1 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 2,
+        "cod_re_tipo_rifiuto": 2,
+        "cod_attivit_rec": "2.3 a) ",
+        "descrizione": " motori fissi a combustione interna",
+        "descrizione_estesa": "2.3 a) - motori fissi a combustione interna"
+    },
+    {
+        "id": 3,
+        "cod_re_tipo_rifiuto": 2,
+        "cod_attivit_rec": "2.3 b) ",
+        "descrizione": " impianti dedicati al recupero energetico di rifiuti o impianti industriali",
+        "descrizione_estesa": "2.3 b) - impianti dedicati al recupero energetico di rifiuti o impianti industriali"
+    },
+    {
+        "id": 4,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_attivit_rec": "3.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 3 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "3.3 - Il recupero energetico del rifiuto di cui al punto 3 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 5,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_attivit_rec": "4.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 4 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "4.3 - Il recupero energetico del rifiuto di cui al punto 4 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 6,
+        "cod_re_tipo_rifiuto": 5,
+        "cod_attivit_rec": "5.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 5 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "5.3 - Il recupero energetico del rifiuto di cui al punto 5 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 7,
+        "cod_re_tipo_rifiuto": 6,
+        "cod_attivit_rec": "6.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 6 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "6.3 - Il recupero energetico del rifiuto di cui al punto 6 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 8,
+        "cod_re_tipo_rifiuto": 7,
+        "cod_attivit_rec": "7.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 7 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98",
+        "descrizione_estesa": "7.3 - Il recupero energetico del rifiuto di cui al punto 7 può essere effettuata attraverso la combustione alle condizioni riportate sul DM 5 /2/98"
+    },
+    {
+        "id": 9,
+        "cod_re_tipo_rifiuto": 9,
+        "cod_attivit_rec": "9.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 9 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW.",
+        "descrizione_estesa": "9.3 - Il recupero energetico del rifiuto di cui al punto 9 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW."
+    },
+    {
+        "id": 10,
+        "cod_re_tipo_rifiuto": 10,
+        "cod_attivit_rec": "10.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW.",
+        "descrizione_estesa": "10.3 - Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW."
+    },
+    {
+        "id": 11,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_attivit_rec": "11.3 a) ",
+        "descrizione": "L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - a) turbina a gas",
+        "descrizione_estesa": "11.3 a) - L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - a) turbina a gas"
+    },
+    {
+        "id": 12,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_attivit_rec": "11.3 b)",
+        "descrizione": " L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - b) motori fissi a combustione interna",
+        "descrizione_estesa": "11.3 b) - L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - b) motori fissi a combustione interna"
+    },
+    {
+        "id": 13,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_attivit_rec": "11.3 c)",
+        "descrizione": " L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - c) altri impianti di combustione",
+        "descrizione_estesa": "11.3 c) - L'utilizzazione di gas derivati è consenita in impianti di conversione energetica di potenza termica nominale superiore a 6 MW, anche integrati con il sistema di produzione del gas - c) altri impianti di combustione"
+    },
+    {
+        "id": 14,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_attivit_rec": "12.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW.",
+        "descrizione_estesa": "12.3 - Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW."
+    },
+    {
+        "id": 15,
+        "cod_re_tipo_rifiuto": 13,
+        "cod_attivit_rec": "13.3 a)",
+        "descrizione": " il recupero energetico del rifiuto di cui al punto 13 può essere effettuato attraverso la combustione: - in impianti dedicati al recupero energetico dei rifiuti di potenza termica nominale non inferiore a 20 MW;",
+        "descrizione_estesa": "13.3 a) - il recupero energetico del rifiuto di cui al punto 13 può essere effettuato attraverso la combustione: - in impianti dedicati al recupero energetico dei rifiuti di potenza termica nominale non inferiore a 20 MW;"
+    },
+    {
+        "id": 16,
+        "cod_re_tipo_rifiuto": 13,
+        "cod_attivit_rec": "13.3 b)",
+        "descrizione": " il recupero energetico del rifiuto di cui al punto 13 può essere effettuato attraverso la combustione: - in altri impianti industriali di potenza termica nominale non inferiore a 50 MW;",
+        "descrizione_estesa": "13.3 b) - il recupero energetico del rifiuto di cui al punto 13 può essere effettuato attraverso la combustione: - in altri impianti industriali di potenza termica nominale non inferiore a 50 MW;"
+    },
+    {
+        "id": 17,
+        "cod_re_tipo_rifiuto": 14,
+        "cod_attivit_rec": "14.3 ",
+        "descrizione": " Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW.",
+        "descrizione_estesa": "14.3 - Il recupero energetico del rifiuto di cui al punto 10 può essere effettuato attraverso la combustione in impianti dedicati al recupero energetico di rifiuti di potenza termica nominale non inferiore a 6 MW."
+    }
+]

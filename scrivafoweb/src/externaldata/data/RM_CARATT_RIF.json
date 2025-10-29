@@ -1,0 +1,1339 @@
+[
+    {
+        "id": 1,
+        "cod_rm_tipo_rifiuto": "1.1",
+        "cod_provenienza": "1.1.2",
+        "descrizione": " rifiuti, costituiti da: cartaccia derivante da raccolta differenziata, rifiuti di carte e cartoni non rispondenti non rispondenti alle specifiche delle norme UNI_ EN643",
+        "descrizione_estesa": "1.1.2- rifiuti, costituiti da: cartaccia derivante da raccolta differenziata, rifiuti di carte e cartoni non rispondenti non rispondenti alle specifiche delle norme UNI_ EN643"
+    },
+    {
+        "id": 2,
+        "cod_rm_tipo_rifiuto": "1.2",
+        "cod_provenienza": "1.2.2 ",
+        "descrizione": "scarti costituiti da fibre di cellulosa, film di polietilene ed ovatta di cellulosa",
+        "descrizione_estesa": "1.2.2 -scarti costituiti da fibre di cellulosa, film di polietilene ed ovatta di cellulosa"
+    },
+    {
+        "id": 3,
+        "cod_rm_tipo_rifiuto": "2. 1",
+        "cod_provenienza": "2. 1. 2 ",
+        "descrizione": " vetro di scarto con l'esclusione dei vetri da tubi raggio_catodici delle lampade a scarica ed altri vetri contaminati da sostanze radioattive e dei contenitori etichettati come pericolosi ai sensi della legge 29 maggio 1974, n. 256, decreto del Presidente della Repubblica 24 novembre 1981, n. 927 e successive modifiche e integrazioni; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230",
+        "descrizione_estesa": "2. 1. 2 - vetro di scarto con l'esclusione dei vetri da tubi raggio_catodici delle lampade a scarica ed altri vetri contaminati da sostanze radioattive e dei contenitori etichettati come pericolosi ai sensi della legge 29 maggio 1974, n. 256, decreto del Presidente della Repubblica 24 novembre 1981, n. 927 e successive modifiche e integrazioni; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230"
+    },
+    {
+        "id": 4,
+        "cod_rm_tipo_rifiuto": "2. 2",
+        "cod_provenienza": "2. 2. 2",
+        "descrizione": "contenitori in vetro di farmaci, di alimenti e di bevande, di soluzioni per infusione, privati di cannule e/o di aghi ed accessori per la somministrazione, (con esclusione dei contenitori di soluzioni impiegate in terapie antiblastiche e/o contaminati da materiale biologico), non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230",
+        "descrizione_estesa": "2. 2. 2-contenitori in vetro di farmaci, di alimenti e di bevande, di soluzioni per infusione, privati di cannule e/o di aghi ed accessori per la somministrazione, (con esclusione dei contenitori di soluzioni impiegate in terapie antiblastiche e/o contaminati da materiale biologico), non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230"
+    },
+    {
+        "id": 5,
+        "cod_rm_tipo_rifiuto": "2.3",
+        "cod_provenienza": "2.3.2",
+        "descrizione": " rottame fine di cristallo contaminato da oli, grassi e materiali refrattari ",
+        "descrizione_estesa": "2.3.2- rottame fine di cristallo contaminato da oli, grassi e materiali refrattari "
+    },
+    {
+        "id": 6,
+        "cod_rm_tipo_rifiuto": "2.4",
+        "cod_provenienza": "2.4.2 ",
+        "descrizione": "vetro comune in fibre",
+        "descrizione_estesa": "2.4.2 -vetro comune in fibre"
+    },
+    {
+        "id": 7,
+        "cod_rm_tipo_rifiuto": "3. 1",
+        "cod_provenienza": "3. 1. 2",
+        "descrizione": "rifiuti ferrosi, di acciaio, ghisa e loro leghe anche costituiti da cadute di officina, rottame alla rinfusa, rottame zincato, lamierino, cascami della lavorazione dell'acciaio, e della ghisa, imballaggi, fusti, latte, vuoti e lattine di metalli ferrosi e non ferrosi e acciaio anche stagnato; PCB, PCT <25 ppb, ed eventualmente contenenti inerti, metalli non ferrosi, plastiche, etc., <5% in peso, oli <10% in peso; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230",
+        "descrizione_estesa": "3. 1. 2-rifiuti ferrosi, di acciaio, ghisa e loro leghe anche costituiti da cadute di officina, rottame alla rinfusa, rottame zincato, lamierino, cascami della lavorazione dell'acciaio, e della ghisa, imballaggi, fusti, latte, vuoti e lattine di metalli ferrosi e non ferrosi e acciaio anche stagnato; PCB, PCT <25 ppb, ed eventualmente contenenti inerti, metalli non ferrosi, plastiche, etc., <5% in peso, oli <10% in peso; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230"
+    },
+    {
+        "id": 8,
+        "cod_rm_tipo_rifiuto": "3. 2",
+        "cod_provenienza": "3. 2. 2 ",
+        "descrizione": "rifiuti di metalli non ferrosi o loro leghe anche costituiti da rottami e cascami di barre",
+        "descrizione_estesa": "3. 2. 2 -rifiuti di metalli non ferrosi o loro leghe anche costituiti da rottami e cascami di barre"
+    },
+    {
+        "id": 9,
+        "cod_rm_tipo_rifiuto": "3.3",
+        "cod_provenienza": "3.3.2",
+        "descrizione": " sfridi o scarti di imballaggi in alluminio e imballaggi compositi con carta plastica e metallo",
+        "descrizione_estesa": "3.3.2- sfridi o scarti di imballaggi in alluminio e imballaggi compositi con carta plastica e metallo"
+    },
+    {
+        "id": 10,
+        "cod_rm_tipo_rifiuto": "3.4",
+        "cod_provenienza": "3.4.2 ",
+        "descrizione": "scrivi e scarti di laminati, tubi, barre, granella di platino, oro, argento, palladio e leghe ",
+        "descrizione_estesa": "3.4.2 -scrivi e scarti di laminati, tubi, barre, granella di platino, oro, argento, palladio e leghe "
+    },
+    {
+        "id": 11,
+        "cod_rm_tipo_rifiuto": "3.5",
+        "cod_provenienza": "3.5.2",
+        "descrizione": "contenitori in metallo, con esclusione dei contenitori etichettati come pericolosi ai sensi della legge 29 maggio 1974, n. 256, decreto del Presidente della Repubblica 24 novembre, n. 927 e successive modifiche e integrazioni, esenti da PCB, PCT e con oli o materiali presenti all'origine in concentrazioni inferiori al 5% in peso, non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230",
+        "descrizione_estesa": "3.5.2-contenitori in metallo, con esclusione dei contenitori etichettati come pericolosi ai sensi della legge 29 maggio 1974, n. 256, decreto del Presidente della Repubblica 24 novembre, n. 927 e successive modifiche e integrazioni, esenti da PCB, PCT e con oli o materiali presenti all'origine in concentrazioni inferiori al 5% in peso, non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230"
+    },
+    {
+        "id": 12,
+        "cod_rm_tipo_rifiuto": "3.6",
+        "cod_provenienza": "3.6.2",
+        "descrizione": " pallini di piombo (Pb 98%; altri metalli quali Sb, As, Cr e Ni 1_2%) rifiuti da raccolta su terreno, con eventuale presenza di rifiuti di terra ed arbusti",
+        "descrizione_estesa": "3.6.2- pallini di piombo (Pb 98%; altri metalli quali Sb, As, Cr e Ni 1_2%) rifiuti da raccolta su terreno, con eventuale presenza di rifiuti di terra ed arbusti"
+    },
+    {
+        "id": 13,
+        "cod_rm_tipo_rifiuto": "3.7",
+        "cod_provenienza": "3.7.2",
+        "descrizione": " polveri umide e rottami, costituiti da cobalto dal 5 al 28% e carburi di tungsteno; con eventuale presenza di polvere di diamante, ferro e resine derivanti dal consumo della mola; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230",
+        "descrizione_estesa": "3.7.2- polveri umide e rottami, costituiti da cobalto dal 5 al 28% e carburi di tungsteno; con eventuale presenza di polvere di diamante, ferro e resine derivanti dal consumo della mola; non radioattivo ai sensi del decreto legislativo 17 marzo 1995, n. 230"
+    },
+    {
+        "id": 14,
+        "cod_rm_tipo_rifiuto": "3.8",
+        "cod_provenienza": "3.8.2",
+        "descrizione": "rifiuti assimilati ai rifiuti urbani (tute da lavoro, stracci di pulizia, frazioni cartacee, polveri di casa e sfridi di metalli preziosi, segature di legno, abrasivi di pulizia, filtri dei circuiti di aspirazione aria, fanghi da filtrazione acque di lavaggio) contenenti dallo 0,1% al 10% di metalli preziosi ed altri metalli ferrosi e Cu non solubile 0,1_100 g/Kg, Sb <10 g/Kg, Sn <1 g/Kg, Pb <1 g/Kg, ossido di zirconio 400_800 g/Kg",
+        "descrizione_estesa": "3.8.2-rifiuti assimilati ai rifiuti urbani (tute da lavoro, stracci di pulizia, frazioni cartacee, polveri di casa e sfridi di metalli preziosi, segature di legno, abrasivi di pulizia, filtri dei circuiti di aspirazione aria, fanghi da filtrazione acque di lavaggio) contenenti dallo 0,1% al 10% di metalli preziosi ed altri metalli ferrosi e Cu non solubile 0,1_100 g/Kg, Sb <10 g/Kg, Sn <1 g/Kg, Pb <1 g/Kg, ossido di zirconio 400_800 g/Kg"
+    },
+    {
+        "id": 15,
+        "cod_rm_tipo_rifiuto": "3.9",
+        "cod_provenienza": "3.9.2",
+        "descrizione": " materiali refrattari, crogioli usati e scorie vetrose a base di silicati, borati, carbonati ed ossidi, contenenti metalli preziosi (Au, Ag, Pt, Pd,) in concentrazione tra lo 0.1 ed il 10%",
+        "descrizione_estesa": "3.9.2- materiali refrattari, crogioli usati e scorie vetrose a base di silicati, borati, carbonati ed ossidi, contenenti metalli preziosi (Au, Ag, Pt, Pd,) in concentrazione tra lo 0.1 ed il 10%"
+    },
+    {
+        "id": 16,
+        "cod_rm_tipo_rifiuto": "3.10",
+        "cod_provenienza": "3.10.2",
+        "descrizione": " involucro in acciaio contenente ossidi e / o sali di argento oltre l'un percento, zinco < 9% e Ni < 55%",
+        "descrizione_estesa": "3.10.2- involucro in acciaio contenente ossidi e / o sali di argento oltre l'un percento, zinco < 9% e Ni < 55%"
+    },
+    {
+        "id": 17,
+        "cod_rm_tipo_rifiuto": "3.11",
+        "cod_provenienza": "3.11.2",
+        "descrizione": " carte, pellicole film costituiti da poliestere e/o triacetato con AG>0=5 (X1000)",
+        "descrizione_estesa": "3.11.2- carte, pellicole film costituiti da poliestere e/o triacetato con AG>0=5 (X1000)"
+    },
+    {
+        "id": 18,
+        "cod_rm_tipo_rifiuto": "3.12",
+        "cod_provenienza": "3.12.2",
+        "descrizione": " anime metalliche e plastiche, scrivi e scarti di metalli preziosi contenenti metallo prezioso oltre lo 0,1%",
+        "descrizione_estesa": "3.12.2- anime metalliche e plastiche, scrivi e scarti di metalli preziosi contenenti metallo prezioso oltre lo 0,1%"
+    },
+    {
+        "id": 19,
+        "cod_rm_tipo_rifiuto": "4.1",
+        "cod_provenienza": "4.1.2 ",
+        "descrizione": "scorie costituite dall' 80_90% di FeO no CaO SiO2 Al2O3 MgO C<10% S<15%, Zn<20%, Pb<8%, Cu<1,4% Cd<0,25%, As<0,4%, CrIII<0,6%sul secco",
+        "descrizione_estesa": "4.1.2 -scorie costituite dall' 80_90% di FeO no CaO SiO2 Al2O3 MgO C<10% S<15%, Zn<20%, Pb<8%, Cu<1,4% Cd<0,25%, As<0,4%, CrIII<0,6%sul secco"
+    },
+    {
+        "id": 20,
+        "cod_rm_tipo_rifiuto": "4.2",
+        "cod_provenienza": "4.2.2",
+        "descrizione": " polveri e granuli a matrice borosilicatica contenenti SiO2 30845%, Al2O3 10818%, B2O3 5815%, Fe2O3 10818%, TiO2 185%, CaO 10825%, ZrO2 488%, PbO < 0,2%, Zn < 0,3",
+        "descrizione_estesa": "4.2.2- polveri e granuli a matrice borosilicatica contenenti SiO2 30845%, Al2O3 10818%, B2O3 5815%, Fe2O3 10818%, TiO2 185%, CaO 10825%, ZrO2 488%, PbO < 0,2%, Zn < 0,3"
+    },
+    {
+        "id": 21,
+        "cod_rm_tipo_rifiuto": "4.3",
+        "cod_provenienza": "4.3.2 ",
+        "descrizione": "rifiuto solido agglomerato a base di Cu 1_ 99%, Pb 0,1_14%,  Zn 3,5_26%, Ni< 4%, Sn<15%, As<0,001%, Cd<0,015% sul secco",
+        "descrizione_estesa": "4.3.2 -rifiuto solido agglomerato a base di Cu 1_ 99%, Pb 0,1_14%,  Zn 3,5_26%, Ni< 4%, Sn<15%, As<0,001%, Cd<0,015% sul secco"
+    },
+    {
+        "id": 22,
+        "cod_rm_tipo_rifiuto": "4.4",
+        "cod_provenienza": "4.4.2 ",
+        "descrizione": "scorie granulate o uniblocchi più dell'80% in peso di SiO2, CaO, Al2O3, MgO, FeO",
+        "descrizione_estesa": "4.4.2 -scorie granulate o uniblocchi più dell'80% in peso di SiO2, CaO, Al2O3, MgO, FeO"
+    },
+    {
+        "id": 23,
+        "cod_rm_tipo_rifiuto": "4.5",
+        "cod_provenienza": "4.5.2",
+        "descrizione": " blocchi disomogenei con contenuto in Zn> 50% e costituiti da ossidi, ossicloruri e cloruri di Zn e altri metalli (es: Fe)",
+        "descrizione_estesa": "4.5.2- blocchi disomogenei con contenuto in Zn> 50% e costituiti da ossidi, ossicloruri e cloruri di Zn e altri metalli (es: Fe)"
+    },
+    {
+        "id": 24,
+        "cod_rm_tipo_rifiuto": "4.6",
+        "cod_provenienza": "4.6.2",
+        "descrizione": " polveri contenenti zinco in concentrazione > 70% con presenza di grumi di altri metalli, quali Pb<1.2% e Cd<0.06%",
+        "descrizione_estesa": "4.6.2- polveri contenenti zinco in concentrazione > 70% con presenza di grumi di altri metalli, quali Pb<1.2% e Cd<0.06%"
+    },
+    {
+        "id": 25,
+        "cod_rm_tipo_rifiuto": "4.7",
+        "cod_provenienza": "4.7.2",
+        "descrizione": "contenuto di Al2O3 >60%, altri ossidi metallici (silice, ossido di calcio, ossido di magnesio e ossido ferrico) in quantità non superiori al 40%, Cl <1%, di umidità 15_30%,",
+        "descrizione_estesa": "4.7.2-contenuto di Al2O3 >60%, altri ossidi metallici (silice, ossido di calcio, ossido di magnesio e ossido ferrico) in quantità non superiori al 40%, Cl <1%, di umidità 15_30%,"
+    },
+    {
+        "id": 26,
+        "cod_rm_tipo_rifiuto": "5. 1",
+        "cod_provenienza": "5. 1. 2",
+        "descrizione": " parti bonificate di autoveicoli, veicoli a motore, rimorchi e simili private di batterie, di fluidi, di altri componenti e materiali pericolosi, nonché di pneumatici e delle componenti plastiche recuperabili",
+        "descrizione_estesa": "5. 1. 2- parti bonificate di autoveicoli, veicoli a motore, rimorchi e simili private di batterie, di fluidi, di altri componenti e materiali pericolosi, nonché di pneumatici e delle componenti plastiche recuperabili"
+    },
+    {
+        "id": 27,
+        "cod_rm_tipo_rifiuto": "5. 2",
+        "cod_provenienza": "5. 2. 2",
+        "descrizione": " parti di mezzi mobili per trasporti terrestri su gomma e rotaia e mezzi per trasporti marini, privi di amianto e di altre componenti pericolose come presenti all'origine quali accumulatori, oli, fluidi refrigeranti",
+        "descrizione_estesa": "5. 2. 2- parti di mezzi mobili per trasporti terrestri su gomma e rotaia e mezzi per trasporti marini, privi di amianto e di altre componenti pericolose come presenti all'origine quali accumulatori, oli, fluidi refrigeranti"
+    },
+    {
+        "id": 28,
+        "cod_rm_tipo_rifiuto": "5.3",
+        "cod_provenienza": "5.3.2",
+        "descrizione": " I catalizzatori possono essere in forma solida omogenea, non omogenea o fangosa palabile, contenenti rifiuti chimici di diversa natura ad esclusione di qualsiasi traccia dei seguenti elementi contaminanti: PCB, PCT e PCDD ed in particolare delle sostanze di tossicità e cumulabilità particolarmente elevata di cui alla tab. A2 dell'all. 1 del Dm 12 luglio 1990",
+        "descrizione_estesa": "5.3.2- I catalizzatori possono essere in forma solida omogenea, non omogenea o fangosa palabile, contenenti rifiuti chimici di diversa natura ad esclusione di qualsiasi traccia dei seguenti elementi contaminanti: PCB, PCT e PCDD ed in particolare delle sostanze di tossicità e cumulabilità particolarmente elevata di cui alla tab. A2 dell'all. 1 del Dm 12 luglio 1990"
+    },
+    {
+        "id": 29,
+        "cod_rm_tipo_rifiuto": "5.4",
+        "cod_provenienza": "5.4.2 ",
+        "descrizione": "i catalizzatori possono essere in forma solida omogenea, non omogenea o fangosa palabile, contenenti metalli preziosi in concentrazione tra 0,03 e 10%; e rifiuti chimici di diversa natura; in particolare: i quantitativi delle sostanze pericolose di cui al Dm 12 luglio 1990, All. 1, Tab. A1, Classi I e II, devono essere inferiori a 100 ppm; devono essere esenti da PCB, PCT, PCDD e dalle sostanze di tossicità e cumulabilità particolarmente elevata di cui alla tab. A2 dell'all. 1 del Dm 12 luglio 1990",
+        "descrizione_estesa": "5.4.2 -i catalizzatori possono essere in forma solida omogenea, non omogenea o fangosa palabile, contenenti metalli preziosi in concentrazione tra 0,03 e 10%; e rifiuti chimici di diversa natura; in particolare: i quantitativi delle sostanze pericolose di cui al Dm 12 luglio 1990, All. 1, Tab. A1, Classi I e II, devono essere inferiori a 100 ppm; devono essere esenti da PCB, PCT, PCDD e dalle sostanze di tossicità e cumulabilità particolarmente elevata di cui alla tab. A2 dell'all. 1 del Dm 12 luglio 1990"
+    },
+    {
+        "id": 30,
+        "cod_rm_tipo_rifiuto": "5. 5",
+        "cod_provenienza": "5. 5. 2",
+        "descrizione": " involucro in acciaio contenente un supporto inerte con Pt, Pd e Rh",
+        "descrizione_estesa": "5. 5. 2- involucro in acciaio contenente un supporto inerte con Pt, Pd e Rh"
+    },
+    {
+        "id": 31,
+        "cod_rm_tipo_rifiuto": "5. 6",
+        "cod_provenienza": "5. 6. 2",
+        "descrizione": "oggetti di pezzatura variabile, esclusi tubi catodici, costituiti da parti in resine sintetiche, vetro o porcellana e metalli assiemati, alcuni con riporto di metalli preziosi quali Ag 0,05_15%, Au 0,002_ 5%, Pt fino a 0,2%, Pd fino a 0,5% e contenenti Cu fino a 50%, Pb fino a 5%, Ni fino a 10%, Zn fino a 5%, Fe fino a 80%, ottone e bronzo fino al 15%, Cr <5%, Cd <0,006%",
+        "descrizione_estesa": "5. 6. 2-oggetti di pezzatura variabile, esclusi tubi catodici, costituiti da parti in resine sintetiche, vetro o porcellana e metalli assiemati, alcuni con riporto di metalli preziosi quali Ag 0,05_15%, Au 0,002_ 5%, Pt fino a 0,2%, Pd fino a 0,5% e contenenti Cu fino a 50%, Pb fino a 5%, Ni fino a 10%, Zn fino a 5%, Fe fino a 80%, ottone e bronzo fino al 15%, Cr <5%, Cd <0,006%"
+    },
+    {
+        "id": 32,
+        "cod_rm_tipo_rifiuto": "5.7",
+        "cod_provenienza": "5.7.2",
+        "descrizione": " fili o cavi o trecce di alluminio puro o in lega ricoperti con materiali termoplastici, elastomeri, carta impregnata con olio o tessuto fino al 50%, piombo fino al 55%",
+        "descrizione_estesa": "5.7.2- fili o cavi o trecce di alluminio puro o in lega ricoperti con materiali termoplastici, elastomeri, carta impregnata con olio o tessuto fino al 50%, piombo fino al 55%"
+    },
+    {
+        "id": 33,
+        "cod_rm_tipo_rifiuto": "5. 8",
+        "cod_provenienza": "5. 8.2",
+        "descrizione": "spezzoni di cavo, anche in traccia, rivestiti da isolanti costituiti da materiali termoplastici, elastomeri, carta impregnata con olio, piombo e piomboplasto; costituiti da Cu fino al 75% e Pb fino al 72%",
+        "descrizione_estesa": "5. 8.2-spezzoni di cavo, anche in traccia, rivestiti da isolanti costituiti da materiali termoplastici, elastomeri, carta impregnata con olio, piombo e piomboplasto; costituiti da Cu fino al 75% e Pb fino al 72%"
+    },
+    {
+        "id": 34,
+        "cod_rm_tipo_rifiuto": "5 .9",
+        "cod_provenienza": "5 .9.2",
+        "descrizione": " fili o spezzoni di cavo in fibra ottica con rivestimento in materiale plastico contenenti, in alcuni casi, parti metalliche. La composizione tipica indicativa delle tre tipologie è la seguente: a) cavo di tipo dielettrico: materiali plastici e silice (89%), gel tamponante (6%), fibre sintetiche (5%);  b) cavo di tipo semidielettrico: materiali plastici e silice (69%), acciaio (23%), gel tamponante (4%) fibre sintentiche (4%); c) cavo di tipo metallico (parte metallica eventualmente costituita da conduttori di rame; es. materiali plastici e silice 70%, acciaio ramato 14%, alluminio 10%, rame 6%) o acciaio come elemento portante, alluminio come barriera metallica, acciaio come armatura esterna)",
+        "descrizione_estesa": "5 .9.2- fili o spezzoni di cavo in fibra ottica con rivestimento in materiale plastico contenenti, in alcuni casi, parti metalliche. La composizione tipica indicativa delle tre tipologie è la seguente: a) cavo di tipo dielettrico: materiali plastici e silice (89%), gel tamponante (6%), fibre sintetiche (5%);  b) cavo di tipo semidielettrico: materiali plastici e silice (69%), acciaio (23%), gel tamponante (4%) fibre sintentiche (4%); c) cavo di tipo metallico (parte metallica eventualmente costituita da conduttori di rame; es. materiali plastici e silice 70%, acciaio ramato 14%, alluminio 10%, rame 6%) o acciaio come elemento portante, alluminio come barriera metallica, acciaio come armatura esterna)"
+    },
+    {
+        "id": 35,
+        "cod_rm_tipo_rifiuto": "5.10",
+        "cod_provenienza": "5.10.2 ",
+        "descrizione": " rifiuto a base di Zn 30_50% , Cu 10_20%, Pb 2_3% Cd <0,3%, Cl <3% sul secco",
+        "descrizione_estesa": "5.10.2 - rifiuto a base di Zn 30_50% , Cu 10_20%, Pb 2_3% Cd <0,3%, Cl <3% sul secco"
+    },
+    {
+        "id": 36,
+        "cod_rm_tipo_rifiuto": "5.11",
+        "cod_provenienza": "5.11.2",
+        "descrizione": " terra contenente Cu e Zn in quantità 10%",
+        "descrizione_estesa": "5.11.2- terra contenente Cu e Zn in quantità 10%"
+    },
+    {
+        "id": 37,
+        "cod_rm_tipo_rifiuto": "5.12",
+        "cod_provenienza": "5.12.2",
+        "descrizione": " polveri medie e fine con contenuto di Cu > 4%, Zn>15%, con presenza di parti ferrose",
+        "descrizione_estesa": "5.12.2- polveri medie e fine con contenuto di Cu > 4%, Zn>15%, con presenza di parti ferrose"
+    },
+    {
+        "id": 38,
+        "cod_rm_tipo_rifiuto": "5.13",
+        "cod_provenienza": "5.13.2",
+        "descrizione": " materiale ferroso contenente eventualmente Cu 2_35% e Zn 10_40%",
+        "descrizione_estesa": "5.13.2- materiale ferroso contenente eventualmente Cu 2_35% e Zn 10_40%"
+    },
+    {
+        "id": 39,
+        "cod_rm_tipo_rifiuto": "5.14",
+        "cod_provenienza": "5.14.2 ",
+        "descrizione": "ossidi di ferro (~95%), silice allumina e ossidi minori (~5%), esenti da PCB e PCT",
+        "descrizione_estesa": "5.14.2 -ossidi di ferro (~95%), silice allumina e ossidi minori (~5%), esenti da PCB e PCT"
+    },
+    {
+        "id": 40,
+        "cod_rm_tipo_rifiuto": "5.16",
+        "cod_provenienza": "5.16.2",
+        "descrizione": " oggetti di pezzatura variabile, esclusi tubi catodici, costituiti da parti in resine sintetiche, vetro o porcellana e metalli assiemati, alcuni con riporto di metalli preziosi",
+        "descrizione_estesa": "5.16.2- oggetti di pezzatura variabile, esclusi tubi catodici, costituiti da parti in resine sintetiche, vetro o porcellana e metalli assiemati, alcuni con riporto di metalli preziosi"
+    },
+    {
+        "id": 41,
+        "cod_rm_tipo_rifiuto": "5.17",
+        "cod_provenienza": "5.17.2 ",
+        "descrizione": "solido a matrice vetrosa in forma granulata o sabbia a grana medio grossolana di colore variabile dal grigio al giallastro, costituita di silice >30%, ossidi di calcio >40%, ossidi di alluminio, ossidi di magnesio. Non rispondente agli standard delle norme UNI, ENV 197/1",
+        "descrizione_estesa": "5.17.2 -solido a matrice vetrosa in forma granulata o sabbia a grana medio grossolana di colore variabile dal grigio al giallastro, costituita di silice >30%, ossidi di calcio >40%, ossidi di alluminio, ossidi di magnesio. Non rispondente agli standard delle norme UNI, ENV 197/1"
+    },
+    {
+        "id": 42,
+        "cod_rm_tipo_rifiuto": "5.18",
+        "cod_provenienza": "5.18.2 ",
+        "descrizione": "miscela di varia pezzatura di minerali di ferro, anche in forma agglomerata (unitamente a SiO2, CaO e Al2O3), con presenza o meno di terreno o materiali inerti. Tenore in ferro minimo 20%",
+        "descrizione_estesa": "5.18.2 -miscela di varia pezzatura di minerali di ferro, anche in forma agglomerata (unitamente a SiO2, CaO e Al2O3), con presenza o meno di terreno o materiali inerti. Tenore in ferro minimo 20%"
+    },
+    {
+        "id": 43,
+        "cod_rm_tipo_rifiuto": "5.19",
+        "cod_provenienza": "5.19.2",
+        "descrizione": " apparecchi domestici, apparecchiature macchinari destinati a dismissione, con esclusione di trasformatori contenenti oli contaminati da PCB e PCT",
+        "descrizione_estesa": "5.19.2- apparecchi domestici, apparecchiature macchinari destinati a dismissione, con esclusione di trasformatori contenenti oli contaminati da PCB e PCT"
+    },
+    {
+        "id": 44,
+        "cod_rm_tipo_rifiuto": "6.1",
+        "cod_provenienza": "6.1.2 ",
+        "descrizione": " materiali plastici, compresi teli e sacchetti, tubetti per rocche di filati, di varia composizione e forma con eventuale presenza di rifiuti di altra natura",
+        "descrizione_estesa": "6.1.2 - materiali plastici, compresi teli e sacchetti, tubetti per rocche di filati, di varia composizione e forma con eventuale presenza di rifiuti di altra natura"
+    },
+    {
+        "id": 45,
+        "cod_rm_tipo_rifiuto": "6.2",
+        "cod_provenienza": "6.2. 2 ",
+        "descrizione": " granuli, trucioli, ritagli, polveri, manufatti fuori norma, ecc. Eventuale presenza di altri polimeri, cariche, pigmenti, additivi, Pb <3%, KOH <0,3%, Cd <0,3%",
+        "descrizione_estesa": "6.2. 2 - granuli, trucioli, ritagli, polveri, manufatti fuori norma, ecc. Eventuale presenza di altri polimeri, cariche, pigmenti, additivi, Pb <3%, KOH <0,3%, Cd <0,3%"
+    },
+    {
+        "id": 46,
+        "cod_rm_tipo_rifiuto": "6.3",
+        "cod_provenienza": "6.3.2 ",
+        "descrizione": "fango palabile con circa il 50% di copolimeri, Cd <5ppm, As<4.2 ppm",
+        "descrizione_estesa": "6.3.2 -fango palabile con circa il 50% di copolimeri, Cd <5ppm, As<4.2 ppm"
+    },
+    {
+        "id": 47,
+        "cod_rm_tipo_rifiuto": "6.4",
+        "cod_provenienza": "6.4.2",
+        "descrizione": " polimeri stirenici ed altri polimeri con contaminanti di processo quali oli in concentrazione non superiore allo 0.1% in peso; sottoposti a lavaggio e/o bonifica per l'eliminazione dei contaminanti da processo",
+        "descrizione_estesa": "6.4.2- polimeri stirenici ed altri polimeri con contaminanti di processo quali oli in concentrazione non superiore allo 0.1% in peso; sottoposti a lavaggio e/o bonifica per l'eliminazione dei contaminanti da processo"
+    },
+    {
+        "id": 48,
+        "cod_rm_tipo_rifiuto": "6. 5",
+        "cod_provenienza": "6. 5.2",
+        "descrizione": " Manufatti interi o parti di essi in plastica. Eventuale presenza di cariche inerti, gomma, pigmenti, additivi",
+        "descrizione_estesa": "6. 5.2- Manufatti interi o parti di essi in plastica. Eventuale presenza di cariche inerti, gomma, pigmenti, additivi"
+    },
+    {
+        "id": 49,
+        "cod_rm_tipo_rifiuto": "6. 6",
+        "cod_provenienza": "6. 6. 2",
+        "descrizione": " imbottiture intere o parte di esse in poliuretano espanso. Eventuale presenza di tessuti di rivestimento",
+        "descrizione_estesa": "6. 6. 2- imbottiture intere o parte di esse in poliuretano espanso. Eventuale presenza di tessuti di rivestimento"
+    },
+    {
+        "id": 50,
+        "cod_rm_tipo_rifiuto": "6.7",
+        "cod_provenienza": "6.7.2",
+        "descrizione": " alcool polivinilico 97÷99%; dimetilformammide 0,5÷1%;nerofumo 0,05",
+        "descrizione_estesa": "6.7.2- alcool polivinilico 97÷99%; dimetilformammide 0,5÷1%;nerofumo 0,05"
+    },
+    {
+        "id": 51,
+        "cod_rm_tipo_rifiuto": "6. 8",
+        "cod_provenienza": "6. 8.2",
+        "descrizione": " rifiuti di polveri e solidi costituiti da: poliestere, poliuretano e polistirolo",
+        "descrizione_estesa": "6. 8.2- rifiuti di polveri e solidi costituiti da: poliestere, poliuretano e polistirolo"
+    },
+    {
+        "id": 52,
+        "cod_rm_tipo_rifiuto": "6.10",
+        "cod_provenienza": "6.10.2",
+        "descrizione": " ritagli di pellicola di polivinilbutirrale di vario spessore",
+        "descrizione_estesa": "6.10.2- ritagli di pellicola di polivinilbutirrale di vario spessore"
+    },
+    {
+        "id": 53,
+        "cod_rm_tipo_rifiuto": "6.11",
+        "cod_provenienza": "6.11. 2",
+        "descrizione": " fibre vegetali in matrice polipropilene nica",
+        "descrizione_estesa": "6.11. 2- fibre vegetali in matrice polipropilene nica"
+    },
+    {
+        "id": 54,
+        "cod_rm_tipo_rifiuto": "6.12",
+        "cod_provenienza": "6.12.2",
+        "descrizione": "sfridi solidi di caprolattame oppure liquido di colore giallognolo o incolore con materiale in sospensione; composto da soluzioni acquose contenenti almeno il 4% di caprolattame monomero e oligomeri, acqua <90%",
+        "descrizione_estesa": "6.12.2-sfridi solidi di caprolattame oppure liquido di colore giallognolo o incolore con materiale in sospensione; composto da soluzioni acquose contenenti almeno il 4% di caprolattame monomero e oligomeri, acqua <90%"
+    },
+    {
+        "id": 55,
+        "cod_rm_tipo_rifiuto": "7. 1",
+        "cod_provenienza": "7. 1.2",
+        "descrizione": " materiale inerte, laterizio e ceramica cotta anche con presenza di frazioni metalliche, legno, plastica, carta e isolanti escluso amianto",
+        "descrizione_estesa": "7. 1.2- materiale inerte, laterizio e ceramica cotta anche con presenza di frazioni metalliche, legno, plastica, carta e isolanti escluso amianto"
+    },
+    {
+        "id": 56,
+        "cod_rm_tipo_rifiuto": "7.2",
+        "cod_provenienza": "7.2.2",
+        "descrizione": " Materiale inerte in pezzatura e forma varia, comprese le polveri",
+        "descrizione_estesa": "7.2.2- Materiale inerte in pezzatura e forma varia, comprese le polveri"
+    },
+    {
+        "id": 57,
+        "cod_rm_tipo_rifiuto": "7.3",
+        "cod_provenienza": "7.3.2",
+        "descrizione": " prodotti ceramici, terracotte smaltate e non, materiali da costruzione di scarto eventualmente ricoperti con smalto crudo in concentrazione <10% in peso",
+        "descrizione_estesa": "7.3.2- prodotti ceramici, terracotte smaltate e non, materiali da costruzione di scarto eventualmente ricoperti con smalto crudo in concentrazione <10% in peso"
+    },
+    {
+        "id": 58,
+        "cod_rm_tipo_rifiuto": "7.4",
+        "cod_provenienza": "7.4.2 ",
+        "descrizione": "frammenti di materiale argilloso conto virgola e materiale perlitico",
+        "descrizione_estesa": "7.4.2 -frammenti di materiale argilloso conto virgola e materiale perlitico"
+    },
+    {
+        "id": 59,
+        "cod_rm_tipo_rifiuto": "7.5",
+        "cod_provenienza": "7.5.2",
+        "descrizione": " sabbie silice e rifiuti di fusione di refrattari",
+        "descrizione_estesa": "7.5.2- sabbie silice e rifiuti di fusione di refrattari"
+    },
+    {
+        "id": 60,
+        "cod_rm_tipo_rifiuto": "7.6",
+        "cod_provenienza": "7.6.2 ",
+        "descrizione": "rifiuto solido costituito da bitume ed inerti",
+        "descrizione_estesa": "7.6.2 -rifiuto solido costituito da bitume ed inerti"
+    },
+    {
+        "id": 61,
+        "cod_rm_tipo_rifiuto": "7.7",
+        "cod_provenienza": "7.7.2",
+        "descrizione": " valori limite delle sostanze pericolose: carbonati e idrati di calcio, silici colloidali singoli o miscele",
+        "descrizione_estesa": "7.7.2- valori limite delle sostanze pericolose: carbonati e idrati di calcio, silici colloidali singoli o miscele"
+    },
+    {
+        "id": 62,
+        "cod_rm_tipo_rifiuto": "7.8",
+        "cod_provenienza": "7.8.2",
+        "descrizione": " frammenti solidi sinterizzati, uniti o meno a elementi metallici, sotto forma di rottami di mattoni, a composizione prevalente di SiO2, Al2O3, ZrO2, CaO e MgO, con presenza eventuale di metalli pesanti dei cicli di cottura o fusione in tracce, appartenenti alle famiglie: a) silicei: SiO2>90%, CaO<3%, Al2O3<1%, Fe2O3<0,5%, TiO2<0,01; b) Silico_alluminosi: Al2O3 25_50%, SiO2 70_45%, Fe2O3 1_2%; c) Alluminosi: Al2O3>50%; d) Magnesiaci: MgO 85_87%, CaO 0,2_2,6%, Fe2O3 0,2_2,3%; e) Cromo_magnesiaci: Cr2O3 ca 20%; MgO ca 60%, Fe2O3 ca 14%, Al2O3 ca 6%, CaO<2%; f) Grafitici: C ca 50%, SiC ca 40%; g) Dolomitici: CaO + MgO >85% sul prodotto calcinat",
+        "descrizione_estesa": "7.8.2- frammenti solidi sinterizzati, uniti o meno a elementi metallici, sotto forma di rottami di mattoni, a composizione prevalente di SiO2, Al2O3, ZrO2, CaO e MgO, con presenza eventuale di metalli pesanti dei cicli di cottura o fusione in tracce, appartenenti alle famiglie: a) silicei: SiO2>90%, CaO<3%, Al2O3<1%, Fe2O3<0,5%, TiO2<0,01; b) Silico_alluminosi: Al2O3 25_50%, SiO2 70_45%, Fe2O3 1_2%; c) Alluminosi: Al2O3>50%; d) Magnesiaci: MgO 85_87%, CaO 0,2_2,6%, Fe2O3 0,2_2,3%; e) Cromo_magnesiaci: Cr2O3 ca 20%; MgO ca 60%, Fe2O3 ca 14%, Al2O3 ca 6%, CaO<2%; f) Grafitici: C ca 50%, SiC ca 40%; g) Dolomitici: CaO + MgO >85% sul prodotto calcinat"
+    },
+    {
+        "id": 63,
+        "cod_rm_tipo_rifiuto": "7.9",
+        "cod_provenienza": "7.9.2 ",
+        "descrizione": "rifiuto di lega non ferrosa composto da carburo di silicio, allumina e chamotte, solido sinterizzato sotto forma di mattoni appartenenti alla seguente famiglia: a) SiC <90%, SiO2 ca 1%, Al2O3 ca 1%",
+        "descrizione_estesa": "7.9.2 -rifiuto di lega non ferrosa composto da carburo di silicio, allumina e chamotte, solido sinterizzato sotto forma di mattoni appartenenti alla seguente famiglia: a) SiC <90%, SiO2 ca 1%, Al2O3 ca 1%"
+    },
+    {
+        "id": 64,
+        "cod_rm_tipo_rifiuto": "7.10",
+        "cod_provenienza": "7.10.2",
+        "descrizione": " materiali siliceo_alluminosi e granulati e con presenza di scaglie metalliche ed eventuali tracce di vernici",
+        "descrizione_estesa": "7.10.2- materiali siliceo_alluminosi e granulati e con presenza di scaglie metalliche ed eventuali tracce di vernici"
+    },
+    {
+        "id": 65,
+        "cod_rm_tipo_rifiuto": "7.11",
+        "cod_provenienza": "7.11.2",
+        "descrizione": " pietrisco tolto d'opera costituito da roccia silicea e cristallina o calcare per circa il 70%, con sabbia argilla per circa il 30%",
+        "descrizione_estesa": "7.11.2- pietrisco tolto d'opera costituito da roccia silicea e cristallina o calcare per circa il 70%, con sabbia argilla per circa il 30%"
+    },
+    {
+        "id": 66,
+        "cod_rm_tipo_rifiuto": "7.12",
+        "cod_provenienza": "7.12.2",
+        "descrizione": " manufatti in gesso con eventuale armatura metallica incorporata",
+        "descrizione_estesa": "7.12.2- manufatti in gesso con eventuale armatura metallica incorporata"
+    },
+    {
+        "id": 67,
+        "cod_rm_tipo_rifiuto": "7.13",
+        "cod_provenienza": "7.13.2",
+        "descrizione": " sfridi di gesso con eventuali fibre cellulosiche o metalliche incorporate, non radioattivo ai sensi del decreto legislativo 17 Marzo 1995 numero 230",
+        "descrizione_estesa": "7.13.2- sfridi di gesso con eventuali fibre cellulosiche o metalliche incorporate, non radioattivo ai sensi del decreto legislativo 17 Marzo 1995 numero 230"
+    },
+    {
+        "id": 68,
+        "cod_rm_tipo_rifiuto": "7.14",
+        "cod_provenienza": "7.14.2",
+        "descrizione": " detriti con presenza di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/ barite contenenti idrocarburi in concentrazioni inferiori a 1000 mg/ Kg sul secco, IPA <10 ppm",
+        "descrizione_estesa": "7.14.2- detriti con presenza di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/ barite contenenti idrocarburi in concentrazioni inferiori a 1000 mg/ Kg sul secco, IPA <10 ppm"
+    },
+    {
+        "id": 69,
+        "cod_rm_tipo_rifiuto": "7.15",
+        "cod_provenienza": "7.15. 2",
+        "descrizione": "fango a base di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/barite con eventuale presenza di terriccio; contenenti idrocarburi in concentrazioni inferiori a 1000 mg/Kg sul secco, IPA <10 ppm",
+        "descrizione_estesa": "7.15. 2-fango a base di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/barite con eventuale presenza di terriccio; contenenti idrocarburi in concentrazioni inferiori a 1000 mg/Kg sul secco, IPA <10 ppm"
+    },
+    {
+        "id": 70,
+        "cod_rm_tipo_rifiuto": "7.16",
+        "cod_provenienza": "7.16.2",
+        "descrizione": " rifiuto costituito essenzialmente da carbonato di calcio (70%) con silice, allumina, ossido di ferro (~ 10%) e sostanze organiche (proteine, pectina, etc.), derivante dalla filtrazione di sughi zuccherini dopo trattamento con calce e anidride carbonica",
+        "descrizione_estesa": "7.16.2- rifiuto costituito essenzialmente da carbonato di calcio (70%) con silice, allumina, ossido di ferro (~ 10%) e sostanze organiche (proteine, pectina, etc.), derivante dalla filtrazione di sughi zuccherini dopo trattamento con calce e anidride carbonica"
+    },
+    {
+        "id": 71,
+        "cod_rm_tipo_rifiuto": "7.17",
+        "cod_provenienza": "7.17.2",
+        "descrizione": " frammenti in varia pezzatura comprese polveri, di pietra calcarea e terriccio di cava o materiali inerti a base di carbonato di calcio, con eventuale presenza di materie prime siderurgiche (carbon fossile, coke, minerali di ferro in misura minore del 20% in peso)",
+        "descrizione_estesa": "7.17.2- frammenti in varia pezzatura comprese polveri, di pietra calcarea e terriccio di cava o materiali inerti a base di carbonato di calcio, con eventuale presenza di materie prime siderurgiche (carbon fossile, coke, minerali di ferro in misura minore del 20% in peso)"
+    },
+    {
+        "id": 72,
+        "cod_rm_tipo_rifiuto": "7.18",
+        "cod_provenienza": "7.18.2",
+        "descrizione": " scarti da vagliatura latte di calce miscela di carbonato, ossido e idrossido di calcio (~82%) e silice, allumina e ossido di ferro (~18%)",
+        "descrizione_estesa": "7.18.2- scarti da vagliatura latte di calce miscela di carbonato, ossido e idrossido di calcio (~82%) e silice, allumina e ossido di ferro (~18%)"
+    },
+    {
+        "id": 73,
+        "cod_rm_tipo_rifiuto": "7.19",
+        "cod_provenienza": "7.19.2",
+        "descrizione": " rifiuto argilloso costituito da CaCO3 50%, Al2O3 e B2O3 20%, umidità 20_30%, rifiuto insolubile 10%",
+        "descrizione_estesa": "7.19.2- rifiuto argilloso costituito da CaCO3 50%, Al2O3 e B2O3 20%, umidità 20_30%, rifiuto insolubile 10%"
+    },
+    {
+        "id": 74,
+        "cod_rm_tipo_rifiuto": "7.20",
+        "cod_provenienza": "7.20.2 ",
+        "descrizione": "rifiuti e rottami di materiali compositi costituiti generalmente da materiale ceramico (allumina, carburo di silicio, grafite) e metalli (alluminio, titanio, magnesio, ecc.), escluso amianto",
+        "descrizione_estesa": "7.20.2 -rifiuti e rottami di materiali compositi costituiti generalmente da materiale ceramico (allumina, carburo di silicio, grafite) e metalli (alluminio, titanio, magnesio, ecc.), escluso amianto"
+    },
+    {
+        "id": 75,
+        "cod_rm_tipo_rifiuto": "7.21",
+        "cod_provenienza": "7.21.2",
+        "descrizione": " materiale inorganico a base di silice, allumina, ossido di calcio e ferro (~90%) e ossidi minori Mg,K,Na (~10%) con contenuto in cloro <0,5 sul secco",
+        "descrizione_estesa": "7.21.2- materiale inorganico a base di silice, allumina, ossido di calcio e ferro (~90%) e ossidi minori Mg,K,Na (~10%) con contenuto in cloro <0,5 sul secco"
+    },
+    {
+        "id": 76,
+        "cod_rm_tipo_rifiuto": "7.22",
+        "cod_provenienza": "7.22.2",
+        "descrizione": " polveri finissime aventi di norma la seguente composizione: SiO2 92÷94%, Fe2O3 1÷1,5%, CaO 08÷1,2%, alcali 0,5÷1%",
+        "descrizione_estesa": "7.22.2- polveri finissime aventi di norma la seguente composizione: SiO2 92÷94%, Fe2O3 1÷1,5%, CaO 08÷1,2%, alcali 0,5÷1%"
+    },
+    {
+        "id": 77,
+        "cod_rm_tipo_rifiuto": "7.23",
+        "cod_provenienza": "7.23.2",
+        "descrizione": " conchiglie con eventuale presenza di materiali estranei (sabbie, alghe, plastiche, ecc)",
+        "descrizione_estesa": "7.23.2- conchiglie con eventuale presenza di materiali estranei (sabbie, alghe, plastiche, ecc)"
+    },
+    {
+        "id": 78,
+        "cod_rm_tipo_rifiuto": "7.24",
+        "cod_provenienza": "7.24.2",
+        "descrizione": " solido vetroso costituito essenzialmente da silicati, ossidi di alluminio, di calcio ed ossidi minori",
+        "descrizione_estesa": "7.24.2- solido vetroso costituito essenzialmente da silicati, ossidi di alluminio, di calcio ed ossidi minori"
+    },
+    {
+        "id": 79,
+        "cod_rm_tipo_rifiuto": "7.25",
+        "cod_provenienza": "7.25.2",
+        "descrizione": " sabbie e terre refrattarie miscelate con leganti inorganici (argille) e/o organici (resine furaniche, fenoliche e isocianati) il contenuto massimo di fenolo sul rifiuto tal quale è pari a 200 ppm; rifiuti di forme ed anime",
+        "descrizione_estesa": "7.25.2- sabbie e terre refrattarie miscelate con leganti inorganici (argille) e/o organici (resine furaniche, fenoliche e isocianati) il contenuto massimo di fenolo sul rifiuto tal quale è pari a 200 ppm; rifiuti di forme ed anime"
+    },
+    {
+        "id": 80,
+        "cod_rm_tipo_rifiuto": "7.26",
+        "cod_provenienza": "7.26.2",
+        "descrizione": " schegge di quarzo puro",
+        "descrizione_estesa": "7.26.2- schegge di quarzo puro"
+    },
+    {
+        "id": 81,
+        "cod_rm_tipo_rifiuto": "7.27",
+        "cod_provenienza": "7.27.2",
+        "descrizione": " silice >70%, ossidi di Al, ossidi di Mg, ossidi di Fe altri ossidi minori, non contenenti PCB e PCT >25 ppm e PCDD >2,5 ppm",
+        "descrizione_estesa": "7.27.2- silice >70%, ossidi di Al, ossidi di Mg, ossidi di Fe altri ossidi minori, non contenenti PCB e PCT >25 ppm e PCDD >2,5 ppm"
+    },
+    {
+        "id": 82,
+        "cod_rm_tipo_rifiuto": "7.28",
+        "cod_provenienza": "7.28.2",
+        "descrizione": " rifiuti costituiti essenzialmente da inerti (ceramica, carbonato di calcio e allumina)",
+        "descrizione_estesa": "7.28.2- rifiuti costituiti essenzialmente da inerti (ceramica, carbonato di calcio e allumina)"
+    },
+    {
+        "id": 83,
+        "cod_rm_tipo_rifiuto": "7.29",
+        "cod_provenienza": "7.29.2",
+        "descrizione": " rifiuti solidi costituiti essenzialmente da silicati, con possibili tracce di composti organici, escluso amianto",
+        "descrizione_estesa": "7.29.2- rifiuti solidi costituiti essenzialmente da silicati, con possibili tracce di composti organici, escluso amianto"
+    },
+    {
+        "id": 84,
+        "cod_rm_tipo_rifiuto": "7.30",
+        "cod_provenienza": "7.30.2",
+        "descrizione": " miscela di sabbia, altri inerti, conchiglie e altro",
+        "descrizione_estesa": "7.30.2- miscela di sabbia, altri inerti, conchiglie e altro"
+    },
+    {
+        "id": 85,
+        "cod_rm_tipo_rifiuto": "7.31",
+        "cod_provenienza": "7.31.2 ",
+        "descrizione": "rifiuto costituito da terriccio con eventuali parti vegetali e sostanze organiche; Parti in fibra di lana",
+        "descrizione_estesa": "7.31.2 -rifiuto costituito da terriccio con eventuali parti vegetali e sostanze organiche; Parti in fibra di lana"
+    },
+    {
+        "id": 86,
+        "cod_rm_tipo_rifiuto": "7.31.bis",
+        "cod_provenienza": "7.31.bis.2",
+        "descrizione": " materiale inerte vario costituito da terra con presenza di ciottoli, sabbia, ghiaia, trovanti, anche di origine antropica",
+        "descrizione_estesa": "7.31.bis.2- materiale inerte vario costituito da terra con presenza di ciottoli, sabbia, ghiaia, trovanti, anche di origine antropica"
+    },
+    {
+        "id": 87,
+        "cod_rm_tipo_rifiuto": "8.1",
+        "cod_provenienza": "8.1.2",
+        "descrizione": " olio denso a base di olio minerale, lanolina e altri grassi naturali penetranti",
+        "descrizione_estesa": "8.1.2- olio denso a base di olio minerale, lanolina e altri grassi naturali penetranti"
+    },
+    {
+        "id": 88,
+        "cod_rm_tipo_rifiuto": "8.2",
+        "cod_provenienza": "8.2.2",
+        "descrizione": " materiale fibroso igroscopico costituito da fibre naturali in quantità variabile di colore",
+        "descrizione_estesa": "8.2.2- materiale fibroso igroscopico costituito da fibre naturali in quantità variabile di colore"
+    },
+    {
+        "id": 89,
+        "cod_rm_tipo_rifiuto": "8.3",
+        "cod_provenienza": "8.3.2",
+        "descrizione": " soluzioni acquose contenenti grasso di lana",
+        "descrizione_estesa": "8.3.2- soluzioni acquose contenenti grasso di lana"
+    },
+    {
+        "id": 90,
+        "cod_rm_tipo_rifiuto": "8.4",
+        "cod_provenienza": "8.4.2 ",
+        "descrizione": " rifiuti di lino, cotone, lana e altre fibre naturali, artificiali e sintetiche",
+        "descrizione_estesa": "8.4.2 - rifiuti di lino, cotone, lana e altre fibre naturali, artificiali e sintetiche"
+    },
+    {
+        "id": 91,
+        "cod_rm_tipo_rifiuto": "8.5",
+        "cod_provenienza": "8.5.2",
+        "descrizione": " finalmente corti arricciati e piccoli pezzi di tessuto fibroso collagenico",
+        "descrizione_estesa": "8.5.2- finalmente corti arricciati e piccoli pezzi di tessuto fibroso collagenico"
+    },
+    {
+        "id": 92,
+        "cod_rm_tipo_rifiuto": "8.6",
+        "cod_provenienza": "8.6.2",
+        "descrizione": " ritagli di tessuto fibroso con la genico di dimensioni variabili",
+        "descrizione_estesa": "8.6.2- ritagli di tessuto fibroso con la genico di dimensioni variabili"
+    },
+    {
+        "id": 93,
+        "cod_rm_tipo_rifiuto": "8.7",
+        "cod_provenienza": "8.7.2",
+        "descrizione": " polvere più o meno fine e/o rifiuti di pellame",
+        "descrizione_estesa": "8.7.2- polvere più o meno fine e/o rifiuti di pellame"
+    },
+    {
+        "id": 94,
+        "cod_rm_tipo_rifiuto": "8.8",
+        "cod_provenienza": "8.8.2",
+        "descrizione": " polvere più o meno fine e/o rifiuti di pellame",
+        "descrizione_estesa": "8.8.2- polvere più o meno fine e/o rifiuti di pellame"
+    },
+    {
+        "id": 95,
+        "cod_rm_tipo_rifiuto": " 8.9",
+        "cod_provenienza": " 8.9.2 ",
+        "descrizione": " materiale costituito da indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati di lino, cotone, lana, altre fibre naturali artificiali e sintetiche, non impregnati da oli, morchie, non contenenti materiali impropri",
+        "descrizione_estesa": " 8.9.2 - materiale costituito da indumenti, accessori di abbigliamento ed altri manufatti tessili confezionati di lino, cotone, lana, altre fibre naturali artificiali e sintetiche, non impregnati da oli, morchie, non contenenti materiali impropri"
+    },
+    {
+        "id": 96,
+        "cod_rm_tipo_rifiuto": "9.1",
+        "cod_provenienza": "9.1.2 ",
+        "descrizione": "legno in scarti di diverse dimensioni e segatura, con possibili presenze di polveri di natura inerte; cassette, pallets e altri imballaggi in legno non trattato, sfridi di pannelli (compensati listellari, di fibra, di particelle ecc.) di legno trattato, nobilitato, compreso MDF, polverino di carteggiatura",
+        "descrizione_estesa": "9.1.2 -legno in scarti di diverse dimensioni e segatura, con possibili presenze di polveri di natura inerte; cassette, pallets e altri imballaggi in legno non trattato, sfridi di pannelli (compensati listellari, di fibra, di particelle ecc.) di legno trattato, nobilitato, compreso MDF, polverino di carteggiatura"
+    },
+    {
+        "id": 97,
+        "cod_rm_tipo_rifiuto": "9.2",
+        "cod_provenienza": "9.2.2",
+        "descrizione": " Legno vergine in scarti di diverse dimensioni e segature, con possibili presenze di polvere di natura inerte",
+        "descrizione_estesa": "9.2.2- Legno vergine in scarti di diverse dimensioni e segature, con possibili presenze di polvere di natura inerte"
+    },
+    {
+        "id": 98,
+        "cod_rm_tipo_rifiuto": "9.5",
+        "cod_provenienza": "9.5.2",
+        "descrizione": "  valori limite delle sostanze pericolose: soluzioni acquose ad alto contenuto di lignina (circa 35%); sul tal quale: _Fenolo libero 40 ppm _ Furfurolo = 150 ppm _Piombo = <0.10 mg/kg _Arsenico = <0.10 ,, ,, _ Zinco = <40 ,, ,,_Cromo III = <0.1 ,, ,",
+        "descrizione_estesa": "9.5.2-  valori limite delle sostanze pericolose: soluzioni acquose ad alto contenuto di lignina (circa 35%); sul tal quale: _Fenolo libero 40 ppm _ Furfurolo = 150 ppm _Piombo = <0.10 mg/kg _Arsenico = <0.10 ,, ,, _ Zinco = <40 ,, ,,_Cromo III = <0.1 ,, ,"
+    },
+    {
+        "id": 99,
+        "cod_rm_tipo_rifiuto": "9.6",
+        "cod_provenienza": "9.6.2",
+        "descrizione": " carta impregnata con resina ureica, melaminica, fenolica e poliesteri",
+        "descrizione_estesa": "9.6.2- carta impregnata con resina ureica, melaminica, fenolica e poliesteri"
+    },
+    {
+        "id": 100,
+        "cod_rm_tipo_rifiuto": "10.1",
+        "cod_provenienza": "10.1.2",
+        "descrizione": " polveri, granuli, materozze, ritagli, trucioli, bave, sfridi e mescole fuori specifica di gomma con eventuali additivi",
+        "descrizione_estesa": "10.1.2- polveri, granuli, materozze, ritagli, trucioli, bave, sfridi e mescole fuori specifica di gomma con eventuali additivi"
+    },
+    {
+        "id": 101,
+        "cod_rm_tipo_rifiuto": "10. 2",
+        "cod_provenienza": "10. 2. 2",
+        "descrizione": " pneumatici usurati e camere d'aria con eventuale presenza di inquinanti superficiali (IPA <10ppm); scarti di gomma di varie dimensioni forme",
+        "descrizione_estesa": "10. 2. 2- pneumatici usurati e camere d'aria con eventuale presenza di inquinanti superficiali (IPA <10ppm); scarti di gomma di varie dimensioni forme"
+    },
+    {
+        "id": 102,
+        "cod_rm_tipo_rifiuto": "11.1",
+        "cod_provenienza": "11.1.2 ",
+        "descrizione": "fango e/o liquidi acquosi costituiti da sostanze oleose e grasse di natura vegetale con percentuale variabile; terre e farine fossili contenenti oli e grassi vegetali.",
+        "descrizione_estesa": "11.1.2 -fango e/o liquidi acquosi costituiti da sostanze oleose e grasse di natura vegetale con percentuale variabile; terre e farine fossili contenenti oli e grassi vegetali."
+    },
+    {
+        "id": 103,
+        "cod_rm_tipo_rifiuto": "11.2",
+        "cod_provenienza": "11.2.2",
+        "descrizione": " silice sotto forma di silicati e idro silicati di alluminio",
+        "descrizione_estesa": "11.2.2- silice sotto forma di silicati e idro silicati di alluminio"
+    },
+    {
+        "id": 104,
+        "cod_rm_tipo_rifiuto": "11.3",
+        "cod_provenienza": "11.3.2",
+        "descrizione": " materiale cellulosico contaminato da sostanze oleose e sedimenti grassi",
+        "descrizione_estesa": "11.3.2- materiale cellulosico contaminato da sostanze oleose e sedimenti grassi"
+    },
+    {
+        "id": 105,
+        "cod_rm_tipo_rifiuto": "11.4",
+        "cod_provenienza": "11.4.2 ",
+        "descrizione": "reflui liquidi disoleati con sostanze oleose e grasse residue in percentuale minima",
+        "descrizione_estesa": "11.4.2 -reflui liquidi disoleati con sostanze oleose e grasse residue in percentuale minima"
+    },
+    {
+        "id": 106,
+        "cod_rm_tipo_rifiuto": "11.5",
+        "cod_provenienza": "11.5.2",
+        "descrizione": " Foglie di the umide",
+        "descrizione_estesa": "11.5.2- Foglie di the umide"
+    },
+    {
+        "id": 107,
+        "cod_rm_tipo_rifiuto": "11.6",
+        "cod_provenienza": "11.6.2 ",
+        "descrizione": "tartrati solidi",
+        "descrizione_estesa": "11.6.2 -tartrati solidi"
+    },
+    {
+        "id": 108,
+        "cod_rm_tipo_rifiuto": "11.7",
+        "cod_provenienza": "11.7.2",
+        "descrizione": " rifiuti a base di cellulosica costituite da bucce, vinaccioli e fanghi",
+        "descrizione_estesa": "11.7.2- rifiuti a base di cellulosica costituite da bucce, vinaccioli e fanghi"
+    },
+    {
+        "id": 109,
+        "cod_rm_tipo_rifiuto": "11.8",
+        "cod_provenienza": "11.8.2",
+        "descrizione": " Rifiuti costituiti da scarti vegetali originatisi dalla prima parte del ciclo di filatura del cotone",
+        "descrizione_estesa": "11.8.2- Rifiuti costituiti da scarti vegetali originatisi dalla prima parte del ciclo di filatura del cotone"
+    },
+    {
+        "id": 110,
+        "cod_rm_tipo_rifiuto": "11.9",
+        "cod_provenienza": "11.9.2",
+        "descrizione": " Rifiuti solidi di cloruro di sodio",
+        "descrizione_estesa": "11.9.2- Rifiuti solidi di cloruro di sodio"
+    },
+    {
+        "id": 111,
+        "cod_rm_tipo_rifiuto": "11.10",
+        "cod_provenienza": "11.10.2",
+        "descrizione": " frammenti e polveri di tabacco con agenti concianti e profumanti (cacao, miele, zuccheri, ecc.) ed eventuale presenza di rifiuti di carta vergata e colle di amido.",
+        "descrizione_estesa": "11.10.2- frammenti e polveri di tabacco con agenti concianti e profumanti (cacao, miele, zuccheri, ecc.) ed eventuale presenza di rifiuti di carta vergata e colle di amido."
+    },
+    {
+        "id": 112,
+        "cod_rm_tipo_rifiuto": "11.11",
+        "cod_provenienza": "11.11.2",
+        "descrizione": " rifiuto oleoso contenente particolato di sostanze di natura animale e vegetale",
+        "descrizione_estesa": "11.11.2- rifiuto oleoso contenente particolato di sostanze di natura animale e vegetale"
+    },
+    {
+        "id": 113,
+        "cod_rm_tipo_rifiuto": "11.12",
+        "cod_provenienza": "11.12.2",
+        "descrizione": " materiale sciolto rappresentato prevalentemente da frammenti, particelle e polvere di nocciolo di oliva privati della parte di polpa grassa residua; di granulometria variabile da 10 a 6000 μm e ad alto contenuto di lignina e solvente in tracce.",
+        "descrizione_estesa": "11.12.2- materiale sciolto rappresentato prevalentemente da frammenti, particelle e polvere di nocciolo di oliva privati della parte di polpa grassa residua; di granulometria variabile da 10 a 6000 μm e ad alto contenuto di lignina e solvente in tracce."
+    },
+    {
+        "id": 114,
+        "cod_rm_tipo_rifiuto": "11.13",
+        "cod_provenienza": "11.13.2",
+        "descrizione": " materiale minuto a prevalente composizione amidacea",
+        "descrizione_estesa": "11.13.2- materiale minuto a prevalente composizione amidacea"
+    },
+    {
+        "id": 115,
+        "cod_rm_tipo_rifiuto": "11.14",
+        "cod_provenienza": "11.14.2",
+        "descrizione": " soluzione di cloro di sodio con tracce di materiale organico",
+        "descrizione_estesa": "11.14.2- soluzione di cloro di sodio con tracce di materiale organico"
+    },
+    {
+        "id": 116,
+        "cod_rm_tipo_rifiuto": "12.1",
+        "cod_provenienza": "12.1.2 ",
+        "descrizione": "fango palabile",
+        "descrizione_estesa": "12.1.2 -fango palabile"
+    },
+    {
+        "id": 117,
+        "cod_rm_tipo_rifiuto": "12.2",
+        "cod_provenienza": "12.2.2",
+        "descrizione": " materiale composto da limi, argille, sabbie e ghiaie con contenuto in acqua <80%, idrocarburi totali <30 mg/kg SS, PCB <0,01 mg/kg SS, IPA <1 mg/Kg SS, pesticidi organoclorurati <0,01mg/kg SS, coliformi fecali <20 MPN in 100 ml; salmonella assenti in 5000 ml.",
+        "descrizione_estesa": "12.2.2- materiale composto da limi, argille, sabbie e ghiaie con contenuto in acqua <80%, idrocarburi totali <30 mg/kg SS, PCB <0,01 mg/kg SS, IPA <1 mg/Kg SS, pesticidi organoclorurati <0,01mg/kg SS, coliformi fecali <20 MPN in 100 ml; salmonella assenti in 5000 ml."
+    },
+    {
+        "id": 118,
+        "cod_rm_tipo_rifiuto": "12.3",
+        "cod_provenienza": "12.3.2",
+        "descrizione": " fanghi contenenti oltre 85% di carbonato di calcio sul secco",
+        "descrizione_estesa": "12.3.2- fanghi contenenti oltre 85% di carbonato di calcio sul secco"
+    },
+    {
+        "id": 119,
+        "cod_rm_tipo_rifiuto": "12.4",
+        "cod_provenienza": "12.4.2",
+        "descrizione": " fanghi filtro pressati palabili contenenti oltre il 50% di silicati",
+        "descrizione_estesa": "12.4.2- fanghi filtro pressati palabili contenenti oltre il 50% di silicati"
+    },
+    {
+        "id": 120,
+        "cod_rm_tipo_rifiuto": "12.5",
+        "cod_provenienza": "12.5.2",
+        "descrizione": " fanghi e rottami lapidei a base di CaCO3 con presenza di stirene <50 ppm sul secco",
+        "descrizione_estesa": "12.5.2- fanghi e rottami lapidei a base di CaCO3 con presenza di stirene <50 ppm sul secco"
+    },
+    {
+        "id": 121,
+        "cod_rm_tipo_rifiuto": "12.6",
+        "cod_provenienza": "12.6.2",
+        "descrizione": " fanghi, acque, polveri e rifiuti solidi a matrice alluminosilicatica ed argillosa a base di Pb<25%, B2O3<20% e CdO<3%",
+        "descrizione_estesa": "12.6.2- fanghi, acque, polveri e rifiuti solidi a matrice alluminosilicatica ed argillosa a base di Pb<25%, B2O3<20% e CdO<3%"
+    },
+    {
+        "id": 122,
+        "cod_rm_tipo_rifiuto": "12.7",
+        "cod_provenienza": "12.7.2 ",
+        "descrizione": "fanghi contenenti libri, argille, terriccio ed eventuali elementi di natura vegetale",
+        "descrizione_estesa": "12.7.2 -fanghi contenenti libri, argille, terriccio ed eventuali elementi di natura vegetale"
+    },
+    {
+        "id": 123,
+        "cod_rm_tipo_rifiuto": "12.8",
+        "cod_provenienza": "12.8.2",
+        "descrizione": " fanghi costituiti indicativamente da sabbia 67%, limo 29% e argilla 4% sul secco e contenenti allume, sali di ferro, carbonato di calcio, idrossido di magnesio.",
+        "descrizione_estesa": "12.8.2- fanghi costituiti indicativamente da sabbia 67%, limo 29% e argilla 4% sul secco e contenenti allume, sali di ferro, carbonato di calcio, idrossido di magnesio."
+    },
+    {
+        "id": 124,
+        "cod_rm_tipo_rifiuto": "12.9",
+        "cod_provenienza": "12.9.2 ",
+        "descrizione": "solido palabile di colore grigio con umidità pari al 50%, contenente piombo < 60 ppm e rame totale <400 ppm sul secco",
+        "descrizione_estesa": "12.9.2 -solido palabile di colore grigio con umidità pari al 50%, contenente piombo < 60 ppm e rame totale <400 ppm sul secco"
+    },
+    {
+        "id": 125,
+        "cod_rm_tipo_rifiuto": "12.10",
+        "cod_provenienza": "12.10.2",
+        "descrizione": " miscela acquosa con rifiuti di terra, parti vegetali e parti di fibre di lana",
+        "descrizione_estesa": "12.10.2- miscela acquosa con rifiuti di terra, parti vegetali e parti di fibre di lana"
+    },
+    {
+        "id": 126,
+        "cod_rm_tipo_rifiuto": "12.11",
+        "cod_provenienza": "12.11.2",
+        "descrizione": " fanghi palabili con tenore in ferro minimo 30% unitamente a SiO2, CaO e Al2O3 con presenza o meno di scaglie di ferro e polverino di carbone, con eventuale contenuto in cloro <0,5%.",
+        "descrizione_estesa": "12.11.2- fanghi palabili con tenore in ferro minimo 30% unitamente a SiO2, CaO e Al2O3 con presenza o meno di scaglie di ferro e polverino di carbone, con eventuale contenuto in cloro <0,5%."
+    },
+    {
+        "id": 127,
+        "cod_rm_tipo_rifiuto": "12.12",
+        "cod_provenienza": "12.12.2",
+        "descrizione": " fanghi contenenti ossidi di silicio a 30_60%, ossidi di alluminio 6_10%, ossidi di magnesio 1_3%, ferro 4_30% ed altri ossidi minori",
+        "descrizione_estesa": "12.12.2- fanghi contenenti ossidi di silicio a 30_60%, ossidi di alluminio 6_10%, ossidi di magnesio 1_3%, ferro 4_30% ed altri ossidi minori"
+    },
+    {
+        "id": 128,
+        "cod_rm_tipo_rifiuto": "12.13",
+        "cod_provenienza": "12.13.2",
+        "descrizione": "fanghi a prevalente contenuto di argilla, carbonato di calcio, limi, sabbie e terriccio ed eventuali tracce di materiali ferrosi con un contenuto di sostanza secca del 25%.",
+        "descrizione_estesa": "12.13.2-fanghi a prevalente contenuto di argilla, carbonato di calcio, limi, sabbie e terriccio ed eventuali tracce di materiali ferrosi con un contenuto di sostanza secca del 25%."
+    },
+    {
+        "id": 129,
+        "cod_rm_tipo_rifiuto": "12.14",
+        "cod_provenienza": "12.14.2",
+        "descrizione": " soluzioni alcaline provenienti dal decapaggio e fanghi di idrato di alluminio separati con filtropressa",
+        "descrizione_estesa": "12.14.2- soluzioni alcaline provenienti dal decapaggio e fanghi di idrato di alluminio separati con filtropressa"
+    },
+    {
+        "id": 130,
+        "cod_rm_tipo_rifiuto": "12.15",
+        "cod_provenienza": "12.15.2",
+        "descrizione": " fanghi ad elevato contenuto in acqua, segatura, trucioli, cortecce, fibra di legno, limo e terra",
+        "descrizione_estesa": "12.15.2- fanghi ad elevato contenuto in acqua, segatura, trucioli, cortecce, fibra di legno, limo e terra"
+    },
+    {
+        "id": 131,
+        "cod_rm_tipo_rifiuto": "12.16",
+        "cod_provenienza": "12.16. 2",
+        "descrizione": "fanghi di natura prevalentemente inorganica con contenuto in acqua <70%, frazione organica <30%, Cr totale <1000 ppm, Cr VI <1 ppm, Pb <1500 ppm e As, Cd, Hg <1 ppm in totale, solventi aromatici e clorurati <200 ppm.",
+        "descrizione_estesa": "12.16. 2-fanghi di natura prevalentemente inorganica con contenuto in acqua <70%, frazione organica <30%, Cr totale <1000 ppm, Cr VI <1 ppm, Pb <1500 ppm e As, Cd, Hg <1 ppm in totale, solventi aromatici e clorurati <200 ppm."
+    },
+    {
+        "id": 132,
+        "cod_rm_tipo_rifiuto": "12.17",
+        "cod_provenienza": "12.17.2",
+        "descrizione": " fanghi e polvere di natura prevalentemente inorganica con frazione organica <30 non contenenti cromo né cianuri",
+        "descrizione_estesa": "12.17.2- fanghi e polvere di natura prevalentemente inorganica con frazione organica <30 non contenenti cromo né cianuri"
+    },
+    {
+        "id": 133,
+        "cod_rm_tipo_rifiuto": "12.18",
+        "cod_provenienza": "12.18.2",
+        "descrizione": " fanghi conciari essiccati con contenuto in Cr <0,3% sul secco e umidità <20%, in modo tale che il contenuto totale di Cr +++ nell'impasto del fango con argilla non sia superiore a 250 mg/kg sul secco.",
+        "descrizione_estesa": "12.18.2- fanghi conciari essiccati con contenuto in Cr <0,3% sul secco e umidità <20%, in modo tale che il contenuto totale di Cr +++ nell'impasto del fango con argilla non sia superiore a 250 mg/kg sul secco."
+    },
+    {
+        "id": 134,
+        "cod_rm_tipo_rifiuto": "13.1",
+        "cod_provenienza": "13.1.2 ",
+        "descrizione": "è generalmente composto dall'80% circa di ceneri volanti e dal 20% circa di ceneri pesanti; costituito da silicati complessi di alluminio, calcio e ferro, sostanza carboniosa incombusta (2÷10%); PCDD in concentrazione non superiore a 2,5 ppb; PCB, PCT <25 ppm.",
+        "descrizione_estesa": "13.1.2 -è generalmente composto dall'80% circa di ceneri volanti e dal 20% circa di ceneri pesanti; costituito da silicati complessi di alluminio, calcio e ferro, sostanza carboniosa incombusta (2÷10%); PCDD in concentrazione non superiore a 2,5 ppb; PCB, PCT <25 ppm."
+    },
+    {
+        "id": 135,
+        "cod_rm_tipo_rifiuto": "13.2",
+        "cod_provenienza": "13.2.2",
+        "descrizione": "ceneri costituite principalmente da potassio, calcio, sodio e loro composti; PCDD in concentrazione non superiore a 0.1 ppb sul secco, PCB, PCT <25 ppm PCB, PCT <5 ppm sul secco.",
+        "descrizione_estesa": "13.2.2-ceneri costituite principalmente da potassio, calcio, sodio e loro composti; PCDD in concentrazione non superiore a 0.1 ppb sul secco, PCB, PCT <25 ppm PCB, PCT <5 ppm sul secco."
+    },
+    {
+        "id": 136,
+        "cod_rm_tipo_rifiuto": "13.3",
+        "cod_provenienza": "13.3.2 ",
+        "descrizione": "centri costituiti da inerti, ossidi, idrossidi,silicati, cloruri, solfati, carbonati metallici, metalli pesanti e tracce di inquinanti organici",
+        "descrizione_estesa": "13.3.2 -centri costituiti da inerti, ossidi, idrossidi,silicati, cloruri, solfati, carbonati metallici, metalli pesanti e tracce di inquinanti organici"
+    },
+    {
+        "id": 137,
+        "cod_rm_tipo_rifiuto": "13.4",
+        "cod_provenienza": "13.4.2",
+        "descrizione": " granuli di colore nero e struttura prevalentemente amorfa a carattere vetroso, costituito da silice, ferro e in altri metalli",
+        "descrizione_estesa": "13.4.2- granuli di colore nero e struttura prevalentemente amorfa a carattere vetroso, costituito da silice, ferro e in altri metalli"
+    },
+    {
+        "id": 138,
+        "cod_rm_tipo_rifiuto": "13.5",
+        "cod_provenienza": "13.5.2",
+        "descrizione": " gesso al 15_20% di umidità con composizione sul secco di CaSO4 80_98% e eventualmente Fe2O3 2.5_3%",
+        "descrizione_estesa": "13.5.2- gesso al 15_20% di umidità con composizione sul secco di CaSO4 80_98% e eventualmente Fe2O3 2.5_3%"
+    },
+    {
+        "id": 139,
+        "cod_rm_tipo_rifiuto": "13.6",
+        "cod_provenienza": "13.6.2",
+        "descrizione": "solfato di calcio >70% sul secco ed eventuale presenza di silice, allumina e ossido di ferro 5_15% allo stato solido o in sospensione ovvero eventuale presenza di sostanza organica (circa 5%) nei gessi da produzione acidi citrico e tartarico.",
+        "descrizione_estesa": "13.6.2-solfato di calcio >70% sul secco ed eventuale presenza di silice, allumina e ossido di ferro 5_15% allo stato solido o in sospensione ovvero eventuale presenza di sostanza organica (circa 5%) nei gessi da produzione acidi citrico e tartarico."
+    },
+    {
+        "id": 140,
+        "cod_rm_tipo_rifiuto": "13.7",
+        "cod_provenienza": "13.7.2",
+        "descrizione": "gessi biidrati con tenore minimo di CaSO4.2H2O pari al 68% sulla sostanza secca, di colore bianco o rosso e tenore massimo di umidità del 60%; gessi anidri di colore bianco con tenore di CaSO4 uguale o superiore al 68% sulla sostanza secca ed un tenore massimo di umidità del 5% e di Cl <0,5%.",
+        "descrizione_estesa": "13.7.2-gessi biidrati con tenore minimo di CaSO4.2H2O pari al 68% sulla sostanza secca, di colore bianco o rosso e tenore massimo di umidità del 60%; gessi anidri di colore bianco con tenore di CaSO4 uguale o superiore al 68% sulla sostanza secca ed un tenore massimo di umidità del 5% e di Cl <0,5%."
+    },
+    {
+        "id": 141,
+        "cod_rm_tipo_rifiuto": "13.8",
+        "cod_provenienza": "13.8.2",
+        "descrizione": "anidrite (solfato di calcio anidro) grezza costituita da una polvere bianco_grigia con la seguente composizione: CaSO4 >96%, CaF2 <2%, acidità solforica <1%. Le impurezze sono costituite da ossidi di ferro e silicati, in relazione al contenuto delle stesse nel minerale fluorina di partenza.",
+        "descrizione_estesa": "13.8.2-anidrite (solfato di calcio anidro) grezza costituita da una polvere bianco_grigia con la seguente composizione: CaSO4 >96%, CaF2 <2%, acidità solforica <1%. Le impurezze sono costituite da ossidi di ferro e silicati, in relazione al contenuto delle stesse nel minerale fluorina di partenza."
+    },
+    {
+        "id": 142,
+        "cod_rm_tipo_rifiuto": "13.9",
+        "cod_provenienza": "13.9.2",
+        "descrizione": " rifiuto costituito da solfato di calcio 80%, silice 10%, idrato di magnesio 20%",
+        "descrizione_estesa": "13.9.2- rifiuto costituito da solfato di calcio 80%, silice 10%, idrato di magnesio 20%"
+    },
+    {
+        "id": 143,
+        "cod_rm_tipo_rifiuto": "13.10",
+        "cod_provenienza": "13.10.2",
+        "descrizione": " scaglie compatte o polveri palabili di colore grigio contenenti CaF2, CaSO4 e CaCO3 in misura >50%",
+        "descrizione_estesa": "13.10.2- scaglie compatte o polveri palabili di colore grigio contenenti CaF2, CaSO4 e CaCO3 in misura >50%"
+    },
+    {
+        "id": 144,
+        "cod_rm_tipo_rifiuto": "13.11",
+        "cod_provenienza": "13.11.2",
+        "descrizione": " polvere grigia incoerente, di pezzatura di sotto dei 3 mm, con contenuto in acqua inferiore al 40%",
+        "descrizione_estesa": "13.11.2- polvere grigia incoerente, di pezzatura di sotto dei 3 mm, con contenuto in acqua inferiore al 40%"
+    },
+    {
+        "id": 145,
+        "cod_rm_tipo_rifiuto": "13.12",
+        "cod_provenienza": "13.12.2",
+        "descrizione": "rifiuti della filtrazione dello zolfo grezzo nella produzione di acido solforico, della filtrazione dello zolfo liquido, della filtrazione nella produzione di nichel e della depurazione del gas di cokeria contenenti zolfo 25_85%, As<0,001, Pb <0,005, Hg <0,001%.",
+        "descrizione_estesa": "13.12.2-rifiuti della filtrazione dello zolfo grezzo nella produzione di acido solforico, della filtrazione dello zolfo liquido, della filtrazione nella produzione di nichel e della depurazione del gas di cokeria contenenti zolfo 25_85%, As<0,001, Pb <0,005, Hg <0,001%."
+    },
+    {
+        "id": 146,
+        "cod_rm_tipo_rifiuto": "13.13",
+        "cod_provenienza": "13.13.2",
+        "descrizione": " rifiuto solido liquido con zolfo elementare >80%",
+        "descrizione_estesa": "13.13.2- rifiuto solido liquido con zolfo elementare >80%"
+    },
+    {
+        "id": 147,
+        "cod_rm_tipo_rifiuto": "13.14",
+        "cod_provenienza": "13.14.2",
+        "descrizione": " rifiuti costituiti da zolfo >96%, ceneri (composti del bario<4% , con umidità minore del 60%)",
+        "descrizione_estesa": "13.14.2- rifiuti costituiti da zolfo >96%, ceneri (composti del bario<4% , con umidità minore del 60%)"
+    },
+    {
+        "id": 148,
+        "cod_rm_tipo_rifiuto": "13.15",
+        "cod_provenienza": "13.15.2",
+        "descrizione": " Rifiuto di solfato di bario, acqua (~20%) e altre sostanze inferiori al 0,5%",
+        "descrizione_estesa": "13.15.2- Rifiuto di solfato di bario, acqua (~20%) e altre sostanze inferiori al 0,5%"
+    },
+    {
+        "id": 149,
+        "cod_rm_tipo_rifiuto": "13.16",
+        "cod_provenienza": "13.16.2",
+        "descrizione": " rifiuti ottenuti dalla solubilizzazione del fluoruro di bario",
+        "descrizione_estesa": "13.16.2- rifiuti ottenuti dalla solubilizzazione del fluoruro di bario"
+    },
+    {
+        "id": 150,
+        "cod_rm_tipo_rifiuto": "13.17",
+        "cod_provenienza": "13.17.2",
+        "descrizione": "rifiuto solido contenente massimo 90% di ossido di antimonio",
+        "descrizione_estesa": "13.17.2-rifiuto solido contenente massimo 90% di ossido di antimonio"
+    },
+    {
+        "id": 151,
+        "cod_rm_tipo_rifiuto": "13.18",
+        "cod_provenienza": "13.18.2",
+        "descrizione": " polvere inodore costituita da ossido ferroso 25_80%, ossido ferrico 15_70%, ferro metallico <5% ed acqua tra il 5_25%",
+        "descrizione_estesa": "13.18.2- polvere inodore costituita da ossido ferroso 25_80%, ossido ferrico 15_70%, ferro metallico <5% ed acqua tra il 5_25%"
+    },
+    {
+        "id": 152,
+        "cod_rm_tipo_rifiuto": "13.18.bis",
+        "cod_provenienza": "13.18.bis.2",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "13.18.bis.2- non applicabile"
+    },
+    {
+        "id": 153,
+        "cod_rm_tipo_rifiuto": "13.19",
+        "cod_provenienza": "13.19.2 ",
+        "descrizione": "sfridi e scarti di materiale porcellanato costituito da SiO2 20%_50%, B2O3 0%",
+        "descrizione_estesa": "13.19.2 -sfridi e scarti di materiale porcellanato costituito da SiO2 20%_50%, B2O3 0%"
+    },
+    {
+        "id": 154,
+        "cod_rm_tipo_rifiuto": "13.20",
+        "cod_provenienza": "13.20.2",
+        "descrizione": " raccolta differenziata da parte dei distributori o di altri operatori specializzati; Attività produttive o di servizi",
+        "descrizione_estesa": "13.20.2- raccolta differenziata da parte dei distributori o di altri operatori specializzati; Attività produttive o di servizi"
+    },
+    {
+        "id": 155,
+        "cod_rm_tipo_rifiuto": "13.21",
+        "cod_provenienza": "13.21.2 ",
+        "descrizione": "rifiuto di aspetto cristallino, inodore, con contenuto di acqua pari al 20%, colore giallo_bruno, composto da sodio cloruro 93% sul secco, sodio solfato 2%, ammonio solfato 1%, ammonio cloruro 1%",
+        "descrizione_estesa": "13.21.2 -rifiuto di aspetto cristallino, inodore, con contenuto di acqua pari al 20%, colore giallo_bruno, composto da sodio cloruro 93% sul secco, sodio solfato 2%, ammonio solfato 1%, ammonio cloruro 1%"
+    },
+    {
+        "id": 156,
+        "cod_rm_tipo_rifiuto": "13.22",
+        "cod_provenienza": "13.22.2",
+        "descrizione": " carcasse di macchine fotografiche monouso private della pellicola",
+        "descrizione_estesa": "13.22.2- carcasse di macchine fotografiche monouso private della pellicola"
+    },
+    {
+        "id": 157,
+        "cod_rm_tipo_rifiuto": "13.23",
+        "cod_provenienza": "13.23.2",
+        "descrizione": " industria elettronica di produzione circuiti stampati",
+        "descrizione_estesa": "13.23.2- industria elettronica di produzione circuiti stampati"
+    },
+    {
+        "id": 158,
+        "cod_rm_tipo_rifiuto": "13.24",
+        "cod_provenienza": "13.24.2",
+        "descrizione": " sfridi di paraffina",
+        "descrizione_estesa": "13.24.2- sfridi di paraffina"
+    },
+    {
+        "id": 159,
+        "cod_rm_tipo_rifiuto": "13.25",
+        "cod_provenienza": "13.25.2",
+        "descrizione": " CaSO4 2H2O 60_90%, Zn circa 3%, Fe900 ppm circa, Pb 0,05 ppm circa, Cu 10_15 ppm, Acqua 10_35%",
+        "descrizione_estesa": "13.25.2- CaSO4 2H2O 60_90%, Zn circa 3%, Fe900 ppm circa, Pb 0,05 ppm circa, Cu 10_15 ppm, Acqua 10_35%"
+    },
+    {
+        "id": 160,
+        "cod_rm_tipo_rifiuto": "13.26",
+        "cod_provenienza": "13.26.2",
+        "descrizione": " spezzoni e polveri di carbone contenenti C fino al 98%, F fino al 20% Al fino al 25%, S fino all’1%, cianuri liberi <o=500ppm e ceneri <8%",
+        "descrizione_estesa": "13.26.2- spezzoni e polveri di carbone contenenti C fino al 98%, F fino al 20% Al fino al 25%, S fino all’1%, cianuri liberi <o=500ppm e ceneri <8%"
+    },
+    {
+        "id": 161,
+        "cod_rm_tipo_rifiuto": "13.27",
+        "cod_provenienza": "13.27.2 ",
+        "descrizione": "residui composti da carbonati e idrati di calcio e composti Silico_alluminosi e colloidali",
+        "descrizione_estesa": "13.27.2 -residui composti da carbonati e idrati di calcio e composti Silico_alluminosi e colloidali"
+    },
+    {
+        "id": 162,
+        "cod_rm_tipo_rifiuto": "13.28",
+        "cod_provenienza": "13.28.2",
+        "descrizione": " solfuro di sodio 10%_20% polisolfuri 6_ 8% acqua >70% idrato sodico <1% solfuro di carbonio <1ppm idrogeno solforato libero 3_4 ppm",
+        "descrizione_estesa": "13.28.2- solfuro di sodio 10%_20% polisolfuri 6_ 8% acqua >70% idrato sodico <1% solfuro di carbonio <1ppm idrogeno solforato libero 3_4 ppm"
+    },
+    {
+        "id": 163,
+        "cod_rm_tipo_rifiuto": "14.1",
+        "cod_provenienza": "14.1.2 ",
+        "descrizione": "rifiuti solidi urbani ed assimilati dopo separazione delle frazioni destinate al recupero di materia attuata mediante raccolta differenziata",
+        "descrizione_estesa": "14.1.2 -rifiuti solidi urbani ed assimilati dopo separazione delle frazioni destinate al recupero di materia attuata mediante raccolta differenziata"
+    },
+    {
+        "id": 164,
+        "cod_rm_tipo_rifiuto": "15.1",
+        "cod_provenienza": "15.1.2",
+        "descrizione": " Frazione organica da rifiuti urbani e speciali non pericolosi assimilati a matrice organica",
+        "descrizione_estesa": "15.1.2- Frazione organica da rifiuti urbani e speciali non pericolosi assimilati a matrice organica"
+    },
+    {
+        "id": 165,
+        "cod_rm_tipo_rifiuto": "16.1.A",
+        "cod_provenienza": "16.1.A.2",
+        "descrizione": " il rifiuto deve essere costituito unicamente dalla frazione umida separata dalla raccolta degli RSU, esente da rifiuti pericolosi",
+        "descrizione_estesa": "16.1.A.2- il rifiuto deve essere costituito unicamente dalla frazione umida separata dalla raccolta degli RSU, esente da rifiuti pericolosi"
+    },
+    {
+        "id": 166,
+        "cod_rm_tipo_rifiuto": "16.1.B",
+        "cod_provenienza": "16.1.B.2 ",
+        "descrizione": "il rifiuto deve derivare dalle ordinarie plastiche agricole",
+        "descrizione_estesa": "16.1.B.2 -il rifiuto deve derivare dalle ordinarie plastiche agricole"
+    },
+    {
+        "id": 167,
+        "cod_rm_tipo_rifiuto": "16.1.C",
+        "cod_provenienza": "16.1.C.2",
+        "descrizione": " il rifiuto deve derivare dalle ordinarie pratiche forestali, da lavorazioni con trattamenti fisici o termici;",
+        "descrizione_estesa": "16.1.C.2- il rifiuto deve derivare dalle ordinarie pratiche forestali, da lavorazioni con trattamenti fisici o termici;"
+    },
+    {
+        "id": 168,
+        "cod_rm_tipo_rifiuto": "16.1.D",
+        "cod_provenienza": "16.1.D.2",
+        "descrizione": " il rifiuto deve derivare dalla lavorazione con trattamenti fisici o termici senza impiego di sostanze denaturanti",
+        "descrizione_estesa": "16.1.D.2- il rifiuto deve derivare dalla lavorazione con trattamenti fisici o termici senza impiego di sostanze denaturanti"
+    },
+    {
+        "id": 169,
+        "cod_rm_tipo_rifiuto": "16.1.E",
+        "cod_provenienza": "16.1.E.2",
+        "descrizione": " i rifiuti non devono essere trattati con coloranti o comunque con sostanze tossiche",
+        "descrizione_estesa": "16.1.E.2- i rifiuti non devono essere trattati con coloranti o comunque con sostanze tossiche"
+    },
+    {
+        "id": 170,
+        "cod_rm_tipo_rifiuto": "16.1.F",
+        "cod_provenienza": "16.1.F.2",
+        "descrizione": " i rifiuti non devono essere trattati con coloranti o comunque con sostanze tossiche",
+        "descrizione_estesa": "16.1.F.2- i rifiuti non devono essere trattati con coloranti o comunque con sostanze tossiche"
+    },
+    {
+        "id": 171,
+        "cod_rm_tipo_rifiuto": "16.1.G",
+        "cod_provenienza": "16.1.G.2",
+        "descrizione": " non applicabile",
+        "descrizione_estesa": "16.1.G.2- non applicabile"
+    },
+    {
+        "id": 172,
+        "cod_rm_tipo_rifiuto": "16.1.H",
+        "cod_provenienza": "16.1.H.2",
+        "descrizione": " il rifiuto non deve provenire da lavorazioni che prevedono l'impiego di trattamenti chimici ",
+        "descrizione_estesa": "16.1.H.2- il rifiuto non deve provenire da lavorazioni che prevedono l'impiego di trattamenti chimici "
+    },
+    {
+        "id": 173,
+        "cod_rm_tipo_rifiuto": "16.1.I",
+        "cod_provenienza": "16.1.I.2 ",
+        "descrizione": "il rifiuto non deve essere costituito da carta e cartone per usi speciali trattata o spalmata con prodotti chimici diversi da quelli normalmente utilizzati nell'impasto cartaceo (carte autocopianti, termocopianti, accoppiati, poliaccoppiati, carte catramate, ecc.);",
+        "descrizione_estesa": "16.1.I.2 -il rifiuto non deve essere costituito da carta e cartone per usi speciali trattata o spalmata con prodotti chimici diversi da quelli normalmente utilizzati nell'impasto cartaceo (carte autocopianti, termocopianti, accoppiati, poliaccoppiati, carte catramate, ecc.);"
+    },
+    {
+        "id": 174,
+        "cod_rm_tipo_rifiuto": "16.1.J",
+        "cod_provenienza": "16.1.J. 2",
+        "descrizione": " il rifiuto non deve essere costituito da carta e cartone per usi speciali trattata o spalmata con prodotti chimici diversi da quelli normalmente utilizzati nell'impasto cartaceo (carte autocopianti, termocopianti, accoppiati, poliaccoppiati, carte catramate, ecc.);",
+        "descrizione_estesa": "16.1.J. 2- il rifiuto non deve essere costituito da carta e cartone per usi speciali trattata o spalmata con prodotti chimici diversi da quelli normalmente utilizzati nell'impasto cartaceo (carte autocopianti, termocopianti, accoppiati, poliaccoppiati, carte catramate, ecc.);"
+    },
+    {
+        "id": 175,
+        "cod_rm_tipo_rifiuto": "16.1.K",
+        "cod_provenienza": "16.1.K.2 ",
+        "descrizione": " l'impiego dei rifiuti da macellazione è limitato a quelli definiti 'a basso rischio' ai sensi dell'articolo 2, comma 3 del decreto legislativo 14 dicembre 1992, n. 508;",
+        "descrizione_estesa": "16.1.K.2 - l'impiego dei rifiuti da macellazione è limitato a quelli definiti 'a basso rischio' ai sensi dell'articolo 2, comma 3 del decreto legislativo 14 dicembre 1992, n. 508;"
+    },
+    {
+        "id": 176,
+        "cod_rm_tipo_rifiuto": "16.1.L",
+        "cod_provenienza": "16.1.L.2-il rifiuto deve essere costituito unicamente dalla frazione ligno",
+        "descrizione": "cellulusica derivante dalla manutenzione del verde ornamentale, escluso il materiale proveniente dallo spazzamento delle strade",
+        "descrizione_estesa": "16.1.L.2-il rifiuto deve essere costituito unicamente dalla frazione ligno-cellulusica derivante dalla manutenzione del verde ornamentale, escluso il materiale proveniente dallo spazzamento delle strade"
+    },
+    {
+        "id": 177,
+        "cod_rm_tipo_rifiuto": "16.1.M",
+        "cod_provenienza": "16.1.M.2",
+        "descrizione": "i fanghi devono avere caratteristiche conformi a quelle previste all'allegato IB del decreto legislativo 27 gennaio 1992, n. 99; possono essere utilizzati in misura non superiore al 35% sulla sostanza secca nella preparazione della miscela di partenza. Tale percentuale può essere elevata al 50% per i fanghi derivanti da impianti di depurazione delle industrie alimentari.",
+        "descrizione_estesa": "16.1.M.2-i fanghi devono avere caratteristiche conformi a quelle previste all'allegato IB del decreto legislativo 27 gennaio 1992, n. 99; possono essere utilizzati in misura non superiore al 35% sulla sostanza secca nella preparazione della miscela di partenza. Tale percentuale può essere elevata al 50% per i fanghi derivanti da impianti di depurazione delle industrie alimentari."
+    },
+    {
+        "id": 178,
+        "cod_rm_tipo_rifiuto": "16.1.N",
+        "cod_provenienza": "16.1.N.2",
+        "descrizione": " le ceneri devono avere caratteristiche conformi al punto 18.11.2",
+        "descrizione_estesa": "16.1.N.2- le ceneri devono avere caratteristiche conformi al punto 18.11.2"
+    },
+    {
+        "id": 179,
+        "cod_rm_tipo_rifiuto": "17.1",
+        "cod_provenienza": "17.1.2",
+        "descrizione": "rifiuti solidi urbani ed assimilati dopo separazione delle frazioni omogenee destinate a recupero di materia attuata mediante raccolta differenziata; CDR di cui al precedente punto 14",
+        "descrizione_estesa": "17.1.2-rifiuti solidi urbani ed assimilati dopo separazione delle frazioni omogenee destinate a recupero di materia attuata mediante raccolta differenziata; CDR di cui al precedente punto 14"
+    },
+    {
+        "id": 180,
+        "cod_rm_tipo_rifiuto": "18.1",
+        "cod_provenienza": "18.1.2",
+        "descrizione": " rifiuti di origine animale con contenenti sostanze pericolose",
+        "descrizione_estesa": "18.1.2- rifiuti di origine animale con contenenti sostanze pericolose"
+    },
+    {
+        "id": 181,
+        "cod_rm_tipo_rifiuto": "18.2",
+        "cod_provenienza": "18.2.2 ",
+        "descrizione": "rifiuti di origine animale non contenenti sostanze pericolose",
+        "descrizione_estesa": "18.2.2 -rifiuti di origine animale non contenenti sostanze pericolose"
+    },
+    {
+        "id": 182,
+        "cod_rm_tipo_rifiuto": "18.3",
+        "cod_provenienza": "18.3.2 ",
+        "descrizione": "scarti allo stato solido generati dalle operazioni meccaniche d'armatura, rifilatura, spaccatura e smerigliatura delle pelli",
+        "descrizione_estesa": "18.3.2 -scarti allo stato solido generati dalle operazioni meccaniche d'armatura, rifilatura, spaccatura e smerigliatura delle pelli"
+    },
+    {
+        "id": 183,
+        "cod_rm_tipo_rifiuto": "18.4",
+        "cod_provenienza": "18.4.2",
+        "descrizione": " residui allo stato solido o fluido della distillazione di sostanze zuccherine",
+        "descrizione_estesa": "18.4.2- residui allo stato solido o fluido della distillazione di sostanze zuccherine"
+    },
+    {
+        "id": 184,
+        "cod_rm_tipo_rifiuto": "18.5",
+        "cod_provenienza": "18.5.2",
+        "descrizione": " residui della lavorazione di semi oleosi",
+        "descrizione_estesa": "18.5.2- residui della lavorazione di semi oleosi"
+    },
+    {
+        "id": 185,
+        "cod_rm_tipo_rifiuto": "18.6",
+        "cod_provenienza": "18.6.2",
+        "descrizione": " rifiuto liquido risultante dalla spremitura e lavorazione delle olive",
+        "descrizione_estesa": "18.6.2- rifiuto liquido risultante dalla spremitura e lavorazione delle olive"
+    },
+    {
+        "id": 186,
+        "cod_rm_tipo_rifiuto": "18.7",
+        "cod_provenienza": "18.7.2",
+        "descrizione": " frammenti e polveri di materiali calcarei contenenti silice, allumina, ossidi di ferro e sostanze organiche",
+        "descrizione_estesa": "18.7.2- frammenti e polveri di materiali calcarei contenenti silice, allumina, ossidi di ferro e sostanze organiche"
+    },
+    {
+        "id": 187,
+        "cod_rm_tipo_rifiuto": "18.8",
+        "cod_provenienza": "18.8.2",
+        "descrizione": " residui a base di silicofosfati di calcio durante il processo di affinazione della ghisa fosforosa",
+        "descrizione_estesa": "18.8.2- residui a base di silicofosfati di calcio durante il processo di affinazione della ghisa fosforosa"
+    },
+    {
+        "id": 188,
+        "cod_rm_tipo_rifiuto": "18.9",
+        "cod_provenienza": "18.9.2",
+        "descrizione": " residuo a base di solfato di calcio o solfato ferroso Pb<30 mg/kg; Cd<3mg/kg",
+        "descrizione_estesa": "18.9.2- residuo a base di solfato di calcio o solfato ferroso Pb<30 mg/kg; Cd<3mg/kg"
+    },
+    {
+        "id": 189,
+        "cod_rm_tipo_rifiuto": "18.10",
+        "cod_provenienza": "18.10.2",
+        "descrizione": " residuo in polvere o in granuli a base di fosfato bicalcico virgola non contenenti sostanze pericolose",
+        "descrizione_estesa": "18.10.2- residuo in polvere o in granuli a base di fosfato bicalcico virgola non contenenti sostanze pericolose"
+    },
+    {
+        "id": 190,
+        "cod_rm_tipo_rifiuto": "18.11",
+        "cod_provenienza": "18.11.2",
+        "descrizione": " generi in polvere o in granuli non contenente sostanze pericolose",
+        "descrizione_estesa": "18.11.2- generi in polvere o in granuli non contenente sostanze pericolose"
+    },
+    {
+        "id": 191,
+        "cod_rm_tipo_rifiuto": "18.12",
+        "cod_provenienza": "18.12.2",
+        "descrizione": " deiezioni di origine animale contenenti Zn massimo 2500 mg/Kg s.s.; Cu massimo 1000 mg/Kg s.s.",
+        "descrizione_estesa": "18.12.2- deiezioni di origine animale contenenti Zn massimo 2500 mg/Kg s.s.; Cu massimo 1000 mg/Kg s.s."
+    }
+]

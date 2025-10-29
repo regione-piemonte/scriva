@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_car_rif": "4.4.2",
+        "descrizione": " scorie granulate o uniblocchi più dell'80% in peso di SiO2, CaO, Al2O3, MgO, FeO",
+        "descrizione_estesa": "4.4.2- scorie granulate o uniblocchi più dell'80% in peso di SiO2, CaO, Al2O3, MgO, FeO"
+    },
+    {
+        "id": 2,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_car_rif": "5.17.2 ",
+        "descrizione": "solido a matrice vetrosa in forma granulata o sabbia a grana medio grossolana di colore variabile dal grigio al giallastro, costituita di silice >30%, ossidi di calcio >40%, ossidi di alluminio, ossidi di magnesio. Non rispondente agli standard delle norme UNI, ENV 197/1",
+        "descrizione_estesa": "5.17.2 -solido a matrice vetrosa in forma granulata o sabbia a grana medio grossolana di colore variabile dal grigio al giallastro, costituita di silice >30%, ossidi di calcio >40%, ossidi di alluminio, ossidi di magnesio. Non rispondente agli standard delle norme UNI, ENV 197/1"
+    },
+    {
+        "id": 3,
+        "cod_ra_tipo_rifiuto": "7.1",
+        "cod_car_rif": "7. 1.2 ",
+        "descrizione": "materiale inerte, laterizio e ceramica cotta anche con presenza di frazioni metalliche, legno, plastica, carta e isolanti escluso amianto",
+        "descrizione_estesa": "7. 1.2 -materiale inerte, laterizio e ceramica cotta anche con presenza di frazioni metalliche, legno, plastica, carta e isolanti escluso amianto"
+    },
+    {
+        "id": 4,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_car_rif": "7.2.2.",
+        "descrizione": " Materiale inerte in pezzatura e forma varia, comprese le polveri",
+        "descrizione_estesa": "7.2.2.- Materiale inerte in pezzatura e forma varia, comprese le polveri"
+    },
+    {
+        "id": 5,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_car_rif": "7.4.2",
+        "descrizione": " frammenti di materiale argilloso conto virgola e materiale perlitico",
+        "descrizione_estesa": "7.4.2- frammenti di materiale argilloso conto virgola e materiale perlitico"
+    },
+    {
+        "id": 6,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_car_rif": "7.11.2",
+        "descrizione": " pietrisco tolto d'opera costituito da roccia silicea e cristallina o calcare per circa il 70%, con sabbia argilla per circa il 30%",
+        "descrizione_estesa": "7.11.2- pietrisco tolto d'opera costituito da roccia silicea e cristallina o calcare per circa il 70%, con sabbia argilla per circa il 30%"
+    },
+    {
+        "id": 7,
+        "cod_ra_tipo_rifiuto": "7.14",
+        "cod_car_rif": "7.14. 2",
+        "descrizione": " detriti con presenza di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/ barite contenenti idrocarburi in concentrazioni inferiori a 1000 mg/ Kg sul secco, IPA <10 ppm",
+        "descrizione_estesa": "7.14. 2- detriti con presenza di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/ barite contenenti idrocarburi in concentrazioni inferiori a 1000 mg/ Kg sul secco, IPA <10 ppm"
+    },
+    {
+        "id": 8,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_car_rif": "7.15. 2",
+        "descrizione": "fango a base di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/barite con eventuale presenza di terriccio; contenenti idrocarburi in concentrazioni inferiori a 1000 mg/Kg sul secco, IPA <10 ppm",
+        "descrizione_estesa": "7.15. 2-fango a base di acqua/bentonite, di acqua/bentonite/barite, di olio/organosmectiti/barite con eventuale presenza di terriccio; contenenti idrocarburi in concentrazioni inferiori a 1000 mg/Kg sul secco, IPA <10 ppm"
+    },
+    {
+        "id": 9,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_car_rif": "7.16.2",
+        "descrizione": " rifiuto costituito essenzialmente da carbonato di calcio (70%) con silice, allumina, ossido di ferro (~ 10%) e sostanze organiche (proteine, pectina, etc.), derivante dalla filtrazione di sughi zuccherini dopo trattamento con calce e anidride carbonica",
+        "descrizione_estesa": "7.16.2- rifiuto costituito essenzialmente da carbonato di calcio (70%) con silice, allumina, ossido di ferro (~ 10%) e sostanze organiche (proteine, pectina, etc.), derivante dalla filtrazione di sughi zuccherini dopo trattamento con calce e anidride carbonica"
+    },
+    {
+        "id": 10,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_car_rif": "7.17.2",
+        "descrizione": " frammenti in varia pezzatura comprese polveri, di pietra calcarea e terriccio di cava o materiali inerti a base di carbonato di calcio, con eventuale presenza di materie prime siderurgiche (carbon fossile, coke, minerali di ferro in misura minore del 20% in peso)",
+        "descrizione_estesa": "7.17.2- frammenti in varia pezzatura comprese polveri, di pietra calcarea e terriccio di cava o materiali inerti a base di carbonato di calcio, con eventuale presenza di materie prime siderurgiche (carbon fossile, coke, minerali di ferro in misura minore del 20% in peso)"
+    },
+    {
+        "id": 11,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_car_rif": "7.18.2",
+        "descrizione": " scarti da vagliatura latte di calce miscela di carbonato, ossido e idrossido di calcio (~82%) e silice, allumina e ossido di ferro (~18%)",
+        "descrizione_estesa": "7.18.2- scarti da vagliatura latte di calce miscela di carbonato, ossido e idrossido di calcio (~82%) e silice, allumina e ossido di ferro (~18%)"
+    },
+    {
+        "id": 12,
+        "cod_ra_tipo_rifiuto": "7.3",
+        "cod_car_rif": "7.30.2",
+        "descrizione": " miscela di sabbia, altri inerti, conchiglie e altro",
+        "descrizione_estesa": "7.30.2- miscela di sabbia, altri inerti, conchiglie e altro"
+    },
+    {
+        "id": 13,
+        "cod_ra_tipo_rifiuto": "7.31",
+        "cod_car_rif": "7.31.2",
+        "descrizione": " rifiuto costituito da terriccio con eventuali parti vegetali e sostanze organiche; Parti in fibra di lana",
+        "descrizione_estesa": "7.31.2- rifiuto costituito da terriccio con eventuali parti vegetali e sostanze organiche; Parti in fibra di lana"
+    },
+    {
+        "id": 14,
+        "cod_ra_tipo_rifiuto": "7.31 bis",
+        "cod_car_rif": "7.31bis2 ",
+        "descrizione": "materiale inerte vario costituito da terra con presenza di ciottoli, sabbia, ghiaia, trovanti, anche di origine antropica",
+        "descrizione_estesa": "7.31bis2 -materiale inerte vario costituito da terra con presenza di ciottoli, sabbia, ghiaia, trovanti, anche di origine antropica"
+    },
+    {
+        "id": 15,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_car_rif": "11.2.2",
+        "descrizione": " silice sotto forma di silicati e idro silicati di alluminio",
+        "descrizione_estesa": "11.2.2- silice sotto forma di silicati e idro silicati di alluminio"
+    },
+    {
+        "id": 16,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_car_rif": "12.1.2 ",
+        "descrizione": "fango palabile",
+        "descrizione_estesa": "12.1.2 -fango palabile"
+    },
+    {
+        "id": 17,
+        "cod_ra_tipo_rifiuto": "12.2",
+        "cod_car_rif": "12.2.2",
+        "descrizione": " materiale composto da limi, argille, sabbie e ghiaie con contenuto in acqua <80%, idrocarburi totali <30 mg/kg SS, PCB <0,01 mg/kg SS, IPA <1 mg/Kg SS, pesticidi organoclorurati <0,01mg/kg SS, coliformi fecali <20 MPN in 100 ml; salmonella assenti in 5000 ml.",
+        "descrizione_estesa": "12.2.2- materiale composto da limi, argille, sabbie e ghiaie con contenuto in acqua <80%, idrocarburi totali <30 mg/kg SS, PCB <0,01 mg/kg SS, IPA <1 mg/Kg SS, pesticidi organoclorurati <0,01mg/kg SS, coliformi fecali <20 MPN in 100 ml; salmonella assenti in 5000 ml."
+    },
+    {
+        "id": 18,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_car_rif": "12.3.2 ",
+        "descrizione": "fanghi contenenti oltre 85% di carbonato di calcio sul secco",
+        "descrizione_estesa": "12.3.2 -fanghi contenenti oltre 85% di carbonato di calcio sul secco"
+    },
+    {
+        "id": 19,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_car_rif": "12.4.2 ",
+        "descrizione": "fanghi filtro pressati palabili contenenti oltre il 50% di silicati",
+        "descrizione_estesa": "12.4.2 -fanghi filtro pressati palabili contenenti oltre il 50% di silicati"
+    },
+    {
+        "id": 20,
+        "cod_ra_tipo_rifiuto": "12.7",
+        "cod_car_rif": "12.7.2",
+        "descrizione": " fanghi contenenti libri, argille, terriccio ed eventuali elementi di natura vegetale",
+        "descrizione_estesa": "12.7.2- fanghi contenenti libri, argille, terriccio ed eventuali elementi di natura vegetale"
+    },
+    {
+        "id": 21,
+        "cod_ra_tipo_rifiuto": "12.9",
+        "cod_car_rif": "12.9.2 ",
+        "descrizione": "solido palabile di colore grigio con umidità pari al 50%, contenente piombo < 60 ppm e rame totale <400 ppm sul secco",
+        "descrizione_estesa": "12.9.2 -solido palabile di colore grigio con umidità pari al 50%, contenente piombo < 60 ppm e rame totale <400 ppm sul secco"
+    },
+    {
+        "id": 22,
+        "cod_ra_tipo_rifiuto": "12.15",
+        "cod_car_rif": "12.15.2 ",
+        "descrizione": "fanghi ad elevato contenuto in acqua, segatura, trucioli, cortecce, fibra di legno, limo e terra",
+        "descrizione_estesa": "12.15.2 -fanghi ad elevato contenuto in acqua, segatura, trucioli, cortecce, fibra di legno, limo e terra"
+    },
+    {
+        "id": 23,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_car_rif": "13.2.2",
+        "descrizione": "ceneri costituite principalmente da potassio, calcio, sodio e loro composti; PCDD in concentrazione non superiore a 0.1 ppb sul secco, PCB, PCT <25 ppm PCB, PCT <5 ppm sul secco.",
+        "descrizione_estesa": "13.2.2-ceneri costituite principalmente da potassio, calcio, sodio e loro composti; PCDD in concentrazione non superiore a 0.1 ppb sul secco, PCB, PCT <25 ppm PCB, PCT <5 ppm sul secco."
+    },
+    {
+        "id": 24,
+        "cod_ra_tipo_rifiuto": "13.6",
+        "cod_car_rif": "13.6.2 ",
+        "descrizione": " solfato di calcio >70% sul secco ed eventuale presenza di silice, allumina e ossido di ferro 5 15% allo stato solido o in sospensione ovvero eventuale presenza di sostanza organica (circa 5%) nei gessi da produzione acidi citrico e tartarico.",
+        "descrizione_estesa": "13.6.2 - solfato di calcio >70% sul secco ed eventuale presenza di silice, allumina e ossido di ferro 5 15% allo stato solido o in sospensione ovvero eventuale presenza di sostanza organica (circa 5%) nei gessi da produzione acidi citrico e tartarico."
+    },
+    {
+        "id": 25,
+        "cod_ra_tipo_rifiuto": "13.7",
+        "cod_car_rif": "13.7.2",
+        "descrizione": "gessi biidrati con tenore minimo di CaSO4.2H2O pari al 68% sulla sostanza secca, di colore bianco o rosso e tenore massimo di umidità del 60%; gessi anidri di colore bianco con tenore di CaSO4 uguale o superiore al 68% sulla sostanza secca ed un tenore massimo di umidità del 5% e di Cl <0,5%.",
+        "descrizione_estesa": "13.7.2-gessi biidrati con tenore minimo di CaSO4.2H2O pari al 68% sulla sostanza secca, di colore bianco o rosso e tenore massimo di umidità del 60%; gessi anidri di colore bianco con tenore di CaSO4 uguale o superiore al 68% sulla sostanza secca ed un tenore massimo di umidità del 5% e di Cl <0,5%."
+    },
+    {
+        "id": 26,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_car_rif": "13.11.2 ",
+        "descrizione": "polvere grigia incoerente, di pezzatura di sotto dei 3 mm, con contenuto in acqua inferiore al 40%",
+        "descrizione_estesa": "13.11.2 -polvere grigia incoerente, di pezzatura di sotto dei 3 mm, con contenuto in acqua inferiore al 40%"
+    }
+]

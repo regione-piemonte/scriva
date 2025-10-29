@@ -1,0 +1,3394 @@
+swagger: '2.0'
+info:
+  title: SCRIVA FO API
+  description: API per il frontend di SCRIVA
+  version: 1.0.0
+host: "dev-scriva.servizi.regione.piemonte.it"
+basePath: "/scrivafoweb/api/v1"
+schemes:
+  - "http"
+paths:
+  '/accreditamenti':
+    post:
+      tags:
+        - "Accreditamenti"
+      consumes:
+        - application/json
+      operationId: saveAccreditamento
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/AccreditamentoDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/AccreditamentoDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Parameters were not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/accreditamenti/{uid}/valida':
+    get:
+      tags:
+        - "Accreditamenti"
+      operationId: validateAccreditamento
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+        - in: query
+          name: otp
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items :
+              $ref: '#/definitions/CompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ambiti':
+    get:
+      tags:
+        - "Ambiti"
+      operationId: getAmbiti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/AmbitoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ambiti/codice/{codAmbito}':
+    get:
+      tags:
+        - "Ambiti"
+      operationId: getAmbitoByCodice
+      parameters:
+        - in: path
+          name: codAmbito
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/AmbitoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ambiti/id/{idAmbito}':
+    get:
+      tags:
+        - "Ambiti"
+      operationId: getAmbito
+      parameters:
+        - format: int64
+          in: path
+          name: idAmbito
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/AmbitoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/compilanti':
+    get:
+      tags:
+        - "Compilanti"
+      operationId: getCompilanti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/CompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/compilanti/cf/{codiceFiscale}':
+    get:
+      tags:
+        - "Compilanti"
+      operationId: getCompilanteByCodiceFiscale
+      parameters:
+        - in: path
+          name: codiceFiscale
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/CompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/compilanti/preferenze':
+    post:
+      tags:
+        - "Compilanti"
+      consumes: []
+      operationId: addPreferenza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/CompilantePreferenzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/CompilantePreferenzaExtendedDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/compilanti/preferenze/cf/{cfCompilante}':
+    get:
+      tags:
+        - "Compilanti"
+      operationId: getPreferenzeByCfCompilante
+      parameters:
+        - in: path
+          name: cfCompilante
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/CompilantePreferenzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/compilanti/preferenze/id-compilante/{idCompilante}':
+    get:
+      tags:
+        - "Compilanti"
+      operationId: getPreferenzeByCompilante
+      parameters:
+        - format: int64
+          in: path
+          name: idCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/CompilantePreferenzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/configura-ruoli-soggetti':
+    get:
+      tags:
+        - "Ruoli Soggetti"
+      operationId: getConfiguraRuoliSoggetti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ConfiguraRuoloSoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/configura-ruoli-soggetti/ruolo-compilante/{idRuoloCompilante}':
+    get:
+      tags:
+        - "Ruoli Soggetti"
+      operationId: getConfiguraRuoliSoggettiByRuoloCompilante
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ConfiguraRuoloSoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/configura-ruoli-soggetti/ruolo-soggetto/{idRuoloSoggetto}':
+    get:
+      tags:
+        - "Ruoli Soggetti"
+      operationId: getConfiguraRuoliSoggettiByRuoloSoggetto
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloSoggetto
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ConfiguraRuoloSoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/configura-ruoli-soggetti/tipo-procedimento/{idTipoProcedimento}':
+    get:
+      tags:
+        - "Ruoli Soggetti"
+      operationId: getConfiguraRuoliSoggettiByTipoProcedimento
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ConfiguraRuoloSoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/geeco/id-ruolo-applicativo/{idRuoloApplicativo}/id-oggetto-istanza/{idOggettoIstanza}':
+    get:
+      tags:
+        - "Geeco"
+      operationId: getGeecoUrl
+      parameters:
+        - format: int32
+          in: path
+          name: idRuoloApplicativo
+          required: true
+          type: integer
+        - format: int64
+          in: path
+          name: idOggettoIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/GeecoUrlDTO'
+  '/istanze':
+    get:
+      tags:
+        - "Istanze"
+      operationId: getIstanze_1
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Istanze"
+      consumes:
+        - application/json
+      operationId: saveIstanza_1
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/IstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/IstanzaExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Istanze"
+      consumes:
+        - application/json
+      operationId: updateIstanza_1
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/IstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/IstanzaExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/compilante/cf/{cfCompilante}':
+    get:
+      tags:
+        - "Istanze"
+      operationId: getIstanzeByCfCompilante_1
+      parameters:
+        - in: path
+          name: cfCompilante
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/compilante/{idCompilante}':
+    get:
+      tags:
+        - "Istanze"
+      operationId: getIstanzeByIdCompilante_1
+      parameters:
+        - format: int64
+          in: path
+          name: idCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/id/{idIstanza}':
+    get:
+      tags:
+        - "Istanze"
+      operationId: getIstanza_1
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/referenti':
+    post:
+      tags:
+        - "Referenti"
+      consumes: []
+      operationId: addReferente_1
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/ReferenteIstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ReferenteIstanzaExtendedDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Referenti"
+      consumes: []
+      operationId: updateReferente_1
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/ReferenteIstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+  '/istanze/referenti/codice-istanza/{codeIstanza}':
+    get:
+      tags:
+        - "Referenti"
+      operationId: getReferentiByCodeIstanza_1
+      parameters:
+        - in: path
+          name: codeIstanza
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ReferenteIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/referenti/id-istanza/{idIstanza}':
+    get:
+      tags:
+        - "Referenti"
+      operationId: getReferentiByIstanza_1
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ReferenteIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/referenti/{uid}':
+    delete:
+      tags:
+        - "Referenti"
+      operationId: deleteReferente_1
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/{uid}':
+    delete:
+      tags:
+        - "Istanze"
+      operationId: deleteIstanza_1
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/pdf/{idIstanza}':
+    get:
+      tags:
+        - "Istanze"
+      operationId: createPDF
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+        - application/pdf
+      responses:
+        '200':
+          description: Document created successful.
+          schema:
+            items:
+              format: byte
+              type: string
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze/stato-istanza/uid-istanza/{uidIstanza}/id-stato-istanza/{idStatoIstanza}':
+    get:
+      tags:
+        - "Istanze"
+      operationId: updateStatoIstanza
+      parameters:
+        - in: path
+          name: uidIstanza
+          required: true
+          type: string
+        - format: int64
+          in: path
+          name: idStatoIstanza
+          required: true
+          type: integer
+        - in: query
+          name: gestAttoreUpd
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze-template-quadri':
+    post:
+      tags:
+        - "Istanze (Template)"
+      consumes:
+        - application/json
+      operationId: saveIstanzaTemplateQuadro
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/IstanzaTemplateFoDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/IstanzaTemplateFoDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Istanze (Template)"
+      consumes:
+        - application/json
+      operationId: updateIstanzaTemplateQuadro
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/IstanzaTemplateFoDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/IstanzaTemplateFoDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze-template-quadri/code-template/{codeTemplate}/id-istanza/{idIstanza}':
+    get:
+      tags:
+        - "Istanze (Template)"
+      operationId: getTemplateQuadriByCodeTemplateAndIdIstanza
+      parameters:
+        - in: path
+          name: codeTemplate
+          required: true
+          type: string
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaTemplateFoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze-template-quadri/id-istanza/{idIstanza}':
+    get:
+      tags:
+        - "Istanze (Template)"
+      operationId: getIstanzaTemplateQuadroByIdIstanza
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaTemplateFoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/istanze-template-quadri/id-istanza/{idIstanza}/id-template-quadro/{idTemplateQuadro}':
+    delete:
+      tags:
+        - "Istanze (Template)"
+      operationId: deleteIstanzaTemplateQuadro
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+        - format: int64
+          in: path
+          name: idTemplateQuadro
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    get:
+      tags:
+        - "Istanze (Template)"
+      operationId: getIstanzaTemplateQuadro
+      parameters:
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+        - format: int64
+          in: path
+          name: idTemplateQuadro
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/IstanzaTemplateFoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/messaggi':
+    get:
+      tags:
+        - "Messaggi"
+      operationId: getMessaggi
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/MessaggioExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/messaggi/codice-messaggio/{codMessaggio}':
+    get:
+      tags:
+        - "Messaggi"
+      operationId: getMessaggioByCode
+      parameters:
+        - in: path
+          name: codMessaggio
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/MessaggioExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/messaggi/id-messaggio/{idMessaggio}':
+    get:
+      tags:
+        - "Messaggi"
+      operationId: getMessaggio
+      parameters:
+        - format: int64
+          in: path
+          name: idMessaggio
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/MessaggioExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti':
+    get:
+      tags:
+        - "Oggetti"
+      operationId: getOggetti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Oggetti"
+      consumes:
+        - application/json
+      operationId: saveOggetto
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Oggetti"
+      consumes:
+        - application/json
+      operationId: updateOggetto
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti/id-comune/{idComune}':
+    get:
+      tags:
+        - "Oggetti"
+      operationId: getOggettoByIdComune
+      parameters:
+        - format: int64
+          in: path
+          name: idComune
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti/id/{idOggetto}':
+    get:
+      tags:
+        - "Oggetti"
+      operationId: getOggettoById
+      parameters:
+        - format: int64
+          in: path
+          name: idOggetto
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti/search':
+    post:
+      tags:
+        - "Oggetti"
+      consumes:
+        - application/json
+      operationId: searchOggetto
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SearchOggettoDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti/{uid}':
+    delete:
+      tags:
+        - "Oggetti"
+      operationId: deleteOggetto
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    get:
+      tags:
+        - "Oggetti"
+      operationId: getOggettoByUID
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti-istanza':
+    get:
+      tags:
+        - "Oggetti Istanza"
+      operationId: getOggettiIstanza
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Oggetti Istanza"
+      consumes:
+        - application/json
+      operationId: saveOggettoIstanza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Oggetti Istanza"
+      consumes:
+        - application/json
+      operationId: updateOggettoIstanza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti-istanza/id/{idOggettoIstanza}':
+    get:
+      tags:
+        - "Oggetti Istanza"
+      operationId: getOggettoIstanzaById
+      parameters:
+        - format: int64
+          in: path
+          name: idOggettoIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti-istanza/search':
+    post:
+      tags:
+        - "Oggetti Istanza"
+      consumes:
+        - application/json
+      operationId: searchOggettoIstanza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SearchOggettoDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti-istanza/tipo-procedimento/{tipoProcedimento}/id-istanza/{idIstanza}':
+    get:
+      tags:
+        - "Oggetti Istanza"
+      operationId: verificaGeoreferenziazione
+      parameters:
+        - in: path
+          name: tipoProcedimento
+          required: true
+          type: string
+        - format: int64
+          in: path
+          name: idIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/VerificaGeoRefDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/oggetti-istanza/{uidOggettoIstanza}':
+    get:
+      tags:
+        - "Oggetti Istanza"
+      operationId: getOggettoIstanzaByUID
+      parameters:
+        - in: path
+          name: uidOggettoIstanza
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/OggettoIstanzaUbicazioneExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    delete:
+      tags:
+        - "Oggetti Istanza"
+      operationId: deleteOggettoIstanza
+      parameters:
+        - in: path
+          name: uidOggettoIstanza
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ping':
+    get:
+      tags:
+        - "Ping"
+      operationId: ping
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/Ping'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti':
+    get:
+      tags:
+        - "Procedimenti"
+      operationId: getTipiProcedimento
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti/codice/{codTipoProcedimento}':
+    get:
+      tags:
+        - "Procedimenti"
+      operationId: getTipoProcedimentoByCode
+      parameters:
+        - in: path
+          name: codTipoProcedimento
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti/id-ambito/{idAmbito}':
+    get:
+      tags:
+        - "Procedimenti"
+      operationId: getTipiProcedimentoPerAmbito
+      parameters:
+        - format: int64
+          in: path
+          name: idAmbito
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti/id-compilante/{idCompilante}':
+    get:
+      tags:
+        - "Procedimenti"
+      operationId: getTipiProcedimentoConPreferenze
+      parameters:
+        - format: int64
+          in: path
+          name: idCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti/id/{idTipoProcedimento}':
+    get:
+      tags:
+        - "Procedimenti"
+      operationId: getTipoProcedimento
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-config':
+    get:
+      tags:
+        - "Procedimenti (configuraazione)"
+      operationId: getProcedimentiConfig
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoConfigDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-config/tipo-procedimento/{desTipoProcedimento}':
+    get:
+      tags:
+        - "Procedimenti (configuraazione)"
+      operationId: getProcedimentoConfigByTipoProcedimento
+      parameters:
+        - in: path
+          name: desTipoProcedimento
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoConfigDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-config/tipo-procedimento/{desTipoProcedimento}/info/{infoScriva}':
+    get:
+      tags:
+        - "Procedimenti (configuraazione)"
+      operationId: getProcedimentoConfigByTipoProcedimentoInformazione
+      parameters:
+        - in: path
+          name: desTipoProcedimento
+          required: true
+          type: string
+        - in: path
+          name: infoScriva
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoConfigDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-config/tipo-procedimento/{desTipoProcedimento}/info/{infoScriva}/chiave/{chiave}':
+    get:
+      tags:
+        - "Procedimenti (configuraazione)"
+      operationId: getProcedimentoConfigByTipoProcedimentoInformazioneChiave
+      parameters:
+        - in: path
+          name: desTipoProcedimento
+          required: true
+          type: string
+        - in: path
+          name: infoScriva
+          required: true
+          type: string
+        - in: path
+          name: chiave
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoConfigDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-ruoli-compilante':
+    get:
+      tags:
+        - "Procedimenti (Ruoli compilante)"
+      operationId: getProcedimentiRuoliCompilante
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoRuoloCompilanteExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-ruoli-compilante/id-ruolo-compilante/{idRuoloCompilante}':
+    get:
+      tags:
+        - "Procedimenti (Ruoli compilante)"
+      operationId: getProcedimentiRuoliCompilanteByRuoloCompilante
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoRuoloCompilanteExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-ruoli-compilante/id-ruolo-compilante/{idRuoloCompilante}/id-tipo-procedimento/{idTipoProcedimento}':
+    get:
+      tags:
+        - "Procedimenti (Ruoli compilante)"
+      operationId: getProcedimentoRuoloCompilante
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloCompilante
+          required: true
+          type: integer
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoRuoloCompilanteExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/procedimenti-ruoli-compilante/id-tipo-procedimento/{idTipoProcedimento}':
+    get:
+      tags:
+        - "Procedimenti (Ruoli compilante)"
+      operationId: getProcedimentiRuoliCompilanteByTipoProcedimento
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProcedimentoRuoloCompilanteExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/province':
+    get:
+      tags:
+        - "Province"
+      operationId: getProvince
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ProvinciaDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/province/{siglaProvincia}/comuni':
+    get:
+      tags:
+        - "Comuni"
+      operationId: getComuniByProvincia
+      parameters:
+        - in: path
+          name: siglaProvincia
+          required: true
+          type: string
+        - in: query
+          name: fields
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/ComuneDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-compilante':
+    get:
+      tags:
+        - "Ruoli compilante"
+      operationId: getRuoliCompilante
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloCompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-compilante/codice/{codRuoloCompilante}':
+    get:
+      tags:
+        - "Ruoli compilante"
+      operationId: getRuoloCompilanteByCode
+      parameters:
+        - in: path
+          name: codRuoloCompilante
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloCompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-compilante/id-tipo-procedimento/{idTipoProcedimento}':
+    get:
+      tags:
+        - "Ruoli compilante"
+      operationId: getRuoliCompilanteByTipoProcedimento
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloCompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-compilante/id/{idRuoloCompilante}':
+    get:
+      tags:
+        - "Ruoli compilante"
+      operationId: getRuoloCompilante
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloCompilanteDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-soggetto':
+    get:
+      tags:
+        - "Ruoli Soggetto"
+      operationId: getRuoliSoggetti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-soggetto/codice/{codRuoloSoggetto}':
+    get:
+      tags:
+        - "Ruoli Soggetto"
+      operationId: getRuoloSoggettoByCode
+      parameters:
+        - in: path
+          name: codRuoloSoggetto
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-soggetto/id-tipo-procedimento/{idTipoProcedimento}/id-ruolo-compilante/{idRuoloCompilante}':
+    get:
+      tags:
+        - "Ruoli Soggetto"
+      operationId: loadRuoliSoggettoByIdRuoloCompilanteAndIdTipoProcedimento
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoProcedimento
+          required: true
+          type: integer
+        - format: int64
+          in: path
+          name: idRuoloCompilante
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/ruoli-soggetto/id/{idRuoloSoggetto}':
+    get:
+      tags:
+        - "Ruoli Soggetto"
+      operationId: getRuoloSoggetto
+      parameters:
+        - format: int64
+          in: path
+          name: idRuoloSoggetto
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/RuoloSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/search/istanze':
+    post:
+      tags:
+        - "Ricerca (istanze)"
+      consumes: []
+      operationId: searchIstanze
+      parameters:
+        - format: int32
+          in: query
+          name: offset
+          type: integer
+        - format: int32
+          in: query
+          name: limit
+          type: integer
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SearchDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/IstanzaSearchResultFoDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti':
+    get:
+      tags:
+        - "Soggetti"
+      operationId: getSoggetti
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Soggetti"
+      consumes:
+        - application/json
+      operationId: saveSoggetto
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Soggetti"
+      consumes:
+        - application/json
+      operationId: updateSoggetto
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/SoggettoExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti/cf-impresa/{codiceFiscaleImpresa}/cf-soggetto/{codiceFiscaleSoggetto}/tipo-soggetto/{tipoSoggetto}/tipo-procedimento/{tipoProcedimento}':
+    get:
+      tags:
+        - "Soggetti"
+      operationId: getSoggettoImpresa
+      parameters:
+        - in: path
+          name: codiceFiscaleImpresa
+          required: true
+          type: string
+        - in: path
+          name: codiceFiscaleSoggetto
+          required: true
+          type: string
+        - in: path
+          name: tipoSoggetto
+          required: true
+          type: string
+        - in: path
+          name: tipoProcedimento
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti/cf/{codiceFiscale}/tipo-soggetto/{tipoSoggetto}/tipo-procedimento/{tipoProcedimento}':
+    get:
+      tags:
+        - "Soggetti"
+      operationId: getSoggettoByCodiceFiscaleAndTipo
+      parameters:
+        - in: path
+          name: codiceFiscale
+          required: true
+          type: string
+        - in: path
+          name: tipoSoggetto
+          required: true
+          type: string
+        - in: path
+          name: tipoProcedimento
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti/id/{idSoggetto}':
+    get:
+      tags:
+        - "Soggetti"
+      operationId: getSoggettoById
+      parameters:
+        - format: int64
+          in: path
+          name: idSoggetto
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    delete:
+      tags:
+        - "Soggetti"
+      operationId: deleteSoggetto
+      parameters:
+        - in: path
+          name: idSoggetto
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti-istanza':
+    get:
+      tags:
+        - "Soggetti Istanza"
+      operationId: getSoggettiIstanza
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    post:
+      tags:
+        - "Soggetti Istanza"
+      consumes:
+        - application/json
+      operationId: saveSoggettoIstanza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '201':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    put:
+      tags:
+        - "Soggetti Istanza"
+      consumes:
+        - application/json
+      operationId: updateSoggettoIstanza
+      parameters:
+        - in: body
+          name: body
+          schema:
+            $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+        '400':
+          description: Validation error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti-istanza/cf/{codiceFiscale}':
+    get:
+      tags:
+        - "Soggetti Istanza"
+      operationId: getSoggettiIstanzaByCodiceFiscaleSoggetto
+      parameters:
+        - in: path
+          name: codiceFiscale
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti-istanza/id-padre/{idSoggettoPadre}':
+    get:
+      tags:
+        - "Soggetti Istanza"
+      operationId: getSoggettoIstanzaByIdSoggettoPadre
+      parameters:
+        - format: int64
+          in: path
+          name: idSoggettoPadre
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti-istanza/id/{idSoggettoIstanza}':
+    get:
+      tags:
+        - "Soggetti Istanza"
+      operationId: getSoggettoIstanza
+      parameters:
+        - format: int64
+          in: path
+          name: idSoggettoIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/SoggettoIstanzaExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+    delete:
+      tags:
+        - "Soggetti Istanza"
+      operationId: deleteSoggettoIstanzaById
+      parameters:
+        - format: int64
+          in: path
+          name: idSoggettoIstanza
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/soggetti-istanza/{uid}':
+    delete:
+      tags:
+        - "Soggetti Istanza"
+      operationId: deleteSoggettoIstanza
+      parameters:
+        - in: path
+          name: uid
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '204':
+          description: Successful operation.
+        '404':
+          description: Item was not found.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/template-quadri/code-template/{codeTemplate}':
+    get:
+      tags:
+        - "Template quadri"
+      operationId: getTemplateQuadriByCodeTemplate
+      parameters:
+        - in: path
+          name: codeTemplate
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TemplateQuadroExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/template-quadri/id-template-quadro/{idTemplateQuadro}':
+    get:
+      tags:
+        - "Template quadri"
+      operationId: getTemplateQuadriByIdTemplateQuadro
+      parameters:
+        - format: int64
+          in: path
+          name: idTemplateQuadro
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TemplateQuadroExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/template-quadri/tipo-procedimento/{tipoProcedimento}':
+    get:
+      tags:
+        - "Template quadri"
+      operationId: getTemplateQuadriByTipoProcedimento
+      parameters:
+        - in: path
+          name: tipoProcedimento
+          required: true
+          type: string
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TemplateQuadroExtendedDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/tipi-natura-giuridica':
+    get:
+      tags:
+        - "Tipi natura giuridica"
+      operationId: getTipiNaturaGiuridica
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoNaturaGiuridicaDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/tipi-natura-giuridica/id/{idTipoNaturaGiuridica}':
+    get:
+      tags:
+        - "Tipi natura giuridica"
+      operationId: getTipoNaturaGiuridica
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoNaturaGiuridica
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoNaturaGiuridicaDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/tipi-soggetto':
+    get:
+      tags:
+        - "Tipi soggetto"
+      operationId: getTipiSoggetto
+      parameters: []
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+  '/tipi-soggetto/id/{idTipoSoggetto}':
+    get:
+      tags:
+        - "Tipi soggetto"
+      operationId: getTipoSoggetto
+      parameters:
+        - format: int64
+          in: path
+          name: idTipoSoggetto
+          required: true
+          type: integer
+      produces:
+        - application/json
+      responses:
+        '200':
+          description: Successful operation.
+          schema:
+            items:
+              $ref: '#/definitions/TipoSoggettoDTO'
+            type: array
+        '500':
+          description: Unexpected error.
+          schema:
+            $ref: '#/definitions/ErrorDTO'
+definitions:
+  AccreditamentoDTO:
+    properties:
+      cf_accredito:
+        type: string
+      cognome_accredito:
+        type: string
+      des_email_accredito:
+        type: string
+      flg_autorizza_dati_personali:
+        type: boolean
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_compilante:
+        format: int64
+        type: integer
+      id_richiesta_accredito:
+        format: int64
+        type: integer
+      nome_accredito:
+        type: string
+    type: object
+  AmbitoDTO:
+    properties:
+      cod_ambito:
+        type: string
+      des_ambito:
+        type: string
+      des_estesa_ambito:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_ambito:
+        format: int64
+        type: integer
+    type: object
+  CompilanteDTO:
+    properties:
+      cf_compilante:
+        type: string
+      cognome_compilante:
+        type: string
+      des_email_compilante:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_compilante:
+        format: int64
+        type: integer
+      nome_compilante:
+        type: string
+    type: object
+  CompilantePreferenzaExtendedDTO:
+    properties:
+      compilante:
+        $ref: '#/definitions/CompilanteDTO'
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_preferenza:
+        format: int64
+        type: integer
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  ComuneDTO:
+    properties:
+      cap_comune:
+        type: string
+      codice_istat_comune:
+        type: string
+      des_provincia:
+        type: string
+      id_comune:
+        format: int64
+        type: integer
+      sigla_provincia:
+        type: string
+      toponimo:
+        type: string
+    type: object
+  ConfiguraRuoloSoggettoExtendedDTO:
+    properties:
+      ruolo_compilante:
+        $ref: '#/definitions/RuoloCompilanteDTO'
+      ruolo_soggetto:
+        $ref: '#/definitions/RuoloSoggettoDTO'
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  ErrorDTO:
+    properties:
+      status:
+        type: string
+      code:
+        type: string
+      title:
+        type: string
+      detail:
+        type: object
+        additionalProperties:
+          type: string
+      links:
+        type: array
+        items:
+          type: string
+    type: object
+  GeecoUrlDTO:
+    properties:
+      url:
+        type: string
+    type: object
+  IstanzaExtendedDTO:
+    properties:
+      anno_istanza:
+        format: int64
+        type: integer
+      cod_autorita_competente:
+        type: string
+      cod_istanza:
+        type: string
+      compilante:
+        $ref: '#/definitions/CompilanteDTO'
+      data_inserimento_istanza:
+        format: date-time
+        type: string
+      data_modifica_istanza:
+        format: date-time
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_istanza:
+        format: int64
+        type: integer
+      json_data:
+        type: string
+      prog_anno:
+        format: int64
+        type: integer
+      stato_istanza:
+        $ref: '#/definitions/StatoIstanzaDTO'
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  IstanzaSearchResultDTO:
+    properties:
+      cod_istanza:
+        type: string
+      codice_stato_istanza:
+        type: string
+      comune:
+        type: string
+      data_inserimento_istanza:
+        format: date-time
+        type: string
+      data_presentazione_istanza:
+        format: date-time
+        type: string
+      den_oggetto:
+        type: string
+      den_soggetto:
+        type: string
+      des_estesa_tipo_procedimento:
+        type: string
+      des_stato_istanza:
+        type: string
+      id_istanza:
+        format: int64
+        type: integer
+    type: object
+  IstanzaSearchResultFoDTO:
+    properties:
+      countIstanzeHeader:
+        type: string
+      istanzaSearchResultDTOList:
+        items:
+          $ref: '#/definitions/IstanzaSearchResultDTO'
+        type: array
+      paginationInfoHeader:
+        type: string
+    type: object
+  IstanzaTemplateFoDTO:
+    properties:
+      istanza:
+        $ref: '#/definitions/IstanzaExtendedDTO'
+      template:
+        $ref: '#/definitions/TemplateFoDTO'
+    type: object
+  IstanzaTemplateQuadroDTO:
+    properties:
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_istanza:
+        format: int64
+        type: integer
+      id_template_quadro:
+        format: int64
+        type: integer
+      json_data_quadro:
+        type: string
+    type: object
+  MessaggioExtendedDTO:
+    properties:
+      cod_messaggio:
+        type: string
+      des_testo_messaggio:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_messaggio:
+        format: int64
+        type: integer
+      tipo_messaggio:
+        $ref: '#/definitions/TipoMessaggioDTO'
+    type: object
+  NaturaOggettoDTO:
+    properties:
+      cod_natura_oggetto:
+        type: string
+      des_natura_oggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_natura_oggetto:
+        format: int64
+        type: integer
+    type: object
+  OggettoIstanzaUbicazioneExtendedDTO:
+    properties:
+      cod_scriva:
+        format: int64
+        type: integer
+      cod_oggetto_fonte:
+        type: string
+      coordinata_x:
+        type: number
+      coordinata_y:
+        type: number
+      den_oggetto:
+        type: string
+      des_oggetto:
+        type: string
+      flg_esistente:
+        type: boolean
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_masterdata:
+        format: int64
+        type: integer
+      id_masterdata_origine:
+        format: int64
+        type: integer
+      id_oggetto:
+        format: int64
+        type: integer
+      id_oggetto_istanza:
+        format: int64
+        type: integer
+      ind_geo_stato:
+        type: string
+      istanza:
+        $ref: '#/definitions/IstanzaExtendedDTO'
+      tipologia_oggetto:
+        $ref: '#/definitions/TipologiaOggettoExtendedDTO'
+      ubicazione_oggetto:
+        items:
+          $ref: '#/definitions/UbicazioneOggettoIstanzaExtendedDTO'
+        type: array
+    type: object
+  OggettoUbicazioneExtendedDTO:
+    properties:
+      cod_scriva:
+        format: int64
+        type: integer
+      cod_oggetto_fonte:
+        type: string
+      coordinata_x:
+        type: number
+      coordinata_y:
+        type: number
+      den_oggetto:
+        type: string
+      des_oggetto:
+        type: string
+      flg_esistente:
+        type: boolean
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_masterdata:
+        format: int64
+        type: integer
+      id_masterdata_origine:
+        format: int64
+        type: integer
+      id_oggetto:
+        format: int64
+        type: integer
+      stato_oggetto:
+        $ref: '#/definitions/StatoOggettoDTO'
+      tipologia_oggetto:
+        $ref: '#/definitions/TipologiaOggettoExtendedDTO'
+      ubicazione_oggetto:
+        items:
+          $ref: '#/definitions/UbicazioneOggettoExtendedDTO'
+        type: array
+    type: object
+  Ping:
+    properties:
+      label:
+        type: string
+      status:
+        type: string
+    type: object
+  ProcedimentoConfigDTO:
+    properties:
+      chiave:
+        type: string
+      des_informazione_scriva:
+        type: string
+      des_tipo_procedimento:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_informazione_scriva:
+        format: int64
+        type: integer
+      id_procedimento_config:
+        format: int64
+        type: integer
+      id_tipo_procedimento:
+        format: int64
+        type: integer
+      note:
+        type: string
+      ordinamento:
+        format: int32
+        type: integer
+      valore:
+        type: string
+    type: object
+  ProcedimentoRuoloCompilanteExtendedDTO:
+    properties:
+      flg_modulo_delega:
+        type: boolean
+      flg_modulo_procura:
+        type: boolean
+      flg_popola_richiedente:
+        type: boolean
+      flg_ruolo_'200':
+        type: boolean
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      ruolo_compilante:
+        $ref: '#/definitions/RuoloCompilanteDTO'
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  ProvinciaDTO:
+    properties:
+      des_provincia:
+        type: string
+      sigla_provincia:
+        type: string
+    type: object
+  QuadroExtendedDTO:
+    properties:
+      flg_tipo_gestione:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_quadro:
+        format: int64
+        type: integer
+      json_configura_quadro:
+        type: string
+      num_versione:
+        format: int32
+        type: integer
+      tipo_quadro:
+        $ref: '#/definitions/TipoQuadroDTO'
+    type: object
+  QuadroFoDTO:
+    properties:
+      flg_quadro_obbigatorio:
+        type: boolean
+      flg_tipo_gestione:
+        type: string
+      id_quadro:
+        format: int64
+        type: integer
+      id_template_quadro:
+        format: int64
+        type: integer
+      json_configura_quadro:
+        type: string
+      json_data_quadro:
+        type: string
+      num_versione:
+        format: int32
+        type: integer
+      ordinamento_template_quadro:
+        format: int32
+        type: integer
+      tipo_quadro:
+        $ref: '#/definitions/TipoQuadroDTO'
+    type: object
+  ReferenteIstanzaExtendedDTO:
+    properties:
+      cognome_referente:
+        type: string
+      des_email_referente:
+        type: string
+      des_mansione_referente:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_referente_istanza:
+        format: int64
+        type: integer
+      istanza:
+        $ref: '#/definitions/IstanzaExtendedDTO'
+      nome_referente:
+        type: string
+      num_tel_referente:
+        type: string
+    type: object
+  RuoloCompilanteDTO:
+    properties:
+      cod_ruolo_compilante:
+        type: string
+      des_ruolo_compilante:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_ruolo_compilante:
+        format: int64
+        type: integer
+    type: object
+  RuoloSoggettoDTO:
+    properties:
+      cod_ruolo_soggetto:
+        type: string
+      des_ruolo_soggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_ruolo_soggetto:
+        format: int64
+        type: integer
+    type: object
+  SearchDTO:
+    properties:
+      cf_compilante:
+        type: string
+      cf_soggetto:
+        type: string
+      comune_oggetto_istanza:
+        type: string
+      data_inserimento_from:
+        format: date-time
+        type: string
+      data_inserimento_to:
+        format: date-time
+        type: string
+      data_presentazione_from:
+        format: date-time
+        type: string
+      data_presentazione_to:
+        format: date-time
+        type: string
+      provincia_oggetto_istanza:
+        type: string
+      simple_search:
+        type: string
+      stato_istanza:
+        type: string
+      tipo_procedimento:
+        type: string
+    type: object
+  SearchOggettoDTO:
+    properties:
+      id_comune:
+        format: int64
+        type: integer
+      id_istanza:
+        format: int64
+        type: integer
+      id_soggetti:
+        items:
+          format: int64
+          type: integer
+        type: array
+    type: object
+  SoggettoExtendedDTO:
+    properties:
+      cf_soggetto:
+        type: string
+      citta_estera_nascita:
+        type: string
+      citta_estera_residenza:
+        type: string
+      cognome:
+        type: string
+      comune_nascita:
+        $ref: '#/definitions/ComuneDTO'
+      comune_residenza:
+        $ref: '#/definitions/ComuneDTO'
+      comune_sede_legale:
+        $ref: '#/definitions/ComuneDTO'
+      data_cessazione_soggetto:
+        format: date-time
+        type: string
+      data_nascita_soggetto:
+        format: date-time
+        type: string
+      den_anno_cciaa:
+        format: int32
+        type: integer
+      den_numero_cciaa:
+        type: string
+      den_provincia_cciaa:
+        type: string
+      den_soggetto:
+        type: string
+      des_email:
+        type: string
+      des_pec:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_masterdata:
+        format: int64
+        type: integer
+      id_masterdata_origine:
+        format: int64
+        type: integer
+      id_soggetto:
+        format: int64
+        type: integer
+      indirizzo_soggetto:
+        type: string
+      nome:
+        type: string
+      num_civico_indirizzo:
+        type: string
+      num_telefono:
+        type: string
+      partita_iva_soggetto:
+        type: string
+      stato_estero_nascita:
+        type: string
+      tipo_natura_giuridica:
+        $ref: '#/definitions/TipoNaturaGiuridicaDTO'
+      tipo_soggetto:
+        $ref: '#/definitions/TipoSoggettoDTO'
+    type: object
+  SoggettoIstanzaExtendedDTO:
+    properties:
+      cf_soggetto:
+        type: string
+      citta_estera_nascita:
+        type: string
+      citta_estera_residenza:
+        type: string
+      cognome:
+        type: string
+      comune_nascita:
+        $ref: '#/definitions/ComuneDTO'
+      comune_residenza:
+        $ref: '#/definitions/ComuneDTO'
+      comune_sede_legale:
+        $ref: '#/definitions/ComuneDTO'
+      data_cessazione_soggetto:
+        format: date-time
+        type: string
+      data_nascita_soggetto:
+        format: date-time
+        type: string
+      den_anno_cciaa:
+        format: int32
+        type: integer
+      den_numero_cciaa:
+        type: string
+      den_provincia_cciaa:
+        type: string
+      den_soggetto:
+        type: string
+      des_email:
+        type: string
+      des_pec:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_masterdata:
+        format: int64
+        type: integer
+      id_masterdata_origine:
+        format: int64
+        type: integer
+      id_soggetto_istanza:
+        format: int64
+        type: integer
+      id_soggetto_padre:
+        format: int64
+        type: integer
+      indirizzo_soggetto:
+        type: string
+      istanza:
+        $ref: '#/definitions/IstanzaExtendedDTO'
+      nome:
+        type: string
+      num_civico_indirizzo:
+        type: string
+      num_telefono:
+        type: string
+      partita_iva_soggetto:
+        type: string
+      ruolo_compilante:
+        $ref: '#/definitions/RuoloCompilanteDTO'
+      ruolo_soggetto:
+        $ref: '#/definitions/RuoloSoggettoDTO'
+      soggetto:
+        $ref: '#/definitions/SoggettoExtendedDTO'
+      stato_estero_nascita:
+        type: string
+      tipo_natura_giuridica:
+        $ref: '#/definitions/TipoNaturaGiuridicaDTO'
+      tipo_soggetto:
+        $ref: '#/definitions/TipoSoggettoDTO'
+    type: object
+  StatoIstanzaDTO:
+    properties:
+      codice_stato_istanza:
+        type: string
+      descrizione_stato_istanza:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_stato_istanza:
+        format: int64
+        type: integer
+    type: object
+  StatoOggettoDTO:
+    properties:
+      cod_stato_oggetto:
+        type: string
+      des_stato_oggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_stato_oggetto:
+        format: int64
+        type: integer
+    type: object
+  TemplateExtendedDTO:
+    properties:
+      cod_template:
+        type: string
+      data_cessazione:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      des_template:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_template:
+        format: int64
+        type: integer
+      json_configura_template:
+        type: string
+      pdf_template:
+        type: string
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  TemplateFoDTO:
+    properties:
+      cod_template:
+        type: string
+      data_cessazione:
+        format: date-time
+        type: string
+      data_inizio_validita:
+        format: date-time
+        type: string
+      des_template:
+        type: string
+      id_template:
+        format: int64
+        type: integer
+      json_configura_template:
+        type: string
+      pdf_template:
+        type: string
+      quadri:
+        items:
+          $ref: '#/definitions/QuadroFoDTO'
+        type: array
+      tipo_procedimento:
+        $ref: '#/definitions/TipoProcedimentoExtendedDTO'
+    type: object
+  TemplateQuadroExtendedDTO:
+    properties:
+      flg_quadro_obbigatorio:
+        type: boolean
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_template_quadro:
+        format: int64
+        type: integer
+      ordinamento_template_quadro:
+        format: int32
+        type: integer
+      quadro:
+        $ref: '#/definitions/QuadroExtendedDTO'
+      template:
+        $ref: '#/definitions/TemplateExtendedDTO'
+    type: object
+  TipoMessaggioDTO:
+    properties:
+      cod_tipo_messaggio:
+        type: string
+      des_tipo_messaggio:
+        type: string
+      id_tipo_messaggio:
+        format: int64
+        type: integer
+    type: object
+  TipoNaturaGiuridicaDTO:
+    properties:
+      cod_tipo_natura_giuridica:
+        type: string
+      des_tipo_natura_giuridica:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_tipo_natura_giuridica:
+        format: int64
+        type: integer
+    type: object
+  TipoProcedimentoExtendedDTO:
+    properties:
+      ambito:
+        $ref: '#/definitions/AmbitoDTO'
+      des_estesa_tipo_procedimento:
+        type: string
+      des_tipo_procedimento:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_tipo_procedimento:
+        format: int64
+        type: integer
+      ordinamento_tipo_procedimento:
+        format: int32
+        type: integer
+      preferito:
+        type: boolean
+    type: object
+  TipoQuadroDTO:
+    properties:
+      cod_tipo_quadro:
+        type: string
+      des_tipo_quadro:
+        type: string
+      id_tipo_quadro:
+        format: int64
+        type: integer
+    type: object
+  TipoSoggettoDTO:
+    properties:
+      cod_tipo_soggetto:
+        type: string
+      des_tipo_soggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_tipo_soggetto:
+        format: int64
+        type: integer
+    type: object
+  TipologiaOggettoExtendedDTO:
+    properties:
+      cod_tipologia_oggetto:
+        type: string
+      des_tipologia_oggetto:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_tipologia_oggetto:
+        format: int64
+        type: integer
+      natura_oggetto:
+        $ref: '#/definitions/NaturaOggettoDTO'
+    type: object
+  UbicazioneOggettoExtendedDTO:
+    properties:
+      comune:
+        $ref: '#/definitions/ComuneDTO'
+      den_indirizzo:
+        type: string
+      des_localita:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_oggetto:
+        format: int64
+        type: integer
+      id_ubicazione_oggetto:
+        format: int64
+        type: integer
+      ind_geo_provenienza:
+        type: string
+      num_civico:
+        type: string
+    type: object
+  UbicazioneOggettoIstanzaExtendedDTO:
+    properties:
+      comune:
+        $ref: '#/definitions/ComuneDTO'
+      den_indirizzo:
+        type: string
+      des_localita:
+        type: string
+      gestAttoreIns:
+        type: string
+      gestAttoreUpd:
+        type: string
+      gestUID:
+        type: string
+      id_oggetto_istanza:
+        format: int64
+        type: integer
+      id_ubicazione_oggetto_istanza:
+        format: int64
+        type: integer
+      ind_geo_provenienza:
+        type: string
+      num_civico:
+        type: string
+    type: object
+  VerificaGeoRefDTO:
+    properties:
+      geoRefOk:
+        type: boolean
+    type: object
+x-components: {}

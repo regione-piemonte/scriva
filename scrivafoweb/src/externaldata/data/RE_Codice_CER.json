@@ -1,0 +1,205 @@
+[
+    {
+        "id": 1,
+        "cod_re_tipo_rifiuto": 1,
+        "cod_cer": "091210",
+        "descrizione": " rifiuti combustibili (CDR: combustibile derivato da rifiuti)",
+        "descrizione_estesa": " 091210 -rifiuti combustibili (CDR: combustibile derivato da rifiuti)"
+    },
+    {
+        "id": 2,
+        "cod_re_tipo_rifiuto": 2,
+        "cod_cer": 190699,
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": " 190699- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 3,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020103",
+        "descrizione": "scarti di tessuti vegetali",
+        "descrizione_estesa": "020103- scarti di tessuti vegetali"
+    },
+    {
+        "id": 4,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020107",
+        "descrizione": "rifiuti della silvicoltura",
+        "descrizione_estesa": "020107- rifiuti della silvicoltura"
+    },
+    {
+        "id": 5,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020301",
+        "descrizione": "fanghi prodotti da operazioni di lavaggio, pulizia, sbucciatura, centrifugazione e separazione di componenti",
+        "descrizione_estesa": "020301- fanghi prodotti da operazioni di lavaggio, pulizia, sbucciatura, centrifugazione e 020302- separazione di componenti"
+    },
+    {
+        "id": 6,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020303",
+        "descrizione": " rifiuti prodotti dall'estrazione tramite solvente",
+        "descrizione_estesa": " 020303- rifiuti prodotti dall'estrazione tramite solvente"
+    },
+    {
+        "id": 7,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020304",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020303- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 8,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020701",
+        "descrizione": "rifiuti prodotti dalle operazioni di lavaggio, pulizia e macinazione della materia prima",
+        "descrizione_estesa": "020701- rifiuti prodotti dalle operazioni di lavaggio, pulizia e macinazione della materia prima"
+    },
+    {
+        "id": 9,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_cer": "020704",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": " 020704- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 10,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_cer": "030101 ",
+        "descrizione": " scarti di corteccia e sughero",
+        "descrizione_estesa": "030101 - scarti di corteccia e sughero"
+    },
+    {
+        "id": 11,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_cer": "030105 ",
+        "descrizione": " segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 03 01 04",
+        "descrizione_estesa": "030105 - segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 03 01 04"
+    },
+    {
+        "id": 12,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_cer": "150103 ",
+        "descrizione": " imballaggi in legno",
+        "descrizione_estesa": "150103 - imballaggi in legno"
+    },
+    {
+        "id": 13,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_cer": "170201 ",
+        "descrizione": " legno",
+        "descrizione_estesa": "170201 - legno"
+    },
+    {
+        "id": 14,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_cer": "200138 ",
+        "descrizione": " legno, diverso da quello di cui alla voce 20 01 37",
+        "descrizione_estesa": "200138 - legno, diverso da quello di cui alla voce 20 01 37"
+    },
+    {
+        "id": 15,
+        "cod_re_tipo_rifiuto": 5,
+        "cod_cer": "040221 ",
+        "descrizione": " rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221 - rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 16,
+        "cod_re_tipo_rifiuto": 6,
+        "cod_cer": "030105 ",
+        "descrizione": " segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 03 01 04",
+        "descrizione_estesa": "030105 - segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 03 01 04"
+    },
+    {
+        "id": 17,
+        "cod_re_tipo_rifiuto": 6,
+        "cod_cer": "200138 ",
+        "descrizione": " legno, diverso da quello di cui alla voce 20 01 37",
+        "descrizione_estesa": "200138 - legno, diverso da quello di cui alla voce 20 01 37"
+    },
+    {
+        "id": 18,
+        "cod_re_tipo_rifiuto": 7,
+        "cod_cer": "020304 ",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 - scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 19,
+        "cod_re_tipo_rifiuto": 9,
+        "cod_cer": "030307 ",
+        "descrizione": " scarti della separazione meccanica nella produzione di polpa da rifiuti di carta e cartone",
+        "descrizione_estesa": "030307 - scarti della separazione meccanica nella produzione di polpa da rifiuti di carta e cartone"
+    },
+    {
+        "id": 20,
+        "cod_re_tipo_rifiuto": 10,
+        "cod_cer": "030310 ",
+        "descrizione": " scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica",
+        "descrizione_estesa": "030310 - scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica"
+    },
+    {
+        "id": 21,
+        "cod_re_tipo_rifiuto": 10,
+        "cod_cer": "190805 ",
+        "descrizione": " fanghi prodotti dal trattamento delle acque reflue urbane",
+        "descrizione_estesa": "190805 - fanghi prodotti dal trattamento delle acque reflue urbane"
+    },
+    {
+        "id": 22,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_cer": "190199 ",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "190199 - rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 23,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_cer": "030302 ",
+        "descrizione": " fanghi di recupero dei bagni di macerazione (green liquor)",
+        "descrizione_estesa": "030302 - fanghi di recupero dei bagni di macerazione (green liquor)"
+    },
+    {
+        "id": 24,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_cer": "030305 ",
+        "descrizione": " fanghi prodotti dai processi di disinchiostrazione nel riciclaggio della carta",
+        "descrizione_estesa": "030305 - fanghi prodotti dai processi di disinchiostrazione nel riciclaggio della carta"
+    },
+    {
+        "id": 25,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_cer": "030309 ",
+        "descrizione": " fanghi di scarto contenenti carbonato di calcio",
+        "descrizione_estesa": "030309 - fanghi di scarto contenenti carbonato di calcio"
+    },
+    {
+        "id": 26,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_cer": "030310 ",
+        "descrizione": " scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica",
+        "descrizione_estesa": "030310 - scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica"
+    },
+    {
+        "id": 27,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_cer": "030311 ",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 03 03 10",
+        "descrizione_estesa": "030311 - fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 03 03 10"
+    },
+    {
+        "id": 28,
+        "cod_re_tipo_rifiuto": 13,
+        "cod_cer": "160306 ",
+        "descrizione": " rifiuti organici, diversi da quelli di cui alla voce 16 03 05",
+        "descrizione_estesa": "160306 - rifiuti organici, diversi da quelli di cui alla voce 16 03 05"
+    },
+    {
+        "id": 29,
+        "cod_re_tipo_rifiuto": 14,
+        "cod_cer": "020106 ",
+        "descrizione": " feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito",
+        "descrizione_estesa": "020106 - feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito"
+    }
+]

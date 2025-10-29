@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2025                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    <import resource="dao-beans.xml"/>
+
+    <bean
+            class="it.csi.scriva.scrivafoweb.business.SpringApplicationContextHelper"></bean>
+
+    <!-- <bean id="backendService" class="it.csi.tstang2.tstang2web.business.impl.BackendServiceImpl">
+        </bean> -->
+
+    <bean id="pingApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.PingApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="ambitiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AmbitiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="adempimentiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AdempimentiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="tipiAdempimentoApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.TipiAdempimentoApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="tipiNaturaGiuridicaApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.TipiNaturaGiuridicaApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="soggettiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.SoggettiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="ruoliCompilanteApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.RuoliCompilanteApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="configuraRuoliSoggettiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ConfiguraRuoliSoggettiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="compilantiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.CompilantiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="adempimentiRuoliCompilanteAPIServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AdempimentiRuoliCompilanteAPIServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="istanzeApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.IstanzeApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="soggettiIstanzaApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.SoggettiIstanzaApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="provinceApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ProvinceApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="oggettiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.OggettiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="oggettiIstanzaApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.OggettiIstanzaApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="accreditamentiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AccreditamentiApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="gisApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.GisApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="searchApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.SearchApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="templateQuadroApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.TemplateQuadroApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="istanzaTemplateQuadroApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.IstanzaTemplateQuadroApiServiceHelper">
+        <constructor-arg index="0"
+                         value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1"
+                         value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="filesApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.FilesApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="adempimentiTipiAllegatoApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AdempimentiTipiAllegatoApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="categorieAllegatoApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.CategorieAllegatoApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="allegatiIstanzaApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AllegatiIstanzaApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="adempimentiEstensioniAllegatiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AdempimentiEstensioniAllegatiApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="configurazioniApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ConfigurazioniApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="competenzeTerritorioApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.CompetenzeTerritorioApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="categorieOggettoApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.CategorieOggettoApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="pagamentiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.PagamentiApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="vincoliAutorizzazioniApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.VincoliAutorizzazioniApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="istanzaVincoliAutorizzazioniApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.IstanzaVincoliAutorizzazioniApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="abilitazioniApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.AbilitazioniApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="funzionariApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.FunzionariApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="limitiAmministrativiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.LimitiAmministrativiApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="tipiEventoServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.TipiEventoServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="istanzaEventiApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.IstanzaEventiApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="apiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="apiProxyServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ApiProxyServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="scrivaBeProxyServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.ScrivaBeProxyServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+
+    <bean id="tipoResponsabileApiServiceHelper"
+          class="it.csi.scriva.scrivafoweb.business.be.helper.scrivabe.TipoResponsabileApiServiceHelper">
+        <constructor-arg index="0" value="@scrivabesrv.hostname@"/>
+        <constructor-arg index="1" value="@scrivabesrv.endpoint_base@"/>
+    </bean>
+    
+    <context:component-scan base-package="it.csi.scriva.scrivafoweb"/>
+    <context:component-scan base-package="it.csi.scriva.scrivafoweb.business.be.impl"/>
+
+</beans>

@@ -1,0 +1,184 @@
+[
+    {
+        "id": 1,
+        "cod_ra_tipo_rifiuto": "4.4",
+        "cod_provenienza": "4.4.1 ",
+        "descrizione": "fonderie di seconda fusione di ghisa e di acciaio, produzione di ferro, industria siderurgica",
+        "descrizione_estesa": "4.4.1 -fonderie di seconda fusione di ghisa e di acciaio, produzione di ferro, industria siderurgica"
+    },
+    {
+        "id": 2,
+        "cod_ra_tipo_rifiuto": "5.17",
+        "cod_provenienza": "5.17.1",
+        "descrizione": " industria siderurgica produzione di ghisa da altoforno mediante fusioni di coke e minerale di ferro in presenza di fondenti",
+        "descrizione_estesa": "5.17.1- industria siderurgica produzione di ghisa da altoforno mediante fusioni di coke e minerale di ferro in presenza di fondenti"
+    },
+    {
+        "id": 3,
+        "cod_ra_tipo_rifiuto": "7.1",
+        "cod_provenienza": "7. 1. 1 ",
+        "descrizione": " attività di demolizione, frantumazione e costruzione; selezione da RSU e/o RAU; manutenzione reti; attività di produzione di lastre e manufatti in fibrocemento.",
+        "descrizione_estesa": "7. 1. 1 - attività di demolizione, frantumazione e costruzione; selezione da RSU e/o RAU; manutenzione reti; attività di produzione di lastre e manufatti in fibrocemento."
+    },
+    {
+        "id": 4,
+        "cod_ra_tipo_rifiuto": "7.2",
+        "cod_provenienza": "7.2.1 ",
+        "descrizione": "attività di lavorazione dei materiali lapidei",
+        "descrizione_estesa": "7.2.1 -attività di lavorazione dei materiali lapidei"
+    },
+    {
+        "id": 5,
+        "cod_ra_tipo_rifiuto": "7.4",
+        "cod_provenienza": "7.4.1 ",
+        "descrizione": "attività di produzione di laterizi e di argilla espansa e perlite espansa",
+        "descrizione_estesa": "7.4.1 -attività di produzione di laterizi e di argilla espansa e perlite espansa"
+    },
+    {
+        "id": 6,
+        "cod_ra_tipo_rifiuto": "7.11",
+        "cod_provenienza": "7.11.1 ",
+        "descrizione": "manutenzione delle strutture ferroviarie",
+        "descrizione_estesa": "7.11.1 -manutenzione delle strutture ferroviarie"
+    },
+    {
+        "id": 7,
+        "cod_ra_tipo_rifiuto": "7.14",
+        "cod_provenienza": "7.14. 1 ",
+        "descrizione": " attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua.",
+        "descrizione_estesa": "7.14. 1 - attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua."
+    },
+    {
+        "id": 8,
+        "cod_ra_tipo_rifiuto": "7.15",
+        "cod_provenienza": " 7.15. 1 ",
+        "descrizione": " attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua",
+        "descrizione_estesa": " 7.15. 1 - attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua"
+    },
+    {
+        "id": 9,
+        "cod_ra_tipo_rifiuto": "7.16",
+        "cod_provenienza": " 7.16.1 ",
+        "descrizione": "attività industriali dello zucchero, dell'alcool e del lievito",
+        "descrizione_estesa": " 7.16.1 -attività industriali dello zucchero, dell'alcool e del lievito"
+    },
+    {
+        "id": 10,
+        "cod_ra_tipo_rifiuto": "7.17",
+        "cod_provenienza": "7.17.1",
+        "descrizione": " attività industriali dello zucchero, dell’alcool, del lievito e dell'estrazione, lavorazione taglio del calcare, industria siderurgica",
+        "descrizione_estesa": "7.17.1- attività industriali dello zucchero, dell’alcool, del lievito e dell'estrazione, lavorazione taglio del calcare, industria siderurgica"
+    },
+    {
+        "id": 11,
+        "cod_ra_tipo_rifiuto": "7.18",
+        "cod_provenienza": "7.18.1",
+        "descrizione": " industria chimica; Industria della calce, industria petrolchimica",
+        "descrizione_estesa": "7.18.1- industria chimica; Industria della calce, industria petrolchimica"
+    },
+    {
+        "id": 12,
+        "cod_ra_tipo_rifiuto": "7.3",
+        "cod_provenienza": "7.30.1",
+        "descrizione": " processo di vagliatura dei rifiuti provenienti dalla pulizia degli arenili",
+        "descrizione_estesa": "7.30.1- processo di vagliatura dei rifiuti provenienti dalla pulizia degli arenili"
+    },
+    {
+        "id": 13,
+        "cod_ra_tipo_rifiuto": "7.31",
+        "cod_provenienza": "7.31.1",
+        "descrizione": " industria agroalimentare in genere e industria laniera, attività di scavo",
+        "descrizione_estesa": "7.31.1- industria agroalimentare in genere e industria laniera, attività di scavo"
+    },
+    {
+        "id": 14,
+        "cod_ra_tipo_rifiuto": "7.31 bis",
+        "cod_provenienza": "7.31 bis1",
+        "descrizione": " attività di scavo",
+        "descrizione_estesa": "7.31 bis1- attività di scavo"
+    },
+    {
+        "id": 15,
+        "cod_ra_tipo_rifiuto": "11.2",
+        "cod_provenienza": "11.2.1",
+        "descrizione": " raffinerie per il recupero dell'olio di cui al punto 11.1.3",
+        "descrizione_estesa": "11.2.1- raffinerie per il recupero dell'olio di cui al punto 11.1.3"
+    },
+    {
+        "id": 16,
+        "cod_ra_tipo_rifiuto": "12.1",
+        "cod_provenienza": "12.1.1",
+        "descrizione": ". Decorazione acqua di processo e reflue delle industrie cartarie",
+        "descrizione_estesa": "12.1.1-. Decorazione acqua di processo e reflue delle industrie cartarie"
+    },
+    {
+        "id": 17,
+        "cod_ra_tipo_rifiuto": "12.2",
+        "cod_provenienza": "12.2.1",
+        "descrizione": " attività di dragaggio di fondali di laghi virgola di canali navigabili o irrigui e corsi d'acqua (acque) ",
+        "descrizione_estesa": "12.2.1- attività di dragaggio di fondali di laghi virgola di canali navigabili o irrigui e corsi d'acqua (acque) "
+    },
+    {
+        "id": 18,
+        "cod_ra_tipo_rifiuto": "12.3",
+        "cod_provenienza": "12.3.1",
+        "descrizione": " Lavorazione materiali lapidei di natura calcarea",
+        "descrizione_estesa": "12.3.1- Lavorazione materiali lapidei di natura calcarea"
+    },
+    {
+        "id": 19,
+        "cod_ra_tipo_rifiuto": "12.4",
+        "cod_provenienza": "12.4.1",
+        "descrizione": " lavorazione materiali lapidei di natura silicea",
+        "descrizione_estesa": "12.4.1- lavorazione materiali lapidei di natura silicea"
+    },
+    {
+        "id": 20,
+        "cod_ra_tipo_rifiuto": "12.7",
+        "cod_provenienza": "12.7.1",
+        "descrizione": " chiarificazione o decantazione naturale di acque da lavaggio di inerti; attività estrattive",
+        "descrizione_estesa": "12.7.1- chiarificazione o decantazione naturale di acque da lavaggio di inerti; attività estrattive"
+    },
+    {
+        "id": 21,
+        "cod_ra_tipo_rifiuto": "12.9",
+        "cod_provenienza": "12.9.1",
+        "descrizione": " molatura del vetro",
+        "descrizione_estesa": "12.9.1- molatura del vetro"
+    },
+    {
+        "id": 22,
+        "cod_ra_tipo_rifiuto": "12.15",
+        "cod_provenienza": "12.15.1",
+        "descrizione": " industria dei segati, tranciati, fogliati e del pannello",
+        "descrizione_estesa": "12.15.1- industria dei segati, tranciati, fogliati e del pannello"
+    },
+    {
+        "id": 23,
+        "cod_ra_tipo_rifiuto": "13.2",
+        "cod_provenienza": "13.2.1.",
+        "descrizione": " Impianti di recupero energetico di biomasse, legno e fanghi di cartiera",
+        "descrizione_estesa": "13.2.1.- Impianti di recupero energetico di biomasse, legno e fanghi di cartiera"
+    },
+    {
+        "id": 24,
+        "cod_ra_tipo_rifiuto": "13.6",
+        "cod_provenienza": "13.6.1.",
+        "descrizione": " Produzione di biossido di titanio virgola di ossido di ferro; Produzione di acido citrico e tartarico; produzione di energia elettrica; produzione di refrattari",
+        "descrizione_estesa": "13.6.1.- Produzione di biossido di titanio virgola di ossido di ferro; Produzione di acido citrico e tartarico; produzione di energia elettrica; produzione di refrattari"
+    },
+    {
+        "id": 25,
+        "cod_ra_tipo_rifiuto": "13.7",
+        "cod_provenienza": "13.7.1",
+        "descrizione": " Neutralizzazione soluzioni di acido solforico nel processo di produzione bella policloruro basico di alluminio e produzione di acido fluoridrico",
+        "descrizione_estesa": "13.7.1- Neutralizzazione soluzioni di acido solforico nel processo di produzione bella policloruro basico di alluminio e produzione di acido fluoridrico"
+    },
+    {
+        "id": 26,
+        "cod_ra_tipo_rifiuto": "13.11",
+        "cod_provenienza": "13.11.1",
+        "descrizione": " industria produzione di magnesio con processo silicotermico",
+        "descrizione_estesa": "13.11.1- industria produzione di magnesio con processo silicotermico"
+    }
+]

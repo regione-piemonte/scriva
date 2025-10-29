@@ -1,0 +1,520 @@
+[
+    {
+        "id": 1,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100404,
+        "descrizione": "Polveri dei gas di combustione",
+        "descrizione_estesa": "100404 - Polveri dei gas di combustione"
+    },
+    {
+        "id": 2,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100405,
+        "descrizione": "Altre polveri e particolato",
+        "descrizione_estesa": "100405 - Altre polveri e particolato"
+    },
+    {
+        "id": 3,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100406,
+        "descrizione": "Rifiuti solidi prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100406 - Rifiuti solidi prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 4,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100503,
+        "descrizione": "Polveri dei gas di combustione",
+        "descrizione_estesa": "100503 - Polveri dei gas di combustione"
+    },
+    {
+        "id": 5,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100505,
+        "descrizione": "Rifiuti solidi prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100505 - Rifiuti solidi prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 6,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100603,
+        "descrizione": "Polveri dei gas di combustione",
+        "descrizione_estesa": "100603 - Polveri dei gas di combustione"
+    },
+    {
+        "id": 7,
+        "cod_rp_tipo_rifiuto": "1.1",
+        "cod_cer": 100606,
+        "descrizione": "Rifiuti solidi prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100606 - Rifiuti solidi prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 8,
+        "cod_rp_tipo_rifiuto": "1.2",
+        "cod_cer": 100503,
+        "descrizione": "Polveri dei gas di combustione",
+        "descrizione_estesa": "100503 - Polveri dei gas di combustione"
+    },
+    {
+        "id": 9,
+        "cod_rp_tipo_rifiuto": "1.2",
+        "cod_cer": 100603,
+        "descrizione": "Polveri dei gas di combustione",
+        "descrizione_estesa": "100603 - Polveri dei gas di combustione"
+    },
+    {
+        "id": 10,
+        "cod_rp_tipo_rifiuto": "1.3",
+        "cod_cer": 100401,
+        "descrizione": "Scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100401 - Scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 11,
+        "cod_rp_tipo_rifiuto": "1.3",
+        "cod_cer": 100402,
+        "descrizione": "Impurità e schiumature della produzione primaria e secondaria",
+        "descrizione_estesa": "100402 - Impurità e schiumature della produzione primaria e secondaria"
+    },
+    {
+        "id": 12,
+        "cod_rp_tipo_rifiuto": "1.4",
+        "cod_cer": 160601,
+        "descrizione": "Batterie al piombo",
+        "descrizione_estesa": "160601 - Batterie al piombo"
+    },
+    {
+        "id": 13,
+        "cod_rp_tipo_rifiuto": "1.4",
+        "cod_cer": 200133,
+        "descrizione": "Batterie ed accumulatori di cui alle voci 16 06 01, 16 06 02, 16 06 03 nonché batterie e accumulatori non suddivisi contenenti tali batterie",
+        "descrizione_estesa": "200133 - Batterie ed accumulatori di cui alle voci 16 06 01, 16 06 02, 16 06 03 nonché batterie e accumulatori non suddivisi contenenti tali batterie"
+    },
+    {
+        "id": 14,
+        "cod_rp_tipo_rifiuto": "1.5",
+        "cod_cer": 100401,
+        "descrizione": "Scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100401 - Scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 15,
+        "cod_rp_tipo_rifiuto": "1.5",
+        "cod_cer": 100402,
+        "descrizione": "Impurità e schiumature della produzione primaria e secondaria",
+        "descrizione_estesa": "100402 - Impurità e schiumature della produzione primaria e secondaria"
+    },
+    {
+        "id": 16,
+        "cod_rp_tipo_rifiuto": "1.6",
+        "cod_cer": 110202,
+        "descrizione": "Rifiuti della lavorazione idrometallurgica dello zinco (compresi jarosite, goethite)",
+        "descrizione_estesa": "110202 - Rifiuti della lavorazione idrometallurgica dello zinco (compresi jarosite, goethite)"
+    },
+    {
+        "id": 17,
+        "cod_rp_tipo_rifiuto": "2.1",
+        "cod_cer": "090104",
+        "descrizione": "Soluzioni fissative",
+        "descrizione_estesa": "090104 - Soluzioni fissative"
+    },
+    {
+        "id": 18,
+        "cod_rp_tipo_rifiuto": "2.1",
+        "cod_cer": "090105",
+        "descrizione": "Soluzioni di sbianca e Soluzioni di sbianca-fissaggio",
+        "descrizione_estesa": "090105 - Soluzioni di sbianca e Soluzioni di sbianca-fissaggio"
+    },
+    {
+        "id": 19,
+        "cod_rp_tipo_rifiuto": "2.2",
+        "cod_cer": "090106",
+        "descrizione": "Rifiuti contenenti argento prodotti dal trattamento in loco di rifiuti fotografici",
+        "descrizione_estesa": "090106 - Rifiuti contenenti argento prodotti dal trattamento in loco di rifiuti fotografici"
+    },
+    {
+        "id": 20,
+        "cod_rp_tipo_rifiuto": "3.1",
+        "cod_cer": 100304,
+        "descrizione": "Scorie della produzione primaria",
+        "descrizione_estesa": "100304 - Scorie della produzione primaria"
+    },
+    {
+        "id": 21,
+        "cod_rp_tipo_rifiuto": "3.1",
+        "cod_cer": 100309,
+        "descrizione": "Scorie nere della produzione secondaria",
+        "descrizione_estesa": "100309 - Scorie nere della produzione secondaria"
+    },
+    {
+        "id": 22,
+        "cod_rp_tipo_rifiuto": "3.1",
+        "cod_cer": 100315,
+        "descrizione": "Schiumature infiammabili o che rilasciano, al contatto con l’acqua, gas infiammabili in quantità pericolose",
+        "descrizione_estesa": "100315 - Schiumature infiammabili o che rilasciano, al contatto con l’acqua, gas infiammabili in quantità pericolose"
+    },
+    {
+        "id": 23,
+        "cod_rp_tipo_rifiuto": "3.2",
+        "cod_cer": 100308,
+        "descrizione": "Scorie saline della produzione secondaria",
+        "descrizione_estesa": "100308 - Scorie saline della produzione secondaria"
+    },
+    {
+        "id": 24,
+        "cod_rp_tipo_rifiuto": "3.3",
+        "cod_cer": 100401,
+        "descrizione": "Scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100401 - Scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 25,
+        "cod_rp_tipo_rifiuto": "4.1",
+        "cod_cer": "060313",
+        "descrizione": "Sali e loro soluzioni, contenenti metalli pesanti",
+        "descrizione_estesa": "060313 - Sali e loro soluzioni, contenenti metalli pesanti"
+    },
+    {
+        "id": 26,
+        "cod_rp_tipo_rifiuto": "4.1",
+        "cod_cer": "060405",
+        "descrizione": "Rifiuti contenenti altri metalli pesanti",
+        "descrizione_estesa": "060405 - Rifiuti contenenti altri metalli pesanti"
+    },
+    {
+        "id": 27,
+        "cod_rp_tipo_rifiuto": "4.1",
+        "cod_cer": 190205,
+        "descrizione": "Fanghi prodotti da trattamenti chimico- fisici, contenenti sostanze pericolose",
+        "descrizione_estesa": "190205 - Fanghi prodotti da trattamenti chimico- fisici, contenenti sostanze pericolose"
+    },
+    {
+        "id": 28,
+        "cod_rp_tipo_rifiuto": "4.2",
+        "cod_cer": "060405",
+        "descrizione": "Rifiuti contenenti altri metalli pesanti",
+        "descrizione_estesa": "060405 - Rifiuti contenenti altri metalli pesanti"
+    },
+    {
+        "id": 29,
+        "cod_rp_tipo_rifiuto": "4.2",
+        "cod_cer": 100407,
+        "descrizione": "Fanghi e residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100407 - Fanghi e residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 30,
+        "cod_rp_tipo_rifiuto": "4.2",
+        "cod_cer": 190205,
+        "descrizione": "Fanghi prodotti da trattamenti chimico-fisici, contenenti sostanze pericolose",
+        "descrizione_estesa": "190205 - Fanghi prodotti da trattamenti chimico-fisici, contenenti sostanze pericolose"
+    },
+    {
+        "id": 31,
+        "cod_rp_tipo_rifiuto": "4.3",
+        "cod_cer": 120114,
+        "descrizione": "Fanghi di lavorazione, contenenti sostanze pericolose",
+        "descrizione_estesa": "120114 - Fanghi di lavorazione, contenenti sostanze pericolose"
+    },
+    {
+        "id": 32,
+        "cod_rp_tipo_rifiuto": "4.4",
+        "cod_cer": 100407,
+        "descrizione": "Fanghi e residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100407 - Fanghi e residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 33,
+        "cod_rp_tipo_rifiuto": "4.4",
+        "cod_cer": 100506,
+        "descrizione": "Fanghi e residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100506 - Fanghi e residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 34,
+        "cod_rp_tipo_rifiuto": "4.4",
+        "cod_cer": 100607,
+        "descrizione": "Fanghi e residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "100607 - Fanghi e residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 35,
+        "cod_rp_tipo_rifiuto": "5.1",
+        "cod_cer": 110107,
+        "descrizione": "Basi di decappaggio",
+        "descrizione_estesa": "110107 - Basi di decappaggio"
+    },
+    {
+        "id": 36,
+        "cod_rp_tipo_rifiuto": "5.1",
+        "cod_cer": 110113,
+        "descrizione": "Rifiuti di sgrassaggio contenenti sostanze pericolose",
+        "descrizione_estesa": "110113 - Rifiuti di sgrassaggio contenenti sostanze pericolose"
+    },
+    {
+        "id": 37,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": "060313",
+        "descrizione": "Sali e loro soluzioni, contenenti metalli pesanti",
+        "descrizione_estesa": "060313 - Sali e loro soluzioni, contenenti metalli pesanti"
+    },
+    {
+        "id": 38,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": 110105,
+        "descrizione": "Acidi di decapaggio",
+        "descrizione_estesa": "110105 - Acidi di decapaggio"
+    },
+    {
+        "id": 39,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": 110106,
+        "descrizione": "Acidi non specificati altrimenti",
+        "descrizione_estesa": "110106 - Acidi non specificati altrimenti"
+    },
+    {
+        "id": 40,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": 110107,
+        "descrizione": "Basi di decapaggio",
+        "descrizione_estesa": "110107 - Basi di decapaggio"
+    },
+    {
+        "id": 41,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": 110111,
+        "descrizione": "Soluzioni acquose di lavaggio, contenenti sostanze pericolose",
+        "descrizione_estesa": "110111 - Soluzioni acquose di lavaggio, contenenti sostanze pericolose"
+    },
+    {
+        "id": 42,
+        "cod_rp_tipo_rifiuto": "5.2",
+        "cod_cer": 110198,
+        "descrizione": "altri rifiuti contenenti sostanze pericolose",
+        "descrizione_estesa": "110198 - altri rifiuti contenenti sostanze pericolose"
+    },
+    {
+        "id": 43,
+        "cod_rp_tipo_rifiuto": "5.3",
+        "cod_cer": "060101",
+        "descrizione": "Acido solforico ed acido solforoso",
+        "descrizione_estesa": "060101 - Acido solforico ed acido solforoso"
+    },
+    {
+        "id": 44,
+        "cod_rp_tipo_rifiuto": "5.4",
+        "cod_cer": "060101",
+        "descrizione": "Acido solforico ed acido solforoso",
+        "descrizione_estesa": "060101 - Acido solforico ed acido solforoso"
+    },
+    {
+        "id": 45,
+        "cod_rp_tipo_rifiuto": "5.5",
+        "cod_cer": 110105,
+        "descrizione": "Acido di decapaggio",
+        "descrizione_estesa": "110105 - Acido di decapaggio"
+    },
+    {
+        "id": 46,
+        "cod_rp_tipo_rifiuto": "6.1",
+        "cod_cer": "070501",
+        "descrizione": "Soluzioni acquose di lavaggio e di acque madri",
+        "descrizione_estesa": "070501 - Soluzioni acquose di lavaggio e di acque madri"
+    },
+    {
+        "id": 47,
+        "cod_rp_tipo_rifiuto": "6.2",
+        "cod_cer": "070201",
+        "descrizione": "Soluzioni acquose di lavaggio e acque madri",
+        "descrizione_estesa": "070201 - Soluzioni acquose di lavaggio e acque madri"
+    },
+    {
+        "id": 48,
+        "cod_rp_tipo_rifiuto": "6.3",
+        "cod_cer": "070101",
+        "descrizione": "Soluzioni acquose di lavaggio e acque madri",
+        "descrizione_estesa": "070101 - Soluzioni acquose di lavaggio e acque madri"
+    },
+    {
+        "id": 49,
+        "cod_rp_tipo_rifiuto": "6.3",
+        "cod_cer": "070604",
+        "descrizione": "Altri solventi organici, soluzioni di lavaggio ed acque madri",
+        "descrizione_estesa": "070604 - Altri solventi organici, soluzioni di lavaggio ed acque madri"
+    },
+    {
+        "id": 50,
+        "cod_rp_tipo_rifiuto": "6.3",
+        "cod_cer": 140602,
+        "descrizione": "Altri solventi e miscele di solventi, alogenati",
+        "descrizione_estesa": "140602 - Altri solventi e miscele di solventi, alogenati"
+    },
+    {
+        "id": 51,
+        "cod_rp_tipo_rifiuto": "6.3",
+        "cod_cer": 140603,
+        "descrizione": "Altri solventi e miscele di solventi",
+        "descrizione_estesa": "140603 - Altri solventi e miscele di solventi"
+    },
+    {
+        "id": 52,
+        "cod_rp_tipo_rifiuto": "6.4",
+        "cod_cer": "070707",
+        "descrizione": "Fondi e residui di reazione, alogenati",
+        "descrizione_estesa": "070707 - Fondi e residui di reazione, alogenati"
+    },
+    {
+        "id": 53,
+        "cod_rp_tipo_rifiuto": "6.6",
+        "cod_cer": 130401,
+        "descrizione": "Olio di sentina della navigazione interna",
+        "descrizione_estesa": "130401 - Olio di sentina della navigazione interna"
+    },
+    {
+        "id": 54,
+        "cod_rp_tipo_rifiuto": "6.6",
+        "cod_cer": 130403,
+        "descrizione": "Altri oli di sentina della navigazione",
+        "descrizione_estesa": "130403 - Altri oli di sentina della navigazione"
+    },
+    {
+        "id": 55,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "060702",
+        "descrizione": "Carbone attivato dalla produzione di cloro",
+        "descrizione_estesa": "060702 - Carbone attivato dalla produzione di cloro"
+    },
+    {
+        "id": 56,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "061302",
+        "descrizione": "Carbone attivato esaurito (tranne 06 07 02)",
+        "descrizione_estesa": "061302 - Carbone attivato esaurito (tranne 06 07 02)"
+    },
+    {
+        "id": 57,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070109",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti, alogenati",
+        "descrizione_estesa": "070109 - Residui di filtrazione e assorbenti esauriti, alogenati"
+    },
+    {
+        "id": 58,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070110",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070110 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 59,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070209",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti, alogenati",
+        "descrizione_estesa": "070209 - Residui di filtrazione e assorbenti esauriti, alogenati"
+    },
+    {
+        "id": 60,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070210",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070210 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 61,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070309",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti e alogenati",
+        "descrizione_estesa": "070309 - Residui di filtrazione e assorbenti esauriti e alogenati"
+    },
+    {
+        "id": 62,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070310",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070310 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 63,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070409",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti e alogenati",
+        "descrizione_estesa": "070409 - Residui di filtrazione e assorbenti esauriti e alogenati"
+    },
+    {
+        "id": 64,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070410",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070410 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 65,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070509",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti e alogenati",
+        "descrizione_estesa": "070509 - Residui di filtrazione e assorbenti esauriti e alogenati"
+    },
+    {
+        "id": 66,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070510",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070510 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 67,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070609",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti e alogenati",
+        "descrizione_estesa": "070609 - Residui di filtrazione e assorbenti esauriti e alogenati"
+    },
+    {
+        "id": 68,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070610",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070610 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 69,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070709",
+        "descrizione": "Residui di filtrazione e assorbenti esauriti e alogenati",
+        "descrizione_estesa": "070709 - Residui di filtrazione e assorbenti esauriti e alogenati"
+    },
+    {
+        "id": 70,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": "070710",
+        "descrizione": "Altri residui di filtrazione e assorbenti esauriti",
+        "descrizione_estesa": "070710 - Altri residui di filtrazione e assorbenti esauriti"
+    },
+    {
+        "id": 71,
+        "cod_rp_tipo_rifiuto": "7.1",
+        "cod_cer": 190110,
+        "descrizione": "Carbone attivo esaurito, impiegato per il trattamento dei fumi",
+        "descrizione_estesa": "190110 - Carbone attivo esaurito, impiegato per il trattamento dei fumi"
+    },
+    {
+        "id": 72,
+        "cod_rp_tipo_rifiuto": "7.2",
+        "cod_cer": "080111",
+        "descrizione": "Pitture e vernici di scarto, contenenti solventi organici o altre sostanze pericolose",
+        "descrizione_estesa": "080111 - Pitture e vernici di scarto, contenenti solventi organici o altre sostanze pericolose"
+    },
+    {
+        "id": 73,
+        "cod_rp_tipo_rifiuto": "7.2",
+        "cod_cer": "080121",
+        "descrizione": "Residui di vernici o di sverniciatori",
+        "descrizione_estesa": "080121 - Residui di vernici o di sverniciatori"
+    },
+    {
+        "id": 74,
+        "cod_rp_tipo_rifiuto": "7.3",
+        "cod_cer": "060201",
+        "descrizione": "Idrossido di calcio",
+        "descrizione_estesa": "060201 - Idrossido di calcio"
+    }
+]

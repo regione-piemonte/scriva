@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "cod_rp_tipo_rifiuto": "1.1.",
+        "cod_caratt_merc": "1.1.4.",
+        "descrizione": "Zinco, piombo, rame, loro leghe o loro ossidi nelle forme usualmente commercializzate. ",
+        "descrizione_estesa": "1.1.4. - Zinco, piombo, rame, loro leghe o loro ossidi nelle forme usualmente commercializzate. "
+    },
+    {
+        "id": 2,
+        "cod_rp_tipo_rifiuto": "1.2.",
+        "cod_caratt_merc": "1.2.4.",
+        "descrizione": "Zinco, piombo, rame e loro leghe nelle forme usualmente commercializzate. ",
+        "descrizione_estesa": "1.2.4. - Zinco, piombo, rame e loro leghe nelle forme usualmente commercializzate. "
+    },
+    {
+        "id": 3,
+        "cod_rp_tipo_rifiuto": "1.3.",
+        "cod_caratt_merc": "1.3.4.",
+        "descrizione": "Piombo nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1.3.4. - Piombo nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 4,
+        "cod_rp_tipo_rifiuto": "1.4.",
+        "cod_caratt_merc": "1.4.4.",
+        "descrizione": "Piombo e sue leghe e sue e soluzione diluita di acido solforico nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1.4.4. - Piombo e sue leghe e sue e soluzione diluita di acido solforico nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 5,
+        "cod_rp_tipo_rifiuto": "1.5.",
+        "cod_caratt_merc": "1.5.4.",
+        "descrizione": "Piombo e sue leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1.5.4. - Piombo e sue leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 6,
+        "cod_rp_tipo_rifiuto": "1.6.",
+        "cod_caratt_merc": "1.6.4.",
+        "descrizione": "Piombo, zinco e loro leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "1.6.4. - Piombo, zinco e loro leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 7,
+        "cod_rp_tipo_rifiuto": "2.1.",
+        "cod_caratt_merc": "2.1.4.",
+        "descrizione": "Argento in lingotti o graniglia, soluzioni di argento",
+        "descrizione_estesa": "2.1.4. - Argento in lingotti o graniglia, soluzioni di argento"
+    },
+    {
+        "id": 8,
+        "cod_rp_tipo_rifiuto": "2.2.",
+        "cod_caratt_merc": "2.2.4.",
+        "descrizione": "Argento in lingotti o graniglia, soluzioni di argento nelle forme usualmente commercializzate",
+        "descrizione_estesa": "2.2.4. - Argento in lingotti o graniglia, soluzioni di argento nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 9,
+        "cod_rp_tipo_rifiuto": "3.1.",
+        "cod_caratt_merc": "3.1.4.",
+        "descrizione": "Alluminio metallico conforme norme UNI nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3.1.4. - Alluminio metallico conforme norme UNI nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 10,
+        "cod_rp_tipo_rifiuto": "3.2.",
+        "cod_caratt_merc": "3.2.4.",
+        "descrizione": "Alluminio metallico conforme norme UNI nelle forme usualmente commercializzate",
+        "descrizione_estesa": "3.2.4. - Alluminio metallico conforme norme UNI nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 11,
+        "cod_rp_tipo_rifiuto": "3.3.",
+        "cod_caratt_merc": "3.3.4.",
+        "descrizione": "Metalli nelle forme usualmente commercializzate.",
+        "descrizione_estesa": "3.3.4. - Metalli nelle forme usualmente commercializzate."
+    },
+    {
+        "id": 12,
+        "cod_rp_tipo_rifiuto": "4.1.",
+        "cod_caratt_merc": "4.1.4.",
+        "descrizione": "Ossicloruro e/o solfato di rame nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4.1.4. - Ossicloruro e/o solfato di rame nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 13,
+        "cod_rp_tipo_rifiuto": "4.2.",
+        "cod_caratt_merc": "4.2.4.",
+        "descrizione": "Piombo e sue leghe nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4.2.4. - Piombo e sue leghe nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 14,
+        "cod_rp_tipo_rifiuto": "4.3.",
+        "cod_caratt_merc": "4.3.4.",
+        "descrizione": "Rame e composti nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4.3.4. - Rame e composti nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 15,
+        "cod_rp_tipo_rifiuto": "4.4.",
+        "cod_caratt_merc": "4.4.4.",
+        "descrizione": "Zinco e piombo nelle forme usualmente commercializzate",
+        "descrizione_estesa": "4.4.4. - Zinco e piombo nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 16,
+        "cod_rp_tipo_rifiuto": "5.1.",
+        "cod_caratt_merc": "5.1.4.a",
+        "descrizione": "Ossido di alluminio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.1.4.a - Ossido di alluminio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 17,
+        "cod_rp_tipo_rifiuto": "5.1.",
+        "cod_caratt_merc": "5.1.4.b",
+        "descrizione": "Flocculante a base di solfato di alluminio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.1.4.b - Flocculante a base di solfato di alluminio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 18,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_caratt_merc": "5.2.4.a",
+        "descrizione": "Ossidi di ferro, sali di ferro, sali di rame, ammoniaca e acido cloridrico nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.2.4.a - Ossidi di ferro, sali di ferro, sali di rame, ammoniaca e acido cloridrico nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 19,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_caratt_merc": "5.2.4.b",
+        "descrizione": "Acidi per decapaggio e soluzioni per incisione di circuiti stampati nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.2.4.b - Acidi per decapaggio e soluzioni per incisione di circuiti stampati nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 20,
+        "cod_rp_tipo_rifiuto": "5.3.",
+        "cod_caratt_merc": "5.3.4.",
+        "descrizione": "Soluzioni di acido solforico nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.3.4. - Soluzioni di acido solforico nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 21,
+        "cod_rp_tipo_rifiuto": "5.4.",
+        "cod_caratt_merc": "5.4.4.",
+        "descrizione": "Acido solforico nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.4.4. - Acido solforico nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 22,
+        "cod_rp_tipo_rifiuto": "5.5.",
+        "cod_caratt_merc": "5.5.4.",
+        "descrizione": "Soluzione di cloruro di zinco e soluzioni di acido cloridrico con titolo 24-26% in HC1 nelle forme usualmente commercializzate",
+        "descrizione_estesa": "5.5.4. - Soluzione di cloruro di zinco e soluzioni di acido cloridrico con titolo 24-26% in HC1 nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 23,
+        "cod_rp_tipo_rifiuto": "6.1.",
+        "cod_caratt_merc": "6.1.4.",
+        "descrizione": "Metilacetato, alcool metilico e alcool isopropilico nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.1.4. - Metilacetato, alcool metilico e alcool isopropilico nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 24,
+        "cod_rp_tipo_rifiuto": "6.2.",
+        "cod_caratt_merc": "6.2.4.",
+        "descrizione": "DMF con elevato grado di purezza nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.2.4. - DMF con elevato grado di purezza nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 25,
+        "cod_rp_tipo_rifiuto": "6.3.",
+        "cod_caratt_merc": "6.3.4.",
+        "descrizione": "Solventi e diluenti nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.3.4. - Solventi e diluenti nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 26,
+        "cod_rp_tipo_rifiuto": "6.4.",
+        "cod_caratt_merc": "6.4.4.",
+        "descrizione": "Percloroetilene e tetracloruro di carbonio nelle forme usualmente commercializzate",
+        "descrizione_estesa": "6.4.4. - Percloroetilene e tetracloruro di carbonio nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 27,
+        "cod_rp_tipo_rifiuto": "6.6.",
+        "cod_caratt_merc": "6.6.4.",
+        "descrizione": "Combustibili con caratteristiche conformi alla norma UNI-CTI 6579 o al decreto del Presidente del Consiglio dei Ministri 8 marzo 2002 e successive modifiche",
+        "descrizione_estesa": "6.6.4. - Combustibili con caratteristiche conformi alla norma UNI-CTI 6579 o al decreto del Presidente del Consiglio dei Ministri 8 marzo 2002 e successive modifiche"
+    },
+    {
+        "id": 28,
+        "cod_rp_tipo_rifiuto": "7.1.",
+        "cod_caratt_merc": "7.1.4.",
+        "descrizione": "Carboni attivi riattivati, riutilizzabili esclusivamente nello stesso processo produttivo di provenienza o similare",
+        "descrizione_estesa": "7.1.4. - Carboni attivi riattivati, riutilizzabili esclusivamente nello stesso processo produttivo di provenienza o similare"
+    },
+    {
+        "id": 29,
+        "cod_rp_tipo_rifiuto": "7.2.",
+        "cod_caratt_merc": "7.2.4.",
+        "descrizione": "Solventi nelle forme usualmente commercializzate",
+        "descrizione_estesa": "7.2.4. - Solventi nelle forme usualmente commercializzate"
+    },
+    {
+        "id": 30,
+        "cod_rp_tipo_rifiuto": "7.3.",
+        "cod_caratt_merc": "7.3.4.",
+        "descrizione": "Non applicabile",
+        "descrizione_estesa": "7.3.4. - Non applicabile"
+    }
+]

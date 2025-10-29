@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "cod_re_tipo_rifiuto": 1,
+        "descrizione": "combustibile derivato da rifiuti (CDR)"
+    },
+    {
+        "id": 2,
+        "cod_re_tipo_rifiuto": 2,
+        "descrizione": " biogas"
+    },
+    {
+        "id": 3,
+        "cod_re_tipo_rifiuto": 3,
+        "descrizione": " scarti vegetali"
+    },
+    {
+        "id": 4,
+        "cod_re_tipo_rifiuto": 4,
+        "descrizione": " rifiuti della lavorazione del legno e affini non trattat"
+    },
+    {
+        "id": 5,
+        "cod_re_tipo_rifiuto": 5,
+        "descrizione": " rifiuti da fibra tessile"
+    },
+    {
+        "id": 6,
+        "cod_re_tipo_rifiuto": 6,
+        "descrizione": "rifiuti della lavorazione del legno e affini trattati   "
+    },
+    {
+        "id": 7,
+        "cod_re_tipo_rifiuto": 7,
+        "descrizione": " rifiuti della lavorazione del tabacco   "
+    },
+    {
+        "id": 8,
+        "cod_re_tipo_rifiuto": 9,
+        "descrizione": " scarti di pulper  "
+    },
+    {
+        "id": 9,
+        "cod_re_tipo_rifiuto": 10,
+        "descrizione": " fanghi essiccati di depurazione di acque reflue  "
+    },
+    {
+        "id": 10,
+        "cod_re_tipo_rifiuto": 11,
+        "descrizione": " gas derivati  "
+    },
+    {
+        "id": 11,
+        "cod_re_tipo_rifiuto": 12,
+        "descrizione": "fanghi essiccati di depuratone di acque dell'industria cartaria  "
+    },
+    {
+        "id": 12,
+        "cod_re_tipo_rifiuto": 13,
+        "descrizione": "residuo di carbon fossile, residui di coke metallurgico  "
+    },
+    {
+        "id": 13,
+        "cod_re_tipo_rifiuto": 14,
+        "descrizione": "pollina"
+    }
+]

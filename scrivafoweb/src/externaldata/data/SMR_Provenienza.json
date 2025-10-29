@@ -1,0 +1,1339 @@
+[
+    {
+        "id": 1,
+        "cod_smr_tipo_rifiuto": "1.1",
+        "cod_provenienza": "1.1.1",
+        "descrizione": " attività produttive; Raccolta differenziata di RU, e altre forme di raccolta in appositi contenitori su superfici private, attività di servizio",
+        "descrizione_estesa": "1.1.1- attività produttive; Raccolta differenziata di RU, e altre forme di raccolta in appositi contenitori su superfici private, attività di servizio"
+    },
+    {
+        "id": 2,
+        "cod_smr_tipo_rifiuto": "1.2",
+        "cod_provenienza": "1.2.1",
+        "descrizione": " attività di produzione",
+        "descrizione_estesa": "1.2.1- attività di produzione"
+    },
+    {
+        "id": 3,
+        "cod_smr_tipo_rifiuto": "2. 1",
+        "cod_provenienza": "2. 1. 1 ",
+        "descrizione": " raccolta differenziata in appositi contenitori e/o altre raccolte differenziate; selezione da RSU e/o RAU; attività industriali, artigianali commerciali e di servizi; autodemolizione autorizzate ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni.",
+        "descrizione_estesa": "2. 1. 1 - raccolta differenziata in appositi contenitori e/o altre raccolte differenziate; selezione da RSU e/o RAU; attività industriali, artigianali commerciali e di servizi; autodemolizione autorizzate ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni."
+    },
+    {
+        "id": 4,
+        "cod_smr_tipo_rifiuto": "2. 2",
+        "cod_provenienza": "2. 2. 1 ",
+        "descrizione": " raccolta differenziata, effettuata in ambito ospedaliero, di vetri provenienti dalle attività di prevenzione, diagnosi e cura medica, veterinaria e biologica nonché dalle attività di ricerca ad esse connesse, non provenienti da reparti infettivi e dai luoghi di pronto soccorso.",
+        "descrizione_estesa": "2. 2. 1 - raccolta differenziata, effettuata in ambito ospedaliero, di vetri provenienti dalle attività di prevenzione, diagnosi e cura medica, veterinaria e biologica nonché dalle attività di ricerca ad esse connesse, non provenienti da reparti infettivi e dai luoghi di pronto soccorso."
+    },
+    {
+        "id": 5,
+        "cod_smr_tipo_rifiuto": "2.3",
+        "cod_provenienza": "2.3.1",
+        "descrizione": " industrie del cristallo",
+        "descrizione_estesa": "2.3.1- industrie del cristallo"
+    },
+    {
+        "id": 6,
+        "cod_smr_tipo_rifiuto": "2.4",
+        "cod_provenienza": "2.4.1 ",
+        "descrizione": "raccolta selettiva attività produttiva e di servizio (demolizione edifici)",
+        "descrizione_estesa": "2.4.1 -raccolta selettiva attività produttiva e di servizio (demolizione edifici)"
+    },
+    {
+        "id": 7,
+        "cod_smr_tipo_rifiuto": "3. 1",
+        "cod_provenienza": "3. 1. 1 ",
+        "descrizione": " attività industriali, artigianali, agricole, commerciali e di servizi; lavorazione di ferro, ghisa e acciaio, raccolta differenziata; impianti di selezione o di incenerimento di rifiuti; attività di demolizione.",
+        "descrizione_estesa": "3. 1. 1 - attività industriali, artigianali, agricole, commerciali e di servizi; lavorazione di ferro, ghisa e acciaio, raccolta differenziata; impianti di selezione o di incenerimento di rifiuti; attività di demolizione."
+    },
+    {
+        "id": 8,
+        "cod_smr_tipo_rifiuto": "3. 2",
+        "cod_provenienza": "3. 2. 1 ",
+        "descrizione": " attività industriali, artigianali, agricole, commerciali e di servizi; lavorazione di metalli non ferrosi; raccolta differenziata; impianti di selezione o di incenerimento di rifiuti; attività di demolizione",
+        "descrizione_estesa": "3. 2. 1 - attività industriali, artigianali, agricole, commerciali e di servizi; lavorazione di metalli non ferrosi; raccolta differenziata; impianti di selezione o di incenerimento di rifiuti; attività di demolizione"
+    },
+    {
+        "id": 9,
+        "cod_smr_tipo_rifiuto": "3.3",
+        "cod_provenienza": "3.3.1 ",
+        "descrizione": "industria cartotecnica; Attività industriali, commerciale e di servizio",
+        "descrizione_estesa": "3.3.1 -industria cartotecnica; Attività industriali, commerciale e di servizio"
+    },
+    {
+        "id": 10,
+        "cod_smr_tipo_rifiuto": "3.4",
+        "cod_provenienza": "3.4.1",
+        "descrizione": " industria elettronica, artigianato orafo, laboratori odontotecnici, galvanica",
+        "descrizione_estesa": "3.4.1- industria elettronica, artigianato orafo, laboratori odontotecnici, galvanica"
+    },
+    {
+        "id": 11,
+        "cod_smr_tipo_rifiuto": "3.5",
+        "cod_provenienza": "3.5.1",
+        "descrizione": " Attività industriali, agricole, commerciali e di servizi; Raccolta differenziata dai rifiuti urbani",
+        "descrizione_estesa": "3.5.1- Attività industriali, agricole, commerciali e di servizi; Raccolta differenziata dai rifiuti urbani"
+    },
+    {
+        "id": 12,
+        "cod_smr_tipo_rifiuto": "3.6",
+        "cod_provenienza": "3.6.1 ",
+        "descrizione": "impianti di tiro al piattello",
+        "descrizione_estesa": "3.6.1 -impianti di tiro al piattello"
+    },
+    {
+        "id": 13,
+        "cod_smr_tipo_rifiuto": "3.7",
+        "cod_provenienza": "3.7.1 ",
+        "descrizione": "produzione di manufatti metallo duro",
+        "descrizione_estesa": "3.7.1 -produzione di manufatti metallo duro"
+    },
+    {
+        "id": 14,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_provenienza": "3.8.1",
+        "descrizione": " pulizia, manutenzione locali, macchinari ed impianti dell'industria e lavorazioni metalli preziosi",
+        "descrizione_estesa": "3.8.1- pulizia, manutenzione locali, macchinari ed impianti dell'industria e lavorazioni metalli preziosi"
+    },
+    {
+        "id": 15,
+        "cod_smr_tipo_rifiuto": "3.9",
+        "cod_provenienza": "3.9.1 ",
+        "descrizione": "fusione e lavorazione dei metalli preziosi",
+        "descrizione_estesa": "3.9.1 -fusione e lavorazione dei metalli preziosi"
+    },
+    {
+        "id": 16,
+        "cod_smr_tipo_rifiuto": "3.10",
+        "cod_provenienza": "3.10.1 ",
+        "descrizione": "raccolta differenziata e da raccolte finalizzate",
+        "descrizione_estesa": "3.10.1 -raccolta differenziata e da raccolte finalizzate"
+    },
+    {
+        "id": 17,
+        "cod_smr_tipo_rifiuto": "3.11",
+        "cod_provenienza": "3.11.1",
+        "descrizione": " attività cinefotoradiografica",
+        "descrizione_estesa": "3.11.1- attività cinefotoradiografica"
+    },
+    {
+        "id": 18,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "cod_provenienza": "3.12.1",
+        "descrizione": " processi di elettrodeposizione o di supporto di metalli preziosi catalisi, gioielleria, leghe dentali, filiere per vetro, laboratori chimici e industria aerospaziale.",
+        "descrizione_estesa": "3.12.1- processi di elettrodeposizione o di supporto di metalli preziosi catalisi, gioielleria, leghe dentali, filiere per vetro, laboratori chimici e industria aerospaziale."
+    },
+    {
+        "id": 19,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_provenienza": "4.1.1 ",
+        "descrizione": "industria metallurgica; produzione di fosforo",
+        "descrizione_estesa": "4.1.1 -industria metallurgica; produzione di fosforo"
+    },
+    {
+        "id": 20,
+        "cod_smr_tipo_rifiuto": "4.2",
+        "cod_provenienza": "4.2.1 ",
+        "descrizione": "forno di fusione dei rifiuti contenenti metalli preziosi",
+        "descrizione_estesa": "4.2.1 -forno di fusione dei rifiuti contenenti metalli preziosi"
+    },
+    {
+        "id": 21,
+        "cod_smr_tipo_rifiuto": "4.3",
+        "cod_provenienza": "4.3.1 ",
+        "descrizione": "fusione del rame secondario e sue leghe",
+        "descrizione_estesa": "4.3.1 -fusione del rame secondario e sue leghe"
+    },
+    {
+        "id": 22,
+        "cod_smr_tipo_rifiuto": "4.4",
+        "cod_provenienza": "4.4.1 ",
+        "descrizione": "fonderie di seconda fusione di ghisa e di acciaio, produzione di ferro, industria siderurgica",
+        "descrizione_estesa": "4.4.1 -fonderie di seconda fusione di ghisa e di acciaio, produzione di ferro, industria siderurgica"
+    },
+    {
+        "id": 23,
+        "cod_smr_tipo_rifiuto": "4.5",
+        "cod_provenienza": "4.5.1 ",
+        "descrizione": "processo di zincatura ad umido dell'acciaio",
+        "descrizione_estesa": "4.5.1 -processo di zincatura ad umido dell'acciaio"
+    },
+    {
+        "id": 24,
+        "cod_smr_tipo_rifiuto": "4.6",
+        "cod_provenienza": "4.6.1",
+        "descrizione": " impianti di produzione polveri di zinco, impianti di zincatura a spruzzo, impianti di zincatura tubi",
+        "descrizione_estesa": "4.6.1- impianti di produzione polveri di zinco, impianti di zincatura a spruzzo, impianti di zincatura tubi"
+    },
+    {
+        "id": 25,
+        "cod_smr_tipo_rifiuto": "4.7",
+        "cod_provenienza": "4.7.1",
+        "descrizione": " impianto di lavaggio del residuo insolubile proveniente dagli impianti di trattamento dei sottoprodotti di fusione dell'alluminio",
+        "descrizione_estesa": "4.7.1- impianto di lavaggio del residuo insolubile proveniente dagli impianti di trattamento dei sottoprodotti di fusione dell'alluminio"
+    },
+    {
+        "id": 26,
+        "cod_smr_tipo_rifiuto": "5. 1",
+        "cod_provenienza": "5. 1. 1 ",
+        "descrizione": " centri di raccolta autorizzati ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni e del decreto legislativo 24 giugno 2003, n. 209.",
+        "descrizione_estesa": "5. 1. 1 - centri di raccolta autorizzati ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni e del decreto legislativo 24 giugno 2003, n. 209."
+    },
+    {
+        "id": 27,
+        "cod_smr_tipo_rifiuto": "5. 2",
+        "cod_provenienza": "5. 2. 1 ",
+        "descrizione": " impianti autorizzati ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni nonché ai sensi della legge 27 marzo 1992, n. 257 e successive normative di attuazione, qualora i mezzi rotabili contengano amianto all'origine.",
+        "descrizione_estesa": "5. 2. 1 - impianti autorizzati ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni nonché ai sensi della legge 27 marzo 1992, n. 257 e successive normative di attuazione, qualora i mezzi rotabili contengano amianto all'origine."
+    },
+    {
+        "id": 28,
+        "cod_smr_tipo_rifiuto": "5.3",
+        "cod_provenienza": "5.3.1 ",
+        "descrizione": "da industria chimica, petrolchimica, petrolifera, farmaceutica e alimentare",
+        "descrizione_estesa": "5.3.1 -da industria chimica, petrolchimica, petrolifera, farmaceutica e alimentare"
+    },
+    {
+        "id": 29,
+        "cod_smr_tipo_rifiuto": "5.4",
+        "cod_provenienza": "5.4.1 ",
+        "descrizione": "da industria chimica, petrolchimica, petrolifera, farmaceutica",
+        "descrizione_estesa": "5.4.1 -da industria chimica, petrolchimica, petrolifera, farmaceutica"
+    },
+    {
+        "id": 30,
+        "cod_smr_tipo_rifiuto": "5. 5",
+        "cod_provenienza": "5. 5. 1 ",
+        "descrizione": " industria automobilistica; attività demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22; attività di riparazione e sostituzione di veicoli in servizio",
+        "descrizione_estesa": "5. 5. 1 - industria automobilistica; attività demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22; attività di riparazione e sostituzione di veicoli in servizio"
+    },
+    {
+        "id": 31,
+        "cod_smr_tipo_rifiuto": "5. 6",
+        "cod_provenienza": "5. 6. 1 ",
+        "descrizione": " industria componenti elettronici; costruzione, installazione e riparazione apparecchiature elettriche e elettroniche, altre attività di recupero; attività commerciali, industriali e di servizio.",
+        "descrizione_estesa": "5. 6. 1 - industria componenti elettronici; costruzione, installazione e riparazione apparecchiature elettriche e elettroniche, altre attività di recupero; attività commerciali, industriali e di servizio."
+    },
+    {
+        "id": 32,
+        "cod_smr_tipo_rifiuto": "5.7",
+        "cod_provenienza": "5.7.1 ",
+        "descrizione": "scarti industriali o da demolizione e manutenzione di linee elettriche virgola di telecomunicazione e di apparati elettrici, elettrotecnici ed elettronici",
+        "descrizione_estesa": "5.7.1 -scarti industriali o da demolizione e manutenzione di linee elettriche virgola di telecomunicazione e di apparati elettrici, elettrotecnici ed elettronici"
+    },
+    {
+        "id": 33,
+        "cod_smr_tipo_rifiuto": "5. 8",
+        "cod_provenienza": "5. 8. 1 ",
+        "descrizione": " scarti industriali o da demolizione e manutenzione di linee elettriche, di telecomunicazioni e di apparati elettrici, elettrotecnici e elettronici; riparazione veicoli; attività demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni; industria automobilistica.",
+        "descrizione_estesa": "5. 8. 1 - scarti industriali o da demolizione e manutenzione di linee elettriche, di telecomunicazioni e di apparati elettrici, elettrotecnici e elettronici; riparazione veicoli; attività demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni; industria automobilistica."
+    },
+    {
+        "id": 34,
+        "cod_smr_tipo_rifiuto": "5 .9",
+        "cod_provenienza": "5 .9.1 ",
+        "descrizione": "demolizione manutenzione di linee di telecomunicazioni e di apparati elettrici, elettrotecnici ed elettronici",
+        "descrizione_estesa": "5 .9.1 -demolizione manutenzione di linee di telecomunicazioni e di apparati elettrici, elettrotecnici ed elettronici"
+    },
+    {
+        "id": 35,
+        "cod_smr_tipo_rifiuto": "5.10",
+        "cod_provenienza": "5.10.1 ",
+        "descrizione": "sgranellatura a secco (fini) e smolazzatura a umido (fanghi) delle scorie di copertura dei bagni di fusione degli ottoni",
+        "descrizione_estesa": "5.10.1 -sgranellatura a secco (fini) e smolazzatura a umido (fanghi) delle scorie di copertura dei bagni di fusione degli ottoni"
+    },
+    {
+        "id": 36,
+        "cod_smr_tipo_rifiuto": "5.11",
+        "cod_provenienza": "5.11.1 ",
+        "descrizione": "operazioni di movimentazione del rottame di rame e di ottone",
+        "descrizione_estesa": "5.11.1 -operazioni di movimentazione del rottame di rame e di ottone"
+    },
+    {
+        "id": 37,
+        "cod_smr_tipo_rifiuto": "5.12",
+        "cod_provenienza": "5.12.1 ",
+        "descrizione": "impianto di trattamento delle scorie di ottone",
+        "descrizione_estesa": "5.12.1 -impianto di trattamento delle scorie di ottone"
+    },
+    {
+        "id": 38,
+        "cod_smr_tipo_rifiuto": "5.13",
+        "cod_provenienza": "5.13.1 ",
+        "descrizione": "operazioni di deferrizzazione della preparazione della tornitura e trattamento scorie di ottone",
+        "descrizione_estesa": "5.13.1 -operazioni di deferrizzazione della preparazione della tornitura e trattamento scorie di ottone"
+    },
+    {
+        "id": 39,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "cod_provenienza": "5.14. 1 ",
+        "descrizione": " impianti di depurazione acque di laminazione, impianti di colata continua, impianti di trafilazione di industria siderurgica e metallurgica; pulitura meccanica dei manufatti metallici.",
+        "descrizione_estesa": "5.14. 1 - impianti di depurazione acque di laminazione, impianti di colata continua, impianti di trafilazione di industria siderurgica e metallurgica; pulitura meccanica dei manufatti metallici."
+    },
+    {
+        "id": 40,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_provenienza": "5.16. 1 ",
+        "descrizione": " industria componenti elettrici ed elettronici; costruzione, installazione e riparazione apparecchiature elettriche, elettrotecniche ed elettroniche; attività industriali, commerciali e di servizio.",
+        "descrizione_estesa": "5.16. 1 - industria componenti elettrici ed elettronici; costruzione, installazione e riparazione apparecchiature elettriche, elettrotecniche ed elettroniche; attività industriali, commerciali e di servizio."
+    },
+    {
+        "id": 41,
+        "cod_smr_tipo_rifiuto": "5.17",
+        "cod_provenienza": "5.17.1 ",
+        "descrizione": "industria siderurgica produzione di ghisa da altoforno mediante fusioni di coke e minerale di ferro in presenza di fondenti",
+        "descrizione_estesa": "5.17.1 -industria siderurgica produzione di ghisa da altoforno mediante fusioni di coke e minerale di ferro in presenza di fondenti"
+    },
+    {
+        "id": 42,
+        "cod_smr_tipo_rifiuto": "5.18",
+        "cod_provenienza": "5.18.1",
+        "descrizione": " industria siderurgica",
+        "descrizione_estesa": "5.18.1- industria siderurgica"
+    },
+    {
+        "id": 43,
+        "cod_smr_tipo_rifiuto": "5.19",
+        "cod_provenienza": "5.19.1",
+        "descrizione": " raccolta differenziata, centri di raccolta, attività industriali, commerciali e di servizi",
+        "descrizione_estesa": "5.19.1- raccolta differenziata, centri di raccolta, attività industriali, commerciali e di servizi"
+    },
+    {
+        "id": 44,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_provenienza": "6.1.1",
+        "descrizione": " raccolte differenziate, selezione da R.S.U. o R.A.; Attività industriali, artigianali e commerciali e agricole; Attività di costruzione e demolizione",
+        "descrizione_estesa": "6.1.1- raccolte differenziate, selezione da R.S.U. o R.A.; Attività industriali, artigianali e commerciali e agricole; Attività di costruzione e demolizione"
+    },
+    {
+        "id": 45,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_provenienza": "6.2. 1 ",
+        "descrizione": " industria, della produzione o trasformazione delle materie plastiche e fibre sintetiche, impianti di recupero degli accumulatori esausti, attività di autodemolizione autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di autoriparazione e industria automobilistica, altre attività di recupero di altre apparecchiature e manufatti; attività di costruzione e demolizione.",
+        "descrizione_estesa": "6.2. 1 - industria, della produzione o trasformazione delle materie plastiche e fibre sintetiche, impianti di recupero degli accumulatori esausti, attività di autodemolizione autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di autoriparazione e industria automobilistica, altre attività di recupero di altre apparecchiature e manufatti; attività di costruzione e demolizione."
+    },
+    {
+        "id": 46,
+        "cod_smr_tipo_rifiuto": "6.3",
+        "cod_provenienza": "6.3.1",
+        "descrizione": " industria chimica: produzione di ABS",
+        "descrizione_estesa": "6.3.1- industria chimica: produzione di ABS"
+    },
+    {
+        "id": 47,
+        "cod_smr_tipo_rifiuto": "6.4",
+        "cod_provenienza": "6.4.1 ",
+        "descrizione": "industria chimica e processi chimici in altri settori industriali",
+        "descrizione_estesa": "6.4.1 -industria chimica e processi chimici in altri settori industriali"
+    },
+    {
+        "id": 48,
+        "cod_smr_tipo_rifiuto": "6. 5",
+        "cod_provenienza": "6. 5. 1 ",
+        "descrizione": " attività di demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di riparazione e sostituzione su veicoli in servizio; industria automobilistica.",
+        "descrizione_estesa": "6. 5. 1 - attività di demolizione veicoli autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di riparazione e sostituzione su veicoli in servizio; industria automobilistica."
+    },
+    {
+        "id": 49,
+        "cod_smr_tipo_rifiuto": "6. 6",
+        "cod_provenienza": "6. 6. 1 ",
+        "descrizione": " attività di demolizione vetture autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di riparazione e sostituzione su vetture in servizio; industria automobilistica.",
+        "descrizione_estesa": "6. 6. 1 - attività di demolizione vetture autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, attività di riparazione e sostituzione su vetture in servizio; industria automobilistica."
+    },
+    {
+        "id": 50,
+        "cod_smr_tipo_rifiuto": "6.7",
+        "cod_provenienza": "6.7.1 ",
+        "descrizione": "industria chimica",
+        "descrizione_estesa": "6.7.1 -industria chimica"
+    },
+    {
+        "id": 51,
+        "cod_smr_tipo_rifiuto": "6. 8",
+        "cod_provenienza": "6. 8.1 ",
+        "descrizione": "industria del “tessuto non tessuto” e del feltro greggio",
+        "descrizione_estesa": "6. 8.1 -industria del “tessuto non tessuto” e del feltro greggio"
+    },
+    {
+        "id": 52,
+        "cod_smr_tipo_rifiuto": "6.10",
+        "cod_provenienza": "6.10.1",
+        "descrizione": " industria del vetro di sicurezza",
+        "descrizione_estesa": "6.10.1- industria del vetro di sicurezza"
+    },
+    {
+        "id": 53,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "cod_provenienza": "6.11. 1 ",
+        "descrizione": " attività di demolizione vetture autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, o attività di riparazione e sostituzione su vetture in uso, o da industria automobilistica.",
+        "descrizione_estesa": "6.11. 1 - attività di demolizione vetture autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, o attività di riparazione e sostituzione su vetture in uso, o da industria automobilistica."
+    },
+    {
+        "id": 54,
+        "cod_smr_tipo_rifiuto": "6.12",
+        "cod_provenienza": "6.12.1 ",
+        "descrizione": "produzione e trasformazione materie plastiche",
+        "descrizione_estesa": "6.12.1 -produzione e trasformazione materie plastiche"
+    },
+    {
+        "id": 55,
+        "cod_smr_tipo_rifiuto": "7. 1",
+        "cod_provenienza": "7. 1. 1 ",
+        "descrizione": " attività di demolizione, frantumazione e costruzione; selezione da RSU e/o RAU; manutenzione reti; attività di produzione di lastre e manufatti in fibrocemento.",
+        "descrizione_estesa": "7. 1. 1 - attività di demolizione, frantumazione e costruzione; selezione da RSU e/o RAU; manutenzione reti; attività di produzione di lastre e manufatti in fibrocemento."
+    },
+    {
+        "id": 56,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_provenienza": "7.2.1",
+        "descrizione": " attività di lavorazione dei materiali lapidei",
+        "descrizione_estesa": "7.2.1- attività di lavorazione dei materiali lapidei"
+    },
+    {
+        "id": 57,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_provenienza": "7.3.1",
+        "descrizione": " fabbricazioni di prodotti ceramici, mattoni, mattonelle e materiale di costruzione smaltati",
+        "descrizione_estesa": "7.3.1- fabbricazioni di prodotti ceramici, mattoni, mattonelle e materiale di costruzione smaltati"
+    },
+    {
+        "id": 58,
+        "cod_smr_tipo_rifiuto": "7.4",
+        "cod_provenienza": "7.4.1",
+        "descrizione": " attività di produzione di laterizi e di argilla espansa e perlite espansa",
+        "descrizione_estesa": "7.4.1- attività di produzione di laterizi e di argilla espansa e perlite espansa"
+    },
+    {
+        "id": 59,
+        "cod_smr_tipo_rifiuto": "7.5",
+        "cod_provenienza": "7.5.1",
+        "descrizione": " produzione di refrattari elettrofusi",
+        "descrizione_estesa": "7.5.1- produzione di refrattari elettrofusi"
+    },
+    {
+        "id": 60,
+        "cod_smr_tipo_rifiuto": "7.6",
+        "cod_provenienza": "7.6.1 ",
+        "descrizione": "attività di scarifica del manto stradale mediante fresatura a freddo; Campi di tiro al volo",
+        "descrizione_estesa": "7.6.1 -attività di scarifica del manto stradale mediante fresatura a freddo; Campi di tiro al volo"
+    },
+    {
+        "id": 61,
+        "cod_smr_tipo_rifiuto": "7.7",
+        "cod_provenienza": "7.7.1",
+        "descrizione": " industria chimica, petrolchimica, da processi di depurazione di reflui liquidi e gassosi industriali",
+        "descrizione_estesa": "7.7.1- industria chimica, petrolchimica, da processi di depurazione di reflui liquidi e gassosi industriali"
+    },
+    {
+        "id": 62,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_provenienza": "7.8.1 ",
+        "descrizione": "demolizione di isolanti termici in processi di fusione e/o termici, industrie di produzione dei refrattari",
+        "descrizione_estesa": "7.8.1 -demolizione di isolanti termici in processi di fusione e/o termici, industrie di produzione dei refrattari"
+    },
+    {
+        "id": 63,
+        "cod_smr_tipo_rifiuto": "7.9",
+        "cod_provenienza": "7.9.1",
+        "descrizione": " demolizione di isolamenti termici in processi di fusione e/o cottura, industria della ceramica e produzione di refrattari",
+        "descrizione_estesa": "7.9.1- demolizione di isolamenti termici in processi di fusione e/o cottura, industria della ceramica e produzione di refrattari"
+    },
+    {
+        "id": 64,
+        "cod_smr_tipo_rifiuto": "7.10",
+        "cod_provenienza": "7.10.1 ",
+        "descrizione": "processi di pulizia, lavorazioni meccaniche e sabbiatura delle superfici di manufatti metallici, produzione di moli abrasive",
+        "descrizione_estesa": "7.10.1 -processi di pulizia, lavorazioni meccaniche e sabbiatura delle superfici di manufatti metallici, produzione di moli abrasive"
+    },
+    {
+        "id": 65,
+        "cod_smr_tipo_rifiuto": "7.11",
+        "cod_provenienza": "7.11.1",
+        "descrizione": " manutenzione delle strutture ferroviarie",
+        "descrizione_estesa": "7.11.1- manutenzione delle strutture ferroviarie"
+    },
+    {
+        "id": 66,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_provenienza": "7.12.1",
+        "descrizione": " attività scultoree ed industrie ceramiche",
+        "descrizione_estesa": "7.12.1- attività scultoree ed industrie ceramiche"
+    },
+    {
+        "id": 67,
+        "cod_smr_tipo_rifiuto": "7.13",
+        "cod_provenienza": "7.13.1",
+        "descrizione": " industria di produzione pannelli in gesso; Demolizione edifici",
+        "descrizione_estesa": "7.13.1- industria di produzione pannelli in gesso; Demolizione edifici"
+    },
+    {
+        "id": 68,
+        "cod_smr_tipo_rifiuto": "7.14",
+        "cod_provenienza": "7.14. 1 ",
+        "descrizione": " attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua.",
+        "descrizione_estesa": "7.14. 1 - attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua."
+    },
+    {
+        "id": 69,
+        "cod_smr_tipo_rifiuto": "7.15",
+        "cod_provenienza": "7.15. 1 ",
+        "descrizione": " attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua.",
+        "descrizione_estesa": "7.15. 1 - attività di trivellazione pali di fondazione su terreno vergine; ricerca e coltivazione idrocarburi su terra e in mare; ricerca e coltivazione geotermica; perforazioni per ricerche e coltivazioni minerarie in generale; perforazioni geognostiche di grande profondità; perforazioni per pozzi d'acqua."
+    },
+    {
+        "id": 70,
+        "cod_smr_tipo_rifiuto": "7.16",
+        "cod_provenienza": "7.16.1",
+        "descrizione": " attività industriali dello zucchero, dell'alcool e del lievito",
+        "descrizione_estesa": "7.16.1- attività industriali dello zucchero, dell'alcool e del lievito"
+    },
+    {
+        "id": 71,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_provenienza": "7.17.1",
+        "descrizione": " attività industriali dello zucchero, dell’alcool, del lievito e dell'estrazione, lavorazione taglio del calcare, industria siderurgica",
+        "descrizione_estesa": "7.17.1- attività industriali dello zucchero, dell’alcool, del lievito e dell'estrazione, lavorazione taglio del calcare, industria siderurgica"
+    },
+    {
+        "id": 72,
+        "cod_smr_tipo_rifiuto": "7.18",
+        "cod_provenienza": "7.18.1 ",
+        "descrizione": "industria chimica; Industria della calce, industria petrolchimica",
+        "descrizione_estesa": "7.18.1 -industria chimica; Industria della calce, industria petrolchimica"
+    },
+    {
+        "id": 73,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "cod_provenienza": "7.19.1",
+        "descrizione": " produzione di metaborato e perborato di sodio",
+        "descrizione_estesa": "7.19.1- produzione di metaborato e perborato di sodio"
+    },
+    {
+        "id": 74,
+        "cod_smr_tipo_rifiuto": "7.20",
+        "cod_provenienza": "7.20.1",
+        "descrizione": " industria della metallurgia delle leghe non ferrose; rottamazione di componenti di apparecchiature",
+        "descrizione_estesa": "7.20.1- industria della metallurgia delle leghe non ferrose; rottamazione di componenti di apparecchiature"
+    },
+    {
+        "id": 75,
+        "cod_smr_tipo_rifiuto": "7.21",
+        "cod_provenienza": "7.21.1 ",
+        "descrizione": "lavanderie",
+        "descrizione_estesa": "7.21.1 -lavanderie"
+    },
+    {
+        "id": 76,
+        "cod_smr_tipo_rifiuto": "7.22",
+        "cod_provenienza": "7.22.1",
+        "descrizione": " attività di fusione di leghe ferro_silicio mediante forni ad arco elettrico",
+        "descrizione_estesa": "7.22.1- attività di fusione di leghe ferro_silicio mediante forni ad arco elettrico"
+    },
+    {
+        "id": 77,
+        "cod_smr_tipo_rifiuto": "7.23",
+        "cod_provenienza": "7.23.1",
+        "descrizione": " pulizia di arenili; industria prodotti ittici",
+        "descrizione_estesa": "7.23.1- pulizia di arenili; industria prodotti ittici"
+    },
+    {
+        "id": 78,
+        "cod_smr_tipo_rifiuto": "7.24",
+        "cod_provenienza": "7.24.1",
+        "descrizione": " gassificazione di carbone, anche ad elevato tenore di zolfo, in impianti di produzione energia elettrica od in impianti chimici di sintesi",
+        "descrizione_estesa": "7.24.1- gassificazione di carbone, anche ad elevato tenore di zolfo, in impianti di produzione energia elettrica od in impianti chimici di sintesi"
+    },
+    {
+        "id": 79,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_provenienza": "7.25.1",
+        "descrizione": " fonderie di seconda fusione di ghisa e di acciaio",
+        "descrizione_estesa": "7.25.1- fonderie di seconda fusione di ghisa e di acciaio"
+    },
+    {
+        "id": 80,
+        "cod_smr_tipo_rifiuto": "7.26",
+        "cod_provenienza": "7.26.1",
+        "descrizione": " industria chimica (crogioli rotti)",
+        "descrizione_estesa": "7.26.1- industria chimica (crogioli rotti)"
+    },
+    {
+        "id": 81,
+        "cod_smr_tipo_rifiuto": "7.27",
+        "cod_provenienza": "7.27.1 ",
+        "descrizione": "fonderie di seconda fusione di ghisa",
+        "descrizione_estesa": "7.27.1 -fonderie di seconda fusione di ghisa"
+    },
+    {
+        "id": 82,
+        "cod_smr_tipo_rifiuto": "7.28",
+        "cod_provenienza": "7.28.1 ",
+        "descrizione": "attività di rigenerazione di catalizzatori esausti effettuata anche presso gli impianti di cracking catalitico in raffineria di petrolio",
+        "descrizione_estesa": "7.28.1 -attività di rigenerazione di catalizzatori esausti effettuata anche presso gli impianti di cracking catalitico in raffineria di petrolio"
+    },
+    {
+        "id": 83,
+        "cod_smr_tipo_rifiuto": "7.29",
+        "cod_provenienza": "7.29.1 ",
+        "descrizione": "attività manutenzione e /o di demolizione",
+        "descrizione_estesa": "7.29.1 -attività manutenzione e /o di demolizione"
+    },
+    {
+        "id": 84,
+        "cod_smr_tipo_rifiuto": "7.30",
+        "cod_provenienza": "7.30.1",
+        "descrizione": " processo di vagliatura dei rifiuti provenienti dalla pulizia degli arenili",
+        "descrizione_estesa": "7.30.1- processo di vagliatura dei rifiuti provenienti dalla pulizia degli arenili"
+    },
+    {
+        "id": 85,
+        "cod_smr_tipo_rifiuto": "7.31",
+        "cod_provenienza": "7.31.1 ",
+        "descrizione": "industria agroalimentare in genere e industria laniera, attività di scavo",
+        "descrizione_estesa": "7.31.1 -industria agroalimentare in genere e industria laniera, attività di scavo"
+    },
+    {
+        "id": 86,
+        "cod_smr_tipo_rifiuto": "7.31bis",
+        "cod_provenienza": "7.31bis1",
+        "descrizione": " attività di scavo",
+        "descrizione_estesa": "7.31bis1- attività di scavo"
+    },
+    {
+        "id": 87,
+        "cod_smr_tipo_rifiuto": "8.1",
+        "cod_provenienza": "8.1.1",
+        "descrizione": " ingrassaggio delle pelli per pelliccia",
+        "descrizione_estesa": "8.1.1- ingrassaggio delle pelli per pelliccia"
+    },
+    {
+        "id": 88,
+        "cod_smr_tipo_rifiuto": "8.2",
+        "cod_provenienza": "8.2.1",
+        "descrizione": " industrie tessile",
+        "descrizione_estesa": "8.2.1- industrie tessile"
+    },
+    {
+        "id": 89,
+        "cod_smr_tipo_rifiuto": "8.3",
+        "cod_provenienza": "8.3.1",
+        "descrizione": " industria lamiera, acque di lavaggio e sgrassatura della lana",
+        "descrizione_estesa": "8.3.1- industria lamiera, acque di lavaggio e sgrassatura della lana"
+    },
+    {
+        "id": 90,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_provenienza": "8.4.1 ",
+        "descrizione": "industria della produzione lavorazione di utilizzo delle fibre tessili naturali sintetiche e artificiali",
+        "descrizione_estesa": "8.4.1 -industria della produzione lavorazione di utilizzo delle fibre tessili naturali sintetiche e artificiali"
+    },
+    {
+        "id": 91,
+        "cod_smr_tipo_rifiuto": "8.5",
+        "cod_provenienza": "8.5.1",
+        "descrizione": " Industria conciaria, calzaturiera, della pelletteria e dell'abbigliamento in genere",
+        "descrizione_estesa": "8.5.1- Industria conciaria, calzaturiera, della pelletteria e dell'abbigliamento in genere"
+    },
+    {
+        "id": 92,
+        "cod_smr_tipo_rifiuto": "8.6",
+        "cod_provenienza": "8.6.1 ",
+        "descrizione": "fasi di spaccatura, rasatura, rifilatura e smerigliatura dell'industria conciaria e del settore",
+        "descrizione_estesa": "8.6.1 -fasi di spaccatura, rasatura, rifilatura e smerigliatura dell'industria conciaria e del settore"
+    },
+    {
+        "id": 93,
+        "cod_smr_tipo_rifiuto": "8.7",
+        "cod_provenienza": "8.7.1 ",
+        "descrizione": "industria conciaria, fasi di smerigliatura, rasatura",
+        "descrizione_estesa": "8.7.1 -industria conciaria, fasi di smerigliatura, rasatura"
+    },
+    {
+        "id": 94,
+        "cod_smr_tipo_rifiuto": "8.8",
+        "cod_provenienza": "8.8.1 ",
+        "descrizione": "industria conciaria, fase di scarnitura, rasatura, spaccatura e pezzatura in pelo",
+        "descrizione_estesa": "8.8.1 -industria conciaria, fase di scarnitura, rasatura, spaccatura e pezzatura in pelo"
+    },
+    {
+        "id": 95,
+        "cod_smr_tipo_rifiuto": " 8.9",
+        "cod_provenienza": " 8.9.1",
+        "descrizione": " cicli di post_consumo",
+        "descrizione_estesa": " 8.9.1- cicli di post_consumo"
+    },
+    {
+        "id": 96,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_provenienza": "9.1.1 ",
+        "descrizione": "industria edile e raccolta differenziata, attività industriali, artigianali commerciali, agricola e di servizio; Attività di demolizione",
+        "descrizione_estesa": "9.1.1 -industria edile e raccolta differenziata, attività industriali, artigianali commerciali, agricola e di servizio; Attività di demolizione"
+    },
+    {
+        "id": 97,
+        "cod_smr_tipo_rifiuto": "9.2",
+        "cod_provenienza": "9.2.1 ",
+        "descrizione": "Industria della lavorazione del legno vergine",
+        "descrizione_estesa": "9.2.1 -Industria della lavorazione del legno vergine"
+    },
+    {
+        "id": 98,
+        "cod_smr_tipo_rifiuto": "9.5",
+        "cod_provenienza": "9.5.1 ",
+        "descrizione": "industrie del pannello di fibra di legno; cartiere",
+        "descrizione_estesa": "9.5.1 -industrie del pannello di fibra di legno; cartiere"
+    },
+    {
+        "id": 99,
+        "cod_smr_tipo_rifiuto": "9.6",
+        "cod_provenienza": "9.6.1",
+        "descrizione": " industria produzione e utilizzo carte impregnate del laminato; industrie del pannello nobilitato e industrie della componentistica dell'arredo",
+        "descrizione_estesa": "9.6.1- industria produzione e utilizzo carte impregnate del laminato; industrie del pannello nobilitato e industrie della componentistica dell'arredo"
+    },
+    {
+        "id": 100,
+        "cod_smr_tipo_rifiuto": "10.1",
+        "cod_provenienza": "10.1.1",
+        "descrizione": "  industria della gomma e della produzione di pneumatici; Altre attività produttive, commerciali e artigianali",
+        "descrizione_estesa": "10.1.1-  industria della gomma e della produzione di pneumatici; Altre attività produttive, commerciali e artigianali"
+    },
+    {
+        "id": 101,
+        "cod_smr_tipo_rifiuto": "10. 2",
+        "cod_provenienza": "10. 2. 1 ",
+        "descrizione": " industria della ricostruzione pneumatici, attività di sostituzione e riparazione pneumatici e attività di servizio, attività di autodemolizione autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, autoriparazione e industria automobilistica.",
+        "descrizione_estesa": "10. 2. 1 - industria della ricostruzione pneumatici, attività di sostituzione e riparazione pneumatici e attività di servizio, attività di autodemolizione autorizzata ai sensi del decreto legislativo 5 febbraio 1997, n. 22 e successive modifiche e integrazioni, autoriparazione e industria automobilistica."
+    },
+    {
+        "id": 102,
+        "cod_smr_tipo_rifiuto": "11.1",
+        "cod_provenienza": "11.1.1",
+        "descrizione": " industria olearia e margariniera e della lavorazione ed estrazione dei grassi",
+        "descrizione_estesa": "11.1.1- industria olearia e margariniera e della lavorazione ed estrazione dei grassi"
+    },
+    {
+        "id": 103,
+        "cod_smr_tipo_rifiuto": "11.2",
+        "cod_provenienza": "11.2.1",
+        "descrizione": " raffinerie per il recupero dell'olio di cui al punto 11.1.3",
+        "descrizione_estesa": "11.2.1- raffinerie per il recupero dell'olio di cui al punto 11.1.3"
+    },
+    {
+        "id": 104,
+        "cod_smr_tipo_rifiuto": "11.3",
+        "cod_provenienza": "11.3.1",
+        "descrizione": " Industria olearia e margariniera",
+        "descrizione_estesa": "11.3.1- Industria olearia e margariniera"
+    },
+    {
+        "id": 105,
+        "cod_smr_tipo_rifiuto": "11.4",
+        "cod_provenienza": "11.4.1",
+        "descrizione": " raffineria di cui al punto 11.1.3",
+        "descrizione_estesa": "11.4.1- raffineria di cui al punto 11.1.3"
+    },
+    {
+        "id": 106,
+        "cod_smr_tipo_rifiuto": "11.5",
+        "cod_provenienza": "11.5.1 ",
+        "descrizione": "industria dolciaria",
+        "descrizione_estesa": "11.5.1 -industria dolciaria"
+    },
+    {
+        "id": 107,
+        "cod_smr_tipo_rifiuto": "11.6",
+        "cod_provenienza": "11.6.1 ",
+        "descrizione": "Industria vinicola",
+        "descrizione_estesa": "11.6.1 -Industria vinicola"
+    },
+    {
+        "id": 108,
+        "cod_smr_tipo_rifiuto": "11.7",
+        "cod_provenienza": "11.7.1 ",
+        "descrizione": "distillerie produzione di coloranti naturali",
+        "descrizione_estesa": "11.7.1 -distillerie produzione di coloranti naturali"
+    },
+    {
+        "id": 109,
+        "cod_smr_tipo_rifiuto": "11.8",
+        "cod_provenienza": "11.8.1 ",
+        "descrizione": "industria tessile",
+        "descrizione_estesa": "11.8.1 -industria tessile"
+    },
+    {
+        "id": 110,
+        "cod_smr_tipo_rifiuto": "11.9",
+        "cod_provenienza": "11.9.1 ",
+        "descrizione": "Salatura nell'industria delle carni, scuotimento delle pelli salate nell'industria conciaria ",
+        "descrizione_estesa": "11.9.1 -Salatura nell'industria delle carni, scuotimento delle pelli salate nell'industria conciaria "
+    },
+    {
+        "id": 111,
+        "cod_smr_tipo_rifiuto": "11.10",
+        "cod_provenienza": "11.10.1 ",
+        "descrizione": "manifatture tabacchi",
+        "descrizione_estesa": "11.10.1 -manifatture tabacchi"
+    },
+    {
+        "id": 112,
+        "cod_smr_tipo_rifiuto": "11.11",
+        "cod_provenienza": "11.11.1",
+        "descrizione": " fabbricazione di oli e grassi vegetali e animali; attività di ristorazione, rosticcerie, pasticcerie, industrie alimentari e dalla raccolta differenziata di Ru.",
+        "descrizione_estesa": "11.11.1- fabbricazione di oli e grassi vegetali e animali; attività di ristorazione, rosticcerie, pasticcerie, industrie alimentari e dalla raccolta differenziata di Ru."
+    },
+    {
+        "id": 113,
+        "cod_smr_tipo_rifiuto": "11.12",
+        "cod_provenienza": "11.12.1",
+        "descrizione": " industria olearia, processo di produzione di olio di sansa mediante estrazione con solvente",
+        "descrizione_estesa": "11.12.1- industria olearia, processo di produzione di olio di sansa mediante estrazione con solvente"
+    },
+    {
+        "id": 114,
+        "cod_smr_tipo_rifiuto": "11.13",
+        "cod_provenienza": "11.13.1",
+        "descrizione": " industria alimentazione zootecnica",
+        "descrizione_estesa": "11.13.1- industria alimentazione zootecnica"
+    },
+    {
+        "id": 115,
+        "cod_smr_tipo_rifiuto": "11.14",
+        "cod_provenienza": "11.14.1",
+        "descrizione": " produzione, lavorazione e conservazione delle carni; Lavaggio di sale marino greggio",
+        "descrizione_estesa": "11.14.1- produzione, lavorazione e conservazione delle carni; Lavaggio di sale marino greggio"
+    },
+    {
+        "id": 116,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_provenienza": "12.1.1",
+        "descrizione": " Decorazione acqua di processo e reflue delle industrie cartarie",
+        "descrizione_estesa": "12.1.1- Decorazione acqua di processo e reflue delle industrie cartarie"
+    },
+    {
+        "id": 117,
+        "cod_smr_tipo_rifiuto": "12.2",
+        "cod_provenienza": "12.2.1",
+        "descrizione": " attività di dragaggio di fondali di laghi virgola di canali navigabili o irrigui e corsi d'acqua (acque) ",
+        "descrizione_estesa": "12.2.1- attività di dragaggio di fondali di laghi virgola di canali navigabili o irrigui e corsi d'acqua (acque) "
+    },
+    {
+        "id": 118,
+        "cod_smr_tipo_rifiuto": "12.3",
+        "cod_provenienza": "12.3.1",
+        "descrizione": " Lavorazione materiali lapidei di natura calcarea",
+        "descrizione_estesa": "12.3.1- Lavorazione materiali lapidei di natura calcarea"
+    },
+    {
+        "id": 119,
+        "cod_smr_tipo_rifiuto": "12.4",
+        "cod_provenienza": "12.4.1 ",
+        "descrizione": "lavorazione materiali lapidei di natura silicea",
+        "descrizione_estesa": "12.4.1 -lavorazione materiali lapidei di natura silicea"
+    },
+    {
+        "id": 120,
+        "cod_smr_tipo_rifiuto": "12.5",
+        "cod_provenienza": "12.5.1 ",
+        "descrizione": "Industria della lavorazione degli agglomerati di altri materiali lapidei trattati",
+        "descrizione_estesa": "12.5.1 -Industria della lavorazione degli agglomerati di altri materiali lapidei trattati"
+    },
+    {
+        "id": 121,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_provenienza": "12.6.1 ",
+        "descrizione": "industria ceramica",
+        "descrizione_estesa": "12.6.1 -industria ceramica"
+    },
+    {
+        "id": 122,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "cod_provenienza": "12.7.1",
+        "descrizione": " chiarificazione o decantazione naturale di acque da lavaggio di inerti; attività estrattive",
+        "descrizione_estesa": "12.7.1- chiarificazione o decantazione naturale di acque da lavaggio di inerti; attività estrattive"
+    },
+    {
+        "id": 123,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_provenienza": "12.8.1",
+        "descrizione": " centrali termoelettriche, industrie chimiche e manufatturiera e del legno",
+        "descrizione_estesa": "12.8.1- centrali termoelettriche, industrie chimiche e manufatturiera e del legno"
+    },
+    {
+        "id": 124,
+        "cod_smr_tipo_rifiuto": "12.9",
+        "cod_provenienza": "12.9.1 ",
+        "descrizione": "molatura del vetro",
+        "descrizione_estesa": "12.9.1 -molatura del vetro"
+    },
+    {
+        "id": 125,
+        "cod_smr_tipo_rifiuto": "12.10",
+        "cod_provenienza": "12.10.1",
+        "descrizione": " battitura e lavaggio della lana di pecora",
+        "descrizione_estesa": "12.10.1- battitura e lavaggio della lana di pecora"
+    },
+    {
+        "id": 126,
+        "cod_smr_tipo_rifiuto": "12.11",
+        "cod_provenienza": "12.11.1",
+        "descrizione": " industria meccanica industria chirurgica",
+        "descrizione_estesa": "12.11.1- industria meccanica industria chirurgica"
+    },
+    {
+        "id": 127,
+        "cod_smr_tipo_rifiuto": "12.12",
+        "cod_provenienza": "12.12.1",
+        "descrizione": " fonderie di ghisa e di acciaio",
+        "descrizione_estesa": "12.12.1- fonderie di ghisa e di acciaio"
+    },
+    {
+        "id": 128,
+        "cod_smr_tipo_rifiuto": "12.13",
+        "cod_provenienza": "12.13.1 ",
+        "descrizione": "attività industriali e decantazione naturale",
+        "descrizione_estesa": "12.13.1 -attività industriali e decantazione naturale"
+    },
+    {
+        "id": 129,
+        "cod_smr_tipo_rifiuto": "12.14",
+        "cod_provenienza": "12.14.1",
+        "descrizione": " Anodizzazione dell'alluminio e soluzioni alcaline di decapaggio",
+        "descrizione_estesa": "12.14.1- Anodizzazione dell'alluminio e soluzioni alcaline di decapaggio"
+    },
+    {
+        "id": 130,
+        "cod_smr_tipo_rifiuto": "12.15",
+        "cod_provenienza": "12.15.1 ",
+        "descrizione": "industria dei segati, tranciati, fogliati e del pannello",
+        "descrizione_estesa": "12.15.1 -industria dei segati, tranciati, fogliati e del pannello"
+    },
+    {
+        "id": 131,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_provenienza": "12.16. 1 ",
+        "descrizione": " industria chimica, automotoristica, petrolifera, metalmeccanica, metallurgica e siderurgica; petrolchimica. organica <30%, Cr totale <1000 ppm, Cr VI <1 ppm, Pb <1500 ppm e As, Cd, Hg <1 ppm in totale, solventi aromatici e clorurati <200 ppm.",
+        "descrizione_estesa": "12.16. 1 - industria chimica, automotoristica, petrolifera, metalmeccanica, metallurgica e siderurgica; petrolchimica. organica <30%, Cr totale <1000 ppm, Cr VI <1 ppm, Pb <1500 ppm e As, Cd, Hg <1 ppm in totale, solventi aromatici e clorurati <200 ppm."
+    },
+    {
+        "id": 132,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_provenienza": "12.17.1",
+        "descrizione": " Industria siderurgica e metalmeccanica",
+        "descrizione_estesa": "12.17.1- Industria siderurgica e metalmeccanica"
+    },
+    {
+        "id": 133,
+        "cod_smr_tipo_rifiuto": "12.18",
+        "cod_provenienza": "12.18.1",
+        "descrizione": " essiccatore",
+        "descrizione_estesa": "12.18.1- essiccatore"
+    },
+    {
+        "id": 134,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_provenienza": "13.1.1",
+        "descrizione": "Centrale termoelettriche",
+        "descrizione_estesa": "13.1.1-Centrale termoelettriche"
+    },
+    {
+        "id": 135,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_provenienza": "13.2.1",
+        "descrizione": " Impianti di recupero energetico di biomasse, legno e fanghi di cartiera",
+        "descrizione_estesa": "13.2.1- Impianti di recupero energetico di biomasse, legno e fanghi di cartiera"
+    },
+    {
+        "id": 136,
+        "cod_smr_tipo_rifiuto": "13.3",
+        "cod_provenienza": "13.3.1",
+        "descrizione": " impianti di incenerimento di rifiuti solidi urbani e assimilabili",
+        "descrizione_estesa": "13.3.1- impianti di incenerimento di rifiuti solidi urbani e assimilabili"
+    },
+    {
+        "id": 137,
+        "cod_smr_tipo_rifiuto": "13.4",
+        "cod_provenienza": "13.4.1",
+        "descrizione": " Processo di fusione del rame",
+        "descrizione_estesa": "13.4.1- Processo di fusione del rame"
+    },
+    {
+        "id": 138,
+        "cod_smr_tipo_rifiuto": "13.5",
+        "cod_provenienza": "13.5.1",
+        "descrizione": " Produzione di ossidi di ferro",
+        "descrizione_estesa": "13.5.1- Produzione di ossidi di ferro"
+    },
+    {
+        "id": 139,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_provenienza": "13.6.1",
+        "descrizione": " Produzione di biossido di titanio virgola di ossido di ferro; Produzione di acido citrico e tartarico; produzione di energia elettrica; produzione di refrattari",
+        "descrizione_estesa": "13.6.1- Produzione di biossido di titanio virgola di ossido di ferro; Produzione di acido citrico e tartarico; produzione di energia elettrica; produzione di refrattari"
+    },
+    {
+        "id": 140,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "cod_provenienza": "13.7.1",
+        "descrizione": " Neutralizzazione soluzioni di acido solforico nel processo di produzione bella policloruro basico di alluminio e produzione di acido fluoridrico",
+        "descrizione_estesa": "13.7.1- Neutralizzazione soluzioni di acido solforico nel processo di produzione bella policloruro basico di alluminio e produzione di acido fluoridrico"
+    },
+    {
+        "id": 141,
+        "cod_smr_tipo_rifiuto": "13.8",
+        "cod_provenienza": "13.8.1 ",
+        "descrizione": "coprodotto dai forni di produzione di acido fluoridrico",
+        "descrizione_estesa": "13.8.1 -coprodotto dai forni di produzione di acido fluoridrico"
+    },
+    {
+        "id": 142,
+        "cod_smr_tipo_rifiuto": "13.9 ",
+        "cod_provenienza": "13.9 .1",
+        "descrizione": "Processi di depurazione (metodo calce_soda) di soluzioni sature di cloruro di sodio per la fabbricazione di prodotti sodici",
+        "descrizione_estesa": "13.9 .1-Processi di depurazione (metodo calce_soda) di soluzioni sature di cloruro di sodio per la fabbricazione di prodotti sodici"
+    },
+    {
+        "id": 143,
+        "cod_smr_tipo_rifiuto": "13.10",
+        "cod_provenienza": "13.10.1 ",
+        "descrizione": "neutralizzazione delle acque reflue contenenti acido cloridrico e acido solforico",
+        "descrizione_estesa": "13.10.1 -neutralizzazione delle acque reflue contenenti acido cloridrico e acido solforico"
+    },
+    {
+        "id": 144,
+        "cod_smr_tipo_rifiuto": "13.11",
+        "cod_provenienza": "13.11.1",
+        "descrizione": " industria produzione di magnesio con processo silicotermico",
+        "descrizione_estesa": "13.11.1- industria produzione di magnesio con processo silicotermico"
+    },
+    {
+        "id": 145,
+        "cod_smr_tipo_rifiuto": "13.12",
+        "cod_provenienza": "13.12.1",
+        "descrizione": " Industria chimica industria petrolifera industria metallurgica e depurazione del carbone",
+        "descrizione_estesa": "13.12.1- Industria chimica industria petrolifera industria metallurgica e depurazione del carbone"
+    },
+    {
+        "id": 146,
+        "cod_smr_tipo_rifiuto": "13.13",
+        "cod_provenienza": "13.13.1",
+        "descrizione": " Purificazione del gas naturale di cokeria H2S",
+        "descrizione_estesa": "13.13.1- Purificazione del gas naturale di cokeria H2S"
+    },
+    {
+        "id": 147,
+        "cod_smr_tipo_rifiuto": "13.14",
+        "cod_provenienza": "13.14.1",
+        "descrizione": "Produzione di sali di bario a partire dalla barite naturale",
+        "descrizione_estesa": "13.14.1-Produzione di sali di bario a partire dalla barite naturale"
+    },
+    {
+        "id": 148,
+        "cod_smr_tipo_rifiuto": "13.15",
+        "cod_provenienza": "13.15.1",
+        "descrizione": " Industria chimica e farmaceutica",
+        "descrizione_estesa": "13.15.1- Industria chimica e farmaceutica"
+    },
+    {
+        "id": 149,
+        "cod_smr_tipo_rifiuto": "13.16",
+        "cod_provenienza": "13.16.1",
+        "descrizione": " produzione di sali di bario da barite naturale",
+        "descrizione_estesa": "13.16.1- produzione di sali di bario da barite naturale"
+    },
+    {
+        "id": 150,
+        "cod_smr_tipo_rifiuto": "13.17",
+        "cod_provenienza": "13.17.1",
+        "descrizione": " impianti di produzione del tartrato di antimonio e potassio (tartaro emetico)",
+        "descrizione_estesa": "13.17.1- impianti di produzione del tartrato di antimonio e potassio (tartaro emetico)"
+    },
+    {
+        "id": 151,
+        "cod_smr_tipo_rifiuto": "13.18",
+        "cod_provenienza": "13.18.1",
+        "descrizione": " Ossidazione della ghisa per la produzione di acido diamminostilbendisolfonico",
+        "descrizione_estesa": "13.18.1- Ossidazione della ghisa per la produzione di acido diamminostilbendisolfonico"
+    },
+    {
+        "id": 152,
+        "cod_smr_tipo_rifiuto": "13.18.bis",
+        "cod_provenienza": "13.18.bis.1 ",
+        "descrizione": " processo di arrostimento del minerale noto come pirite o solfuro di ferro per la produzione di acido solforico e ossido di ferro, deposito anche presso stabilimenti di produzione dismessi.",
+        "descrizione_estesa": "13.18.bis.1 - processo di arrostimento del minerale noto come pirite o solfuro di ferro per la produzione di acido solforico e ossido di ferro, deposito anche presso stabilimenti di produzione dismessi."
+    },
+    {
+        "id": 153,
+        "cod_smr_tipo_rifiuto": "13.19",
+        "cod_provenienza": "13.19.1 ",
+        "descrizione": "smalterie negli impianti di applicazione elettrostatica a polvere oppure a spruzzo oppure ad immersione",
+        "descrizione_estesa": "13.19.1 -smalterie negli impianti di applicazione elettrostatica a polvere oppure a spruzzo oppure ad immersione"
+    },
+    {
+        "id": 154,
+        "cod_smr_tipo_rifiuto": "13.20",
+        "cod_provenienza": "13.20.1",
+        "descrizione": " raccolta differenziata da parte dei distributori o di altri operatori specializzati; attività produttive o di servizio",
+        "descrizione_estesa": "13.20.1- raccolta differenziata da parte dei distributori o di altri operatori specializzati; attività produttive o di servizio"
+    },
+    {
+        "id": 155,
+        "cod_smr_tipo_rifiuto": "13.21",
+        "cod_provenienza": "13.21.1 ",
+        "descrizione": "rigenerazione delle resine a scambio ionico utilizzate nella desalazione delle acque saline",
+        "descrizione_estesa": "13.21.1 -rigenerazione delle resine a scambio ionico utilizzate nella desalazione delle acque saline"
+    },
+    {
+        "id": 156,
+        "cod_smr_tipo_rifiuto": "13.22",
+        "cod_provenienza": "13.22.1",
+        "descrizione": " Industria, laboratori fotografici e di sviluppo attività commerciale",
+        "descrizione_estesa": "13.22.1- Industria, laboratori fotografici e di sviluppo attività commerciale"
+    },
+    {
+        "id": 157,
+        "cod_smr_tipo_rifiuto": "13.23",
+        "cod_provenienza": "13.23.1",
+        "descrizione": " Industria elettronica di produzione circuiti stampati",
+        "descrizione_estesa": "13.23.1- Industria elettronica di produzione circuiti stampati"
+    },
+    {
+        "id": 158,
+        "cod_smr_tipo_rifiuto": "13.24",
+        "cod_provenienza": "13.24.1",
+        "descrizione": " Industria produzione delle carte cerate",
+        "descrizione_estesa": "13.24.1- Industria produzione delle carte cerate"
+    },
+    {
+        "id": 159,
+        "cod_smr_tipo_rifiuto": "13.25",
+        "cod_provenienza": "13.25.1",
+        "descrizione": " Industria chimica",
+        "descrizione_estesa": "13.25.1- Industria chimica"
+    },
+    {
+        "id": 160,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "cod_provenienza": "13.26.1 ",
+        "descrizione": "  demolizione delle celle elettrolitiche e produzione di elettrodi di carbone, cicli di consumo degli elettrodi in grafite. produzione dell'alluminio per via elettrolitica.",
+        "descrizione_estesa": "13.26.1 -  demolizione delle celle elettrolitiche e produzione di elettrodi di carbone, cicli di consumo degli elettrodi in grafite. produzione dell'alluminio per via elettrolitica."
+    },
+    {
+        "id": 161,
+        "cod_smr_tipo_rifiuto": "13.27",
+        "cod_provenienza": "13.27.1",
+        "descrizione": " abbattimento emissioni di fluoro mediante composti di calcio",
+        "descrizione_estesa": "13.27.1- abbattimento emissioni di fluoro mediante composti di calcio"
+    },
+    {
+        "id": 162,
+        "cod_smr_tipo_rifiuto": "13.28",
+        "cod_provenienza": "13.28.1",
+        "descrizione": " Industria chimica",
+        "descrizione_estesa": "13.28.1- Industria chimica"
+    },
+    {
+        "id": 163,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_provenienza": "14.1.1",
+        "descrizione": " Raccolta di RSU raccolta finalizzata di rifiuti speciali non pericolosi e impianti di trattamento meccanico di rifiuti",
+        "descrizione_estesa": "14.1.1- Raccolta di RSU raccolta finalizzata di rifiuti speciali non pericolosi e impianti di trattamento meccanico di rifiuti"
+    },
+    {
+        "id": 164,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_provenienza": "15.1.1",
+        "descrizione": " Raccolta differenziata di frazione umida dei rifiuti urbani e raccolta selettiva dei rifiuti speciali e non pericolosi assimilati a matrice organica",
+        "descrizione_estesa": "15.1.1- Raccolta differenziata di frazione umida dei rifiuti urbani e raccolta selettiva dei rifiuti speciali e non pericolosi assimilati a matrice organica"
+    },
+    {
+        "id": 165,
+        "cod_smr_tipo_rifiuto": "16.1.A",
+        "cod_provenienza": "16.1.A.1 ",
+        "descrizione": "Frazione umida derivante dalla raccolta differenziata di RSU",
+        "descrizione_estesa": "16.1.A.1 -Frazione umida derivante dalla raccolta differenziata di RSU"
+    },
+    {
+        "id": 166,
+        "cod_smr_tipo_rifiuto": "16.1.B",
+        "cod_provenienza": "16.1.B.1",
+        "descrizione": " coltivazione raccolta dei prodotti agricoli",
+        "descrizione_estesa": "16.1.B.1- coltivazione raccolta dei prodotti agricoli"
+    },
+    {
+        "id": 167,
+        "cod_smr_tipo_rifiuto": "16.1.C",
+        "cod_provenienza": "16.1.C.1 ",
+        "descrizione": "attività forestali e lavorazione del legno vergine",
+        "descrizione_estesa": "16.1.C.1 -attività forestali e lavorazione del legno vergine"
+    },
+    {
+        "id": 168,
+        "cod_smr_tipo_rifiuto": "16.1.D",
+        "cod_provenienza": "16.1.D.1",
+        "descrizione": " lavorazione dei prodotti agricoli",
+        "descrizione_estesa": "16.1.D.1- lavorazione dei prodotti agricoli"
+    },
+    {
+        "id": 169,
+        "cod_smr_tipo_rifiuto": "16.1.E",
+        "cod_provenienza": "16.1.E.1",
+        "descrizione": " Preparazione, filatura, tessitura di fibre tessili vegetali ed animali",
+        "descrizione_estesa": "16.1.E.1- Preparazione, filatura, tessitura di fibre tessili vegetali ed animali"
+    },
+    {
+        "id": 170,
+        "cod_smr_tipo_rifiuto": "16.1.F",
+        "cod_provenienza": "16.1.F.1 ",
+        "descrizione": "preparazione, filatura, tessitura di fibre tessili vegetali ed animali",
+        "descrizione_estesa": "16.1.F.1 -preparazione, filatura, tessitura di fibre tessili vegetali ed animali"
+    },
+    {
+        "id": 171,
+        "cod_smr_tipo_rifiuto": "16.1.G",
+        "cod_provenienza": "16.1.G.1",
+        "descrizione": "Allevamenti zootecnici e industria di trasformazione alimentare",
+        "descrizione_estesa": "16.1.G.1-Allevamenti zootecnici e industria di trasformazione alimentare"
+    },
+    {
+        "id": 172,
+        "cod_smr_tipo_rifiuto": "16.1.H",
+        "cod_provenienza": "16.1.H.1",
+        "descrizione": " Fabbricazione di manufatti di legno non impregnato, imballaggi; Legno non impregnato (cassette pallets)",
+        "descrizione_estesa": "16.1.H.1- Fabbricazione di manufatti di legno non impregnato, imballaggi; Legno non impregnato (cassette pallets)"
+    },
+    {
+        "id": 173,
+        "cod_smr_tipo_rifiuto": "16.1.I",
+        "cod_provenienza": "16.1.I.1 ",
+        "descrizione": "industria della carta",
+        "descrizione_estesa": "16.1.I.1 -industria della carta"
+    },
+    {
+        "id": 174,
+        "cod_smr_tipo_rifiuto": "16.1.J",
+        "cod_provenienza": "16.1.J.1",
+        "descrizione": " industria della carta",
+        "descrizione_estesa": "16.1.J.1- industria della carta"
+    },
+    {
+        "id": 175,
+        "cod_smr_tipo_rifiuto": "16.1.K",
+        "cod_provenienza": "16.1.K.1",
+        "descrizione": " industria della macellazione",
+        "descrizione_estesa": "16.1.K.1- industria della macellazione"
+    },
+    {
+        "id": 176,
+        "cod_smr_tipo_rifiuto": "16.1.L",
+        "cod_provenienza": "16.1.L.1 ",
+        "descrizione": "manutenzione del verde ornamentale",
+        "descrizione_estesa": "16.1.L.1 -manutenzione del verde ornamentale"
+    },
+    {
+        "id": 177,
+        "cod_smr_tipo_rifiuto": "16.1.M",
+        "cod_provenienza": "16.1.M.1",
+        "descrizione": " impianti di depurazione impianti di depurazione delle industrie alimentari",
+        "descrizione_estesa": "16.1.M.1- impianti di depurazione impianti di depurazione delle industrie alimentari"
+    },
+    {
+        "id": 178,
+        "cod_smr_tipo_rifiuto": "16.1.N",
+        "cod_provenienza": "16.1.N.1",
+        "descrizione": " impianti dedicati di combustioni di sanse esauste e di scarti vegetali",
+        "descrizione_estesa": "16.1.N.1- impianti dedicati di combustioni di sanse esauste e di scarti vegetali"
+    },
+    {
+        "id": 179,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_provenienza": "17.1.1",
+        "descrizione": " raccolta di RSU e assimilati, ovvero impianti di produzione di CDR",
+        "descrizione_estesa": "17.1.1- raccolta di RSU e assimilati, ovvero impianti di produzione di CDR"
+    },
+    {
+        "id": 180,
+        "cod_smr_tipo_rifiuto": "18.1",
+        "cod_provenienza": "18.1.1",
+        "descrizione": " Attività di macellazione, dell'industria conciaria, dell'industria ittica e dell'allevamento del baco da seta",
+        "descrizione_estesa": "18.1.1- Attività di macellazione, dell'industria conciaria, dell'industria ittica e dell'allevamento del baco da seta"
+    },
+    {
+        "id": 181,
+        "cod_smr_tipo_rifiuto": "18.2",
+        "cod_provenienza": "18.2.1",
+        "descrizione": " lavorazione della lana e i suoi manufatti, ritagli dell'industria conciaria prima del trattamento conciante",
+        "descrizione_estesa": "18.2.1- lavorazione della lana e i suoi manufatti, ritagli dell'industria conciaria prima del trattamento conciante"
+    },
+    {
+        "id": 182,
+        "cod_smr_tipo_rifiuto": "18.3",
+        "cod_provenienza": "18.3.1",
+        "descrizione": " Industria conciaria",
+        "descrizione_estesa": "18.3.1- Industria conciaria"
+    },
+    {
+        "id": 183,
+        "cod_smr_tipo_rifiuto": "18.4",
+        "cod_provenienza": "18.4.1",
+        "descrizione": " Industria saccarifera, vitivinicola, dell'alcool, del lievito e degli acidi organici ossidrililati",
+        "descrizione_estesa": "18.4.1- Industria saccarifera, vitivinicola, dell'alcool, del lievito e degli acidi organici ossidrililati"
+    },
+    {
+        "id": 184,
+        "cod_smr_tipo_rifiuto": "18.5",
+        "cod_provenienza": "18.5.1",
+        "descrizione": "Industria olearia",
+        "descrizione_estesa": "18.5.1-Industria olearia"
+    },
+    {
+        "id": 185,
+        "cod_smr_tipo_rifiuto": "18.6",
+        "cod_provenienza": "18.6.1",
+        "descrizione": " Industria olearia",
+        "descrizione_estesa": "18.6.1- Industria olearia"
+    },
+    {
+        "id": 186,
+        "cod_smr_tipo_rifiuto": "18.7",
+        "cod_provenienza": "18.7.1",
+        "descrizione": " Fabbricazione dello zucchero e industria per la produzione della calce",
+        "descrizione_estesa": "18.7.1- Fabbricazione dello zucchero e industria per la produzione della calce"
+    },
+    {
+        "id": 187,
+        "cod_smr_tipo_rifiuto": "18.8",
+        "cod_provenienza": "18.8.1",
+        "descrizione": " industria siderurgica",
+        "descrizione_estesa": "18.8.1- industria siderurgica"
+    },
+    {
+        "id": 188,
+        "cod_smr_tipo_rifiuto": "18.9",
+        "cod_provenienza": "18.9.1 ",
+        "descrizione": "residuo di fabbricazione industriali quali la fabbricazione dell'acido fosforico",
+        "descrizione_estesa": "18.9.1 -residuo di fabbricazione industriali quali la fabbricazione dell'acido fosforico"
+    },
+    {
+        "id": 189,
+        "cod_smr_tipo_rifiuto": "18.10",
+        "cod_provenienza": "18.10.1",
+        "descrizione": " processo di demineralizzazione delle ossa sgrassate",
+        "descrizione_estesa": "18.10.1- processo di demineralizzazione delle ossa sgrassate"
+    },
+    {
+        "id": 190,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_provenienza": "18.11.1",
+        "descrizione": " Sansifici, impianti di incenerimento o pirolisi",
+        "descrizione_estesa": "18.11.1- Sansifici, impianti di incenerimento o pirolisi"
+    },
+    {
+        "id": 191,
+        "cod_smr_tipo_rifiuto": "18.12",
+        "cod_provenienza": "18.12.1",
+        "descrizione": " allevamenti animali",
+        "descrizione_estesa": "18.12.1- allevamenti animali"
+    }
+]

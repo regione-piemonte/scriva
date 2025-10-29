@@ -1,0 +1,662 @@
+[
+    {
+        "sigla": "I2FL1",
+        "descrizione_estesa": "I2FL1 ALL.SABBIOSE-ARGILL. VILLAFRANCHIANO",
+        "descrizione": "ALL.SABBIOSE-ARGILL. VILLAFRANCHIANO"
+    },
+    {
+        "sigla": "A",
+        "descrizione_estesa": "A ALLUVIONI",
+        "descrizione": "ALLUVIONI"
+    },
+    {
+        "sigla": "A1",
+        "descrizione_estesa": "A1 ALLUVIONI ATTUALI",
+        "descrizione": "ALLUVIONI ATTUALI"
+    },
+    {
+        "sigla": "Q1",
+        "descrizione_estesa": "Q1 ALLUVIONI FERRETTIZZATE",
+        "descrizione": "ALLUVIONI FERRETTIZZATE"
+    },
+    {
+        "sigla": "FGWR",
+        "descrizione_estesa": "FGWR ALLUVIONI FLUVIOGLACIALI RISS-WURM",
+        "descrizione": "ALLUVIONI FLUVIOGLACIALI RISS-WURM"
+    },
+    {
+        "sigla": "FGW",
+        "descrizione_estesa": "FGW ALLUVIONI FLUVIOGLACIALI WURM",
+        "descrizione": "ALLUVIONI FLUVIOGLACIALI WURM"
+    },
+    {
+        "sigla": "FL1",
+        "descrizione_estesa": "FL1 ALLUVIONI FORTEMENTE ALTERATE",
+        "descrizione": "ALLUVIONI FORTEMENTE ALTERATE"
+    },
+    {
+        "sigla": "A2",
+        "descrizione_estesa": "A2 ALLUVIONI MEDIE",
+        "descrizione": "ALLUVIONI MEDIE"
+    },
+    {
+        "sigla": "A21",
+        "descrizione_estesa": "A21 ALLUVIONI POST-GLACIALI",
+        "descrizione": "ALLUVIONI POST-GLACIALI"
+    },
+    {
+        "sigla": "A1FL3",
+        "descrizione_estesa": "A1FL3 ALLUVIONI PREVALENTEMENTE ARGILLOSE",
+        "descrizione": "ALLUVIONI PREVALENTEMENTE ARGILLOSE"
+    },
+    {
+        "sigla": "A3",
+        "descrizione_estesa": "A3 ALLUVIONI RECENTI",
+        "descrizione": "ALLUVIONI RECENTI"
+    },
+    {
+        "sigla": "FL3",
+        "descrizione_estesa": "FL3 ALLUVIONI SABB. GHIAIOSE OLOCENE",
+        "descrizione": "ALLUVIONI SABB. GHIAIOSE OLOCENE"
+    },
+    {
+        "sigla": "FL2",
+        "descrizione_estesa": "FL2 ALLUVIONI SABBIOSO-SILTOSO-ARGILLOSE",
+        "descrizione": "ALLUVIONI SABBIOSO-SILTOSO-ARGILLOSE"
+    },
+    {
+        "sigla": "A1L",
+        "descrizione_estesa": "A1L ALLUVIONI TERRAZZATE",
+        "descrizione": "ALLUVIONI TERRAZZATE"
+    },
+    {
+        "sigla": "AT",
+        "descrizione_estesa": "AT ALLUVIONI TORBOSE",
+        "descrizione": "ALLUVIONI TORBOSE"
+    },
+    {
+        "sigla": "L1",
+        "descrizione_estesa": "L1 ALTERNANZE SABBIOSO-ARGILLOSE",
+        "descrizione": "ALTERNANZE SABBIOSO-ARGILLOSE"
+    },
+    {
+        "sigla": "AB",
+        "descrizione_estesa": "AB ANFIBOLITI PREERCINICHE",
+        "descrizione": "ANFIBOLITI PREERCINICHE"
+    },
+    {
+        "sigla": "AMS",
+        "descrizione_estesa": "AMS APLITI A MICHE CICLO ALPINO",
+        "descrizione": "APLITI A MICHE CICLO ALPINO"
+    },
+    {
+        "sigla": "MQ",
+        "descrizione_estesa": "MQ APLITI DIORITO-KINZIGITICHE",
+        "descrizione": "APLITI DIORITO-KINZIGITICHE"
+    },
+    {
+        "sigla": "O3E3",
+        "descrizione_estesa": "O3E3 ARENARIE RANZANO-MARNE ANTOGNOLA",
+        "descrizione": "ARENARIE RANZANO-MARNE ANTOGNOLA"
+    },
+    {
+        "sigla": "03E3A",
+        "descrizione_estesa": "03E3A ARENARIE SAB.-MARN. OLIGOCENE",
+        "descrizione": "ARENARIE SAB.-MARN. OLIGOCENE"
+    },
+    {
+        "sigla": "EM",
+        "descrizione_estesa": "EM ARGILLA LOESSICA",
+        "descrizione": "ARGILLA LOESSICA"
+    },
+    {
+        "sigla": "C",
+        "descrizione_estesa": "C ARGILLE CAOLINICHE DA VULCANITI",
+        "descrizione": "ARGILLE CAOLINICHE DA VULCANITI"
+    },
+    {
+        "sigla": "PC",
+        "descrizione_estesa": "PC ARGILLE CAOLINICHE PLIOCENE",
+        "descrizione": "ARGILLE CAOLINICHE PLIOCENE"
+    },
+    {
+        "sigla": "PA",
+        "descrizione_estesa": "PA ARGILLE DI LUGAGNANO",
+        "descrizione": "ARGILLE DI LUGAGNANO"
+    },
+    {
+        "sigla": "P2-1",
+        "descrizione_estesa": "P2-1 ARGILLE DI LUGAGNANO PLEISTOCENE",
+        "descrizione": "ARGILLE DI LUGAGNANO PLEISTOCENE"
+    },
+    {
+        "sigla": "M5",
+        "descrizione_estesa": "M5 ARGILLE FORMAZIONE GESSOSO-SOLFIFERA",
+        "descrizione": "ARGILLE FORMAZIONE GESSOSO-SOLFIFERA"
+    },
+    {
+        "sigla": "P1",
+        "descrizione_estesa": "P1 ARGILLE PIACENZIANE",
+        "descrizione": "ARGILLE PIACENZIANE"
+    },
+    {
+        "sigla": "SGR",
+        "descrizione_estesa": "SGR ARGILLE SABBIOSE LACUSTRI",
+        "descrizione": "ARGILLE SABBIOSE LACUSTRI"
+    },
+    {
+        "sigla": "L2",
+        "descrizione_estesa": "L2 ARGILLE SABBIOSE VILLAFRANCHIANO",
+        "descrizione": "ARGILLE SABBIOSE VILLAFRANCHIANO"
+    },
+    {
+        "sigla": "E3C6",
+        "descrizione_estesa": "E3C6 CALCARI ARENACEI EOCENE",
+        "descrizione": "CALCARI ARENACEI EOCENE"
+    },
+    {
+        "sigla": "G11-5",
+        "descrizione_estesa": "G11-5 CALCARI CEMENTIFERI DOGGER-MALM",
+        "descrizione": "CALCARI CEMENTIFERI DOGGER-MALM"
+    },
+    {
+        "sigla": "CX",
+        "descrizione_estesa": "CX CALCARI CIPOLLINI",
+        "descrizione": "CALCARI CIPOLLINI"
+    },
+    {
+        "sigla": "T2",
+        "descrizione_estesa": "T2 CALCARI CRISTALLINI GIURA",
+        "descrizione": "CALCARI CRISTALLINI GIURA"
+    },
+    {
+        "sigla": "C2G1",
+        "descrizione_estesa": "C2G1 CALCARI DI VOLTAGGIO",
+        "descrizione": "CALCARI DI VOLTAGGIO"
+    },
+    {
+        "sigla": "C21",
+        "descrizione_estesa": "C21 CALCARI DI VOLTAGGIO GIURA",
+        "descrizione": "CALCARI DI VOLTAGGIO GIURA"
+    },
+    {
+        "sigla": "PCC7",
+        "descrizione_estesa": "PCC7 CALCARI DI ZEBEDASSI PALEOCENE",
+        "descrizione": "CALCARI DI ZEBEDASSI PALEOCENE"
+    },
+    {
+        "sigla": "T42",
+        "descrizione_estesa": "T42 CALCARI DOLOMITICI",
+        "descrizione": "CALCARI DOLOMITICI"
+    },
+    {
+        "sigla": "T",
+        "descrizione_estesa": "T CALCARI DOLOMITICI TRIAS",
+        "descrizione": "CALCARI DOLOMITICI TRIAS"
+    },
+    {
+        "sigla": "TC",
+        "descrizione_estesa": "TC CALCARI GRIGI BRECCIATI TRIAS",
+        "descrizione": "CALCARI GRIGI BRECCIATI TRIAS"
+    },
+    {
+        "sigla": "GL",
+        "descrizione_estesa": "GL CALCARI MARMOREI GIURA",
+        "descrizione": "CALCARI MARMOREI GIURA"
+    },
+    {
+        "sigla": "C5",
+        "descrizione_estesa": "C5 CALCARI MICROCRISTALLINI",
+        "descrizione": "CALCARI MICROCRISTALLINI"
+    },
+    {
+        "sigla": "CS",
+        "descrizione_estesa": "CS CALCESCISTI CRETACEO-GIURA",
+        "descrizione": "CALCESCISTI CRETACEO-GIURA"
+    },
+    {
+        "sigla": "C1",
+        "descrizione_estesa": "C1 CALCESCISTI FILLADICI",
+        "descrizione": "CALCESCISTI FILLADICI"
+    },
+    {
+        "sigla": "O21",
+        "descrizione_estesa": "O21 CONGLOMERATI DI RANZANO",
+        "descrizione": "CONGLOMERATI DI RANZANO"
+    },
+    {
+        "sigla": "AC",
+        "descrizione_estesa": "AC CONO DI DEIEZIONE",
+        "descrizione": "CONO DI DEIEZIONE"
+    },
+    {
+        "sigla": "AD",
+        "descrizione_estesa": "AD CONOIDE",
+        "descrizione": "CONOIDE"
+    },
+    {
+        "sigla": "MM",
+        "descrizione_estesa": "MM DEPOSITI MORENICI ARGILLOSI RISS",
+        "descrizione": "DEPOSITI MORENICI ARGILLOSI RISS"
+    },
+    {
+        "sigla": "FGR2",
+        "descrizione_estesa": "FGR2 DEPOSITI SABBIOSI ARGILLIFICATI",
+        "descrizione": "DEPOSITI SABBIOSI ARGILLIFICATI"
+    },
+    {
+        "sigla": "DG",
+        "descrizione_estesa": "DG DETRITI DI FALDA GNEISSICI",
+        "descrizione": "DETRITI DI FALDA GNEISSICI"
+    },
+    {
+        "sigla": "DGR",
+        "descrizione_estesa": "DGR DETRITI GRANITOIDI",
+        "descrizione": "DETRITI GRANITOIDI"
+    },
+    {
+        "sigla": "DP",
+        "descrizione_estesa": "DP DETRITI PERIDOTITICI",
+        "descrizione": "DETRITI PERIDOTITICI"
+    },
+    {
+        "sigla": "DQ",
+        "descrizione_estesa": "DQ DETRITI QUARZOSI",
+        "descrizione": "DETRITI QUARZOSI"
+    },
+    {
+        "sigla": "T10",
+        "descrizione_estesa": "T10 DETRITO",
+        "descrizione": "DETRITO"
+    },
+    {
+        "sigla": "DT",
+        "descrizione_estesa": "DT DETRITO DI FALDA",
+        "descrizione": "DETRITO DI FALDA"
+    },
+    {
+        "sigla": "Q",
+        "descrizione_estesa": "Q DILUVIALE ANTICO",
+        "descrizione": "DILUVIALE ANTICO"
+    },
+    {
+        "sigla": "Q2",
+        "descrizione_estesa": "Q2 DILUVIALE FERRETIZZATO",
+        "descrizione": "DILUVIALE FERRETIZZATO"
+    },
+    {
+        "sigla": "ALF",
+        "descrizione_estesa": "ALF DIORITE QUARZIFERA DI BROSSO",
+        "descrizione": "DIORITE QUARZIFERA DI BROSSO"
+    },
+    {
+        "sigla": "DK",
+        "descrizione_estesa": "DK DIORITE-KINZIGITI",
+        "descrizione": "DIORITE-KINZIGITI"
+    },
+    {
+        "sigla": "BETA",
+        "descrizione_estesa": "BETA DIORITI MELANOCRATICHE",
+        "descrizione": "DIORITI MELANOCRATICHE"
+    },
+    {
+        "sigla": "ALFA",
+        "descrizione_estesa": "ALFA DIORITI QUARZIFERE",
+        "descrizione": "DIORITI QUARZIFERE"
+    },
+    {
+        "sigla": "TM",
+        "descrizione_estesa": "TM DOLOMIE CALCAREE GRIGIE TRIAS",
+        "descrizione": "DOLOMIE CALCAREE GRIGIE TRIAS"
+    },
+    {
+        "sigla": "T3-2",
+        "descrizione_estesa": "T3-2 DOLOMIE CALCAREE TRIAS",
+        "descrizione": "DOLOMIE CALCAREE TRIAS"
+    },
+    {
+        "sigla": "FLM",
+        "descrizione_estesa": "FLM FLUVIALE MINDELIANO",
+        "descrizione": "FLUVIALE MINDELIANO"
+    },
+    {
+        "sigla": "FLR",
+        "descrizione_estesa": "FLR FLUVIALE RISSIANO",
+        "descrizione": "FLUVIALE RISSIANO"
+    },
+    {
+        "sigla": "FGM",
+        "descrizione_estesa": "FGM FLUVIOGLACIALE MINDELIANO",
+        "descrizione": "FLUVIOGLACIALE MINDELIANO"
+    },
+    {
+        "sigla": "FGR",
+        "descrizione_estesa": "FGR FLUVIOGLACIALE RISS WURM",
+        "descrizione": "FLUVIOGLACIALE RISS WURM"
+    },
+    {
+        "sigla": "E21",
+        "descrizione_estesa": "E21 FLYSCH CALCAREO MARNOSO",
+        "descrizione": "FLYSCH CALCAREO MARNOSO"
+    },
+    {
+        "sigla": "GES",
+        "descrizione_estesa": "GES GESSO MESSINIANO",
+        "descrizione": "GESSO MESSINIANO"
+    },
+    {
+        "sigla": "MG5",
+        "descrizione_estesa": "MG5 GESSOSO-SOLFIFERA",
+        "descrizione": "GESSOSO-SOLFIFERA"
+    },
+    {
+        "sigla": "GGA1",
+        "descrizione_estesa": "GGA1 GNEISS DIORITO-KINZIGITICI",
+        "descrizione": "GNEISS DIORITO-KINZIGITICI"
+    },
+    {
+        "sigla": "GG",
+        "descrizione_estesa": "GG GNEISS GRANITOIDI",
+        "descrizione": "GNEISS GRANITOIDI"
+    },
+    {
+        "sigla": "GAM",
+        "descrizione_estesa": "GAM GNEISS GRANITOIDI PREERCINICI",
+        "descrizione": "GNEISS GRANITOIDI PREERCINICI"
+    },
+    {
+        "sigla": "GNL",
+        "descrizione_estesa": "GNL GNEISS GRANULARI DI LUSERNA DORA-MAIRA",
+        "descrizione": "GNEISS GRANULARI DI LUSERNA DORA-MAIRA"
+    },
+    {
+        "sigla": "GGU",
+        "descrizione_estesa": "GGU GNEISS LISTATI",
+        "descrizione": "GNEISS LISTATI"
+    },
+    {
+        "sigla": "GSM",
+        "descrizione_estesa": "GSM GNEISS MINUTI",
+        "descrizione": "GNEISS MINUTI"
+    },
+    {
+        "sigla": "GMB",
+        "descrizione_estesa": "GMB GNEISS MINUTI DI BROSSASCO",
+        "descrizione": "GNEISS MINUTI DI BROSSASCO"
+    },
+    {
+        "sigla": "GS1",
+        "descrizione_estesa": "GS1 GNEISS MINUTI OCCH. SESIA LANZO",
+        "descrizione": "GNEISS MINUTI OCCH. SESIA LANZO"
+    },
+    {
+        "sigla": "GN1",
+        "descrizione_estesa": "GN1 GNEISS MINUTI PRETRIASSICO",
+        "descrizione": "GNEISS MINUTI PRETRIASSICO"
+    },
+    {
+        "sigla": "G",
+        "descrizione_estesa": "G GNEISS MINUTI SESIA -LANZO",
+        "descrizione": "GNEISS MINUTI SESIA-LANZO"
+    },
+    {
+        "sigla": "C1A",
+        "descrizione_estesa": "C1A GNEISS PSAMMITICI SERIE GRAFITICA",
+        "descrizione": "GNEISS PSAMMITICI SERIE GRAFITICA"
+    },
+    {
+        "sigla": "GN",
+        "descrizione_estesa": "GN GNEISS SERIZZI",
+        "descrizione": "GNEISS SERIZZI"
+    },
+    {
+        "sigla": "GK",
+        "descrizione_estesa": "GK GNEISS-KINZIGITI",
+        "descrizione": "GNEISS-KINZIGITI"
+    },
+    {
+        "sigla": "GAMMA",
+        "descrizione_estesa": "GAMMA GRANITI BIOTITICI",
+        "descrizione": "GRANITI BIOTITICI"
+    },
+    {
+        "sigla": "GAMRO",
+        "descrizione_estesa": "GAMRO GRANITI ROSSI",
+        "descrizione": "GRANITI ROSSI"
+    },
+    {
+        "sigla": "GAMRP",
+        "descrizione_estesa": "GAMRP GRANITO ROSSO PANTHEON",
+        "descrizione": "GRANITO ROSSO PANTHEON"
+    },
+    {
+        "sigla": "GV",
+        "descrizione_estesa": "GV GRUPPO DI VOLTRI",
+        "descrizione": "GRUPPO DI VOLTRI"
+    },
+    {
+        "sigla": "LF",
+        "descrizione_estesa": "LF LIMI FERRETIZZATI",
+        "descrizione": "LIMI FERRETIZZATI"
+    },
+    {
+        "sigla": "CT",
+        "descrizione_estesa": "CT LOESS ARGILLIFICATO RISS-WURM",
+        "descrizione": "LOESS ARGILLIFICATO RISS-WURM"
+    },
+    {
+        "sigla": "E_G",
+        "descrizione_estesa": "E_G MARMI CLORITO-MUSCOVITICI CRETACEI",
+        "descrizione": "MARMI CLORITO-MUSCOVITICI CRETACEI"
+    },
+    {
+        "sigla": "CA",
+        "descrizione_estesa": "CA MARMI PREERCINICI",
+        "descrizione": "MARMI PREERCINICI"
+    },
+    {
+        "sigla": "M",
+        "descrizione_estesa": "M MARMO ROSA DI CANDOGLIA",
+        "descrizione": "MARMO ROSA DI CANDOGLIA"
+    },
+    {
+        "sigla": "M3-2M",
+        "descrizione_estesa": "M3-2M MARNA SCAGLIOSA LANGHIANO",
+        "descrizione": "MARNA SCAGLIOSA LANGHIANO"
+    },
+    {
+        "sigla": "M1O3M",
+        "descrizione_estesa": "M1O3M MARNA SILTOSO-SABBIOSA AQUITANIANO",
+        "descrizione": "MARNA SILTOSO-SABBIOSA AQUITANIANO"
+    },
+    {
+        "sigla": "MM32",
+        "descrizione_estesa": "MM32 MARNE DI CAMINO",
+        "descrizione": "MARNE DI CAMINO"
+    },
+    {
+        "sigla": "M5-4",
+        "descrizione_estesa": "M5-4 MARNE DI S. AGATA FOSSILI",
+        "descrizione": "MARNE DI S. AGATA FOSSILI"
+    },
+    {
+        "sigla": "E3",
+        "descrizione_estesa": "E3 MARNE FORMAZ.GASSINO EOCENE",
+        "descrizione": "MARNE FORMAZ.GASSINO EOCENE"
+    },
+    {
+        "sigla": "M3",
+        "descrizione_estesa": "M3 MARNE GRIGIE TORTONIANO",
+        "descrizione": "MARNE GRIGIE TORTONIANO"
+    },
+    {
+        "sigla": "M2",
+        "descrizione_estesa": "M2 MARNE GRIGIO CALCAREE MIOCENE",
+        "descrizione": "MARNE GRIGIO CALCAREE MIOCENE"
+    },
+    {
+        "sigla": "M3-2",
+        "descrizione_estesa": "M3-2 MARNE GRIGIO-CALCAREE SERRAVALLIANO",
+        "descrizione": "MARNE GRIGIO-CALCAREE SERRAVALLIANO"
+    },
+    {
+        "sigla": "M10A",
+        "descrizione_estesa": "M10A MARNE GRIGIO-VERDASTRE AQUITANIANO",
+        "descrizione": "MARNE GRIGIO-VERDASTRE AQUITANIANO"
+    },
+    {
+        "sigla": "M4",
+        "descrizione_estesa": "M4 MARNE S.AGATA FOSSILI",
+        "descrizione": "MARNE S.AGATA FOSSILI"
+    },
+    {
+        "sigla": "P",
+        "descrizione_estesa": "P MARNE SABBIOSE LUGAGNANO",
+        "descrizione": "MARNE SABBIOSE LUGAGNANO"
+    },
+    {
+        "sigla": "PLZ",
+        "descrizione_estesa": "PLZ MARNE SABBIOSE PLIOCENICHE",
+        "descrizione": "MARNE SABBIOSE PLIOCENICHE"
+    },
+    {
+        "sigla": "TGS",
+        "descrizione_estesa": "TGS MICASCISTI DI ANTIGORIO",
+        "descrizione": "MICASCISTI DI ANTIGORIO"
+    },
+    {
+        "sigla": "GM",
+        "descrizione_estesa": "GM MICASCISTI E GNEISS MINUTI DORA-MAIRA",
+        "descrizione": "MICASCISTI E GNEISS MINUTI DORA-MAIRA"
+    },
+    {
+        "sigla": "GS",
+        "descrizione_estesa": "GS MICASCISTI E GNEISS OCCHIADINI",
+        "descrizione": "MICASCISTI E GNEISS OCCHIADINI"
+    },
+    {
+        "sigla": "GMS",
+        "descrizione_estesa": "GMS MICASCISTI GNEISS DORA-MAIRA",
+        "descrizione": "MICASCISTI GNEISS DORA-MAIRA"
+    },
+    {
+        "sigla": "MO",
+        "descrizione_estesa": "MO MORENICO",
+        "descrizione": "MORENICO"
+    },
+    {
+        "sigla": "GNT",
+        "descrizione_estesa": "GNT ORTOGNEISS TABULARI BEOLE",
+        "descrizione": "ORTOGNEISS TABULARI BEOLE"
+    },
+    {
+        "sigla": "AP",
+        "descrizione_estesa": "AP PALEOSUOLI ARGILLOSI PLEISTOCENE",
+        "descrizione": "PALEOSUOLI ARGILLOSI PLEISTOCENE"
+    },
+    {
+        "sigla": "LAMD",
+        "descrizione_estesa": "LAMD PERIDOTITI E ROCCE ULTRABASICHE",
+        "descrizione": "PERIDOTITI E ROCCE ULTRABASICHE"
+    },
+    {
+        "sigla": "M3-1",
+        "descrizione_estesa": "M3-1 PIETRA DA CANTONI MIOCENE",
+        "descrizione": "PIETRA DA CANTONI MIOCENE"
+    },
+    {
+        "sigla": "PIGRE",
+        "descrizione_estesa": "PIGRE PORFIDI FERRETIZZATI",
+        "descrizione": "PORFIDI FERRETIZZATI"
+    },
+    {
+        "sigla": "OMEGA",
+        "descrizione_estesa": "OMEGA PORFIDI QUARZIFERI",
+        "descrizione": "PORFIDI QUARZIFERI"
+    },
+    {
+        "sigla": "QQ",
+        "descrizione_estesa": "QQ QUARZITI E QUARZO LENT. PRETRIAS",
+        "descrizione": "QUARZITI E QUARZO LENT. PRETRIAS"
+    },
+    {
+        "sigla": "TI",
+        "descrizione_estesa": "TI QUARZITI E SCISTI QUARZITICI TRIAS",
+        "descrizione": "QUARZITI E SCISTI QUARZITICI TRIAS"
+    },
+    {
+        "sigla": "TX1",
+        "descrizione_estesa": "TX1 QUARZITI TABULARI",
+        "descrizione": "QUARZITI TABULARI"
+    },
+    {
+        "sigla": "QT",
+        "descrizione_estesa": "QT QUARZITI TEGULARI BARGIOLINA",
+        "descrizione": "QUARZITI TEGULARI BARGIOLINA"
+    },
+    {
+        "sigla": "M1O3",
+        "descrizione_estesa": "M1O3 SABBIA E CONGLOM.POLIGENICO AQUITANIANO",
+        "descrizione": "SABBIA E CONGLOM.POLIGENICO AQUITANIANO"
+    },
+    {
+        "sigla": "P3",
+        "descrizione_estesa": "P3 SABBIE GIALLE PLIOCENICHE ASTIANE",
+        "descrizione": "SABBIE GIALLE PLIOCENICHE ASTIANE"
+    },
+    {
+        "sigla": "PS",
+        "descrizione_estesa": "PS SABBIE GIALLE STRATIF. VILLAFRANCHIANO",
+        "descrizione": "SABBIE GIALLE STRATIF. VILLAFRANCHIANO"
+    },
+    {
+        "sigla": "T5-4",
+        "descrizione_estesa": "T5-4 SCISTI ARGILL.-CALCAREI PRETRIAS",
+        "descrizione": "SCISTI ARGILL.-CALCAREI PRETRIAS"
+    },
+    {
+        "sigla": "PT",
+        "descrizione_estesa": "PT SCISTI FILLADICI PRETRIAS",
+        "descrizione": "SCISTI FILLADICI PRETRIAS"
+    },
+    {
+        "sigla": "PE1",
+        "descrizione_estesa": "PE1 SCISTI QUARZ.-SERICITICI PERM-CARBON.",
+        "descrizione": "SCISTI QUARZ.-SERICITICI PERM-CARBON."
+    },
+    {
+        "sigla": "SIGMA",
+        "descrizione_estesa": "SIGMA SERPENTINA TRIAS-GIURA",
+        "descrizione": "SERPENTINA TRIAS-GIURA"
+    },
+    {
+        "sigla": "ST",
+        "descrizione_estesa": "ST SERPENTINITI ULTRABASICHE LANZO",
+        "descrizione": "SERPENTINITI ULTRABASICHE LANZO"
+    },
+    {
+        "sigla": "SIENI",
+        "descrizione_estesa": "SIENI SIENITI ANFIBOLICHE",
+        "descrizione": "SIENITI ANFIBOLICHE"
+    },
+    {
+        "sigla": "SIG",
+        "descrizione_estesa": "SIG SIENITI ANFIBOLICHE CICLO ALPINO",
+        "descrizione": "SIENITI ANFIBOLICHE CICLO ALPINO"
+    },
+    {
+        "sigla": "P11",
+        "descrizione_estesa": "P11 SILTS ASTIANI",
+        "descrizione": "SILTS ASTIANI"
+    },
+    {
+        "sigla": "A1FLW",
+        "descrizione_estesa": "A1FLW TERRAZZI SAB.-ARGIL.PLEISTOCENE",
+        "descrizione": "TERRAZZI SAB.-ARGIL.PLEISTOCENE"
+    },
+    {
+        "sigla": "TO",
+        "descrizione_estesa": "TO TORBA",
+        "descrizione": "TORBA"
+    }
+]

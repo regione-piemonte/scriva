@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2025                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/util 
+       http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <!-- helper per la gestione dei token e la connessione verso l'api manager -->
+    <bean id="oauthHelper"
+        class="it.csi.lgspa.lgspaweb.util.oauth2.OauthHelper">
+        <constructor-arg index="0"
+            value="http://tst-interop-api-ent.ecosis.csi.it/api/token"></constructor-arg>
+        <constructor-arg index="1"
+            value="UvEfRLsS7z1h4T_VdRQUcIUxa4sa"></constructor-arg>
+        <constructor-arg index="2"
+            value="_fWHWeRFx0_6hPgMIJtJ5o4U2XIa"></constructor-arg>
+    </bean>
+
+    <!-- factory del wrapper oauth per resteasy, con funzione di retry -->
+    <bean id="petClientFactory"
+        class="it.csi.lgspa.lgspaweb.util.oauth2.ResteasyOauthWrapperFactory">
+        <property name="endPoint"
+            value="http://tst-interop-api-ent.ecosis.csi.it/api/testSwaggerPetstore-v2/1.0.5/"></property>
+        <property name="oauthHelper" ref="oauthHelper"></property>
+        <property name="wrappedInterface"
+            value="it.csi.lgspa.lgspaweb.integration.petstore.PetApi"></property>
+    </bean>
+
+    <!-- client dell'api PetStore da utilizzare nella logica di business, istanziato
+        tramite factory, implementa l'interfaccia JAX-RS dell'API -->
+    <bean id="petClient"
+        class="it.csi.lgspa.lgspaweb.integration.petstore.PetApi"
+        factory-bean="petClientFactory" factory-method="create"></bean>
+
+</beans>

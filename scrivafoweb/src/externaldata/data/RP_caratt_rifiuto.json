@@ -1,0 +1,198 @@
+[
+    {
+        "id": 1,
+        "cod_rp_tipo_rifiuto": "1.1.",
+        "cod_car_rif": "1.1.2.",
+        "descrizione": "Rifiuto solido, anche polverulento, costituito principalmente da ossidi di metalli non ferrosi miscelato con altri ossidi minori, pellettizzato, contenente, a seconda della provenienza, Rame fino al 10%, Piombo fino al 70%, Zinco fino al 65%, Cd < 8%, Sn < 20%, Cl < 20% sul secco; ossidi alcalino-terrosi di Na, K, Ca e Mg < 5% per ciascun elemento.",
+        "descrizione_estesa": "1.1.2. - Rifiuto solido, anche polverulento, costituito principalmente da ossidi di metalli non ferrosi miscelato con altri ossidi minori, pellettizzato, contenente, a seconda della provenienza, Rame fino al 10%, Piombo fino al 70%, Zinco fino al 65%, Cd < 8%, Sn < 20%, Cl < 20% sul secco; ossidi alcalino-terrosi di Na, K, Ca e Mg < 5% per ciascun elemento."
+    },
+    {
+        "id": 2,
+        "cod_rp_tipo_rifiuto": "1.2.",
+        "cod_car_rif": "1.2.2.",
+        "descrizione": "Materiali solidi e polveri fini e grossolane contenenti Rame fino al 90%, zinco fino al 70%, Pb < 6%, Cd < 1,5%, Sn < 1,3%, Ni < 0.15%, Cl < 20% sul secco.",
+        "descrizione_estesa": "1.2.2. - Materiali solidi e polveri fini e grossolane contenenti Rame fino al 90%, zinco fino al 70%, Pb < 6%, Cd < 1,5%, Sn < 1,3%, Ni < 0.15%, Cl < 20% sul secco."
+    },
+    {
+        "id": 3,
+        "cod_rp_tipo_rifiuto": "1.3.",
+        "cod_car_rif": "1.3.2.",
+        "descrizione": "Rifiuti di metalli non ferrosi a base di Piombo oltre 65% e contenenti: Sn < 15%, Cu < 0,02%, As < 0,01%, Cr < 0,01% mescolati con i loro ossidi in parte polverulenti.",
+        "descrizione_estesa": "1.3.2. - Rifiuti di metalli non ferrosi a base di Piombo oltre 65% e contenenti: Sn < 15%, Cu < 0,02%, As < 0,01%, Cr < 0,01% mescolati con i loro ossidi in parte polverulenti."
+    },
+    {
+        "id": 4,
+        "cod_rp_tipo_rifiuto": "1.4.",
+        "cod_car_rif": "1.4.2.",
+        "descrizione": "Batterie al piombo esauste e di scarto e loro parti, con un contenuto di Piombo fino al 90% e contenenti: Sn < 1%, As < 0,5%, Sb < 10%, Se < 0,05%; contenenti soluzione acquosa di H2SO4 < 25% con Pb < 1%, Cd < 0,1%, Cu, Zn, As, Sn e Sb < 0.1% per ciascun elemento",
+        "descrizione_estesa": "1.4.2. - Batterie al piombo esauste e di scarto e loro parti, con un contenuto di Piombo fino al 90% e contenenti: Sn < 1%, As < 0,5%, Sb < 10%, Se < 0,05%; contenenti soluzione acquosa di H2SO4 < 25% con Pb < 1%, Cd < 0,1%, Cu, Zn, As, Sn e Sb < 0.1% per ciascun elemento"
+    },
+    {
+        "id": 5,
+        "cod_rp_tipo_rifiuto": "1.5.",
+        "cod_car_rif": "1.5.2.",
+        "descrizione": "Rifiuto solido agglomerato, anche polverulento, a base di Piombo fino al 95%, contenenti: Sn < 40%, Sb < 30%, Cu < 2%, Zn < 2%, As < 1%, Cd < 0,5%, Na < 30%, con presenza di materiali inerti per il 4%.",
+        "descrizione_estesa": "1.5.2. - Rifiuto solido agglomerato, anche polverulento, a base di Piombo fino al 95%, contenenti: Sn < 40%, Sb < 30%, Cu < 2%, Zn < 2%, As < 1%, Cd < 0,5%, Na < 30%, con presenza di materiali inerti per il 4%."
+    },
+    {
+        "id": 6,
+        "cod_rp_tipo_rifiuto": "1.6.",
+        "cod_car_rif": "1.6.2.",
+        "descrizione": "Fanghi palabili o rifiuti solidi a base di Zinco 3-18% e Piombo 3-12% e contenenti Cu < 1,5%, Cd <1%, As <1,9%, Cr <0,5%, sul secco.",
+        "descrizione_estesa": "1.6.2. - Fanghi palabili o rifiuti solidi a base di Zinco 3-18% e Piombo 3-12% e contenenti Cu < 1,5%, Cd <1%, As <1,9%, Cr <0,5%, sul secco."
+    },
+    {
+        "id": 7,
+        "cod_rp_tipo_rifiuto": "2.1.",
+        "cod_car_rif": "2.1.2.",
+        "descrizione": "Soluzioni di fissaggio esauste, di lavaggio e di lavaggio del fissatore a base di acqua al 90% e contenenti: tiosolfato di ammonio 8%, acido acetico 2%, Ag 1%.",
+        "descrizione_estesa": "2.1.2. - Soluzioni di fissaggio esauste, di lavaggio e di lavaggio del fissatore a base di acqua al 90% e contenenti: tiosolfato di ammonio 8%, acido acetico 2%, Ag 1%."
+    },
+    {
+        "id": 8,
+        "cod_rp_tipo_rifiuto": "2.2.",
+        "cod_car_rif": "2.2.2.",
+        "descrizione": "Pasta contenente fino al 40% di Ag; lana di ferro con pasta contenente oltre il 5% di Ag.",
+        "descrizione_estesa": "2.2.2. - Pasta contenente fino al 40% di Ag; lana di ferro con pasta contenente oltre il 5% di Ag."
+    },
+    {
+        "id": 9,
+        "cod_rp_tipo_rifiuto": "3.1.",
+        "cod_car_rif": "3.1.2.",
+        "descrizione": "Scorie contenenti granella, schiumature e colaticci di alluminio > 10%, 10-20% di altri metalli (Cu solubile < 3.500 mg/kg, Pb < 400 mg/kg, Cd < 15 mg/kg), 30-50% di miscele di ossidi metallici, 0-10% di cloruro di sodio e di potassio, cromo esavalente assente.",
+        "descrizione_estesa": "3.1.2. - Scorie contenenti granella, schiumature e colaticci di alluminio > 10%, 10-20% di altri metalli (Cu solubile < 3.500 mg/kg, Pb < 400 mg/kg, Cd < 15 mg/kg), 30-50% di miscele di ossidi metallici, 0-10% di cloruro di sodio e di potassio, cromo esavalente assente."
+    },
+    {
+        "id": 10,
+        "cod_rp_tipo_rifiuto": "3.2.",
+        "cod_car_rif": "3.2.2.",
+        "descrizione": "Rifiuto solido secco in forma di blocchi disomogenei costituito essenzialmente dal 12-16% di granella di alluminio, dal 40-50% di sale di cloruro di sodio o cloruro di sodio e potassio e dal 40-50% di ossido di alluminio; contenente rame solubile < 4000 mg/kg, Pb < 300 mg/kg, Cd < 10 mg/kg, cromo esavalente assente.",
+        "descrizione_estesa": "3.2.2. - Rifiuto solido secco in forma di blocchi disomogenei costituito essenzialmente dal 12-16% di granella di alluminio, dal 40-50% di sale di cloruro di sodio o cloruro di sodio e potassio e dal 40-50% di ossido di alluminio; contenente rame solubile < 4000 mg/kg, Pb < 300 mg/kg, Cd < 10 mg/kg, cromo esavalente assente."
+    },
+    {
+        "id": 11,
+        "cod_rp_tipo_rifiuto": "3.3.",
+        "cod_car_rif": "3.3.2.",
+        "descrizione": "Materiale vetroso a matrice silico-alluminose con contenuto di Fe circa 30%, CaO circa 15%; Zn < 20%, Pb < 8%, Cd < 0,25%, Cu < 1.4%, As < 0,4%, S < 3%, Cl < 0,05%, CrIII < 0.6%.",
+        "descrizione_estesa": "3.3.2. - Materiale vetroso a matrice silico-alluminose con contenuto di Fe circa 30%, CaO circa 15%; Zn < 20%, Pb < 8%, Cd < 0,25%, Cu < 1.4%, As < 0,4%, S < 3%, Cl < 0,05%, CrIII < 0.6%."
+    },
+    {
+        "id": 12,
+        "cod_rp_tipo_rifiuto": "4.1.",
+        "cod_car_rif": "4.1.2.",
+        "descrizione": "Rifiuto solidi o fangosi palabili ad alto contenuto di rame, contenenti Pb < 300 mg/Kg, Cd < 100 mg/Kg, As < 100 mg/Kg",
+        "descrizione_estesa": "4.1.2. - Rifiuto solidi o fangosi palabili ad alto contenuto di rame, contenenti Pb < 300 mg/Kg, Cd < 100 mg/Kg, As < 100 mg/Kg"
+    },
+    {
+        "id": 13,
+        "cod_rp_tipo_rifiuto": "4.2.",
+        "cod_car_rif": "4.2.2.",
+        "descrizione": "Fanghi palabili contenenti, a seconda della provenienza, Piombo fino al 75%, S < 7%, Sn < 1%, Sb < 2%, Zn < 10%, Cd < 5%, Cu < 1%, CaO < 2%, As < 0,5% sul secco.",
+        "descrizione_estesa": "4.2.2. - Fanghi palabili contenenti, a seconda della provenienza, Piombo fino al 75%, S < 7%, Sn < 1%, Sb < 2%, Zn < 10%, Cd < 5%, Cu < 1%, CaO < 2%, As < 0,5% sul secco."
+    },
+    {
+        "id": 14,
+        "cod_rp_tipo_rifiuto": "4.3.",
+        "cod_car_rif": "4.3.2.",
+        "descrizione": "Fangi palabili contenenti rame fino al 90%, Pb <0,02 %, Zn <0,02 %, Sn <0,2, Fe <0,2, e Mg <0,05.",
+        "descrizione_estesa": "4.3.2. - Fangi palabili contenenti rame fino al 90%, Pb <0,02 %, Zn <0,02 %, Sn <0,2, Fe <0,2, e Mg <0,05."
+    },
+    {
+        "id": 15,
+        "cod_rp_tipo_rifiuto": "4.4.",
+        "cod_car_rif": "4.4.2.",
+        "descrizione": "Fango palabile costituito da Zinco fino al 40%, Piombo, Piombo fino al 70%, Calcio 15 - 25% e contenenti: Cu <3%, Cd <1%, Sn <0,04%, Si < 8%, Cl < 1%, Sn < 10%",
+        "descrizione_estesa": "4.4.2. - Fango palabile costituito da Zinco fino al 40%, Piombo, Piombo fino al 70%, Calcio 15 - 25% e contenenti: Cu <3%, Cd <1%, Sn <0,04%, Si < 8%, Cl < 1%, Sn < 10%"
+    },
+    {
+        "id": 16,
+        "cod_rp_tipo_rifiuto": "5.1.",
+        "cod_car_rif": "5.1.2.",
+        "descrizione": "Soluzione alcalina di ossidi di alluminio contenente Al <8%, Cr <1 ppm, e Pb < 5 ppm.",
+        "descrizione_estesa": "5.1.2. - Soluzione alcalina di ossidi di alluminio contenente Al <8%, Cr <1 ppm, e Pb < 5 ppm."
+    },
+    {
+        "id": 17,
+        "cod_rp_tipo_rifiuto": "5.2.",
+        "cod_car_rif": "5.2.2.",
+        "descrizione": "Soluzioni contenenti H2SO4 < 50 g/Kg e FeSO4 > 100 g/Kg; soluzioni contenenti: HCl < 50 g/Kg e FeCl2 > 85 g/Kg; soluzioni di CuS04 con presenza di Cu metallico; soluzioni cuproammoniacali; cloruro rameico; percloraro ferrico.",
+        "descrizione_estesa": "5.2.2. - Soluzioni contenenti H2SO4 < 50 g/Kg e FeSO4 > 100 g/Kg; soluzioni contenenti: HCl < 50 g/Kg e FeCl2 > 85 g/Kg; soluzioni di CuS04 con presenza di Cu metallico; soluzioni cuproammoniacali; cloruro rameico; percloraro ferrico."
+    },
+    {
+        "id": 18,
+        "cod_rp_tipo_rifiuto": "5.3.",
+        "cod_car_rif": "5.3.2.",
+        "descrizione": "Liquido viscoso a medio ed elevato contenuto di acido solforico libero o combinato, 1-4 diossano < 700 ppm, Pb < 50 ppm, Cd < 2 ppm, Cu < 10 ppm, As < 0,5 ppm.",
+        "descrizione_estesa": "5.3.2. - Liquido viscoso a medio ed elevato contenuto di acido solforico libero o combinato, 1-4 diossano < 700 ppm, Pb < 50 ppm, Cd < 2 ppm, Cu < 10 ppm, As < 0,5 ppm."
+    },
+    {
+        "id": 19,
+        "cod_rp_tipo_rifiuto": "5.4.",
+        "cod_car_rif": "5.4.2.",
+        "descrizione": "Soluzioni di acido solforico al 70% con eventuale presenza di acidi solfonici e solfati < 5%.",
+        "descrizione_estesa": "5.4.2. - Soluzioni di acido solforico al 70% con eventuale presenza di acidi solfonici e solfati < 5%."
+    },
+    {
+        "id": 20,
+        "cod_rp_tipo_rifiuto": "5.6.",
+        "cod_car_rif": "5.6.2.",
+        "descrizione": "Soluzioni acide con ZnCl2 > 200 g/l; soluzioni acide di FeCl2 > 200 g/l; soluzioni acide con NiCl2 > 200 g/l; soluzioni acide di cloruro di cromo > 200 g/l; soluzioni acide di CuCl2 > 200 g/l. Le soluzioni contengono impurezze di ossidi di ferro.",
+        "descrizione_estesa": "5.6.2. - Soluzioni acide con ZnCl2 > 200 g/l; soluzioni acide di FeCl2 > 200 g/l; soluzioni acide con NiCl2 > 200 g/l; soluzioni acide di cloruro di cromo > 200 g/l; soluzioni acide di CuCl2 > 200 g/l. Le soluzioni contengono impurezze di ossidi di ferro."
+    },
+    {
+        "id": 21,
+        "cod_rp_tipo_rifiuto": "6.1.",
+        "cod_car_rif": "6.1.2.",
+        "descrizione": "Miscela di solventi organici non alogenati costituiti da metilacetato 70 – 85%, alcool metilico 10 – 15%, e alcool isopropilico 5 – 15%.",
+        "descrizione_estesa": "6.1.2. - Miscela di solventi organici non alogenati costituiti da metilacetato 70 – 85%, alcool metilico 10 – 15%, e alcool isopropilico 5 – 15%."
+    },
+    {
+        "id": 22,
+        "cod_rp_tipo_rifiuto": "6.2.",
+        "cod_car_rif": "6.2.2.",
+        "descrizione": "Soluzione acquosa a 6.5 < pH < 9, contenente N,N,dimetilformammide < 30%, tracce di glicoli, dioctilftalato, tensioattivi, siliconi coloranti e carbossimetilcellulosa.",
+        "descrizione_estesa": "6.2.2. - Soluzione acquosa a 6.5 < pH < 9, contenente N,N,dimetilformammide < 30%, tracce di glicoli, dioctilftalato, tensioattivi, siliconi coloranti e carbossimetilcellulosa."
+    },
+    {
+        "id": 23,
+        "cod_rp_tipo_rifiuto": "6.3.",
+        "cod_car_rif": "6.3.2.",
+        "descrizione": "Soluzioni costituite dall'80% in peso da solventi o diluenti anche clorurati; soluzioni acquose monocomponenti contenenti il 20% in peso di solvente; tali soluzioni possono contenere solventi aromatici (es.: xilolo e toluolo) < 50%, oli o grassi e vernici < 15%, Pb < 5.000 ppm, Cu < 500 ppm, Cr < 500 ppm e Cd < 50 ppm; soluzioni acquose di alcool isopropilico con titolo minimo del 94%.",
+        "descrizione_estesa": "6.3.2. - Soluzioni costituite dall'80% in peso da solventi o diluenti anche clorurati; soluzioni acquose monocomponenti contenenti il 20% in peso di solvente; tali soluzioni possono contenere solventi aromatici (es.: xilolo e toluolo) < 50%, oli o grassi e vernici < 15%, Pb < 5.000 ppm, Cu < 500 ppm, Cr < 500 ppm e Cd < 50 ppm; soluzioni acquose di alcool isopropilico con titolo minimo del 94%."
+    },
+    {
+        "id": 24,
+        "cod_rp_tipo_rifiuto": "6.4.",
+        "cod_car_rif": "6.4.2.",
+        "descrizione": "Soluzioni organiche a base di cloroformio < 31%, 1-2dicloroetano < 53%, 1-1dicloroetano < 19%, tetracloruro di carbonio < 22% e contenenti cloruro di vinile monomero < 0,9%, ossido di etilene < 0,3%, cloruro di etile < 3%, 2 cloropropano < 0,15%, 1-1-dicloroetilene < 5%, cloruro di metilene < 0,5%, 1cloropropano < 0,08%, 1-2dicloroetilene trans < 4,4%,, cloroprene < 0,9%, 1-2dicloroetilene cis < 1,6%, benzene < 1,8%, 1-1tricloroetano < 0,1%, trielina < 0,9%, 1-1-2tricloroetano < 1,5%, percloroetilene < 0,3%, 1-1-2-2tetracloroetano < 0,1%, 1-1-1-2tetracloroetano < 0,03%, pentacloroetano < 0,05%; contenenti PCB, PCT s 25 ppm e PCDD 2,5 ppb.",
+        "descrizione_estesa": "6.4.2. - Soluzioni organiche a base di cloroformio < 31%, 1-2dicloroetano < 53%, 1-1dicloroetano < 19%, tetracloruro di carbonio < 22% e contenenti cloruro di vinile monomero < 0,9%, ossido di etilene < 0,3%, cloruro di etile < 3%, 2 cloropropano < 0,15%, 1-1-dicloroetilene < 5%, cloruro di metilene < 0,5%, 1cloropropano < 0,08%, 1-2dicloroetilene trans < 4,4%,, cloroprene < 0,9%, 1-2dicloroetilene cis < 1,6%, benzene < 1,8%, 1-1tricloroetano < 0,1%, trielina < 0,9%, 1-1-2tricloroetano < 1,5%, percloroetilene < 0,3%, 1-1-2-2tetracloroetano < 0,1%, 1-1-1-2tetracloroetano < 0,03%, pentacloroetano < 0,05%; contenenti PCB, PCT s 25 ppm e PCDD 2,5 ppb."
+    },
+    {
+        "id": 25,
+        "cod_rp_tipo_rifiuto": "6.6.",
+        "cod_car_rif": "6.6.2.",
+        "descrizione": "Miscele di acqua emulsionata con residui oleosi, idrocarburi ed impurezze.",
+        "descrizione_estesa": "6.6.2. - Miscele di acqua emulsionata con residui oleosi, idrocarburi ed impurezze."
+    },
+    {
+        "id": 26,
+        "cod_rp_tipo_rifiuto": "7.1.",
+        "cod_car_rif": "7.1.2.",
+        "descrizione": "Granulato solido con presenza di sostanze inorganiche ed organiche adsorbite identificate come sostanze pericolose, molto tossiche, tossiche e nocive ai sensi della direttiva 67/548 e successive modifiche, in concentrazioni inferiori a quelle stabilite nell'art. 1 della decisione 94/904 del 12 dicembre 1994",
+        "descrizione_estesa": "7.1.2. - Granulato solido con presenza di sostanze inorganiche ed organiche adsorbite identificate come sostanze pericolose, molto tossiche, tossiche e nocive ai sensi della direttiva 67/548 e successive modifiche, in concentrazioni inferiori a quelle stabilite nell'art. 1 della decisione 94/904 del 12 dicembre 1994"
+    },
+    {
+        "id": 27,
+        "cod_rp_tipo_rifiuto": "7.2.",
+        "cod_car_rif": "7.2.2.",
+        "descrizione": "Resina poliestere e/o fenolica contenente solventi in concentrazione minima del 15%. ",
+        "descrizione_estesa": "7.2.2. - Resina poliestere e/o fenolica contenente solventi in concentrazione minima del 15%. "
+    },
+    {
+        "id": 28,
+        "cod_rp_tipo_rifiuto": "7.3.",
+        "cod_car_rif": "7.3.2.",
+        "descrizione": "Idrossido di calcio disperso in acqua con titolo minimo del 30% , Ph 10,5 – 12,5.",
+        "descrizione_estesa": "7.3.2. - Idrossido di calcio disperso in acqua con titolo minimo del 30% , Ph 10,5 – 12,5."
+    }
+]

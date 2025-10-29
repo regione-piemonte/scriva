@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "cod_re_tipo_rifiuto": 1,
+        "cod_car_rif": 1.2,
+        "descrizione": " Combustibile ottenuto da rifiuti con le seguenti caratteristiche corrispondenti all'RDF di qualità normale di cui alla norma UNI 9903-1: P.C.I. minimo sul tal quale 15.000 kJ/kg Umidità in massa max 25% Cloro in massa max 0,9% Zolfo in massa max 0.6% Ceneri sul secco in massa max 20% Pb (volatile) sul secco in massa max 200 mg/kg Cr sul secco in massa max 100 mg/kg Cu (composti solubili) sul secco in massa max 300 mg/kg Mn sul secco in massa max 400 mg/kg Ni sul secco in massa max 40 mg/kg As sul secco in massa max 9 mg/kg Cd+Hg sul secco in massa max 7 mg/kg. Per ciascuna partita di CDR deve essere certificata la temperatura di rammollimento delle ceneri.",
+        "descrizione_estesa": "   1. 2 - Combustibile ottenuto da rifiuti con le seguenti caratteristiche corrispondenti all'RDF di qualità normale di cui alla norma UNI 9903-1: P.C.I. minimo sul tal quale 15.000 kJ/kg Umidità in massa max 25% Cloro in massa max 0,9% Zolfo in massa max 0.6% Ceneri sul secco in massa max 20% Pb (volatile) sul secco in massa max 200 mg/kg Cr sul secco in massa max 100 mg/kg Cu (composti solubili) sul secco in massa max 300 mg/kg Mn sul secco in massa max 400 mg/kg Ni sul secco in massa max 40 mg/kg As sul secco in massa max 9 mg/kg Cd+Hg sul secco in massa max 7 mg/kg. Per ciascuna partita di CDR deve essere certificata la temperatura di rammollimento delle ceneri."
+    },
+    {
+        "id": 2,
+        "cod_re_tipo_rifiuto": 2,
+        "cod_car_rif": "2. 2 ",
+        "descrizione": " Gas combustibile avente le seguenti caratteristiche: Metano min. 30% vol H2S max 1.5% vol P.C.I. sul tal quale min 12.500 kJ/Nm3.",
+        "descrizione_estesa": "2. 2 - Gas combustibile avente le seguenti caratteristiche: Metano min. 30% vol H2S max 1.5% vol P.C.I. sul tal quale min 12.500 kJ/Nm3."
+    },
+    {
+        "id": 3,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_car_rif": "3.2",
+        "descrizione": "Residui colturali pagliosi (cereali, leguminose da granella, piante oleaginose, ecc.); residui colturali legnosi (sarmenti di vite, residui di potature di piante da frutto, ecc.); residui da estrazione forestale; residui-colturali diversi (stocchi e tutoli di mais, steli di sorgo, di tabacco, di girasole, di canapa, di cisto, ecc.); residui di lavorazione (pula, lolla, residuifini di trebbiatura, gusci, ecc.), sanse esauste, vinacce esauste, vinaccioli, farina di vinaccioli, residui di frutta, buccette e altri residui vegetali.",
+        "descrizione_estesa": " 3. 2 - Residui colturali pagliosi (cereali, leguminose da granella, piante oleaginose, ecc.); residui colturali legnosi (sarmenti di vite, residui di potature di piante da frutto, ecc.); residui da estrazione forestale; residui-colturali diversi (stocchi e tutoli di mais, steli di sorgo, di tabacco, di girasole, di canapa, di cisto, ecc.); residui di lavorazione (pula, lolla, residuifini di trebbiatura, gusci, ecc.), sanse esauste, vinacce esauste, vinaccioli, farina di vinaccioli, residui di frutta, buccette e altri residui vegetali."
+    },
+    {
+        "id": 4,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_car_rif": "4. 2 ",
+        "descrizione": " Scarti anche in polvere a base esclusivamente di legno vergine o sughero vergine o componenti di legno vergine.",
+        "descrizione_estesa": "4. 2 - Scarti anche in polvere a base esclusivamente di legno vergine o sughero vergine o componenti di legno vergine."
+    },
+    {
+        "id": 5,
+        "cod_re_tipo_rifiuto": 5,
+        "cod_car_rif": "5. 2 ",
+        "descrizione": " Scarti, anche in polvere, di fibre tessili di origine animale o vegetale derivanti dalla filatura e tessitura",
+        "descrizione_estesa": "5. 2 - Scarti, anche in polvere, di fibre tessili di origine animale o vegetale derivanti dalla filatura e tessitura"
+    },
+    {
+        "id": 6,
+        "cod_re_tipo_rifiuto": 6,
+        "cod_car_rif": " 6. 2 ",
+        "descrizione": " Scarti e agglomerati anche in polvere a base esclusivamente legnosa e vegetale contenenti un massimo di resine fenoliche dell'1% e privi di impregnanti a base di olio di catrame o sali CCA, aventi inoltre le caratteristiche previste dal DM 5/02/98",
+        "descrizione_estesa": " 6. 2 - Scarti e agglomerati anche in polvere a base esclusivamente legnosa e vegetale contenenti un massimo di resine fenoliche dell'1% e privi di impregnanti a base di olio di catrame o sali CCA, aventi inoltre le caratteristiche previste dal DM 5/02/98"
+    },
+    {
+        "id": 7,
+        "cod_re_tipo_rifiuto": 7,
+        "cod_car_rif": "7. 2 ",
+        "descrizione": " Scarti e cascami di lavorazioni costituiti dalle polveri, fresami e costoline di tabacco vergine e rigenerato, provenienti dalla trasformazione industriale del tabacco e dalla fabbricazione di prodotti da fumo aventi un P.C.I. (potere calorifico inferiore) sul secco minimo di 8.000 kJ/kg ed una umidità massima del 16%.",
+        "descrizione_estesa": "7. 2 - Scarti e cascami di lavorazioni costituiti dalle polveri, fresami e costoline di tabacco vergine e rigenerato, provenienti dalla trasformazione industriale del tabacco e dalla fabbricazione di prodotti da fumo aventi un P.C.I. (potere calorifico inferiore) sul secco minimo di 8.000 kJ/kg ed una umidità massima del 16%."
+    },
+    {
+        "id": 8,
+        "cod_re_tipo_rifiuto": 9,
+        "cod_car_rif": "   9. 2 ",
+        "descrizione": " Scarti di cartiera, derivanti dallo spappolamento della carta da macero costituiti da una miscela di materiali plastici, legno, residui di carta, frammenti di vetro, materiale ghiaioso e metallico aventi le caratteristiche previste dal DM 5/02/98",
+        "descrizione_estesa": "   9. 2 - Scarti di cartiera, derivanti dallo spappolamento della carta da macero costituiti da una miscela di materiali plastici, legno, residui di carta, frammenti di vetro, materiale ghiaioso e metallico aventi le caratteristiche previste dal DM 5/02/98"
+    },
+    {
+        "id": 9,
+        "cod_re_tipo_rifiuto": 10,
+        "cod_car_rif": "  10. 2 ",
+        "descrizione": " Fanghi con le seguenti caratteristiche: Umidità in massa max 20% P.C.I. minimo sul tal quale min. 8.500 kJ/kg Zolfo sul tal quale in massa max 0.6% Cloro organico sul secco max 1 mg/kg Pb sul secco max 200 mg/kg Cr sul secco max 100 mg/kg Cu sul secco max 300 mg/kg Mn sul secco max 400 mg/kg Ni sul secco max 40 mg/kg As sul secco max 9 mg/kg Cd+Hg sul secco max 7 mg/kg",
+        "descrizione_estesa": "  10. 2 - Fanghi con le seguenti caratteristiche: Umidità in massa max 20% P.C.I. minimo sul tal quale min. 8.500 kJ/kg Zolfo sul tal quale in massa max 0.6% Cloro organico sul secco max 1 mg/kg Pb sul secco max 200 mg/kg Cr sul secco max 100 mg/kg Cu sul secco max 300 mg/kg Mn sul secco max 400 mg/kg Ni sul secco max 40 mg/kg As sul secco max 9 mg/kg Cd+Hg sul secco max 7 mg/kg"
+    },
+    {
+        "id": 10,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_car_rif": " 11. 2 ",
+        "descrizione": " Gas derivante da processi di pirolisi e/o di gassificazione aventi le seguenti caratteristiche: P.C.I. min 4.500 kJ/Nm3 gas secco H2S 2 mg/Nm3 gas secco Polveri 10 mg/Nm3 gas secco HCl 5 mg/Nm3 gas secco NH3 1 mg/Nm3 gas secco",
+        "descrizione_estesa": " 11. 2 - Gas derivante da processi di pirolisi e/o di gassificazione aventi le seguenti caratteristiche: P.C.I. min 4.500 kJ/Nm3 gas secco H2S 2 mg/Nm3 gas secco Polveri 10 mg/Nm3 gas secco HCl 5 mg/Nm3 gas secco NH3 1 mg/Nm3 gas secco"
+    },
+    {
+        "id": 11,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_car_rif": "12. 2 ",
+        "descrizione": " Fanghi con le seguenti caratteristiche: Umidità in massa max 20% P.C.I. minimo sul tal quale 6.000 kJ/kg Zolfo sul tal quale in massa max 0.6% Cloro organico sul tal quale in massa max 0,9 mg/kg Pb sul secco max 200 mg/kg Cr sul secco max 00 mg/kg Cu sul secco max 300 mg/kg Mn sul secco max 300 mg/kg Ni sul secco max 30 mg/kg As sul secco max 10 mg/kg Cd+Hg sul secco max 7 mg/kg.",
+        "descrizione_estesa": "12. 2 - Fanghi con le seguenti caratteristiche: Umidità in massa max 20% P.C.I. minimo sul tal quale 6.000 kJ/kg Zolfo sul tal quale in massa max 0.6% Cloro organico sul tal quale in massa max 0,9 mg/kg Pb sul secco max 200 mg/kg Cr sul secco max 00 mg/kg Cu sul secco max 300 mg/kg Mn sul secco max 300 mg/kg Ni sul secco max 30 mg/kg As sul secco max 10 mg/kg Cd+Hg sul secco max 7 mg/kg."
+    },
+    {
+        "id": 12,
+        "cod_re_tipo_rifiuto": 13,
+        "cod_car_rif": "  13. 2 ",
+        "descrizione": " Carbon fossile e coke in varia pezzatura compreso polveri, con presenza di terreno o materiali inerti. P.C.I. min. 16.000 kJ/kg; =<8% in massa per il residuo Umidità di carbon fossile =<6% in massa per i residui di coke metallurgico Zolfo max 2% in massa per il residuo di carbon fossile; max 1,5% in massa per i residui di coke",
+        "descrizione_estesa": "  13. 2 - Carbon fossile e coke in varia pezzatura compreso polveri, con presenza di terreno o materiali inerti. P.C.I. min. 16.000 kJ/kg; =<8% in massa per il residuo Umidità di carbon fossile =<6% in massa per i residui di coke metallurgico Zolfo max 2% in massa per il residuo di carbon fossile; max 1,5% in massa per i residui di coke"
+    },
+    {
+        "id": 13,
+        "cod_re_tipo_rifiuto": 14,
+        "cod_car_rif": "  14. 2 ",
+        "descrizione": " Residuo organico costituito da escrementi del pollame e materiale di lettiera a base vegetale avente le seguenti caratteristiche al momento dell'impiego: P.C.I. minimo sul tal quale 8.000 kJ/kg Cu (composti solubili) sul tal quale max 35 mg/kg Cd (composti solubili) sul tal quale 2 mg/kg Pb (composti solubili) sul tal quale 25 mg/kg Ni (composti solubili) sul tal quale 15 mg/kg",
+        "descrizione_estesa": "  14. 2 - Residuo organico costituito da escrementi del pollame e materiale di lettiera a base vegetale avente le seguenti caratteristiche al momento dell'impiego: P.C.I. minimo sul tal quale 8.000 kJ/kg Cu (composti solubili) sul tal quale max 35 mg/kg Cd (composti solubili) sul tal quale 2 mg/kg Pb (composti solubili) sul tal quale 25 mg/kg Ni (composti solubili) sul tal quale 15 mg/kg"
+    }
+]

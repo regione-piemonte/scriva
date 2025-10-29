@@ -1,0 +1,158 @@
+[
+    {
+        "id": 1,
+        "cod_ra_tipo_rifiuto": "4. 4 ",
+        "descrizione": " scorie di acciaieria, scorie provenienti dalla fusione in forni elettrici, a combustibile o in convertitori a ossigeno di leghe di metalli ferrosi e dai successivi trattamenti di affinazione delle stesse ",
+        "descrizione_estesa": "4. 4 - scorie di acciaieria, scorie provenienti dalla fusione in forni elettrici, a combustibile o in convertitori a ossigeno di leghe di metalli ferrosi e dai successivi trattamenti di affinazione delle stesse "
+    },
+    {
+        "id": 2,
+        "cod_ra_tipo_rifiuto": "5.17 ",
+        "descrizione": " loppa d'altoforno non rispondente agli standard delle norme UNI ENV 197/1",
+        "descrizione_estesa": "5.17 - loppa d'altoforno non rispondente agli standard delle norme UNI ENV 197/1"
+    },
+    {
+        "id": 3,
+        "cod_ra_tipo_rifiuto": "7. 2 ",
+        "descrizione": " rifiuti di rocce da cave autorizzate ",
+        "descrizione_estesa": "7. 2 - rifiuti di rocce da cave autorizzate "
+    },
+    {
+        "id": 4,
+        "cod_ra_tipo_rifiuto": "7. 4 ",
+        "descrizione": " sfridi di laterizio cotto ed argilla espansa ",
+        "descrizione_estesa": "7. 4 - sfridi di laterizio cotto ed argilla espansa "
+    },
+    {
+        "id": 5,
+        "cod_ra_tipo_rifiuto": "7.11 ",
+        "descrizione": " pietrisco tolto d'opera ",
+        "descrizione_estesa": "7.11 - pietrisco tolto d'opera "
+    },
+    {
+        "id": 6,
+        "cod_ra_tipo_rifiuto": "7.14 ",
+        "descrizione": " detriti di perforazione ",
+        "descrizione_estesa": "7.14 - detriti di perforazione "
+    },
+    {
+        "id": 7,
+        "cod_ra_tipo_rifiuto": "7.15 ",
+        "descrizione": " fanghi di perforazione ",
+        "descrizione_estesa": "7.15 - fanghi di perforazione "
+    },
+    {
+        "id": 8,
+        "cod_ra_tipo_rifiuto": "7.16 ",
+        "descrizione": " calci di defecazione ",
+        "descrizione_estesa": "7.16 - calci di defecazione "
+    },
+    {
+        "id": 9,
+        "cod_ra_tipo_rifiuto": "7.17 ",
+        "descrizione": " rifiuti costituiti da pietrisco di vagliatura del calcare ",
+        "descrizione_estesa": "7.17 - rifiuti costituiti da pietrisco di vagliatura del calcare "
+    },
+    {
+        "id": 10,
+        "cod_ra_tipo_rifiuto": "7.18 ",
+        "descrizione": " scarti da vagliatura latte di calce ",
+        "descrizione_estesa": "7.18 - scarti da vagliatura latte di calce "
+    },
+    {
+        "id": 11,
+        "cod_ra_tipo_rifiuto": "7.30 ",
+        "descrizione": " sabbia e conchiglie che residuano dalla vagliatura dei rifiuti provenienti dalla pulizia degli arenili ",
+        "descrizione_estesa": "7.30 - sabbia e conchiglie che residuano dalla vagliatura dei rifiuti provenienti dalla pulizia degli arenili "
+    },
+    {
+        "id": 12,
+        "cod_ra_tipo_rifiuto": "7.31 ",
+        "descrizione": " terre da coltivo, derivanti da pulizia di materiali vegetali eduli e dalla battitura della lana sucida ",
+        "descrizione_estesa": "7.31 - terre da coltivo, derivanti da pulizia di materiali vegetali eduli e dalla battitura della lana sucida "
+    },
+    {
+        "id": 13,
+        "cod_ra_tipo_rifiuto": "7.31-bis ",
+        "descrizione": " terra di rocce e scavo",
+        "descrizione_estesa": "7.31-bis - terra di rocce e scavo"
+    },
+    {
+        "id": 14,
+        "cod_ra_tipo_rifiuto": "11. 2 ",
+        "descrizione": " terre e farine fossili disoleate",
+        "descrizione_estesa": "11. 2 - terre e farine fossili disoleate"
+    },
+    {
+        "id": 15,
+        "cod_ra_tipo_rifiuto": "12. 1 ",
+        "descrizione": " fanghi da industria cartaria",
+        "descrizione_estesa": "12. 1 - fanghi da industria cartaria"
+    },
+    {
+        "id": 16,
+        "cod_ra_tipo_rifiuto": "12. 2 ",
+        "descrizione": " fanghi di dragaggio",
+        "descrizione_estesa": "12. 2 - fanghi di dragaggio"
+    },
+    {
+        "id": 17,
+        "cod_ra_tipo_rifiuto": "12. 3 ",
+        "descrizione": " fanghi e polveri da segagione e lavorazione pietre, marmi e ardesie",
+        "descrizione_estesa": "12. 3 - fanghi e polveri da segagione e lavorazione pietre, marmi e ardesie"
+    },
+    {
+        "id": 18,
+        "cod_ra_tipo_rifiuto": "12. 4 ",
+        "descrizione": " fanghi e polveri da segagione, molatura e lavorazione granito",
+        "descrizione_estesa": "12. 4 - fanghi e polveri da segagione, molatura e lavorazione granito"
+    },
+    {
+        "id": 19,
+        "cod_ra_tipo_rifiuto": "12. 7 ",
+        "descrizione": " fanghi costituiti da inerti",
+        "descrizione_estesa": "12. 7 - fanghi costituiti da inerti"
+    },
+    {
+        "id": 20,
+        "cod_ra_tipo_rifiuto": "12. 9 ",
+        "descrizione": " fango secco di natura sabbiosa",
+        "descrizione_estesa": "12. 9 - fango secco di natura sabbiosa"
+    },
+    {
+        "id": 21,
+        "cod_ra_tipo_rifiuto": "12.15 ",
+        "descrizione": " fanghi da cottura e da lavaggio del legno vergine",
+        "descrizione_estesa": "12.15 - fanghi da cottura e da lavaggio del legno vergine"
+    },
+    {
+        "id": 22,
+        "cod_ra_tipo_rifiuto": "13. 2 ",
+        "descrizione": " ceneri dalla combustione di biomasse (paglia, vinacce) ed affini, legno, pannelli, fanghi di cartiere",
+        "descrizione_estesa": "13. 2 - ceneri dalla combustione di biomasse (paglia, vinacce) ed affini, legno, pannelli, fanghi di cartiere"
+    },
+    {
+        "id": 23,
+        "cod_ra_tipo_rifiuto": "13. 6 ",
+        "descrizione": " gessi chimici da desolforazione di effluenti liquidi e gassosi",
+        "descrizione_estesa": "13. 6 - gessi chimici da desolforazione di effluenti liquidi e gassosi"
+    },
+    {
+        "id": 24,
+        "cod_ra_tipo_rifiuto": "13. 7 ",
+        "descrizione": " gessi chimici",
+        "descrizione_estesa": "13. 7 - gessi chimici"
+    },
+    {
+        "id": 25,
+        "cod_ra_tipo_rifiuto": "13.11 ",
+        "descrizione": " silicato bicalcico",
+        "descrizione_estesa": "13.11 - silicato bicalcico"
+    },
+    {
+        "id": 26,
+        "cod_ra_tipo_rifiuto": "1 7. 1 ",
+        "descrizione": " rif. costit. da laterizi,intonaci e conglomer. di cemento arm. e non,comprese traverse e traversoni ferrov. e pali in calcestr. armato proven. da linee ferrov.,telemat. ed elettr. e framm. di rivestim. strad., purché privi di amianto ",
+        "descrizione_estesa": "1 7. 1 - rif. costit. da laterizi,intonaci e conglomer. di cemento arm. e non,comprese traverse e traversoni ferrov. e pali in calcestr. armato proven. da linee ferrov.,telemat. ed elettr. e framm. di rivestim. strad., purché privi di amianto "
+    }
+]

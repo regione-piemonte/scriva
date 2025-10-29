@@ -1,0 +1,93 @@
+[
+    {
+        "id": 1,
+        "cod_re_tipo_rifiuto": 1,
+        "cod_provenienza": "1. 1 ",
+        "descrizione": " Impianti di produzione di CDR di cui al punto 14 dell'allegato 1.",
+        "descrizione_estesa": "1. 1 - Impianti di produzione di CDR di cui al punto 14 dell'allegato 1."
+    },
+    {
+        "id": 2,
+        "cod_re_tipo_rifiuto": 2,
+        "cod_provenienza": "2. 1 ",
+        "descrizione": " Fermentazione anaerobica metanogenica di rifiuti a matrice organica in processi di cui al punto 15 dell'allegato 1 o da discarica.",
+        "descrizione_estesa": "2. 1 - Fermentazione anaerobica metanogenica di rifiuti a matrice organica in processi di cui al punto 15 dell'allegato 1 o da discarica."
+    },
+    {
+        "id": 3,
+        "cod_re_tipo_rifiuto": 3,
+        "cod_provenienza": "3. 1 ",
+        "descrizione": " Attività agricole, forestali e di prima lavorazione di prodotti agroalimentari; impianti di estrazione di olio di vinaccioli, industria distillatoria, industria enologica e ortofrutticola, produzione di succhi di frutta e affini, industria olearia.",
+        "descrizione_estesa": "3. 1 - Attività agricole, forestali e di prima lavorazione di prodotti agroalimentari; impianti di estrazione di olio di vinaccioli, industria distillatoria, industria enologica e ortofrutticola, produzione di succhi di frutta e affini, industria olearia."
+    },
+    {
+        "id": 4,
+        "cod_re_tipo_rifiuto": 4,
+        "cod_provenienza": "4. 1 ",
+        "descrizione": " Industria della carta, del sughero e del legno (I a e II a lavorazione, produzione pannelli di particelle, di fibra e compensati, mobili, semilavorati per il mobile, articoli per l'edilizia, pallets ed imballaggi, ecc.).",
+        "descrizione_estesa": "4. 1 - Industria della carta, del sughero e del legno (I a e II a lavorazione, produzione pannelli di particelle, di fibra e compensati, mobili, semilavorati per il mobile, articoli per l'edilizia, pallets ed imballaggi, ecc.)."
+    },
+    {
+        "id": 5,
+        "cod_re_tipo_rifiuto": 5,
+        "cod_provenienza": "5. 1 ",
+        "descrizione": " Industria tessile ",
+        "descrizione_estesa": "5. 1 - Industria tessile "
+    },
+    {
+        "id": 6,
+        "cod_re_tipo_rifiuto": 6,
+        "cod_provenienza": "6. 1 ",
+        "descrizione": " Industria del legno (I a e II a lavorazione, produzione pannelli di particelle, di fibra e compensati, mobili, semilavorati per il mobile, articoli per l'edilizia, ecc.)",
+        "descrizione_estesa": "6. 1 - Industria del legno (I a e II a lavorazione, produzione pannelli di particelle, di fibra e compensati, mobili, semilavorati per il mobile, articoli per l'edilizia, ecc.)"
+    },
+    {
+        "id": 7,
+        "cod_re_tipo_rifiuto": 7,
+        "cod_provenienza": "7. 1 ",
+        "descrizione": " Trasformazione industriale del tabacco e la fabbricazione di prodotti da fumo",
+        "descrizione_estesa": "7. 1 - Trasformazione industriale del tabacco e la fabbricazione di prodotti da fumo"
+    },
+    {
+        "id": 8,
+        "cod_re_tipo_rifiuto": 9,
+        "cod_provenienza": "9.1 ",
+        "descrizione": " Industria della carta",
+        "descrizione_estesa": "9.1 - Industria della carta"
+    },
+    {
+        "id": 9,
+        "cod_re_tipo_rifiuto": 10,
+        "cod_provenienza": "10. 1 ",
+        "descrizione": " Processi di depurazione:",
+        "descrizione_estesa": "10. 1 - Processi di depurazione:"
+    },
+    {
+        "id": 10,
+        "cod_re_tipo_rifiuto": 11,
+        "cod_provenienza": "11. 1 ",
+        "descrizione": " Impianti di pirolisi e/o gassificazione di rifiuti di cui al punto 17 dell'Allegato 1.",
+        "descrizione_estesa": "11. 1 - Impianti di pirolisi e/o gassificazione di rifiuti di cui al punto 17 dell'Allegato 1."
+    },
+    {
+        "id": 11,
+        "cod_re_tipo_rifiuto": 12,
+        "cod_provenienza": "12. 1 ",
+        "descrizione": " Processi di depurazione:",
+        "descrizione_estesa": "12. 1 - Processi di depurazione:"
+    },
+    {
+        "id": 12,
+        "cod_re_tipo_rifiuto": 13,
+        "cod_provenienza": "13. 1 ",
+        "descrizione": " Industria siderurgica.",
+        "descrizione_estesa": "13. 1 - Industria siderurgica."
+    },
+    {
+        "id": 13,
+        "cod_re_tipo_rifiuto": 14,
+        "cod_provenienza": "14. 1 ",
+        "descrizione": " Allevamenti avicoli.",
+        "descrizione_estesa": "14. 1 - Allevamenti avicoli."
+    }
+]

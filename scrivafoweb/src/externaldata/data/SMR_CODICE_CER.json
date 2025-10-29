@@ -1,0 +1,3978 @@
+[
+    {
+        "id": 1,
+        "cod_smr_tipo_rifiuto": "1.1",
+        "cod_cer": "150101",
+        "descrizione": "imballaggi di carta e cartone",
+        "descrizione_estesa": "150101-imballaggi di carta e cartone"
+    },
+    {
+        "id": 2,
+        "cod_smr_tipo_rifiuto": "1.1",
+        "cod_cer": "150105",
+        "descrizione": " imballaggi materiali compositi",
+        "descrizione_estesa": "150105- imballaggi materiali compositi"
+    },
+    {
+        "id": 3,
+        "cod_smr_tipo_rifiuto": "1.1",
+        "cod_cer": "150106 ",
+        "descrizione": "imballaggi materiali misti",
+        "descrizione_estesa": "150106 -imballaggi materiali misti"
+    },
+    {
+        "id": 4,
+        "cod_smr_tipo_rifiuto": "1.1",
+        "cod_cer": "200101 ",
+        "descrizione": "carta e cartone",
+        "descrizione_estesa": "200101 -carta e cartone"
+    },
+    {
+        "id": 5,
+        "cod_smr_tipo_rifiuto": "1.2",
+        "cod_cer": "150203",
+        "descrizione": " assorbenti, materiali filtranti, stracci e indumenti protettivi, diversi da quelli di cui alla voce 150202",
+        "descrizione_estesa": "150203- assorbenti, materiali filtranti, stracci e indumenti protettivi, diversi da quelli di cui alla voce 150202"
+    },
+    {
+        "id": 6,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "101112 ",
+        "descrizione": "rifiuti di vetro diversi da quelli di cui alla voce 101111",
+        "descrizione_estesa": "101112 -rifiuti di vetro diversi da quelli di cui alla voce 101111"
+    },
+    {
+        "id": 7,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "150107",
+        "descrizione": " imballaggi in vetro",
+        "descrizione_estesa": "150107- imballaggi in vetro"
+    },
+    {
+        "id": 8,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "160120 ",
+        "descrizione": "vetro",
+        "descrizione_estesa": "160120 -vetro"
+    },
+    {
+        "id": 9,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "170202",
+        "descrizione": " vetro",
+        "descrizione_estesa": "170202- vetro"
+    },
+    {
+        "id": 10,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "191205",
+        "descrizione": " vetro",
+        "descrizione_estesa": "191205- vetro"
+    },
+    {
+        "id": 11,
+        "cod_smr_tipo_rifiuto": "2.1",
+        "cod_cer": "200102 ",
+        "descrizione": "vetro",
+        "descrizione_estesa": "200102 -vetro"
+    },
+    {
+        "id": 12,
+        "cod_smr_tipo_rifiuto": "2.2",
+        "cod_cer": "150107",
+        "descrizione": " imballaggi in vetro",
+        "descrizione_estesa": "150107- imballaggi in vetro"
+    },
+    {
+        "id": 13,
+        "cod_smr_tipo_rifiuto": "2.2",
+        "cod_cer": "200102",
+        "descrizione": " vetro",
+        "descrizione_estesa": "200102- vetro"
+    },
+    {
+        "id": 14,
+        "cod_smr_tipo_rifiuto": "2.3",
+        "cod_cer": "101199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 15,
+        "cod_smr_tipo_rifiuto": "2.4",
+        "cod_cer": "170202",
+        "descrizione": " vetro",
+        "descrizione_estesa": "170202- vetro"
+    },
+    {
+        "id": 16,
+        "cod_smr_tipo_rifiuto": "2.4",
+        "cod_cer": "200102",
+        "descrizione": " vetro",
+        "descrizione_estesa": "200102- vetro"
+    },
+    {
+        "id": 17,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "100210 ",
+        "descrizione": "scaglie di laminazione",
+        "descrizione_estesa": "100210 -scaglie di laminazione"
+    },
+    {
+        "id": 18,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "100299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 19,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "120101 ",
+        "descrizione": "limatura e trucioli di materiali ferrosi",
+        "descrizione_estesa": "120101 -limatura e trucioli di materiali ferrosi"
+    },
+    {
+        "id": 20,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "120102 ",
+        "descrizione": "polveri e particolato di materiale ferrosi",
+        "descrizione_estesa": "120102 -polveri e particolato di materiale ferrosi"
+    },
+    {
+        "id": 21,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "120199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "120199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 22,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "150104",
+        "descrizione": " imballaggi metallici",
+        "descrizione_estesa": "150104- imballaggi metallici"
+    },
+    {
+        "id": 23,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "170405",
+        "descrizione": " ferro e acciaio",
+        "descrizione_estesa": "170405- ferro e acciaio"
+    },
+    {
+        "id": 24,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "190102 ",
+        "descrizione": "materiali ferrosi estratti da ceneri pesanti",
+        "descrizione_estesa": "190102 -materiali ferrosi estratti da ceneri pesanti"
+    },
+    {
+        "id": 25,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "190118 ",
+        "descrizione": "rifiuti della pirolisi, diversi da quelli di cui alla voce 190117",
+        "descrizione_estesa": "190118 -rifiuti della pirolisi, diversi da quelli di cui alla voce 190117"
+    },
+    {
+        "id": 26,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "191202",
+        "descrizione": " metalli ferrosi",
+        "descrizione_estesa": "191202- metalli ferrosi"
+    },
+    {
+        "id": 27,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "200140",
+        "descrizione": " metallo",
+        "descrizione_estesa": "200140- metallo"
+    },
+    {
+        "id": 28,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "100899",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100899- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 29,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "110501",
+        "descrizione": " zinco solido",
+        "descrizione_estesa": "110501- zinco solido"
+    },
+    {
+        "id": 30,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "110599 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110599 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 31,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 32,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "120104",
+        "descrizione": " polveri e particolato di materiali non ferrosi",
+        "descrizione_estesa": "120104- polveri e particolato di materiali non ferrosi"
+    },
+    {
+        "id": 33,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "120199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "120199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 34,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "150104",
+        "descrizione": " imballaggi metallici",
+        "descrizione_estesa": "150104- imballaggi metallici"
+    },
+    {
+        "id": 35,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170401",
+        "descrizione": " rame, bronzo, ottone",
+        "descrizione_estesa": "170401- rame, bronzo, ottone"
+    },
+    {
+        "id": 36,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170402",
+        "descrizione": " alluminio",
+        "descrizione_estesa": "170402- alluminio"
+    },
+    {
+        "id": 37,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170403",
+        "descrizione": " piombo",
+        "descrizione_estesa": "170403- piombo"
+    },
+    {
+        "id": 38,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170404",
+        "descrizione": " zinco",
+        "descrizione_estesa": "170404- zinco"
+    },
+    {
+        "id": 39,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170406",
+        "descrizione": " stagno",
+        "descrizione_estesa": "170406- stagno"
+    },
+    {
+        "id": 40,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "170407",
+        "descrizione": " metalli misti",
+        "descrizione_estesa": "170407- metalli misti"
+    },
+    {
+        "id": 41,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "191002",
+        "descrizione": " rifiuti di metalli non ferrosi",
+        "descrizione_estesa": "191002- rifiuti di metalli non ferrosi"
+    },
+    {
+        "id": 42,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "191203",
+        "descrizione": " metalli non ferrosi",
+        "descrizione_estesa": "191203- metalli non ferrosi"
+    },
+    {
+        "id": 43,
+        "cod_smr_tipo_rifiuto": "3.2",
+        "cod_cer": "200140",
+        "descrizione": " metallo",
+        "descrizione_estesa": "200140- metallo"
+    },
+    {
+        "id": 44,
+        "cod_smr_tipo_rifiuto": "3.3",
+        "cod_cer": "150104",
+        "descrizione": " imballaggi metallici ",
+        "descrizione_estesa": "150104- imballaggi metallici "
+    },
+    {
+        "id": 45,
+        "cod_smr_tipo_rifiuto": "3.3",
+        "cod_cer": "150105",
+        "descrizione": " imballaggi e materiali compositi ",
+        "descrizione_estesa": "150105- imballaggi e materiali compositi "
+    },
+    {
+        "id": 46,
+        "cod_smr_tipo_rifiuto": "3.3",
+        "cod_cer": "150106",
+        "descrizione": " imballaggi in materiali misti ",
+        "descrizione_estesa": "150106- imballaggi in materiali misti "
+    },
+    {
+        "id": 47,
+        "cod_smr_tipo_rifiuto": "3.3",
+        "cod_cer": "191203",
+        "descrizione": " metalli non ferrosi",
+        "descrizione_estesa": "191203- metalli non ferrosi"
+    },
+    {
+        "id": 48,
+        "cod_smr_tipo_rifiuto": "3.4",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti ",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti "
+    },
+    {
+        "id": 49,
+        "cod_smr_tipo_rifiuto": "3.4",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi ",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi "
+    },
+    {
+        "id": 50,
+        "cod_smr_tipo_rifiuto": "3.4",
+        "cod_cer": "120104",
+        "descrizione": " polveri e particolato di materiali di ferrosi ",
+        "descrizione_estesa": "120104- polveri e particolato di materiali di ferrosi "
+    },
+    {
+        "id": 51,
+        "cod_smr_tipo_rifiuto": "3.4",
+        "cod_cer": "200140",
+        "descrizione": " metallo",
+        "descrizione_estesa": "200140- metallo"
+    },
+    {
+        "id": 52,
+        "cod_smr_tipo_rifiuto": "3.5",
+        "cod_cer": "150104",
+        "descrizione": " imballaggi metallici",
+        "descrizione_estesa": "150104- imballaggi metallici"
+    },
+    {
+        "id": 53,
+        "cod_smr_tipo_rifiuto": "3.5",
+        "cod_cer": "200140",
+        "descrizione": " metallo",
+        "descrizione_estesa": "200140- metallo"
+    },
+    {
+        "id": 54,
+        "cod_smr_tipo_rifiuto": "3.6",
+        "cod_cer": "200140 ",
+        "descrizione": "metallo",
+        "descrizione_estesa": "200140 -metallo"
+    },
+    {
+        "id": 55,
+        "cod_smr_tipo_rifiuto": "3.7",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 56,
+        "cod_smr_tipo_rifiuto": "3.7",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 57,
+        "cod_smr_tipo_rifiuto": "3.7",
+        "cod_cer": "120199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "120199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 58,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 59,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_cer": "120104",
+        "descrizione": " polveri e particolato di materiali non ferrosi",
+        "descrizione_estesa": "120104- polveri e particolato di materiali non ferrosi"
+    },
+    {
+        "id": 60,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_cer": "150203",
+        "descrizione": " assorbenti, materiali filtranti, straccio indumenti protettivi, diversi da quelli di cui alla voce 150202",
+        "descrizione_estesa": "150203- assorbenti, materiali filtranti, straccio indumenti protettivi, diversi da quelli di cui alla voce 150202"
+    },
+    {
+        "id": 61,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_cer": "190812",
+        "descrizione": " fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811",
+        "descrizione_estesa": "190812- fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811"
+    },
+    {
+        "id": 62,
+        "cod_smr_tipo_rifiuto": "3.8",
+        "cod_cer": "190814",
+        "descrizione": " fanghi prodotti da altri trattamenti delle acque reflue industriale, diversi da quelli di cui alla voce 190813",
+        "descrizione_estesa": "190814- fanghi prodotti da altri trattamenti delle acque reflue industriale, diversi da quelli di cui alla voce 190813"
+    },
+    {
+        "id": 63,
+        "cod_smr_tipo_rifiuto": "3.9",
+        "cod_cer": "100701",
+        "descrizione": " scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100701- scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 64,
+        "cod_smr_tipo_rifiuto": "3.9",
+        "cod_cer": "100702",
+        "descrizione": " impurità e schiumatore della produzione primaria e secondaria 161102 rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche diversi da quelli di cui alla voce 161101",
+        "descrizione_estesa": "100702- impurità e schiumatore della produzione primaria e secondaria 161102 rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche diversi da quelli di cui alla voce 161101"
+    },
+    {
+        "id": 65,
+        "cod_smr_tipo_rifiuto": "3.9",
+        "cod_cer": "161104",
+        "descrizione": " altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce i 161103",
+        "descrizione_estesa": "161104- altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce i 161103"
+    },
+    {
+        "id": 66,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "160605 ",
+        "descrizione": "altre batterie ed accumulatori",
+        "descrizione_estesa": "160605 -altre batterie ed accumulatori"
+    },
+    {
+        "id": 67,
+        "cod_smr_tipo_rifiuto": "3.1",
+        "cod_cer": "200134",
+        "descrizione": " accumulatori diversi da quelli di cui alla voce 200133",
+        "descrizione_estesa": "200134- accumulatori diversi da quelli di cui alla voce 200133"
+    },
+    {
+        "id": 68,
+        "cod_smr_tipo_rifiuto": "3.11",
+        "cod_cer": "090107 ",
+        "descrizione": "carta e pellicole per fotografia, contenenti argento o composti dell'argento",
+        "descrizione_estesa": "090107 -carta e pellicole per fotografia, contenenti argento o composti dell'argento"
+    },
+    {
+        "id": 69,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 70,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 71,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "cod_cer": "120104 ",
+        "descrizione": "polveri e particolato di materiali non ferrosi",
+        "descrizione_estesa": "120104 -polveri e particolato di materiali non ferrosi"
+    },
+    {
+        "id": 72,
+        "cod_smr_tipo_rifiuto": "3.12",
+        "cod_cer": "200140",
+        "descrizione": " metallo",
+        "descrizione_estesa": "200140- metallo"
+    },
+    {
+        "id": 73,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": " 060902",
+        "descrizione": " scorie fosforose",
+        "descrizione_estesa": " 060902- scorie fosforose"
+    },
+    {
+        "id": 74,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": "100601 ",
+        "descrizione": "scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100601 -scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 75,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": " 100602",
+        "descrizione": " impurità e schiumatura della produzione primaria e secondaria",
+        "descrizione_estesa": " 100602- impurità e schiumatura della produzione primaria e secondaria"
+    },
+    {
+        "id": 76,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": "100809 ",
+        "descrizione": "altre scorie",
+        "descrizione_estesa": "100809 -altre scorie"
+    },
+    {
+        "id": 77,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": " 100811",
+        "descrizione": " impurità e schiumatore diverse da quelli di cui alla voce 100810",
+        "descrizione_estesa": " 100811- impurità e schiumatore diverse da quelli di cui alla voce 100810"
+    },
+    {
+        "id": 78,
+        "cod_smr_tipo_rifiuto": "4.1",
+        "cod_cer": "101003 ",
+        "descrizione": "scorie di fusione",
+        "descrizione_estesa": "101003 -scorie di fusione"
+    },
+    {
+        "id": 79,
+        "cod_smr_tipo_rifiuto": "4.2",
+        "cod_cer": "100701",
+        "descrizione": " scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100701- scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 80,
+        "cod_smr_tipo_rifiuto": "4.3",
+        "cod_cer": "100601",
+        "descrizione": " scorie della produzione primaria e secondaria",
+        "descrizione_estesa": "100601- scorie della produzione primaria e secondaria"
+    },
+    {
+        "id": 81,
+        "cod_smr_tipo_rifiuto": "4.3",
+        "cod_cer": "100602",
+        "descrizione": " impurità e schiumatura della produzione primaria e secondaria",
+        "descrizione_estesa": "100602- impurità e schiumatura della produzione primaria e secondaria"
+    },
+    {
+        "id": 82,
+        "cod_smr_tipo_rifiuto": "4.3",
+        "cod_cer": "100699",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100699- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 83,
+        "cod_smr_tipo_rifiuto": "4.4",
+        "cod_cer": "100201",
+        "descrizione": " rifiuti del trattamento delle scorie",
+        "descrizione_estesa": "100201- rifiuti del trattamento delle scorie"
+    },
+    {
+        "id": 84,
+        "cod_smr_tipo_rifiuto": "4.4",
+        "cod_cer": " 100202",
+        "descrizione": " scorie non trattate",
+        "descrizione_estesa": " 100202- scorie non trattate"
+    },
+    {
+        "id": 85,
+        "cod_smr_tipo_rifiuto": "4.4",
+        "cod_cer": " 100903 ",
+        "descrizione": "scorie di fusione",
+        "descrizione_estesa": " 100903 -scorie di fusione"
+    },
+    {
+        "id": 86,
+        "cod_smr_tipo_rifiuto": "4.5",
+        "cod_cer": "110502",
+        "descrizione": " ceneri di zinco",
+        "descrizione_estesa": "110502- ceneri di zinco"
+    },
+    {
+        "id": 87,
+        "cod_smr_tipo_rifiuto": "4.6",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 88,
+        "cod_smr_tipo_rifiuto": "4.7",
+        "cod_cer": "100305",
+        "descrizione": " rifiuti di allumina",
+        "descrizione_estesa": "100305- rifiuti di allumina"
+    },
+    {
+        "id": 89,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "160106",
+        "descrizione": " veicoli furioso virgola non contenenti liquidi denti altre componenti pericolose",
+        "descrizione_estesa": "160106- veicoli furioso virgola non contenenti liquidi denti altre componenti pericolose"
+    },
+    {
+        "id": 90,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "160116 ",
+        "descrizione": "serbatoi per gas liquido",
+        "descrizione_estesa": "160116 -serbatoi per gas liquido"
+    },
+    {
+        "id": 91,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "160117 ",
+        "descrizione": "metalli ferrosi",
+        "descrizione_estesa": "160117 -metalli ferrosi"
+    },
+    {
+        "id": 92,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "160118 ",
+        "descrizione": "metalli non ferrosi",
+        "descrizione_estesa": "160118 -metalli non ferrosi"
+    },
+    {
+        "id": 93,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "160122 ",
+        "descrizione": "componenti non specificati altrimenti",
+        "descrizione_estesa": "160122 -componenti non specificati altrimenti"
+    },
+    {
+        "id": 94,
+        "cod_smr_tipo_rifiuto": "5.2",
+        "cod_cer": "160106 ",
+        "descrizione": "veicoli fuori uso,non contenenti liquidi né altri componenti pericolosi",
+        "descrizione_estesa": "160106 -veicoli fuori uso,non contenenti liquidi né altri componenti pericolosi"
+    },
+    {
+        "id": 95,
+        "cod_smr_tipo_rifiuto": "5.2",
+        "cod_cer": "160116",
+        "descrizione": " serbatoi per gas liquido",
+        "descrizione_estesa": "160116- serbatoi per gas liquido"
+    },
+    {
+        "id": 96,
+        "cod_smr_tipo_rifiuto": "5.2",
+        "cod_cer": "160117",
+        "descrizione": " metalli ferrosi",
+        "descrizione_estesa": "160117- metalli ferrosi"
+    },
+    {
+        "id": 97,
+        "cod_smr_tipo_rifiuto": "5.2",
+        "cod_cer": "160118",
+        "descrizione": " metalli non ferrosi",
+        "descrizione_estesa": "160118- metalli non ferrosi"
+    },
+    {
+        "id": 98,
+        "cod_smr_tipo_rifiuto": "5.2",
+        "cod_cer": "160122 ",
+        "descrizione": "componenti non specificati altrimenti",
+        "descrizione_estesa": "160122 -componenti non specificati altrimenti"
+    },
+    {
+        "id": 99,
+        "cod_smr_tipo_rifiuto": "5.3",
+        "cod_cer": "160803 ",
+        "descrizione": "catalizzatori esauriti contenenti metalli di transizione o componenti di metalli di transizione, non specificati altrimenti",
+        "descrizione_estesa": "160803 -catalizzatori esauriti contenenti metalli di transizione o componenti di metalli di transizione, non specificati altrimenti"
+    },
+    {
+        "id": 100,
+        "cod_smr_tipo_rifiuto": "5.3",
+        "cod_cer": "160804",
+        "descrizione": " catalizzatore esauriti da cracking catalitico fluido (tranne 160807)",
+        "descrizione_estesa": "160804- catalizzatore esauriti da cracking catalitico fluido (tranne 160807)"
+    },
+    {
+        "id": 101,
+        "cod_smr_tipo_rifiuto": "5.4",
+        "cod_cer": "100801 ",
+        "descrizione": "catalizzatori esauriti contenenti oro argento, renio, rodio, palladio, iridio o platino (tranne 160807)",
+        "descrizione_estesa": "100801 -catalizzatori esauriti contenenti oro argento, renio, rodio, palladio, iridio o platino (tranne 160807)"
+    },
+    {
+        "id": 102,
+        "cod_smr_tipo_rifiuto": "5.5",
+        "cod_cer": "160801",
+        "descrizione": " catalizzatori esauriti contenenti oro, argento, radio, rodio, palladio, iridio o platino (tranne 160807)",
+        "descrizione_estesa": "160801- catalizzatori esauriti contenenti oro, argento, radio, rodio, palladio, iridio o platino (tranne 160807)"
+    },
+    {
+        "id": 103,
+        "cod_smr_tipo_rifiuto": "5.6",
+        "cod_cer": "160214",
+        "descrizione": " apparecchiature fuori uso, diverse da quelle di cui alle voci da 16 0209A 160213",
+        "descrizione_estesa": "160214- apparecchiature fuori uso, diverse da quelle di cui alle voci da 16 0209A 160213"
+    },
+    {
+        "id": 104,
+        "cod_smr_tipo_rifiuto": "5.6",
+        "cod_cer": "160216",
+        "descrizione": " componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 120215",
+        "descrizione_estesa": "160216- componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 120215"
+    },
+    {
+        "id": 105,
+        "cod_smr_tipo_rifiuto": "5.6",
+        "cod_cer": "200136 ",
+        "descrizione": "apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle alle voci 200121, 200123 e 200135",
+        "descrizione_estesa": "200136 -apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle alle voci 200121, 200123 e 200135"
+    },
+    {
+        "id": 106,
+        "cod_smr_tipo_rifiuto": "5.6",
+        "cod_cer": "200140 ",
+        "descrizione": "metallo",
+        "descrizione_estesa": "200140 -metallo"
+    },
+    {
+        "id": 107,
+        "cod_smr_tipo_rifiuto": "5.7",
+        "cod_cer": "160216",
+        "descrizione": " componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216- componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 108,
+        "cod_smr_tipo_rifiuto": "5.7",
+        "cod_cer": "170402",
+        "descrizione": " alluminio",
+        "descrizione_estesa": "170402- alluminio"
+    },
+    {
+        "id": 109,
+        "cod_smr_tipo_rifiuto": "5.7",
+        "cod_cer": "170411",
+        "descrizione": " cavi, diversi da quelli di cui alla voce 170410",
+        "descrizione_estesa": "170411- cavi, diversi da quelli di cui alla voce 170410"
+    },
+    {
+        "id": 110,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "cod_cer": "160118",
+        "descrizione": " metalli non ferrosi",
+        "descrizione_estesa": "160118- metalli non ferrosi"
+    },
+    {
+        "id": 111,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "cod_cer": "160102",
+        "descrizione": " componenti non specificati altrimenti",
+        "descrizione_estesa": "160102- componenti non specificati altrimenti"
+    },
+    {
+        "id": 112,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 113,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "cod_cer": "170401",
+        "descrizione": " rame, bronzo, ottone",
+        "descrizione_estesa": "170401- rame, bronzo, ottone"
+    },
+    {
+        "id": 114,
+        "cod_smr_tipo_rifiuto": "5.8",
+        "cod_cer": "170411",
+        "descrizione": " cavi, diversi da quelli di cui alla voce 170410",
+        "descrizione_estesa": "170411- cavi, diversi da quelli di cui alla voce 170410"
+    },
+    {
+        "id": 115,
+        "cod_smr_tipo_rifiuto": "5.9",
+        "cod_cer": "160216",
+        "descrizione": " componenti rimosse da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216- componenti rimosse da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 116,
+        "cod_smr_tipo_rifiuto": "5.9",
+        "cod_cer": "170411",
+        "descrizione": " cavi, diversi da quelli di cui alla voce 170410",
+        "descrizione_estesa": "170411- cavi, diversi da quelli di cui alla voce 170410"
+    },
+    {
+        "id": 117,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 118,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "120103 ",
+        "descrizione": "limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103 -limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 119,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "120104",
+        "descrizione": " polvere in particolato di materiali non ferrosi",
+        "descrizione_estesa": "120104- polvere in particolato di materiali non ferrosi"
+    },
+    {
+        "id": 120,
+        "cod_smr_tipo_rifiuto": "5.1",
+        "cod_cer": "120199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "120199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 121,
+        "cod_smr_tipo_rifiuto": "5.11",
+        "cod_cer": "100699 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100699 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 122,
+        "cod_smr_tipo_rifiuto": "5.11",
+        "cod_cer": "101099 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101099 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 123,
+        "cod_smr_tipo_rifiuto": "5.12",
+        "cod_cer": "101003",
+        "descrizione": " scorie di fusione",
+        "descrizione_estesa": "101003- scorie di fusione"
+    },
+    {
+        "id": 124,
+        "cod_smr_tipo_rifiuto": "5.12",
+        "cod_cer": "101010",
+        "descrizione": " polvere dei gas di combustione, diverse da quelle di cui alla voce 101009",
+        "descrizione_estesa": "101010- polvere dei gas di combustione, diverse da quelle di cui alla voce 101009"
+    },
+    {
+        "id": 125,
+        "cod_smr_tipo_rifiuto": "5.12",
+        "cod_cer": "101012",
+        "descrizione": " altri particolati diversi da quelli di cui alla voce 101011",
+        "descrizione_estesa": "101012- altri particolati diversi da quelli di cui alla voce 101011"
+    },
+    {
+        "id": 126,
+        "cod_smr_tipo_rifiuto": "5.13",
+        "cod_cer": "101099",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101099- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 127,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "cod_cer": "100210",
+        "descrizione": " scaglie di laminazione",
+        "descrizione_estesa": "100210- scaglie di laminazione"
+    },
+    {
+        "id": 128,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "cod_cer": "120101",
+        "descrizione": " limatura e trucioli di materiali ferrosi",
+        "descrizione_estesa": "120101- limatura e trucioli di materiali ferrosi"
+    },
+    {
+        "id": 129,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "cod_cer": "120102",
+        "descrizione": " polveri e particolato di materiali ferrosi",
+        "descrizione_estesa": "120102- polveri e particolato di materiali ferrosi"
+    },
+    {
+        "id": 130,
+        "cod_smr_tipo_rifiuto": "5.14",
+        "cod_cer": "120103",
+        "descrizione": " limatura e trucioli di materiali non ferrosi",
+        "descrizione_estesa": "120103- limatura e trucioli di materiali non ferrosi"
+    },
+    {
+        "id": 131,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "110114",
+        "descrizione": " rifiuti di sgrassaggio diversi da quelli di cui alla voce 110113",
+        "descrizione_estesa": "110114- rifiuti di sgrassaggio diversi da quelli di cui alla voce 110113"
+    },
+    {
+        "id": 132,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "110206",
+        "descrizione": " rifiuti della lavorazione idro metallurgica del rame, diversi da quelli della voce 110205",
+        "descrizione_estesa": "110206- rifiuti della lavorazione idro metallurgica del rame, diversi da quelli della voce 110205"
+    },
+    {
+        "id": 133,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "110299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "110299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 134,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "160214",
+        "descrizione": " apparecchiature fuori uso, diverse da quelle di cui alle voci da 16 0209 a 160213",
+        "descrizione_estesa": "160214- apparecchiature fuori uso, diverse da quelle di cui alle voci da 16 0209 a 160213"
+    },
+    {
+        "id": 135,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 136,
+        "cod_smr_tipo_rifiuto": "5.16",
+        "cod_cer": "200136 ",
+        "descrizione": "apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle di cui e le voci 200121, 200123 e 200135",
+        "descrizione_estesa": "200136 -apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle di cui e le voci 200121, 200123 e 200135"
+    },
+    {
+        "id": 137,
+        "cod_smr_tipo_rifiuto": "5.17",
+        "cod_cer": "100202 ",
+        "descrizione": "scorie non trattate",
+        "descrizione_estesa": "100202 -scorie non trattate"
+    },
+    {
+        "id": 138,
+        "cod_smr_tipo_rifiuto": "5.18",
+        "cod_cer": "100210 ",
+        "descrizione": "scaglie di laminazione",
+        "descrizione_estesa": "100210 -scaglie di laminazione"
+    },
+    {
+        "id": 139,
+        "cod_smr_tipo_rifiuto": "5.18",
+        "cod_cer": "100299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 140,
+        "cod_smr_tipo_rifiuto": "5.19",
+        "cod_cer": "160214 ",
+        "descrizione": "apparecchiature fuorioso, diverse da quelle di cui alle voci da 16 0209 a 160213",
+        "descrizione_estesa": "160214 -apparecchiature fuorioso, diverse da quelle di cui alle voci da 16 0209 a 160213"
+    },
+    {
+        "id": 141,
+        "cod_smr_tipo_rifiuto": "5.19",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimosse da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimosse da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 142,
+        "cod_smr_tipo_rifiuto": "5.19",
+        "cod_cer": "200136",
+        "descrizione": " apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle di cui alle voci 200121, 200123 e 200135",
+        "descrizione_estesa": "200136- apparecchiature elettriche ed elettroniche fuori uso, diverse da quelle di cui alle voci 200121, 200123 e 200135"
+    },
+    {
+        "id": 143,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "02014",
+        "descrizione": " rifiuti plastici (ad esclusione degli imballaggi)",
+        "descrizione_estesa": "02014- rifiuti plastici (ad esclusione degli imballaggi)"
+    },
+    {
+        "id": 144,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "150102",
+        "descrizione": " imballaggi in plastica",
+        "descrizione_estesa": "150102- imballaggi in plastica"
+    },
+    {
+        "id": 145,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "170203 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "170203 -plastica"
+    },
+    {
+        "id": 146,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "191204 ",
+        "descrizione": "plastica e gomma",
+        "descrizione_estesa": "191204 -plastica e gomma"
+    },
+    {
+        "id": 147,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "200139 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "200139 -plastica"
+    },
+    {
+        "id": 148,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "070213",
+        "descrizione": " rifiuti plastici",
+        "descrizione_estesa": "070213- rifiuti plastici"
+    },
+    {
+        "id": 149,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "120105 ",
+        "descrizione": "limatura e trucioli di materiali plastici",
+        "descrizione_estesa": "120105 -limatura e trucioli di materiali plastici"
+    },
+    {
+        "id": 150,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "160119",
+        "descrizione": " plastica",
+        "descrizione_estesa": "160119- plastica"
+    },
+    {
+        "id": 151,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 152,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "160306 ",
+        "descrizione": "rifiuti organici, diversi da quelli di cui alla voce 160305",
+        "descrizione_estesa": "160306 -rifiuti organici, diversi da quelli di cui alla voce 160305"
+    },
+    {
+        "id": 153,
+        "cod_smr_tipo_rifiuto": "6.2",
+        "cod_cer": "170203 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "170203 -plastica"
+    },
+    {
+        "id": 154,
+        "cod_smr_tipo_rifiuto": "6.3",
+        "cod_cer": "070212",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diverso da quelli di cui alla voce 070211",
+        "descrizione_estesa": "070212- fanghi prodotti dal trattamento in loco degli effluenti, diverso da quelli di cui alla voce 070211"
+    },
+    {
+        "id": 155,
+        "cod_smr_tipo_rifiuto": "6.4",
+        "cod_cer": "070299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 156,
+        "cod_smr_tipo_rifiuto": "6.4",
+        "cod_cer": "190905 ",
+        "descrizione": "resine a scambio ionico saturate o esaurite",
+        "descrizione_estesa": "190905 -resine a scambio ionico saturate o esaurite"
+    },
+    {
+        "id": 157,
+        "cod_smr_tipo_rifiuto": "6.5",
+        "cod_cer": "070213",
+        "descrizione": " rifiuti plastici ",
+        "descrizione_estesa": "070213- rifiuti plastici "
+    },
+    {
+        "id": 158,
+        "cod_smr_tipo_rifiuto": "6.5",
+        "cod_cer": "120105 ",
+        "descrizione": "limatura e trucioli di materiali plastici",
+        "descrizione_estesa": "120105 -limatura e trucioli di materiali plastici"
+    },
+    {
+        "id": 159,
+        "cod_smr_tipo_rifiuto": "6.5",
+        "cod_cer": "160119",
+        "descrizione": " plastica",
+        "descrizione_estesa": "160119- plastica"
+    },
+    {
+        "id": 160,
+        "cod_smr_tipo_rifiuto": "6.6",
+        "cod_cer": "070213 ",
+        "descrizione": "rifiuti plastici",
+        "descrizione_estesa": "070213 -rifiuti plastici"
+    },
+    {
+        "id": 161,
+        "cod_smr_tipo_rifiuto": "6.6",
+        "cod_cer": "120105",
+        "descrizione": " limatura e trucioli di materiali plastici",
+        "descrizione_estesa": "120105- limatura e trucioli di materiali plastici"
+    },
+    {
+        "id": 162,
+        "cod_smr_tipo_rifiuto": "6.6",
+        "cod_cer": "160119",
+        "descrizione": " plastica",
+        "descrizione_estesa": "160119- plastica"
+    },
+    {
+        "id": 163,
+        "cod_smr_tipo_rifiuto": "6.7",
+        "cod_cer": "070299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 164,
+        "cod_smr_tipo_rifiuto": "6.8",
+        "cod_cer": "070299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 165,
+        "cod_smr_tipo_rifiuto": "6.1",
+        "cod_cer": "101199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 166,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "cod_cer": "070213",
+        "descrizione": " rifiuti plastici",
+        "descrizione_estesa": "070213- rifiuti plastici"
+    },
+    {
+        "id": 167,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "cod_cer": "070299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 168,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "cod_cer": "120105",
+        "descrizione": " limatura e trucioli di materiali plastici",
+        "descrizione_estesa": "120105- limatura e trucioli di materiali plastici"
+    },
+    {
+        "id": 169,
+        "cod_smr_tipo_rifiuto": "6.11",
+        "cod_cer": "160119",
+        "descrizione": " plastica",
+        "descrizione_estesa": "160119- plastica"
+    },
+    {
+        "id": 170,
+        "cod_smr_tipo_rifiuto": "6.12",
+        "cod_cer": "070199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 171,
+        "cod_smr_tipo_rifiuto": "6.12",
+        "cod_cer": "070299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 172,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "101311",
+        "descrizione": " rifiuti della produzione di materiali compositi a base di cemento, diversi da quelli di cui alle voci 101309 e 101310",
+        "descrizione_estesa": "101311- rifiuti della produzione di materiali compositi a base di cemento, diversi da quelli di cui alle voci 101309 e 101310"
+    },
+    {
+        "id": 173,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170101",
+        "descrizione": " cemento",
+        "descrizione_estesa": "170101- cemento"
+    },
+    {
+        "id": 174,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170102",
+        "descrizione": " mattoni",
+        "descrizione_estesa": "170102- mattoni"
+    },
+    {
+        "id": 175,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170103",
+        "descrizione": " mattonella e ceramiche",
+        "descrizione_estesa": "170103- mattonella e ceramiche"
+    },
+    {
+        "id": 176,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170107",
+        "descrizione": " miscugli o scorie di cemento, mattoni, mattonelle e ceramiche, diverse da quelle di cui alla voce 170106",
+        "descrizione_estesa": "170107- miscugli o scorie di cemento, mattoni, mattonelle e ceramiche, diverse da quelle di cui alla voce 170106"
+    },
+    {
+        "id": 177,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170802",
+        "descrizione": " materiali da costruzione a base di gesso diversi da quelli di cui alla voce 170801",
+        "descrizione_estesa": "170802- materiali da costruzione a base di gesso diversi da quelli di cui alla voce 170801"
+    },
+    {
+        "id": 178,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "170904 ",
+        "descrizione": "rifiuti misti delle attività di costruzione e demolizione, diversi da quelli di cui alle voci 170901, 170902 e 170903",
+        "descrizione_estesa": "170904 -rifiuti misti delle attività di costruzione e demolizione, diversi da quelli di cui alle voci 170901, 170902 e 170903"
+    },
+    {
+        "id": 179,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "200301",
+        "descrizione": " rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301- rifiuti urbani non differenziati"
+    },
+    {
+        "id": 180,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "010399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "010399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 181,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "010408 ",
+        "descrizione": "scarti di ghiaia e pietrisco, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010408 -scarti di ghiaia e pietrisco, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 182,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "010410 ",
+        "descrizione": "polveri e residui affini, diversi da quelli di cui alla voce 01047",
+        "descrizione_estesa": "010410 -polveri e residui affini, diversi da quelli di cui alla voce 01047"
+    },
+    {
+        "id": 183,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "010413 ",
+        "descrizione": "rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010413 -rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 184,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_cer": "101201",
+        "descrizione": " scarti di mescole non sottoposte a trattamento termico",
+        "descrizione_estesa": "101201- scarti di mescole non sottoposte a trattamento termico"
+    },
+    {
+        "id": 185,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_cer": "101206",
+        "descrizione": " stampi di scarto",
+        "descrizione_estesa": "101206- stampi di scarto"
+    },
+    {
+        "id": 186,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_cer": "101208",
+        "descrizione": " scarti di ceramica, mattoni, mattonelle materiali da costruzione (sottoposti a trattamento termico)",
+        "descrizione_estesa": "101208- scarti di ceramica, mattoni, mattonelle materiali da costruzione (sottoposti a trattamento termico)"
+    },
+    {
+        "id": 187,
+        "cod_smr_tipo_rifiuto": "7.4",
+        "cod_cer": "101203 ",
+        "descrizione": "polveri e particolato",
+        "descrizione_estesa": "101203 -polveri e particolato"
+    },
+    {
+        "id": 188,
+        "cod_smr_tipo_rifiuto": "7.4",
+        "cod_cer": "101206 ",
+        "descrizione": "stampi di scarto",
+        "descrizione_estesa": "101206 -stampi di scarto"
+    },
+    {
+        "id": 189,
+        "cod_smr_tipo_rifiuto": "7.4",
+        "cod_cer": "101208",
+        "descrizione": " scarti di ceramica, mattoni, mattonelle materiali da costruzione (sottoposti a trattamento termico)",
+        "descrizione_estesa": "101208- scarti di ceramica, mattoni, mattonelle materiali da costruzione (sottoposti a trattamento termico)"
+    },
+    {
+        "id": 190,
+        "cod_smr_tipo_rifiuto": "7.5",
+        "cod_cer": "101099",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101099- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 191,
+        "cod_smr_tipo_rifiuto": "7.5",
+        "cod_cer": "101299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 192,
+        "cod_smr_tipo_rifiuto": "7.6",
+        "cod_cer": "170302 ",
+        "descrizione": "miscele bituminose diverse da quelle di cui alla voce 170301",
+        "descrizione_estesa": "170302 -miscele bituminose diverse da quelle di cui alla voce 170301"
+    },
+    {
+        "id": 193,
+        "cod_smr_tipo_rifiuto": "7.6",
+        "cod_cer": "200301 ",
+        "descrizione": "rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301 -rifiuti urbani non differenziati"
+    },
+    {
+        "id": 194,
+        "cod_smr_tipo_rifiuto": "7.7",
+        "cod_cer": "050110",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 050109",
+        "descrizione_estesa": "050110- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 050109"
+    },
+    {
+        "id": 195,
+        "cod_smr_tipo_rifiuto": "7.7",
+        "cod_cer": "060503",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 196,
+        "cod_smr_tipo_rifiuto": "7.7",
+        "cod_cer": "070712",
+        "descrizione": " fanghi prodotti da trattamento in loco degli affluenti, diversi da quelli di cui alla voce 070711",
+        "descrizione_estesa": "070712- fanghi prodotti da trattamento in loco degli affluenti, diversi da quelli di cui alla voce 070711"
+    },
+    {
+        "id": 197,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_cer": "060316",
+        "descrizione": " ossidi metallici, diversi da quelli di cui alla voce 060315",
+        "descrizione_estesa": "060316- ossidi metallici, diversi da quelli di cui alla voce 060315"
+    },
+    {
+        "id": 198,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_cer": "070199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 199,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_cer": "161102",
+        "descrizione": " rivestimenti e materiali e refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101",
+        "descrizione_estesa": "161102- rivestimenti e materiali e refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101"
+    },
+    {
+        "id": 200,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_cer": "161104",
+        "descrizione": " altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103",
+        "descrizione_estesa": "161104- altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103"
+    },
+    {
+        "id": 201,
+        "cod_smr_tipo_rifiuto": "7.8",
+        "cod_cer": "161106 ",
+        "descrizione": "rivestimenti e materiali refrattari provenienti da lavorazioni non metallurgiche, diversi da quelli di cui alla voce 161105",
+        "descrizione_estesa": "161106 -rivestimenti e materiali refrattari provenienti da lavorazioni non metallurgiche, diversi da quelli di cui alla voce 161105"
+    },
+    {
+        "id": 202,
+        "cod_smr_tipo_rifiuto": "7.9",
+        "cod_cer": "161106 ",
+        "descrizione": "rivestimenti e materiali refrattari provenienti da lavorazioni non metallurgiche, diversi da quelli di cui alla voce 161105",
+        "descrizione_estesa": "161106 -rivestimenti e materiali refrattari provenienti da lavorazioni non metallurgiche, diversi da quelli di cui alla voce 161105"
+    },
+    {
+        "id": 203,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120101",
+        "descrizione": " limature trucioli di materiali ferrosi",
+        "descrizione_estesa": "120101- limature trucioli di materiali ferrosi"
+    },
+    {
+        "id": 204,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120102",
+        "descrizione": " polveri e particolato di materiali ferrosi",
+        "descrizione_estesa": "120102- polveri e particolato di materiali ferrosi"
+    },
+    {
+        "id": 205,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120103",
+        "descrizione": " li matura intrusioni di materiali non ferrosi",
+        "descrizione_estesa": "120103- li matura intrusioni di materiali non ferrosi"
+    },
+    {
+        "id": 206,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120104",
+        "descrizione": " polvere e particolato di materiali non ferrosi",
+        "descrizione_estesa": "120104- polvere e particolato di materiali non ferrosi"
+    },
+    {
+        "id": 207,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120117",
+        "descrizione": " materiale abrasivo di scarto, diverso da quello di cui alla voce 12 e 01 16",
+        "descrizione_estesa": "120117- materiale abrasivo di scarto, diverso da quello di cui alla voce 12 e 01 16"
+    },
+    {
+        "id": 208,
+        "cod_smr_tipo_rifiuto": "7.1",
+        "cod_cer": "120121",
+        "descrizione": " corpi l'utensile e materiale di rettifiche esauriti, diversi da quelli di cui alla voce 120120",
+        "descrizione_estesa": "120121- corpi l'utensile e materiale di rettifiche esauriti, diversi da quelli di cui alla voce 120120"
+    },
+    {
+        "id": 209,
+        "cod_smr_tipo_rifiuto": "7.11",
+        "cod_cer": "170508 ",
+        "descrizione": "pietrisco per massicciate ferroviarie, diverso da quello di cui alla voce 170507",
+        "descrizione_estesa": "170508 -pietrisco per massicciate ferroviarie, diverso da quello di cui alla voce 170507"
+    },
+    {
+        "id": 210,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_cer": "101206 ",
+        "descrizione": "stampi di scarto",
+        "descrizione_estesa": "101206 -stampi di scarto"
+    },
+    {
+        "id": 211,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_cer": "101299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 212,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_cer": "101399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 213,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_cer": "170802 ",
+        "descrizione": "materiali da costruzione a base di gesso diverse da quelli di cui alla voce 170801",
+        "descrizione_estesa": "170802 -materiali da costruzione a base di gesso diverse da quelli di cui alla voce 170801"
+    },
+    {
+        "id": 214,
+        "cod_smr_tipo_rifiuto": "7.12",
+        "cod_cer": "200301 ",
+        "descrizione": "rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301 -rifiuti urbani non differenziati"
+    },
+    {
+        "id": 215,
+        "cod_smr_tipo_rifiuto": "7.13",
+        "cod_cer": "101399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 216,
+        "cod_smr_tipo_rifiuto": "7.13",
+        "cod_cer": "170802",
+        "descrizione": " materiali da costruzione a base di gesso diversi da quelli di cui alla voce 170801",
+        "descrizione_estesa": "170802- materiali da costruzione a base di gesso diversi da quelli di cui alla voce 170801"
+    },
+    {
+        "id": 217,
+        "cod_smr_tipo_rifiuto": "7.14",
+        "cod_cer": "010504",
+        "descrizione": " fanghi e rifiuti di perforazione di pozzi per acque dolci",
+        "descrizione_estesa": "010504- fanghi e rifiuti di perforazione di pozzi per acque dolci"
+    },
+    {
+        "id": 218,
+        "cod_smr_tipo_rifiuto": "7.14",
+        "cod_cer": "010507 ",
+        "descrizione": "fanghi e rifiuti di perforazione contenenti barite, diversi da quelli delle voci 010505 e 010506",
+        "descrizione_estesa": "010507 -fanghi e rifiuti di perforazione contenenti barite, diversi da quelli delle voci 010505 e 010506"
+    },
+    {
+        "id": 219,
+        "cod_smr_tipo_rifiuto": "7.14",
+        "cod_cer": "170504",
+        "descrizione": " terra e roccia, diverse da quelle di cui alla voce 170503",
+        "descrizione_estesa": "170504- terra e roccia, diverse da quelle di cui alla voce 170503"
+    },
+    {
+        "id": 220,
+        "cod_smr_tipo_rifiuto": "7.15",
+        "cod_cer": "010504",
+        "descrizione": " fanghi e rifiuti di perforazione di pozzi per acque dolci",
+        "descrizione_estesa": "010504- fanghi e rifiuti di perforazione di pozzi per acque dolci"
+    },
+    {
+        "id": 221,
+        "cod_smr_tipo_rifiuto": "7.15",
+        "cod_cer": "010507",
+        "descrizione": " fanghi e rifiuti di perforazione contenenti barite, diversi da quelli delle voci 010505 e 010506",
+        "descrizione_estesa": "010507- fanghi e rifiuti di perforazione contenenti barite, diversi da quelli delle voci 010505 e 010506"
+    },
+    {
+        "id": 222,
+        "cod_smr_tipo_rifiuto": "7.16",
+        "cod_cer": "020402",
+        "descrizione": " carbonato di calcio fuori specifica",
+        "descrizione_estesa": "020402- carbonato di calcio fuori specifica"
+    },
+    {
+        "id": 223,
+        "cod_smr_tipo_rifiuto": "7.16",
+        "cod_cer": "020499",
+        "descrizione": " rifiuti di specificati altrimenti",
+        "descrizione_estesa": "020499- rifiuti di specificati altrimenti"
+    },
+    {
+        "id": 224,
+        "cod_smr_tipo_rifiuto": "7.16",
+        "cod_cer": "020799",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020799- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 225,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "010102",
+        "descrizione": " rifiuti da estrazione di minerali non metalliferi",
+        "descrizione_estesa": "010102- rifiuti da estrazione di minerali non metalliferi"
+    },
+    {
+        "id": 226,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "010308",
+        "descrizione": " polveri e residui affini diversi da quelli di cui hanno voce 010307",
+        "descrizione_estesa": "010308- polveri e residui affini diversi da quelli di cui hanno voce 010307"
+    },
+    {
+        "id": 227,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "010408",
+        "descrizione": " scarti di ghiaia e pietrisco, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010408- scarti di ghiaia e pietrisco, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 228,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "010410 ",
+        "descrizione": "polveri e risiede affidi, diversi da quelli di cui hai la voce 020407",
+        "descrizione_estesa": "010410 -polveri e risiede affidi, diversi da quelli di cui hai la voce 020407"
+    },
+    {
+        "id": 229,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "020402",
+        "descrizione": " carbonato di calcio fuori specifica",
+        "descrizione_estesa": "020402- carbonato di calcio fuori specifica"
+    },
+    {
+        "id": 230,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "020499",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020499- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 231,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "020701",
+        "descrizione": " rifiuti prodotti dalle operazioni di lavaggio pulizia e macinazione della materia prima ",
+        "descrizione_estesa": "020701- rifiuti prodotti dalle operazioni di lavaggio pulizia e macinazione della materia prima "
+    },
+    {
+        "id": 232,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "020799",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020799- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 233,
+        "cod_smr_tipo_rifiuto": "7.17",
+        "cod_cer": "100299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 234,
+        "cod_smr_tipo_rifiuto": "7.18",
+        "cod_cer": "060314 ",
+        "descrizione": "sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314 -sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 235,
+        "cod_smr_tipo_rifiuto": "7.18",
+        "cod_cer": "070299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 236,
+        "cod_smr_tipo_rifiuto": "7.18",
+        "cod_cer": "101304 ",
+        "descrizione": "rifiuti di calcinazione e di idratazione della calce",
+        "descrizione_estesa": "101304 -rifiuti di calcinazione e di idratazione della calce"
+    },
+    {
+        "id": 237,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 238,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "cod_cer": "060316 ",
+        "descrizione": "ossidi metallici, diversi da quelli cui alla voce 060315",
+        "descrizione_estesa": "060316 -ossidi metallici, diversi da quelli cui alla voce 060315"
+    },
+    {
+        "id": 239,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "cod_cer": "060399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 240,
+        "cod_smr_tipo_rifiuto": "7.19",
+        "cod_cer": "060499",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060499- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 241,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 242,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "161102",
+        "descrizione": " rivestimenti in materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101",
+        "descrizione_estesa": "161102- rivestimenti in materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101"
+    },
+    {
+        "id": 243,
+        "cod_smr_tipo_rifiuto": "7.2",
+        "cod_cer": "161104 ",
+        "descrizione": "altri rivestimenti e materiali refrattari provenienti da lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103",
+        "descrizione_estesa": "161104 -altri rivestimenti e materiali refrattari provenienti da lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103"
+    },
+    {
+        "id": 244,
+        "cod_smr_tipo_rifiuto": "7.21",
+        "cod_cer": "200130",
+        "descrizione": " detergenti diversi da quelli di cui alla voce 200129",
+        "descrizione_estesa": "200130- detergenti diversi da quelli di cui alla voce 200129"
+    },
+    {
+        "id": 245,
+        "cod_smr_tipo_rifiuto": "7.22",
+        "cod_cer": "060899",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060899- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 246,
+        "cod_smr_tipo_rifiuto": "7.22",
+        "cod_cer": "100208 ",
+        "descrizione": "rifiuti prodotti ed al trattamento dei fumi, diversi da quelli di cui alla voce 100207",
+        "descrizione_estesa": "100208 -rifiuti prodotti ed al trattamento dei fumi, diversi da quelli di cui alla voce 100207"
+    },
+    {
+        "id": 247,
+        "cod_smr_tipo_rifiuto": "7.23",
+        "cod_cer": "020102",
+        "descrizione": " scarti di tessuti animali",
+        "descrizione_estesa": "020102- scarti di tessuti animali"
+    },
+    {
+        "id": 248,
+        "cod_smr_tipo_rifiuto": "7.23",
+        "cod_cer": "020203",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020203- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 249,
+        "cod_smr_tipo_rifiuto": "7.23",
+        "cod_cer": "200303 ",
+        "descrizione": "residui della pulizia stradale",
+        "descrizione_estesa": "200303 -residui della pulizia stradale"
+    },
+    {
+        "id": 250,
+        "cod_smr_tipo_rifiuto": "7.24",
+        "cod_cer": "050699",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "050699- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 251,
+        "cod_smr_tipo_rifiuto": "7.24",
+        "cod_cer": "061399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 252,
+        "cod_smr_tipo_rifiuto": "7.24",
+        "cod_cer": "100199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 253,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "100299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 254,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "100906",
+        "descrizione": " forme e anime da fonderia non utilizzate, diverse da quelle di cui alla voce 100905",
+        "descrizione_estesa": "100906- forme e anime da fonderia non utilizzate, diverse da quelle di cui alla voce 100905"
+    },
+    {
+        "id": 255,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "100908 ",
+        "descrizione": "forme anime da fonderia utilizzate, diverse da quelle di cui alla voce 100907",
+        "descrizione_estesa": "100908 -forme anime da fonderia utilizzate, diverse da quelle di cui alla voce 100907"
+    },
+    {
+        "id": 256,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "100910",
+        "descrizione": " polveri dei gas di combustione diversi da quelli di cui alla voce 100909",
+        "descrizione_estesa": "100910- polveri dei gas di combustione diversi da quelli di cui alla voce 100909"
+    },
+    {
+        "id": 257,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "100912 ",
+        "descrizione": "altri particolati diversi da quelli di cui alla voce 100911",
+        "descrizione_estesa": "100912 -altri particolati diversi da quelli di cui alla voce 100911"
+    },
+    {
+        "id": 258,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "161102 ",
+        "descrizione": "rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101",
+        "descrizione_estesa": "161102 -rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101"
+    },
+    {
+        "id": 259,
+        "cod_smr_tipo_rifiuto": "7.25",
+        "cod_cer": "161104 ",
+        "descrizione": "altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103",
+        "descrizione_estesa": "161104 -altri rivestimenti e materiali refrattari provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161103"
+    },
+    {
+        "id": 260,
+        "cod_smr_tipo_rifiuto": "7.26",
+        "cod_cer": "070199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 261,
+        "cod_smr_tipo_rifiuto": "7.27",
+        "cod_cer": "100208",
+        "descrizione": " rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100207",
+        "descrizione_estesa": "100208- rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100207"
+    },
+    {
+        "id": 262,
+        "cod_smr_tipo_rifiuto": "7.27",
+        "cod_cer": "100299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 263,
+        "cod_smr_tipo_rifiuto": "7.28",
+        "cod_cer": "160801",
+        "descrizione": " catalizzatori esauriti contenenti oro, argento, rete, roditori, palladio, iridio o platino (tranne il 160807)",
+        "descrizione_estesa": "160801- catalizzatori esauriti contenenti oro, argento, rete, roditori, palladio, iridio o platino (tranne il 160807)"
+    },
+    {
+        "id": 264,
+        "cod_smr_tipo_rifiuto": "7.28",
+        "cod_cer": "160803 ",
+        "descrizione": "catalizzatori esauriti contenenti metalli di transizione o composti di metalli di transazioni di virgola non specificate altrimenti",
+        "descrizione_estesa": "160803 -catalizzatori esauriti contenenti metalli di transizione o composti di metalli di transazioni di virgola non specificate altrimenti"
+    },
+    {
+        "id": 265,
+        "cod_smr_tipo_rifiuto": "7.28",
+        "cod_cer": "160804",
+        "descrizione": " catalizzatori esauriti dal cracking catalitico fluido (tranne 160807)",
+        "descrizione_estesa": "160804- catalizzatori esauriti dal cracking catalitico fluido (tranne 160807)"
+    },
+    {
+        "id": 266,
+        "cod_smr_tipo_rifiuto": "7.29",
+        "cod_cer": "170604 ",
+        "descrizione": "materiali isolanti diversi da quelli di cui alla voce 170601 e 170603",
+        "descrizione_estesa": "170604 -materiali isolanti diversi da quelli di cui alla voce 170601 e 170603"
+    },
+    {
+        "id": 267,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_cer": "170506 ",
+        "descrizione": "fanghi di dragaggio, diversa da quella di cui alla voce 170505",
+        "descrizione_estesa": "170506 -fanghi di dragaggio, diversa da quella di cui alla voce 170505"
+    },
+    {
+        "id": 268,
+        "cod_smr_tipo_rifiuto": "7.3",
+        "cod_cer": "200303",
+        "descrizione": " residui della polizia stradale",
+        "descrizione_estesa": "200303- residui della polizia stradale"
+    },
+    {
+        "id": 269,
+        "cod_smr_tipo_rifiuto": "7.31",
+        "cod_cer": "020199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 270,
+        "cod_smr_tipo_rifiuto": "7.31",
+        "cod_cer": "020401",
+        "descrizione": " terriccio residuo delle operazioni di pulizia e lavaggio delle barbabietole",
+        "descrizione_estesa": "020401- terriccio residuo delle operazioni di pulizia e lavaggio delle barbabietole"
+    },
+    {
+        "id": 271,
+        "cod_smr_tipo_rifiuto": "7.31",
+        "cod_cer": "170504 ",
+        "descrizione": "terra e rocce diverse da quelle di cui alla voce 170503",
+        "descrizione_estesa": "170504 -terra e rocce diverse da quelle di cui alla voce 170503"
+    },
+    {
+        "id": 272,
+        "cod_smr_tipo_rifiuto": "7.31 bis",
+        "cod_cer": "170504",
+        "descrizione": " terre e rocce, diverse da quelle di cui alla voce 170503",
+        "descrizione_estesa": "170504- terre e rocce, diverse da quelle di cui alla voce 170503"
+    },
+    {
+        "id": 273,
+        "cod_smr_tipo_rifiuto": "8.1",
+        "cod_cer": "040199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "040199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 274,
+        "cod_smr_tipo_rifiuto": "8.2",
+        "cod_cer": "040221",
+        "descrizione": " rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221- rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 275,
+        "cod_smr_tipo_rifiuto": "8.2",
+        "cod_cer": "040222",
+        "descrizione": " rifiuti da fibre tessili lavorate",
+        "descrizione_estesa": "040222- rifiuti da fibre tessili lavorate"
+    },
+    {
+        "id": 276,
+        "cod_smr_tipo_rifiuto": "8.3",
+        "cod_cer": "040210",
+        "descrizione": " materiale organico proveniente da prodotti naturali (ad es. grasso e cera)",
+        "descrizione_estesa": "040210- materiale organico proveniente da prodotti naturali (ad es. grasso e cera)"
+    },
+    {
+        "id": 277,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "040209 ",
+        "descrizione": "rifiuti da materiali compositi (fibre impregnate, elastomeri, plastomeri)",
+        "descrizione_estesa": "040209 -rifiuti da materiali compositi (fibre impregnate, elastomeri, plastomeri)"
+    },
+    {
+        "id": 278,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "040221 ",
+        "descrizione": "rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221 -rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 279,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "040222",
+        "descrizione": " rifiuti da fibre tessili lavorate",
+        "descrizione_estesa": "040222- rifiuti da fibre tessili lavorate"
+    },
+    {
+        "id": 280,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "160122",
+        "descrizione": " componenti non specificati altrimenti",
+        "descrizione_estesa": "160122- componenti non specificati altrimenti"
+    },
+    {
+        "id": 281,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "200110",
+        "descrizione": " abbigliamento",
+        "descrizione_estesa": "200110- abbigliamento"
+    },
+    {
+        "id": 282,
+        "cod_smr_tipo_rifiuto": "8.4",
+        "cod_cer": "200111 ",
+        "descrizione": "prodotti tessili",
+        "descrizione_estesa": "200111 -prodotti tessili"
+    },
+    {
+        "id": 283,
+        "cod_smr_tipo_rifiuto": "8.5",
+        "cod_cer": "040109",
+        "descrizione": " rifiuti delle operazioni di confezionamento e finitura",
+        "descrizione_estesa": "040109- rifiuti delle operazioni di confezionamento e finitura"
+    },
+    {
+        "id": 284,
+        "cod_smr_tipo_rifiuto": "8.5",
+        "cod_cer": "040199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "040199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 285,
+        "cod_smr_tipo_rifiuto": "8.6",
+        "cod_cer": "040108",
+        "descrizione": " cuoio conciato (scarti, cascami, ritagli, polveri di lucidatura contenenti cromo)",
+        "descrizione_estesa": "040108- cuoio conciato (scarti, cascami, ritagli, polveri di lucidatura contenenti cromo)"
+    },
+    {
+        "id": 286,
+        "cod_smr_tipo_rifiuto": "8.6",
+        "cod_cer": "040109 ",
+        "descrizione": "rifiuti delle operazioni di confezionamento e finitura",
+        "descrizione_estesa": "040109 -rifiuti delle operazioni di confezionamento e finitura"
+    },
+    {
+        "id": 287,
+        "cod_smr_tipo_rifiuto": "8.7",
+        "cod_cer": "040108",
+        "descrizione": " cuoio conciato (scarti, cascami, r ritagli, polveri di lucidatura) contenti cromo",
+        "descrizione_estesa": "040108- cuoio conciato (scarti, cascami, r ritagli, polveri di lucidatura) contenti cromo"
+    },
+    {
+        "id": 288,
+        "cod_smr_tipo_rifiuto": "8.7",
+        "cod_cer": "040199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "040199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 289,
+        "cod_smr_tipo_rifiuto": "8.8",
+        "cod_cer": "040108",
+        "descrizione": " cuoio conciato (scarti, cascami, r ritagli, polveri di lucidatura) contenti cromo",
+        "descrizione_estesa": "040108- cuoio conciato (scarti, cascami, r ritagli, polveri di lucidatura) contenti cromo"
+    },
+    {
+        "id": 290,
+        "cod_smr_tipo_rifiuto": "8.8",
+        "cod_cer": "040199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "040199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 291,
+        "cod_smr_tipo_rifiuto": "8.9",
+        "cod_cer": "191208",
+        "descrizione": " prodotti tessili",
+        "descrizione_estesa": "191208- prodotti tessili"
+    },
+    {
+        "id": 292,
+        "cod_smr_tipo_rifiuto": "8.9",
+        "cod_cer": "200110 ",
+        "descrizione": "abbigliamento",
+        "descrizione_estesa": "200110 -abbigliamento"
+    },
+    {
+        "id": 293,
+        "cod_smr_tipo_rifiuto": "8.9",
+        "cod_cer": "200111 ",
+        "descrizione": "prodotti tessili",
+        "descrizione_estesa": "200111 -prodotti tessili"
+    },
+    {
+        "id": 294,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "030101 ",
+        "descrizione": "scarti di corteccia e sughero",
+        "descrizione_estesa": "030101 -scarti di corteccia e sughero"
+    },
+    {
+        "id": 295,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "030105 ",
+        "descrizione": "segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 030104",
+        "descrizione_estesa": "030105 -segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 030104"
+    },
+    {
+        "id": 296,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "030199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 297,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "150103 ",
+        "descrizione": "imballaggi in legno",
+        "descrizione_estesa": "150103 -imballaggi in legno"
+    },
+    {
+        "id": 298,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "170201 ",
+        "descrizione": "legno",
+        "descrizione_estesa": "170201 -legno"
+    },
+    {
+        "id": 299,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "191207 ",
+        "descrizione": "legno diverso da quello di cui alla voce 191206",
+        "descrizione_estesa": "191207 -legno diverso da quello di cui alla voce 191206"
+    },
+    {
+        "id": 300,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "200138 ",
+        "descrizione": "legno, diverso da quello di cui alla voce 200137",
+        "descrizione_estesa": "200138 -legno, diverso da quello di cui alla voce 200137"
+    },
+    {
+        "id": 301,
+        "cod_smr_tipo_rifiuto": "9.1",
+        "cod_cer": "200301 ",
+        "descrizione": "rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301 -rifiuti urbani non differenziati"
+    },
+    {
+        "id": 302,
+        "cod_smr_tipo_rifiuto": "9.2",
+        "cod_cer": "030101",
+        "descrizione": " scarti di corteccia e sughero",
+        "descrizione_estesa": "030101- scarti di corteccia e sughero"
+    },
+    {
+        "id": 303,
+        "cod_smr_tipo_rifiuto": "9.2",
+        "cod_cer": "030105 ",
+        "descrizione": "segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui ho la voce 030104",
+        "descrizione_estesa": "030105 -segatura, trucioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui ho la voce 030104"
+    },
+    {
+        "id": 304,
+        "cod_smr_tipo_rifiuto": "9.5",
+        "cod_cer": "030199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 305,
+        "cod_smr_tipo_rifiuto": "9.6",
+        "cod_cer": "030199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 306,
+        "cod_smr_tipo_rifiuto": "10.1",
+        "cod_cer": "070299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 307,
+        "cod_smr_tipo_rifiuto": "10.1",
+        "cod_cer": "160306 ",
+        "descrizione": "rifiuti organici diversi da quelli di cui alla voce 160305",
+        "descrizione_estesa": "160306 -rifiuti organici diversi da quelli di cui alla voce 160305"
+    },
+    {
+        "id": 308,
+        "cod_smr_tipo_rifiuto": "10.2",
+        "cod_cer": "160103",
+        "descrizione": " pneumatici fuori uso",
+        "descrizione_estesa": "160103- pneumatici fuori uso"
+    },
+    {
+        "id": 309,
+        "cod_smr_tipo_rifiuto": "11.1",
+        "cod_cer": "020303 ",
+        "descrizione": "rifiuti prodotti dall'estrazione tramite solvente",
+        "descrizione_estesa": "020303 -rifiuti prodotti dall'estrazione tramite solvente"
+    },
+    {
+        "id": 310,
+        "cod_smr_tipo_rifiuto": "11.1",
+        "cod_cer": "020399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 311,
+        "cod_smr_tipo_rifiuto": "11.2",
+        "cod_cer": "020399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 312,
+        "cod_smr_tipo_rifiuto": "11.3",
+        "cod_cer": "020399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 313,
+        "cod_smr_tipo_rifiuto": "11.4",
+        "cod_cer": "020399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 314,
+        "cod_smr_tipo_rifiuto": "11.5",
+        "cod_cer": "020304 ",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 -scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 315,
+        "cod_smr_tipo_rifiuto": "11.6",
+        "cod_cer": "020703",
+        "descrizione": " rifiuti prodotti dai trattamenti chimici",
+        "descrizione_estesa": "020703- rifiuti prodotti dai trattamenti chimici"
+    },
+    {
+        "id": 316,
+        "cod_smr_tipo_rifiuto": "11.7",
+        "cod_cer": "020702",
+        "descrizione": " rifiuti prodotti dalla distillazione di bevande alcoliche",
+        "descrizione_estesa": "020702- rifiuti prodotti dalla distillazione di bevande alcoliche"
+    },
+    {
+        "id": 317,
+        "cod_smr_tipo_rifiuto": "11.7",
+        "cod_cer": "020799 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020799 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 318,
+        "cod_smr_tipo_rifiuto": "11.8",
+        "cod_cer": "020304",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 319,
+        "cod_smr_tipo_rifiuto": "11.8",
+        "cod_cer": "040221",
+        "descrizione": " rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221- rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 320,
+        "cod_smr_tipo_rifiuto": "11.9",
+        "cod_cer": "020299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 321,
+        "cod_smr_tipo_rifiuto": "11.9",
+        "cod_cer": "040199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "040199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 322,
+        "cod_smr_tipo_rifiuto": "11.1",
+        "cod_cer": "020304 ",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 -scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 323,
+        "cod_smr_tipo_rifiuto": "11.1",
+        "cod_cer": "020399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 324,
+        "cod_smr_tipo_rifiuto": "11.11",
+        "cod_cer": "020304 ",
+        "descrizione": "scarti utilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 -scarti utilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 325,
+        "cod_smr_tipo_rifiuto": "11.11",
+        "cod_cer": "200125",
+        "descrizione": " oli e grassi commestibili",
+        "descrizione_estesa": "200125- oli e grassi commestibili"
+    },
+    {
+        "id": 326,
+        "cod_smr_tipo_rifiuto": "11.12",
+        "cod_cer": "020303 ",
+        "descrizione": "rifiuti prodotti dall'estrazione tramite solvente",
+        "descrizione_estesa": "020303 -rifiuti prodotti dall'estrazione tramite solvente"
+    },
+    {
+        "id": 327,
+        "cod_smr_tipo_rifiuto": "11.13",
+        "cod_cer": "020304 ",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 -scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 328,
+        "cod_smr_tipo_rifiuto": "11.14",
+        "cod_cer": "020299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 329,
+        "cod_smr_tipo_rifiuto": "11.14",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 330,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030302 ",
+        "descrizione": "fanghi di recupero dei bagni di macerazione (green liquor)",
+        "descrizione_estesa": "030302 -fanghi di recupero dei bagni di macerazione (green liquor)"
+    },
+    {
+        "id": 331,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030305",
+        "descrizione": " fanghi prodotti dai processi di disinchiostrazione nel riciclaggio della carta",
+        "descrizione_estesa": "030305- fanghi prodotti dai processi di disinchiostrazione nel riciclaggio della carta"
+    },
+    {
+        "id": 332,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030309",
+        "descrizione": " fanghi di scarto contenenti carbonato di calcio",
+        "descrizione_estesa": "030309- fanghi di scarto contenenti carbonato di calcio"
+    },
+    {
+        "id": 333,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030310 ",
+        "descrizione": "scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica",
+        "descrizione_estesa": "030310 -scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica"
+    },
+    {
+        "id": 334,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030311",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti diversi da quelli di cui alla voce 030310",
+        "descrizione_estesa": "030311- fanghi prodotti dal trattamento in loco degli effluenti diversi da quelli di cui alla voce 030310"
+    },
+    {
+        "id": 335,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "030399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 336,
+        "cod_smr_tipo_rifiuto": "12.2",
+        "cod_cer": "170506",
+        "descrizione": " fanghi di dragaggio, diversa da quella di cui alla voce 170505",
+        "descrizione_estesa": "170506- fanghi di dragaggio, diversa da quella di cui alla voce 170505"
+    },
+    {
+        "id": 337,
+        "cod_smr_tipo_rifiuto": "12.3",
+        "cod_cer": "010410 ",
+        "descrizione": "polvere residui affini diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010410 -polvere residui affini diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 338,
+        "cod_smr_tipo_rifiuto": "12.3",
+        "cod_cer": "010413",
+        "descrizione": " rifiuti prodotti dalla lavorazione della pietra diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010413- rifiuti prodotti dalla lavorazione della pietra diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 339,
+        "cod_smr_tipo_rifiuto": "12.4",
+        "cod_cer": "010410 ",
+        "descrizione": "polveri e residui affini, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010410 -polveri e residui affini, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 340,
+        "cod_smr_tipo_rifiuto": "12.4",
+        "cod_cer": "010413 ",
+        "descrizione": "rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010413 -rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 341,
+        "cod_smr_tipo_rifiuto": "12.5",
+        "cod_cer": "010413 ",
+        "descrizione": "rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010413 -rifiuti prodotti dalla lavorazione della pietra, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 342,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "080202",
+        "descrizione": " fanghi contenenti materiali ceramici",
+        "descrizione_estesa": "080202- fanghi contenenti materiali ceramici"
+    },
+    {
+        "id": 343,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "080203",
+        "descrizione": " sospensioni acquose contenenti materiali ceramici",
+        "descrizione_estesa": "080203- sospensioni acquose contenenti materiali ceramici"
+    },
+    {
+        "id": 344,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "101203 ",
+        "descrizione": "polveri e particolato",
+        "descrizione_estesa": "101203 -polveri e particolato"
+    },
+    {
+        "id": 345,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "101205 ",
+        "descrizione": "fanghi residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "101205 -fanghi residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 346,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "101210 ",
+        "descrizione": "rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209",
+        "descrizione_estesa": "101210 -rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209"
+    },
+    {
+        "id": 347,
+        "cod_smr_tipo_rifiuto": "12.6",
+        "cod_cer": "101299",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "101299- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 348,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "cod_cer": "010102 ",
+        "descrizione": "rifiuti da estrazione di minerali non metalliferi",
+        "descrizione_estesa": "010102 -rifiuti da estrazione di minerali non metalliferi"
+    },
+    {
+        "id": 349,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "cod_cer": "010409 ",
+        "descrizione": "scarti di sabbia e argilla",
+        "descrizione_estesa": "010409 -scarti di sabbia e argilla"
+    },
+    {
+        "id": 350,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "cod_cer": "010410",
+        "descrizione": " polveri e residui affini, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010410- polveri e residui affini, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 351,
+        "cod_smr_tipo_rifiuto": "12.7",
+        "cod_cer": "010412",
+        "descrizione": " sterili ed altri residui del lavaggio e della pulitura di bimestrali, diversi da quelli di cui alle voci 010407 e 010411",
+        "descrizione_estesa": "010412- sterili ed altri residui del lavaggio e della pulitura di bimestrali, diversi da quelli di cui alle voci 010407 e 010411"
+    },
+    {
+        "id": 352,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "060503",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 353,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "061399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 354,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070112",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070111",
+        "descrizione_estesa": "070112- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070111"
+    },
+    {
+        "id": 355,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070212",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti diversi da quelli di cui alla voce 070211",
+        "descrizione_estesa": "070212- fanghi prodotti dal trattamento in loco degli effluenti diversi da quelli di cui alla voce 070211"
+    },
+    {
+        "id": 356,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070312 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070311",
+        "descrizione_estesa": "070312 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070311"
+    },
+    {
+        "id": 357,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070412 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070411",
+        "descrizione_estesa": "070412 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070411"
+    },
+    {
+        "id": 358,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070512 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070511",
+        "descrizione_estesa": "070512 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070511"
+    },
+    {
+        "id": 359,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070612 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070611",
+        "descrizione_estesa": "070612 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070611"
+    },
+    {
+        "id": 360,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "070712",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070711",
+        "descrizione_estesa": "070712- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070711"
+    },
+    {
+        "id": 361,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "100121",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 100120",
+        "descrizione_estesa": "100121- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 100120"
+    },
+    {
+        "id": 362,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "190812",
+        "descrizione": " fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811",
+        "descrizione_estesa": "190812- fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811"
+    },
+    {
+        "id": 363,
+        "cod_smr_tipo_rifiuto": "12.8",
+        "cod_cer": "190814",
+        "descrizione": " fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813",
+        "descrizione_estesa": "190814- fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813"
+    },
+    {
+        "id": 364,
+        "cod_smr_tipo_rifiuto": "12.9",
+        "cod_cer": "101103",
+        "descrizione": " scarti di materiali in fibra a base di vetro",
+        "descrizione_estesa": "101103- scarti di materiali in fibra a base di vetro"
+    },
+    {
+        "id": 365,
+        "cod_smr_tipo_rifiuto": "12.1",
+        "cod_cer": "040220 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 040219",
+        "descrizione_estesa": "040220 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 040219"
+    },
+    {
+        "id": 366,
+        "cod_smr_tipo_rifiuto": "12.11",
+        "cod_cer": "100212",
+        "descrizione": " rifiuti prodotti dal trattamento delle acque di raffreddamento, diversi da quelli di cui alla voce 100211",
+        "descrizione_estesa": "100212- rifiuti prodotti dal trattamento delle acque di raffreddamento, diversi da quelli di cui alla voce 100211"
+    },
+    {
+        "id": 367,
+        "cod_smr_tipo_rifiuto": "12.11",
+        "cod_cer": " 120115",
+        "descrizione": " fanghi di lavorazione, diversi da quelli di cui alla voce 120114",
+        "descrizione_estesa": " 120115- fanghi di lavorazione, diversi da quelli di cui alla voce 120114"
+    },
+    {
+        "id": 368,
+        "cod_smr_tipo_rifiuto": "12.12",
+        "cod_cer": "100214",
+        "descrizione": " fanghi e residui di filtrazione prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100213",
+        "descrizione_estesa": "100214- fanghi e residui di filtrazione prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100213"
+    },
+    {
+        "id": 369,
+        "cod_smr_tipo_rifiuto": "12.12",
+        "cod_cer": "100215 ",
+        "descrizione": "altri fanghi e residui di filtrazione",
+        "descrizione_estesa": "100215 -altri fanghi e residui di filtrazione"
+    },
+    {
+        "id": 370,
+        "cod_smr_tipo_rifiuto": "12.13",
+        "cod_cer": "190802 ",
+        "descrizione": "rifiuti dell'eliminazione della sabbia 190902 fanghi prodotti dai processi di chiarificazione dell'acqua",
+        "descrizione_estesa": "190802 -rifiuti dell'eliminazione della sabbia 190902 fanghi prodotti dai processi di chiarificazione dell'acqua"
+    },
+    {
+        "id": 371,
+        "cod_smr_tipo_rifiuto": "12.13",
+        "cod_cer": "190903 ",
+        "descrizione": "fanghi prodotti dai processi di decarbonatazione",
+        "descrizione_estesa": "190903 -fanghi prodotti dai processi di decarbonatazione"
+    },
+    {
+        "id": 372,
+        "cod_smr_tipo_rifiuto": "12.14",
+        "cod_cer": "060503",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 373,
+        "cod_smr_tipo_rifiuto": "12.15",
+        "cod_cer": "030199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 374,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "050110",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui ho la voce 050109",
+        "descrizione_estesa": "050110- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui ho la voce 050109"
+    },
+    {
+        "id": 375,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070112",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070111",
+        "descrizione_estesa": "070112- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070111"
+    },
+    {
+        "id": 376,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070212",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070211",
+        "descrizione_estesa": "070212- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070211"
+    },
+    {
+        "id": 377,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070312",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070311",
+        "descrizione_estesa": "070312- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070311"
+    },
+    {
+        "id": 378,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070412",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070411",
+        "descrizione_estesa": "070412- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070411"
+    },
+    {
+        "id": 379,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070512",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070511",
+        "descrizione_estesa": "070512- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070511"
+    },
+    {
+        "id": 380,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070612",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070611",
+        "descrizione_estesa": "070612- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070611"
+    },
+    {
+        "id": 381,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "070712",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 0707 11",
+        "descrizione_estesa": "070712- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 0707 11"
+    },
+    {
+        "id": 382,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "100121",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 100120",
+        "descrizione_estesa": "100121- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 100120"
+    },
+    {
+        "id": 383,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "190812 ",
+        "descrizione": "fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811",
+        "descrizione_estesa": "190812 -fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811"
+    },
+    {
+        "id": 384,
+        "cod_smr_tipo_rifiuto": "12.16",
+        "cod_cer": "190814 ",
+        "descrizione": "fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813",
+        "descrizione_estesa": "190814 -fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813"
+    },
+    {
+        "id": 385,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100208",
+        "descrizione": " rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100207",
+        "descrizione_estesa": "100208- rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100207"
+    },
+    {
+        "id": 386,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100214 ",
+        "descrizione": "fanghi e residui di filtrazione prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100213",
+        "descrizione_estesa": "100214 -fanghi e residui di filtrazione prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100213"
+    },
+    {
+        "id": 387,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100215 ",
+        "descrizione": "altri fanghi e residui di filtrazione",
+        "descrizione_estesa": "100215 -altri fanghi e residui di filtrazione"
+    },
+    {
+        "id": 388,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100110",
+        "descrizione": " fanghi residui di filtrazione, diversi da quelli di cui alla voce 110109",
+        "descrizione_estesa": "100110- fanghi residui di filtrazione, diversi da quelli di cui alla voce 110109"
+    },
+    {
+        "id": 389,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100112 ",
+        "descrizione": "soluzioni acquose di lavaggio, diverse da quelle di cui è la voce 110111",
+        "descrizione_estesa": "100112 -soluzioni acquose di lavaggio, diverse da quelle di cui è la voce 110111"
+    },
+    {
+        "id": 390,
+        "cod_smr_tipo_rifiuto": "12.17",
+        "cod_cer": "100114 ",
+        "descrizione": "rifiuti di sgrassaggio diversi da quelli di cui è la voce 110113",
+        "descrizione_estesa": "100114 -rifiuti di sgrassaggio diversi da quelli di cui è la voce 110113"
+    },
+    {
+        "id": 391,
+        "cod_smr_tipo_rifiuto": "12.18",
+        "cod_cer": "040106",
+        "descrizione": " funghi, prodotti in particolare dal trattamento in loco degli effluenti, contenenti cromo",
+        "descrizione_estesa": "040106- funghi, prodotti in particolare dal trattamento in loco degli effluenti, contenenti cromo"
+    },
+    {
+        "id": 392,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "100101",
+        "descrizione": " ceneri pesanti scorie e polveri di caldaia (tranne polveri di caldaie di cui alla voce 100104)",
+        "descrizione_estesa": "100101- ceneri pesanti scorie e polveri di caldaia (tranne polveri di caldaie di cui alla voce 100104)"
+    },
+    {
+        "id": 393,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "100102 ",
+        "descrizione": "ceneri leggere di carbone",
+        "descrizione_estesa": "100102 -ceneri leggere di carbone"
+    },
+    {
+        "id": 394,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "100103",
+        "descrizione": " ceneri leggeri di torba e di legno non trattato",
+        "descrizione_estesa": "100103- ceneri leggeri di torba e di legno non trattato"
+    },
+    {
+        "id": 395,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "100115 ",
+        "descrizione": "ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diversi da quelli di cui alla voce 100114",
+        "descrizione_estesa": "100115 -ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diversi da quelli di cui alla voce 100114"
+    },
+    {
+        "id": 396,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "100117 ",
+        "descrizione": "ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116",
+        "descrizione_estesa": "100117 -ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116"
+    },
+    {
+        "id": 397,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "100101 ",
+        "descrizione": "ceneri pesanti scorie e polveri di caldaia (tranne polveri di caldaie di cui alla voce 100104)",
+        "descrizione_estesa": "100101 -ceneri pesanti scorie e polveri di caldaia (tranne polveri di caldaie di cui alla voce 100104)"
+    },
+    {
+        "id": 398,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "100103 ",
+        "descrizione": "ceneri leggeri di torba e di legno non trattato",
+        "descrizione_estesa": "100103 -ceneri leggeri di torba e di legno non trattato"
+    },
+    {
+        "id": 399,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "100115 ",
+        "descrizione": "ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diversi da quelli di cui alla voce 100114",
+        "descrizione_estesa": "100115 -ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diversi da quelli di cui alla voce 100114"
+    },
+    {
+        "id": 400,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "100117 ",
+        "descrizione": "ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116",
+        "descrizione_estesa": "100117 -ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116"
+    },
+    {
+        "id": 401,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "190112",
+        "descrizione": " ceneri pesanti e scorie, diverse da quelle di cui alla voce 190111",
+        "descrizione_estesa": "190112- ceneri pesanti e scorie, diverse da quelle di cui alla voce 190111"
+    },
+    {
+        "id": 402,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "190114 ",
+        "descrizione": "ceneri leggere, diverse da quelle di cui alla voce 190113",
+        "descrizione_estesa": "190114 -ceneri leggere, diverse da quelle di cui alla voce 190113"
+    },
+    {
+        "id": 403,
+        "cod_smr_tipo_rifiuto": "13.3",
+        "cod_cer": "190112",
+        "descrizione": " ceneri di pesanti e scorie, diverse da quelle di cui alla voce 190111",
+        "descrizione_estesa": "190112- ceneri di pesanti e scorie, diverse da quelle di cui alla voce 190111"
+    },
+    {
+        "id": 404,
+        "cod_smr_tipo_rifiuto": "13.4",
+        "cod_cer": "100602",
+        "descrizione": " impurità e schiumatura e della produzione primaria e secondaria",
+        "descrizione_estesa": "100602- impurità e schiumatura e della produzione primaria e secondaria"
+    },
+    {
+        "id": 405,
+        "cod_smr_tipo_rifiuto": "13.5",
+        "cod_cer": "061199",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061199- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 406,
+        "cod_smr_tipo_rifiuto": "13.5",
+        "cod_cer": "100299 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "100299 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 407,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "060699 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060699 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 408,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "061101 ",
+        "descrizione": "rifiuti prodotti da reazione a base di calcio nella produzione di diossido di titanio",
+        "descrizione_estesa": "061101 -rifiuti prodotti da reazione a base di calcio nella produzione di diossido di titanio"
+    },
+    {
+        "id": 409,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "061199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 410,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "100105 ",
+        "descrizione": "rifiuti solidi prodotti da reazioni a base di calcio nei processi di desolforazione dei fumi",
+        "descrizione_estesa": "100105 -rifiuti solidi prodotti da reazioni a base di calcio nei processi di desolforazione dei fumi"
+    },
+    {
+        "id": 411,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "100107 ",
+        "descrizione": "rifiuti fangosi prodotti da reazione a base di calcio nei processi di desolforazione dei fumi",
+        "descrizione_estesa": "100107 -rifiuti fangosi prodotti da reazione a base di calcio nei processi di desolforazione dei fumi"
+    },
+    {
+        "id": 412,
+        "cod_smr_tipo_rifiuto": "13.6",
+        "cod_cer": "101210 ",
+        "descrizione": "rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209",
+        "descrizione_estesa": "101210 -rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209"
+    },
+    {
+        "id": 413,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 414,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "cod_cer": "060503 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 415,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "cod_cer": "061399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 416,
+        "cod_smr_tipo_rifiuto": "13.7",
+        "cod_cer": "100324 ",
+        "descrizione": "rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100323",
+        "descrizione_estesa": "100324 -rifiuti prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 100323"
+    },
+    {
+        "id": 417,
+        "cod_smr_tipo_rifiuto": "13.8",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 418,
+        "cod_smr_tipo_rifiuto": "13.8",
+        "cod_cer": "060503 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 419,
+        "cod_smr_tipo_rifiuto": "13.9",
+        "cod_cer": "060503 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502",
+        "descrizione_estesa": "060503 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 060502"
+    },
+    {
+        "id": 420,
+        "cod_smr_tipo_rifiuto": "13.9",
+        "cod_cer": "061399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "061399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 421,
+        "cod_smr_tipo_rifiuto": "13.1",
+        "cod_cer": "060314 ",
+        "descrizione": "sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314 -sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 422,
+        "cod_smr_tipo_rifiuto": "13.11",
+        "cod_cer": "060899 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060899 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 423,
+        "cod_smr_tipo_rifiuto": "13.11",
+        "cod_cer": "100811",
+        "descrizione": " impurità e schiumatore diverse da quelle di cui alla voce 100810",
+        "descrizione_estesa": "100811- impurità e schiumatore diverse da quelle di cui alla voce 100810"
+    },
+    {
+        "id": 424,
+        "cod_smr_tipo_rifiuto": "13.12",
+        "cod_cer": "050116",
+        "descrizione": " rifiuti contenenti zolfo prodotti dalla desolforizzazione del petrolio",
+        "descrizione_estesa": "050116- rifiuti contenenti zolfo prodotti dalla desolforizzazione del petrolio"
+    },
+    {
+        "id": 425,
+        "cod_smr_tipo_rifiuto": "13.12",
+        "cod_cer": "060603 ",
+        "descrizione": "rifiuti contenenti floruri, diversi da quelli di cui alla voce 060602",
+        "descrizione_estesa": "060603 -rifiuti contenenti floruri, diversi da quelli di cui alla voce 060602"
+    },
+    {
+        "id": 426,
+        "cod_smr_tipo_rifiuto": "13.13",
+        "cod_cer": "050702",
+        "descrizione": " rifiuti contenenti zolfo",
+        "descrizione_estesa": "050702- rifiuti contenenti zolfo"
+    },
+    {
+        "id": 427,
+        "cod_smr_tipo_rifiuto": "13.13",
+        "cod_cer": "060603 ",
+        "descrizione": "rifiuti contenente solfuri, diversi da quelli di cui alla voce 060602",
+        "descrizione_estesa": "060603 -rifiuti contenente solfuri, diversi da quelli di cui alla voce 060602"
+    },
+    {
+        "id": 428,
+        "cod_smr_tipo_rifiuto": "13.13",
+        "cod_cer": "060699 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060699 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 429,
+        "cod_smr_tipo_rifiuto": "13.14",
+        "cod_cer": "060603",
+        "descrizione": " rifiuti contenenti solfuri, diversi da quelli di cui alla voce 060602",
+        "descrizione_estesa": "060603- rifiuti contenenti solfuri, diversi da quelli di cui alla voce 060602"
+    },
+    {
+        "id": 430,
+        "cod_smr_tipo_rifiuto": "13.14",
+        "cod_cer": "060699",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "060699- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 431,
+        "cod_smr_tipo_rifiuto": "13.15",
+        "cod_cer": "060314 ",
+        "descrizione": "sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314 -sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 432,
+        "cod_smr_tipo_rifiuto": "13.15",
+        "cod_cer": "070599",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "070599- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 433,
+        "cod_smr_tipo_rifiuto": "13.16",
+        "cod_cer": "010399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "010399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 434,
+        "cod_smr_tipo_rifiuto": "13.16",
+        "cod_cer": "060314 ",
+        "descrizione": "sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314 -sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 435,
+        "cod_smr_tipo_rifiuto": "13.17",
+        "cod_cer": "060316",
+        "descrizione": " ossidi metallici, diversi da quelli di cui alla voce 060315",
+        "descrizione_estesa": "060316- ossidi metallici, diversi da quelli di cui alla voce 060315"
+    },
+    {
+        "id": 436,
+        "cod_smr_tipo_rifiuto": "13.18",
+        "cod_cer": "060316 ",
+        "descrizione": "ossidi metallici, diversi da quelli di cui alla voce 060315",
+        "descrizione_estesa": "060316 -ossidi metallici, diversi da quelli di cui alla voce 060315"
+    },
+    {
+        "id": 437,
+        "cod_smr_tipo_rifiuto": "13.18 bis",
+        "cod_cer": "010308 ",
+        "descrizione": "polveri e residui affini diversi da quelli di cui alla voce 010307",
+        "descrizione_estesa": "010308 -polveri e residui affini diversi da quelli di cui alla voce 010307"
+    },
+    {
+        "id": 438,
+        "cod_smr_tipo_rifiuto": "13.19",
+        "cod_cer": "080201",
+        "descrizione": " polveri di scarto di rivestimenti",
+        "descrizione_estesa": "080201- polveri di scarto di rivestimenti"
+    },
+    {
+        "id": 439,
+        "cod_smr_tipo_rifiuto": "13.19",
+        "cod_cer": "080203",
+        "descrizione": " sospensioni acquose contenenti materiali ceramici",
+        "descrizione_estesa": "080203- sospensioni acquose contenenti materiali ceramici"
+    },
+    {
+        "id": 440,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "080318 ",
+        "descrizione": "toner per stampa esauriti, diversi da quelli di cui alla voce 080317",
+        "descrizione_estesa": "080318 -toner per stampa esauriti, diversi da quelli di cui alla voce 080317"
+    },
+    {
+        "id": 441,
+        "cod_smr_tipo_rifiuto": "13.2",
+        "cod_cer": "160216 ",
+        "descrizione": "componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215",
+        "descrizione_estesa": "160216 -componenti rimossi da apparecchiature fuori uso, diversi da quelli di cui alla voce 160215"
+    },
+    {
+        "id": 442,
+        "cod_smr_tipo_rifiuto": "13.21",
+        "cod_cer": "190906 ",
+        "descrizione": "soluzioni e funghi di rigenerazione delle resine a scambio ionico",
+        "descrizione_estesa": "190906 -soluzioni e funghi di rigenerazione delle resine a scambio ionico"
+    },
+    {
+        "id": 443,
+        "cod_smr_tipo_rifiuto": "13.22",
+        "cod_cer": "090110 ",
+        "descrizione": "macchine fotografiche monouso senza batterie",
+        "descrizione_estesa": "090110 -macchine fotografiche monouso senza batterie"
+    },
+    {
+        "id": 444,
+        "cod_smr_tipo_rifiuto": "13.22",
+        "cod_cer": "090112 ",
+        "descrizione": "macchine fotografiche monouso diverse da quelle di cui alla voce 090111",
+        "descrizione_estesa": "090112 -macchine fotografiche monouso diverse da quelle di cui alla voce 090111"
+    },
+    {
+        "id": 445,
+        "cod_smr_tipo_rifiuto": "13.23",
+        "cod_cer": "060314 ",
+        "descrizione": "sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314 -sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 446,
+        "cod_smr_tipo_rifiuto": "13.24",
+        "cod_cer": "030399 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030399 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 447,
+        "cod_smr_tipo_rifiuto": "13.25",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 448,
+        "cod_smr_tipo_rifiuto": "13.25",
+        "cod_cer": "070212 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070211",
+        "descrizione_estesa": "070212 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 070211"
+    },
+    {
+        "id": 449,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "cod_cer": "010410",
+        "descrizione": " polvere residue affini, diversi da quelli di cui alla voce 010407",
+        "descrizione_estesa": "010410- polvere residue affini, diversi da quelli di cui alla voce 010407"
+    },
+    {
+        "id": 450,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "cod_cer": "100318 ",
+        "descrizione": "rifiuti contenenti carbone della produzione degli anodi, diversi da quelli di cui alla voce 100317",
+        "descrizione_estesa": "100318 -rifiuti contenenti carbone della produzione degli anodi, diversi da quelli di cui alla voce 100317"
+    },
+    {
+        "id": 451,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "cod_cer": "110203",
+        "descrizione": " rifiuti della produzione di anodi per processi elettrolitici acquosi",
+        "descrizione_estesa": "110203- rifiuti della produzione di anodi per processi elettrolitici acquosi"
+    },
+    {
+        "id": 452,
+        "cod_smr_tipo_rifiuto": "13.26",
+        "cod_cer": "161102 ",
+        "descrizione": "rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101",
+        "descrizione_estesa": "161102 -rivestimenti e materiali refrattari a base di carbone provenienti dalle lavorazioni metallurgiche, diversi da quelli di cui alla voce 161101"
+    },
+    {
+        "id": 453,
+        "cod_smr_tipo_rifiuto": "13.27",
+        "cod_cer": "101203 ",
+        "descrizione": "polveri e particolato",
+        "descrizione_estesa": "101203 -polveri e particolato"
+    },
+    {
+        "id": 454,
+        "cod_smr_tipo_rifiuto": "13.27",
+        "cod_cer": "101205",
+        "descrizione": " fanghi e residui di filtrazione prodotti dal trattamento dei fumi",
+        "descrizione_estesa": "101205- fanghi e residui di filtrazione prodotti dal trattamento dei fumi"
+    },
+    {
+        "id": 455,
+        "cod_smr_tipo_rifiuto": "13.27",
+        "cod_cer": "101210",
+        "descrizione": " rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209",
+        "descrizione_estesa": "101210- rifiuti solidi prodotti dal trattamento dei fumi, diversi da quelli di cui alla voce 101209"
+    },
+    {
+        "id": 456,
+        "cod_smr_tipo_rifiuto": "13.28",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 457,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "070213",
+        "descrizione": " rifiuti plastici",
+        "descrizione_estesa": "070213- rifiuti plastici"
+    },
+    {
+        "id": 458,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "150101",
+        "descrizione": " imballaggi in carta e cartone",
+        "descrizione_estesa": "150101- imballaggi in carta e cartone"
+    },
+    {
+        "id": 459,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "150102",
+        "descrizione": " imballaggi in plastica",
+        "descrizione_estesa": "150102- imballaggi in plastica"
+    },
+    {
+        "id": 460,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "150103",
+        "descrizione": " imballaggi in legno",
+        "descrizione_estesa": "150103- imballaggi in legno"
+    },
+    {
+        "id": 461,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "150105 ",
+        "descrizione": "imballaggi in materiali compositi",
+        "descrizione_estesa": "150105 -imballaggi in materiali compositi"
+    },
+    {
+        "id": 462,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "150106",
+        "descrizione": " imballaggi in materiali misti",
+        "descrizione_estesa": "150106- imballaggi in materiali misti"
+    },
+    {
+        "id": 463,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "160103",
+        "descrizione": " pneumatici fuori uso",
+        "descrizione_estesa": "160103- pneumatici fuori uso"
+    },
+    {
+        "id": 464,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "160119",
+        "descrizione": " plastica",
+        "descrizione_estesa": "160119- plastica"
+    },
+    {
+        "id": 465,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "170201",
+        "descrizione": " legno",
+        "descrizione_estesa": "170201- legno"
+    },
+    {
+        "id": 466,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "170203 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "170203 -plastica"
+    },
+    {
+        "id": 467,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "190501 ",
+        "descrizione": "parte di rifiuti urbani e simili non compostata",
+        "descrizione_estesa": "190501 -parte di rifiuti urbani e simili non compostata"
+    },
+    {
+        "id": 468,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "191201",
+        "descrizione": " carta e cartone",
+        "descrizione_estesa": "191201- carta e cartone"
+    },
+    {
+        "id": 469,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "191204",
+        "descrizione": " plastica e gomma",
+        "descrizione_estesa": "191204- plastica e gomma"
+    },
+    {
+        "id": 470,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "191210",
+        "descrizione": " rifiuti combustibili (CDR: combustibile derivato da rifiuti)",
+        "descrizione_estesa": "191210- rifiuti combustibili (CDR: combustibile derivato da rifiuti)"
+    },
+    {
+        "id": 471,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "191212",
+        "descrizione": " altri rifiuti (compresi materiali misti) prodotti dal trattamento meccanico dei rifiuti, diversi da quelli di cui alla voce 191211",
+        "descrizione_estesa": "191212- altri rifiuti (compresi materiali misti) prodotti dal trattamento meccanico dei rifiuti, diversi da quelli di cui alla voce 191211"
+    },
+    {
+        "id": 472,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "200203 ",
+        "descrizione": "altri rifiuti non biodegradabili",
+        "descrizione_estesa": "200203 -altri rifiuti non biodegradabili"
+    },
+    {
+        "id": 473,
+        "cod_smr_tipo_rifiuto": "14.1",
+        "cod_cer": "200301 ",
+        "descrizione": "rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301 -rifiuti urbani non differenziati"
+    },
+    {
+        "id": 474,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020106 ",
+        "descrizione": "feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito",
+        "descrizione_estesa": "020106 -feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito"
+    },
+    {
+        "id": 475,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020204 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti ",
+        "descrizione_estesa": "020204 -fanghi prodotti dal trattamento in loco degli effluenti "
+    },
+    {
+        "id": 476,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020305 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020305 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 477,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020403",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020403- fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 478,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020502",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020502- fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 479,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020603 ",
+        "descrizione": "fanghi prodotti dal trattamento e loco degli effluenti",
+        "descrizione_estesa": "020603 -fanghi prodotti dal trattamento e loco degli effluenti"
+    },
+    {
+        "id": 480,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020702 ",
+        "descrizione": "rifiuti prodotti dalla distillazione di bevande alcoliche",
+        "descrizione_estesa": "020702 -rifiuti prodotti dalla distillazione di bevande alcoliche"
+    },
+    {
+        "id": 481,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "020705",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020705- fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 482,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "030309 ",
+        "descrizione": "fanghi di scarto contenenti carbonato di calcio",
+        "descrizione_estesa": "030309 -fanghi di scarto contenenti carbonato di calcio"
+    },
+    {
+        "id": 483,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "030310",
+        "descrizione": " scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica",
+        "descrizione_estesa": "030310- scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica"
+    },
+    {
+        "id": 484,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "030311",
+        "descrizione": " fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 030310",
+        "descrizione_estesa": "030311- fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 030310"
+    },
+    {
+        "id": 485,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "190805",
+        "descrizione": " fanghi prodotti dal trattamento delle acque reflue urbane",
+        "descrizione_estesa": "190805- fanghi prodotti dal trattamento delle acque reflue urbane"
+    },
+    {
+        "id": 486,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "200108",
+        "descrizione": " rifiuti biodegradabili di cucine e mense",
+        "descrizione_estesa": "200108- rifiuti biodegradabili di cucine e mense"
+    },
+    {
+        "id": 487,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "200201 ",
+        "descrizione": "rifiuti biodegradabili",
+        "descrizione_estesa": "200201 -rifiuti biodegradabili"
+    },
+    {
+        "id": 488,
+        "cod_smr_tipo_rifiuto": "15.1",
+        "cod_cer": "200302 ",
+        "descrizione": "rifiuti dei mercati",
+        "descrizione_estesa": "200302 -rifiuti dei mercati"
+    },
+    {
+        "id": 489,
+        "cod_smr_tipo_rifiuto": "16.1.a",
+        "cod_cer": "200108",
+        "descrizione": " rifiuti piegabili di cucine e mense",
+        "descrizione_estesa": "200108- rifiuti piegabili di cucine e mense"
+    },
+    {
+        "id": 490,
+        "cod_smr_tipo_rifiuto": "16.1.a",
+        "cod_cer": "200302",
+        "descrizione": " rifiuti dei mercati",
+        "descrizione_estesa": "200302- rifiuti dei mercati"
+    },
+    {
+        "id": 491,
+        "cod_smr_tipo_rifiuto": "16.1.b",
+        "cod_cer": "020103 ",
+        "descrizione": "scarti di tessuti vegetali",
+        "descrizione_estesa": "020103 -scarti di tessuti vegetali"
+    },
+    {
+        "id": 492,
+        "cod_smr_tipo_rifiuto": "16.1.c",
+        "cod_cer": "030101 ",
+        "descrizione": "scarti di corteccia e sughero",
+        "descrizione_estesa": "030101 -scarti di corteccia e sughero"
+    },
+    {
+        "id": 493,
+        "cod_smr_tipo_rifiuto": "16.1.c",
+        "cod_cer": "030105",
+        "descrizione": " segatura, truccioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 030104",
+        "descrizione_estesa": "030105- segatura, truccioli, residui di taglio, legno, pannelli di truciolare e piallacci diversi da quelli di cui alla voce 030104"
+    },
+    {
+        "id": 494,
+        "cod_smr_tipo_rifiuto": "16.1.c",
+        "cod_cer": "030301 ",
+        "descrizione": "scarti di corteccia e legno",
+        "descrizione_estesa": "030301 -scarti di corteccia e legno"
+    },
+    {
+        "id": 495,
+        "cod_smr_tipo_rifiuto": "16.1.d",
+        "cod_cer": "020304 ",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020304 -scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 496,
+        "cod_smr_tipo_rifiuto": "16.1.d",
+        "cod_cer": "020501",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020501- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 497,
+        "cod_smr_tipo_rifiuto": "16.1.d",
+        "cod_cer": "020701 ",
+        "descrizione": "rifiuti prodotti dalle operazioni di lavaggio, pulizia e macinazione della materia prima",
+        "descrizione_estesa": "020701 -rifiuti prodotti dalle operazioni di lavaggio, pulizia e macinazione della materia prima"
+    },
+    {
+        "id": 498,
+        "cod_smr_tipo_rifiuto": "16.1.d",
+        "cod_cer": "020702 ",
+        "descrizione": "rifiuti prodotti dalla distillazione di bevande alcoliche",
+        "descrizione_estesa": "020702 -rifiuti prodotti dalla distillazione di bevande alcoliche"
+    },
+    {
+        "id": 499,
+        "cod_smr_tipo_rifiuto": "16.1.d",
+        "cod_cer": "020704",
+        "descrizione": " scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": "020704- scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 500,
+        "cod_smr_tipo_rifiuto": "16.1.e",
+        "cod_cer": "040221",
+        "descrizione": " rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221- rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 501,
+        "cod_smr_tipo_rifiuto": "16.1.f",
+        "cod_cer": "040221 ",
+        "descrizione": "rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221 -rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 502,
+        "cod_smr_tipo_rifiuto": "16.1.g",
+        "cod_cer": "020106 ",
+        "descrizione": "feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito",
+        "descrizione_estesa": "020106 -feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito"
+    },
+    {
+        "id": 503,
+        "cod_smr_tipo_rifiuto": "16.1.h",
+        "cod_cer": "030101 ",
+        "descrizione": "scarti di corteccia e sughero",
+        "descrizione_estesa": "030101 -scarti di corteccia e sughero"
+    },
+    {
+        "id": 504,
+        "cod_smr_tipo_rifiuto": "16.1.h",
+        "cod_cer": "030199 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "030199 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 505,
+        "cod_smr_tipo_rifiuto": "16.1.h",
+        "cod_cer": "150103",
+        "descrizione": " imballaggi in legno",
+        "descrizione_estesa": "150103- imballaggi in legno"
+    },
+    {
+        "id": 506,
+        "cod_smr_tipo_rifiuto": "16.1.h",
+        "cod_cer": "200138 ",
+        "descrizione": "legno, diverso da quello di cui alla voce 200137",
+        "descrizione_estesa": "200138 -legno, diverso da quello di cui alla voce 200137"
+    },
+    {
+        "id": 507,
+        "cod_smr_tipo_rifiuto": "16.1.i",
+        "cod_cer": "150101 ",
+        "descrizione": "imballaggi in carta e cartone",
+        "descrizione_estesa": "150101 -imballaggi in carta e cartone"
+    },
+    {
+        "id": 508,
+        "cod_smr_tipo_rifiuto": "16.1.i",
+        "cod_cer": "200101 ",
+        "descrizione": "carta e cartone",
+        "descrizione_estesa": "200101 -carta e cartone"
+    },
+    {
+        "id": 509,
+        "cod_smr_tipo_rifiuto": "16.1.j",
+        "cod_cer": "030309 ",
+        "descrizione": "fanghi di scarto contenenti carbonato di calcio",
+        "descrizione_estesa": "030309 -fanghi di scarto contenenti carbonato di calcio"
+    },
+    {
+        "id": 510,
+        "cod_smr_tipo_rifiuto": "16.1.j",
+        "cod_cer": "030310",
+        "descrizione": " scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica",
+        "descrizione_estesa": "030310- scarti di fibre e fanghi contenenti fibre, riempitivi e prodotti di rivestimento generati dai processi di separazione meccanica"
+    },
+    {
+        "id": 511,
+        "cod_smr_tipo_rifiuto": "16.1.j",
+        "cod_cer": "030311 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 030310",
+        "descrizione_estesa": "030311 -fanghi prodotti dal trattamento in loco degli effluenti, diversi da quelli di cui alla voce 030310"
+    },
+    {
+        "id": 512,
+        "cod_smr_tipo_rifiuto": "16.1.k",
+        "cod_cer": "020102",
+        "descrizione": " scarti di tessuti animali",
+        "descrizione_estesa": "020102- scarti di tessuti animali"
+    },
+    {
+        "id": 513,
+        "cod_smr_tipo_rifiuto": "16.1.l",
+        "cod_cer": "200201",
+        "descrizione": " rifiuti biodegradabili",
+        "descrizione_estesa": "200201- rifiuti biodegradabili"
+    },
+    {
+        "id": 514,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020201 ",
+        "descrizione": "fanghi da operazioni di lavaggio e pulizia",
+        "descrizione_estesa": "020201 -fanghi da operazioni di lavaggio e pulizia"
+    },
+    {
+        "id": 515,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020204 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020204 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 516,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020301",
+        "descrizione": " fanghi prodotti da operazioni di lavaggio, pulizia, sbucciatura, centrifugazione e separazione di componenti",
+        "descrizione_estesa": "020301- fanghi prodotti da operazioni di lavaggio, pulizia, sbucciatura, centrifugazione e separazione di componenti"
+    },
+    {
+        "id": 517,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020305 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020305 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 518,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020403 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020403 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 519,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020502 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020502 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 520,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020603 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020603 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 521,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "020705 ",
+        "descrizione": "fanghi prodotti dal trattamento in loco degli effluenti",
+        "descrizione_estesa": "020705 -fanghi prodotti dal trattamento in loco degli effluenti"
+    },
+    {
+        "id": 522,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "030302 ",
+        "descrizione": "fanghi di recupero dei bagni di macerazione (green liquor)",
+        "descrizione_estesa": "030302 -fanghi di recupero dei bagni di macerazione (green liquor)"
+    },
+    {
+        "id": 523,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "040107",
+        "descrizione": " fanghi, prodotti in particolare dal trattamento in loco gli affluenti, non contenenti cromo",
+        "descrizione_estesa": "040107- fanghi, prodotti in particolare dal trattamento in loco gli affluenti, non contenenti cromo"
+    },
+    {
+        "id": 524,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "190605 ",
+        "descrizione": "liquidi prodotti dal trattamento anaerobico di rifiuti di origine animale o vegetale",
+        "descrizione_estesa": "190605 -liquidi prodotti dal trattamento anaerobico di rifiuti di origine animale o vegetale"
+    },
+    {
+        "id": 525,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "190606",
+        "descrizione": " digestato prodotto dal trattamento anaerobico di rifiuti di origine animale o vegetale",
+        "descrizione_estesa": "190606- digestato prodotto dal trattamento anaerobico di rifiuti di origine animale o vegetale"
+    },
+    {
+        "id": 526,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "190805 ",
+        "descrizione": "fanghi prodotti dal trattamento delle acque reflue urbane",
+        "descrizione_estesa": "190805 -fanghi prodotti dal trattamento delle acque reflue urbane"
+    },
+    {
+        "id": 527,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "190812 ",
+        "descrizione": "fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811",
+        "descrizione_estesa": "190812 -fanghi prodotti dal trattamento biologico delle acque reflue industriali, diversi da quelli di cui alla voce 190811"
+    },
+    {
+        "id": 528,
+        "cod_smr_tipo_rifiuto": "16.1.m",
+        "cod_cer": "190814 ",
+        "descrizione": "fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813",
+        "descrizione_estesa": "190814 -fanghi prodotti da altri trattamenti delle acque reflue industriali, diversi da quelli di cui alla voce 190813"
+    },
+    {
+        "id": 529,
+        "cod_smr_tipo_rifiuto": "16.1.n",
+        "cod_cer": "100101 ",
+        "descrizione": "ceneri pesanti scorie e polveri di caldaia (tranne le polveri di caldaie di cui alla voce 100104)",
+        "descrizione_estesa": "100101 -ceneri pesanti scorie e polveri di caldaia (tranne le polveri di caldaie di cui alla voce 100104)"
+    },
+    {
+        "id": 530,
+        "cod_smr_tipo_rifiuto": "16.1.n",
+        "cod_cer": "100102 ",
+        "descrizione": "ceneri leggere di carbone",
+        "descrizione_estesa": "100102 -ceneri leggere di carbone"
+    },
+    {
+        "id": 531,
+        "cod_smr_tipo_rifiuto": "16.1.n",
+        "cod_cer": "100103 ",
+        "descrizione": "ceneri leggere di torba e di legno non trattato",
+        "descrizione_estesa": "100103 -ceneri leggere di torba e di legno non trattato"
+    },
+    {
+        "id": 532,
+        "cod_smr_tipo_rifiuto": "16.1.n",
+        "cod_cer": "100115 ",
+        "descrizione": "ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diverse da quelli di cui alla voce 100114",
+        "descrizione_estesa": "100115 -ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diverse da quelli di cui alla voce 100114"
+    },
+    {
+        "id": 533,
+        "cod_smr_tipo_rifiuto": "16.1.n",
+        "cod_cer": "100117 ",
+        "descrizione": "ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116",
+        "descrizione_estesa": "100117 -ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116"
+    },
+    {
+        "id": 534,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "150101",
+        "descrizione": " imballaggi in carta e cartone",
+        "descrizione_estesa": "150101- imballaggi in carta e cartone"
+    },
+    {
+        "id": 535,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "150102 ",
+        "descrizione": "imballaggi in plastica",
+        "descrizione_estesa": "150102 -imballaggi in plastica"
+    },
+    {
+        "id": 536,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "150103 ",
+        "descrizione": "imballaggi in legno",
+        "descrizione_estesa": "150103 -imballaggi in legno"
+    },
+    {
+        "id": 537,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "150105 ",
+        "descrizione": "imballaggi in materiali compositi",
+        "descrizione_estesa": "150105 -imballaggi in materiali compositi"
+    },
+    {
+        "id": 538,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "150106",
+        "descrizione": " imballaggi in materiali misti",
+        "descrizione_estesa": "150106- imballaggi in materiali misti"
+    },
+    {
+        "id": 539,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "160103",
+        "descrizione": " pneumatici fuori uso",
+        "descrizione_estesa": "160103- pneumatici fuori uso"
+    },
+    {
+        "id": 540,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "160119 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "160119 -plastica"
+    },
+    {
+        "id": 541,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "170201 ",
+        "descrizione": "legno",
+        "descrizione_estesa": "170201 -legno"
+    },
+    {
+        "id": 542,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "170203 ",
+        "descrizione": "plastica",
+        "descrizione_estesa": "170203 -plastica"
+    },
+    {
+        "id": 543,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "191210 ",
+        "descrizione": "rifiuti combustibili (CDR: combustibile derivato da rifiuti)",
+        "descrizione_estesa": "191210 -rifiuti combustibili (CDR: combustibile derivato da rifiuti)"
+    },
+    {
+        "id": 544,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "200203 ",
+        "descrizione": "altri rifiuti non biodegradabili",
+        "descrizione_estesa": "200203 -altri rifiuti non biodegradabili"
+    },
+    {
+        "id": 545,
+        "cod_smr_tipo_rifiuto": "17.1",
+        "cod_cer": "200301 ",
+        "descrizione": "rifiuti urbani non differenziati",
+        "descrizione_estesa": "200301 -rifiuti urbani non differenziati"
+    },
+    {
+        "id": 546,
+        "cod_smr_tipo_rifiuto": "18.1",
+        "cod_cer": "020202 ",
+        "descrizione": "scarti di tessuti animali",
+        "descrizione_estesa": "020202 -scarti di tessuti animali"
+    },
+    {
+        "id": 547,
+        "cod_smr_tipo_rifiuto": "18.1",
+        "cod_cer": " 020203 ",
+        "descrizione": "scarti inutilizzabili per il consumo o la trasformazione",
+        "descrizione_estesa": " 020203 -scarti inutilizzabili per il consumo o la trasformazione"
+    },
+    {
+        "id": 548,
+        "cod_smr_tipo_rifiuto": "18.2",
+        "cod_cer": "040101 ",
+        "descrizione": "carniccio e fermenti di calce",
+        "descrizione_estesa": "040101 -carniccio e fermenti di calce"
+    },
+    {
+        "id": 549,
+        "cod_smr_tipo_rifiuto": "18.2",
+        "cod_cer": "040221 ",
+        "descrizione": "rifiuti da fibre tessili grezze",
+        "descrizione_estesa": "040221 -rifiuti da fibre tessili grezze"
+    },
+    {
+        "id": 550,
+        "cod_smr_tipo_rifiuto": "18.2",
+        "cod_cer": "040222 ",
+        "descrizione": "rifiuti da fibre tessili lavorate",
+        "descrizione_estesa": "040222 -rifiuti da fibre tessili lavorate"
+    },
+    {
+        "id": 551,
+        "cod_smr_tipo_rifiuto": "18.3",
+        "cod_cer": "040101 ",
+        "descrizione": "carniccio e fermenti di calce",
+        "descrizione_estesa": "040101 -carniccio e fermenti di calce"
+    },
+    {
+        "id": 552,
+        "cod_smr_tipo_rifiuto": "18.4",
+        "cod_cer": "020499 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020499 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 553,
+        "cod_smr_tipo_rifiuto": "18.4",
+        "cod_cer": "020702 ",
+        "descrizione": "rifiuti prodotti dalla distillazione di bevande alcoliche",
+        "descrizione_estesa": "020702 -rifiuti prodotti dalla distillazione di bevande alcoliche"
+    },
+    {
+        "id": 554,
+        "cod_smr_tipo_rifiuto": "18.4",
+        "cod_cer": "020799 ",
+        "descrizione": "rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020799 -rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 555,
+        "cod_smr_tipo_rifiuto": "18.5",
+        "cod_cer": "020399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 556,
+        "cod_smr_tipo_rifiuto": "18.6",
+        "cod_cer": "020399",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020399- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 557,
+        "cod_smr_tipo_rifiuto": "18.7",
+        "cod_cer": "020402",
+        "descrizione": " carbonato di calcio fuori specifica",
+        "descrizione_estesa": "020402- carbonato di calcio fuori specifica"
+    },
+    {
+        "id": 558,
+        "cod_smr_tipo_rifiuto": "18.8",
+        "cod_cer": "100202",
+        "descrizione": " scorie non trattate",
+        "descrizione_estesa": "100202- scorie non trattate"
+    },
+    {
+        "id": 559,
+        "cod_smr_tipo_rifiuto": "18.8",
+        "cod_cer": "100903",
+        "descrizione": " scorie di fusione",
+        "descrizione_estesa": "100903- scorie di fusione"
+    },
+    {
+        "id": 560,
+        "cod_smr_tipo_rifiuto": "18.9",
+        "cod_cer": "020499",
+        "descrizione": " rifiuti non specificati altrimenti",
+        "descrizione_estesa": "020499- rifiuti non specificati altrimenti"
+    },
+    {
+        "id": 561,
+        "cod_smr_tipo_rifiuto": "18.9",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 562,
+        "cod_smr_tipo_rifiuto": "18.1",
+        "cod_cer": "060314",
+        "descrizione": " sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313",
+        "descrizione_estesa": "060314- sali e loro soluzioni, diversi da quelli di cui alle voci 060311 e 060313"
+    },
+    {
+        "id": 563,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_cer": "100101 ",
+        "descrizione": "ceneri pesanti, scorie e polveri di caldaia (tranne le polveri di caldaie di cui alla voce 100104)",
+        "descrizione_estesa": "100101 -ceneri pesanti, scorie e polveri di caldaia (tranne le polveri di caldaie di cui alla voce 100104)"
+    },
+    {
+        "id": 564,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_cer": "100102",
+        "descrizione": " ceneri leggere di carbone",
+        "descrizione_estesa": "100102- ceneri leggere di carbone"
+    },
+    {
+        "id": 565,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_cer": "100103 ",
+        "descrizione": "ceneri leggere di torba e di legno non trattato",
+        "descrizione_estesa": "100103 -ceneri leggere di torba e di legno non trattato"
+    },
+    {
+        "id": 566,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_cer": "100115",
+        "descrizione": " ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diverse da quelli di cui alla voce 100114",
+        "descrizione_estesa": "100115- ceneri pesanti, scorie e polveri di caldaia prodotte dal coincenerimento, diverse da quelli di cui alla voce 100114"
+    },
+    {
+        "id": 567,
+        "cod_smr_tipo_rifiuto": "18.11",
+        "cod_cer": "100117",
+        "descrizione": " ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116",
+        "descrizione_estesa": "100117- ceneri leggere prodotte dal coincenerimento, diverse da quelle di cui alla voce 100116"
+    },
+    {
+        "id": 568,
+        "cod_smr_tipo_rifiuto": "18.12",
+        "cod_cer": "020106",
+        "descrizione": " feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito",
+        "descrizione_estesa": "020106- feci animali, urine e letame (comprese le lettiere usate), effluenti, raccolti separatamente e trattati fuori sito"
+    }
+]
