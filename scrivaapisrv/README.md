@@ -11,7 +11,6 @@ Non si connette direttamente al DB, ma utilizza i servizi esposti dalla componen
 Questa componente si basa su:
 - Java 11 --> AdoptOpenJDK 11
 - Application server WILDFLY 17
-- Librerie per la realizzazione della persistenza su DB
 
 # Configurazioni iniziali
 Fondamentale avere a disposzione un ambiente (Virtual Machine o "container") in cui è installato un JDK ver.11, preferibilmente Adopt OpenJDK.

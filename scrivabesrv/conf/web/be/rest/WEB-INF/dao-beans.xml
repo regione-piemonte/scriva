@@ -1,0 +1,778 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2025                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+    <!--PROTECTED REGION ID(R1699570612) ENABLED START -->
+    <!-- Insert here your Spring Beans -->
+    <!--PROTECTED REGION END -->
+
+    <bean id="pingDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.PingDAOImpl">
+        <property name="template" ref="template"/>
+    </bean>
+
+    <bean id="ambitoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AmbitoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_ambito"/>
+    </bean>
+
+    <bean id="tipoAdempimentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAdempimentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_adempimento"/>
+    </bean>
+
+    <bean id="adempimentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_adempimento"/>
+    </bean>
+
+    <bean id="tipoSoggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoSoggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_soggetto"/>
+    </bean>
+
+    <bean id="soggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.SoggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_soggetto"/>
+        <property name="storicoTableName" value="scriva_s_soggetto"/>
+    </bean>
+
+    <bean id="ruoloSoggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.RuoloSoggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_ruolo_soggetto"/>
+    </bean>
+
+    <bean id="compilanteDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CompilanteDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_compilante"/>
+    </bean>
+
+    <bean id="ruoloCompilanteDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.RuoloCompilanteDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_ruolo_compilante"/>
+    </bean>
+
+    <bean id="soggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.SoggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_soggetto_istanza"/>
+        <property name="storicoTableName" value="scriva_s_soggetto_istanza"/>
+    </bean>
+
+    <bean id="istanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_istanza"/>
+    </bean>
+
+    <bean id="tipoNaturaGiuridicaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoNaturaGiuridicaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_d_tipo_natura_giuridica"/>
+    </bean>
+
+    <bean id="tipoAdempimentoMasterDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAdempimentoMasterDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_r_tipo_adempi_master"/>
+    </bean>
+
+    <bean id="adempimentoRuoloCompilanteDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoRuoloCompilanteDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_r_adempi_ruolo_compila"/>
+    </bean>
+
+    <bean id="configuraRuoloSoggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfiguraRuoloSoggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_r_configura_ruolo_sogg"/>
+    </bean>
+
+    <bean id="messaggioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.MessaggioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_messaggio"/>
+    </bean>
+
+    <bean id="tipoMessaggioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoMessaggioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_messaggio"/>
+    </bean>
+
+    <bean id="compilantePreferenzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CompilantePreferenzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_r_compilante_preferenza"/>
+    </bean>
+
+    <bean id="referenteIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ReferenteIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_referente_istanza"/>
+    </bean>
+
+    <bean id="configGeecoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfigGeecoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_config_geeco"/>
+    </bean>
+
+    <bean id="geoOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GeoOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_geo_punto_ogg_istanza"/>
+    </bean>
+
+    <bean id="geoPuntoOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GeoPuntoOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_geo_punto_ogg_istanza"/>
+    </bean>
+
+    <bean id="geoLineaOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GeoLineaOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName"
+                  value="scriva_geo_linea_ogg_istanza"/>
+    </bean>
+
+    <bean id="geoAreaOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GeoAreaOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_geo_area_ogg_istanza"/>
+    </bean>
+
+    <bean id="oggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_oggetto"/>
+        <property name="storicoTableName" value="scriva_s_oggetto"/>
+    </bean>
+
+    <bean id="ubicazioneOggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.UbicazioneOggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ubica_oggetto"/>
+        <property name="storicoTableName" value="scriva_s_ubica_oggetto"/>
+    </bean>
+
+    <bean id="oggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_oggetto_istanza"/>
+        <property name="storicoTableName" value="scriva_s_oggetto_istanza"/>
+    </bean>
+
+    <bean id="ubicazioneOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.UbicazioneOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ubica_oggetto_istanza"/>
+        <property name="storicoTableName" value="scriva_s_ubica_oggetto_istanza"/>
+    </bean>
+
+    <bean id="adempimentoConfigDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoConfigDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_adempi_config"/>
+    </bean>
+
+    <bean id="accreditamentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AccreditamentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_richiesta_accredito"/>
+    </bean>
+
+    <bean id="templateComunicazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TemplateComunicazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_template_comunica"/>
+    </bean>
+
+    <bean id="configurazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfigurazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_configurazione"/>
+    </bean>
+
+    <bean id="searchDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.SearchDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_istanza"/>
+    </bean>
+
+    <bean id="masterdataDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.MasterdataDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_masterdata"/>
+    </bean>
+
+    <bean id="statoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_stato_istanza"/>
+    </bean>
+
+    <bean id="templateDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TemplateDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_template"/>
+    </bean>
+
+    <bean id="quadroDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.QuadroDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_quadro"/>
+    </bean>
+
+    <bean id="templateQuadroDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TemplateQuadroDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_template_quadro"/>
+    </bean>
+
+    <bean id="istanzaTemplateQuadroDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaTemplateQuadroDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_template_quad"/>
+    </bean>
+
+    <bean id="istanzaStatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaStatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_stato"/>
+    </bean>
+
+    <bean id="adempimentoTipoAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoTipoAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_adempi_tipo_allegato"/>
+    </bean>
+
+    <bean id="categoriaAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CategoriaAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_categoria_allegato"/>
+    </bean>
+
+    <bean id="allegatoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AllegatoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_allegato_istanza"/>
+    </bean>
+
+    <bean id="adempimentoEstensioneAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoEstensioneAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_adempi_est_allegato"/>
+    </bean>
+
+    <bean id="dynamicSqlDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.DynamicSqlDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="-"/>
+    </bean>
+
+    <bean id="helpDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.HelpDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_help"/>
+    </bean>
+
+    <bean id="istanzaAttoreDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaAttoreDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_attore"/>
+    </bean>
+
+    <bean id="tipoAbilitazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAbilitazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_abilitazione"/>
+    </bean>
+
+    <bean id="profiloAppDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ProfiloAppDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_profilo_app"/>
+    </bean>
+
+    <bean id="tipoOggettoAppDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoOggettoAppDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_oggetto_app"/>
+    </bean>
+
+    <bean id="oggettoAppDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoAppDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_oggetto_app"/>
+    </bean>
+
+    <bean id="tipoAdempimentoOggettoApp"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAdempimentoOggettoAppDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_tipo_adempi_ogg_app"/>
+    </bean>
+
+    <bean id="tipoAdempimentoProfilo"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAdempimentoProfiloDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_tipo_adempi_profilo"/>
+    </bean>
+
+    <bean id="statoIstanzaAdempimentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoIstanzaAdempimentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_stato_istanza_adempi"/>
+    </bean>
+
+    <bean id="tipoCompetenzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoCompetenzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_competenza"/>
+    </bean>
+
+    <bean id="enteCreditoreDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.EnteCreditoreDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_ente_creditore"/>
+    </bean>
+
+    <bean id="competenzaTerritorioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CompetenzaTerritorioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_competenza_territorio"/>
+    </bean>
+
+    <bean id="categoriaOggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CategoriaOggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_categoria_oggetto"/>
+    </bean>
+
+    <bean id="oggettoIstanzaCategoriaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaCategoriaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ogg_istanza_categoria"/>
+        <property name="storicoTableName" value="scriva_s_ogg_istanza_categoria"/>
+    </bean>
+
+    <bean id="istanzaCompetenzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaCompetenzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_competenza"/>
+        <property name="storicoTableName" value="scriva_s_istanza_competenza"/>
+
+    </bean>
+
+    <bean id="riscossioneEnteDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.RiscossioneEnteDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_riscossione_ente"/>
+    </bean>
+
+    <bean id="adempimentoTipoPagamentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoTipoPagamentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_adempi_tipo_pagamento"/>
+    </bean>
+
+    <bean id="pagamentoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.PagamentoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_pagamento_istanza"/>
+    </bean>
+
+    <bean id="tentativoDettaglioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TentativoDettaglioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_tentativo_dettaglio"/>
+    </bean>
+
+    <bean id="tentativoPagamentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TentativoPagamentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_tentativo_pagamento"/>
+    </bean>
+
+    <bean id="vincoloAutorizzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.VincoloAutorizzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_vincolo_autorizza"/>
+    </bean>
+
+    <bean id="istanzaVincoloAutDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaVincoloAutDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_vincolo_aut"/>
+    </bean>
+
+    <bean id="funzionarioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.FunzionarioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_funzionario"/>
+    </bean>
+
+    <bean id="funzionarioProfiloDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.FunzionarioProfiloDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_funzionario_profilo"/>
+    </bean>
+
+    <bean id="funzionarioCompetenzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.FunzionarioCompetenzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_funzionario_compete"/>
+    </bean>
+
+    <bean id="nazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.NazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_nazione"/>
+    </bean>
+
+    <bean id="regioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.RegioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_regione"/>
+    </bean>
+
+    <bean id="provinciaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ProvinciaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_provincia"/>
+    </bean>
+
+    <bean id="comuneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ComuneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_comune"/>
+    </bean>
+
+    <bean id="recapitoAlternativoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.RecapitoAlternativoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_recapito_alternativo"/>
+        <property name="storicoTableName" value="scriva_s_recapito_alternativo"/>
+    </bean>
+
+    <bean id="gruppoSoggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GruppoSoggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_gruppo_soggetto"/>
+        <property name="storicoTableName" value="scriva_s_gruppo_soggetto"/>
+    </bean>
+
+    <bean id="soggettoGruppoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.SoggettoGruppoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_soggetto_gruppo"/>
+        <property name="storicoTableName" value="scriva_s_soggetto_gruppo"/>
+    </bean>
+
+    <bean id="mappaFonteEsternaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.MappaFonteEsternaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_mappa_fonte_esterna"/>
+    </bean>
+
+    <bean id="tipoEventoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoEventoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_evento"/>
+    </bean>
+
+    <bean id="istanzaEventoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaEventoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_evento"/>
+    </bean>
+
+    <bean id="classeAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ClasseAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_classe_allegato"/>
+    </bean>
+
+    <bean id="pubSearchIstanzeDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.PubSearchIstanzeDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_istanza"/>
+    </bean>
+
+    <bean id="oggettoIstanzaNatura2000DAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaNatura2000DAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ogg_natura_2000"/>
+        <property name="storicoTableName" value="scriva_s_ogg_natura_2000"/>
+    </bean>
+
+    <bean id="oggettoIstanzaAreaProtettaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaAreaProtettaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ogg_area_protetta"/>
+        <property name="storicoTableName" value="scriva_s_ogg_area_protetta"/>
+    </bean>
+
+    <bean id="oggettoIstanzaVincoloAutorizzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaVincoloAutorizzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_ogg_vincolo_autorizza"/>
+        <property name="storicoTableName" value="scriva_s_ogg_vincolo_autorizza"/>
+    </bean>
+
+    <bean id="osservazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OsservazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_osservazione"/>
+    </bean>
+
+    <bean id="statoOsservazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoOsservazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_stato_osservazione"/>
+    </bean>
+
+    <bean id="catastoUbicazioneOggettoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CatastoUbicazioneOggettoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_catasto_ubi_ogg_ist"/>
+        <property name="storicoTableName" value="scriva_s_catasto_ubi_ogg_ist"/>
+    </bean>
+
+    <bean id="notaIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.NotaIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_nota_istanza"/>
+    </bean>
+
+    <bean id="statoOsservazioneContatoreDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoOsservazioneContatoreDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_stato_osservazione"/>
+    </bean>
+
+    <bean id="tipologiaOggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipologiaOggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipologia_oggetto"/>
+    </bean>
+
+    <bean id="geoPointConverterDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GeoPointConverterDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipologia_oggetto"/>
+    </bean>
+
+    <bean id="esitoProcedimentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.EsitoProcedimentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_esito_procedimento"/>
+    </bean>
+
+    <bean id="componenteAppDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ComponenteAppDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_componente_app"/>
+    </bean>
+
+    <bean id="tipoIntegraAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoIntegraAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_integrazione"/>
+    </bean>
+
+    <bean id="gestioneAttoreDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.GestioneAttoreDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_gestione_attore"/>
+    </bean>
+
+    <bean id="configJsonDataDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfigJsonDataDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_config_json_data"/>
+    </bean>
+
+    <bean id="adempimentoTipoOggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoTipoOggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_adempi_tipo_oggetto"/>
+    </bean>
+
+    <bean id="oggettoIstanzaFiglioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.OggettoIstanzaFiglioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_oggetto_ist_figlio"/>
+        <property name="storicoTableName" value="scriva_s_oggetto_ist_figlio"/>
+    </bean>
+
+    <bean id="statoProcedimentoStataleDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoProcedimentoStataleDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_stato_proced_statale"/>
+    </bean>
+
+    <bean id="adempiEsitoProcedimentoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempiEsitoProcedimentoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_adempi_esito_proced"/>
+    </bean>
+
+    <bean id="statoNotificaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.StatoNotificaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_stato_notifica"/>
+    </bean>
+
+    <bean id="tipoDestinatarioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoDestinatarioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_destinatario"/>
+    </bean>
+
+    <bean id="tipoNotificaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoNotificaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_notifica"/>
+    </bean>
+
+    <bean id="dizionarioPlaceholderDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.DizionarioPlaceholderDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_dizionario_placeholder"/>
+    </bean>
+
+    <bean id="canaleNotificaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CanaleNotificaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_canale_notifica"/>
+    </bean>
+
+    <bean id="destinatarioDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.DestinatarioDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_destinatario"/>
+    </bean>
+
+    <bean id="notificaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.NotificaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_notifica"/>
+    </bean>
+
+    <bean id="notificaApplicativaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.NotificaApplicativaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_notifica_applicativa"/>
+    </bean>
+
+    <bean id="compilantePreferenzaCanaleDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.CompilantePreferenzaCanaleDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_compilante_preferenza_cn"/>
+    </bean>
+
+    <bean id="configurazioneNotificaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfigurazioneNotificaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_notifica_configurazione"/>
+    </bean>
+
+    <bean id="tipoNotificaEventoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoNotificaEventoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_evento"/>
+    </bean>
+
+    <bean id="TemplateNotificationDao"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TemplateNotificationDaoImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_notifica"/>
+    </bean>
+
+    <bean id="istanzaCompetenzaOggettoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaCompetenzaOggettoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_competenza_oggetto"/>
+    </bean>
+
+    <bean id="tipoAreaProtettaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoAreaProtettaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_area_protetta"/>
+    </bean>
+
+    <bean id="tipoNatura2000DAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoNatura2000DAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_natura_2000"/>
+    </bean>
+
+    <bean id="istanzaResponsabiliDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IstanzaResponsabiliDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_istanza_responsabile"/>
+    </bean>
+
+    <bean id="tipoResponsabileDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.TipoResponsabileDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_d_tipo_responsabile"/>
+    </bean>
+
+    <bean id="integrazioneIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.IntegrazioneIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_t_integrazione_istanza"/>
+    </bean>
+
+    <bean id="allegatoIntegrazioneDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AllegatoIntegrazioneDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_integra_istanza_allegato"/>
+    </bean>
+
+    <bean id="adempimentoStatoIstanzaDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.AdempimentoStatoIstanzaDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_stato_istanza_adempi"/>
+    </bean>
+
+    <bean id="configurazioneNotificaAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.ConfigurazioneNotificaAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_notifica_config_allegato"/>
+    </bean>
+
+    <bean id="notificaAllegatoDAO"
+          class="it.csi.scriva.scrivabesrv.business.be.impl.dao.impl.NotificaAllegatoDAOImpl">
+        <property name="template" ref="template"/>
+        <property name="tableName" value="scriva_r_notifica_allegato"/>
+    </bean>
+
+</beans>

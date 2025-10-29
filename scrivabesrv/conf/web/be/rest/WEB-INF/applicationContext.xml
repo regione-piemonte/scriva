@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2025                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+<!--    <aop:aspectj-autoproxy/>-->
+
+    <import resource="dao-beans.xml"/>
+
+    <bean class="it.csi.scriva.scrivabesrv.business.SpringApplicationContextHelper"/>
+
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate" />
+
+    <bean id="dataSource"
+          class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="@scriva.datasource@"/>
+        <property name="proxyInterface" value="javax.sql.DataSource"/>
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <constructor-arg name="dataSource" ref="dataSource"></constructor-arg>
+        <!--property name="dataSource" ref="dataSource" /-->
+    </bean>
+
+    <bean id="transactionTemplate"
+          class="org.springframework.transaction.support.TransactionTemplate">
+        <property name="transactionManager" ref="transactionManager"/>
+    </bean>
+
+    <bean id="template"
+          class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+        <constructor-arg ref="dataSource"/>
+    </bean>
+
+    <bean id="geecoServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.geeco.GeecoServiceHelper">
+        <constructor-arg index="0" value="@apimanager.endpoint@"/>
+        <constructor-arg index="1" value="@geeco.serviceUrl@"/>
+    </bean>
+
+    <bean id="aaepServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.aaep.AAEPServiceHelper">
+        <constructor-arg index="0" value="@aaep.endpoint@"/>
+    </bean>
+
+    <bean id="anagambServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.anagamb.AnagambServiceHelper">
+        <constructor-arg index="0" value="@anagamb.endpoint@"/>
+    </bean>
+
+    <bean id="indexServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.index.IndexServiceHelper">
+        <constructor-arg index="0" value="@index.endpoint@"/>
+        <constructor-arg index="1" value="@index.serviceUrl@"/>
+    </bean>
+
+    <bean id="piemontePayServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.piemontepay.PiemontePayServiceHelper">
+        <constructor-arg index="0" value="@ppay.endpoint@"/>
+        <constructor-arg index="1" value="@ppay.serviceUrl@"/>
+    </bean>
+
+    <bean id="cosmoServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.cosmo.CosmoServiceHelper">
+        <constructor-arg index="0" value="@cosmo.endpoint@"/>
+        <constructor-arg index="1" value="@cosmo.serviceUrl@"/>
+    </bean>
+
+    <bean id="parkApiServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.parkapi.ParkApiServiceHelper">
+        <constructor-arg index="0" value="@parkapi.areeprotette.endpoint@"/>
+		<constructor-arg index="1" value="@parkapi.rn2000.endpoint@"/>
+		<constructor-arg index="2" value="@parkapi.sic.endpoint@"/>
+        <constructor-arg index="3" value="@parkapi.zps.endpoint@"/>
+    </bean>
+
+    <bean id="catastoServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.catasto.CatastoServiceHelper">
+        <constructor-arg index="0" value="@apimanager.endpoint@"/>
+        <constructor-arg index="1" value="@catasto.serviceUrl@"/>
+        <constructor-arg index="2" value="@geoservice.serviceUrlGeoServ@"/>
+    </bean>
+
+    <bean id="locCSIServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.loccsi.LOCCSIServiceHelper">
+        <constructor-arg index="0" value="@apimanager.endpoint@"/>
+        <constructor-arg index="1" value="@loccsi.serviceUrl@"/>
+    </bean>
+
+    <bean id="vincoloIdrogeologicoServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.vincoloidrogeologico.VincoloIdrogeologicoServiceHelper">
+        <constructor-arg index="0" value="@vincoloidrogeologico.endpoint@"/>
+    </bean>
+
+    <bean id="irideServiceHelper"
+          class="it.csi.scriva.scrivabesrv.business.be.helper.iride.IrideServiceHelper">
+        <constructor-arg index="0" value="@iride.endpoint@"/>
+    </bean>
+
+    <!-- NOTIFICHE -->
+    <bean id="notificationSenderEmailAdapter" class="it.csi.scriva.scrivabesrv.util.notification.core.impl.NotificationSenderEmailAdapterImpl"/>
+    <bean id="notificationSenderPecAdapter" class="it.csi.scriva.scrivabesrv.util.notification.core.impl.NotificationSenderPecAdapterImpl"/>
+    <bean id="notificationSenderWebAdapter" class="it.csi.scriva.scrivabesrv.util.notification.core.impl.NotificationSenderWebAdapterImpl"/>
+    <bean id="notificationSenderAppIOAdapter" class="it.csi.scriva.scrivabesrv.util.notification.core.impl.NotificationSenderAppIOAdapterImpl"/>
+    <bean id="oggettiIstanzaService" class="it.csi.scriva.scrivabesrv.business.be.service.impl.OggettiIstanzaServiceImpl"/>
+
+<!--    <bean id="testAspect" class="it.csi.scriva.scrivabesrv.business.be.impl.TestAspect"/>-->
+    <!--
+    <aop:config>
+        <aop:aspect ref="testAspect">
+            <aop:pointcut id="businessExp"
+                          expression="execution(* it.csi.scriva.scrivabesrv.business.be.impl.OggettiIstanzaApiServiceImpl.*(..))" />
+            <aop:before
+                    method="logBefore"
+                    pointcut-ref="businessExp"/>
+        </aop:aspect>
+    </aop:config>
+    -->
+
+    <!-- START scheduled job -->
+
+    <!--
+    <bean id="scheduledClass"
+          class="it.csi.scriva.scrivabesrv.util.ScheduledClass">
+    </bean>
+    <task:scheduled-tasks>
+        <task:scheduled ref="scheduledClass" method="getIndexMetadata" fixed-delay="5000"/>
+    </task:scheduled-tasks>
+    -->
+
+    <!-- END scheduled job -->
+
+    <!--
+    <bean id="scheduledClass"
+          class="it.csi.scriva.scrivabesrv.util.ScheduledClass">
+    </bean>
+
+    <!- fixedDelay will wait for the end of a previous invocation, then schedule a new inovcation at a fixed amount of time in the future. ->
+    <task:scheduled-tasks>
+        <task:scheduled ref="scheduledClass" method="scheduleFixedDelayTask" fixed-delay="30000"/>
+    </task:scheduled-tasks>
+
+    <!- fixedRate will schedule a new invocation every period. It will queue up more than one task at a time (potentially unbounded) but will never execute tasks concurrently. ->
+    <task:scheduled-tasks>
+        <task:scheduled ref="scheduledClass" method="scheduleFixedDelayTask" fixed-rate="30000"/>
+    </task:scheduled-tasks>
+
+    -->
+
+
+    <!--    <context:component-scan-->
+    <!--        base-package="it.csi.scriva.scrivabesrv" />-->
+
+    <context:component-scan base-package="it.csi.scriva.scrivabesrv.business.be.impl"/>
+    <context:component-scan base-package="it.csi.scriva.scrivabesrv.business.be.service.impl"/>
+    <context:component-scan base-package="it.csi.scriva.scrivabesrv.util"/>
+
+</beans>
