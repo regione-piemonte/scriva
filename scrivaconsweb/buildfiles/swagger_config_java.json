@@ -1,0 +1,18 @@
+{
+"java8": false,
+"useBeanValidation": true,
+"hideGenerationTimestamp": true,
+"apiPackage": "it.csi.scriva.scrivaconsweb",
+"modelPackage":  "it.csi.scriva.scrivaconsweb.model.entity",
+"invokerPackage": "it.csi.scriva.scrivaconsweb",
+"implFolder": "implfolder",
+"sourceFolder": "src/java",
+"useSwaggerFeature": false,
+"generateJbossDeploymentDescriptor": false,
+"generateImplArtifacts": false,
+"generateSwaggerMetadata": false,
+"attributeSerializationStrategy": "explicit-as-modeled", 
+"accessHttpHeaders": true,
+"accessHttpRequest": true,
+"jsonLibrary": "fasterxml-jackson"
+}

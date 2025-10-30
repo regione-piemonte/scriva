@@ -1,0 +1,31 @@
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2025                 # -->
+<!-- # SPDX-License-Identifier: EUPL-1.2-or-later        # -->
+<!-- ##################################################### -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:aop="http://www.springframework.org/schema/aop"
+	   xmlns:task="http://www.springframework.org/schema/task"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/context 
+	   http://www.springframework.org/schema/context/spring-context-2.5.xsd
+	   http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd
+       http://www.springframework.org/schema/util 
+	   http://www.springframework.org/schema/util/spring-util.xsd
+	   http://www.springframework.org/schema/task
+	   http://www.springframework.org/schema/task/spring-task.xsd"
+>
+	<bean class="it.csi.scriva.scrivaconsweb.business.SpringApplicationContextHelper"></bean>
+
+    <!-- Registra i file di property -->
+	<context:property-placeholder location="classpath:application.properties" />
+
+	<import resource="spring-data-context.xml"/>
+	
+	<context:component-scan base-package="it.csi.scriva.scrivaconsweb.*" />
+		
+</beans>

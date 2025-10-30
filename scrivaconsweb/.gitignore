@@ -1,0 +1,19 @@
+# output
+/bin
+/build
+/lib
+/dist
+/tmp
+
+# IDE
+/.settings
+.classpath
+.project
+
+
+
+#Angular Front End
+/src/web/scrivaconsweb/rest/*
+
+#WEBcontent
+/WebContent

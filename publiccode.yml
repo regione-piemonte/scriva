@@ -12,6 +12,8 @@ platforms:
 categories:
   - business-process-management
   - payment-gateway
+usedBy:
+  - Regione Piemonte  
 developmentStatus: development
 softwareType: standalone/web
 description:
@@ -141,3 +143,5 @@ it:
     cie: true
     pagopa: true
     io: true
+  riuso:
+    codiceIPA: r_piemon
