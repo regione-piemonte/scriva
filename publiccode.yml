@@ -1,0 +1,143 @@
+publiccodeYmlVersion: "0.4"
+name: Sistema delle Scrivanie del Richiedente e del Funzionario per i
+  procedimenti ambientali
+applicationSuite: Regione Piemonte Sistema Informativo Ambiente ed Energia
+url: https://github.com/regione-piemonte/scriva
+landingURL: https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
+softwareVersion: 1.0.0
+releaseDate: 2025-10-31
+logo: OSSCRIVA.png
+platforms:
+  - web
+categories:
+  - business-process-management
+  - payment-gateway
+developmentStatus: development
+softwareType: standalone/web
+description:
+  it-IT:
+    localisedName: SCRIVA
+    shortDescription: Sistema delle Scrivanie del Richiedente e del Funzionario per
+      i procedimenti ambientali
+    longDescription: >-
+      SCRIVA nasce dall'esigenza di disporre di una soluzione trasversale per la
+      gestione dei procedimenti ambientali, coerente con il modello generale per
+      l’ICT della PA italiana promosso da AgID.
+      	  
+      Il servizio corrispondente è disponibile a questi indirizzi:
+
+
+      https://scriva-servizi.regione.piemonte.it/scrivafoweb
+
+      https://scrivabo-servizi.regione.piemonte.it/scrivafoweb
+
+      https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
+      	  
+       SCRIVA risponde a una duplice esigenza:
+
+      - Offrire un punto di vista inter-tematico, raccordando (in ottica di user
+      centered design) i procedimenti dei diversi business afferenti allo stesso
+      richiedente o intervento/opera/attività sul territorio.
+
+      - Gestire trasversalmente logiche comuni rispetto a funzioni di:
+        - **Scrivania**: query & reporting, gestione stati/eventi, bacheca notifiche, scadenziario
+        - **Processo**: deleghe/procure, anagrafiche soggetti/oggetti
+        - **Integrazione**: georeferenziazione, protocollazione & gestione documentale, pagamenti
+        - **Interazione**: tra stakeholder e sistemi coinvolti, permettendo alle PA di dialogare su un procedimento all’interno della soluzione o ingaggiando sistemi esterni (es: SUAP)
+
+      SCRIVA semplifica, dematerializza e armonizza i servizi pubblici regionali
+      relativi alle procedure ambientali rivolti a imprese, professionisti e
+      cittadini, attraverso una nuova modalità di interazione e un maggiore
+      livello di integrazione dei servizi regionali con la PA.
+
+
+      ### Componenti funzionali
+
+
+      - **Front Office**: scrivania del Richiedente (privato, persona fisica o
+      giuridica, anche PA) che interagisce con la PA per la presentazione di
+      un’istanza
+
+      - **Back Office**: scrivania del Funzionario (soggetto pubblico
+      destinatario dell’istanza) che prende in carico la pratica e la gestisce
+      coinvolgendo gli Enti Terzi
+
+
+      L’applicativo prevede moduli di front-end web che interagiscono tramite
+      API con moduli di back-end dove risiede la logica di business e che
+      accedono al DB.
+
+
+      SCRIVA segue il paradigma **SPA – Single Page Application**: la componente
+      di interfaccia (Angular o Form.io) ha una corrispondente componente di
+      back-end (Java) che espone API REST e accede al DB.
+
+
+      ### Struttura del prodotto
+
+
+      -
+      [scrivadb](https://github.com/regione-piemonte/scriva/tree/main/scrivadb):
+      script per la creazione del DB (PostgreSQL)
+
+      -
+      [scrivafowcl](https://github.com/regione-piemonte/scriva/tree/main/scrivafowcl):
+      Client Web (Angular 9), front-end applicativo canale "autenticato"
+
+      -
+      [scrivafoweb](https://github.com/regione-piemonte/scriva/tree/main/scrivafoweb):
+      Backend per la componente Angular di frontend scrivafowcl
+
+      -
+      [scrivaconswcl](https://github.com/regione-piemonte/scriva/tree/main/scrivaconswcl):
+      Client Web (Angular 11), front-end applicativo canale di consultazione
+
+      -
+      [scrivaconsweb](https://github.com/regione-piemonte/scriva/tree/main/scrivaconsweb):
+      Backend per la componente Angular di frontend scrivaconswcl
+
+      -
+      [scrivabesrv](https://github.com/regione-piemonte/scriva/tree/main/scrivabesrv):
+      Servizi di backend trasversali del prodotto scriva
+
+      -
+      [scrivaapisrv](https://github.com/regione-piemonte/scriva/tree/main/scrivaapisrv):
+      componente di esposizione API REST per il prodotto scriva
+    documentation: https://www.servizi.piemonte.it/srv/scrivania-richiedente/rsr/dwd/manuale_scrivania_del_richiedente.pdf
+    features:
+      - gestione dei procedimenti ambientali, coerente con il modello generale
+        per l’ICT della PA italiana promosso da AgID
+      - Offrire un punto di vista inter-tematico, raccordando (in ottica di user
+        centered design) i procedimenti dei diversi business afferenti allo
+        stesso richiedente o intervento/opera/attività sul territorio
+      - "Scrivania: query & reporting, gestione stati/eventi, bacheca notifiche,
+        scadenziario;"
+      - "Processo: deleghe/procure, anagrafiche soggetti/oggetti;"
+      - "Integrazione: georeferenziazione, protocollazione & gestione
+        documentale, pagamenti;"
+      - "nterazione: tra stakeholder e sistemi coinvolti, permettendo alle PA di
+        dialogare su un procedimento all’interno della soluzione o ingaggiando
+        sistemi esterni (es: SUAP)."
+legal:
+  license: EUPL-1.2
+maintenance:
+  type: internal
+  contacts:
+    - name: Antonello Navarretta
+      email: antonello.navarretta@csi.it
+      phone: "0113168"
+localisation:
+  localisationReady: false
+  availableLanguages:
+    - it-IT
+it:
+  countryExtensionVersion: "1.0"
+  conforme:
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    gdpr: true
+  piattaforme:
+    spid: true
+    cie: true
+    pagopa: true
+    io: true
