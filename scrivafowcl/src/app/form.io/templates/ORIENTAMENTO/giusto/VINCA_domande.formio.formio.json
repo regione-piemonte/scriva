@@ -1,0 +1,350 @@
+{
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "INFO_AC",
+        "type": "hidden",
+        "input": true,
+        "label": "INFO_AC",
+        "tableView": true,
+        "defaultValue": "INFO_AC"
+      },
+      {
+        "label": "L’istanza di Vinca è da presentare al SUAP/SUE  o con l’istanza ex art. 12 d.lgs. 387/2003 o altro procedimento?",
+        "optionsLabelPosition": "right",
+        "inline": true,
+        "tableView": false,
+        "values": [
+          {
+            "label": "Si",
+            "value": "true",
+            "shortcut": ""
+          },
+          {
+            "label": "No",
+            "value": "false",
+            "shortcut": ""
+          }
+        ],
+        "validate": {
+          "required": true
+        },
+        "validateWhenHidden": false,
+        "key": "FLG_INVIO_A_SUAP_SUE",
+        "type": "radio",
+        "input": true,
+        "persistent": false
+      },
+      {
+        "label": "error_box_suape",
+        "tag": "div",
+        "className": "alert-box warning",
+        "attrs": [
+          {
+            "attr": "",
+            "value": ""
+          }
+        ],
+        "content": "<i class=\"icon icon-big fa fa-exclamation-circle\" aria-hidden=\"true\"></i><span><p class=\"text-only\"><b>Attenzione:</b> in questo caso la procedura di VINCA è un endoprocedimento di un procedimento unico, pertanto la documentazione predisposta attraverso questo servizio digitale dovrà essere scaricata e inviata all’autorità competente al procedimento unico nel rispetto dei termini finali stabiliti per il medesimo.</p></span>",
+        "refreshOnChange": false,
+        "key": "error_box_suape",
+        "conditional": {
+          "show": true,
+          "when": "FLG_INVIO_A_SUAP_SUE",
+          "eq": "true"
+        },
+        "type": "htmlelement",
+        "input": false,
+        "tableView": false
+      },
+      {
+        "key": "questionWell",
+        "type": "well",
+        "input": false,
+        "label": "well-label",
+        "tableView": false,
+        "components": [
+          {
+            "key": "COD_TIPOLOGIA_OGGETTO",
+            "type": "radio",
+            "input": true,
+            "label": "<b>Informazioni generali</b>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "inline": false,
+            "values": [
+              {
+                "label": "<b>Progetto/intervento</b> (definizione di cui all’art. 5, comma 1, lett. g) del D.lgs. 152/06)",
+                "value": "PROGETTO",
+                "shortcut": ""
+              },
+              {
+                "label": "<b>Attività</b> (qualsiasi attività umana non rientrante nella definizione di progetto/intervento che possa avere relazione o interferenza con l'ecosistema naturale) ",
+                "value": "ATTIVITA",
+                "shortcut": ""
+              }
+            ],
+            "validate": {
+              "required": true,
+              "customMessage": "Rispondi alla domanda per continuare"
+            },
+            "tableView": false,
+            "persistent": false,
+            "hideOnChildrenHidden": false,
+            "optionsLabelPosition": "right"
+          },
+          {
+            "key": "opzione_domanda_1",
+            "type": "button",
+            "event": "helpBtnClick",
+            "input": true,
+            "label": "<i class=\"fa fa-question-circle fa-lg\" aria-hidden=\"true\"></i>",
+            "action": "event",
+            "tableView": false,
+            "customClass": "help-btn",
+            "showValidations": false,
+            "hideOnChildrenHidden": false
+          }
+        ],
+        "customClass": "formio-well"
+      },
+      {
+        "key": "PROGETTO_VIA",
+        "type": "radio",
+        "input": true,
+        "label": "<b>È un progetto da sottoporre a VIA</b>, ovvero Il progetto/intervento ricade nelle tipologie di cui agli Allegati II, Il bis, III e IV alla Parte Seconda del D.Lgs. 152/06 e s.m.i.?",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "inline": true,
+        "values": [
+          {
+            "label": "Sì",
+            "value": "1",
+            "shortcut": ""
+          },
+          {
+            "label": "No",
+            "value": "0",
+            "shortcut": ""
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Rispondi alla domanda per continuare"
+        },
+        "tableView": false,
+        "persistent": false,
+        "conditional": {
+          "eq": "PROGETTO",
+          "show": true,
+          "when": "COD_TIPOLOGIA_OGGETTO"
+        },
+        "hideOnChildrenHidden": false,
+        "optionsLabelPosition": "right"
+      },
+      {
+        "key": "IndTipoCalcoloAC",
+        "type": "radio",
+        "input": true,
+        "label": "L'istanza è presentata dal Soggetto Gestore del sito della Rete Natura 2000 in cui ricade il Progetto/Intervento/Attività?",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "inline": true,
+        "values": [
+          {
+            "label": "Si",
+            "value": "AC3",
+            "shortcut": ""
+          },
+          {
+            "label": "No",
+            "value": "N",
+            "shortcut": ""
+          }
+        ],
+        "validate": {
+          "required": true
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": "N",
+        "optionsLabelPosition": "right"
+      },
+      {
+        "key": "error_box",
+        "tag": "div",
+        "type": "htmlelement",
+        "input": false,
+        "label": "error_box",
+        "content": "<i class=\"icon icon-big fa fa-exclamation-circle\" aria-hidden=\"true\"></i><span><p class=\"text-only\"><b>Attenzione:</b> il progetto deve essere sottoposto a Valutazione di impatto ambientale e non a V.INC.A. Per proseguire seleziona dalla home page il procedimento di VIA.</p></span>",
+        "className": "alert-box warning",
+        "tableView": false,
+        "conditional": {
+          "eq": "1",
+          "show": true,
+          "when": "PROGETTO_VIA"
+        },
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiaro_label",
+        "type": "htmlelement",
+        "input": false,
+        "label": "dichiaro_label",
+        "content": "<b>Dichiaro:</b>",
+        "tableView": false,
+        "conditional": {
+          "eq": "1",
+          "show": false,
+          "when": "PROGETTO_VIA"
+        },
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni[0].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_gdpr"
+      },
+      {
+        "key": "dichiarazioni[0].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di aver preso visione dell'Informativa sul trattamento dei dati personali (http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf), aggiornata all'art. 13 del GDPR 2016/679, consultabile sul Sito Web Istituzionale (https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via) e sulla Home Page del servizio (http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali)."
+      },
+      {
+        "key": "dichiarazioni[0].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[0].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di aver preso visione dell'<a href=\"http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf\" target=\"_blank\">Informativa sul trattamento dei dati personali</a>, aggiornata all'art. 13 del GDPR 2016/679, consultabile sul <a href=\"https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via\" target=\"_blank\">Sito Web Istituzionale</a> e sulla <a href=\"http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali\" target=\"_blank\">Home Page del servizio</a>",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "conditional": {
+          "eq": "1",
+          "show": false,
+          "when": "PROGETTO_VIA"
+        },
+        "defaultValue": false
+      }
+    ]
+  }
+}

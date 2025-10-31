@@ -1,0 +1,485 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card" id="containerDocumenti" *ngIf="allegati?.length > 0">
+  <h2 class="card-title" role="alert">
+    <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+    <strong>Riepilogo {{ allegati?.length }} allegati</strong>
+  </h2>
+  <div *ngIf="helpRiepilogo" class="help-box">
+    <span [innerHTML]="helpRiepilogo.des_testo_help"></span>
+  </div>
+
+  <ngx-datatable *ngIf="isTreeActive" #table class="tree"
+    rowHeight="auto"
+    [rows]="rows"
+    [columnMode]="ColumnMode.force"
+    [selected]="selected"
+    [rowClass]="handleRowStyles"
+    [scrollbarV]="showScrollbar"
+    [scrollbarH]="true"
+    [selectionType]="selectionType"
+    [displayCheck]="displayCheck"
+    [headerHeight]="80"
+    [footerHeight]="70"
+    [virtualization]="false"
+    [treeFromRelation]="'treeParentId'"
+    [treeToRelation]="'treeId'"
+    [messages]="{ emptyMessage: 'Nessun risultato trovato' }"
+    (select)="onSelect($event)"
+    (treeAction)="onTreeAction($event)"
+  >
+    <ngx-datatable-column
+      [width]="40"
+      [sortable]="false"
+      [canAutoResize]="false"
+      [draggable]="false"
+      [resizeable]="false"
+      [headerCheckboxable]="true"
+      [checkboxable]="true"
+    ></ngx-datatable-column>
+    
+    <ngx-datatable-column
+      [isTreeColumn]="true"
+      [name]="CRA_C.CLASSIFICAZIONE_DOC.columnLabel"
+      [width]="CRA_C.CLASSIFICAZIONE_DOC.colWidth"
+      [minWidth]="CRA_C.CLASSIFICAZIONE_DOC.colMinWidth"
+      [maxWidth]="CRA_C.CLASSIFICAZIONE_DOC.colMaxWidth"
+      [sortable]="CRA_C.CLASSIFICAZIONE_DOC.colSortable"
+      [resizeable]="false"
+    >
+      <!--
+        NOTA DELLO SVILUPPATORE!
+        Per sapere cosa contiene column, creare una funzione nel componente con questa logica:
+        - logMyColumn = (o: any) => { debugger; return '' };
+        Usare poi la pipe in questo modo:
+        - {{ logMyColumn | scrivaExecute:column }}
+      -->
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center" [innerHTML]="CRA_C.CLASSIFICAZIONE_DOC.labelColumnBeakLine"></div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.CLASSIFICAZIONE_DOC.columnLabel">{{ row.columns.alberatura }}</span>
+        <!--
+          <button type="button" class="btn py-0" (click)="onDownload(row)">
+            <app-icon [name]="'eng-scriva-download'" [type]="'eng'" [cssClass]="'cursor-pointer'" [size]="'small'"></app-icon>
+          </button>
+        -->
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column cellClass="break-all"
+      [name]="CRA_C.DOCUMENTO.columnLabel"
+      [width]="CRA_C.DOCUMENTO.colWidth"
+      [minWidth]="CRA_C.DOCUMENTO.colMinWidth"
+      [maxWidth]="CRA_C.DOCUMENTO.colMaxWidth"
+      [sortable]="CRA_C.DOCUMENTO.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center">{{ column?.name }}</div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.DOCUMENTO.columnLabel">
+          {{ row.columns.isFileNode ? row.columns.nome_allegato : '' }}
+        </div>
+      </ng-template>
+
+    </ngx-datatable-column>
+
+    <ngx-datatable-column cellClass="break-all"
+      [name]="CRA_C.DOCUMENTO_CORRELATO.columnLabel"
+      [width]="CRA_C.DOCUMENTO_CORRELATO.colWidth"
+      [minWidth]="CRA_C.DOCUMENTO_CORRELATO.colMinWidth"
+      [maxWidth]="CRA_C.DOCUMENTO_CORRELATO.colMaxWidth"
+      [sortable]="CRA_C.DOCUMENTO_CORRELATO.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center" [innerHTML]="CRA_C.DOCUMENTO_CORRELATO.labelColumnBeakLine"></div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.DOCUMENTO_CORRELATO.columnLabel">
+          {{ row.columns.isFileNode ? row.columns.nome_correlato : '' }}
+        </div>
+      </ng-template>
+    
+    </ngx-datatable-column>
+    
+    <ngx-datatable-column *ngIf="!isFrontOffice"
+      [name]="CRA_C.IN_PUBBLICAZIONE.columnLabel"
+      [width]="CRA_C.CATEGORIA_ALLEGATO.colWidth"
+      [minWidth]="CRA_C.IN_PUBBLICAZIONE.colMinWidth"
+      [maxWidth]="CRA_C.IN_PUBBLICAZIONE.colMaxWidth"
+      [sortable]="CRA_C.IN_PUBBLICAZIONE.colSortable"
+      [resizeable]="false"
+    >                       
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="row">
+          <!-- ETICHETTA -->
+          <div class="col s-plr--0 text-center">
+            <div [innerHTML]="CRA_C.IN_PUBBLICAZIONE.labelColumnBeakLine"></div>
+          </div>
+          <!-- HELPER -->
+          <div class="col-auto s-pl--0">
+            <button class="btn btn-primary help-btn p-0 datatable-header-btn"
+              aria-label="help"
+              (click)="onHelpClicked()"
+            >
+              <i style="color:#006cb4;" class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [title]="CRA_C.IN_PUBBLICAZIONE.columnLabel">
+          <i aria-hidden="true" *ngIf="row.columns.isFileNode && row.allegato.flg_da_pubblicare"
+            [class.cancellato]="row.allegato?.flg_cancellato"
+            [title]="CRA_C.IN_PUBBLICAZIONE.columnLabel"
+            class="fa fa-check-circle-o in-pubblicazione"
+          ></i>            
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column
+      [name]="CRA_C.CATEGORIA_ALLEGATO.columnLabel"
+      [width]="CRA_C.CATEGORIA_ALLEGATO.colWidth"
+      [minWidth]="CRA_C.CATEGORIA_ALLEGATO.colMinWidth"
+      [maxWidth]="CRA_C.CATEGORIA_ALLEGATO.colMaxWidth"
+      [sortable]="CRA_C.CATEGORIA_ALLEGATO.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center" [innerHTML]="CRA_C.CATEGORIA_ALLEGATO.labelColumnBeakLine"></div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.CATEGORIA_ALLEGATO.columnLabel">
+          {{ row.columns.categoria_allegato }}
+        </div>
+      </ng-template>
+
+    </ngx-datatable-column>
+
+    <ngx-datatable-column
+      [name]="CRA_C.TIPOLOGIA_ALLEGATO.columnLabel"
+      [sortable]="CRA_C.TIPOLOGIA_ALLEGATO.colSortable"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center" [innerHTML]="CRA_C.TIPOLOGIA_ALLEGATO.labelColumnBeakLine"></div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.TIPOLOGIA_ALLEGATO.columnLabel">
+          {{ row.columns.isFileNode ? row.columns.tipologia_allegato : '' }}
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <!-- <ngx-datatable-column name="{{ CRA_C.LABEL_CODICELABORATO }}"
+      [sortable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces" [ngStyle]="CRA_C.CODICE_LABORATO">
+          {{ column?.name }}
+        </div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [class.cancellato]="row.allegato?.flg_cancellato">
+          {{ row.columns.isFileNode ? row.columns.cod_allegato : '' }}
+        </span>
+      </ng-template>
+    </ngx-datatable-column> -->
+
+    <!-- <ngx-datatable-column
+      [name]="CRA_C.DATA_CARICAMENTO.columnLabel"
+      [width]="CRA_C.DATA_CARICAMENTO.colWidth"
+      [minWidth]="CRA_C.DATA_CARICAMENTO.colMinWidth"
+      [sortable]="CRA_C.DATA_CARICAMENTO.colSortable"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces">{{ column?.name }}</div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [class.cancellato]="row.allegato?.flg_cancellato">
+          {{ row.columns.isFileNode ? (row.columns.data_upload | date: CRA_C.DATE_VIEW_FORMAT) : '' }}
+          {{ row.columns.isFileNode ? (row.columns.data_upload | date: CRA_C.HOURS_VIEW_FORMAT) : '' }}
+        </span>
+      </ng-template>
+    </ngx-datatable-column> -->
+
+    <ngx-datatable-column *ngIf="!isFrontOffice"
+      [name]="CRA_C.DATA_PUBBLICAZIONE.columnLabel"
+      [width]="CRA_C.DATA_PUBBLICAZIONE.colWidth"
+      [minWidth]="CRA_C.DATA_PUBBLICAZIONE.colMinWidth"
+      [maxWidth]="CRA_C.DATA_PUBBLICAZIONE.colMaxWidth"
+      [sortable]="CRA_C.DATA_PUBBLICAZIONE.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center" [innerHTML]="CRA_C.DATA_PUBBLICAZIONE.labelColumnBeakLine"></div>
+      </ng-template>
+
+      <ng-template ngx-datatable-cell-template let-row="row">
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.DATA_PUBBLICAZIONE.columnLabel">
+          {{ row.columns.isFileNode ? (row.columns.data_pubblicazione | date: CRA_C.DATE_VIEW_FORMAT) : '' }}
+          <!-- {{ row.columns.isFileNode ? (row.columns.data_pubblicazione | date: CRA_C.HOURS_VIEW_FORMAT) : '' }} -->
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <!-- <ngx-datatable-column name="{{ CRA_C.LABEL_DIMENSIONE }}"
+      width="{{ CRA_C.CLASSIFICAZIONE_DOC.colWidth }}"
+      [sortable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces" [ngStyle]="CRA_C.DIMENSIONE">
+          {{ column?.name }}
+        </div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <span [class.cancellato]="row.allegato?.flg_cancellato">
+          {{ row.columns.isFileNode ? (row.columns.dimensione_upload / 1048576 | number: '1.0-2')+' MB' : '' }}
+        </span>
+      </ng-template>
+    </ngx-datatable-column> -->
+
+    <ngx-datatable-column *ngIf="!isFrontOffice"
+      [name]="CRA_C.ACCESSO.columnLabel"
+      [width]="CRA_C.ACCESSO.colWidth"
+      [minWidth]="CRA_C.ACCESSO.colMinWidth"
+      [maxWidth]="CRA_C.ACCESSO.colMaxWidth"
+      [sortable]="CRA_C.ACCESSO.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center">{{ column?.name }}</div>
+      </ng-template>
+
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="text-center" [class.cancellato]="row.allegato?.flg_cancellato" [title]="CRA_C.ACCESSO.columnLabel">
+          {{ row.columns.isFileNode ? (row.allegato.flg_riservato ? 'Riservato' : 'Pubblico') : '' }}
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+
+    <ngx-datatable-column 
+      [name]="CRA_C.AZIONI.columnLabel"
+      [width]="CRA_C.AZIONI.colWidth"
+      [minWidth]="CRA_C.AZIONI.colMinWidth"
+      [maxWidth]="CRA_C.AZIONI.colMaxWidth"
+      [sortable]="CRA_C.AZIONI.colSortable"
+      [resizeable]="false"
+    >
+      <ng-template ngx-datatable-header-template let-column="column">
+        <div class="force-break-spaces text-center">{{ column?.name }}</div>
+      </ng-template>
+     
+      <ng-template let-row="row" ngx-datatable-cell-template>
+        <div class="actions" *ngIf="(attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === codQuadro) && row.columns.isFileNode"
+          [title]="CRA_C.AZIONI.columnLabel"
+        >
+
+          <button *ngIf="row.actions?.editVisible" aria-label="modifica"
+            class="btn-action"
+            title="Modifica"
+            (click)="editRow(row.allegato)"
+            [ngClass]="{ disabled: !row.actions?.edit }"
+          >
+            <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica" />
+          </button>
+
+          <button *ngIf="row.allegato?.id_allegato_istanza != undefined" aria-label="dettaglio"
+            class="btn-action"
+            title="Dettaglio"
+            (click)="detailRow(row.allegato)"
+          >
+            <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio" />
+          </button>
+
+          <button *ngIf="row.actions?.deleteVisible" aria-label="elimina"
+              class="btn-action"
+              title="Elimina"
+              (click)="onDelete(row.allegato)"
+              [ngClass]="{ disabled: !row.actions?.delete }"
+            >
+              <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+            </button>
+
+          <button *ngIf="row.actions?.deletelogicVisible" aria-label="eliminazione logica"
+            class="btn-action"
+            title="Eliminazione logica"
+            [ngClass]="{ disabled: !row.actions?.deletelogic }"
+            (click)="onLogicDelete(row.allegato)"
+          >
+            <img src="assets/icon-table-elimina-logico.svg" height="20px" alt="Eliminazione logica" />
+          </button>
+
+        </div>
+      </ng-template>
+    </ngx-datatable-column>
+    <ngx-datatable-footer>
+      <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize"
+        let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+        <!-- SCRIVA-1485: rimosso "justify-content-end" dalla classe di stile del div sotto -->
+        <div class="ml-auto d-flex">
+          <button type="button" class="btn btn-large btn-outline-primary table-btn" 
+              *ngIf="!isAzioneAvanzata && (attoreGestioneIstanza === gestioneEnum.WRITE ||
+              attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+              attoreGestioneIstanza === codQuadro)"
+            (click)="exportCSV()">
+            ESPORTA ELENCO IN FORMATO CSV
+          </button>
+          <button type="button" class="btn btn-large btn-outline-primary table-btn" 
+              *ngIf="!isAzioneAvanzata && (attoreGestioneIstanza === gestioneEnum.WRITE ||
+              attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+              attoreGestioneIstanza === codQuadro)"
+            [disabled]="!isSelectedRows"
+            (click)="exportZIP()">
+            SCARICA DOCUMENTI SELEZIONATI
+          </button>
+
+          <button *ngIf="oggAppBtnPubblica" [disabled]="!isSelectedRows" type="button"
+            class="btn btn-large btn-outline-primary table-btn" (click)="pubblicaDocumenti()">
+            AVVIA PUBBLICAZIONE
+          </button>
+
+          <button *ngIf="oggAppBtnPubblica" [disabled]="!isSelectedRows" type="button"
+            class="btn btn-large btn-outline-primary table-btn" (click)="annullaPubblicaDocumenti()">
+            ANNULLA PUBBLICAZIONE
+          </button>
+        </div>
+
+      </ng-template>
+    </ngx-datatable-footer>
+  </ngx-datatable>
+
+  <ngx-datatable #table *ngIf="!isTreeActive" class="material" [rows]="allegati" [columns]="columns"
+    [columnMode]="ColumnMode.force" [selected]="selected" [scrollbarV]="showScrollbar" [scrollbarH]="true"
+    [selectionType]="selectionType" [headerHeight]="80" [footerHeight]="70" [rowHeight]="80" [virtualization]="false"
+    (select)="onSelect($event)" [messages]="{ emptyMessage: 'Nessun risultato trovato' }">
+    <ngx-datatable-footer>
+      <ng-template ngx-datatable-footer-template let-rowCount="rowCount" let-pageSize="pageSize"
+        let-selectedCount="selectedCount" let-curPage="curPage" let-offset="offset" let-isVisible="isVisible">
+        <!-- SCRIVA-1485: rimosso "justify-content-end" dalla classe di stile del div sotto -->
+        <div class="ml-auto d-flex">
+          <button type="button" class="btn btn-large btn-outline-primary table-btn" *ngIf="!isAzioneAvanzata && (attoreGestioneIstanza === gestioneEnum.WRITE ||
+            attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+            attoreGestioneIstanza === codQuadro)" [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+            (click)="exportCSV()">
+            ESPORTA ELENCO IN FORMATO CSV
+          </button>
+          <button type="button" class="btn btn-large btn-outline-primary table-btn" *ngIf="!isAzioneAvanzata && (attoreGestioneIstanza === gestioneEnum.WRITE ||
+            attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+            attoreGestioneIstanza === codQuadro)" [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+            (click)="exportZIP()">
+            ESPORTA ELENCO IN FORMATO ZIP
+          </button>
+
+          <button *ngIf="oggAppBtnPubblica" [disabled]="!isSelectedRows || readonlyAllegati" type="button"
+            class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="pubblicaDocumenti()">
+            AVVIA PUBBLICAZIONE
+          </button>
+
+          <button *ngIf="oggAppBtnPubblica" [disabled]="!isSelectedRows || readonlyAllegati" type="button"
+            class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="annullaPubblicaDocumenti()">
+            ANNULLA PUBBLICAZIONE
+          </button>
+        </div>
+
+      </ng-template>
+    </ngx-datatable-footer>
+  </ngx-datatable>
+
+  <!-- GESTIONE ALERT -->
+  <div class="row" *ngIf="alertConfigsCheck">
+    <div class="col">
+      <scriva-alert 
+        [alertConfigs]="alertConfigs"
+        [allowAlertClose]="true"
+        (onAlertHidden)="onAlertHidden($event, alertConfigs)"
+      ></scriva-alert>
+    </div>
+  </div>
+
+</div>
+
+<!-- #region ngx-datatable templates -->
+<ng-template #checkboxHeaderTemplate ngx-datatable-header-template let-value="value" let-allRowsSelected="allRowsSelected" let-selectFn="selectFn">
+  <span class="help-text-wrapper">
+    <p class="cbx-header-title">Seleziona</p>
+  </span>
+  <input type="checkbox" [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)" />
+</ng-template>
+<ng-template #checkboxColTemplate ngx-datatable-cell-template let-value="value" let-isSelected="isSelected" let-onCheckboxChangeFn="onCheckboxChangeFn">
+  <input type="checkbox" [checked]="isSelected" (change)="onCheckboxChangeFn($event)" />
+</ng-template>
+
+<ng-template #nomeDocumentoTemplate let-row="row">
+  {{ row.nome_allegato }}
+</ng-template>
+<ng-template #categoriaTemplate let-row="row">
+  {{ row.tipologia_allegato?.categoria_allegato?.des_categoria_allegato }}/{{ row.tipologia_allegato?.des_tipologia_allegato }}
+</ng-template>
+<ng-template #accessoTemplate let-row="row">
+  {{ row.flg_riservato ? 'Riservato' : 'Pubblico' }}
+</ng-template>
+<ng-template #codiceTemplate let-row="row">
+  {{ row.cod_allegato }}
+</ng-template>
+<ng-template #dataUploadTemplate let-row="row">
+  {{ row.data_upload | date: "dd/MM/yyyy HH:mm:ss" }}
+</ng-template>
+<ng-template #dataPubblicazioneTemplate let-row="row">
+  {{ row.data_pubblicazione | date: "dd/MM/yyyy HH:mm:ss" }}
+</ng-template>
+<ng-template #dimensioneTemplate let-row="row">
+  {{ row.dimensione_upload / 1048576 | number: '1.0-2' }} MB
+</ng-template>
+<ng-template #baseActionsTemplate let-row="row">
+  <div class="actions" *ngIf="
+  (attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === codQuadro)  
+  ">
+    <button class="btn-action" (click)="editRow(row)" [ngClass]="{ disabled:
+        row.tipologia_allegato.categoria_allegato.cod_categoria_allegato === 'SYS' ||
+        (row.id_funzionario && isFrontOffice) ||
+        readonlyAllegati
+      }" aria-label="modifica">
+      <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica" />
+    </button>
+    <button class="btn-action" (click)="downloadRow(row)" aria-label="download">
+      <img src="assets/icon-table-download.svg" height="24px" alt="Download" />
+    </button>
+    <button class="btn-action" (click)="onDelete(row)" [ngClass]="{ disabled:
+        !isDeleteAllowed(row) ||
+        row.tipologia_allegato.categoria_allegato.cod_categoria_allegato === 'SYS' ||
+        (row.id_istanza_attore && !isFrontOffice) ||
+        (row.id_funzionario && isFrontOffice) ||
+        readonlyAllegati
+      }" aria-label="elimina">
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+    </button>
+    <button class="btn-action" *ngIf="
+        isFrontOffice &&
+        row.id_istanza_attore &&
+        attoreGestioneIstanza === codQuadro &&
+        !isDeleteAllowed(row)" [disabled]="readonlyAllegati" (click)="onLogicDelete(row)"
+      aria-label="eliminazione logica">
+      <img src="assets/icon-table-elimina-logico.svg" height="20px" alt="Eliminazione logica" />
+    </button>
+  </div>
+</ng-template>

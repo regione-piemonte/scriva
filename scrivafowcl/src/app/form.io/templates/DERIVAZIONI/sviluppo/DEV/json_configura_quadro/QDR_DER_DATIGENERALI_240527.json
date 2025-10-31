@@ -1,0 +1,1608 @@
+{
+  "label": "Dati generali",
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "Compila i dati generali della richiesta di concessione.",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "string_campo_obbligatorio",
+        "tag": "small",
+        "type": "htmlelement",
+        "input": false,
+        "label": "string_campo_obbligatorio",
+        "content": "*Campo obbligatorio",
+        "className": "text-muted",
+        "tableView": false,
+        "customClass": "form-text",
+        "refreshOnChange": false
+      },
+      {
+        "title": "* Dati sanatoria",
+        "collapsible": true,
+        "customConditional": "// Per default la sezione non è visibile\nshow = false;\n\ntry {\n  // Recupero le configurazioni dal qdr_orientamento\n  var o = form.json_istanza.QDR_CONFIG.ORIENTAMENTO;\n  // Verifico se esiste un tipo concessione come 'SANATORIA'\n  return o.TipoConcessione == 'SANATORIA'\n  // #\n} catch(e) {}",
+        "key": "panelDatiSanatoria",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "Data di inizio uso dell'acqua",
+            "useLocaleSettings": true,
+            "format": "yyyy-MM-dd",
+            "tableView": false,
+            "datePicker": {
+              "disableWeekends": false,
+              "disableWeekdays": false
+            },
+            "enableTime": false,
+            "timePicker": {
+              "showMeridian": false
+            },
+            "persistent": false,
+            "validate": {
+              "required": true
+            },
+            "enableMinDateInput": false,
+            "enableMaxDateInput": false,
+            "key": "JS_DATI_SANATORIA.data_inizio_uso_acqua",
+            "type": "datetime",
+            "input": true,
+            "widget": {
+              "type": "calendar",
+              "displayInTimezone": "viewer",
+              "locale": "en",
+              "useLocaleSettings": true,
+              "allowInput": true,
+              "mode": "single",
+              "enableTime": false,
+              "noCalendar": false,
+              "format": "yyyy-MM-dd",
+              "hourIncrement": 1,
+              "minuteIncrement": 1,
+              "time_24hr": true,
+              "minDate": null,
+              "disableWeekends": false,
+              "disableWeekdays": false,
+              "maxDate": null
+            }
+          },
+          {
+            "label": "Eventuale titolo autorizzativo preesistente",
+            "applyMaskOn": "change",
+            "autoExpand": false,
+            "tableView": true,
+            "persistent": false,
+            "validate": {
+              "maxLength": 500
+            },
+            "key": "JS_DATI_SANATORIA.titolo_autor_preesistente",
+            "type": "textarea",
+            "input": true
+          },
+          {
+            "label": "Viene richiesto il rilascio dell’autorizzazione provvisoria alla continuazione dell’utilizzo",
+            "optionsLabelPosition": "right",
+            "tooltip": "Attenzione: la scelta 'NO' di questa opzione comporterà la cancellazione delle motivazioni.",
+            "inline": true,
+            "tableView": false,
+            "defaultValue": "si",
+            "values": [
+              {
+                "label": "SÌ",
+                "value": "si",
+                "shortcut": ""
+              },
+              {
+                "label": "NO",
+                "value": "no",
+                "shortcut": ""
+              }
+            ],
+            "validateWhenHidden": false,
+            "key": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+            "type": "radio",
+            "input": true
+          },
+          {
+            "label": "Per le seguenti motivazioni",
+            "applyMaskOn": "change",
+            "autoExpand": false,
+            "tableView": true,
+            "validate": {
+              "maxLength": 4000
+            },
+            "key": "JS_DATI_SANATORIA.motivaz_autor_provv_uso",
+            "conditional": {
+              "show": true,
+              "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+              "eq": "si"
+            },
+            "logic": [
+              {
+                "name": "disableFlgAutorProvvUso",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+                    "eq": "no"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "disableField",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": true
+                  }
+                ]
+              },
+              {
+                "name": "enableFlgAutorProvvUso",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+                    "eq": "si"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "enableField",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": false
+                  }
+                ]
+              }
+            ],
+            "type": "textarea",
+            "input": true
+          },
+          {
+            "label": "SALVA MODIFICHE",
+            "action": "event",
+            "showValidations": false,
+            "theme": "default",
+            "customClass": "btn-outline-primary float-right",
+            "tableView": false,
+            "key": "save_JS_DATI_SANATORIA",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "// Recupero i campi della sezione da verificare\nlet dtIniUsoAcqua = data.JS_DATI_SANATORIA.data_inizio_uso_acqua;\nlet flgAutorProvUso = data.JS_DATI_SANATORIA.flg_autor_provv_uso;\n// Verifico se i campi non sono validi\nresult = (!dtIniUsoAcqua || !flgAutorProvUso);"
+                }
+              }
+            ],
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true
+          }
+        ]
+      },
+      {
+        "title": "* Dati identificativi",
+        "collapsible": true,
+        "key": "panelDatiIdentificativi",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "Codice utenza",
+            "applyMaskOn": "change",
+            "tableView": true,
+            "persistent": false,
+            "validate": {
+              "maxLength": 10
+            },
+            "validateWhenHidden": false,
+            "key": "JS_DATI_IDENTIFICATIVI.codice_utenza_gerica",
+            "customConditional": "",
+            "type": "textfield",
+            "input": true
+          },
+          {
+            "label": "ColumnsCodiceRilievo",
+            "columns": [
+              {
+                "components": [
+                  {
+                    "label": "Codice rilievo",
+                    "applyMaskOn": "change",
+                    "disabled": true,
+                    "tableView": true,
+                    "persistent": false,
+                    "validate": {
+                      "maxLength": 10
+                    },
+                    "key": "JS_DATI_IDENTIFICATIVI.codice_rilievo",
+                    "type": "textfield",
+                    "input": true
+                  }
+                ],
+                "width": 4,
+                "offset": 8,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 4
+              },
+              {
+                "components": [],
+                "width": 6,
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 6
+              }
+            ],
+            "key": "columnsCodiceRilievo",
+            "type": "columns",
+            "input": false,
+            "tableView": false
+          },
+          {
+            "label": "Specie della derivazione",
+            "widget": "choicesjs",
+            "placeholder": "Seleziona",
+            "tableView": true,
+            "dataSrc": "json",
+            "data": {
+              "json": [
+                {
+                  "des_tipo_deriv": "Grande",
+                  "id_tipo_deriv": 1
+                },
+                {
+                  "des_tipo_deriv": "Piccolo",
+                  "id_tipo_deriv": 2
+                }
+              ]
+            },
+            "dataType": "object",
+            "template": "<span>{{ item.des_tipo_deriv }}</span>",
+            "searchEnabled": false,
+            "validate": {
+              "required": true
+            },
+            "key": "JS_DATI_IDENTIFICATIVI.tipo_deriv",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "type": "select",
+            "input": true,
+            "hideOnChildrenHidden": false
+          },
+          {
+            "label": "SALVA MODIFICHE",
+            "action": "event",
+            "showValidations": false,
+            "theme": "default",
+            "customClass": "btn-outline-primary float-right",
+            "tableView": false,
+            "key": "save_JS_DATI_IDENTIFICATIVI",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true
+          }
+        ]
+      },
+      {
+        "title": "* Esercizio della derivazione",
+        "collapsible": true,
+        "key": "panelEsercizioDerivazione",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "key": "esercizioColumns",
+            "type": "columns",
+            "input": false,
+            "label": "Columns",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "label": "Portata massima istantanea (l/s)",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "validate": {
+                      "required": true,
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 7 cifre intere e un massimo di 4 cifre decimali"
+                    },
+                    "key": "JS_ESERCIZIO_DERIVAZIONE.portata_max",
+                    "logic": [
+                      {
+                        "name": "checkGlobalDisabled",
+                        "actions": [
+                          {
+                            "name": "disableFormAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "type": "textfield",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "currentWidth": 4
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "label": "Portata media di prelievo (l/s)",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "validate": {
+                      "required": true,
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Campo obbligatorio e numerico. Indicare un valore inferiore alla portata massima istantanea, utilizzando un massimo di 7 cifre intere e un massimo di 4 cifre decimali",
+                      "custom": "try {\n  // Recupero le informazioni per portata media e portata massima\n  var portataMediaValue = input;\n  var portataMassimaValue = data.JS_ESERCIZIO_DERIVAZIONE.portata_max;\n  // Le informazioni sono stringhe, devo sostituire il separatore decimale\n  var portataMedia = Number(portataMediaValue.replace(',', '.'));\n  var portataMassima = Number(portataMassimaValue.replace(',', '.'));\n  // La portata media deve essere minore/uguale alla massima\n  if (portataMedia <= portataMassima) {\n    // Validazione completa\n    return true;\n    // #\n  } else {\n    // Validazione fallita, ritorno un \"codice errore\"\n    return \"portataMediaGreaterPortataMassima\";\n  }\n} catch (e) {}"
+                    },
+                    "key": "JS_ESERCIZIO_DERIVAZIONE.portata_med",
+                    "logic": [
+                      {
+                        "name": "checkGlobalDisabled",
+                        "actions": [
+                          {
+                            "name": "disableFormAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "type": "textfield",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "currentWidth": 4
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "label": "Volume massimo annuo (m<sup>3</sup>)",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "validate": {
+                      "required": true,
+                      "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                      "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 9 cifre intere e un massimo di 5 cifre decimali"
+                    },
+                    "key": "JS_ESERCIZIO_DERIVAZIONE.volume_max",
+                    "logic": [
+                      {
+                        "name": "checkGlobalDisabled",
+                        "actions": [
+                          {
+                            "name": "disableFormAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "type": "textfield",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "currentWidth": 4
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI2",
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ]
+      },
+      {
+        "title": "* Sovracanone",
+        "collapsible": true,
+        "key": "panelSovracanone",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "ColumnsHeaderSovracanone",
+            "columns": [
+              {
+                "components": [
+                  {
+                    "label": "HeaderSovracanone",
+                    "tag": "div",
+                    "attrs": [
+                      {
+                        "attr": "",
+                        "value": ""
+                      }
+                    ],
+                    "content": "Indicare se è presente un sovracanone, di quale tipo e l’elenco dei comuni interessati",
+                    "refreshOnChange": false,
+                    "key": "headerSovracanone",
+                    "type": "htmlelement",
+                    "input": false,
+                    "tableView": false
+                  }
+                ],
+                "width": 11,
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 11
+              },
+              {
+                "components": [
+                  {
+                    "label": "<i class='fa fa-question-circle fa-lg' aria-hidden='true'></i>",
+                    "action": "event",
+                    "showValidations": false,
+                    "customClass": "help-btn",
+                    "tableView": false,
+                    "key": "sovracanone_testo_iniziale",
+                    "type": "button",
+                    "event": "helpBtnClick",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "width": 1,
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 1
+              }
+            ],
+            "key": "columnsHeaderSovracanone",
+            "type": "columns",
+            "input": false,
+            "tableView": false
+          },
+          {
+            "label": "Presenza di sovracanone per uso energetico con potenza nominale media annua > 220 kW",
+            "optionsLabelPosition": "right",
+            "inline": true,
+            "tableView": false,
+            "values": [
+              {
+                "label": "SÌ",
+                "value": "si",
+                "shortcut": ""
+              },
+              {
+                "label": "NO",
+                "value": "no",
+                "shortcut": ""
+              }
+            ],
+            "persistent": false,
+            "validate": {
+              "required": true
+            },
+            "key": "JS_SOVRACANONE.flg_sovracanone",
+            "type": "radio",
+            "input": true,
+            "defaultValue": "si"
+          },
+          {
+            "label": "Per opere di captazione che ricadono in Bacino Imbrifero Montano",
+            "optionsLabelPosition": "right",
+            "inline": true,
+            "tableView": false,
+            "values": [
+              {
+                "label": "SI",
+                "value": "si",
+                "shortcut": ""
+              },
+              {
+                "label": "NO",
+                "value": "no",
+                "shortcut": ""
+              }
+            ],
+            "persistent": false,
+            "key": "JS_SOVRACANONE.flg_bim",
+            "logic": [
+              {
+                "name": "fieldRequired",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_SOVRACANONE.flg_sovracanone",
+                    "eq": "si"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "fieldIsRequired",
+                    "type": "property",
+                    "property": {
+                      "label": "Required",
+                      "value": "validate.required",
+                      "type": "boolean"
+                    },
+                    "state": true
+                  }
+                ]
+              },
+              {
+                "name": "fieldNotRequired",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_SOVRACANONE.flg_sovracanone",
+                    "eq": "no"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "fieldIsNotRequired",
+                    "type": "property",
+                    "property": {
+                      "label": "Required",
+                      "value": "validate.required",
+                      "type": "boolean"
+                    },
+                    "state": false
+                  }
+                ]
+              },
+              {
+                "name": "fieldEnabled",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_SOVRACANONE.flg_sovracanone",
+                    "eq": "si"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "fieldIsEnabled",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": false
+                  }
+                ]
+              },
+              {
+                "name": "fieldDisabled",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_SOVRACANONE.flg_sovracanone",
+                    "eq": "no"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "fieldIsDisabled",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": true
+                  }
+                ]
+              },
+              {
+                "name": "resetValue",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_SOVRACANONE.flg_sovracanone",
+                    "eq": "no"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "resetTheValue",
+                    "type": "value",
+                    "value": "value = '';"
+                  }
+                ]
+              }
+            ],
+            "type": "radio",
+            "input": true
+          },
+          {
+            "label": "<strong>Elenco Bacini Imbriferi Montani</strong>",
+            "tableView": false,
+            "templates": {
+              "header": "<div class=\"row\">\n  {% util.eachComponent(components, function(component) { %}\n    {% if (displayValue(component)) { %}\n      <div class=\"col-sm-2\">{{ t(component.label) }}</div>\n    {% } %}\n  {% }) %}\n</div>",
+              "row": "<div class=\"row\">\n  {% util.eachComponent(components, function(component) { %}\n    {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n      <div class=\"col-sm-2\">\n        {{ getView(component, row[component.key]) }}\n      </div>\n    {% } %}\n  {% }) %}\n  {% if (!instance.disabled) { %}\n    <div class=\"col-sm-2\">\n      <div class=\"btn-group pull-right\">\n        <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n        {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n          <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n        {% } %}\n      </div>\n    </div>\n  {% } %}\n</div>"
+            },
+            "addAnother": "AGGIUNGI PERIODO",
+            "saveRow": "AGGIUNGI",
+            "removeRow": "ANNULLA",
+            "persistent": false,
+            "rowDrafts": false,
+            "key": "JS_SOVRACANONE.elenco_bim",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "type": "editgrid",
+            "displayAsTable": false,
+            "input": true,
+            "components": [
+              {
+                "key": "columns_ec_3",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ec_3",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "label": "Bacini Imbriferi Montani",
+                        "widget": "choicesjs",
+                        "tableView": true,
+                        "dataSrc": "json",
+                        "data": {
+                          "json": [
+                            {
+                              "denom_BIM": "Ticino",
+                              "id_BIM": 1
+                            },
+                            {
+                              "denom_BIM": "Sesia",
+                              "id_BIM": 2
+                            },
+                            {
+                              "denom_BIM": "Dor Baltea",
+                              "id_BIM": 3
+                            },
+                            {
+                              "denom_BIM": "Orco",
+                              "id_BIM": 4
+                            },
+                            {
+                              "denom_BIM": "Stur di Lanzo",
+                              "id_BIM": 5
+                            },
+                            {
+                              "denom_BIM": "Dor Riparia",
+                              "id_BIM": 6
+                            },
+                            {
+                              "denom_BIM": "Sangone",
+                              "id_BIM": 7
+                            },
+                            {
+                              "denom_BIM": "Pellice",
+                              "id_BIM": 8
+                            },
+                            {
+                              "denom_BIM": "Po",
+                              "id_BIM": 9
+                            },
+                            {
+                              "denom_BIM": "Varaita",
+                              "id_BIM": 10
+                            },
+                            {
+                              "denom_BIM": "Maira",
+                              "id_BIM": 11
+                            },
+                            {
+                              "denom_BIM": "Tanaro",
+                              "id_BIM": 12
+                            },
+                            {
+                              "denom_BIM": "Bormida",
+                              "id_BIM": 13
+                            },
+                            {
+                              "denom_BIM": "Scrivia",
+                              "id_BIM": 14
+                            }
+                          ]
+                        },
+                        "template": "<span>{{ item.denom_BIM }}</span>",
+                        "persistent": false,
+                        "unique": true,
+                        "key": "elenco_bim",
+                        "type": "select",
+                        "input": true
+                      }
+                    ],
+                    "currentWidth": 4
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [],
+                    "currentWidth": 4
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [],
+                    "currentWidth": 4
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI3",
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ]
+      },
+      {
+        "title": "* Usi",
+        "collapsible": true,
+        "key": "panelUsi",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "Presenza di uso promiscuo",
+            "optionsLabelPosition": "right",
+            "inline": true,
+            "tableView": false,
+            "defaultValue": "si",
+            "values": [
+              {
+                "label": "SÌ",
+                "value": "si",
+                "shortcut": ""
+              },
+              {
+                "label": "NO",
+                "value": "no",
+                "shortcut": ""
+              }
+            ],
+            "key": "JS_USI.flg_uso_promiscuo",
+            "type": "radio",
+            "input": true
+          },
+          {
+            "label": "labelQtaIdriciComplessi",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "content": "<strong>Quantitativi idrici complessivi</strong>",
+            "refreshOnChange": false,
+            "key": "labelQtaIdriciComplessi",
+            "type": "htmlelement",
+            "input": false,
+            "tableView": false
+          },
+          {
+            "label": "ColumnsHeaderSovracanone",
+            "columns": [
+              {
+                "components": [
+                  {
+                    "label": "HeaderDatiUsi",
+                    "tag": "div",
+                    "attrs": [
+                      {
+                        "attr": "",
+                        "value": ""
+                      }
+                    ],
+                    "content": "Indicare i periodi in cui il prelievo verrà effettuato, l’uso ed i quantitativi di portata e volume per ciascun periodo",
+                    "refreshOnChange": false,
+                    "key": "headerDatiUsi",
+                    "type": "htmlelement",
+                    "input": false,
+                    "tableView": false
+                  }
+                ],
+                "width": 11,
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 11
+              },
+              {
+                "components": [
+                  {
+                    "label": "<i class='fa fa-question-circle fa-lg' aria-hidden='true'></i>",
+                    "action": "event",
+                    "showValidations": false,
+                    "customClass": "help-btn",
+                    "tableView": false,
+                    "key": "usi_periodi_prelievo",
+                    "type": "button",
+                    "event": "helpBtnClick",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "width": 1,
+                "offset": 0,
+                "push": 0,
+                "pull": 0,
+                "size": "md",
+                "currentWidth": 1
+              }
+            ],
+            "key": "columnsHeaderSovracanone1",
+            "type": "columns",
+            "input": false,
+            "tableView": false
+          },
+          {
+            "label": "Indicare eventuali capacità di accumulo, se previste",
+            "applyMaskOn": "change",
+            "autoExpand": false,
+            "tableView": true,
+            "validate": {
+              "maxLength": 4000
+            },
+            "key": "JS_USI.capacita_accumulo",
+            "conditional": {
+              "show": true,
+              "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+              "eq": "si"
+            },
+            "logic": [
+              {
+                "name": "disableFlgAutorProvvUso",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+                    "eq": "no"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "disableField",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": true
+                  }
+                ]
+              },
+              {
+                "name": "enableFlgAutorProvvUso",
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "show": true,
+                    "when": "JS_DATI_SANATORIA.flg_autor_provv_uso",
+                    "eq": "si"
+                  }
+                },
+                "actions": [
+                  {
+                    "name": "enableField",
+                    "type": "property",
+                    "property": {
+                      "label": "Disabled",
+                      "value": "disabled",
+                      "type": "boolean"
+                    },
+                    "state": false
+                  }
+                ]
+              }
+            ],
+            "type": "textarea",
+            "input": true
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI6",
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ]
+      },
+      {
+        "title": "* Restituzione",
+        "collapsible": true,
+        "key": "panelRestituzione",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "key": "save_DATI_IDENTIFICATIVI5",
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          },
+          {
+            "key": "esercizioColumns1",
+            "type": "columns",
+            "input": false,
+            "label": "Columns",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "label": "Portata complessivamente restituita (l/s)",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "validate": {
+                      "required": true,
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 7 cifre intere e un massimo di 4 cifre decimali"
+                    },
+                    "key": "JS_RESTITUZIONE.portata_tot_rest",
+                    "logic": [
+                      {
+                        "name": "checkGlobalDisabled",
+                        "actions": [
+                          {
+                            "name": "disableFormAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "type": "textfield",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "currentWidth": 4
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "label": "Volume annuo complessivamente restituito (m3)",
+                    "applyMaskOn": "change",
+                    "tableView": true,
+                    "validate": {
+                      "required": true,
+                      "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                      "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 9 cifre intere e un massimo di 5 cifre decimali",
+                      "custom": "try {\n  // Recupero le informazioni per portata media e portata massima\n  var portataMediaValue = input;\n  var portataMassimaValue = data.JS_ESERCIZIO_DERIVAZIONE.portata_max;\n  // Le informazioni sono stringhe, devo sostituire il separatore decimale\n  var portataMedia = Number(portataMediaValue.replace(',', '.'));\n  var portataMassima = Number(portataMassimaValue.replace(',', '.'));\n  // La portata media deve essere minore/uguale alla massima\n  if (portataMedia <= portataMassima) {\n    // Validazione completa\n    return true;\n    // #\n  } else {\n    // Validazione fallita, ritorno un \"codice errore\"\n    return \"portataMediaGreaterPortataMassima\";\n  }\n} catch (e) {}"
+                    },
+                    "key": "JS_RESTITUZIONE.vol_annuo_tot_rest",
+                    "logic": [
+                      {
+                        "name": "checkGlobalDisabled",
+                        "actions": [
+                          {
+                            "name": "disableFormAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "type": "textfield",
+                    "input": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ],
+                "currentWidth": 4
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [],
+                "currentWidth": 4
+              }
+            ],
+            "tableView": false
+          }
+        ]
+      },
+      {
+        "title": "* Note",
+        "collapsible": true,
+        "key": "panelNote",
+        "type": "panel",
+        "label": "Panel",
+        "collapsed": true,
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "key": "JS_NOTE.note_derivazione",
+            "rows": 2,
+            "type": "textarea",
+            "input": true,
+            "label": "Indicare eventuali note se necessarie (max 500 caratteri)",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "validate": {
+              "maxLength": 500,
+              "customMessage": "Il testo delle note è troppo lungo"
+            },
+            "tableView": true,
+            "autoExpand": false
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI4",
+            "type": "button",
+            "event": "saveSectionData",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "checkGlobalDisabled",
+                "actions": [
+                  {
+                    "name": "disableFormAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "checkSectionValidity",
+                "actions": [
+                  {
+                    "name": "disableSectionSave",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ]
+      }
+    ]
+  },
+  "componentName": "FormioDatiGeneraliComponent"
+}

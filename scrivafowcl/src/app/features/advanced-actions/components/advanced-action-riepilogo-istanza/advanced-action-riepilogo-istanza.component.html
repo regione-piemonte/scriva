@@ -1,0 +1,45 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card">
+  <h2 class="title mb-4">
+    <strong>Istanza di riferimento</strong>
+  </h2>
+
+  <div class="row info">
+    <div class="col-12">
+      <p>Soggetto titolare</p>
+      <p class="info-value"> {{ denTitolareIstanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Identificativo istanza</p>
+      <p class="info-value"> {{ istanza?.cod_istanza }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Codice procedimento</p>
+      <p class="info-value"> {{ istanza?.cod_pratica }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Data inserimento</p>
+      <p class="info-value"> {{ istanza?.data_inserimento_istanza | date: 'dd/MM/yyyy' }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize"> {{ istanza?.stato_istanza.descrizione_stato_istanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Numero protocollo</p>
+      <p class="info-value"> {{ istanza?.num_protocollo_istanza }} </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Data protocollo</p>
+      <p class="info-value"> {{ istanza?.data_protocollo_istanza | date: 'dd/MM/yyyy' }} </p>
+    </div>
+  </div>
+</div>

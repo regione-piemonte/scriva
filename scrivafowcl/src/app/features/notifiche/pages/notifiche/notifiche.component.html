@@ -1,0 +1,126 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="section n-section">
+
+  <!-- TITOLO DELLA PAGINA -->
+  <scriva-page-title
+    [title]="N_C.PAGE_TITLE"
+    [showUserInfo]="false"
+  ></scriva-page-title>
+  
+  <div class="row s-mt--30">
+    <div class="col-auto s-mr--a"></div>
+    <div class="col-auto">
+      <!-- BUTTON PER SEGNARE TUTTE LE NOTIFICHE COME LETTE -->
+      <div class="n-link-markasread" [attr.aria-label]="N_C.LABEL_MARK_ALL_AS_READ"
+        (click)="segnaTutteNotificheLette()"
+      >
+        {{ N_C.LABEL_MARK_ALL_AS_READ }}
+      </div>
+    </div>
+  </div>
+
+  <!-- CARD CONTENITORE NOTIFICHE -->
+  <div class="card s-mtb--20">
+    
+    <div class="row row-notifiche s-mt--30">
+      <!-- BUTTON CON APERTURA FILTRI -->
+      <div class="col col-n-filtri s-mr--a">
+        <scriva-icon-text-button
+          [dataConfig]="N_C.BUTTON_FILTRI.data"
+          [cssConfig]="N_C.BUTTON_FILTRI.css"
+          (onClick)="toggleFormRicerca()"
+        ></scriva-icon-text-button>
+      </div>
+
+      <!-- BUTTON PER ORDINAMENTO PER DATA -->
+      <div class="col col-n-ordina-data">
+        <scriva-icon-text-button
+          [dataConfig]="N_C.BUTTON_ORDINA_DATA.data"
+          [cssConfig]="N_C.BUTTON_ORDINA_DATA.css"
+          (onClick)="onOrdinaPerData()"
+        ></scriva-icon-text-button>
+      </div>
+
+      <!-- BUTTON CON ROTELLA CONFIGURAZIONE -->
+      <div class="col col-n-opzioni">
+        <!-- SOLO FO E' ABILITATO -->
+        <ng-container *scrivaMaintain="isFrontOffice">
+          <scriva-icon-text-button
+            [dataConfig]="N_C.BUTTON_OPZIONI.data"
+            [cssConfig]="N_C.BUTTON_OPZIONI.css"
+            (onClick)="navigateToProfilo()"
+          ></scriva-icon-text-button>
+        </ng-container>
+      </div>
+    </div>
+
+    <!-- FORM CONTENENTE I FILTRI DI RICERCA -->
+    <div class="row row-notifiche s-mt--20" *ngIf="showFormRicerca">
+      <div class="col-xl-12 col-md-12">
+        <scriva-notifiche-search
+          (onConfermaFiltri)="onConfermaFiltri($event)"
+          (onResetFiltri)="onResetFiltri($event)"
+        ></scriva-notifiche-search>
+      </div>
+    </div>
+    
+    <!-- ANCHOR PER GLI ALERT DELLA PAGINA -->
+    <div class="row row-notifiche s-mt--20">
+      <div class="col">
+        <div class="alert-anchor" [id]="N_C.ALERT_ANCHOR"></div>
+      </div>
+    </div>
+
+    <!-- NESSUNA NOTIFICA -->
+    <ng-container *ngIf="!checkNotifiche">
+      <div class="container-fluid ns-container-head mt-4">
+        <div class="row">
+          <div class="col">
+            <scriva-alert
+              [alertConfigs]="alertConfigsNoNotifica"
+            ></scriva-alert>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- LISTA DELLE NOTIFICHE -->
+    <ng-container *ngFor="let notificaApp of notificheApp;">
+      <div class="container-fluid s-plr--0">
+        <div class="row">
+          <div class="col-xl-12 col-md-12">
+            <scriva-notifica-card
+              [notifica]="notificaApp"
+              [notificaCardTypeView]="N_C.NOTIFICA_CARD_TYPE"
+              (onNotificaCancellata)="onNotificaCancellata($event)"
+              (onNotificaLetta)="onNotificaLetta($event)"
+              (onDettaglioNotifica)="onDettaglioNotifica($event)"
+              (onVaiAlProcedimento)="onVaiAlProcedimento($event)"
+            ></scriva-notifica-card>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+   
+    
+    <!-- PAGINATORE PER LE NOTIFICHE -->
+    <div class="row s-mtb--30">
+      <div class="col-xl-12 col-md-12">
+        <scriva-paginatore
+          [paginazione]="notifichePag"
+          (onCambioPagina)="onCambioPaginatore($event)"
+        ></scriva-paginatore>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,32 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<span id="confermaPageContainer">
+  <div class="alert-box success" *ngIf="istanza">
+    <i class="icon icon-big fa fa-check-circle-o" aria-hidden="true"></i>
+    <span>
+      <p class="text-only">
+        <strong>{{ infoText }}</strong>
+      </p>
+    </span>
+  </div>
+
+  <div class="buttons-container">
+    <div>
+      <button class="btn btn-large btn-link" (click)="goToHome()">
+        TORNA ALLA HOME
+      </button>
+    </div>
+    <div>
+      <button class="btn btn-large btn-primary" (click)="goToWizard()">
+        PRESENTA UNA NUOVA ISTANZA
+      </button>
+    </div>
+  </div>
+</span>

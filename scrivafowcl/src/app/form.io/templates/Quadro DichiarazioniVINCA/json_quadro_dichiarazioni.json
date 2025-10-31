@@ -1,0 +1,397 @@
+{
+  "label": "Dichiarazioni",
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "<b>Per procedere nella compilazione dell’istanza è necessario dichiarare quanto segue:</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni[0].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_pubbl_sito"
+      },
+      {
+        "key": "dichiarazioni[0].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di essere informato che l'Amministrazione si riterrà libera di consentire l'accesso al pubblico mediante la pubblicazione della documentazione progettuale allegata all'istanza sul sito web istituzionale dell'Ente (ai sensi del d.lgs. 152/2006)"
+      },
+      {
+        "key": "dichiarazioni[0].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[0].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere informato che l'Amministrazione si riterrà libera di consentire l'accesso al pubblico mediante la pubblicazione della documentazione progettuale allegata all'istanza sul sito web istituzionale dell'Ente (ai sensi del d.lgs. 152/2006)",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[1].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_elenco_allgt"
+      },
+      {
+        "key": "dichiarazioni[1].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di aver preso visione che il file “elenco allegati” relativo alla documentazione allegata alla presente istanza potrà essere scaricato e visionato al momento della presentazione dell’istanza."
+      },
+      {
+        "key": "dichiarazioni[1].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[1].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere consapevole che il file <b>“elenco allegati”</b> relativo alla documentazione allegata alla presente istanza potrà essere scaricato e visionato al momento della presentazione dell’istanza.",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[2].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_sanzione"
+      },
+      {
+        "key": "dichiarazioni[2].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di essere consapevole delle sanzioni penali previste in caso di dichiarazioni non veritiere e di falsità negli atti e della conseguente decadenza dai benefici di cui artt. 75 e 76 del D.P.R. 445/2000"
+      },
+      {
+        "key": "dichiarazioni[2].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[2].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere consapevole delle sanzioni penali previste in caso di <b>dichiarazioni non veritiere e di falsità</b> negli atti e della conseguente decadenza dai benefici di cui artt. 75 e 76 del D.P.R. 445/2000",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[3].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_dati_pers"
+      },
+      {
+        "key": "dichiarazioni[3].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di essere consapevole delle sanzioni penali previste in caso di dichiarazioni non veritiere e di falsità negli atti e della conseguente decadenza dai benefici di cui artt. 75 e 76 del D.P.R. 445/2000"
+      },
+      {
+        "key": "dichiarazioni[3].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[3].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere consapevole che nei documenti allegati non devono essere presenti dati sensibili.",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[4].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_segr_industr"
+      },
+      {
+        "key": "dichiarazioni[4].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di essere consapevole delle sanzioni penali previste in caso di dichiarazioni non veritiere e di falsità negli atti e della conseguente decadenza dai benefici di cui artt. 75 e 76 del D.P.R. 445/2000"
+      },
+      {
+        "key": "dichiarazioni[4].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[4].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere consapevole che sia gli allegati documentali inseriti nella categoria/tipologia allegati denominata 'Documentazione soggetta al segreto industriale’ per ragioni di segreto industriale o commerciale, ai sensi dell’art. 9 comma 4 del d.lgs. 152/2006, sia gli allegati documentali per i quali è stato indicato 'Documenti ad accesso riservato’ non saranno resi accessibili al pubblico",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[5].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_pagam"
+      },
+      {
+        "key": "dichiarazioni[5].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di essere consapevole che sia gli allegati documentali inseriti nella categoria/tipologia allegati denominata 'Documentazione soggetta al segreto industriale’ per ragioni di segreto industriale o commerciale, ai sensi dell’art. 9 comma 4 del d.lgs. 152/2006, sia gli allegati documentali per i quali è stato indicato 'Documenti ad accesso riservato’ non saranno resi accessibili al pubblico"
+      },
+      {
+        "key": "dichiarazioni[5].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[5].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di essere consapevole che i pagamenti non andati a buon fine potranno essere richiesti successivamente alla presentazione della presente istanza. Inoltre, prendo atto che potrebbero essere richiesti da parte dell’autorità competente importi ad integrazione degli oneri già versati",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      }
+    ]
+  }
+}

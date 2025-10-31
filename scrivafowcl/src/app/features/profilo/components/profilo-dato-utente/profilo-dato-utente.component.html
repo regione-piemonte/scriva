@@ -1,0 +1,45 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="row">
+  <div class="col-lg-6 s-mtb--a">
+    <label class="s-mb--0 pdu-label" [attr.aria-label]="label" [attr.for]="idDOM" >
+      <i class="fa fa-lg pdu-data-icon" [ngClass]="icon" aria-hidden="true"></i> {{ label }}
+    </label>
+  </div>
+  <div class="col-lg-4 align-self-center">
+    <ng-container *scrivaRemove="labelOnly">
+      <input type="text" class="form-control uppercase"
+        [id]="idDOM"
+        [name]="idFC"
+        [(ngModel)]="_value"
+        [disabled]="disabled"
+      />
+    </ng-container>
+  </div>
+  <div class="col-lg-2 align-self-center" *scrivaMaintain="checkActions">
+    <div class="container-fluid">
+      <div class="row">
+
+        <div class="col pdu-action-col ml-auto" *ngFor="let action of actions; let i = index">
+
+          <button type="button" class="btn"
+            [attr.title]="action.title || ''"
+            [disabled]="action.disabled"
+            (click)="onActionClick(action)"
+          >
+            <scriva-icon [icon]="action.icon" ></scriva-icon>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

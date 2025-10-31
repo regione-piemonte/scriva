@@ -1,0 +1,254 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.modal-header {
+  align-items: center;
+  padding: 16px 20px 10px 30px;
+
+  .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  i {
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+}
+
+.content {
+  padding: 10px 30px 20px 30px;
+  overflow-x: auto;
+
+  form {
+    p.subtitle {
+      font-size: 0.875rem;
+    }
+    div.row {
+      align-items: flex-end;
+    }
+    .form-control.ng-touched.ng-invalid:not(form) {
+      border: 2px solid #a94442;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 20px;
+    margin-bottom: 1rem;
+  }
+}
+
+.option-hidden {
+  display: none;
+}
+
+.bg-gray {
+  background-color: #f7f7f7;
+}
+
+.card {
+  padding: 30px;
+  margin: 8px 0;
+  overflow-x: auto;
+  box-shadow: 3px 3px 8px 0 #00000048;
+  &.card-info-dettaglio {
+    margin-bottom: 2rem;
+  }
+}
+
+.custom-card-footer {
+  padding-top: 16px;
+  .form-group {
+    margin-bottom: 0;
+  }
+}
+
+.modal-footer {
+  display: block;
+  padding: 16px 30px;
+}
+
+.push-left {
+  margin-right: auto;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+.btn-link:focus {
+  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+}
+
+.add-container {
+  color: #006cb4;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: fit-content;
+  border: none;
+  background-color: inherit;
+  // padding: 0;
+  padding-left: 0;
+  margin-top: -10px;
+
+  .add-icon {
+    margin-right: 14px;
+    font-size: 1.2rem;
+  }
+  .add-text {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  input {
+    margin-right: 0.5rem;
+    height: 20px;
+    width: 20px;
+  }
+  label {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.aggiungiUbicazioneWrapper {
+  border: 1px solid #d1d1d1;
+  padding: 0.5rem;
+}
+
+.segment-title {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  border-bottom: 1px solid #d1d1d1;
+  margin-bottom: 1.875rem;
+
+  button {
+    font-weight: bold;
+    padding: 18px 20px;
+    // font-size: 1.2rem;
+    margin: 0;
+    background-color: transparent;
+    border: none;
+    &:focus {
+      outline: none;
+    }
+    &:focus-visible {
+      text-decoration: underline;
+      outline: none;
+    }
+  }
+
+  .selected {
+    color: #006cb4;
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 20px;
+      left: -20px;
+      width: calc(100% + 40px);
+      height: 4px;
+      background-color: #006cb4;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+
+  button {
+    &.disabled {
+      pointer-events: none !important;
+      cursor: default;
+      img {
+        filter: grayscale(1);
+      }
+    }
+  }
+}
+
+.radio-wrapper {
+  input {
+    margin: 0 0.625rem 0.5rem 0;
+  }
+}
+
+.alert-box {
+  margin-bottom: 2rem;
+}
+
+.ricadenza-header {
+  color: black;
+  font-size: 1rem;
+  white-space: normal;
+  line-height: 1;
+}
+
+.fa-check-circle-o {
+  font-size: 1.5rem;
+  color: #61b87a;
+  margin-right: 8px;
+}
+
+.invalid-field {
+  border: 2px solid #a94442;
+}
+
+.invalid-text {
+  font-size: 12px;
+  color: #a94442;
+}
+
+:host ::ng-deep ngb-typeahead-window {
+  max-height: 400px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:host ::ng-deep .highlighted-row {
+  background-color: #fdf9e5;
+}
+
+:host ::ng-deep input[type='checkbox'] {
+  height: 15px;
+  width: 15px;
+}
+
+:host ::ng-deep .datatable-body-cell {
+  display: flex;
+  align-items: center;
+}
+
+:host ::ng-deep .ngx-datatable.material {
+  box-shadow: none;
+  margin-bottom: 0;
+  max-height: 850px;
+}
+
+.comune-mancante-errore {
+  border: 2px solid #a94442;
+}
+
+.max-vertical-table {
+  max-height: 500px;
+  overflow-y: visible;
+}

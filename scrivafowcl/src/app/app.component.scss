@@ -1,0 +1,362 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+/* You can add global styles to this file, and also import other style files */
+// html,
+// body {
+//   height: 100%;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: Roboto, 'Helvetica Neue', sans-serif;
+//   background-color: #eee;
+// }
+$header-height: 62px;
+$footer-height: 179.1px;
+$inner-page-height: calc(100vh - #{$header-height} - #{$footer-height});
+$sidebar-breakpoint: 800px;
+
+body {
+  background-color: #f1f3f8;
+}
+
+.container-fluid {
+  @media screen and (max-width: $sidebar-breakpoint) {
+    padding: 0;
+  }
+  @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+    padding: 0 0 0 67px;
+  }
+}
+
+header .container-fluid {
+  @media screen and (max-width: $sidebar-breakpoint) {
+    padding: 0 15px;
+    a {
+      font-size: 0.875rem;
+      font-weight: bold;
+    }
+  }
+  @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+    padding: 0 104px;
+    a {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+  }
+}
+
+footer .container-fluid {
+  @media screen and (max-width: $sidebar-breakpoint) {
+    padding: 0 15px;
+  }
+  @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+    padding: 0 104px;
+  }
+}
+
+.skip-link {
+  background: white;
+  color: black;
+  border: 6px solid #b8191a;
+  outline: none;
+  padding: 10px;
+  font-weight: bold;
+  left: calc(50vw - 125px);
+  width: 250px;
+  text-align: center;
+  position: absolute;
+  z-index: 99999;
+  transform: translateY(-100vh);
+  transition: transform 0.5s;
+  &:focus {
+    transform: translateY(0);
+    top: 5px;
+  }
+}
+
+header {
+  nav {
+    &.navbar {
+      padding: 0.5rem 0;
+    }
+    @media screen and (max-width: $sidebar-breakpoint) {
+      .menu-button {
+        display: block;
+      }
+    }
+    @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+      .menu-button {
+        display: none;
+      }
+    }
+    .menu-button {
+      padding: 0 1rem 0 0;
+      i {
+        font-size: 1.5em;
+        color: white;
+      }
+    }
+    .navbar-brand {
+      letter-spacing: 0.48px;
+      margin: 0 10px;
+      white-space: normal;
+      cursor: default;
+      &:focus {
+        outline: none;
+      }
+      &:focus-visible {
+        outline: none;
+        // box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+      }
+    }
+    .nav-button-group {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+
+      span {
+        margin-left: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+.user-circle {
+  background-color: white;
+  color: #006cb4;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.dropdown-toggle {
+  padding: 0;
+  &::after {
+    display: none !important;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+  }
+}
+
+.page-content {
+  background-color: #f1f3f8;
+}
+
+main {
+  @media screen and (max-width: $sidebar-breakpoint) {
+    padding: 0 15px;
+  }
+  @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+    padding: 0 0.75rem;
+  }
+  overflow-x: hidden;
+  min-height: $inner-page-height;
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: none;
+    // box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+  }
+}
+
+footer {
+  span {
+    display: block;
+  }
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.75rem 0 !important;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  // to adapt once final svg are available:
+  .logo-left {
+    max-width: 174px;
+  }
+  .logo-center {
+    max-width: 214px;
+  }
+  .logo-right {
+    max-width: 171px;
+  }
+}
+
+.bg-second-blue {
+  background-color: #213366;
+}
+
+.footer-link-group {
+  padding: 1.375rem 0;
+
+  div {
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    margin-right: 20px;
+    padding: 0 15px;
+    cursor: pointer;
+    @media screen and (max-width: $sidebar-breakpoint) {
+      font-size: 0.625rem;
+    }
+    @media screen and (min-width: ($sidebar-breakpoint + 1px)) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+#errorBox {
+  min-height: $inner-page-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Sidebar */
+
+::ng-deep .ng-sidebar__content {
+  position: relative !important;
+}
+
+.card {
+  padding-left: 6px;
+  border: 0;
+  max-width: 250px;
+  height: 100%;
+
+  margin-right: 12px;
+  margin-left: 5px;
+  box-shadow: 3px 3px 8px 0 #00000048;
+}
+
+.mobile-bar {
+  margin: 0;
+  border-radius: 0;
+}
+
+.sidebar-item {
+  color: #006cb4;
+  font-weight: bold;
+  font-size: 0.875rem;
+  min-height: 47px;
+  margin: 4px 0;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  img {
+    width: 20px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.selected {
+  background-color: #178cd633;
+}
+
+.selected::before {
+  content: '';
+  display: block;
+  position: relative;
+  margin-left: -6px;
+  width: 6px;
+  height: 47px;
+  background-color: #b91818;
+}
+
+.sidebar-icon {
+  width: 20px;
+  margin-right: 8px;
+  margin-left: 26px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// #####################
+// SIDEBAR NOTIFICATIONS
+// #####################
+
+#opacityLayer {
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+#sidebarNotifiche {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  word-wrap: normal;
+  transition: 0.5s;
+  
+  a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #006CB4;
+    display: block;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    opacity: 0.9;
+  }
+}
+
+.closedSidebar {
+  right: -400px;
+}
+
+.openedSidebar {
+  right: 0px;
+}
+
+.hideLayout {
+  display: none;
+}
+
+.showLayout {
+  display: block;
+}

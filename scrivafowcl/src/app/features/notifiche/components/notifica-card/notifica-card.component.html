@@ -1,0 +1,83 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- CONTAINER DELLA NOTIFICA IN FORMATO CARD -->
+<div class="card" [ngClass]="[cssCard, cssCardDaLeggere, cssCardFinale]" (click)="onCardClick(notifica)">
+  
+  <!-- TITOLO CON PULSANTE DI CHIUSURA -->
+  <span class="title">
+    <button class="btn btn-link title-text" title="{{ notifica.des_oggetto }}">{{ notifica.des_oggetto }}</button>
+    <button *ngIf="!notifica.data_cancellazione"
+      scrivaClickStopPropagation
+      class="btn-action" aria-label="chiudi"
+      (click)="segnaComeCancellata(notifica)"
+    >
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </button>
+  </span>
+  
+  <!-- DESCRIZIONE DELLA NOTIFICA -->
+  <span class="type-box" *ngIf="descrizioneAdempimento">
+    <span class="type-content" title="{{ descrizioneAdempimento }}" [attr.aria-label]="descrizioneAdempimento">
+      {{ descrizioneAdempimento }}
+    </span>
+  </span>
+  <!-- DESCRIZIONE DELLA SCRIVANIA SE NON SI RIDERISCE AD UN PROCEDIMENTO -->
+  <span class="type-box" *ngIf="!descrizioneAdempimento">
+    <span class="type-content" title="{{ descrizioneScrivania }}" [attr.aria-label]="descrizioneScrivania">
+      {{ descrizioneScrivania }}
+    </span>
+  </span>
+
+  <!-- DESCRIZIONE DEL MESSAGGIO DELLA NOTIFICA -->
+  <span class="content" [attr.aria-label]="notifica.des_messaggio">
+    {{ notifica.des_messaggio }}
+  </span>
+  
+  <!-- DATA INSERIMENTO DELLA NOTIFICA -->
+  <span class="date" [attr.aria-label]="notifica.data_inserimento">
+    {{ notifica.data_inserimento | date: 'dd MMM yyyy HH:mm' }}
+  </span>
+  
+  <!-- PULSANTI DEL FOOTER DELLA CARD -- NEL DETTAGLIO -->
+  <div class="d-flex justify-content-end" *scrivaMaintain="isViewDetail">
+    <scriva-primary-button
+        *ngIf="allowVaiAProcedimento"
+        class="btn btn-link navigate-to-procedimento float-right"
+        scrivaClickStopPropagation
+        [dataConfig]="NC_C.BTN_VAI_AL_PROCEDIMENTO"
+        (onClick)="navigateToPratica(notifica)">
+      </scriva-primary-button>
+  </div>
+
+  <!-- PULSANTI DEL FOOTER DELLA CARD-->
+  <div class="d-flex justify-content-between footer-buttons" *scrivaRemove="isViewDetail">
+    <button *ngIf="isNotificaDaLeggere && checkSegnaComeLetta"
+      type="button" class="btn btn-link mark-as-read" aria-label="Segna come letto"
+      (click)="segnaComeLetta(notifica)"
+    >
+      Segna come letto
+    </button>
+
+    <button type="button" class="btn btn-link navigate-to-notifica" aria-label="Dettaglio"
+      scrivaClickStopPropagation
+      (click)="vaiADettaglioNotifica(notifica)"
+    >
+      Dettaglio
+    </button>
+
+    <button *ngIf="allowVaiAProcedimento"
+      type="button" class="btn btn-link navigate-to-procedimento"
+      scrivaClickStopPropagation
+      (click)="vaiAProcedimento(notifica)"
+    >
+      Vai al procedimento
+    </button>
+  </div>
+</div>

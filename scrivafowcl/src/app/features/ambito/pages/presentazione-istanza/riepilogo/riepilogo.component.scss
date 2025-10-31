@@ -1,0 +1,274 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.page-title {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.info {
+  * {
+    font-size: 0.875rem;
+  }
+  .info-type {
+    line-height: 1.5;
+    // margin-bottom: 1rem;
+  }
+  .info-value {
+    font-weight: bold;
+    margin-bottom: 1.625rem;
+  }
+  .capitalize {
+    text-transform: lowercase;
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.action-group {
+
+  h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .double-btn {
+    margin-bottom: 1rem;
+    button {
+      width: 14.25rem;
+      margin-bottom: 0.25rem;
+      &:not(:last-child) {
+        margin-right: 1.25rem;
+      }
+    }
+  }
+
+  hr {
+    margin-top: 0;
+  }
+
+  .extended-top-margins {
+    margin-top: 0.5rem;
+  }
+
+  .extended-bottom-margins {
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
+  .file-name {
+    margin: 0 0.625rem;
+    background-color: transparent;
+    border: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.card {
+  padding: 30px;
+  margin: 8px 0;
+  overflow-x: hidden;
+  box-shadow: 3px 3px 8px 0 #00000048;
+}
+
+:host ::ng-deep .help-btn {
+  padding: 0 6px;
+  color: #006cb4;
+  border: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 28px;
+}
+
+:host ::ng-deep .card {
+  border: none !important;
+  box-shadow: none;
+
+  .card-header {
+    background-color: transparent;
+    color: #006CB4;
+    font-weight: bold;
+    font-size: 1.125rem;
+    border-bottom: none;
+    cursor: pointer;
+  }
+
+}
+
+:host ::ng-deep .question-grey {
+  .col-form-label {
+    background-color: #eeeeee;
+    display: block;
+  }
+}
+
+:host ::ng-deep .sub-question {
+  .col-form-label {
+    background-color: transparent;
+  }
+}
+
+:host ::ng-deep .sub-section {
+  .card-header {
+    color: black;
+  }
+}
+
+:host ::ng-deep .formio-well {
+  .card {
+    padding: 0;
+    margin-left: 0;
+    background-color: transparent !important;
+    border: none;
+    margin: 15px 0;
+
+    div[ref=nested-questionWell] {
+      .formio-component-radio > label {
+        padding-right: 30px;
+      }
+    }
+    div[ref=nested-questionWell2] {
+      .formio-component-radio > label {
+        padding-right: 30px;
+      }
+    }
+  }
+}
+
+:host ::ng-deep .formio-component-textfield {
+  input:disabled {
+    background-color: #f8f9fa;
+    border: none;
+  }
+}
+
+:host ::ng-deep .field-required:after {
+  content: none;
+}
+:host ::ng-deep .field-required:before {
+  color: black;
+  content: '*';
+}
+
+:host ::ng-deep .form-check {
+  padding-left: 1.85rem;
+}
+
+:host ::ng-deep .form-check-input[type="checkbox"] {
+  margin-top: 0;
+  margin-left: -2.5rem;
+}
+
+:host ::ng-deep .form-radio {
+  margin: 5px 0 0 10px;
+  .form-check-input[type="checkbox"] {
+    margin-left: -1.85rem;
+  }
+}
+
+:host ::ng-deep .disable-subsection {
+  .form-check-input[type="checkbox"] {
+    margin-left: -1.85rem;
+  }
+  label {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+:host ::ng-deep input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+}
+
+:host ::ng-deep .choices__list--multiple .choices__item[data-deletable] {
+  background-color: #006CB4;
+  border: 1px solid black;
+  button {
+    border-left: 1px solid black;
+  }
+}
+
+.alert-box {
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+:host ::ng-deep .ngx-datatable.material {
+  box-shadow: none;
+}
+
+.table-responsabili-istanza {
+  margin-bottom: 0px !important;
+}
+
+/**
+ * Vado a modificare la classe di stile interna per gestire un errore grafico della libreria dove non colora di grigetto le select.
+ * @jira SCRIVA-1446
+ */
+ :host ::ng-deep div[disabled] {
+  background-color: #e9ecef; // #EBEBE4;
+}
+
+:host ::ng-deep .formio-error-wrapper {
+  padding: 0;
+  background-color: transparent;
+}
+
+:host ::ng-deep .editRow {
+  color: #006cb4;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border: none;
+  }
+  i {
+    font-size: 1.3333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+}
+
+:host ::ng-deep .removeRow {
+  color: #c01c1c;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border: none;
+  }
+  i {
+    font-size: 1.5em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+}

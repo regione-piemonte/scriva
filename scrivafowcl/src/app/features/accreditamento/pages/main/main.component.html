@@ -1,0 +1,118 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card" *ngIf="formAccreditamento">
+  <h3>Accreditamento</h3>
+
+  <div class="disclaimer">
+    <p>
+      Si richiede gentilmente di indicare un indirizzo <strong>e-mail</strong> per
+      l'accreditamento alla <strong>"Scrivania del Richiedente".</strong>
+    </p>
+    <p>Nota bene: <strong>non indicare e-mail PEC</strong></p>
+    <small class="form-text text-muted">*Campo obbligatorio</small>
+  </div>
+
+  <div class="anagrafica">
+    <div class="row">
+      <div class="form-group col-md-4">
+        <span> Codice fiscale </span>
+        <p>
+          <strong>{{ compilante?.cf_compilante }}</strong>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <span> Nome </span>
+        <p>
+          <strong>{{ compilante?.nome_compilante }}</strong>
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <span> Cognome </span>
+        <p>
+          <strong>{{ compilante?.cognome_compilante }}</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <form [formGroup]="formAccreditamento" id="formAccreditamento">
+    <div class="form-group form-check">
+      <input
+        type="checkbox"
+        class="form-check-input"
+        id="checkAutorizza"
+        [formControl]="formAccreditamento.get('checkAutorizza')"
+      />
+      <label for="checkAutorizza" class="form-check-label">
+        * Dichiaro di aver preso visione dell'Informativa sul trattamento dei dati personali, aggiornata all’art. 13 del GDPR 2016/679, consultabile sulla home page di accesso al servizio
+      </label>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="email"> *E-mail (NON PEC) </label>
+        <input
+          type="text"
+          class="form-control"
+          id="email"
+          [formControl]="formAccreditamento.get('email')"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="confermaEmail"> *Ripeti e-mail </label>
+        <input
+          type="text"
+          class="form-control"
+          id="confermaEmail"
+          [formControl]="formAccreditamento.get('confermaEmail')"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <button
+          type="button"
+          class="btn btn-outline-primary"
+          (click)="confermaEmail()"
+          [disabled]="!formAccreditamento.get('checkAutorizza')?.value"
+        >
+          CONFERMA E-MAIL
+        </button>
+      </div>
+    </div>
+    <p>Indicare il codice di verifica inviato all'indirizzo e-mail indicato</p>
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="otpCode"> *Codice verifica </label>
+        <input
+          type="text"
+          class="form-control"
+          id="otpCode"
+          [formControl]="formAccreditamento.get('otpCode')"
+        />
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="actions">
+  <button type="button" class="btn btn-link" (click)="annulla()">
+    ANNULLA
+  </button>
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    (click)="accredita()"
+    [disabled]="!formAccreditamento.valid"
+  >
+    ACCREDITA
+  </button>
+</div>

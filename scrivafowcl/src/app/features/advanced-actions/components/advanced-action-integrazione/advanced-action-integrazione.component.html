@@ -1,0 +1,48 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header" *ngIf="isModal">
+  <h2 class="modal-title">{{modalTitle}}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div [class.content]="isModal" id="content">
+  <form [formGroup]="form">
+    <div class="row py-4">
+      <div class="form-group col">
+        <label for="data">Data di protocollo*</label>
+        <input type="date" class="form-control" id="data" max="{{ today | date: 'yyyy-MM-dd' }}"  [formControl]="this.form?.get('dataProtocolloAllegato')"/>
+        <app-form-error-message [control]="this.form?.get('dataProtocolloAllegato')"></app-form-error-message>
+      </div>
+      <div class="form-group col">
+        <label for="numero">Numero di protocollo*</label>
+        <input type="text" class="form-control" id="numero" [maxlength]= "numProtocolloMaxLength" [formControl]="this.form?.get('numProtocolloAllegato')"/>
+        <app-form-error-message [control]="this.form?.get('numProtocolloAllegato')"></app-form-error-message>
+      </div>
+      <div class="form-group col-md-12">
+        <small class="form-text text-muted">*Campo obbligatorio</small>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer" *ngIf="isModal">
+  <div class="row">
+      <div  class="col-md-auto push-left">
+          <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+              ANNULLA
+          </button>
+      </div>
+      <div *ngIf="!readonly" class="col-md-auto push-right">
+          <button type="button" class="btn btn-large btn-primary" [disabled]="!form.valid" (click)="onConferma()">
+              CONFERMA
+          </button>
+      </div>
+  </div>
+</div>

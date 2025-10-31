@@ -1,0 +1,54 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="section nd-section">
+  
+  <div class="row s-mt--20">
+    <div class="col">
+      <scriva-link-button
+        *ngIf="isFromHome"
+        [dataConfig]="ND_C.BTN_TORNA_HOME"
+        (onClick)="vaiAllaHome()">
+      </scriva-link-button>
+      <scriva-link-button
+        *ngIf="isFromSidebar"
+        [dataConfig]="ND_C.BTN_TORNA_NOTIFICHE"
+        (onClick)="vaiAlleNotifiche()">
+      </scriva-link-button>
+    </div> 
+  </div>
+  
+  <div class="row">
+    <div class="col">
+      <scriva-page-title
+        [title]="ND_C.BTN_PAGE_TITLE"
+        [showUserInfo]="false"
+        [customContainer]="ND_C.TITLE_CONTAINER"
+      ></scriva-page-title>
+    </div>
+  </div>
+  
+  <div class="row s-mt--30">
+    <div class="col">
+      <scriva-notifica-card 
+        [notifica]="notifica"
+        [notificaCardTypeView]="ND_C.NOTIFICA_CARD_TYPE"
+        (onNotificaCancellata)="onNotificaCancellata($event)"
+        (onVaiAllaPratica)="onVaiAllaPratica($event)"
+      ></scriva-notifica-card>
+    </div>
+  </div>
+
+  <div class="row s-mt--30">
+    <div class="col">
+      <div class="alert-anchor" [id]="ND_C.ALERT_ANCHOR"></div>
+    </div>
+  </div>
+  
+</div>

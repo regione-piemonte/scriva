@@ -1,0 +1,26 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+
+
+<br/>
+<br/>
+<br/>
+<input [(ngModel)]="idIstanza" #ctrl="ngModel">
+
+<a (click)="openModalRiepilogo()" style="cursor: pointer;">
+  Apri modale riepilogo Azioni avanzate BO
+</a>
+
+<h4>Links</h4>
+
+<ng-container *ngFor="let link of links;">
+  <a [routerLink]="['/azione-avanzata',link.path,idIstanza]">{{link.path}}</a> 
+  <br/>
+</ng-container>

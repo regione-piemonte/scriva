@@ -1,0 +1,261 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<span id="riepologoContainer">
+
+  <div class="card" id="headerCard">
+    <h2 class="page-title">
+      {{ istanza?.adempimento.des_estesa_adempimento }}
+    </h2>
+
+    <div class="row">
+      <div class="col-6">
+        <div class="row info">
+          
+          <div class="col-12" *ngIf="checkAutoritaCompetente">
+            <h3 class="info-type">Autorità competente</h3>
+            <p class="info-value" [innerHTML]="autoritaCompetente"></p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkIdentificativoIstanza">
+            <h3 class="info-type">Identificativo Istanza</h3>
+            <p class="info-value"> {{ identificativoIstanza }} </p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkCodiceProcedimento">
+            <h3 class="info-type">Codice procedimento</h3>
+            <p class="info-value"> {{ codiceProcedimento }} </p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkStatoIstanzaProvvedimento">
+            <h3 class="info-type">Stato Istanza/Procedimento</h3>
+            <p class="info-value capitalize"> {{ statoIstanzaProvvedimento }} </p>
+          </div>
+                    
+          <div class="col-6" *ngIf="checkDataInvioIstanza">
+            <h3 class="info-type">Data invio istanza</h3>
+            <p class="info-value"> {{ dataInvioIstanza | date: 'dd/MM/yyyy'}} </p>
+          </div>
+
+          <div class="col-6" *ngIf="checkDataDiProtocollo">
+            <h3 class="info-type">Data di Protocollo</h3>
+            <p class="info-value"> {{ dataDiProtocollo | date: 'dd/MM/yyyy'}} </p>
+          </div>
+
+          <div class="col-6" *ngIf="checkNumeroDiProtocollo">
+            <h3 class="info-type">Numero di Protocollo</h3>
+            <p class="info-value capitalize"> {{ numeroDiProtocollo }} </p>
+          </div>
+
+          <div class="col-6" *ngIf="checkTermineProcedimento">
+            <h3 class="info-type">Termine procedimento</h3>
+            <p class="info-value"> {{ termineProcedimento | date: 'dd/MM/yyyy'}} </p>
+          </div>
+
+          <div class="col-6" *ngIf="checkEsitoProcedimento">
+            <h3 class="info-type">Esito procedimento</h3>
+            <p class="info-value capitalize"> {{ esitoProcedimento }} </p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkDataInizioOsservazioni">
+            <h3 class="info-type">Data inizio osservazioni</h3>
+            <p class="info-value"> {{ dataInizioOsservazioni | date: 'dd/MM/yyyy'}} </p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkDataFineOsservazioni">
+            <h3 class="info-type">Data fine osservazioni</h3>
+            <p class="info-value"> {{ dataFineOsservazioni | date: 'dd/MM/yyyy'}} </p>
+          </div>
+          
+          <div class="col-6" *ngIf="checkDataPubblicazione">
+            <h3 class="info-type">Data di pubblicazione</h3>
+            <p class="info-value"> {{ dataPubblicazione | date: 'dd/MM/yyyy'}} </p>
+          </div>
+
+          <div class="col-6" *ngIf="istanza?.data_conclusione_procedimento">
+            <h3 class="info-type">Data Provvedimento conclusivo</h3>
+            <p class="info-value"> {{istanza.data_conclusione_procedimento | date: 'dd/MM/yyyy'}} </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="checkResponsabiliIstanza">
+      <div class="col-12 mb-4">
+        <ngx-datatable rowHeight="auto"
+          class="material table-responsabili-istanza"
+          [headerHeight]="60"
+          [rows]="responsabiliIstanza"
+          [columns]="R_C.riferimentiProcedimento"
+          [reorderable]="false"
+          [scrollbarH]="false"
+          [footerHeight]="0"
+          [columnMode]="ColumnMode.force"
+          [messages]="{ emptyMessage: R_C.TBL_EMPTY_DATA }"
+        ></ngx-datatable>
+      </div>
+    </div>
+
+    <div *ngIf="showBtnDatiProc">
+      <button class="btn btn-large btn-outline-primary" type="button" (click)="showDetails()">        
+        DATI PROCEDIMENTO
+      </button>
+    </div>
+
+  </div>
+
+  <ng-container *ngIf="formsReady">
+    <div class="card formio-box" *ngFor="let riepilogo of quadriRiepilogo; index as i">
+      <formio
+        [form]="riepilogo.formioForm"
+        [submission]="submissions[i]"
+        (customEvent)="onCustomEvent($event)"
+        (change)="onChange($event)">
+      </formio>
+  
+      <div>
+        <button class="btn btn-large btn-outline-primary" type="button" (click)="goToStep(riepilogo.idQuadro)">
+          TORNA A {{ stepLabels[i] }}
+        </button>
+      </div>
+    </div>
+  </ng-container>
+
+<!--   <div class="card formio-box" *ngIf="qdrConclusione">
+    <h2 class="mb-3"><strong>CONCLUSIONE PROCEDIMENTO</strong></h2>
+    <p><span>Esito procedimento: {{qdrConclusione.conclusioneProcedimento[0].des_esito_procedimento}}</span></p>
+
+    <ng-container *ngIf="qdrConclusione.conclusioneProcedimentoStatale">
+      <h3 class="mb-3" style="font-size: 1rem;"><strong>CONCLUSIONE PROCEDIMENTO STATALE</strong></h3>
+      <p *ngIf="qdrConclusione.conclusioneProcedimentoStatale[0].des_esito_procedimento">
+        <span> Esito procedimento statale: {{qdrConclusione.conclusioneProcedimentoStatale[0].des_esito_procedimento}}</span>
+      </p>
+      <p *ngIf="qdrConclusione.statoProcedimentoStatale[0].des_estesa_stato_proced_statale">
+        <span>Stato procedimento statale: {{qdrConclusione.statoProcedimentoStatale[0].des_estesa_stato_proced_statale}}</span>
+      </p>
+      <p *ngIf="istanza?.data_conclusione_procedimento">
+        <span>Data conclusione procedimento: {{istanza.data_conclusione_procedimento | date: 'dd/MM/yyyy'}}</span>
+      </p>
+    </ng-container>
+  </div> -->
+  
+  <div id="actionCard"
+    class="card action-group"
+    *ngIf="istanza && showBoxPresentazione"
+  >
+    <h2 class="extended-bottom-margins">PER COMPLETARE LA PRESENTAZIONE DELL'ISTANZA:</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>1. Scarica e prendi visione del file "Elenco Allegati"</h3>
+      </div>
+      <div class="col-md-6 double-btn">
+        <button class="btn btn-outline-primary" type="button" id="btn_elenco_allegati" (click)="onScaricaAllegati()">
+          SCARICA ELENCO ALLEGATI
+        </button>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>2. Scarica e verifica i dati del "MODULO ISTANZA" (formato PDF)</h3>
+      </div>
+      <div class="col-md-6 double-btn">
+        <button class="btn btn-outline-primary" type="button" id="btn_modulo_istanza" (click)="onScaricaModulo()"
+          [disabled]="istanza?.stato_istanza.id_stato_istanza !== 10 || !allegatiScaricati">
+          SCARICA MODULO ISTANZA
+        </button>
+      </div>
+    </div>
+    <hr>
+    <h3>3. Firma digitalmente il MODULO ISTANZA scaricato;</h3>
+    <hr>
+
+    <div class="row">
+      <div class="col-xl-6 col-md-12">
+        <h3 class="extended-top-margins">4. Carica il MODULO ISTANZA FIRMATO</h3>
+      </div>
+      <div class="col-xl-6 col-md-12">
+        <button class="btn btn-outline-primary" type="button" id="btn_modulo_firmato" (click)="fileInput.click()"
+          [disabled]="!istanza || istanza?.stato_istanza.id_stato_istanza !== 20">
+          CARICA MODULO ISTANZA FIRMATO
+        </button>
+        <input #fileInput type="file" name="uploadedFile" id="uploadedFile" [multiple]="false" accept=".pdf, .p7m" hidden
+          (change)="uploadModulo($event.target.files);$event.target.value=''" />
+      </div>
+    </div>
+
+    <div *ngIf="istanza?.stato_istanza.id_stato_istanza === 30 || istanza?.stato_istanza.id_stato_istanza === 40">
+      <div class="extended-bottom-margins">
+        <span><strong>Il modulo istanza che hai caricato non è più modificabile:</strong></span><br>
+        <span>
+          - in caso di selezione errata puoi eliminare il documento allegato selezionando l'icona cestino e caricare il modulo
+          corretto;<br>
+          - per la modifica del modulo devi selezionare "CORREGGI ISTANZA": il modulo caricato verrà eliminato e potrai
+          intervenire
+          nelle diverse sezioni per cambiare eventuali dati non corretti e/o da integrare.
+        </span>
+      </div>
+      <p class="extended-bottom-margins">
+        <img src="assets/icon-table-dettaglio.svg" height="24px" alt=""/>
+        <button class="file-name" aria-label="download modulo firmato" (click)="downloadModuloFirmato()">{{ moduloFirmato?.nome_allegato }}</button>
+        <button class="btn-action" aria-label="cancella modulo" (click)="onDelete(tipoEventoEnum.DA_FIRMARE)">
+          <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"
+            *ngIf="istanza.stato_istanza.id_stato_istanza === 30" />
+        </button>
+        <img src="assets/icon-table-elimina-disabled.svg" height="20px" alt=""
+          *ngIf="istanza.stato_istanza.id_stato_istanza === 40"/>
+      </p>
+    </div>
+    <div *ngIf="istanza && istanza.stato_istanza.id_stato_istanza === 20 || istanza.stato_istanza.id_stato_istanza === 30">
+      <button class="btn btn-large btn-outline-primary" type="button" (click)="onDelete(tipoEventoEnum.CORREGGI)">
+        CORREGGI ISTANZA
+      </button>
+    </div>
+  </div>
+
+  <div class="card" *ngIf="istanza && !isFrontOffice && messageSuccessBO">
+    <div class="alert-box success" *ngIf="istanza">
+      <i class="icon icon-big fa fa-check-circle-o" aria-hidden="true"></i>
+      <span>
+        <p class="text-only">
+          <strong>{{ infoText }}</strong>
+        </p>
+      </span>
+    </div>
+  
+    <div class="buttons-container">
+      <div>
+        <button class="btn btn-large btn-link" (click)="goToHome()">
+          TORNA ALLA HOME
+        </button>
+      </div>
+      <div>
+        <button class="btn btn-large btn-primary" (click)="goToWizard()">
+          INSERISCI NUOVA ISTANZA
+        </button>
+      </div>
+    </div>
+  </div>
+</span>
+
+<div class="buttons-container">
+  <div>
+    <button class="btn btn-large btn-link" type="button" (click)="goToLastSearch()">
+      TORNA A RISULTATI RICERCA
+    </button>
+  </div>
+  <div>
+    <button class="btn btn-large btn-success" *ngIf="istanza?.stato_istanza.id_stato_istanza === 30" (click)="onConferma()">
+      CONFERMA
+    </button>
+  </div>
+</div>

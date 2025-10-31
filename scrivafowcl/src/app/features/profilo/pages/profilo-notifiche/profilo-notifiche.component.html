@@ -1,0 +1,43 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="container-fluid profilo-section-container s-plr--0">
+
+  <div class="row profilo-section-row">
+    <div class="col">
+      <div class="card profilo-section-card s-mb--30">
+
+        <!-- COMPONENTE CHE GESTISCE IN AUTONOMIA LA LISTA DELLE PREFERENZE PER LE NOTIFICHE -->
+        <scriva-preferenze-notifiche
+          [preferenzeNotifiche]="preferenzeNotificheInit"
+          (preferenzeChanged)="onPreferenzeChanged($event)"
+        ></scriva-preferenze-notifiche>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="row profilo-section-row">
+    <div class="col-auto s-mr--a"></div>
+    <div class="col-auto">
+      <!-- SALVA MODIFICHE -->
+      <scriva-primary-button class="s-ml--a"
+        [dataConfig]="PN_C.BTN_CONFERMA_PREFERENZE_NOTIFICHE"
+        (onClick)="confermaModificaPreferenze()">
+      </scriva-primary-button>
+    </div>
+  </div>
+
+  <div class="row profilo-section-row s-mt--30">
+    <div class="col">
+      <div class="alert-anchor" [id]="PN_C.ALERT_ANCHOR"></div>
+    </div>
+  </div>
+
+</div>

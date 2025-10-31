@@ -1,0 +1,163 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.card {
+  padding: 30px;
+  margin: 8px 0;
+  overflow-x: auto;
+  box-shadow: 3px 3px 8px 0 #00000048;
+}
+
+:host ::ng-deep .card {
+  border: none !important;
+
+  input:-internal-autofill-selected {
+    background-color: #ffffff !important;
+  }
+
+  .error {
+    border: 2px solid #a94442 !important;
+    border-radius: 0.25rem !important;
+  }
+
+  input.ng-invalid.ng-touched,
+  input.ng-dirty.ng-invalid,
+  textarea.ng-invalid.ng-touched,
+  select.ng-invalid.ng-touched {
+    border: 2px solid #a94442 !important;
+    border-radius: 0.25rem !important;
+  }
+  p.errore {
+    margin-top: -12px;
+    padding-left: 41px;
+    color: #a94442;
+  }
+}
+
+:host ::ng-deep .align-qdrdich {
+  .note {
+    display: flex;
+    flex-direction: column;
+    textarea {
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      font-size: 0.875rem;
+      color: #212529;
+      margin: 0;
+      padding: 0.375rem 0.75rem;
+      width: 100%;
+      height: auto;
+      min-height: 95px;
+      outline: 0;
+    }
+  }
+
+  .form-check {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th,
+    td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background-color: #d3d3d3;
+    }
+    td.sin {
+      width: 22%;
+    }
+    td.centro {
+      width: 40%;
+    }
+    td.destra {
+      width: 38%;
+    }
+
+    padding-left: 44px;
+    padding-top: 1px;
+
+    p {
+      font-size: 0.875rem;
+    }
+
+    textarea {
+      border: 1px solid #ddd;
+      border-radius: 0.25rem;
+      background-color: #fff;
+      font-size: 0.875rem;
+      color: #212529;
+      margin: 0;
+      padding: 0.375rem 0.75rem;
+      width: 100%;
+      height: auto;
+      min-height: 95px;
+      outline: 0;
+    }
+  }
+}
+
+:host ::ng-deep .form-check-input[type='checkbox'] {
+  margin-top: 0;
+  margin-left: -2.5rem;
+}
+
+:host ::ng-deep .dich-num-date-box {
+  margin-top: -17px;
+  padding-left: 4px;
+  margin-bottom: 0;
+  div[ref^='nested-dich'] {
+    display: flex;
+    padding-left: 41px;
+    font-size: 0.875rem;
+
+    .input-group-append {
+      display: none;
+    }
+    .form-group {
+      margin-bottom: none;
+    }
+    .form-component-number {
+      width: 100px;
+      input {
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        border-radius: 0;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+    .form-component-title {
+      display: flex;
+      align-items: center;
+    }
+    .form-component-data {
+      width: 140px;
+      input.input {
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid #ced4da;
+        &:focus {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+
+.hide {
+  display: none;
+}

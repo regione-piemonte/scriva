@@ -1,0 +1,142 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="section">
+  <ng-container id="pageTitle">
+    <h1 class="heel" *ngIf="compilante">
+      Home di {{ compilante.nome_compilante }} {{ compilante.cognome_compilante }}
+    </h1>
+    <h1 class="heel" *ngIf="funzionario">
+      Home di {{ funzionario.funzionario.nome_funzionario }} {{ funzionario.funzionario.cognome_funzionario }}
+    </h1>
+  </ng-container>
+
+  <span id="errorAnchor"></span>
+
+  <div class="alert-box info" *ngIf="showAlertBanner">
+    <i class="icon icon-big fa fa-info-circle" aria-hidden="true"></i>
+    <span>
+      <p class="text-only" [innerHTML]="alertText"></p>
+    </span>
+  </div>
+  <!-- notifiche per la home page -->
+  <scriva-notifiche-home></scriva-notifiche-home>
+</div>
+
+<div class="section">
+  <h2 class="heel">Adempimenti</h2>
+  <div class="row">
+    <div class="col-xl-4 col-md-6"
+      *ngFor="let tipo of tipiAdempimentoList.slice(0, 6)"
+    >
+      <app-tipo-adempimento-card
+        [tipoAdempimento]="tipo"
+        (creaNuova)="goToWizard(tipo)"
+        (info)="showInfoHelp(tipo)"
+        (cerca)="cercaIstanze({tipoAdempimento: tipo})"
+        (toggleFavourite)="toggleFavourite(tipo)"
+      ></app-tipo-adempimento-card>
+    </div>
+  </div>
+  <div class="row align-right">
+    <div class="col-12">
+      <button type="button" class="btn btn-large btn-primary" (click)="goToAdempimenti()">
+        VEDI TUTTI
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <h2 class="heel">Riepilogo istanze</h2>
+  <div class="row" *ngIf="isFrontOffice">
+    <app-riepilogo-istanze-list
+      *ngIf="inBozza?.istanze?.length>0"
+      class="col-xl-4 col-md-6"
+      [title]="'Istanze in bozza'"
+      [icon]="'assets/icon-istanze-bozza.svg'"
+      [count]="inBozza?.count"
+      [status]="StatoIstanzaEnum.BOZZA"
+      [istanze]="inBozza.istanze"
+      (vediTutte)="cercaIstanze($event)"
+    ></app-riepilogo-istanze-list>
+
+    <!-- SCRIVA-1464 label_stato-->
+    <app-riepilogo-istanze-list
+      *ngIf="daIntegrare?.istanze?.length>0"
+      class="col-xl-4 col-md-6"
+      [title]="'Istanze da integrare'"
+      [icon]="'assets/icon-istanze-daintegrare.svg'"
+      [count]="daIntegrare?.count"
+      [status]="StatoIstanzaEnum.RIC_INTEGR"
+      [istanze]="daIntegrare.istanze"
+      (vediTutte)="cercaIstanze($event,{label_stato: 'Richiesta Integrazione'})"
+    ></app-riepilogo-istanze-list>
+
+    <app-riepilogo-istanze-list
+      *ngIf="daPagare?.istanze?.length>0"
+      class="col-xl-4 col-md-6"
+      [title]="'Istanze con pagamenti dovuti'"
+      [icon]="'assets/icon-istanze-dapagare.svg'"
+      [count]="daPagare?.count"
+      [status]="StatoIstanzaEnum.TUTTE"
+      [istanze]="daPagare.istanze"
+      [flgDaPagare]='true'
+      (vediTutte)="cercaIstanze($event)"
+    ></app-riepilogo-istanze-list>
+  </div>
+
+  <div class="row" *ngIf="!isFrontOffice">
+    <app-riepilogo-istanze-list
+      *ngIf="presentate?.istanze?.length>0"
+      class="col-xl-4 col-md-6"
+      [title]="'Istanze presentate'"
+      [icon]="'assets/icon-istanze-presentate.svg'"
+      [count]="presentate?.count"
+      [status]="StatoIstanzaEnum.PRESENTATA"
+      [istanze]="presentate.istanze"
+      (vediTutte)="cercaIstanze($event)"
+    ></app-riepilogo-istanze-list>
+
+    <app-riepilogo-istanze-list
+      *ngIf="inCorso?.istanze?.length>0"
+      class="col-xl-4 col-md-6"
+      [title]="'Istanze in corso'"
+      [icon]="'assets/icon-istanze-incorso.svg'"
+      [count]="inCorso?.count"
+      [status]="StatoIstanzaEnum.IN_CORSO"
+      [istanze]="inCorso.istanze"
+      (vediTutte)="cercaIstanze($event)"
+    ></app-riepilogo-istanze-list>
+
+    <!-- SCRIVA-1464 label_stato-->
+    <app-riepilogo-istanze-list
+    *ngIf="daIntegrare?.istanze?.length>0"
+    class="col-xl-4 col-md-6"
+    [title]="'Istanze da integrare'"
+    [icon]="'assets/icon-istanze-daintegrare.svg'"
+    [count]="daIntegrare?.count"
+    [status]="StatoIstanzaEnum.RIC_INTEGR"
+    [istanze]="daIntegrare.istanze"
+    (vediTutte)="cercaIstanze($event,{label_stato: 'Richiesta Integrazione'})"
+  ></app-riepilogo-istanze-list>
+  </div>
+
+  <div class="row align-right">
+    <div class="col-12">
+      <button
+        type="button"
+        class="btn btn-large btn-primary"
+        (click)="cercaIstanze(null)"
+      >
+        CERCA ISTANZE
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,420 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- form ricerca soggetto -->
+<app-header-quadro
+  *ngIf="adempimento"
+  [adempimentoInput]="adempimento"
+  [istanza]="istanza"
+></app-header-quadro>
+
+<div class="d-none">div di verifica: prova 2*</div>
+
+<div class="card col-xl-8" *ngIf="adempimento" id="containerCercaSoggetti">
+  <span class="help-text-wrapper">
+    <p>
+      Cerca il <strong>soggetto proponente</strong> dell'istanza, compila o
+      verifica i dati anagrafici e seleziona "inserisci soggetto" per procedere
+      con la compilazione dell'istanza. <br />
+      <ng-container *ngIf="numSoggetti === numerazione.MULTIPLO">
+        <span>
+          Ripeti la ricerca per ogni <strong>soggetto proponente</strong> da
+          aggiungere e se sono presenti più soggetti indica il soggetto
+          principale del gruppo.
+        </span>
+        <span *ngIf="abilitaGruppo === 'USER'">
+          &nbsp;Se necessario modifica il nome del gruppo.
+        </span>
+      </ng-container>
+    </p>
+    <button
+      class="btn btn-primary help-btn"
+      (click)="onHelpClicked('testo_iniziale')"
+      aria-label="help"
+    >
+      <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+    </button>
+  </span>
+  <!-- form ricerca soggetti -->
+  <form
+    [formGroup]="formCercaSoggetti"
+    *ngIf="formCercaSoggetti"
+    id="formCercaSoggetti"
+  >
+    <div class="row">
+      <div class="form-group col-lg-4" *ngIf="tipoSoggetto.length > 2">
+        <label for="ricercaTipoSoggetto">*Seleziona tipo soggetto</label>
+        <select
+          [formControl]="formCercaSoggetti.get('tipoSoggetto')"
+          id="ricercaTipoSoggetto"
+          class="form-control"
+          [compareWith]="compareTipoSoggetto"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option
+            *ngFor="let item of filterTipiSoggetto(tipiSoggetto)"
+            [ngValue]="item"
+          >
+            {{ item.des_tipo_soggetto }}
+          </option>
+        </select>
+        <app-form-error-message
+          [control]="this.formCercaSoggetti.get('tipoSoggetto')"
+        ></app-form-error-message>
+      </div>
+
+      <div class="form-group col-lg-4">
+        <label for="ricercaCf">
+          <span *ngIf="tipoSoggetto === tipologiaPersona.PF">
+            *Codice fiscale da ricercare
+          </span>
+          <span *ngIf="!tipoSoggetto.includes(tipologiaPersona.PF)">
+            *Codice fiscale da ricercare
+          </span>
+          <span
+            *ngIf="
+              tipoSoggetto.length > 2 &&
+              tipoSoggetto.includes(tipologiaPersona.PF)
+            "
+          >
+            *Codice fiscale da ricercare
+          </span>
+        </label>
+        <input type="text" class="form-control uppercase" id="ricercaCf"
+          [formControl]="formCercaSoggetti.get('cf')"
+        />
+        <app-form-error-message *ngIf="this.formCercaSoggetti.get('cf').dirty"
+          [control]="this.formCercaSoggetti.get('cf')"
+        ></app-form-error-message>
+      </div>
+
+      <div
+        class="form-group col-auto"
+        *ngIf="
+          attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+        "
+      >
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-cerca"
+          [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+          (click)="onCercaSoggetto()"
+        >
+          CERCA
+        </button>
+      </div>
+    </div>
+
+    <small class="form-text text-muted">*Campo obbligatorio</small>
+  </form>
+</div>
+
+<div
+  class="alert-box info my-2"
+  *ngIf="
+    infoMessModDelegaTxt &&
+    attoreGestioneIstanza === gestioneEnum.WRITE &&
+    infoMessModDelega
+  "
+>
+  <i class="icon icon-big fa fa-info-circle" aria-hidden="true"></i>
+  <span>
+    <p
+      class="text-only"
+      [innerHTML]="infoMessModDelegaTxt.des_testo_messaggio"
+    ></p>
+  </span>
+</div>
+
+<!-- recap soggetti -->
+<span id="soggettiContainer"></span>
+<div class="card" *ngIf="soggetti?.length > 0" id="recapSoggetti">
+  <h2 class="table-title">
+    <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+    <strong>Riepilogo soggetto proponente</strong>
+  </h2>
+  <p
+    class="nome-gruppo"
+    *ngIf="abilitaGruppo === 'USER' && soggetti.length > 1"
+  >
+    <strong>*Nome Raggruppamento/Consorzio di soggetti: </strong>
+    <input
+      type="text"
+      class="form-control"
+      [ngModel]="soggettiIstanza[0][0].gruppo_soggetto?.des_gruppo_soggetto"
+      [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE"
+      (change)="onChangeNomeGruppo($event.target.value)"
+    />
+  </p>
+  <hr />
+  <ngx-datatable
+    *ngIf="soggetti?.length > 0 && soggettiColumns?.length > 0"
+    class="material soggetti-table"
+    [rows]="soggetti"
+    [columns]="soggettiColumns"
+    [columnMode]="ColumnMode.force"
+    [reorderable]="false"
+    [scrollbarH]="true"
+    [headerHeight]="80"
+    [footerHeight]="0"
+    rowHeight="auto"
+  ></ngx-datatable>
+  <hr />
+</div>
+
+<!-- #region ngx-datatable templates -->
+<ng-template #denominazioneTemplate let-row="row" ngx-datatable-cell-template>
+  {{ row.anagraficaSoggetto.ragioneSociale }}
+  {{ row.anagraficaSoggetto.cognome }} {{ row.anagraficaSoggetto.nome }}
+</ng-template>
+
+<ng-template #indirizzoTemplate let-row="row" ngx-datatable-cell-template>
+
+  <div *ngIf="row.anagraficaSoggetto.tipoSoggetto.cod_tipo_soggetto === 'PF'">
+    {{row.anagraficaSoggetto.indirizzoResidenza}}
+    {{row.anagraficaSoggetto.civicoResidenza}}
+    {{row.anagraficaSoggetto.capResidenza}}
+    {{row.anagraficaSoggetto.comuneResidenza ? row.anagraficaSoggetto.comuneResidenza?.denom_comune : row.anagraficaSoggetto.cittaEsteraResidenza}}
+    {{row.anagraficaSoggetto.comuneResidenza ? row.anagraficaSoggetto.comuneResidenza?.provincia?.sigla_provincia : row.anagraficaSoggetto.statoResidenza?.denom_nazione}}
+  </div>
+
+  <div *ngIf="row.anagraficaSoggetto.tipoSoggetto.cod_tipo_soggetto !== 'PF'">
+    {{row.anagraficaSoggetto.indirizzoSedeLegale}}
+    {{row.anagraficaSoggetto.civicoSedeLegale}}
+    {{row.anagraficaSoggetto.capSedeLegale}}
+    {{row.anagraficaSoggetto.comuneSedeLegale ? row.anagraficaSoggetto.comuneSedeLegale?.denom_comune : row.anagraficaSoggetto.cittaEsteraSedeLegale}}
+    {{row.anagraficaSoggetto.comuneSedeLegale ? row.anagraficaSoggetto.comuneSedeLegale?.provincia?.sigla_provincia : row.anagraficaSoggetto.statoSedeLegale?.denom_nazione}}
+  </div>
+</ng-template>
+
+
+<ng-template #dichiaranteTemplate let-row="row" ngx-datatable-cell-template>
+  {{ row.anagraficaRichiedente?.cognome }} {{ row.anagraficaRichiedente?.nome }}
+</ng-template>
+<ng-template #principaleTemplate let-row="row" ngx-datatable-cell-template>
+  <input
+    *ngIf="numSoggetti === numerazione.MULTIPLO && soggetti.length > 1"
+    type="checkbox"
+    [checked]="row?.anagraficaSoggetto.flg_capogruppo"
+    [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE"
+    (click)="
+      onFlagCapoGruppo(
+        row.anagraficaSoggetto.id_soggetto,
+        $event.target.checked,
+        $event
+      )
+    "
+  />
+</ng-template>
+<ng-template #ruoloTemplate let-row="row" ngx-datatable-cell-template>
+  <ng-container *ngIf="row.anagraficaRichiedente">
+    {{ row.anagraficaRichiedente.ruoloSoggetto?.des_ruolo_soggetto }}
+  </ng-container>
+</ng-template>
+<ng-template #azioniTemplate let-row="row" ngx-datatable-cell-template>
+  <div class="actions">
+    <button
+      class="btn-action"
+      *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE"
+      aria-label="modifica"
+      (click)="
+        onEditSoggetto({ record: row, index: getArrayIndex(row) }, false)
+      "
+    >
+      <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica" />
+    </button>
+    <span *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK">
+      <img src="assets/icon-table-edit-disabled.svg" height="24px" alt="" />
+    </span>
+    <button
+      class="btn-action"
+      (click)="onEditSoggetto({ record: row, index: getArrayIndex(row) }, true)"
+      aria-label="dettaglio"
+    >
+      <img
+        src="assets/icon-table-dettaglio.svg"
+        height="24px"
+        alt="Dettaglio"
+      />
+    </button>
+    <button
+      class="btn-action"
+      *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE"
+      aria-label="elimina"
+      (click)="onDeleteSoggetto({ record: row, index: getArrayIndex(row) })"
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+    </button>
+    <span *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK">
+      <img src="assets/icon-table-elimina-disabled.svg" height="20px" alt="" />
+    </span>
+    <button
+      class="btn-action"
+      title="Scarica modulo delega"
+      *ngIf="
+        attoreGestioneIstanza === gestioneEnum.WRITE &&
+        checkFlagModuloDelega(row)
+      "
+      (click)="onDownloadDelega({ record: row, index: getArrayIndex(row) })"
+      aria-label="download modulo delega"
+    >
+      <img
+        src="assets/icon-table-download-delega.png"
+        height="24px"
+        alt="Download"
+      />
+    </button>
+    <span
+      *ngIf="
+        attoreGestioneIstanza === gestioneEnum.WRITE_LOCK &&
+        row.ruoloCompilante.flg_modulo_delega &&
+        row.anagraficaSoggetto.flg_capogruppo
+      "
+    >
+      <img
+        src="assets/icon-table-download.svg"
+        class="disabled"
+        height="24px"
+        alt=""
+      />
+    </span>
+  </div>
+</ng-template>
+<!-- #endregion -->
+
+<!-- form inserisci soggetto -->
+<div [id]="S_C.ID_DOM_INSERISCI_SOGGETTO" class="card no-padding" *ngIf="ultimoSoggettoCercato">
+  <app-soggetto-form
+    [componente]="componente"
+    [nazioni]="nazioni"
+    [nazioniAttive]="nazioniAttive"
+    [soggetto]="ultimoSoggettoCercato"
+    [soggettoInAnagrafica]="ultimoSoggettoCercatoInAngrafica"
+    [ultimoTipoPersonaCercato]="ultimoTipoPersonaCercato"
+    [ultimoCFCercato]="ultimoCFCercato"
+    [adempimentoConfigList]="adempimentoConfigList"
+    [compilante]="compilante"
+    [tipoAdempimento]="tipoAdempimento"
+    [adempimento]="adempimento"
+    [tipiSoggetto]="tipiSoggetto"
+    [ruoliSoggetto]="ruoliSoggetto"
+    [ruoliCompilante]="ruoliCompilante"
+    [tipiNaturaGiuridica]="tipiNaturaGiuridica"
+    [flagRecapitoAlt]="flagRecapitoAlt"
+    [notaInserimento]="notaInserimento"
+    [segnalazioneInserimento]="segnalazioneInserimento"
+    [codQuadro]="codQuadro"
+    (confermaInserisciSoggetto$)="onInserisciSoggetto($event)"
+    (annullaInserisciSoggetto$)="onAnnullaInserisciSoggetto()"
+  ></app-soggetto-form>
+</div>
+
+<!-- pulsante prosegui (presente solo se sono previsti i referenti) -->
+<div class="form-group text-right"
+  *ngIf="
+    numReferenti !== numerazione.MULTIPLA_OPZIONALE &&
+    numReferenti !== numerazione.NESSUNO &&
+    numReferenti !== numerazione.OPZIONALE &&
+    showButtonContinue === 1 &&
+    !showButtonAddReferenti &&
+    (attoreGestioneIstanza === gestioneEnum.WRITE ||
+      attoreGestioneIstanza === gestioneEnum.WRITE_LOCK)
+  "
+>
+  <button
+    type="button"
+    class="btn btn-large btn-primary btn-prosegui"
+    [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+    (click)="onProsegui()"
+  >
+    PROSEGUI
+  </button>
+</div>
+
+<!-- recap referenti -->
+<div class="card" *ngIf="referenti?.length > 0" id="recapReferenti">
+  <app-recap-table
+    [title]="recapReferentiTitle"
+    [columns]="referentiColumns"
+    [records]="referenti"
+    [readonly]="onlyShow"
+    [editEnabled]="attoreGestioneIstanza === gestioneEnum.WRITE"
+    [deleteEnabled]="attoreGestioneIstanza === gestioneEnum.WRITE"
+    [detailEnabled]="true"
+    (editRecord)="onEditReferente($event, false)"
+    (detailRecord)="onEditReferente($event, true)"
+    (deleteRecord)="onDeleteReferente($event)"
+  ></app-recap-table>
+</div>
+
+<!-- Azione aggiungi referente -->
+<div
+  *ngIf="
+    attoreGestioneIstanza === gestioneEnum.WRITE &&
+    soggettiIstanza?.length > 0 &&
+    showAction
+  "
+>
+  <div class="msg-referenti">
+    <p
+      *ngIf="
+        (numReferenti === numerazione.SINGOLO ||
+          numReferenti === numerazione.MULTIPLO) &&
+        numReferenti === numerazione.MULTIPLO && referenti.length < 1
+      "
+    >
+      E' necessario inserire i dati di un REFERENTE selezionando AGGIUNGI
+      REFERENTE.
+    </p>
+    <p
+      *ngIf="
+        numReferenti === numerazione.OPZIONALE ||
+        numReferenti === numerazione.MULTIPLA_OPZIONALE
+      "
+    >
+      Se desideri aggiungere i dati di un REFERENTE seleziona AGGIUNGI REFERENTE
+      altrimenti seleziona AVANTI.
+    </p>
+  </div>
+
+  <button
+    class="btn btn-outline-primary add-container"
+    (click)="onAggiungiReferente()"
+    *ngIf="
+      numReferenti !== numerazione.NESSUNO ||
+      (showButtonAddReferenti &&
+        referenti?.length < 1 && showButtonContinue !== 1 &&
+        (attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK))
+    "
+  >
+    <!--[disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"-->
+    <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi" />
+    <span class="add-text">AGGIUNGI REFERENTE</span>
+  </button>
+</div>
+
+<!-- anchor for message service -->
+<div id="content"></div>
+
+<!-- anchor for message service -->
+<div id="afterRecapReferenti"></div>
+
+<!-- form inserisci referente -->
+<div class="card no-padding" *ngIf="showFormAddReferente">
+  <app-referente-form
+    [numReferenti]="numReferenti"
+    (confermaInserisciReferente$)="onInserisciReferente($event)"
+    (annullaInserisciReferente$)="onAnnullaInserisciReferente()"
+    [readonly]="onlyShow"
+  ></app-referente-form>
+</div>
+
+<span id="soggettiContainerError"></span>

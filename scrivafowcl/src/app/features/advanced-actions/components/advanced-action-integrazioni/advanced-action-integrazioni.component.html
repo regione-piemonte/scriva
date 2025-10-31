@@ -1,0 +1,47 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- TABELLA Riferimenti Procedimento -->
+<div class="card">
+  <h2 class="title">
+    <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+    <strong>Integrazioni</strong>
+  </h2>
+  <div class="row">
+    <div class="col">
+      <div class="alert-anchor" [id]="ALERTANCHOR"></div>
+    </div>
+  </div>
+  <ngx-datatable 
+    *ngIf="integrazioni?.length>0"
+    class="material"
+    [rows]="integrazioni"
+    [columns]="integrazioniColumns"
+    [columnMode]="ColumnMode.force"
+    [reorderable]="false"
+    [scrollbarH]="true"
+    [headerHeight]="80"
+    [footerHeight]="0"
+    rowHeight="auto"
+  ></ngx-datatable>
+</div>
+
+
+<ng-template #azioniTemplate let-row="row" ngx-datatable-cell-template>
+  <div class="row">
+    <div class="actions">
+      <button class="btn-action" (click)="clickOnEditIntegrazione(row)" aria-label="modifica">
+        <img src="assets/icon-table-edit.svg" height="20px" alt="Modifica" />
+      </button>
+      <button class="btn-action" (click)="clickOnDownloadIntegrazione(row)" aria-label="download">
+        <img src="assets/icon-table-download.svg" height="24px" alt="Download"/>
+      </button>
+    </div>  
+  </div>
+</ng-template>

@@ -1,0 +1,77 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<span id="titoliContainer">
+  <div class="card">
+    <div class="row">
+      <h2 class="card-title col">
+        Seleziona o aggiungi i titoli abilitativi richiesti nell'ambito del provvedimento autorizzatorio unico regionale (PAUR)
+      </h2>
+    </div>
+
+    <ngx-datatable *ngIf="titoliTableSource?.length > 0 && columns?.length > 0"
+      class="material"
+      [rows]="titoliTableSource"
+      [columns]="columns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [scrollbarH]="true"
+      [scrollbarV]="false"
+      [headerHeight]="100"
+      [footerHeight]="50"
+      rowHeight="auto"
+    ></ngx-datatable>
+
+    <ng-template #selectionTemplate let-row="row" ngx-datatable-cell-template>
+      <input type="checkbox" id="selectCb-{{row.istanzaVincoloAut.vincolo_autorizza.id_vincolo_autorizza}}"
+        [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE" [checked]="row?.selected"
+        (click)="onSeleziona(row.index, $event.target.checked)">
+    </ng-template>
+
+    <ng-template #descrizioneTemplate let-row="row" ngx-datatable-cell-template>
+      <ng-container *ngIf="!row.istanzaVincoloAut.vincolo_autorizza.flg_modifica; else editBox">
+        {{ row.istanzaVincoloAut.vincolo_autorizza.des_vincolo_autorizza }}
+        <button class="btn-normativa" *ngIf="row.istanzaVincoloAut.vincolo_autorizza.des_rif_normativo" (click)="viewReference(row.index)">
+          <strong> normativa di riferimento</strong>
+        </button>
+      </ng-container>
+      <ng-template #editBox>
+        <textarea class="text-area-in-table" rows="6" [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE" [placeholder]="row.istanzaVincoloAut.vincolo_autorizza.des_vincolo_autorizza"
+          [value]="row.istanzaVincoloAut.des_vincolo_calcolato" (change)="onDescriptionChange(row.index, $event.target.value)">
+        </textarea>
+      </ng-template>
+    </ng-template>
+
+    <ng-template #enteTemplate let-row="row" ngx-datatable-cell-template>
+      <input type="text" [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE" [value]="row.istanzaVincoloAut.des_ente_utente || ''"
+        (change)="onSoggettoChange(row.index, $event.target.value)">
+    </ng-template>
+
+    <ng-template #emailTemplate let-row="row" ngx-datatable-cell-template>
+      <input type="text" [ngClass]="{'red-border': emailErrorIndexes.indexOf(row.index) > -1}"
+        [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE" [value]="row.istanzaVincoloAut.des_email_pec_ente_utente || ''"
+        (change)="onEmailChange(row.index, $event.target.value)">
+      <span class="email-error" *ngIf="emailErrorIndexes.indexOf(row.index) > -1">Formato email non corretto</span>
+    </ng-template>
+  </div>
+
+  <button class="btn btn-outline-primary add-container"
+    *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+    [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+    (click)="onInserisci()"
+  >
+    <!-- <i class="fa fa-plus add-icon" aria-hidden="true"></i> -->
+    <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi">
+    <span class="add-text">Inserisci nuovo titolo abilitativo</span>
+  </button>
+
+</span>
+

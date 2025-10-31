@@ -1,0 +1,82 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card" id="dettaglioContainer">
+
+  <form [formGroup]="dettaglioFormNote">
+    <div class="row">
+      <div class="form-group col-md">
+        <label for="notaIstanza">Nota (max {{ maxNote }} caratteri)</label>
+        <textarea [maxlength]="maxNote" class="form-control" id="notaIstanza" rows="4"
+          formControlName="notaIstanza"></textarea>
+        <app-form-error-message [control]="this.dettaglioFormNote.get('notaIstanza')"></app-form-error-message>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <button type="button" class="btn add-container"
+          [disabled]="!dettaglioFormNote.get('notaIstanza').value || !dettaglioFormNote.get('notaIstanza').valid"
+          (click)="onAggiungiNota()">
+          <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi nota">
+          <span class="add-text">aggiungi</span>
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="mt-4" *ngIf="noteTableColumns?.length > 0 && noteIstanza?.length > 0" id="noteTableCard">
+    <h2 class="title">
+      <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+      <strong>Riepilogo note</strong>
+    </h2>
+    <ng-container>
+      <ngx-datatable class="material" [rows]="noteIstanza" [columns]="noteTableColumns" [columnMode]="ColumnMode.force"
+        [reorderable]="false" [scrollbarV]="false" [scrollbarH]="true" [headerHeight]="50" [footerHeight]="10"
+        [rowHeight]="70">
+      </ngx-datatable>
+    </ng-container>
+  </div>
+
+  <div class="mt-4 ml-auto d-flex" *ngIf="noteIstanza?.length > 0">
+    <button type="button" class="btn btn-large btn-outline-primary table-btn" (click)="exportCSV()">
+      ESPORTA ELENCO IN FORMATO CSV
+    </button>
+  </div>
+</div>
+
+<!-- ngx-datatable templates -->
+<ng-template #dataTemplate let-row="row" ngx-datatable-cell-template>
+  <span>{{ row.data_nota | date : 'dd/MM/yyyy HH:mm:ss' }}</span>
+</ng-template>
+
+<ng-template #flgRiservataTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox" [checked]="row.ind_visibile === 'BO'"
+    (click)="setNotaRiservataFlag(row.id_nota_istanza, $event.target.checked)" />
+</ng-template>
+
+<ng-template #azioniTemplate let-row="row">
+  <div class="row">
+    <div class="actions">
+      <button class="btn-action" (click)="showDetails(row, true)" aria-label="dettaglio">
+        <img src="assets/icon-table-dettaglio.svg" height="20px" alt="Dettaglio" />
+      </button>
+    </div>
+    <div class="actions">
+      <button class="btn-action" (click)="showDetails(row, false)" aria-label="modifica">
+        <img src="assets/icon-table-edit.svg" height="20px" alt="Modifica" />
+      </button>
+    </div>
+    <div class="actions">
+      <button class="btn-action" (click)="onRimuoviNota(row.gestUID)" aria-label="elimina">
+        <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!--ADD visualizza e modifica-->

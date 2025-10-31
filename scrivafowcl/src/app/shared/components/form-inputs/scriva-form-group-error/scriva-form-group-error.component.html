@@ -1,0 +1,29 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- ERROR - CONTAINER CHE VIENE RIMOSSO PERMANENTEMENTE DAL DOM A SECONDA DELLA CONDIZIONE -->
+<ng-container *scrivaRemove="!cssConfig.showErrorFG">
+  <!-- CONDIZIONI PER IL FORM GROUP ERROR -->
+  <ng-container
+    *ngIf="
+      formGroup.invalid &&
+      formErrors &&
+      (formSubmitted || formGroup.dirty || formGroup.touched)
+    "
+  >
+    <small
+      class="form-text text-muted scriva-text-error ellipsis"
+      *ngIf="formGroup | scrivaFormError : mappaErroriFG as message"
+      [title]="message"
+      [innerHTML]="message"
+      [ngClass]="cssConfig.customError | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+      [ngStyle]="cssConfig.customError | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+    ></small>
+  </ng-container>
+</ng-container>

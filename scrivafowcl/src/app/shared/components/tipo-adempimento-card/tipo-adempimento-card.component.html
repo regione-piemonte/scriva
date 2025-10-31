@@ -1,0 +1,48 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card">
+  <span class="ademp-header">
+    <span class="ademp-header-text">{{ tipoAdempimento.ambito.des_ambito }}</span>
+    <button class="btn-action" (click)="onToggleFavourite()" aria-label="toggle preferito">
+      <i class="fa fa-star" *ngIf="tipoAdempimento.preferito" aria-hidden="true"></i>
+      <i class="fa fa-star-o" *ngIf="!tipoAdempimento.preferito" aria-hidden="true"></i>
+    </button>
+  </span>
+  <span class="title ademp-content">
+    <h3 class="title-text">
+      {{ tipoAdempimento.cod_tipo_adempimento }} - {{ tipoAdempimento.des_tipo_adempimento }}
+    </h3>
+  </span>
+  <hr />
+
+  <!-- GESTIONE RUOLO | INSERIMENTO -->
+  <span class="row" *scrivaMaintain="!isConsultatoreByTipoAdempimento">
+    <span class="col-4 link l-left">
+      <button type="button" class="btn btn-link" (click)="onCreaNuova()">Nuova Istanza</button>
+    </span>
+    <span class="col-4 link l-center">
+      <button type="button" class="btn btn-link" (click)="onInfo()">Info e Manuale</button>
+    </span>
+    <span class="col-4 link l-right">
+      <button type="button" class="btn btn-link" (click)="onCerca()">Ricerca</button>
+    </span>
+  </span>
+
+  <!-- GESTIONE RUOLO | CONSULTAZIONE -->
+  <span class="row" *scrivaMaintain="isConsultatoreByTipoAdempimento">
+    <span class="col-8 link l-left">
+      <button type="button" class="btn btn-link" (click)="onInfo()">Info e Manuale</button>
+    </span>
+    <span class="col-4 link l-right">
+      <button type="button" class="btn btn-link" (click)="onCerca()">Ricerca</button>
+    </span>
+  </span>
+  
+</div>

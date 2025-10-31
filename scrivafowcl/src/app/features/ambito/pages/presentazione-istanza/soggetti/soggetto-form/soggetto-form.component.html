@@ -1,0 +1,1058 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header" *ngIf="data?.title">
+  <h2 class="modal-title">{{ data.title }}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="buttonClicked(-1)"></i>
+</div>
+
+<!-- form inserisci soggetto -->
+<div
+  class="content"
+  [ngClass]="{ 'bg-gray': !formSoggettoRow }"
+  id="formInserisciSoggetto"
+>
+  <form [formGroup]="formInserisciSoggetto">
+    <!-- SEZIONE DEDICATA ALLE SEGNALAZIONI PASSATE DAL PADRE PER INSERIMENTO SOGGETTO -->
+    <div id="containerSegnalazioniInserimento"></div>
+
+    <h2 class="title" *ngIf="!formSoggettoRow">
+      {{notaInserimento}}
+    </h2>
+
+    <!-- anagrafica soggetto -->
+    <ng-container *ngIf="formInserisciSoggetto.get('anagraficaSoggetto')">
+      <h3 class="title">Dati anagrafici del soggetto proponente</h3>
+      <div [formGroup]="formInserisciSoggetto.get('anagraficaSoggetto')">
+        <ng-container
+          *ngTemplateOutlet="
+            (ultimoTipoPersonaCercato === tipologiaPersona.PG || ultimoTipoPersonaCercato === tipologiaPersona.PB)
+              ? formSoggettoPG
+              : ultimoTipoPersonaCercato === tipologiaPersona.PF
+              ? formSoggettoPF
+              : null;
+            context: {
+              formGroup: formInserisciSoggetto.get('anagraficaSoggetto'),
+              isSoggetto: true
+            }
+          "
+        ></ng-container>
+      </div>
+    </ng-container>
+
+    <ng-container
+      *ngIf="formInserisciSoggetto.get('ruoloCompilante') && ultimoCFCercato !== compilante?.cf_compilante"
+    >
+      <div class="row">
+        <div class="col-auto">
+          <h3 class="title">Seleziona il ruolo che ricopri rispetto al soggetto proponente</h3>
+        </div>
+        <div class="col s-mtb--a">
+          <button class="btn btn-primary help-btn" (click)="helperRuoloCompilanteClick()" aria-label="help">
+            <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+     
+      <div class="row">
+        <div class="form-group col-md-6">
+          <label for="ruoloCompilante">*Ruolo ricoperto</label>
+          <select
+            [formControl]="formInserisciSoggetto.get('ruoloCompilante')"
+            id="ruoloCompilante"
+            class="form-control"
+            (change)="onChangeRuoloCompilante()"
+            [attr.disabled]="
+              !formInserisciSoggetto.get('anagraficaSoggetto').valid  | attrDisabled : onlyShow"
+            [compareWith]="compareRuoloCompilante"
+          >
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option *ngFor="let item of ruoliCompilante" [ngValue]="item">
+              {{ item.des_ruolo_compilante }}
+            </option>
+          </select>
+
+          <app-form-error-message
+            [control]="this.formInserisciSoggetto.get('ruoloCompilante')"
+          ></app-form-error-message>
+        </div>
+      </div>
+    </ng-container>
+    
+    <!-- SEZIONE CON MESSAGGIO INFORMATIVO PER RICERCA RICHIEDENTE NON TROVATO -->
+    <div id="containerCercaRichiedente"></div>
+
+    <!-- NOTA COME PER LA GESTIONE DEL NON TROVATO IL SOGGETTO IN RICERCA, MA PER IL RICHIEDENTE -->
+    <h2 class="title" *ngIf="notaInserimentoRichiedente">
+      {{ notaInserimentoRichiedente }}
+    </h2>
+
+    <ng-container *ngIf="formInserisciSoggetto.get('anagraficaRichiedente')">
+      <h3 class="title">Dati dichiarante</h3>
+      <div [formGroup]="formInserisciSoggetto.get('anagraficaRichiedente')">
+        <ng-container
+          *ngTemplateOutlet="
+            formSoggettoPF;
+            context: { formGroup: formInserisciSoggetto.get('anagraficaRichiedente'), isFirmatario: true }
+          "
+        ></ng-container>
+      </div>
+    </ng-container>
+  </form>
+
+  <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+
+  <!-- Azioni form inserisci soggetto -->
+  <div class="row" *ngIf="!formSoggettoRow">
+    <div class="form-group col-md-auto">
+      <button
+        type="button"
+        class="btn btn-large btn-outline-primary"
+        (click)="inserisciSoggetto()"
+      >
+        INSERISCI SOGGETTO
+      </button>
+    </div>
+    <div class="form-group col-md-auto">
+      <button
+        type="button"
+        class="btn btn-large btn-link"
+        (click)="annullaInserisciSoggetto()"
+      >
+        ANNULLA
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer" *ngIf="data?.title">
+  <button
+    *ngFor="let b of data.buttons; index as i"
+    type="button"
+    [class]="'btn btn-large ' + b.type"
+    (click)="buttonClicked(i, b.id_action)"
+  >
+    {{ b.label }}
+  </button>
+</div>
+
+<!-- template delle form raggruppati per riuso e leggibilità -->
+<ng-template #formSoggettoPF let-formGroup="formGroup" let-isSoggetto="isSoggetto" let-isFirmatario="isFirmatario">
+
+  <div class="row">
+    <div class="form-group"
+      [ngClass]="{
+        'col-md-4': (!isFirmatario && ultimoTPCercatoPF) || popolaRichiedente,
+        'col-md-3': !popolaRichiedente
+      }"
+    >
+      <label for="cfSoggetto">*Codice fiscale</label>
+      <input
+        type="text"
+        id="cfSoggetto"
+        class="form-control uppercase"
+        [formControl]="formGroup.get('cf')"
+        [attr.disabled]="
+          isSoggetto ||
+          isFirmatario && 
+            (popolaRichiedente && isRichiedenteTrovato) ||
+            (popolaRichiedente && isRichiedenteNonTrovatoUsatoCompilante) ||
+            (popolaRichiedente && componente !== 'BO')
+          | attrDisabled: onlyShow"
+      />
+      <app-form-error-message
+        [control]="formGroup.get('cf')"
+      ></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md-2" *ngIf="isFirmatario && !popolaRichiedente && !onlyShow">
+      <button type="button" class="btn btn-outline-primary btn-cerca" (click)="onCercaRichiedente()" >
+        CERCA
+      </button>
+    </div>
+
+    <!-- SCRIVA-1202 | Il campo tipo soggetto visualizzato come non modificabile dopo la ricerca non deve essere visualizzato, ma gestito come un campo hidden -->
+    <div class="form-group hidden" *ngIf="formGroup.get('tipoSoggetto')"
+      [ngClass]="{
+        'col-md-4': (!isFirmatario && !ultimoTPCercatoPF) || popolaRichiedente,
+        'col-md-3': !popolaRichiedente
+      }"
+    >
+      <label for="tipoSoggetto">*Tipo soggetto</label>
+      <select
+        [formControl]="formGroup.get('tipoSoggetto')"
+        id="tipoSoggetto"
+        class="form-control"
+        [compareWith]="compareTipoSoggetto"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of tipiSoggetto" [ngValue]="item">
+          {{ item.des_tipo_soggetto }}
+        </option>
+      </select>
+      <app-form-error-message
+        [control]="formGroup.get('tipoSoggetto')"
+      ></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="formGroup.get('ruoloSoggetto')">
+      <label for="ruoloSoggetto">*In qualità di</label>
+      <select
+        [formControl]="formGroup.get('ruoloSoggetto')"
+        id="ruoloSoggetto"
+        class="form-control"
+        [compareWith]="compareRuoloSoggetto"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of ruoliSoggetto" [ngValue]="item">
+          {{ item.des_ruolo_soggetto }}
+        </option>
+      </select>
+      <app-form-error-message
+        [control]="formGroup.get('ruoloSoggetto')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="cognome">*Cognome</label>
+      <input
+        [formControl]="formGroup.get('cognome')"
+        type="text"
+        class="form-control"
+        id="cognome"
+        [attr.disabled]="
+          formGroup.get('cf').invalid ||
+          isFirmatario &&
+            (popolaRichiedente && isRichiedenteNonTrovatoUsatoCompilante) 
+          | attrDisabled: onlyShow"
+      />
+      <app-form-error-message
+        [control]="formGroup.get('cognome')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="nome">*Nome</label>
+      <input
+        [formControl]="formGroup.get('nome')"
+        type="text"
+        class="form-control"
+        id="nome"
+        [attr.disabled]="
+          formGroup.get('cf').invalid ||
+          isFirmatario &&
+            (popolaRichiedente && isRichiedenteNonTrovatoUsatoCompilante) 
+          | attrDisabled: onlyShow"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('nome')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <p><i>Nato a</i></p>
+  <div class="row">
+    <div class="form-group col-xl-4 col-md-6">
+      <label for="statoNascita">*Stato</label>
+      <select class="form-control" id="statoNascita" [formControl]="formGroup.get('statoNascita')" [compareWith]="compareNazione"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of nazioni" [ngValue]="item">
+          {{ item.denom_nazione }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('statoNascita')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoNascita').value?.cod_istat_nazione === '100' ">
+      <label for="provinciaNascita">*Provincia</label>
+      <select class="form-control" id="provinciaNascita" [formControl]="formGroup.get('provinciaNascita')" [compareWith]="compareProvincia"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of provinceFullList" [ngValue]="item">
+          {{ item.denom_provincia }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('provinciaNascita')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoNascita').value?.cod_istat_nazione === '100' ">
+      <label for="comuneNascita">*Comune</label>
+      <select id="comuneNascita" 
+              class="form-control" 
+              [formControl]="formGroup.get('comuneNascita')" 
+              [compareWith]="compareComune"
+              [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('provinciaNascita').valid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of comuniNascita" [ngValue]="item">
+          {{ item.denom_comune }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('comuneNascita')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf="formGroup.get('statoNascita').value && formGroup.get('statoNascita').value.cod_istat_nazione !== '100' ">
+      <label for="cittaEsteraNascita">*Città</label>
+      <input type="text" class="form-control" id="cittaEsteraNascita" [formControl]="formGroup.get('cittaEsteraNascita')"/>
+      <app-form-error-message [control]="formGroup.get('cittaEsteraNascita')"></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <label for="dataNascita">*Data di nascita</label>
+      <input
+        [formControl]="formGroup.get('dataNascita')"
+        type="date"
+        max="{{ today | date: 'yyyy-MM-dd' }}"
+        class="form-control"
+        id="dataNascita"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"
+      />
+      <app-form-error-message
+        [control]="formGroup.get('dataNascita')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <p><i>Residente in</i></p>
+  <div class="row">
+    <div class="form-group col-xl-4 col-md-6">
+      <label for="statoResidenza">*Stato</label>
+      <select class="form-control" id="statoResidenza" [formControl]="formGroup.get('statoResidenza')" [compareWith]="compareNazione"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of nazioni" [ngValue]="item">
+          {{ item.denom_nazione }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('statoResidenza')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoResidenza').value?.cod_istat_nazione === '100' ">
+      <label for="provinciaResidenza">*Provincia</label>
+      <select class="form-control" id="provinciaResidenza" [formControl]="formGroup.get('provinciaResidenza')" [compareWith]="compareProvincia"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of provinceAttive" [ngValue]="item">
+          {{ item.denom_provincia }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('provinciaResidenza')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoResidenza').value?.cod_istat_nazione === '100' ">
+      <label for="comuneResidenza">*Comune</label>
+      <select class="form-control" 
+              id="comuneResidenza"
+              [formControl]="formGroup.get('comuneResidenza')" 
+              [compareWith]="compareComune"
+              [attr.disabled]=" formGroup.get('cf').invalid || !formGroup.get('provinciaResidenza').valid  | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of comuniResidenza" [ngValue]="item">
+          {{ item.denom_comune }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('comuneResidenza')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="formGroup.get('statoResidenza').value && formGroup.get('statoResidenza').value.cod_istat_nazione !== '100' ">
+      <label for="cittaEsteraResidenza">*Città</label>
+      <input type="text" class="form-control" id="cittaEsteraResidenza" [formControl]="formGroup.get('cittaEsteraResidenza')"/>
+      <app-form-error-message [control]="formGroup.get('cittaEsteraResidenza')"></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="localitaResidenza">Località</label>
+      <input type="text" class="form-control" id="localitaResidenza" [formControl]="formGroup.get('localitaResidenza')"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="indirizzoResidenza">*Indirizzo</label>
+      <input type="text" class="form-control" id="indirizzoResidenza" [formControl]="formGroup.get('indirizzoResidenza')"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow" [ngbTypeahead]="searchAddressResidenza"/>
+      <small *ngIf="loadingAddress" class="form-text text-muted"><em>Loading...</em></small>
+      <app-form-error-message [control]="formGroup.get('indirizzoResidenza')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md">
+      <label for="civicoResidenza">*Numero</label>
+      <input type="text" class="form-control" id="civicoResidenza" [formControl]="formGroup.get('civicoResidenza')" [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"/>
+      <app-form-error-message [control]="formGroup.get('civicoResidenza')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md">
+      <label for="capResidenza">*CAP</label>
+      <input type="text" class="form-control" id="capResidenza" [formControl]="formGroup.get('capResidenza')" [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"/>
+      <app-form-error-message [control]="formGroup.get('capResidenza')"></app-form-error-message>
+    </div>
+  </div>
+
+  <p><i>Contatti</i></p>
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="email">*Email</label>
+      <input
+        [formControl]="formGroup.get('email')"
+        type="text"
+        class="form-control"
+        id="email"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('email')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="pec">PEC</label>
+      <input
+        [formControl]="formGroup.get('pec')"
+        type="text"
+        class="form-control"
+        id="pec"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('pec')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="telefono">*Telefono</label>
+      <input
+        [formControl]="formGroup.get('telefono')"
+        type="text"
+        class="form-control"
+        id="telefono"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('telefono')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <label for="cellulare">Cellulare</label>
+      <input type="text" class="form-control" id="cellulare" [formControl]="formGroup.get('cellulare')"
+        [attr.disabled]="formGroup.get('cf').invalid  | attrDisabled: onlyShow"/>
+      <app-form-error-message [control]="formGroup.get('cellulare')"></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="flagRecapitoAlt && (
+      formGroup === formInserisciSoggetto.get('anagraficaSoggetto') || (formGroup === formInserisciSoggetto.get('anagraficaRichiedente') && idRuoloCompilante === 1)
+      )">
+    <div class="form-group col-md checkbox-wrapper">
+      <input type="checkbox" id="cbRecapitoAltPF" (click)="onRecapitoAlternativoResidenza($event, formGroup === formInserisciSoggetto.get('anagraficaSoggetto'))"/>
+      <label for="cbRecapitoAltPF"><em>Recapito alternativo</em></label>
+    </div>
+  </div>
+
+  <!-- recapito alternativo PF-->
+  <ng-container
+    *ngIf=" (formGroup === formInserisciSoggetto.get('anagraficaSoggetto') && showRecAltResidenzaSoggetto) ||
+      (formGroup === formInserisciSoggetto.get('anagraficaRichiedente') && showRecAltResidenzaRichiedente) ">
+    <div class="row">
+      <div class="form-group col-xl-4 col-md-6">
+        <label for="statoResidenzaAlt">Stato</label>
+        <select class="form-control" id="statoResidenzaAlt" [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"
+          [formControl]="formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt')" [compareWith]="compareNazione">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of nazioni" [ngValue]="item">
+            {{ item.denom_nazione }}
+          </option>
+        </select>
+        <!-- <app-form-error-message [control]="formGroup.get('statoResidenzaAlt')"></app-form-error-message> -->
+      </div>
+
+      <!-- <div class="form-group col-xl-3 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').value?.cod_istat_nazione === '100' ">
+        <label for="regioneResidenzaAlt">*Regione</label>
+        <select class="form-control" id="regioneResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('regioneResidenzaAlt')" [compareWith]="compareRegione"
+          [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').valid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of regioniResidenzaRecAlt" [ngValue]="item" [ngClass]="{'option-hidden': item.data_fine_validita}">
+            {{ item.denom_regione }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('regioneResidenzaAlt')"></app-form-error-message>
+      </div> -->
+  
+      <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').value?.cod_istat_nazione === '100' ">
+        <label for="provinciaResidenzaAlt">*Provincia</label>
+        <select class="form-control" id="provinciaResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('provinciaResidenzaAlt')" [compareWith]="compareProvincia"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of provinceAttive" [ngValue]="item">
+            {{ item.denom_provincia }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoResidenza').get('provinciaResidenzaAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').value?.cod_istat_nazione === '100' ">
+        <label for="comuneResidenzaAlt">*Comune</label>
+        <select class="form-control" id="comuneResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('comuneResidenzaAlt')" [compareWith]="compareComune"
+          [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('recapitoAlternativoResidenza').get('provinciaResidenzaAlt').valid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of comuniResidenzaRecAlt" [ngValue]="item">
+            {{ item.denom_comune }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoResidenza').get('comuneResidenzaAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-xl-4 col-md-6"
+        *ngIf="formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').value &&
+          formGroup.get('recapitoAlternativoResidenza').get('statoResidenzaAlt').value.cod_istat_nazione !== '100' ">
+        <label for="cittaEsteraResidenzaAlt">*Città</label>
+        <input type="text" class="form-control" id="cittaEsteraResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('cittaEsteraResidenzaAlt')"/>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoResidenza').get('cittaEsteraResidenzaAlt')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="localitaResidenzaAlt">Località</label>
+        <input type="text" class="form-control" id="localitaResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('localitaResidenzaAlt')"/>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="indirizzoResidenzaAlt">Indirizzo</label>
+        <input type="text" class="form-control" id="indirizzoResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('indirizzoResidenzaAlt')"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow" [ngbTypeahead]="searchAddressResidenzaAlt"/>
+        <small *ngIf="loadingAddress" class="form-text text-muted"><em>Loading...</em></small>
+        <app-form-error-message [control]="formGroup.get('indirizzoResidenzaAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-md">
+        <label for="civicoResidenzaAlt">Numero</label>
+        <input type="text" class="form-control" id="civicoResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('civicoResidenzaAlt')" [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"/>
+        <app-form-error-message [control]="formGroup.get('civicoResidenzaAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-md">
+        <label for="capResidenzaAlt">CAP</label>
+        <input type="text" class="form-control" id="capResidenzaAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('capResidenzaAlt')" [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"/>
+        <app-form-error-message [control]="formGroup.get('capResidenzaAlt')"></app-form-error-message>
+      </div>
+    </div>
+  
+    <p><i>Contatti</i></p>
+    <div class="row">
+      <div class="form-group col-md">
+        <label for="emailAlt">Email</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoResidenza').get('emailAlt')"
+          type="text"
+          class="form-control"
+          id="emailAlt"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"
+        />
+  
+        <app-form-error-message
+          [control]="formGroup.get('emailAlt')"
+        ></app-form-error-message>
+      </div>
+      <div class="form-group col-md">
+        <label for="pecAlt">PEC</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoResidenza').get('pecAlt')"
+          type="text"
+          class="form-control"
+          id="pecAlt"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"
+        />
+  
+        <app-form-error-message
+          [control]="formGroup.get('pecAlt')"
+        ></app-form-error-message>
+      </div>
+      <div class="form-group col-md">
+        <label for="telefonoAlt">Telefono</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoResidenza').get('telefonoAlt')"
+          type="text"
+          class="form-control"
+          id="telefonoAlt"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow"
+        />
+  
+        <app-form-error-message
+          [control]="formGroup.get('telefonoAlt')"
+        ></app-form-error-message>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="cellulareAlt">Cellulare</label>
+        <input type="text" class="form-control" id="cellulareAlt" [formControl]="formGroup.get('recapitoAlternativoResidenza').get('cellulareAlt')"/>
+        <app-form-error-message [control]="formGroup.get('cellulareAlt')"></app-form-error-message>
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #formSoggettoPG let-formGroup="formGroup">
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="cfSoggetto">*Codice fiscale</label>
+      <input
+        [formControl]="formGroup.get('cf')"
+        type="text"
+        class="form-control uppercase"
+        id="cfSoggetto"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('cf')"
+      ></app-form-error-message>
+    </div>
+    <!-- SCRIVA-1202 | Il campo tipo soggetto visualizzato come non modificabile dopo la ricerca non deve essere visualizzato, ma gestito come un campo hidden -->
+    <div class="form-group col-md hidden">
+      <label for="tipoSoggetto">*Tipo soggetto</label>
+      <select
+        [formControl]="formGroup.get('tipoSoggetto')"
+        id="tipoSoggetto"
+        class="form-control"
+        [compareWith]="compareTipoSoggetto"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of tipiSoggetto" [ngValue]="item">
+          {{ item.des_tipo_soggetto }}
+        </option>
+      </select>
+
+      <app-form-error-message
+        [control]="formGroup.get('tipoSoggetto')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="ragioneSociale">*Ragione sociale</label>
+      <input
+        [formControl]="formGroup.get('ragioneSociale')"
+        type="text"
+        class="form-control"
+        id="ragioneSociale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('ragioneSociale')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="naturaGiuridica">*Informazioni relative alla natura giuridica</label>
+      <select
+        [formControl]="formGroup.get('naturaGiuridica')"
+        id="naturaGiuridica"
+        class="form-control"
+        [compareWith]="compareTipoNaturaGiuridica"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of filterTipiNaturaGiuridica()" [ngValue]="item">
+          {{ item.des_tipo_natura_giuridica }}
+        </option>
+      </select>
+
+      <app-form-error-message
+        [control]="formGroup.get('naturaGiuridica')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="pIva">*Partita IVA</label>
+      <input
+        [formControl]="formGroup.get('pIva')"
+        type="text"
+        class="form-control"
+        id="pIva"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('pIva')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <h3 class="title">Sede legale</h3>
+  <div class="row">
+    <div class="form-group col-xl-4 col-md-6">
+      <label for="statoSedeLegale">*Stato</label>
+      <select class="form-control" id="statoSedeLegale" [formControl]="formGroup.get('statoSedeLegale')" [compareWith]="compareNazione"
+        [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of nazioni" [ngValue]="item">
+          {{ item.denom_nazione }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('statoSedeLegale')"></app-form-error-message>
+    </div>
+
+    <!-- <div class="form-group col-xl-3 col-md-6" *ngIf=" formGroup.get('statoSedeLegale').value?.cod_istat_nazione === '100' ">
+      <label for="regioneSedeLegale">*Regione</label>
+      <select class="form-control" id="regioneSedeLegale" [formControl]="formGroup.get('regioneSedeLegale')" [compareWith]="compareRegione"
+        [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('statoSedeLegale').valid | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of regioniSedeLegale" [ngValue]="item" [ngClass]="{'option-hidden': item.data_fine_validita}">
+          {{ item.denom_regione }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('regioneSedeLegale')"></app-form-error-message>
+    </div> -->
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoSedeLegale').value?.cod_istat_nazione === '100' ">
+      <label for="provinciaSedeLegale">*Provincia</label>
+      <select class="form-control" id="provinciaSedeLegale" [formControl]="formGroup.get('provinciaSedeLegale')" [compareWith]="compareProvincia"
+        [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of provinceAttive" [ngValue]="item">
+          {{ item.denom_provincia }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('provinciaSedeLegale')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoSedeLegale').value?.cod_istat_nazione === '100' ">
+      <label for="comuneSedeLegale">*Comune</label>
+      <select class="form-control" 
+              id="comuneSedeLegale"              
+              [formControl]="formGroup.get('comuneSedeLegale')" 
+              [compareWith]="compareComune"
+              [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('provinciaSedeLegale').valid | attrDisabled: onlyShow">
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option *ngFor="let item of comuniSedeLegale" [ngValue]="item">
+          {{ item.denom_comune }}
+        </option>
+      </select>
+      <app-form-error-message [control]="formGroup.get('comuneSedeLegale')"></app-form-error-message>
+    </div>
+
+    <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('statoSedeLegale').value && formGroup.get('statoSedeLegale').value.cod_istat_nazione !== '100' ">
+      <label for="cittaEsteraSedeLegale">*Città</label>
+      <input type="text" class="form-control" id="cittaEsteraSedeLegale" [formControl]="formGroup.get('cittaEsteraSedeLegale')"/>
+      <app-form-error-message [control]="formGroup.get('cittaEsteraSedeLegale')"></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="localitaSedeLegale">Località</label>
+      <input type="text" class="form-control" id="localitaSedeLegale" [formControl]="formGroup.get('localitaSedeLegale')"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6">
+      <label for="indirizzoSedeLegale">*Indirizzo</label>
+      <input type="text" class="form-control" id="indirizzoSedeLegale" [formControl]="formGroup.get('indirizzoSedeLegale')"
+         [ngbTypeahead]="searchAddressSedeLegale"/>
+      <small *ngIf="loadingAddress" class="form-text text-muted"><em>Loading...</em></small>
+      <app-form-error-message [control]="formGroup.get('indirizzoSedeLegale')" ></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md">
+      <label for="civicoSedeLegale">*Numero</label>
+      <input
+        [formControl]="formGroup.get('civicoSedeLegale')"
+        type="text"
+        class="form-control"
+        id="civicoSedeLegale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('civicoSedeLegale')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="capSedeLegale">*CAP</label>
+      <input
+        [formControl]="formGroup.get('capSedeLegale')"
+        type="text"
+        class="form-control"
+        id="capSedeLegale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('capSedeLegale')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <p><i>Contatti</i></p>
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="emailSedeLegale">*Email</label>
+      <input
+        [formControl]="formGroup.get('emailSedeLegale')"
+        type="text"
+        class="form-control"
+        id="emailSedeLegale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('emailSedeLegale')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="pecSedeLegale">*PEC</label>
+      <input
+        [formControl]="formGroup.get('pecSedeLegale')"
+        type="text"
+        class="form-control"
+        id="pecSedeLegale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('pecSedeLegale')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="telefonoSedeLegale">Telefono</label>
+      <input
+        [formControl]="formGroup.get('telefonoSedeLegale')"
+        type="text"
+        class="form-control"
+        id="telefonoSedeLegale"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('telefonoSedeLegale')"
+      ></app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-4">
+      <label for="cellulareSedeLegale">Cellulare</label>
+      <input type="text" class="form-control" id="cellulareSedeLegale" [formControl]="formGroup.get('cellulareSedeLegale')"/>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="flagRecapitoAlt">
+    <div class="form-group col-md checkbox-wrapper">
+      <input type="checkbox" id="cbRecapitoAltPG" (click)="onRecapitoAlternativoSedeLegale($event)"/>
+      <label for="cbRecapitoAltPG"><em>Recapito alternativo</em></label>
+    </div>
+  </div>
+
+  <!-- recapito alternativo PG -->
+  <ng-container *ngIf="showRecAltSedeLegale">
+    <div class="row">
+      <div class="form-group col-xl-4 col-md-6">
+        <label for="statoSedeLegaleAlt">Stato</label>
+        <select class="form-control" id="statoSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt')" [compareWith]="compareNazione"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of nazioni" [ngValue]="item">
+            {{ item.denom_nazione }}
+          </option>
+        </select>
+        <!-- <app-form-error-message [control]="formGroup.get('statoSedeLegaleAlt')"></app-form-error-message> -->
+      </div>
+
+      <!-- <div class="form-group col-xl-3 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').value?.cod_istat_nazione === '100' ">
+        <label for="regioneSedeLegaleAlt">Regione</label>
+        <select class="form-control" id="regioneSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('regioneSedeLegaleAlt')" [compareWith]="compareRegione"
+          [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').valid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of regioniSedeLegaleRecAlt" [ngValue]="item" [ngClass]="{'option-hidden': item.data_fine_validita}">
+            {{ item.denom_regione }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('regioneSedeLegaleAlt')"></app-form-error-message>
+      </div> -->
+  
+      <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').value?.cod_istat_nazione === '100' ">
+        <label for="provinciaSedeLegaleAlt">Provincia</label>
+        <select class="form-control" id="provinciaSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('provinciaSedeLegaleAlt')" [compareWith]="compareProvincia"
+          [attr.disabled]="formGroup.get('cf').invalid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of provinceAttive" [ngValue]="item">
+            {{ item.denom_provincia }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoSedeLegale').get('provinciaSedeLegaleAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-xl-4 col-md-6" *ngIf=" formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').value?.cod_istat_nazione === '100' ">
+        <label for="comuneSedeLegaleAlt">Comune</label>
+        <select class="form-control" id="comuneSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('comuneSedeLegaleAlt')" [compareWith]="compareComune"
+        [attr.disabled]="formGroup.get('cf').invalid || !formGroup.get('recapitoAlternativoSedeLegale').get('provinciaSedeLegaleAlt').valid | attrDisabled: onlyShow">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of comuniSedeLegaleRecAlt" [ngValue]="item">
+            {{ item.denom_comune }}
+          </option>
+        </select>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoSedeLegale').get('comuneSedeLegaleAlt')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-xl-4 col-md-6"
+        *ngIf="formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').value &&
+        formGroup.get('recapitoAlternativoSedeLegale').get('statoSedeLegaleAlt').value.cod_istat_nazione !== '100' ">
+        <label for="cittaEsteraSedeLegaleAlt">Città</label>
+        <input type="text" class="form-control" id="cittaEsteraSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('cittaEsteraSedeLegaleAlt')"/>
+        <app-form-error-message [control]="formGroup.get('recapitoAlternativoSedeLegale').get('cittaEsteraSedeLegaleAlt')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="localitaSedeLegaleAlt">Località</label>
+        <input type="text" class="form-control" id="localitaSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('localitaSedeLegaleAlt')"/>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="indirizzoSedeLegaleAlt">Indirizzo</label>
+        <input type="text" class="form-control" id="indirizzoSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('indirizzoSedeLegaleAlt')"
+          [ngbTypeahead]="searchAddressSedeLegaleAlt"/>
+        <small *ngIf="loadingAddress" class="form-text text-muted"><em>Loading...</em></small>
+        <!-- <app-form-error-message [control]="formGroup.get('indirizzoSedeLegaleAlt')"></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md">
+        <label for="civicoSedeLegaleAlt">Numero</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('civicoSedeLegaleAlt')"
+          type="text"
+          class="form-control"
+          id="civicoSedeLegaleAlt"
+        />
+  
+        <!-- <app-form-error-message
+          [control]="formGroup.get('civicoSedeLegaleAlt')"
+        ></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md">
+        <label for="capSedeLegaleAlt">CAP</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('capSedeLegaleAlt')"
+          type="text"
+          class="form-control"
+          id="capSedeLegaleAlt"
+        />
+  
+        <!-- <app-form-error-message
+          [control]="formGroup.get('capSedeLegaleAlt')"
+        ></app-form-error-message> -->
+      </div>
+    </div>
+  
+    <p><i>Contatti</i></p>
+    <div class="row">
+      <div class="form-group col-md">
+        <label for="emailSedeLegaleAlt">Email</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('emailSedeLegaleAlt')"
+          type="text"
+          class="form-control"
+          id="emailSedeLegaleAlt"
+        />
+  
+        <!-- <app-form-error-message
+          [control]="formGroup.get('emailSedeLegaleAlt')"
+        ></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md">
+        <label for="pecSedeLegaleAlt">PEC</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('pecSedeLegaleAlt')"
+          type="text"
+          class="form-control"
+          id="pecSedeLegaleAlt"
+        />
+  
+        <!-- <app-form-error-message
+          [control]="formGroup.get('pecSedeLegaleAlt')"
+        ></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md">
+        <label for="telefonoSedeLegaleAlt">Telefono</label>
+        <input
+          [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('telefonoSedeLegaleAlt')"
+          type="text"
+          class="form-control"
+          id="telefonoSedeLegaleAlt"
+        />
+  
+        <!-- <app-form-error-message
+          [control]="formGroup.get('telefonoSedeLegaleAlt')"
+        ></app-form-error-message> -->
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="cellulareSedeLegaleAlt">Cellulare</label>
+        <input type="text" class="form-control" id="cellulareSedeLegaleAlt" [formControl]="formGroup.get('recapitoAlternativoSedeLegale').get('cellulareSedeLegaleAlt')"/>
+      </div>
+    </div>
+  </ng-container>
+
+  <p><i>Iscrizione CCIAA</i></p>
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="provinciaCciaa">Provincia CCIAA</label>
+      <input
+        [formControl]="formGroup.get('provinciaCciaa')"
+        type="text"
+        class="form-control"
+        id="provinciaCciaa"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('provinciaCciaa')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="annoCciaa">Anno CCIAA</label>
+      <input
+        [formControl]="formGroup.get('annoCciaa')"
+        type="number"
+        class="form-control"
+        id="annoCciaa"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('annoCciaa')"
+      ></app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="numeroCciaa">Numero CCIAA</label>
+      <input
+        [formControl]="formGroup.get('numeroCciaa')"
+        type="text"
+        class="form-control"
+        id="numeroCciaa"
+      />
+
+      <app-form-error-message
+        [control]="formGroup.get('numeroCciaa')"
+      ></app-form-error-message>
+    </div>
+  </div>
+</ng-template>

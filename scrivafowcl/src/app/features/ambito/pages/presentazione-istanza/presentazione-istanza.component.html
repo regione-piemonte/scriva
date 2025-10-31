@@ -1,0 +1,39 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="page-container" id="pageContainer">
+  <p class="bread-crumb" *ngIf="tipoAdempimento">
+    <a href="javascript:;" (click)="goToDashboard()"
+      aria-label="ambito dashboard">{{ tipoAdempimento.ambito.des_ambito }}</a> - <strong>
+      {{ tipoAdempimento.cod_tipo_adempimento }}</strong>
+  </p>
+  <h1 class="heel">{{ title }}</h1>
+
+
+  <ng-container *ngIf="stepperReady && showStepper">
+    <app-stepper #stepper>
+      <ng-container *ngFor="let step of steps; index as i;">
+        <cdk-step 
+          [label]="step.json_configura_quadro.label" 
+          [state]="step.state" 
+          [completed]="step.completed"
+        >
+          <ng-container *ngIf="loadSteps && stepper.selectedIndex === i">
+            <ng-container 
+              *ngComponentOutlet="componentsForStepper | loadStepperComponent:step; injector: stepInjectors[i]">
+            </ng-container>
+          </ng-container>
+        </cdk-step>
+      </ng-container>
+    </app-stepper>
+  </ng-container>
+
+  <app-conferma-presentazione *ngIf="!showStepper"></app-conferma-presentazione>
+
+</div>   

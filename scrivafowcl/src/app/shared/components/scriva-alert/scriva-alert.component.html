@@ -1,0 +1,107 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<ng-container *scrivaMaintain="layoutScriva">
+  <div *ngIf="showMessages"
+    class="alert scriva-alert"
+    [ngClass]="[
+      containerClass,
+      containerLayout,
+      configs?.containerCss | scrivaCssHandler: C_C.CSS_TYPE_CLASS
+    ]"
+    [ngStyle]="configs?.containerCss | scrivaCssHandler: C_C.CSS_TYPE_STYLE"
+  >
+    <!-- pulsante di chiusura X -->
+    <div *ngIf="showCloseButton" class="buttonX">
+      <scriva-button
+        [cssConfig]="{ customButton: 'scriva-btn-x close', typeButton: '' }"
+        [dataConfig]="{ label: '&times;' }"
+        (onClick)="alertClose()"
+      ></scriva-button>
+    </div>
+
+    <!-- RIGA DI TESTATA CON DATI E CHECK -->
+    <div class="modal-body scriva-modal-body">
+      <div class="row row-icon">
+        <div class="col col-icon">
+          <img [src]="srcIcon" class="r-a-img" />
+        </div>
+        <div class="col">
+          <div class="row" *ngFor="let alertMessage of alertMessages">
+            <div class="col">
+              <div [innerHTML]="alertMessage"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col">
+          <!-- RIGA DI "FONDO" ALERT, CHE VISUALIZZA PULSANTI PER LA CONFIRM/CANCEL DELL'ALERT -->
+          <ng-container *ngIf="showAlertButtons">
+            <div class="row r-mt--30 r-ml--70">
+              <div>
+                <!-- BOTTONE DISMISS -->
+                <ng-container *ngIf="buttonCancel">
+                  <scriva-button
+                    [cssConfig]="buttonCancel.cssConfig"
+                    [dataConfig]="buttonCancel.dataConfig"
+                    (onClick)="alertCancel()"
+                  >
+                  </scriva-button>
+                </ng-container>
+              </div>
+
+              <div class="r-ml--30">
+                <!-- BOTTONE CONFERMA -->
+                <ng-container *ngIf="buttonConfirm">
+                  <scriva-button
+                    [cssConfig]="buttonConfirm.cssConfig"
+                    [dataConfig]="buttonConfirm.dataConfig"
+                    (onClick)="alertConfirm()"
+                  >
+                  </scriva-button>
+                </ng-container>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *scrivaRemove="layoutScriva">
+  <div class="alert-box" *ngIf="showMessages" [ngClass]="configs | alertBox" (click)="alertClose()" @fadeOut>
+    <i aria-hidden="true" class="icon icon-big fa" [ngClass]="configs | alertBoxIcon"></i>
+
+    <span>
+      <!-- ALERT CON TITLE -->
+      <ng-container *ngIf="checkTitle; else textOnly">
+        <!-- TITLE -->
+        <p><strong>{{ configs.title }}</strong></p>
+        <!-- MESSAGGI -->
+        <ng-container *ngFor="let alertMessage of alertMessages">
+          <p [innerHTML]="alertMessage"></p>
+        </ng-container>
+        <!-- DESCRIZIONE -->
+      </ng-container>
+
+      <!-- ALERT SENZA TITLE -->
+      <ng-template #textOnly>
+        <!-- MESSAGGI -->
+        <ng-container *ngFor="let alertMessage of alertMessages">
+          <p class="text-only" [innerHTML]="alertMessage"></p>
+        </ng-container>
+      </ng-template>
+    </span>
+
+  </div>
+</ng-container>

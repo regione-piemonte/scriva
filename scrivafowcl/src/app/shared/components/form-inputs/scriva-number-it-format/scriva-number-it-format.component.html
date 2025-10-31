@@ -1,0 +1,172 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+
+<!-- FORM GROUP -->
+<div
+  class="form-group scriva-form-group"
+  [ngClass]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+  [ngStyle]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+>
+  <!-- LABEL -->
+  <scriva-input-label
+    [cssConfig]="cssConfig"
+    [dataConfig]="dataConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [idDOM]="idDOM"
+    [disableRequiredCheck]="disableRequired"
+  ></scriva-input-label>
+
+  <!-- CONTENITORE PER LA INPUT -->
+  <div class="row r-m--0 r-p--0">
+    <!-- COLONNA LABEL DI SINISTRA -->
+    <div
+      class="col-auto r-m--0 r-mr--15 r-p--0"
+      *scrivaMaintain="labelLeftTmpl"
+      [ngClass]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+      [ngStyle]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelLeft"
+      >
+      </scriva-input-label>
+    </div>
+
+    <!-- COLONNA DELLA INPUT -->
+    <div class="col r-m--0 r-p--0">
+      <ng-container *scrivaMaintain="checkAppendix && checkAppendixLeft">
+        <!-- TEMPLATE INPUT CON PREPEND -->
+        <div class="input-group">
+          <!-- TEMPLATE APPENDICE -->
+          <ng-container *ngTemplateOutlet="scrivaAppendixTmpl"></ng-container>
+          <!-- TEMPLATE INPUT NORMALE -->
+          <ng-container
+            *ngTemplateOutlet="scrivaNumberItFormatTmpl"
+          ></ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container *scrivaMaintain="checkAppendix && checkAppendixRight">
+        <!-- TEMPLATE INPUT CON APPENDICE DESTRA -->
+        <div class="input-group">
+          <!-- TEMPLATE INPUT NORMALE -->
+          <ng-container
+            *ngTemplateOutlet="scrivaNumberItFormatTmpl"
+          ></ng-container>
+          <!-- TEMPLATE APPENDICE -->
+          <ng-container *ngTemplateOutlet="scrivaAppendixTmpl"></ng-container>
+        </div>
+      </ng-container>
+
+      <ng-container *scrivaMaintain="!checkAppendix">
+        <!-- TEMPLATE INPUT NORMALE -->
+        <ng-container
+          *ngTemplateOutlet="scrivaNumberItFormatTmpl"
+        ></ng-container>
+      </ng-container>
+    </div>
+
+    <!-- COLONNA LABEL DI DESTRA -->
+    <div
+      class="col-auto r-m--0 r-ml--15 r-p--0"
+      *scrivaMaintain="labelRightTmpl"
+      [ngClass]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_CLASS
+      "
+      [ngStyle]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_STYLE
+      "
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelRight"
+      >
+      </scriva-input-label>
+    </div>
+  </div>
+
+  <!-- FORM CONTROL - GESTIONE ERRORI -->
+  <scriva-form-control-error
+    [cssConfig]="cssConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [errMapFormControl]="mappaErroriFC"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-control-error>
+  <!-- FORM GROUP - GESTIONE ERRORI -->
+  <scriva-form-group-error
+    [cssConfig]="cssConfig"
+    [formGroup]="formGroup"
+    [errMapFormGroup]="mappaErroriFG"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-group-error>
+</div>
+
+<ng-template #scrivaNumberItFormatTmpl>
+  <!-- INPUT -->
+  <input
+    type="string"
+    class="form-control scriva-input-border"
+    [attr.aria-describedby]="idDOM + 'appendix'"
+    #scrivaNumberItFormatInput
+    [id]="idDOM"
+    [name]="idFC"
+    [(ngModel)]="_value"
+    [disabled]="disabled"
+    [placeholder]="dataConfig?.placeholder || ''"
+    [title]="vauleAsTitle"
+    [ngClass]="[
+      cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_CLASS,
+      (cssConfig.showErrorFC &&
+        formControl.invalid &&
+        (formSubmitted || formControl.dirty || formControl.touched)) ||
+      (cssConfig.showErrorFG &&
+        formGroup.invalid &&
+        formErrors &&
+        (formSubmitted || formGroup.dirty || formGroup.touched))
+        ? 'scriva-input-border-error'
+        : '',
+      conditionalClass
+    ]"
+    [ngStyle]="cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+    [attr.maxlength]="dataConfig.maxLength"
+    [attr.min]="dataConfig.min || null"
+    [attr.max]="dataConfig.max || null"
+    [attr.step]="dataConfig.step || null"
+    (blur)="onInputBlur()"
+    (keydown.enter)="onKeydownEnter($event, scrivaNumberItFormatInput)"
+    NumbersOnly
+    [numberItFormat]="true"
+    [allowDecimals]="dataConfig.useDecimal"
+    [allowThousandsSeparator]="allowThousandsSeparator"
+    [allowSign]="dataConfig.useSign"
+    [thousandSeparator]="C_C.SEPARATORE_MIGLIAIA"
+    [ignoreValidator]="true"
+  />
+</ng-template>
+
+<ng-template #scrivaAppendixTmpl>
+  <div class="input-group-append">
+    <span class="input-group-text scriva-appendix" [id]="idDOM + 'appendix'">
+      {{ appendix.text }}
+    </span>
+  </div>
+</ng-template>

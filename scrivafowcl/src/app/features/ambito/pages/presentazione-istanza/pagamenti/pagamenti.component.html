@@ -1,0 +1,196 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<span id="pagamentiContainer">
+
+  <div class="card" id="topCard">
+    <div class="row">
+      <div class="text-card col-md-8">
+        <p>In elenco i pagamenti di marca da bollo ed eventuali oneri istruttori dovuti:
+          per il calcolo degli oneri richiesti, se non presenti, ti rimandiamo alle informazioni pubblicate dalle varie autorità competenti.
+          <br><br>
+          E' possibile effettuare i pagamenti attraverso il sistema <strong>PIEMONTEPAY</strong>, collegamento regionale con il sistema nazionale <strong>pagoPA</strong>
+        </p>
+        <button type="button" class="btn btn-primary help-btn" (click)="onHelpClicked('elenco_pagamenti')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="logo-ppay col-md-4">
+        <img src="assets/logo-piemontepay-2x.png" alt=""/>
+      </div>
+    </div>
+  </div>
+
+  <ngx-datatable
+    *ngIf="pagamentiTableSource && columns?.length > 0"
+    class="material"
+    [rows]="pagamentiTableSource"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [reorderable]="false"
+    [scrollbarH]="true"
+    [headerHeight]="80"
+    [footerHeight]="25"
+    rowHeight="auto"
+    [limit]="10"
+    [messages]="{ emptyMessage: emptyTableMessage }"
+  ></ngx-datatable>
+
+  <!-- #region - ngx-datatable templates -->
+  <ng-template #dateTemplate let-row="row" ngx-datatable-cell-template>
+    {{ getFormattedDate(row.data_inserimento?.split('T')[0]) }}
+  </ng-template>
+  <ng-template #importoTemplate let-row="row" ngx-datatable-cell-template>
+    <span *ngFor="let importo of row.importi_dovuti; index as i" class="importo-cell">
+      <ng-container *ngIf="importo.importo_dovuto; else editInput">
+        {{importo.importo_dovuto | number: '1.2-2':'it'}} Euro
+      </ng-container>
+      <ng-template #editInput>
+        <input type="text" class="form-control" (change)="setImporto($event.target.value, row.idPagamentoPrincipale, i)">
+      </ng-template>
+      <span class="form-group col checkbox-wrapper-cell" *ngIf="importo.id_tipo_pagamento === 1 && row.stato_pagamento?.cod_stato_pagamento !== '040'">
+        <input type="checkbox" id="cbNonDovuto-{{row.idPagamentoPrincipale}}"
+          [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE || row.stato_pagamento?.cod_stato_pagamento !== '010'"
+          [checked]="importo.flg_non_dovuto"
+          (click)="onFlagNonDovuto(row.idPagamentoPrincipale, $event.target.checked)"
+        >
+        <label for="cbNonDovuto-{{row.idPagamentoPrincipale}}"><strong>Non dovuto</strong></label>
+      </span>
+      <br>
+    </span>
+    <ng-container *ngIf="row.importi_dovuti?.length > 1">
+      <br>
+      <strong>TOTALE {{ getTotalAmount(row?.idPagamentoPrincipale) | number: '1.2-2':'it' }} Euro</strong>
+    </ng-container>
+  </ng-template>
+  <ng-template #statoTemplate let-row="row" ngx-datatable-cell-template>
+    <span
+      [ngClass]="{
+        'green-text': row.stato_pagamento?.cod_stato_pagamento === '040',
+        'red-text': row.stato_pagamento?.cod_stato_pagamento === '030' || row.stato_pagamento?.cod_stato_pagamento === '050' || row.stato_pagamento?.cod_stato_pagamento === '060'
+      }"
+    >
+      {{ row.stato_pagamento.des_stato_pagamento }}
+    </span>
+  </ng-template>
+  <ng-template #descrizioneTemplate let-row="row" ngx-datatable-cell-template>
+    <span class="descrizione-cell" *ngFor="let descrizione of row.des_pagamenti" [innerHTML]="descrizione">
+      <br>
+    </span>
+  </ng-template>
+  <ng-template #metodoTemplate let-row="row" ngx-datatable-cell-template>
+    <ng-container>
+      <div class="logo-pagopa" [ngClass]="{ 'disabled': attoreGestioneIstanza === gestioneEnum.WRITE_LOCK || !checkAttivazione(row.idPagamentoPrincipale) }">
+        <img src="assets/logo-pagopa.png" alt=""/>
+      </div>
+      <div class="form-group" 
+        *ngIf="row.stato_pagamento?.cod_stato_pagamento === '010' &&
+          (attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK)"
+      >
+        <button type="submit" class="btn btn-outline-primary btn-paga"
+          [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK || !checkAttivazione(row.idPagamentoPrincipale)"
+          (click)="onPaga(row.idPagamentoPrincipale)"
+        >
+          PAGA
+        </button>
+      </div>
+    </ng-container>
+  </ng-template>
+  <ng-template #iuvTemplate let-row="row" ngx-datatable-cell-template>
+    <span *ngFor="let iuv of row.IUV_list">
+      {{ iuv }}<br>
+    </span>
+  </ng-template>
+  <ng-template #iubdTemplate let-row="row" ngx-datatable-cell-template>
+    <span *ngFor="let iubd of row.IUBD_list">
+      {{ iubd }}<br>
+    </span>
+  </ng-template>
+  <ng-template #ricevutaTemplate let-row="row" ngx-datatable-cell-template>
+    <span class="actions" [ngClass]="{ disabled: attoreGestioneIstanza !== gestioneEnum.WRITE }"
+      *ngFor="let ricevuta of row.ricevute">
+      <button type="button" class="btn-action" *ngIf="ricevuta.uuidIndex" aria-label="download ricevuta" (click)="downloadRicevuta(ricevuta)">
+        <img src="assets/icon-table-download.svg" height="22px" alt="Download"/>
+      </button>
+      <br>
+    </span>
+  </ng-template>
+  <!-- #endregion -->
+
+  <div class="card altri-canali" id="altriCanali" *ngIf="pagamentiAltriCanali?.length > 0 || pagamentiSelectList?.length > 0">
+    <h2 class="section-title">Pagamenti effettuati su altri canali</h2>
+    <p>E' possibile effettuare il caricamento di pagamenti effettuati su altri canali diversi da PagoPA</p>
+    <small class="form-text text-muted">*Campo obbligatorio</small>
+
+    <form [formGroup]="pagamentoForm">
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="dataPagamento">*Data pagamento</label>
+          <input type="date" class="form-control" id="dataPagamento" max="{{ today | date: 'yyyy-MM-dd' }}" formControlName="dataPagamento">
+          <app-form-error-message [control]="this.pagamentoForm.get('dataPagamento')"></app-form-error-message>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="importo">*Importo</label>
+          <input type="text" class="form-control" id="importo" formControlName="importo">
+          <app-form-error-message [control]="this.pagamentoForm.get('importo')"></app-form-error-message>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="descrizione">*Descrizione</label>
+          <select class="form-control" name="descrizione" id="descrizione" formControlName="pagamento">
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option [ngValue]="pagamento" *ngFor="let pagamento of pagamentiSelectList">
+              {{pagamento.riscossione_ente.adempi_tipo_pagamento.ente_creditore.denominazione_ente_creditore}} - {{pagamento.riscossione_ente.des_pagamento_verso_cittadino}}
+            </option>
+          </select>
+          <app-form-error-message [control]="this.pagamentoForm.get('descrizione')"></app-form-error-message>
+        </div>
+      </div>
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="iuv">*IUV</label>
+          <input type="text" class="form-control" id="iuv" formControlName="iuv">
+          <app-form-error-message [control]="this.pagamentoForm.get('iuv')"></app-form-error-message>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="iubd">IUBD</label>
+          <input type="text" class="form-control" id="iubd" formControlName="iubd">
+        </div>
+        <div class="form-group col-md-4"
+          *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+        >
+          <button type="button" class="btn btn-outline-primary btn-ricevuta"
+            [disabled]="pagamentiSelectList.length < 1 || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+            (click)="onCaricaRicevuta(fileInput)"
+          >
+            CARICA RICEVUTA
+          </button>
+          <input #fileInput type="file" name="uploadedFile" id="uploadedFile" accept="{{ acceptedFileTypes }}" hidden
+            (change)="uploadRicevuta($event.target.files); $event.target.value = ''"/>
+        </div>
+      </div>
+    </form>
+
+    <app-recap-table *ngIf="pagamentiAltriCanali?.length > 0"
+      [title]="altriCanaliTableTitle"
+      [columns]="altriCanaliColumns"
+      [records]="pagamentiAltriCanali"
+      [editEnabled]="false"
+      [deleteEnabled]="attoreGestioneIstanza === gestioneEnum.WRITE"
+      [downloadEnabled]="attoreGestioneIstanza === gestioneEnum.WRITE"
+      (deleteRecord)="deleteRtAltriCanali($event)"
+      (downloadRecord)="downloadRtAltriCanali($event)">
+    </app-recap-table>
+
+  </div>
+
+</span>
+
+

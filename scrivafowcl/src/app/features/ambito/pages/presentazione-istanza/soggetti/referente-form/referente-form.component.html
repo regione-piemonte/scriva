@@ -1,0 +1,137 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header" *ngIf="data?.title">
+  <h2 class="modal-title">{{ data.title }}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="buttonClicked(-1)"></i>
+</div>
+
+<!-- form inserisci referente -->
+<div
+  class="content" [ngClass]="{ 'bg-gray': !formReferenteRow }"
+  id="formInserisciReferente"
+>
+  <form [formGroup]="formInserisciReferente">
+    <ng-container
+      *ngTemplateOutlet="
+        formReferente;
+        context: {
+          formGroup: formInserisciReferente
+        }
+      "
+    ></ng-container>
+  </form>
+
+  <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+
+  <!-- Azioni form inserisci referente -->
+  <div class="row" *ngIf="!formReferenteRow">
+    <div class="form-group col-md-auto">
+      <button
+        type="button"
+        class="btn btn-large btn-outline-primary"
+        (click)="inserisciReferente()"
+      >
+        INSERISCI REFERENTE
+      </button>
+    </div>
+    <div class="form-group col-md-auto">
+      <button
+        type="button"
+        class="btn btn-large btn-link"
+        (click)="annullaInserisciReferente()"
+      >
+        ANNULLA
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-footer" *ngIf="data?.title">
+  <button
+    *ngFor="let b of data.buttons; index as i"
+    type="button"
+    [class]="'btn btn-large ' + b.type"
+    (click)="buttonClicked(i, b.label)"
+  >
+    {{ b.label }}
+  </button>
+</div>
+
+<!-- template form -->
+<ng-template #formReferente let-formGroup="formGroup">
+  <h2 class="title" *ngIf="!formReferenteRow">
+    <span *ngIf="numReferenti === 'S' ">Aggiungi un referente per informazioni sul progetto e procedi con la compilazione dell'istanza</span>
+    <span *ngIf="numReferenti === 'M' ">Aggiungi uno o più referenti per informazioni sul progetto e procedi con la compilazione dell'istanza</span>
+    <span *ngIf="numReferenti === 'O' ">Aggiungi un referente per informazioni sul progetto oppure seleziona AVANTI</span>
+    <span *ngIf="numReferenti === 'MO' ">Aggiungi uno o più referenti per informazioni sul progetto oppure seleziona AVANTI</span>
+  </h2>
+
+  <h3 class="title">Referente</h3>
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="cognomeReferente">*Cognome</label>
+      <input
+        [formControl]="formGroup.get('cognome')"
+        type="text"
+        class="form-control"
+        id="cognomeReferente"
+      />
+      <app-form-error-message [control]="formGroup.get('cognome')">Campo obbligatorio</app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="nomeReferente">*Nome</label>
+      <input
+        [formControl]="formGroup.get('nome')"
+        type="text"
+        class="form-control"
+        id="nomeReferente"
+      />
+      <app-form-error-message [control]="formGroup.get('nome')">Campo obbligatorio</app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="telefonoReferente">*Telefono</label>
+      <input type="text" class="form-control" id="telefonoReferente" [formControl]="formGroup.get('telefono')"/>
+      <app-form-error-message [control]="formGroup.get('telefono')">Campo obbligatorio</app-form-error-message>
+    </div>
+    <div class="form-group col-md">
+      <label for="emailReferente">*Email</label>
+      <input type="text" class="form-control" id="emailReferente" [formControl]="formGroup.get('email')"/>
+      <app-form-error-message [control]="formGroup.get('email')">Campo obbligatorio</app-form-error-message>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="cellulareReferente">Cellulare</label>
+      <input type="text" class="form-control" id="cellulareReferente" [formControl]="formGroup.get('cellulare')"/>
+      <!-- <app-form-error-message [control]="formGroup.get('cellulare')"></app-form-error-message> -->
+    </div>
+    <div class="form-group col-md">
+      <label for="pecReferente">PEC</label>
+      <input type="text" class="form-control" id="pecReferente" [formControl]="formGroup.get('pec')"/>
+      <!-- <app-form-error-message [control]="formGroup.get('pec')"></app-form-error-message> -->
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <label for="mansioneReferente">Mansione</label>
+      <input
+        [formControl]="formGroup.get('mansione')"
+        type="text"
+        class="form-control"
+        id="mansioneReferente"
+      />
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,82 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="row float-right" *ngIf="paginazioneVisibile">
+  <div class="col">
+    <!-- Bottone per tornare alla prima pagina -->
+    <button type="button"
+      class="btn"
+      [title]="'Inizio'"
+      [disabled]="paginaCorrente == 1"
+      (click)="vaiAPagina(1)">
+      <div class="col col-icon">
+          <img [src]="start" class="s-a-img" />
+      </div>
+    </button>
+
+    <!-- Bottone per tornare indietro di una pagina -->
+    <button type="button"
+      class="btn"
+      [title]="'Indietro'"
+      [disabled]="paginaCorrente == 1"
+      (click)="vaiAPagina(paginaCorrente - 1)">
+      <div class="col col-icon">
+          <img [src]="backward" class="s-a-img" />
+      </div>
+    </button>
+
+    <!--Puntini per overflow a sinistra-->
+    <div *ngIf="showDotsLeft" class="dots">
+      <div class="col col-icon">
+          <span>...</span>
+      </div>
+    </div>
+
+    <!--Lista di bottoni numerici per le pagine-->
+    <div *ngFor="let numeroPagina of pagine;" style="display: inline-block;">
+      <!--Bottone per andare alla pagina numeroPagina-->
+      <button type="button"
+          class="btn"
+          [title]="'Pagina ' + numeroPagina"
+          [ngClass]="[paginaCorrente == numeroPagina ? 'btn-primary' : '']"
+          (click)="vaiAPagina(numeroPagina)">
+          {{ numeroPagina }}
+      </button>
+    </div>
+
+    <!--Puntini per overflow a destra-->
+    <div *ngIf="showDotsRight" class="dots">
+      <div class="col col-icon">
+        <span>...</span>
+      </div>
+    </div>
+
+    <!-- Bottone andare avanti di una pagina -->
+    <button type="button"
+      class="btn"
+      [title]="'Avanti'"
+      [disabled]="paginaCorrente == pagine.length"
+      (click)="vaiAPagina(paginaCorrente + 1)">
+      <div class="col col-icon">
+        <img [src]="forward" class="s-a-img"/>
+      </div>
+    </button>
+
+    <!-- Bottone per andare all'ultima pagina -->
+    <button type="button"
+        class="btn"
+        [title]="'Fine'"
+        [disabled]="paginaCorrente == pagine.length"
+        (click)="vaiAPagina(numPagine)">
+        <div class="col col-icon">
+          <img [src]="end" class="s-a-img"/>
+        </div>
+    </button>
+  </div>
+</div>

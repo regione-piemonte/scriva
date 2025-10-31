@@ -1,0 +1,109 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<scriva-bread-crumb *ngIf="istanza && scrivaBreadCrumbItems"
+  [items]="scrivaBreadCrumbItems"
+  (emit)="emitEventChild($event)"
+></scriva-bread-crumb>
+
+<!-- TITOLO DELLA PAGINA -->
+<scriva-page-title *ngIf="istanza && titlePage"
+  [title]="titlePage"
+  [showUserInfo]="false"
+></scriva-page-title>
+
+
+<advanced-action-riepilogo-istanza
+  *ngIf="istanza && denTitolareIstanza"
+  [istanza]="istanza"
+  [denTitolareIstanza]="denTitolareIstanza"
+>
+</advanced-action-riepilogo-istanza>
+
+<ng-container *ngIf="!modeSuccess; else modeSuccessTemplate">
+  <div class="card" id="dettaglioContainer">
+  
+    <h5><strong>Consultazione al pubblico</strong></h5>
+    <hr>
+    
+    <form [formGroup]="formPeriodo">
+      <h4 *ngIf="showDates" class="title">Periodo osservazioni</h4>
+    
+      <div class="row" *ngIf="showDates">
+        <div class="form-group col-md-3">
+          <label for="dataInizio">Data inizio</label>
+          <input
+            class="form-control"
+            type="date"
+            id="dataInizio"
+            formControlName="dataInizio"
+            (change)="checkDataFineInizio()"
+          />
+        </div>
+        <div class="form-group col-md-3">
+          <label for="dataFine">Data fine</label>
+          <input
+            class="form-control"
+            type="date"
+            id="dataFine"
+            formControlName="dataFine"
+            (change)="checkDataFineInizio()"
+          />
+          <div *ngIf="dateError" class="error-message">
+            Data fine non può essere antecedente alla data inizio
+          </div>
+        </div>
+      </div>
+    
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="dataPubblicazione">Data pubblicazione</label>
+          <input
+            class="form-control"
+            type="date"
+            id="dataPubblicazione"
+            formControlName="dataPubblicazione"
+          />
+        </div>
+      </div>
+    </form>
+
+      <advanced-action-allegati
+        *ngIf="istanza"
+        [istanza]="istanza"
+        [chiave]="chiave"
+        (emit)="emitEventChild($event)"
+      >
+      </advanced-action-allegati>
+    <scriva-note 
+      [idIstanza]="idIstanza" 
+      (emit)="emitEventChild($event)">
+    </scriva-note>
+  </div>
+</ng-container>
+
+<advanced-action-footer
+  [showConferma]="!modeSuccess"
+  [disable]="dateError"
+  (emit)="emitEventChild($event)">
+</advanced-action-footer>
+
+<!-- Messaggio di success  della azione avanzata -->
+<ng-template #modeSuccessTemplate>
+  <div class="row s-mt--30">
+    <div class="col">
+      <div class="alert-box success">
+        <i class="icon icon-big fa fa-check-circle-o" aria-hidden="true"></i>
+        <span>
+          <p class="text-only" [innerHTML]="confirmSuccessMessagge"></p>
+        </span>
+      </div>    
+    </div>
+  </div>
+</ng-template>

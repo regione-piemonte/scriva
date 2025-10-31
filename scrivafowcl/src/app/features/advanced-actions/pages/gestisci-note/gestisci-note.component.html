@@ -1,0 +1,42 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<scriva-bread-crumb
+  *ngIf="istanza && scrivaBreadCrumbItems"
+  [items]="scrivaBreadCrumbItems"
+  (emit)="emitEventChild($event)"
+></scriva-bread-crumb>
+
+<!-- TITOLO DELLA PAGINA -->
+<scriva-page-title
+  *ngIf="istanza && titlePage"
+  [title]="titlePage"
+  [showUserInfo]="false"
+></scriva-page-title>
+
+
+<advanced-action-riepilogo-istanza
+  *ngIf="istanza && denTitolareIstanza"
+  [istanza]="istanza"
+  [denTitolareIstanza]="denTitolareIstanza">
+</advanced-action-riepilogo-istanza>
+
+
+<scriva-note 
+  [noteIstanza]="noteIstanza"
+  [notSaveBE]="false"
+  [idIstanza]="idIstanza"
+  [identIstanza]="istanza?.cod_istanza">
+</scriva-note>
+
+
+<advanced-action-footer
+  (emit)="emitEventChild($event)" [showConferma]=false>
+</advanced-action-footer>
+

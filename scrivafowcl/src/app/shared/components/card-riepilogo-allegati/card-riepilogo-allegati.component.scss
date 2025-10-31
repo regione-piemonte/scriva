@@ -1,0 +1,483 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+.card {
+  padding: 30px;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 8px 0 #00000048;
+
+  .cancellato {
+    color: #cccccc;
+  }
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  form {
+    div.row {
+      align-items: flex-end;
+    }
+    .form-control.ng-touched.ng-invalid:not(form) {
+      border: 2px solid #a94442;
+    }
+    .uppercase {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.help-text-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.card-title {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  display: flex;
+  i {
+    font-size: 1.5rem;
+    color: #61b87a;
+    margin-right: 8px;
+  }
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  input {
+    margin: 4px 10px 0 0;
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+
+  .cbx-riservato {
+    margin: 0 0.5rem 0.5rem 0;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    &.disabled {
+      pointer-events: none !important;
+      cursor: default;
+      img {
+        filter: grayscale(1);
+      }
+    }
+  }
+}
+
+.alert-box {
+  margin-top: 1rem;
+}
+
+.option-hidden {
+  display: none;
+}
+
+.table-btn {
+  margin: 10px 20px 10px 0;
+}
+
+.help-box {
+  padding-bottom: 1rem;
+}
+
+.fixed-height {
+  max-height: 850px;
+}
+
+.cbx-header-title {
+  font-weight: bold;
+  font-size: 1rem;
+  color: black;
+  margin-bottom: 0.5rem;
+}
+
+.additional-info-riepilogo {
+  border-bottom: 1px solid #d1d1d1;
+  margin: 20px 0;
+  padding: 20px 0;
+  text-indent: 20px;
+  .card-title {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 5px;
+  }
+}
+
+::ng-deep .ngx-datatable {
+  .datatable-footer {
+    .datatable-footer-inner {
+      .table-btn {
+        margin: 10px 10px 0px 19px;
+      }
+
+      .datatable-pager {
+        flex: 1 1 50%;
+        text-align: right;
+        .pager {
+          li {
+            a {
+              color: #006cb4;
+              i {
+                color: #006cb4;
+              }
+            }
+
+            &.disabled {
+              a {
+                i {
+                  filter: grayscale(1) opacity(0.5);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep
+  .ngx-datatable.fixed-row
+  .datatable-scroll
+  .datatable-body-row
+  .datatable-body-cell {
+  white-space: normal;
+}
+
+::ng-deep .checkbox-cell {
+  display: flex !important;
+  align-items: center;
+}
+
+:host ::ng-deep .ngx-datatable *,
+:host ::ng-deep .ngx-datatable :after,
+:host ::ng-deep .ngx-datatable :before {
+  box-sizing: content-box;
+}
+
+:host ::ng-deep .ngx-datatable.material {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.in-pubblicazione {
+  color: green;
+  font-size: 2em;
+}
+
+::ng-deep .break-all {
+  word-break: break-all;
+}
+
+$paginator_text_color: #656464;
+$paginator_info_color: #9da0a6;
+$primary_color: #213ab0;
+$secondary_color: #f6ae2d;
+$second_color_alpha: transparentize($secondary_color, 0.6);
+
+$blue-scriva: #006cb4;
+$background_ligth: #f9f9f9;
+$border_color: #cccccc;
+$semi_dark: #212529;
+
+::ng-deep .ngx-datatable.tree {
+  box-shadow: none;
+  font-size: 1rem !important;
+
+  .datatable-row-detail {
+    background-color: $background_ligth;
+    // border-bottom: 1px solid $border_color;
+  }
+
+  .datatable-header {
+    height: unset !important;
+
+    padding-bottom: 12px;
+
+    .datatable-header-cell {
+      vertical-align: bottom;
+
+      font: normal normal bold 16px Open Sans;
+
+      .datatable-header-cell-label {
+        padding: 16px;
+        font: normal normal bold 16px Open Sans;
+      }
+    }
+  }
+
+  .datatable-body {
+    .datatable-scroll {
+      min-width: 100% !important;
+    }
+
+    &::-webkit-scrollbar {
+      width: auto;
+      height: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+      -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $blue-scriva;
+    }
+
+    .empty-row {
+      border-right: none;
+      border-left: none;
+      border-top: 1px solid $border_color;
+      border-bottom: 1px solid $border_color;
+      padding: 0.875rem 1.25rem;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .datatable-body-row {
+      border-right: none;
+      border-left: none;
+      border-top: 1px solid $border_color;
+
+      .datatable-body-cell {
+        &:not(:last-of-type) {
+          border-right: none;
+        }
+
+        .datatable-body-cell-label {
+          padding: 14px;
+          color: $semi_dark;
+          font: normal normal 14px Open Sans;
+        }
+      }
+    }
+
+    .datatable-tree-button {
+      background: transparent;
+      border: none;
+    }
+
+    .datatable-tree-button:disabled {
+      display: none;
+    }
+
+    .datatable-icon-up::before {
+      content: url('src/assets/collapse.svg');
+    }
+
+    .datatable-icon-down::before {
+      content: url('src/assets/expand.svg');
+    }
+
+    .expand-link {
+      font-weight: 600;
+    }
+  }
+
+  .datatable-footer-inner {
+    display: block;
+    padding-top: 26px;
+    // justify-content: flex-end;
+  }
+
+  nav.ng2-smart-pagination-nav .info-page {
+    display: flex;
+    color: $paginator_info_color;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  nav.ng2-smart-pagination-nav .size-page-select {
+    display: flex;
+
+    &.right {
+      position: absolute;
+      right: 0;
+    }
+
+    label {
+      color: $paginator_info_color;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+  }
+
+  nav.ng2-smart-pagination-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav.ng2-smart-pagination-nav .pagination {
+    font-size: 1rem;
+    line-height: 1rem;
+    border: $border_color solid 1px;
+    border-radius: 0.25rem;
+  }
+
+  nav.ng2-smart-pagination-nav .ng2-smart-pagination {
+    display: flex;
+    padding: 0;
+  }
+
+  nav.ng2-smart-pagination-nav .pagination li a,
+  nav.ng2-smart-pagination-nav .pagination li > span {
+    font-size: 1rem;
+    line-height: 1rem;
+    background-color: transparent;
+    color: $paginator_text_color;
+    padding: 0.75rem 1.15rem;
+    border: none;
+  }
+
+  nav.ng2-smart-pagination-nav
+    .ng2-smart-pagination
+    .page-item.disabled
+    .page-link,
+  nav.ng2-smart-pagination-nav
+    .ng2-smart-pagination
+    .page-item.disabled
+    .page-link:focus,
+  nav.ng2-smart-pagination-nav
+    .ng2-smart-pagination
+    .page-item.disabled
+    .page-link:hover {
+    background-color: transparent;
+    // color: nb-theme(text-disabled-color) !important;
+  }
+
+  nav.ng2-smart-pagination-nav .pagination li:not(:last-child) {
+    border-right: 1px solid $border_color;
+  }
+
+  .ng2-smart-pagination .ng2-smart-page-item {
+    display: inline;
+  }
+
+  nav.ng2-smart-pagination-nav .pagination li {
+    overflow: hidden;
+  }
+
+  nav.ng2-smart-pagination-nav .pagination li.active a,
+  nav.ng2-smart-pagination-nav .pagination li.active a:hover,
+  nav.ng2-smart-pagination-nav .pagination li.active a:focus,
+  nav.ng2-smart-pagination-nav .pagination li.active > span,
+  nav.ng2-smart-pagination-nav .pagination li.active > span:hover,
+  nav.ng2-smart-pagination-nav .pagination li.active > span:focus {
+    color: white;
+    // background-color: nb-theme(color-primary-default);
+  }
+}
+
+::ng-deep .ngx-datatable {
+  // margin-bottom: 20px;
+
+  .datatable-footer {
+    .datatable-footer-inner {
+      // height: auto;
+
+      .table-btn {
+        margin: 10px 20px 0 0;
+      }
+
+      .datatable-pager {
+        flex: 1 1 50%;
+        text-align: right;
+        .pager {
+          li {
+            a {
+              color: #006cb4;
+              i {
+                color: #006cb4;
+              }
+            }
+
+            &.disabled {
+              a {
+                i {
+                  filter: grayscale(1) opacity(0.5);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep
+  .ngx-datatable.fixed-row
+  .datatable-scroll
+  .datatable-body-row
+  .datatable-body-cell {
+  white-space: normal;
+}
+
+:host ::ng-deep .datatable-checkbox input[type='checkbox'] {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #f2f2f2;
+}
+
+:host ::ng-deep .datatable-checkbox input[type='checkbox']:before {
+  display: none;
+}
+
+:host ::ng-deep .datatable-checkbox input[type='checkbox']:after {
+  display: none;
+}
+
+:host ::ng-deep .ngx-datatable.material {
+  box-shadow: none;
+  margin-bottom: 0;
+}
+
+.force-break-spaces {
+  white-space: break-spaces;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/** 
+  La libreria ngx-datatable se metti un pulsante nel template header, si mette posizionalmente "sopra" il pulsante, impedendo parzialmente il click.
+  Con questa classe di stile si va a definire uno z-index superiore, in maniera tale che non dia problemi.
+*/
+.datatable-header-btn {
+  position: relative;
+  z-index: 100;
+}

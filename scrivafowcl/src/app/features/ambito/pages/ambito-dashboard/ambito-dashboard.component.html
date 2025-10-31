@@ -1,0 +1,57 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div id="pageContainer">
+  <h1 class="heel">{{ title }}</h1>
+
+  <div class="segment-title col-xl-12" *ngIf="isFrontOffice">
+    <button type="button" id="fav" [ngClass]="{ selected: selectedTab === 'fav' }" (click)="selectTab('fav')">
+      Preferiti
+    </button>
+    <button type="button" id="all" [ngClass]="{ selected: selectedTab === 'all' }" (click)="selectTab('all')">
+      Tutti
+    </button>
+  </div>
+
+  <div class="row" *ngIf="selectedTab === 'all' ">
+    <div class="col-xl-4 col-md-6" *ngFor="let tipo of tipiAdempimento">
+      <app-tipo-adempimento-card
+        [tipoAdempimento]="tipo"
+        (creaNuova)="goToWizard(tipo)"
+        (info)="showInfoHelp(tipo)"
+        (cerca)="cercaIstanze({tipoAdempimento: tipo})"
+        (toggleFavourite)="toggleFavourite(tipo)"
+      ></app-tipo-adempimento-card>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="selectedTab === 'fav' ">
+    <div class="alert-box info" *ngIf="tipiAdempimentoPreferiti?.length === 0">
+      <i class="icon icon-big fa fa-info-circle" aria-hidden="true"></i>
+      <span>
+        <p class="text-only">
+          Non hai ancora indicato i tuoi adempimenti preferiti. Clicca sulla stella dall'elenco di 
+          <button class="btn btn-link" (click)="goToFavTab()">tutti gli adempimenti</button>.
+        </p>
+      </span>
+    </div>
+
+    <ng-container *ngIf="tipiAdempimentoPreferiti">
+      <div class="col-xl-4 col-md-6" *ngFor="let tipo of tipiAdempimentoPreferiti">
+        <app-tipo-adempimento-card
+          [tipoAdempimento]="tipo"
+          (creaNuova)="goToWizard(tipo)"
+          (info)="showInfoHelp(tipo)"
+          (cerca)="cercaIstanze({tipoAdempimento: tipo})"          
+          (toggleFavourite)="toggleFavourite(tipo)"
+        ></app-tipo-adempimento-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

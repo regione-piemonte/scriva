@@ -1,0 +1,140 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<div class="card col-xl-8" id="searchFormCard">
+  <form [formGroup]="ricercaForm" id="searchForm">
+
+    <span [innerHTML]="getHelpBannerText('Testo_iniziale_riga1')"></span><br>
+    <span [innerHTML]="getHelpBannerText('Testo_iniziale_riga2')"></span><br>
+    <span [innerHTML]="getHelpBannerText('Testo_iniziale_riga3')"></span><br>
+
+    <p class="description" id="searchLabel">
+      Puoi ricercare per Codice categoria e/o descrizione categoria
+    </p>
+
+    <div class="row">
+      <div class="form-group col-xl-6">
+        <input type="text" class="form-control" id="searchText" aria-labelledby="searchLabel"
+          formControlName="searchText" />
+      </div>
+    </div>
+
+    <div class="row" *ngIf="oggettiIstanza?.length > 1">
+      <div class="form-group col-md-4">
+        <label for="progetto">Scegli un progetto</label>
+        <select class="form-control" name="progetto" id="progetto" formControlName="progetto"
+          [compareWith]="compareProgetto">
+          <!-- <option [value]="null" class="option-hidden">Seleziona</option> -->
+          <option [ngValue]="ogg" *ngFor="let ogg of oggettiIstanza"> {{ ogg.des_oggetto }}</option>
+        </select>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="row filter-group">
+  <div class="col-auto competenza-filter" [ngClass]="{ selected: item.codice === tipoCompFilter }"
+    *ngFor="let item of tipiCompFilterList" (click)="filterByCompetenza(item.codice)">
+    {{ item.label }}
+  </div>
+
+  <div class="form-group col-md-4 checkbox-wrapper">
+    <input type="checkbox" id="selectedFilter" (click)="filterSelected($event.target.checked)" />
+    <label for="selectedFilter">Mostra solo le categorie selezionate</label>
+  </div>
+</div>
+
+<p class="total-count" id="total-count" role="alert">
+  <strong>{{ tableRecords?.length }} di {{ categorieProgetto?.length }} Risultati di ricerca</strong>
+</p>
+<ngx-datatable *ngIf="tableRecords && columns?.length > 0" class="material" [rows]="tableRecords" [columns]="columns"
+  [columnMode]="ColumnMode.force" [reorderable]="false" [headerHeight]="80" [footerHeight]="50" rowHeight="auto"
+  [limit]="10" (sort)="onSort($event)"
+  [messages]="{ emptyMessage: 'Nessun elemento corrispondente ai filtri selezionati' }">
+</ngx-datatable>
+
+<ng-template #competenzaTemplate let-row="row" ngx-datatable-cell-template>
+  {{ row?.categoria_oggetto.tipi_competenza[0].des_tipo_competenza }}
+</ng-template>
+<ng-template #nuovaFlgTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox" [checked]="row?.flg_cat_nuovo_oggetto" [disabled]="categorieSelezionate"
+    (click)="onFlagNuovo(row.categoria_oggetto.id_categoria_oggetto, $event.target.checked)" />
+</ng-template>
+<ng-template #modificaFlgTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox" [checked]="row?.flg_cat_modifica_oggetto" [disabled]="categorieSelezionate"
+    (click)="onFlagModifica(row.categoria_oggetto.id_categoria_oggetto, $event.target.checked)" />
+</ng-template>
+<ng-template #principaleFlgTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox" *ngIf="showFlagPrincipale(row)" [checked]="row.flg_cat_principale"
+    [disabled]="!(row.flg_cat_nuovo_oggetto || row.flg_cat_modifica_oggetto) || categorieSelezionate"
+    (click)="onFlagPrincipale(row.categoria_oggetto.id_categoria_oggetto, $event.target.checked)" />
+</ng-template>
+
+<div class="form-group" id="divProsegui"
+  *ngIf="(attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK) && !categorieSelezionate">
+  <button type="button" class="btn btn-large btn-outline-primary btn-prosegui"
+    [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK" (click)="onProsegui()">
+    CONFERMA
+  </button>
+</div>
+
+<ng-container *ngIf="categorieSelezionate?.length > 0 && summaryColumns?.length > 0 && showSummaryTable">
+  <div class="card">
+    <h2 class="table-title">
+      <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+      <strong>Riepilogo selezioni effettuate</strong>
+    </h2>
+    <hr>
+    <ngx-datatable class="material summary-table" [rows]="categorieSelezionate" [columns]="summaryColumns"
+      [columnMode]="ColumnMode.force" [reorderable]="false" [headerHeight]="80" [footerHeight]="0" rowHeight="auto"
+      [limit]="10" (sort)="onSort($event, true)">
+    </ngx-datatable>
+    <hr>
+  </div>
+
+  <div class="card" id="autCompetenteCard" *ngIf="acPrincipaliList?.length > 0 && isFrontOffice">
+    <span [innerHTML]="autCompetenteCardTestoFinaleHtml"></span>
+
+    <!-- <span *ngFor="let ac of acListWithSecondarie">
+      <span *ngIf="ac.flg_autorita_principale">
+        {{ ac.competenza_territorio.des_competenza_territorio }}
+      </span>
+      <br>
+    </span> -->
+    <!-- <ng-container *ngIf="checkACSecondarie(acListWithSecondarie).length > 0">
+      <span *ngFor="let ac of acListWithSecondarie">
+        <span *ngIf="!ac.flg_autorita_principale">
+          {{ ac.competenza_territorio.des_competenza_territorio }}
+          <br>
+        </span>
+      </span>
+    </ng-container> -->
+  </div>
+
+  <div class="form-group text-left"
+    *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK">
+    <button type="button" class="btn btn-large btn-link" [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+      (click)="onAnnulla()">
+      MODIFICA
+    </button>
+  </div>
+</ng-container>
+
+<ng-template #nuovaFlgTemplateSummary let-row="row" ngx-datatable-cell-template>
+  <i *ngIf="row.flg_cat_nuovo_oggetto" class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+</ng-template>
+<ng-template #modificaFlgTemplateSummary let-row="row" ngx-datatable-cell-template>
+  <i *ngIf="row.flg_cat_modifica_oggetto" class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+</ng-template>
+<ng-template #principaleFlgTemplateSummary let-row="row" ngx-datatable-cell-template>
+  <i *ngIf="row.flg_cat_principale" class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+</ng-template>
+

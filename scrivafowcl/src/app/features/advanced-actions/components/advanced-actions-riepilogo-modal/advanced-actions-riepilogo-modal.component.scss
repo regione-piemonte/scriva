@@ -1,0 +1,108 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.modal-header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px 10px 30px;
+  
+    .modal-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+  
+    i {
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+  }
+  
+  .content {
+    padding: 10px 30px 20px 30px;
+    overflow-x: auto;
+  
+    form {
+      .title {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 20px;
+        margin-bottom: 1rem;
+      }
+  
+      .form-control.ng-touched.ng-invalid:not(form) {
+        border: 2px solid #a94442;
+      }
+  
+      .uppercase {
+        text-transform: uppercase;
+      }
+    }
+  }
+  
+  .bg-gray {
+    background-color: #f7f7f7;
+  }
+  
+  .modal-footer {
+    padding: 16px 30px;
+    justify-content: space-between;
+  }
+  
+  .align-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .mat-dialog-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+  }
+  
+  .modal-container {
+    position: relative;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  .modal-footer {
+    display: block;
+    padding: 16px 30px;
+  
+    .push-left {
+      margin-right: auto;
+    }
+    
+    .push-right {
+      margin-left: auto;
+    }
+  }
+
+  .error-message {
+    color: red;
+    font-size: 12px;
+  }

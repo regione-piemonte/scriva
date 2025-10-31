@@ -1,0 +1,32 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- CONTENITORE DELLA NAV BAR -->
+<div class="row">
+  <div class="segment-title col">
+
+    <!-- ITERAZIONE DELLE TABS -->
+    <ng-container *ngFor="let tab of snbTabs; let i = index">
+      
+      <!-- BUTTON PER LA TAB -->
+      <button type="button"
+        [attr.id]="tab.id"
+        [ngClass]="tab | snbTabSelected:tabSelected"
+        (click)="onTabClick(tab)"
+      >
+        <!-- LABEL DEL TAB -->
+        <div [title]="tab.title || ''">
+          {{ tab.label }}
+        </div>
+      </button>
+    
+    </ng-container>
+
+  </div>
+</div>

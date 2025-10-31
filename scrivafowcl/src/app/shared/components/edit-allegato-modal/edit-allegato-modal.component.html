@@ -1,0 +1,190 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">Modifica dati allegato</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content" id="content">
+  <form  [formGroup]="editForm">
+
+    <div class="container-fluid container-extra-info">
+      <!-- ETICHETTE DI TESTATA -->
+      <div class="row">
+        <div class="col">
+          {{ CRA_C.LABEL_NOME_DOCUMENTO }}: <strong>{{ documento }}</strong>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <div class="form-group col-lg-6">
+        <label for="categoria">Categoria allegato</label>
+        <select
+          class="form-control"
+          id="categoria"
+          formControlName="categoria"
+          [compareWith]="compareCategoria"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of categorie" [ngValue]="item">
+            {{ item.des_categoria_allegato }}<span *ngIf="item?.flg_obbligo"> * </span>
+          </option>
+        </select>
+        <app-form-error-message [control]="this.editForm?.get('categoria')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <div class="form-group col-lg-6">
+        <label for="tipologia">Tipologia allegato </label>
+        <select
+          class="form-control"
+          id="tipologia"
+          formControlName="tipologia"
+          [compareWith]="compareTipologia"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of tipiAllegato" [ngValue]="item">
+            {{ item.tipologia_allegato.des_tipologia_allegato }}<span *ngIf="item?.flg_obbligo"> * </span>
+          </option>
+        </select>
+        <app-form-error-message [control]="this.editForm?.get('tipologia')"></app-form-error-message>
+      </div>
+
+      <div *ngIf="!isFrontOffice" class="form-group col-lg-6 checkbox-wrapper">
+        <input type="checkbox" class="cbx-riservato" id="riservato" formControlName="riservato"/>
+        <label for="riservato">Documento ad accesso riservato </label>
+        <!-- <button class="btn btn-primary help-btn" (click)="onHelpClicked('flg_riservato')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button> -->
+        <app-form-error-message [control]="this.editForm?.get('riservato')"></app-form-error-message>
+      </div>
+    </div>
+
+    <ng-container *ngIf="oggAppBtnProtocolla">
+      <h3 class="title">Dati protocollazione</h3>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="data">Data di protocollo</label>
+          <input onkeydown="return false" type="date" class="form-control" id="dataProtocollo" max="{{ today | date: 'yyyy-MM-dd' }}" formControlName="dataProtocollo"/>
+          <app-form-error-message [control]="this.editForm?.get('dataProtocollo')"></app-form-error-message>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label for="numero">Numero di protocollo</label>
+          <input type="text" class="form-control" id="numero" [maxlength]= "numProtocolloMaxLength" formControlName="numProtocollo"/>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="showInfoAtto">
+      <h3 class="title">Riferimenti atto</h3>
+      <div class="row">
+        <div class="form-group col-md-3">
+          <label for="data">Data atto</label>
+          <input type="date" class="form-control" id="dataAtto" max="{{ today | date: 'yyyy-MM-dd' }}" formControlName="dataAtto"/>
+        </div>
+        
+        <div class="form-group col-md-6">
+          <label for="numero">Numero atto</label>
+          <input type="text" class="form-control" id="numero" [maxlength]= "numAttoMaxLength" formControlName="numAtto"/>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-md-5">
+          <label for="titolo">Titolo</label>
+          <input type="text" class="form-control" id="titolo" [maxlength]= "titoloMaxLength" formControlName="titolo"/>
+        </div>
+        <div class="form-group col-md-4">
+          <label for="autore">Autore</label>
+          <input type="text" class="form-control" id="autore" [maxlength]= "autoreMaxLength" formControlName="autore"/>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="row py-4">
+      <div class="form-group col-lg-12">
+        <label for="nota">
+          Nota documento (max {{ maxNote }} caratteri)<span *ngIf="this.editForm.get('tipologia').value?.flg_nota"> * </span>
+        </label>
+        <textarea
+          class="form-control"
+          name="nota"
+          id="nota"
+          formControlName="nota"
+          rows="3"
+          style="width: 100%"
+          maxlength="{{ maxNote }}"
+        ></textarea>
+        <app-form-error-message [control]="this.editForm?.get('nota')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="container-fluid container-extra-info">
+      <!-- ETICHETTE DI TESTATA -->
+      <div class="row">
+        <div class="col">
+          {{ CRA_C.LABEL_DATA_CARICAMENTO }}
+        </div>
+        <div class="col">
+          {{ CRA_C.LABEL_CODICE_ELABORATO }}
+        </div>
+        <div class="col">
+          {{ CRA_C.LABEL_DIMENSIONE }}
+        </div>
+      </div>
+      <!-- VALORE CON INFORMAZIONI -->
+      <div class="row">
+        <div class="col">
+          {{ dataCaricamento }}
+        </div>
+        <div class="col">
+          {{ codiceElaborato }}
+        </div>
+        <div class="col">
+          {{ dimensione }}
+        </div>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<div class="modal-footer">
+  <div class="row">
+    
+    <div class="col-md-auto push-left" *ngIf="!readonly">
+      <button type="button" class="btn btn-large btn-link"
+        (click)="onAnnulla()"
+      >
+        ANNULLA
+      </button>
+    </div>
+    
+    <div class="col-md-auto push-right" *ngIf="!readonly">
+      <button type="button" class="btn btn-large btn-primary"
+        (click)="onConferma()"
+      >
+        CONFERMA
+      </button>
+    </div>
+
+    <div class="col-md-auto push-right" *ngIf="readonly">
+      <button type="button" class="btn btn-large btn-primary"
+        (click)="onDismiss()"
+      >
+        CHIUDI
+      </button>
+    </div>
+    
+  </div>
+</div>

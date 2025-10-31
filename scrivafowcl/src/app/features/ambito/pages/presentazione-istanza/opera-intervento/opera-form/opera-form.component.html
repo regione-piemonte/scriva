@@ -1,0 +1,1416 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header" *ngIf="loadAsModal">
+  <h2 class="modal-title">Modifica dettaglio informazioni</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content" id="content" [ngClass]="{ 'bg-gray': !loadAsModal }">
+  <form [formGroup]="operaForm" id="operaForm">
+    <h2 class="title" *ngIf="!loadAsModal">Nuovo inserimento</h2>
+    <!-- #region General Info -->
+    <p
+      class="text-only"
+      [innerHTML]="getHelpBannerText('dettaglio_oggetto')"
+    ></p>
+
+    <div class="row">
+      <div
+        class="form-group col-md-8"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.den_oggetto.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="denomOpera">
+          <span *ngIf="configOggetto.dettaglio_oggetto.den_oggetto.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.den_oggetto.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="denomOpera"
+          formControlName="denominazione"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('denominazione')"
+        ></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="form-group col-md"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.des_oggetto.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="descOpera">
+          <span *ngIf="configOggetto.dettaglio_oggetto.des_oggetto.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.des_oggetto.label }}
+        </label>
+        <textarea
+          rows="2"
+          id="descOpera"
+          formControlName="descrizione"
+          class="form-control"
+          [ngClass]="classesDescrizioneOpera"
+          [placeholder]="phDescrizioneOpera"
+        ></textarea>
+        <app-form-error-message
+          [control]="this.operaForm.get('descrizione')"
+        ></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="form-group col-md-4"
+        *ngIf="
+          !isOggettoIstanza &&
+          configOggetto.dettaglio_oggetto.cod_scriva.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="codiceScrivaOpera">
+          <span *ngIf="configOggetto.dettaglio_oggetto.cod_scriva.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.cod_scriva.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="codiceScrivaOpera"
+          formControlName="codiceSCRIVA"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('codiceSCRIVA')"
+        ></app-form-error-message>
+      </div>
+
+      <div
+        class="form-group col-md-4"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.cod_oggetto_fonte.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="codiceFonteOpera">
+          <span
+            *ngIf="
+              configOggetto.dettaglio_oggetto.cod_oggetto_fonte.obbligatorio
+            "
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.cod_oggetto_fonte.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="codiceFonteOpera"
+          formControlName="codiceFonte"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('codiceFonte')"
+        ></app-form-error-message>
+      </div>
+
+      <div
+        class="form-group col-md-4"
+        *ngIf="
+          isOggettoIstanza &&
+          configOggetto.dettaglio_oggetto.cod_utenza.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="codiceUtenzaOpera">
+          <span *ngIf="configOggetto.dettaglio_oggetto.cod_utenza.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.cod_utenza.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="codiceUtenzaOpera"
+          formControlName="codiceUtenza"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('codiceUtenza')"
+        ></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="flgVisibileNoteAttoPrecedente">
+      <div class="form-group col">
+        <label for="noteAttoPrecedente">
+          <span *ngIf="flgMandatoryNoteAttoPrecedente">*</span>
+          {{ labelNoteAttoPrecedente }}
+        </label>
+        <textarea
+          class="form-control"
+          id="noteAttoPrecedente"
+          rows="2"
+          formControlName="noteAttoPrecedente"
+        ></textarea>
+        <app-form-error-message
+          [control]="this.operaForm.get('noteAttoPrecedente')"
+        ></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="form-group col-md-4"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.tipologia_oggetto.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="tipologia">
+          <span
+            *ngIf="
+              configOggetto.dettaglio_oggetto.tipologia_oggetto.obbligatorio
+            "
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.tipologia_oggetto.label }}
+        </label>
+        <select
+          class="form-control"
+          id="tipologia"
+          formControlName="tipologia"
+          [compareWith]="compareTipologia"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option
+            [ngValue]="tipologia"
+            *ngFor="let tipologia of tipologieOggetto"
+          >
+            {{ tipologia.des_tipologia_oggetto }}
+          </option>
+        </select>
+        <app-form-error-message
+          [control]="this.operaForm.get('tipologia')"
+        ></app-form-error-message>
+      </div>
+
+      <div
+        class="form-group col-md-2"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.coordinata_x.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="coordX">
+          <span
+            *ngIf="configOggetto.dettaglio_oggetto.coordinata_x.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.coordinata_x.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="coordX"
+          formControlName="coordinataX"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('coordinataX')"
+        ></app-form-error-message>
+      </div>
+
+      <div
+        class="form-group col-md-2"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.coordinata_y.visibile
+            .toString()
+            .includes(componente)
+        "
+      >
+        <label for="coordY">
+          <span
+            *ngIf="configOggetto.dettaglio_oggetto.coordinata_y.obbligatorio"
+            >*</span
+          >
+          {{ configOggetto.dettaglio_oggetto.coordinata_y.label }}
+        </label>
+        <input
+          type="text"
+          class="form-control"
+          id="coordY"
+          formControlName="coordinataY"
+        />
+        <app-form-error-message
+          [control]="this.operaForm.get('coordinataY')"
+        ></app-form-error-message>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <h3 class="title">*Localizzazione</h3>
+    <!-- #region Ubicazione content -->
+    <!-- <p class="text-only subtitle" [innerHTML]="getHelpBannerText('ubicazione')"></p> -->
+    <p class="text-only" [innerHTML]="getHelpBannerText('ubicazione')"></p>
+
+    <ng-container *ngIf="!disableBtn">
+      <div class="row">
+        <div class="form-group col-md checkbox-wrapper">
+          <input
+            type="checkbox"
+            id="dettaglioIndirizzo"
+            (click)="onCheckboxIndirizzo($event)"
+          />
+          <label for="dettaglioIndirizzo"><em>Dettaglio indirizzo</em></label>
+        </div>
+      </div>
+
+      <div
+        id="aggiungiUbicazioneRow"
+        [ngClass]="{ aggiungiUbicazioneWrapper: showDettaglioIndirizzo }"
+      >
+        <div class="row">
+          <div class="form-group col-md-4">
+            <label for="provinciaOpera">*Provincia</label>
+            <select
+              id="provinciaOpera"
+              class="form-control"
+              formControlName="provincia"
+              [class.comune-mancante-errore]="comuneMancanteErrore"
+              [compareWith]="compareProvincia"
+            >
+              <option [value]="null" class="option-hidden">Seleziona</option>
+              <option [ngValue]="provincia" *ngFor="let provincia of province">
+                {{ provincia.denom_provincia }}
+              </option>
+            </select>
+            <app-form-error-message
+              [control]="this.operaForm.get('provincia')"
+            ></app-form-error-message>
+          </div>
+
+          <div class="form-group col-md-4">
+            <label for="comuneOpera">*Comune</label>
+            <select
+              [class.comune-mancante-errore]="comuneMancanteErrore"
+              class="form-control"
+              id="comuneOpera"
+              formControlName="comune"
+              [compareWith]="compareComune"
+            >
+              <option [value]="null" class="option-hidden">Seleziona</option>
+              <option [ngValue]="comune" *ngFor="let comune of operaComuniList">
+                {{ comune.denom_comune }}
+              </option>
+            </select>
+            <app-form-error-message [control]="this.operaForm.get('comune')"
+              >Campo obbligatorio</app-form-error-message
+            >
+          </div>
+
+          <div class="form-group col-md-4" *ngIf="!showDettaglioIndirizzo">
+            <button
+              type="button"
+              class="btn add-container"
+              (click)="aggiungiUbicazione()"
+              [disabled]="
+                comuneSingolo && operaEdit.ubicazione_oggetto?.length > 0
+              "
+            >
+              <img
+                src="assets/icon-page-add.svg"
+                class="add-icon"
+                alt="Aggiungi ubicazione"
+              />
+              <span class="add-text">aggiungi</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="row" *ngIf="showDettaglioIndirizzo" formGroupName="address">
+          <div class="form-group col-md-4">
+            <label for="indirizzoOpera">Indirizzo</label>
+            <input
+              type="text"
+              class="form-control"
+              id="indirizzoOpera"
+              formControlName="indirizzo"
+              [ngbTypeahead]="searchAddress"
+            />
+          </div>
+
+          <div class="form-group col-md-1">
+            <label for="civicoOpera">Civico</label>
+            <input
+              type="text"
+              class="form-control"
+              id="civicoOpera"
+              formControlName="civico"
+            />
+          </div>
+
+          <div class="form-group col-md-3">
+            <label for="localitaOpera">Località</label>
+            <input
+              type="text"
+              class="form-control"
+              id="localitaOpera"
+              formControlName="localita"
+            />
+          </div>
+
+          <div class="form-group col-md-4">
+            <button
+              type="button"
+              class="btn add-container"
+              (click)="aggiungiUbicazione()"
+              [disabled]="
+                comuneSingolo && operaEdit.ubicazione_oggetto?.length > 0
+              "
+            >
+              <img
+                src="assets/icon-page-add.svg"
+                class="add-icon"
+                alt="Aggiungi ubicazione"
+              />
+              <span class="add-text">aggiungi</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="form-group col-md">
+            <small *ngIf="loadingAddress" class="form-text text-muted"><em>Loading...</em></small>
+          </div>
+        </div> -->
+      </div>
+    </ng-container>
+
+    <div class="row" *ngIf="operaEdit.ubicazione_oggetto?.length > 0">
+      <div class="form-group col-md">
+        <div class="card">
+          <app-recap-table
+            [title]="ubicazioniTableTitle"
+            [columns]="ubicazioniTableColumns"
+            [records]="operaEdit.ubicazione_oggetto"
+            [editEnabled]="false"
+            [detailEnabled]="false"
+            [deleteEnabled]="!disableBtn"
+            [defaultStructure]="false"
+            [selectionType]="propostaComuneDaGeo ? 'M' : 'N'"
+            [propostaComuneDaGeo]="propostaComuneDaGeo"
+            [readonly]="
+              disableBtn ||
+              attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+              attoreGestioneIstanza === gestioneEnum.READ_ONLY
+            "
+            (deleteRecord)="onRimuoviUbicazione($event)"
+            (selected)="onSelectedUbicazione($event)"
+          ></app-recap-table>
+        </div>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+  </form>
+
+  <!-- Info Dettaglio -->
+  <ng-container *ngIf="showInfoDettaglio">
+    <h3 class="title">Informazioni di dettaglio</h3>
+    <div class="segment-title col-xl-12">
+      <button
+        type="button"
+        *ngIf="configOggetto.dettaglio_oggetto.siti_rete_natura?.visibile"
+        [ngClass]="{ selected: selectedTab === tabTitles.RETE_NATURA }"
+        (click)="selectTab(tabTitles.RETE_NATURA)"
+      >
+        Siti Rete Natura 2000<span
+          *ngIf="configOggetto.dettaglio_oggetto.siti_rete_natura?.obbligatorio"
+        >
+          *</span
+        >
+      </button>
+      <button
+        type="button"
+        *ngIf="configOggetto.dettaglio_oggetto.aree_protette?.visibile"
+        [ngClass]="{ selected: selectedTab === tabTitles.AREE_PROTETTE }"
+        (click)="selectTab(tabTitles.AREE_PROTETTE)"
+      >
+        Aree Naturali Protette<span
+          *ngIf="configOggetto.dettaglio_oggetto.aree_protette?.obbligatorio"
+        >
+          *</span
+        >
+      </button>
+      <button
+        type="button"
+        *ngIf="configOggetto.dettaglio_oggetto.dati_catastali?.visibile"
+        [ngClass]="{ selected: selectedTab === tabTitles.DATI_CATASTALI }"
+        (click)="selectTab(tabTitles.DATI_CATASTALI)"
+      >
+        Dati catastali<span
+          *ngIf="configOggetto.dettaglio_oggetto.dati_catastali?.obbligatorio"
+        >
+          *</span
+        >
+      </button>
+      <button
+        type="button"
+        *ngIf="configOggetto.dettaglio_oggetto.vincoli?.visibile"
+        [ngClass]="{ selected: selectedTab === tabTitles.VINCOLI }"
+        (click)="selectTab(tabTitles.VINCOLI)"
+      >
+        Vincoli<span
+          *ngIf="configOggetto.dettaglio_oggetto.vincoli?.obbligatorio"
+        >
+          *</span
+        >
+      </button>
+    </div>
+
+    <form [formGroup]="infoDettaglioForm">
+      <div
+        *ngIf="
+          selectedTab === tabTitles.RETE_NATURA &&
+          configOggetto.dettaglio_oggetto.siti_rete_natura?.visibile
+        "
+      >
+        <ng-container
+          [ngTemplateOutlet]="reteNaturaTmpl"
+          [ngTemplateOutletContext]="{ formGroup: infoDettaglioForm }"
+        >
+        </ng-container>
+      </div>
+
+      <div
+        *ngIf="
+          selectedTab === tabTitles.AREE_PROTETTE &&
+          configOggetto.dettaglio_oggetto.aree_protette?.visibile
+        "
+      >
+        <ng-container
+          [ngTemplateOutlet]="areeProtetteTmpl"
+          [ngTemplateOutletContext]="{ formGroup: infoDettaglioForm }"
+        ></ng-container>
+      </div>
+
+      <div
+        *ngIf="
+          selectedTab === tabTitles.DATI_CATASTALI &&
+          configOggetto.dettaglio_oggetto.dati_catastali?.visibile
+        "
+      >
+        <ng-container
+          [ngTemplateOutlet]="datiCatastaliTmpl"
+          [ngTemplateOutletContext]="{ formGroup: infoDettaglioForm }"
+        ></ng-container>
+      </div>
+
+      <div
+        *ngIf="
+          selectedTab === tabTitles.VINCOLI &&
+          configOggetto.dettaglio_oggetto.vincoli?.visibile
+        "
+      >
+        <ng-container
+          [ngTemplateOutlet]="vincoliTmpl"
+          [ngTemplateOutletContext]="{ formGroup: infoDettaglioForm }"
+        >
+        </ng-container>
+      </div>
+    </form>
+  </ng-container>
+
+  <!-- Buttons (if not-modal) -->
+  <div class="bg-gray custom-card-footer" *ngIf="!loadAsModal">
+    <hr />
+    <div class="row">
+      <div class="form-group col-md-auto" *ngIf="!disableBtn">
+        <button
+          type="button"
+          class="btn btn-large btn-outline-primary"
+          (click)="onClose(gestioniDatiProgetto.salvataggio)"
+        >
+          INSERISCI
+        </button>
+      </div>
+      <div class="form-group col-md-auto" *ngIf="!disableBtn && showGeoRefBtn">
+        <button
+          type="button"
+          class="btn btn-large btn-outline-primary"
+          (click)="onClose(gestioniDatiProgetto.georiferisci)"
+        >
+          GEOREFERISCI
+        </button>
+      </div>
+      <div class="form-group col-md-auto" *ngIf="!disableBtn">
+        <button
+          type="button"
+          class="btn btn-large btn-link"
+          (click)="confirmCancel()"
+        >
+          ANNULLA
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Buttons (if modal) -->
+<div class="modal-footer" *ngIf="loadAsModal">
+  <div class="row">
+    <div class="col-md-auto push-left" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn btn-large btn-link"
+        (click)="confirmCancel()"
+      >
+        ANNULLA
+      </button>
+    </div>
+    <div class="col-md-auto" *ngIf="!disableBtn && showGeoRefBtn">
+      <button
+        type="button"
+        class="btn btn-large btn-outline-primary"
+        (click)="onClose(gestioniDatiProgetto.georiferisci)"
+      >
+        GEOREFERISCI
+      </button>
+    </div>
+    <div class="col-md-auto" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn btn-large btn-primary"
+        (click)="onClose(gestioniDatiProgetto.salvataggio)"
+      >
+        SALVA MODIFICHE
+      </button>
+    </div>
+    <div class="col-md-auto push-right" *ngIf="disableBtn">
+      <button
+        type="button"
+        class="btn btn-large btn-primary"
+        (click)="onDismiss()"
+      >
+        CHIUDI
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Info Dettaglio Templates -->
+<ng-template #reteNaturaTmpl let-formGroup="formGroup">
+  <p [innerHTML]="getHelpBannerText('siti_rete_natura_intro')"></p>
+
+  <div class="row">
+    <div class="form-group col-md-12 radio-wrapper" *ngIf="showViaconvinca">
+      <label for="valutazioneIncidenza"> Valutazione di incidenza? </label>
+      <div id="valutazioneIncidenza">
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            name="valutazione-incidenza"
+            id="valutazioneIncidenzaTrue"
+            value="si"
+            [formControl]="formGroup.get('valutazioneIncidenza')"
+            (change)="onValutazioneIncidenzaChange(true)"
+          />
+          <label for="valutazioneIncidenzaTrue">Sì</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            type="radio"
+            name="valutazione-incidenza"
+            id="valutazioneIncidenzaFalse"
+            value="no"
+            [formControl]="formGroup.get('valutazioneIncidenza')"
+            (change)="onValutazioneIncidenzaChange(false)"
+          />
+          <label for="valutazioneIncidenzaFalse">No</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="alert-box warning" *ngIf="getBannerMessage('siti_natura_2000')">
+    <i class="icon icon-big fa fa-exclamation-circle" aria-hidden="true"></i>
+    <span>
+      <p
+        class="text-only"
+        [innerHTML]="getBannerMessage('siti_natura_2000').des_testo_messaggio"
+      ></p>
+    </span>
+  </div>
+
+  <p [innerHTML]="getHelpBannerText('siti_rete_natura_tab1')"></p>
+
+  <div class="row" id="aggiungiSitoRow">
+    <div
+      class="col-md-4"
+      [formGroup]="formGroup"
+      *ngIf="
+        sitiNaturaConfig &&
+        configOggetto?.dettaglio_oggetto?.siti_rete_natura?.visibile
+      "
+    >
+      <scriva-typeahead
+        [formControlName]="OF_C.SITO_RETE_NATURA_FORM"
+        [cssConfig]="sitiNaturaConfig.css"
+        [dataConfig]="sitiNaturaConfig.data"
+        [idFormControl]="OF_C.SITO_RETE_NATURA_FORM"
+        [formGroup]="formGroup"
+        [allowUserInput]="false"
+        [autoCompleteOnBlur]="true"
+        [disableRequiredCheck]="false"
+        [toUpperCase]="true"
+      >
+      </scriva-typeahead>
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="!disableBtn">
+      <button
+        type="button" 
+        class="btn add-container" 
+        (click)="aggiungiSitoReteNatura()"
+        [disabled]="showViaconvinca && formGroup.get('valutazioneIncidenza')?.value == 'no'">
+        <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi sito Rete Natura 2000">
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card card-info-dettaglio" *ngIf="showTableSitiNatura">
+    <ngx-datatable
+      id="sitiNaturaTable"
+      class="material max-vertical-table"
+      [rows]="filterSitiReteNatura2000(true)"
+      [columns]="sitiNaturaColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="sitiNaturaCheckedList"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="80"
+      [footerHeight]="10"
+      [rowHeight]="50"
+      [rowClass]="checkHighlightedRow"
+      [virtualization]="false"
+      (select)="
+        validaSitoReteNatura2000($event.selected, true, sitiNaturaCheckedList)
+      "
+    ></ngx-datatable>
+  </div>
+
+  <p [innerHTML]="getHelpBannerText('siti_rete_natura_tab2')"></p>
+
+  <div class="row" id="aggiungiSitoInterferitoRow">
+    <div
+      class="form-group col-md-4"
+      [formGroup]="formGroup"
+      *ngIf="
+        sitiNaturaConfig &&
+        configOggetto?.dettaglio_oggetto?.siti_rete_natura?.visibile
+      "
+    >
+      <scriva-typeahead
+        [formControlName]="OF_C.SITO_RETE_NATURA_INTERFERITO_FORM"
+        [cssConfig]="sitiNaturaConfig.css"
+        [dataConfig]="sitiNaturaConfig.data"
+        [idFormControl]="OF_C.SITO_RETE_NATURA_INTERFERITO_FORM"
+        [formGroup]="formGroup"
+        [allowUserInput]="false"
+        [autoCompleteOnBlur]="true"
+        [disableRequiredCheck]="false"
+        [toUpperCase]="true"
+      ></scriva-typeahead>
+    </div>
+    <div
+      *ngIf="
+        configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita
+          ?.visibile == 'true'
+      "
+    >
+      <div class="form-group col-md-12 radio-wrapper">
+        <label for="elementiDiscontinuitaQuestion">
+          <span
+            *ngIf="
+              configOggetto.dettaglio_oggetto.siti_rete_natura
+                ?.elementi_discontinuita?.obbligatorio == 'true'
+            "
+            >*</span
+          >
+          {{
+            configOggetto.dettaglio_oggetto.siti_rete_natura
+              ?.elementi_discontinuita?.label
+          }}
+        </label>
+        <div id="elementiDiscontinuitaQuestion">
+          <div class="form-check form-check-inline">
+            <input
+              type="radio"
+              name="elementi-discontinuita"
+              id="elementiDiscontinuitaTrue"
+              value="si"
+              [formControl]="formGroup.get('flg_elemento_discontinuita')"
+              [disabled]="formGroup.get('valutazioneIncidenza')?.value === 'no'"
+            />
+            <label for="elementiDiscontinuitaTrue">Sì</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input
+              type="radio"
+              name="elementi-discontinuita"
+              id="elementiDiscontinuitaFalse"
+              value="no"
+              [formControl]="formGroup.get('flg_elemento_discontinuita')"
+              [disabled]="formGroup.get('valutazioneIncidenza')?.value === 'no'"
+            />
+            <label for="elementiDiscontinuitaFalse">No</label>
+          </div>
+        </div>
+      </div>
+      <div
+        class="form-group col-md-6"
+        *ngIf="formGroup.get('flg_elemento_discontinuita')?.value === 'si'"
+      >
+        <label for="des_elemento_discontinuita">*Descrivere</label>
+        <input
+          type="text"
+          class="form-control"
+          id="des_elemento_discontinuita"
+          [formControl]="formGroup.get('des_elemento_discontinuita')"
+        />
+      </div>
+      <div
+        class="form-group col-md-3"
+        *ngIf="
+          configOggetto.dettaglio_oggetto.siti_rete_natura
+            ?.elementi_discontinuita?.distanza?.visibile == 'true'
+        "
+      >
+        <label for="num_distanza"
+          ><span
+            *ngIf="
+              configOggetto.dettaglio_oggetto.siti_rete_natura
+                ?.elementi_discontinuita?.distanza?.obbligatorio == 'true'
+            "
+            >*</span
+          >{{
+            configOggetto.dettaglio_oggetto.siti_rete_natura
+              ?.elementi_discontinuita?.distanza?.label
+          }}</label
+        >
+        <input
+          type="number"
+          class="form-control"
+          id="num_distanza"
+          [formControl]="formGroup?.get('num_distanza')"
+          [disabled]="formGroup.get('valutazioneIncidenza')?.value === 'no'"
+        />
+        <span
+          class="invalid-text"
+          *ngIf="
+            formGroup.get('num_distanza')?.errors?.max &&
+            formGroup.get('num_distanza')?.dirty
+          "
+          >Formato non corretto</span
+        >
+      </div>
+    </div>
+
+    <div class="form-group col-md-3" *ngIf="!disableBtn">
+      <button type="button" class="btn add-container" (click)="aggiungiSitoReteNatura(true)" [disabled]="showViaconvinca && formGroup.get('valutazioneIncidenza')?.value == 'no'">
+        <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi sito Rete Natura 2000">
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card card-info-dettaglio" *ngIf="showTableSitiNaturaInterferiti">
+    <ngx-datatable
+      id="sitiNaturaInterferitiTable"
+      class="material max-vertical-table"
+      [rows]="filterSitiReteNatura2000(false)"
+      [columns]="
+        configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita
+          ?.visibile == 'true'
+          ? sitiNaturaInterferitiColumnsVinca
+          : sitiNaturaInterferitiColumns
+      "
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="sitiNaturaInterferitiCheckedList"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="80"
+      [footerHeight]="10"
+      [rowHeight]="65"
+      [rowClass]="checkHighlightedRow"
+      [virtualization]="false"
+      (select)="
+        validaSitoReteNatura2000(
+          $event.selected,
+          false,
+          sitiNaturaInterferitiCheckedList
+        )
+      "
+    ></ngx-datatable>
+  </div>
+
+  <!-- <ng-container *ngIf="configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita?.visibile && showDomandaElementiDiscontinuita()">
+    <div class="row">
+      <div class="form-group col-md radio-wrapper">
+        <label for="elementiDiscontinuitaQuestion">
+          <span *ngIf="configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita?.obbligatorio">*</span>
+          {{ configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita?.label }}
+        </label>
+        <div id="elementiDiscontinuitaQuestion">
+          <div class="form-check form-check-inline">
+            <input type="radio" name="elementi-discontinuita" id="elementiDiscontinuitaTrue" value="si" [formControl]="formGroup.get('flgElementiDiscontinuita')">
+            <label for="elementiDiscontinuitaTrue">Sì</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" name="elementi-discontinuita" id="elementiDiscontinuitaFalse" value="no" [formControl]="formGroup.get('flgElementiDiscontinuita')">
+            <label for="elementiDiscontinuitaFalse">No</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="formGroup.get('flgElementiDiscontinuita').value === 'si'">
+      <div class="form-group col-md-6">
+        <label for="desElementiDiscontinuita">*Descrivere</label>
+        <input type="text" class="form-control" id="desElementiDiscontinuita" [formControl]="formGroup.get('desElementiDiscontinuita')"/>
+      </div>
+    </div>
+  </ng-container> -->
+</ng-template>
+
+<ng-template #areeProtetteTmpl let-formGroup="formGroup">
+  <p [innerHTML]="getHelpBannerText('aree_protette')"></p>
+
+  <div class="alert-box warning" *ngIf="getBannerMessage('aree_protette')">
+    <i class="icon icon-big fa fa-exclamation-circle" aria-hidden="true"></i>
+    <span>
+      <p
+        class="text-only"
+        [innerHTML]="getBannerMessage('aree_protette').des_testo_messaggio"
+      ></p>
+    </span>
+  </div>
+
+  <div class="row" id="aggiungiAreaRow">
+    <div
+      class="form-group col-md-4"
+      [formGroup]="formGroup"
+      *ngIf="
+        areeProtetteConfig &&
+        configOggetto.dettaglio_oggetto.aree_protette?.visibile
+      "
+    >
+      <scriva-typeahead
+        [formControlName]="OF_C.AREA_PROTETTA_FORM"
+        [cssConfig]="areeProtetteConfig.css"
+        [dataConfig]="areeProtetteConfig.data"
+        [idFormControl]="OF_C.AREA_PROTETTA_FORM"
+        [formGroup]="formGroup"
+        [allowUserInput]="false"
+        [autoCompleteOnBlur]="true"
+        [disableRequiredCheck]="false"
+        [toUpperCase]="true"
+      >
+      </scriva-typeahead>
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn add-container"
+        (click)="aggiungiAreaProtetta()"
+      >
+        <img
+          src="assets/icon-page-add.svg"
+          class="add-icon"
+          alt="Aggiungi area protetta"
+        />
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card card-info-dettaglio" *ngIf="showTableAreeProtette">
+    <ngx-datatable
+      id="sitiNaturaInterferitiTable"
+      class="material max-vertical-table"
+      [rows]="operaEdit['aree_protette']"
+      [columns]="areeProtetteColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="areeProtetteCheckedList"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="80"
+      [footerHeight]="10"
+      [rowHeight]="65"
+      [rowClass]="checkHighlightedRow"
+      [virtualization]="false"
+      (select)="validaAreaProtetta($event.selected)"
+    >
+    </ngx-datatable>
+  </div>
+</ng-template>
+
+<ng-template #datiCatastaliTmpl let-formGroup="formGroup">
+  <p [innerHTML]="getHelpBannerText('dati_catastali')"></p>
+
+  <div class="alert-box warning" *ngIf="getBannerMessage('dati_catastali')">
+    <i class="icon icon-big fa fa-exclamation-circle" aria-hidden="true"></i>
+    <span>
+      <p
+        class="text-only"
+        [innerHTML]="getBannerMessage('dati_catastali').des_testo_messaggio"
+      ></p>
+    </span>
+  </div>
+
+  <div class="row" id="aggiungiCatastoRow">
+    <div
+      class="form-group col-md-4"
+      [formGroup]="formGroup"
+      *ngIf="
+        comuneCatastoConfig &&
+        configOggetto.dettaglio_oggetto.dati_catastali?.visibile
+      "
+    >
+      <scriva-typeahead
+        [formControlName]="OF_C.COMUNE_CATASTO_FORM"
+        [cssConfig]="comuneCatastoConfig.css"
+        [dataConfig]="comuneCatastoConfig.data"
+        [idFormControl]="OF_C.COMUNE_CATASTO_FORM"
+        [formGroup]="formGroup"
+        [allowUserInput]="false"
+        [autoCompleteOnBlur]="true"
+        [disableRequiredCheck]="false"
+        [toUpperCase]="true"
+      >
+      </scriva-typeahead>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="sezione">Sezione</label>
+      <select
+        class="form-control"
+        id="sezione"
+        [formControl]="formGroup.get('sezione')"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option
+          [ngValue]="sezione?.nome_sezione"
+          *ngFor="let sezione of sezioniList"
+        >
+          {{ sezione.sezione }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="foglio">Foglio</label>
+      <select
+        class="form-control"
+        id="foglio"
+        [formControl]="formGroup.get('foglio')"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option [ngValue]="foglio?.foglio" *ngFor="let foglio of fogliList">
+          {{ foglio.foglio }}
+        </option>
+      </select>
+      <app-form-error-message
+        [control]="formGroup.get('foglio')"
+      ></app-form-error-message>
+    </div>
+
+    <div class="form-group col-md-2">
+      <label for="particella">Particella</label>
+      <select
+        class="form-control"
+        id="particella"
+        [formControl]="formGroup.get('particella')"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option
+          [ngValue]="particella?.particella"
+          *ngFor="let particella of particelleList"
+        >
+          {{ particella.particella }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-2" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn add-container"
+        (click)="onAggiungiDatiCatastali()"
+      >
+        <img
+          src="assets/icon-page-add.svg"
+          class="add-icon"
+          alt="Aggiungi dati catastali"
+        />
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card card-info-dettaglio" *ngIf="showTableDatiCatastali">
+    <ngx-datatable
+      id="datiCatastaliTable"
+      class="material max-vertical-table"
+      [rows]="datiCatastaliTableSource"
+      [columns]="datiCatastaliColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="datiCatastaliCheckedList"
+      [scrollbarV]="true"
+      [virtualization]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="80"
+      [footerHeight]="10"
+      [rowHeight]="50"
+      [rowClass]="checkHighlightedRow"
+      (select)="validaDatoCatastale($event.selected)"
+    ></ngx-datatable>
+  </div>
+</ng-template>
+
+<ng-template #vincoliTmpl let-formGroup="formGroup">
+  <p [innerHTML]="getHelpBannerText('vincoli')"></p>
+
+  <div class="alert-box warning" *ngIf="getBannerMessage('vincoli')">
+    <i class="icon icon-big fa fa-exclamation-circle" aria-hidden="true"></i>
+    <span>
+      <p
+        class="text-only"
+        [innerHTML]="getBannerMessage('vincoli').des_testo_messaggio"
+      ></p>
+    </span>
+  </div>
+
+  <div class="row" id="aggiungiVincoloRow">
+    <div class="form-group col-md-4">
+      <label for="vincolo">Vincolo</label>
+      <select
+        class="form-control"
+        id="vincolo"
+        [formControl]="formGroup.get('vincolo')"
+      >
+        <option [value]="null" class="option-hidden">Seleziona</option>
+        <option [ngValue]="vincolo" *ngFor="let vincolo of vincoliList">
+          {{ vincolo.des_vincolo_autorizza }}
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn add-container"
+        (click)="aggiungiVincolo()"
+      >
+        <img
+          src="assets/icon-page-add.svg"
+          class="add-icon"
+          alt="Aggiungi vincolo"
+        />
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md">
+      <button
+        class="btn add-container"
+        *ngIf="!disableBtn && !showVincoloLibero"
+        (click)="onInserisciNuovoVincolo()"
+      >
+        <img
+          src="assets/icon-page-add.svg"
+          class="add-icon"
+          alt="Inserisci nuovo vincolo"
+        />
+        <span class="add-text">inserisci nuovo</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="row" id="aggiungiVincoloLiberoRow" *ngIf="showVincoloLibero">
+    <div class="form-group col-md-4">
+      <label for="vincoloLibero">Descrizione nuovo vincolo</label>
+      <input
+        type="text"
+        class="form-control"
+        id="vincoloLibero"
+        [formControl]="formGroup.get('vincoloLibero')"
+      />
+    </div>
+
+    <div class="form-group col-md-4" *ngIf="!disableBtn">
+      <button
+        type="button"
+        class="btn add-container"
+        (click)="aggiungiVincolo(true)"
+      >
+        <img
+          src="assets/icon-page-add.svg"
+          class="add-icon"
+          alt="Aggiungi vincolo libero"
+        />
+        <span class="add-text">aggiungi</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="card card-info-dettaglio" *ngIf="showTableVincoli">
+    <ngx-datatable
+      id="vincoliTable"
+      class="material max-vertical-table"
+      [rows]="operaEdit['vincoli']"
+      [columns]="vincoliColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="vincoliCheckedList"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="50"
+      [footerHeight]="10"
+      [rowHeight]="50"
+      [rowClass]="checkHighlightedRow"
+      (select)="validaVincolo($event.selected)"
+    ></ngx-datatable>
+  </div>
+</ng-template>
+
+<!-- #region Info Dettaglio Table Templates -->
+<ng-template
+  #checkboxHeaderTemplate
+  ngx-datatable-header-template
+  let-value="value"
+  let-allRowsSelected="allRowsSelected"
+  let-selectFn="selectFn"
+>
+  <input
+    type="checkbox"
+    [checked]="allRowsSelected"
+    [disabled]="disableBtn"
+    (change)="selectFn(!allRowsSelected)"
+  />
+</ng-template>
+<ng-template
+  #checkboxCellTemplate
+  ngx-datatable-cell-template
+  let-value="value"
+  let-isSelected="isSelected"
+  let-onCheckboxChangeFn="onCheckboxChangeFn"
+>
+  <input
+    type="checkbox"
+    [checked]="isSelected"
+    [disabled]="disableBtn"
+    (change)="onCheckboxChangeFn($event)"
+  />
+</ng-template>
+
+<ng-template
+  #azioniTemplate
+  ngx-datatable-cell-template
+  let-row="row"
+  let-rowIndex="rowIndex"
+>
+  <div class="actions">
+    <button
+      class="btn-action"
+      *ngIf="
+        attoreGestioneIstanza === gestioneEnum.WRITE ||
+        attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      "
+      [ngClass]="{
+        disabled:
+          disableBtn || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      }"
+      [disabled]="disableBtn"
+      (click)="deleteRow(row, rowIndex)"
+      aria-label="elimina"
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+    </button>
+  </div>
+</ng-template>
+
+<ng-template
+  #azioniEditTemplate
+  ngx-datatable-cell-template
+  let-row="row"
+  let-rowIndex="rowIndex"
+>
+  <div class="actions">
+    <!-- MODIFICA -->
+    <button
+      class="btn-action"
+      title="Modifica"
+      *ngIf="
+        (attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK) &&
+        configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita
+          ?.visibile == 'true' &&
+        showDomandaElementiDiscontinuita()
+      "
+      [ngClass]="{
+        disabled:
+          disableBtn || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      }"
+      [disabled]="
+        disableBtn || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      "
+      (click)="editSitoNatura(row)"
+      aria-label="modifica"
+    >
+      <img src="assets/icon-table-edit.svg" height="20px" alt="Modifica" />
+    </button>
+
+    <!-- DETTAGLIO -->
+    <button
+      class="btn-action"
+      title="Dettaglio"
+      *ngIf="
+        (attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK) &&
+        configOggetto.dettaglio_oggetto.siti_rete_natura?.elementi_discontinuita
+          ?.visibile == 'true' &&
+        showDomandaElementiDiscontinuita()
+      "
+      (click)="editSitoNatura(row, true)"
+      aria-label="dettaglio"
+    >
+      <img
+        src="assets/icon-table-dettaglio.svg"
+        height="20px"
+        alt="Dettaglio"
+      />
+    </button>
+
+    <!-- ELIMINA -->
+    <button
+      class="btn-action"
+      title="Elimina"
+      *ngIf="
+        attoreGestioneIstanza === gestioneEnum.WRITE ||
+        attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      "
+      [ngClass]="{
+        disabled:
+          disableBtn || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      }"
+      [disabled]="
+        disableBtn || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      "
+      (click)="deleteRow(row, rowIndex)"
+      aria-label="elimina"
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+    </button>
+  </div>
+</ng-template>
+
+<ng-template #distanzaTemplate ngx-datatable-cell-template let-row="row">
+  <input
+    type="text"
+    #distanzaInput
+    class="form-control"
+    [ngClass]="{ 'invalid-field': !checkDistanzaFormat(distanzaInput.value) }"
+    (change)="onChangeDistanza(row.cod_amministrativo, $event.target.value)"
+    [value]="row.num_distanza || null"
+  />
+  <span class="invalid-text" *ngIf="!checkDistanzaFormat(distanzaInput.value)"
+    >Formato non corretto</span
+  >
+</ng-template>
+
+<ng-template
+  #ricadenzaHeaderTemplate
+  ngx-datatable-header-template
+  let-value="value"
+>
+  <span class="ricadenza-header" id="ricadenzaColumnHeader">
+    <strong>Ubicazione progetto rispetto all'area protetta</strong>
+    <!-- <br><small>Il progetto ricade totalmente/parzialmente o impatta all'interno del Sito/Area?</small> -->
+  </span>
+</ng-template>
+<ng-template #ricadenzaTemplate ngx-datatable-cell-template let-row="row">
+  <select
+    class="form-control"
+    id="ricadenzaArea"
+    aria-labelledby="ricadenzaColumnHeader"
+    [value]="row.flg_ricade"
+    [disabled]="disableBtn"
+    (change)="onChangeRicadenza(row.cod_amministrativo, $event.target.value)"
+  >
+    <option [value]="null" class="option-hidden">Seleziona</option>
+    <option [value]="true">Ricade totalmente/parzialmente</option>
+    <option [value]="false">Non ricade ma possibili interferenze</option>
+  </select>
+</ng-template>
+
+<ng-template
+  #comuneDatiCatastaliTemplate
+  ngx-datatable-cell-template
+  let-row="row"
+>
+  {{ getComuneFromUbicazione(row)?.denom_comune }}
+</ng-template>
+
+<ng-template #sezioneTemplate ngx-datatable-cell-template let-row="row">
+  <ng-container *ngIf="row.sezione === '_'; else fromProperty">
+    Unica
+  </ng-container>
+  <ng-template #fromProperty>
+    {{ row.sezione }}
+  </ng-template>
+</ng-template>
+
+<ng-template #accatastamentoTemplate ngx-datatable-cell-template let-row="row">
+  <span *ngIf="row.ind_fonte_dato === 'S'"> da servizio </span>
+  <span *ngIf="row.ind_fonte_dato === 'M'"> manuale </span>
+</ng-template>
+
+<ng-template #desVincoloTemplate ngx-datatable-cell-template let-row="row">
+  {{ row.des_vincolo_calcolato || row.vincolo_autorizza.des_vincolo_autorizza }}
+</ng-template>
+<!-- #endregion -->

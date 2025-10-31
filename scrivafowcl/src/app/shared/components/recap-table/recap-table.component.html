@@ -1,0 +1,195 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<h2 class="title">
+  <i *ngIf="showIcon" class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+  <span [innerHTML]="title"></span>
+</h2>
+
+<!-- DEFAULT LAYOUT - DEVELOPED A LONG TIME AGO -->
+<div class="table-container" *scrivaMaintain="defaultStructure">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col" *ngIf="selectionColumn">
+          <input
+            *ngIf="showSelectAll"
+            type="checkbox"
+            (click)="onSelectAll($event)"
+            [checked]="allSelected"
+            [disabled]="readonly"
+          />
+        </th>
+        <th scope="col" *ngFor="let col of columns">{{ col.label }}</th>
+        <th scope="col" *ngIf="actionsEnabled">
+          Azioni
+        </th>
+
+        <!-- workaroud to have "align-left" on columns -->
+        <th style="width: 1000px"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let record of records; index as i"
+        [ngClass]="{'row-geo': propostaComuneDaGeo && record.ind_geo_provenienza=='GEO', 'row-geod': propostaComuneDaGeo && record.ind_geo_provenienza=='GEOD' }"
+      >
+        <td *ngIf="selectionColumn">
+          <input
+            type="checkbox"
+            (click)="onCheckboxAction($event, i)"
+            [disabled]="(disableCheckbox && enabledIndex !== null && i !== enabledIndex) || readonly"
+            [checked]="isSelected(i)"
+          />
+        </td>
+        <td *ngFor="let col of columns">
+          <div *ngIf="col.arrayProperty; else simpleProperty">
+            <span *ngFor="let object of record[col.arrayProperty]; index as j">
+              <span *ngFor="let property of col.properties">
+                <ng-container *ngIf="col.separator && record[col.arrayProperty].length > 1 && j !== record[col.arrayProperty].length - 1; else noSeparator">
+                  <div [title]="byString(object, property) + col.separator">
+                    {{ byString(object, property) + col.separator }}
+                  </div>
+                </ng-container>
+                <ng-template #noSeparator>
+                  <ng-container *ngIf="showCustom(property, record, j)">
+                    <div [title]="byString(object, property)">
+                      {{ byString(object, property) }}
+                    </div>
+                  </ng-container>
+                </ng-template>
+              </span>
+            </span>
+          </div>
+          <ng-template #simpleProperty>
+            <div>
+              <span *ngFor="let property of col.properties">
+                <ng-container
+                  *ngIf="
+                    !(
+                      (property === 'ruoloCompilante.des_ruolo_compilante' && tipoSoggetto === 'PF') ||
+                      (property === 'ruoloCompilante.des_ruolo_compilante' && record?.anagraficaSoggetto?.cf === compilante?.cf_compilante)
+                    )
+                  "
+                >
+                  <div [title]="byString(record, property)">
+                    {{ byString(record, property) }}
+                  </div>
+                </ng-container>
+              </span>
+            </div>
+          </ng-template>
+        </td>
+        <td  class="actions" *ngIf="actionsEnabled"> <!--*ngIf="actionsEnabled"-->
+          <div>
+            <button class="btn-action" *ngIf="editEnabled && actionsEnabled" (click)="onEdit(record, i)" aria-label="modifica">
+              <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica"/>
+            </button>
+            <button class="btn-action" *ngIf="detailEnabled && actionsEnabled" (click)="onDetail(record, i)" aria-label="dettaglio">
+              <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio"/>
+            </button>
+            <button class="btn-action" *ngIf="downloadEnabled && actionsEnabled" (click)="onDownload(record, i)" aria-label="download">
+              <img src="assets/icon-table-download.svg" height="22px" alt="Download"/>
+            </button>
+            <button class="btn-action" *ngIf="deleteEnabled && actionsEnabled" (click)="onDelete(record, i)" aria-label="elimina">
+              <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+            </button>
+            <!-- *ngIf="!anableAddReferenti"-->
+            <!-- <button *ngIf="!actionsEnabled" class="btn-action" (click)="onDetail(record, i)" aria-label="dettaglio">
+              <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio" />
+            </button> -->
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+</div>
+
+<!-- UPDATE LAYAOUT - CREATED TO ADAPT SOME SITUATION NOT CORRECTLY HANDLED BY DEFAULT LAYOUT -->
+<div class="table-container-update" *scrivaRemove="defaultStructure">
+  <table class="table" [ngClass]="[customTableCss]">
+
+    <thead>
+      <tr>
+        <th *ngIf="selectionColumn">
+          <input *ngIf="showSelectAll" type="checkbox"
+            (click)="onSelectAll($event)"
+            [checked]="allSelected"
+            [disabled]="readonly"
+          />
+        </th>
+        <th *ngFor="let col of columns">{{ col.label }}</th>
+        <th *ngIf="actionsEnabled">
+          Azioni
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let record of records; index as i">
+        
+        <td *ngIf="selectionColumn">
+          <input type="checkbox"
+            [disabled]="(disableCheckbox && enabledIndex !== null && i !== enabledIndex) || readonly"
+            [checked]="isSelected(i)"
+            (click)="onCheckboxAction($event, i)"
+          />
+        </td>
+
+        <td *ngFor="let col of columns" [ngStyle]="col.colStyles || {}">
+
+          <ng-container *ngIf="col.arrayProperty; else simpleProperty">
+            <ng-container *ngFor="let object of record[col.arrayProperty]; index as j">
+              <ng-container *ngFor="let property of col.properties">
+                <ng-container *ngIf="col.separator && record[col.arrayProperty].length > 1 && j !== record[col.arrayProperty].length - 1; else noSeparator">
+                  <div [title]="byString(object, property) + col.separator">
+                    {{ byString(object, property) + col.separator }}
+                  </div>
+                </ng-container>
+                <ng-template #noSeparator>
+                  <ng-container *ngIf="showCustom(property, record, j)">
+                    <div [title]="byString(object, property)">
+                      {{ byString(object, property) }}
+                    </div>
+                  </ng-container>
+                </ng-template>
+              </ng-container>
+            </ng-container>
+          </ng-container>
+
+          <ng-template #simpleProperty>
+            <div [title]="updateLayoutLabel | scrivaExecute:record:col.properties">
+              {{ updateLayoutLabel | scrivaExecute:record:col.properties }}
+            </div>
+          </ng-template>
+
+        </td>
+
+        <td  class="actions" *ngIf="actionsEnabled">
+          <div>
+            <button class="btn-action" *ngIf="editEnabled && actionsEnabled" (click)="onEdit(record, i)" aria-label="modifica" title="Modifica">
+              <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica"/>
+            </button>
+            <button class="btn-action" *ngIf="detailEnabled && actionsEnabled" (click)="onDetail(record, i)" aria-label="dettaglio" title="Dettaglio">
+              <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio"/>
+            </button>
+            <button class="btn-action" *ngIf="downloadEnabled && actionsEnabled" (click)="onDownload(record, i)" aria-label="download" title="Download">
+              <img src="assets/icon-table-download.svg" height="22px" alt="Download"/>
+            </button>
+            <button class="btn-action" *ngIf="deleteEnabled && actionsEnabled" (click)="onDelete(record, i)" aria-label="elimina" title="Elimina">
+              <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+            </button>
+          </div>
+        </td>
+
+      </tr>
+    </tbody>
+  </table>
+  <hr>
+</div>

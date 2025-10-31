@@ -1,0 +1,342 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<h1 class="heel">Ricerca istanze</h1>
+
+<div class="segment-title col-xl-10">
+  <button type="button" id="simpleMode" [ngClass]="{ selected: searchMode === 'simple' }" (click)="onSimpleMode()">
+    Ricerca semplice
+  </button>
+  <button type="button" id="advancedMode" [ngClass]="{ selected: searchMode === 'advanced' }" (click)="onAdvancedMode()">
+    Ricerca avanzata
+  </button>
+</div>
+
+<div class="card col-xl-10">
+  <form
+    [formGroup]="advancedSearchForm"
+    *ngIf="advancedSearchForm"
+    id="advancedSearchForm"
+  >
+    <div class="row">
+      <div class="col-xl-3 col-lg-6">
+        <strong>Tipologia</strong>
+        <div class="form-group spaced">
+          <label for="tipoAdempimento">Tipo adempimento</label>
+          <select id="tipoAdempimento" class="form-control" [formControl]="advancedSearchForm.get('tipoAdempimento')">
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option *ngFor="let item of tipiAdempimento" [ngValue]="item">
+              {{ item.des_tipo_adempimento }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group spaced">
+          <label for="adempimento">Adempimento</label>
+          <select id="adempimento" class="form-control"
+            [formControl]="advancedSearchForm.get('adempimento')"
+            [attr.disabled]="!advancedSearchForm.get('tipoAdempimento').value ? '' : null"
+          >
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option *ngFor="let item of adempimenti" [ngValue]="item">
+              {{ item.des_adempimento }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-xl-3 col-lg-6">
+        <strong>Ubicazione</strong>
+        <div class="form-group spaced">
+          <label for="provincia">Provincia</label>
+          <select class="form-control" id="provincia" [formControl]="advancedSearchForm.get('provincia')">
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option *ngFor="let item of province" [ngValue]="item.cod_provincia">
+              {{ item.denom_provincia }}
+            </option>
+          </select>
+        </div>
+        <div class="form-group spaced">
+          <label for="comune">Comune</label>
+          <select id="comune" class="form-control"
+            [formControl]="advancedSearchForm.get('comune')"
+            [attr.disabled]="!advancedSearchForm.get('provincia').value ? '' : null"
+          >
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option *ngFor="let item of comuni" [ngValue]="item.denom_comune">
+              {{ item.denom_comune }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <strong>Periodo temporale</strong>
+        <div class="row">
+          <div class="form-group col-6 spaced">
+            <label for="tipoEvento">Evento istanza/procedimento</label>
+            <select class="form-control" id="tipoEvento" [formControl]="advancedSearchForm.get('tipoEvento')">
+              <option [value]="null" class="option-hidden">Seleziona</option>
+              <option *ngFor="let item of tipiEvento" [ngValue]="item.id_tipo_evento">
+                {{ item.des_tipo_evento }}
+              </option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-6">
+            <label for="dataEventoDa">Data da</label>
+            <input type="date" class="form-control" id="dataEventoDa"
+              [formControl]="advancedSearchForm.get('dataEventoDa')"
+              [attr.disabled]="!advancedSearchForm.get('tipoEvento').value ? '' : null"
+              max="{{ getMinDate(advancedSearchForm.get('dataEventoA').value, today) | date: 'yyyy-MM-dd' }}"
+            />
+          </div>
+          <div class="form-group col-6">
+            <label for="dataEventoA">Data a</label>
+            <input type="date" class="form-control" id="dataEventoA"
+              [formControl]="advancedSearchForm.get('dataEventoA')"
+              [attr.disabled]="!advancedSearchForm.get('dataEventoDa').value ? '' : null"
+              min="{{ advancedSearchForm.get('dataEventoDa').value || null | date: 'yyyy-MM-dd' }}"
+              max="{{ today | date: 'yyyy-MM-dd' }}"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+  <form [formGroup]="searchForm" id="searchForm" *ngIf="searchForm || advancedSearchForm">
+    <span class="search-field-title">
+      <p class="description" id="searchLabel">
+        Puoi ricercare per Identificativo istanza, Codice procedimento, Codice fiscale SOGGETTO,
+        Ragione sociale soggetto o Cognome soggetto, Denominazione, Codice progetto/intervento
+      </p>
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('input_ricerca_libera')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </span>
+
+    <div class="row">
+      <div class="form-group col-xl-6">
+        <input type="text" class="form-control" id="searchText" aria-labelledby="searchLabel"
+          [formControl]="searchForm.get('searchText')"/>
+      </div>
+      <div class="form-group col-xl-6 azzera-filtri" *ngIf="advancedSearchForm">
+        <button class="btn btn-outline-primary add-container" (click)="resetSearchFilters()">
+          <span class="add-text">Azzera filtri</span>
+        </button>
+      </div>
+      <!-- <div class="col-xl-6">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-cerca"
+          (click)="onSearchButtonClick()"
+        >
+          CERCA
+        </button>
+      </div> -->
+    </div>
+  </form>
+</div>
+
+<div class="row status-filter">
+  <div class="col-auto status" *ngFor="let item of statusFilters"
+    [ngClass]="{ selected: item.codice === status }"
+    (click)="onStatusChange(item.codice)"
+  >
+    {{ item.label }}
+  </div>
+</div>
+
+<div class="row table-header">
+  <div class="form-group col-md-6">
+    <p class="total-count" id="total-count" role="alert">
+      <strong>{{ page.totalElements }} Risultati di ricerca</strong>
+    </p>
+  </div>
+  <div class="form-group col-md-6 radio-wrapper" *ngIf="searchForm && !isFrontOffice">
+    <input type="radio" name="filtro-competenza" id="filtroCompetenza" value="competenza" [formControl]="searchForm.get('tipoPratiche')">
+    <label for="filtroCompetenza">I miei procedimenti</label>
+    <input type="radio" name="filtro-competenza" id="filtroTutte" value="ALL" [formControl]="searchForm.get('tipoPratiche')">
+    <label for="filtroTutte">Tutti i procedimenti</label>
+  </div>
+</div>
+<ngx-datatable
+  *ngIf="columns?.length > 0 && filteredRows?.length > 0"
+  class="material"
+  [rows]="filteredRows"
+  [columns]="columns"
+  [columnMode]="ColumnMode.force"
+  [reorderable]="false"
+  [headerHeight]="80"
+  [footerHeight]="50"
+  [scrollbarH]="true"
+  rowHeight="auto"
+  [externalPaging]="true"
+  [count]="page.totalElements"
+  [offset]="page.pageNumber"
+  [limit]="page.size"
+  [virtualization]="false"
+  (page)="setPage($event)"
+  [externalSorting]="true"
+  (sort)="onSort($event)"
+  [messages]="{ emptyMessage: 'Nessun risultato trovato' }"
+>
+</ngx-datatable>
+
+<!-- #region ngx-datatable templates -->
+<!-- AZIONI BASE -->
+<ng-template #baseActionsTemplate let-row="row">
+  <div class="actions" *ngIf="row.attore_gestione_istanza">
+    <button class="btn-action" *ngIf="checkIstanzaModificabile(row)"
+      (click)="editRow(row)" aria-label="modifica">
+      <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica"/>
+    </button>
+    <!-- <span *ngIf="row.attore_gestione_istanza === gestioneEnum.WRITE_LOCK">
+      <img src="assets/icon-table-edit-disabled.svg" height="24px" alt=""/>
+    </span> -->
+    <button class="btn-action" (click)="showRow(row)" aria-label="dettaglio">
+      <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio"/>
+    </button>
+    <button class="btn-action" (click)="deleteRow(row)" *ngIf="checkIstanzaEliminabile(row)" aria-label="elimina">
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+    </button>
+    <span *ngIf="!checkIstanzaEliminabile(row)">
+      <img src="assets/icon-table-elimina-disabled.svg" height="20px" alt=""/>
+    </span>
+  </div>
+</ng-template>
+
+<!-- AZIONI AVANZATE -->
+<ng-template #advancedActionsTemplate let-row="row" ngx-datatable-cell-template>
+  <div class="btn-group">
+    <i class="fa fa-ellipsis-v fa-2x disabled" aria-hidden="true"
+      *ngIf="!filterOggettiApplicativi(row, 'AZ_AVANZATA') || filterOggettiApplicativi(row, 'AZ_AVANZATA')?.length === 0"
+    >
+    </i>
+    <button class="btn dropdown-toggle" type="button" id="dropToggleButton-{{row.id_istanza}}"
+      *ngIf="filterOggettiApplicativi(row, 'AZ_AVANZATA')?.length > 0"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+      (click)="toggleDropDown($event.target.parentElement)"
+    >
+      <i class="fa fa-ellipsis-v fa-2x" aria-hidden="true"></i>
+    </button>
+    <div class="dropdown-menu dropdown-menu-left" id="dropMenuButton-{{row.id_istanza}}" aria-labelledby="dropdownMenuButton">
+      <button class="btn btn-outline-primary dropdown-item" type="button"
+        *ngFor="let item of filterOggettiApplicativi(row, 'AZ_AVANZATA')"
+        (click)="goToAdvancedAction(row, item.cod_oggetto_app)"
+      >
+        {{ item.des_oggetto_app }}
+      </button>
+    </div>
+  </div>
+</ng-template>
+
+<!-- IDENTIFICATIVO ISTANZA -->
+<ng-template #identificativoIstanzaTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_IDENTIFICATIVO_ISTANZA | scrivaTableTitle:row?.cod_istanza">
+    {{ row?.cod_istanza }}
+  </span>
+</ng-template>
+
+<!-- ADEMPIMENTO -->
+<ng-template #adempimentoTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_ADEMPIMENTO | scrivaTableTitle:row?.des_adempimento">
+    {{ row?.des_adempimento }}
+  </span>
+</ng-template>
+
+<!-- STATO ISTANZA PROCEDIMENTO -->
+<ng-template #statoIstanzaProcedimentoTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_STATO_ISTANZA_PROCEDIMENTO | scrivaTableTitle:row?.des_stato_istanza">
+    {{ row?.des_stato_istanza }}
+  </span>
+</ng-template>
+
+<!-- SOGGETTO -->
+<ng-template #soggettoTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_SOGGETTO | scrivaTableTitle:row?.den_soggetto">
+    {{ row?.den_soggetto }}
+  </span>
+</ng-template>
+
+<!-- DENOMINAZIONE -->
+<ng-template #denominazioneTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_DENOMINAZIONE | scrivaTableTitle:row?.den_oggetto" class="set-ellipsis">
+    {{ row?.den_oggetto }}
+  </span>
+</ng-template>
+
+<!-- COMUNE -->
+<ng-template #comuneTemplate let-row="row">
+  <div [title]="IT_C.COL_NAME_COMUNE | scrivaTableTitle:row?.comune">
+    <div *ngFor="let item of row.comune?.split(',')">
+      {{ item }}
+    </div>
+  </div>
+</ng-template>
+
+<!-- DATE MODIFICA ISTANZA/PRATICA -->
+<ng-template #dateTemplate let-row="row">
+  
+  <!-- FRONT OFFICE -->
+  <ng-container *ngIf="isFrontOffice">
+    <span [title]="IT_C.COL_NAME_DATA_MODIFICA_ISTANZA | scrivaTableTitle:(row.data_modifica_istanza | date: 'dd/MM/yyyy HH:mm:ss')">
+      {{ row.data_modifica_istanza | date: 'dd/MM/yyyy HH:mm:ss' }}
+    </span>
+  </ng-container>
+
+  <!-- BACKOFFICE OFFICE -->
+  <ng-container *ngIf="!isFrontOffice">
+    <span [title]="IT_C.COL_NAME_DATA_MODIFICA_PROVVEDIMENTO | scrivaTableTitle:(row.data_modifica_pratica | date: 'dd/MM/yyyy HH:mm:ss')">
+      {{ row.data_modifica_pratica | date: 'dd/MM/yyyy HH:mm:ss' }}
+    </span>
+  </ng-container>
+
+</ng-template>
+
+<!-- AUTORE MODIFICA -->
+<ng-template #autoreModificaTemplate let-row="row">
+
+  <!-- FRONT OFFICE -->
+  <ng-container *ngIf="isFrontOffice">
+    <span [title]="IT_C.COL_NAME_AUTORE_MODIFICA | scrivaTableTitle:row?.attore_modifica_fo">
+      {{ row?.attore_modifica_fo }}
+    </span>
+  </ng-container>
+
+  <!-- BACKOFFICE OFFICE -->
+  <ng-container *ngIf="!isFrontOffice">
+    <span [title]="IT_C.COL_NAME_AUTORE_MODIFICA | scrivaTableTitle:row?.attore_modifica_bo">
+      {{ row?.attore_modifica_bo }}
+    </span>
+  </ng-container>
+
+</ng-template>
+
+<!-- STATO PAGAMENTO -->
+<ng-template #statoPagamentoTemplate let-row="row">
+  <div [title]="IT_C.COL_NAME_STATO_PAGAMENTO | scrivaTableTitle:row?.des_stato_sintesi_pagamento?.toLowerCase()">
+    <span [ngClass]="{ 
+      'text-success': row.des_stato_sintesi_pagamento?.toLowerCase() === 'pagato',
+      'text-danger': row.des_stato_sintesi_pagamento?.toLowerCase() === 'da effettuare' }"
+    >
+      {{ row.des_stato_sintesi_pagamento?.toLowerCase() }}
+    </span>
+  </div>
+</ng-template>
+
+<!-- CODICE PROCEDIMENTO -->
+<ng-template #codiceProcedimentoTemplate let-row="row">
+  <span [title]="IT_C.COL_NAME_CODICE_PROCEDIMENTO | scrivaTableTitle:row?.cod_pratica">
+    {{ row?.cod_pratica }}
+  </span>
+</ng-template>
+
+<!-- #endregion -->

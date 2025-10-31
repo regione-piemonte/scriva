@@ -1,0 +1,139 @@
+{
+  "IndGeoMode": "O",
+  "QDR_OGGETTO": {
+    "via_con_vinca": true,
+    "messaggi": {
+      "cod_messaggio_pre_geeco": "I1GIS"
+    },
+    "criteri_ricerca": {
+      "cod_scriva": {
+        "label": "Codice progetto",
+        "visibile": true,
+        "obbligatorio": false
+      },
+      "den_oggetto": {
+        "label": "Denominazione progetto",
+        "visibile": true,
+        "obbligatorio": false
+      },
+      "anno_presentazione": {
+        "label": "Da anno <em>(presentazione istanza)</em>",
+        "visibile": true,
+        "obbligatorio": true
+      }
+    },
+    "ricerca_oggetto": false,
+    "dettaglio_oggetto": {
+      "vincoli": {
+        "visibile": true,
+        "obbligatorio": false
+      },
+      "cod_scriva": {
+        "label": "Codice SCRIVA",
+        "visibile": "BO"
+      },
+      "cod_utenza": {
+        "label": "Codice utenza",
+        "visibile": false,
+        "obbligatorio": false
+      },
+      "den_oggetto": {
+        "label": "Denominazione Progetto/Opera",
+        "visibile": "FO_BO",
+        "obbligatorio": true
+      },
+      "des_oggetto": {
+        "label": "Descrizione sintetica",
+        "visibile": "FO_BO",
+        "obbligatorio": true
+      },
+      "coordinata_x": {
+        "label": "Coordinata X (EPSG:32632)",
+        "visibile": false,
+        "obbligatorio": false
+      },
+      "coordinata_y": {
+        "label": "Coordinata Y (EPSG:32632)",
+        "visibile": false,
+        "obbligatorio": false
+      },
+      "aree_protette": {
+        "visibile": true,
+        "obbligatorio": false
+      },
+      "dati_catastali": {
+        "visibile": true,
+        "obbligatorio": true,
+        "origine_dato": {
+          "visibile": "BO"
+        }
+      },
+      "siti_rete_natura": {
+        "visibile": "FO_BO",
+        "obbligatorio": false,
+        "elementi_discontinuita": {
+          "label": "Tra i siti Natura 2000 indicati e l'area interessata dal P/I/A, sono presenti elementi di discontinuità o barriere fisiche di origine naturale o antropica (es. deversi reticoli idrogeografici, centri abitati, infrastrutture ferroviarie o stradali, zone industriali, etc.)?",
+          "visibile": false,
+          "obbligatorio": false
+        }
+      },
+      "cod_oggetto_fonte": {
+        "label": "Codice fonte",
+        "visibile": "BO",
+        "obbligatorio": false
+      },
+      "tipologia_oggetto": {
+        "label": "Tipologia oggetto",
+        "visibile": false,
+        "obbligatorio": false
+      },
+      "note_atto_precedente": [
+        {
+          "label": "Indicare l'Autorità Competente che ha rilasciato il provvedimento, il numero di provvedimento, la data di rilascio provvedimento e il titolo del progetto",
+          "visibile": false,
+          "obbligatorio": false,
+          "ricerca_oggetto": true,
+          "flg_nuovo_oggetto": true
+        },
+        {
+          "label": "Indicare l'Autorità Competente che ha rilasciato il provvedimento, il numero di provvedimento, la data di rilascio provvedimento e il titolo del progetto",
+          "visibile": false,
+          "obbligatorio": false,
+          "ricerca_oggetto": true,
+          "flg_nuovo_oggetto": false
+        },
+        {
+          "label": "Indicare l'Autorità Competente che ha rilasciato il provvedimento, il numero di provvedimento, la data di rilascio provvedimento e il titolo del progetto",
+          "visibile": false,
+          "obbligatorio": false,
+          "ricerca_oggetto": false,
+          "flg_nuovo_oggetto": true
+        }
+      ]
+    },
+    "risultati_ricerca": {
+      "comune": {
+        "label": "Comune",
+        "visibile": true
+      },
+      "ubicazione": {
+        "label": "Ubicazione",
+        "visibile": true
+      },
+      "den_oggetto": {
+        "label": "Denominazione",
+        "visibile": true
+      },
+      "pratiche_collegate": {
+        "label": "Pratiche collegate",
+        "visibile": false
+      }
+    }
+  },
+  "IndNumOggetto": "S",
+  "IndNumSoggetto": "S",
+  "IndNumReferente": "N",
+  "IndTipoSoggetto": "PG_PF_PB",
+  "IndTipoSelezioneAC": "S",
+  "IndNumComuniOggetto": "M"
+}

@@ -1,0 +1,125 @@
+{
+    "jsonForm": {
+        "display": "form",
+        "components": [
+            {
+                "key": "disableFlag",
+                "type": "hidden",
+                "input": true,
+                "label": "disableFlag",
+                "tableView": true,
+                "defaultValue": "ENABLED"
+            },
+            {
+                "key": "dichiaro_label",
+                "type": "htmlelement",
+                "input": false,
+                "label": "diechiaro_label",
+                "content": "<b>Dichiaro:</b>",
+                "tableView": false,
+                "refreshOnChange": false
+            },
+            {
+                "key": "dichiarazioni[0].cod_dichiarazione",
+                "type": "hidden",
+                "input": true,
+                "label": "dichiarazioni[0].cod_dichiarazione",
+                "tableView": false,
+                "defaultValue": "dchr_gdpr"
+            },
+            {
+                "key": "dichiarazioni[0].des_dichiarazione",
+                "type": "hidden",
+                "input": true,
+                "label": "dichiarazioni[0].des_dichiarazione",
+                "tableView": false,
+                "defaultValue": "di aver preso visione dell'Informativa sul trattamento dei dati personali, aggiornata all’art. 13 del GDPR 2016/679, consultabile anche sul sito web istituzionale della Regione Piemonte;"
+            },
+            {
+                "key": "dichiarazioni[0].obbligatorio",
+                "type": "hidden",
+                "input": true,
+                "label": "dichiarazioni[0].obbligatorio",
+                "tableView": false,
+                "defaultValue": true
+            },
+            {
+                "key": "dich-orientamento",
+                "type": "container",
+                "input": false,
+                "label": "dich-orientamento",
+                "hideLabel": true,
+                "tableView": false,
+                "components": [
+                    {
+                        "key": "dichiarazioni[0].check",
+                        "type": "checkbox",
+                        "input": true,
+                        "label": "Checkbox",
+                        "logic": [
+                            {
+                                "name": "enableLogic",
+                                "actions": [
+                                    {
+                                        "name": "enableAction",
+                                        "type": "property",
+                                        "state": "true",
+                                        "property": {
+                                            "type": "boolean",
+                                            "label": "Disabled",
+                                            "value": "disabled"
+                                        }
+                                    }
+                                ],
+                                "trigger": {
+                                    "type": "simple",
+                                    "simple": {
+                                        "eq": "DISABLED",
+                                        "show": true,
+                                        "when": "disableFlag"
+                                    }
+                                }
+                            }
+                        ],
+                        "validate": {
+                            "required": true,
+                            "customMessage": "Campo obbligatorio"
+                        },
+					    "conditional": {
+						    "show": true, 
+						    "when": "{{form.imports.codTipoAdempimento}}",
+						    "eq": "true"
+					    },						
+                        "hideLabel": true,
+                        "tableView": false,
+                        "customClass": "",
+                        "defaultValue": false
+                    },					
+                    {
+                        "key": "dichiarazioni[0].label",
+                        "type": "htmlelement",
+                        "attrs": [
+                            {
+                                "attr": "",
+                                "value": ""
+                            }
+                        ],
+					    "conditional": {
+						    "show": true, 
+						    "when": "{{form.imports.codTipoAdempimento}}",
+						    "eq": "true"
+					    },		                        
+                        "input": false,
+                        "label": "HTML",
+                        "content": "<span>di aver preso visione dell'<a href=\"{{form.imports.GDPRDOCPATH}}{{form.imports.codTipoAdempimento}}_{{form.imports.codAutCompetente}}_GDPR.pdf\" target=\"_blank\">Informativa sul trattamento dei dati personali</a>, aggiornata all’art. 13 del GDPR 2016/679, consultabile anche sul <a href=\"{{form.imports.acWeb}}\" target=\"_blank\">sito web istituzionale della Regione Piemonte</a>;</span>",
+                        "tableView": false,
+                        "customClass": "gdpr",
+                        "refreshOnChange": false					
+                    }
+                ]
+            }
+        ]
+    }
+}
+
+				

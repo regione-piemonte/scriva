@@ -1,0 +1,51 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="section">
+
+  <!-- TITOLO DELLA PAGINA -->
+  <scriva-page-title
+    [title]="P_C.PAGE_TITLE"
+    [showUserInfo]="true"
+  ></scriva-page-title>
+  
+  <!-- NAV BAR SCRIVA -->
+  <div class="row">
+
+    <div class="col"><!-- MARGINE SINISTRO RESPONSIVE --></div>
+    <div class="col col-p-center-nav">
+      <scriva-nav-bar
+        [tabs]="P_C.NAV_BAR_TABS"
+        (onTabIdClick)="onTabIdClick($event)"
+      ></scriva-nav-bar>
+    </div>
+    <div class="col"><!-- MARGINE DESTRO RESPONSIVE --></div>
+    
+  </div>
+
+  <!-- SWITCH CHE PERMETTE IL CARICAMENTO DELLE SEZIONI PER IL PROFILO -->
+  <ng-container [ngSwitch]="tabIdSelected">
+    <!-- ANAGRAFICA -->
+    <ng-container *ngSwitchCase="P_C.TAB_ID_ANAGRAFICA">
+      <scriva-profilo-anagrafica></scriva-profilo-anagrafica>
+    </ng-container>
+    <!-- CONTATTI -->
+    <ng-container *ngSwitchCase="P_C.TAB_ID_CONTATTI">
+      <scriva-profilo-contatti></scriva-profilo-contatti>
+    </ng-container>
+    <!-- NOTIFICHE -->
+    <ng-container *ngSwitchCase="P_C.TAB_ID_NOTIFICHE">
+      <scriva-profilo-notifiche></scriva-profilo-notifiche>
+    </ng-container>
+  </ng-container>
+  
+  <!-- ANCORA PER LA VISUALIZZAZIONE DEI MESSAGGI VERSO L'UTENTE -->
+  <div class="row s-mt--30" [id]="P_C.ALERT_ANCHOR"></div>
+
+</div>

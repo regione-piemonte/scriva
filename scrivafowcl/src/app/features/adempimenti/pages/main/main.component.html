@@ -1,0 +1,24 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div id="pageContainer">
+  <h1 class="heel">Tutti gli adempimenti</h1>
+
+  <div class="row">
+    <div class="col-xl-4 col-md-6" *ngFor="let tipo of tipiAdempimentoList">
+      <app-tipo-adempimento-card
+        [tipoAdempimento]="tipo"
+        (creaNuova)="goToWizard(tipo)"
+        (toggleFavourite)="toggleFavourite(tipo)"
+        (cerca)="cercaIstanze({tipoAdempimento: tipo})"
+        (info)="showInfoHelp(tipo)"
+      ></app-tipo-adempimento-card>
+    </div>
+  </div>
+</div>

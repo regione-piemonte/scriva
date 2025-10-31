@@ -1,0 +1,44 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header scriva-modal-header">
+  <h4 class="modal-title scriva-modal-title"
+    [innerHTML]="dataModal.title"
+  ></h4>
+  <scriva-button
+    [cssConfig]="{ customButton: 'scriva-btn-x close', typeButton: '' }"
+    [dataConfig]="{ label: '&times;' }"
+    (onClick)="modalClose()">
+  </scriva-button>
+</div>
+
+<div class="modal-body scriva-modal-body">
+  <div class="s-mt--40 s-mb--40">
+    <div [innerHTML]="dataModal.body"></div>
+  </div>
+</div>
+
+<div class="modal-footer scriva-modal-footer">
+  <div style="width: 100%;">
+    <!-- BOTTONE CLOSE -->
+    <scriva-default-button
+      class="left"
+      [cssConfig]="{ customButton: 'mr-auto' }"
+      [dataConfig]="{ label: 'ANNULLA' }"
+      (onClick)="modalCancel()">
+    </scriva-default-button>
+
+    <!-- BOTTONE CONFERMA -->
+    <scriva-primary-button
+      class="right"
+      [dataConfig]="{ label: 'CONFERMA' }"
+      (onClick)="modalConfirm()">
+    </scriva-primary-button>
+  </div>
+</div>

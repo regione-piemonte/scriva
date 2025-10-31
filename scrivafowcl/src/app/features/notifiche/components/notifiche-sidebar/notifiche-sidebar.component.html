@@ -1,0 +1,82 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="container-fluid ns-container-head s-mb--30">
+  <div class="row">
+    <div class="col-auto s-mr--a">
+      <span class="ns-title" [attr.aria-label]="NSB_C.PAGE_TITLE">
+        {{ NSB_C.PAGE_TITLE }}
+      </span>
+    </div>
+    <div class="col-auto s-mtb--a" *ngIf="checkNotifiche">
+      <!-- BUTTON PER SEGNARE TUTTE LE NOTIFICHE COME LETTE -->
+      <div class="ns-link-markasread" [attr.aria-label]="NSB_C.LABEL_MARK_ALL_AS_READ"
+        (click)="segnaTutteNotificheLette()"
+      >
+        {{ NSB_C.LABEL_MARK_ALL_AS_READ }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- LISTA DELLE NOTIFICHE -->
+<ng-container *ngIf="checkNotifiche">
+  <ng-container *ngFor="let notificaApp of notificheApp; last as isLast">
+    <div class="container-fluid s-plr--0">
+      <div class="row">
+        <div class="col-xl-12 col-md-12">
+          <scriva-notifica-card
+            [notifica]="notificaApp"
+            [notificaCardTypeView]="NSB_C.NOTIFICA_CARD_TYPE"
+            [ultimaCard]="isLast"
+            (onNotificaCancellata)="onNotificaCancellata($event)"
+            (onNotificaLetta)="onNotificaLetta($event)"
+            (onDettaglioNotifica)="onDettaglioNotifica($event)"
+            (onVaiAlProcedimento)="navigateToPratica($event)"
+          ></scriva-notifica-card>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-container>
+
+<!-- NESSUNA NOTIFICA -->
+<ng-container *ngIf="!checkNotifiche">
+  <div class="container-fluid ns-container-head s-mb--30">
+    <div class="row">
+      <div class="col-auto s-mr--a">
+        <scriva-alert
+          [alertConfigs]="alertConfigsNoNotifica"
+        ></scriva-alert>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<div class="container-fluid ns-container-footer">
+  <!-- PULSANTE PER ANDARE ALLA LISTA DI TUTTE LE NOTIFICHE -->
+  <div class="row">
+    <div class="col d-flex justify-content-end s-mr--a">
+      <!-- VEDI TUTTE NOTIFICHE -->
+      <scriva-primary-button
+        [dataConfig]="NSB_C.BTN_VAI_A_LISTA_NOTIFICHE"
+        (onClick)="vaiAListaNotifiche()">
+      </scriva-primary-button>
+    </div>
+  </div>
+</div>
+
+<!-- ALERT -->
+<div class="ns-alert-anchor" *ngIf="alertConfigsCheck">
+  <scriva-alert
+    [alertConfigs]="alertConfigs"
+    [allowAlertClose]="true"
+    (onAlertHidden)="resetAlertConfigs()"
+  ></scriva-alert>
+</div>

@@ -1,0 +1,88 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<scriva-bread-crumb *ngIf="istanza && scrivaBreadCrumbItems"
+  [items]="scrivaBreadCrumbItems"
+  (emit)="emitEventChild($event)"
+></scriva-bread-crumb>
+
+<!-- TITOLO DELLA PAGINA -->
+<scriva-page-title *ngIf="istanza && titlePage"
+  [title]="titlePage"
+  [showUserInfo]="false"
+></scriva-page-title>
+
+<advanced-action-riepilogo-istanza
+  *ngIf="istanza && denTitolareIstanza"
+  [istanza]="istanza"
+  [denTitolareIstanza]="denTitolareIstanza"
+></advanced-action-riepilogo-istanza>
+
+<!-- Core della azione avanzata -->
+<ng-container *ngIf="!modeSuccess; else modeSuccessTemplate">
+  <div class="card" id="dettaglioContainer">
+      <form [formGroup]="dettaglioForm">
+        <span class="help-box">
+          <h2 class="title">
+            <strong>Procedimento in corso</strong>
+          </h2>
+          <button class="btn btn-primary help-btn" (click)="onHelpClicked('proc_in_corso')" aria-label="help">
+            <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+          </button>
+        </span>
+    
+        <div class="row">
+          <div class="form-group col-xl-4 col-md-6">
+            <label for="esitoProcedura">*Seleziona l'esito del procedimento</label>
+          </div>
+          <div class="form-group col-xl-4 col-md-6">
+            <select class="form-control" name="esitoProcedura" id="esitoProcedura" formControlName="esitoProcedura">
+              <option [ngValue]="null" class="option-hidden">Seleziona</option>
+              <option [ngValue]="esito" *ngFor="let esito of listEsitoProcedura">
+                {{ esito.des_esito_procedimento }}
+              </option>
+            </select>
+            <app-form-error-message [control]="this.dettaglioForm.get('esitoProcedura')"></app-form-error-message>
+          </div>
+        </div>
+      </form>
+      <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+    
+      <advanced-action-allegati *ngIf="istanza"
+        [istanza]="istanza"
+        [chiave]="chiave"
+        (emit)="emitEventChild($event)"
+      ></advanced-action-allegati>
+      
+      <scriva-note 
+        [idIstanza]="idIstanza"
+        (emit)="emitEventChild($event)"
+      ></scriva-note>
+  </div>
+</ng-container>
+
+<advanced-action-footer
+  [showConferma]="!modeSuccess"
+  [disable]="dettaglioForm.invalid"
+  (emit)="emitEventChild($event)">
+</advanced-action-footer>
+
+<!-- Messaggio di succes  della azione avanzata -->
+<ng-template #modeSuccessTemplate>
+  <div class="row s-mt--30">
+    <div class="col">
+      <div class="alert-box success">
+        <i class="icon icon-big fa fa-check-circle-o" aria-hidden="true"></i>
+        <span>
+          <p class="text-only" [innerHTML]="confirmSuccessMessagge"></p>
+        </span>
+      </div>    
+    </div>
+  </div>
+</ng-template>

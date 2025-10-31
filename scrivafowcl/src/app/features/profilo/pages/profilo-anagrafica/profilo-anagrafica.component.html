@@ -1,0 +1,51 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="container-fluid profilo-section-container s-plr--0">
+    
+  <div class="row profilo-section-row">
+    <div class="col">
+      <div class="card profilo-section-card">
+        <form [formGroup]="paForm">
+          <!-- CODICE FISCALE -->
+          <scriva-profilo-dato-utente
+            [formControlName]="P_C.FC_CODICE_FISCALE"
+            [form]="paForm"
+            [idFormControl]="P_C.FC_CODICE_FISCALE"
+            [label]="PA_C.LABEL_COD_FISC"
+            [icon]="'fa-id-card-o'"
+          ></scriva-profilo-dato-utente>
+
+          <hr>
+          
+          <!-- COGNOME -->
+          <scriva-profilo-dato-utente
+            [formControlName]="P_C.FC_COGNOME"
+            [form]="paForm"
+            [idFormControl]="P_C.FC_COGNOME"
+            [label]="PA_C.LABEL_COGNOME"
+            [icon]="'fa-user-o'"
+          ></scriva-profilo-dato-utente>
+          
+          <hr>
+
+          <!-- NOME -->
+          <scriva-profilo-dato-utente
+            [formControlName]="P_C.FC_NOME"
+            [form]="paForm"
+            [idFormControl]="P_C.FC_NOME"
+            [label]="PA_C.LABEL_NOME"
+            [icon]="'fa-user-o'"
+          ></scriva-profilo-dato-utente>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,168 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.stepper-header {
+  margin: 30px 0 40px 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow-x: auto;
+
+  .step-item {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    pointer-events: none !important;
+    // &:not(:first-of-type) {
+    //   padding-left: 0;
+    // }
+    // &:not(:last-of-type) {
+    //   padding-right: 0;
+    // }
+    padding: 0;
+
+    .line {
+      flex: 1;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      min-width: 20px;
+
+      &:first-of-type {
+        padding-right: 10px;
+      }
+
+      &:last-of-type {
+        padding-left: 10px;
+      }
+
+      div {
+        height: 2px;
+        width: 100%;
+        background-color: #ddd;
+      }
+    }
+
+    &:first-of-type {
+      text-align: start;
+
+      .line:first-of-type {
+        display: none;
+      }
+    }
+    &:last-of-type {
+      text-align: end;
+      .line:last-of-type {
+        display: none;
+      }
+    }
+
+    .circle-shade {
+      background-color: #ccc;
+      order: 1px solid #ccc;
+      color: white;
+      border-radius: 50%;
+      display: inline-block;
+      height: 33px;
+      width: 33px;
+      line-height: 33px;
+      text-align: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+
+    .circle-full {
+      background-color: #006CB4;
+      border: 1px solid #006CB4;
+    }
+
+    .label-text {
+      font-size: 1.125rem;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 20vw;
+      vertical-align: top;
+      color: #aaaaaa;
+      line-height: 33px;
+    }
+
+    .label-selected {
+      color: #000000;
+    }
+
+    @media screen and (max-width: 992px) {
+      .label-text {
+        display: none;
+      }
+    }
+
+    .active {
+      font-weight: bold;
+    }
+  }
+
+  .step-item.active {
+    .circle-shade{
+      background-color: #006CB4 !important;
+      color: #fff !important;
+      border: 1px solid #006CB4;
+    }
+    .label-text {
+      color: #006CB4;
+    }
+  }
+
+  .step-item.clickable {
+    pointer-events: auto !important;
+    .circle-shade {
+      background-color: #fff;
+      color: #006CB4;
+      border: 1px solid #006CB4;
+    }
+    .label-text {
+      color: #006CB4;
+    }
+  }
+}
+
+// scroller
+.list {
+  flex-grow: 1;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.img-change-btn {
+  width: 33px;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.scroller {
+  width: 40px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+#scroll-left {
+  order: -1; /* To pevent ExpressionChangedAfterItHasBeenCheckedError */
+}
+
+.disable {
+  display: none;
+}

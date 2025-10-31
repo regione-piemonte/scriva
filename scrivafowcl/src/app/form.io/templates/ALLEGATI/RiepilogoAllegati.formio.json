@@ -1,0 +1,83 @@
+{
+    "display": "form",
+    "components": [
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "HTML",
+        "content": "<h2><strong>ALLEGATI</strong></h2>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "numeroAllegatiUtente",
+        "type": "htmlelement",
+        "input": true,
+        "label": "HTML",
+        "content": "<strong>Totale documenti presentati: {{submission.data.numeroAllegatiUtente}}</strong>",
+        "tableView": false,
+        "refreshOnChange": true
+      },
+      {
+        "key": "riepilogoAllegati",
+        "type": "editgrid",
+        "input": true,
+        "label": "<strong>ALLEGATI</strong>",
+        "hideLabel": true,
+        "rowDrafts": false,
+        "tableView": false,
+        "templates": {
+          "row": "<div class=\"row\">\n {% instance.eachComponent(function(component) { %}\n <div class=\"col-sm-4\">\n {{ component.getView(component.dataValue) }}\n </div>\n {% }, rowIndex) %}\n </div>",
+          "header": "<div class=\"row\">\n {% (component.components || []).forEach(function(component) { %}\n <div class=\"col-sm-4\"><strong>{{ component.label }}</strong></div>\n {% }) %}\n </div>"
+        },
+        "components": [
+          {
+            "key": "categoria",
+            "type": "textfield",
+            "input": true,
+            "label": "Categoria allegato",
+            "tableView": true
+          },
+          {
+            "key": "count",
+            "type": "textfield",
+            "input": true,
+            "label": "Numero",
+            "tableView": true
+          }
+        ],
+        "customClass": "table-custom-class",
+        "disableAddingRemovingRows": true
+      },
+      {
+        "key": "html1",
+        "type": "htmlelement",
+        "input": false,
+        "label": "HTML",
+        "content": "L'elenco completo è disponibile nella pagina \"Allegati\".",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "pdfAllegati",
+        "type": "htmlelement",
+        "input": true,
+        "label": "HTML",
+        "content": "File elenco allegati <strong>{{data.documentiDiSistema?.find(el => el.codTipologia === 'ELENCO_ALLEGATI').nomeDocumento}}</strong> generato il {{data.documentiDiSistema?.find(el => el.codTipologia === 'ELENCO_ALLEGATI').dataDocumento}}",
+        "tableView": false,
+        "refreshOnChange": true,
+        "customConditional": "show = !!data.documentiDiSistema && !!data.documentiDiSistema.find(el => el.codTipologia === 'ELENCO_ALLEGATI')"
+      },
+      {
+        "key": "pdfIntegrazioni",
+        "type": "htmlelement",
+        "input": true,
+        "label": "HTML",
+        "content": "File elenco integrazioni <strong>{{data.documentiDiSistema?.find(el => el.codTipologia === 'ELENCO_INTEGR').nomeDocumento}}</strong> generato il {{data.documentiDiSistema?.find(el => el.codTipologia === 'ELENCO_INTEGR').dataDocumento}}",
+        "tableView": false,
+        "refreshOnChange": true,
+        "customConditional": "show = !!data.documentiDiSistema && !!data.documentiDiSistema.find(el => el.codTipologia === 'ELENCO_INTEGR')"
+      }
+    ]
+  }

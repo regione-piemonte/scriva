@@ -1,0 +1,17 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<p class="bread-crumb">
+  <ng-container *ngFor="let scrivaBreadCrumbItem of items; let last=last">
+    <a *ngIf="scrivaBreadCrumbItem.emitAction" href="javascript:;" (click)="clickEmit(scrivaBreadCrumbItem.emitAction)" 
+    aria-label="'+scrivaBreadCrumbItem.ariaLabel+'">{{scrivaBreadCrumbItem.label}}</a> 
+    <strong *ngIf="!scrivaBreadCrumbItem.emitAction">{{scrivaBreadCrumbItem.label}}</strong>
+    <ng-container *ngIf="!last"> - </ng-container>
+  </ng-container>
+</p>

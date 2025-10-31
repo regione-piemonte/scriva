@@ -1,0 +1,161 @@
+{
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "questionWell",
+        "type": "well",
+        "input": false,
+        "label": "well-label",
+        "tableView": false,
+        "components": [
+          {
+            "key": "QDR_OGGETTO.ricerca_oggetto",
+            "type": "radio",
+            "input": true,
+            "label": "<b>Desideri mantenere/recuperare anche solo parzialmente i dati e le informazioni relative ad una istanza già presentata?<br></b> I dati e le informazioni recuperate sono modificabili.",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "inline": true,
+            "values": [
+              {
+                "label": "Si",
+                "value": "true",
+                "shortcut": ""
+              },
+              {
+                "label": "No",
+                "value": "false",
+                "shortcut": ""
+              }
+            ],
+            "validate": {
+              "required": true,
+              "customMessage": "Rispondi alla domanda per continuare",
+              "onlyAvailableItems": false
+            },
+            "tableView": false,
+            "persistent": false,
+            "hideOnChildrenHidden": false,
+            "optionsLabelPosition": "right"
+          },
+          {
+            "key": "opzione_domanda_1",
+            "type": "button",
+            "event": "helpBtnClick",
+            "input": true,
+            "label": "<i class=\"fa fa-question-circle fa-lg\" aria-hidden=\"true\"></i>",
+            "action": "event",
+            "tableView": false,
+            "customClass": "help-btn",
+            "showValidations": false,
+            "hideOnChildrenHidden": false
+          }
+        ],
+        "customClass": "formio-well"
+      },
+      {
+        "key": "dichiaro_label",
+        "type": "htmlelement",
+        "input": false,
+        "label": "diechiaro_label",
+        "content": "<b>Dichiaro:</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni[0].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_gdpr"
+      },
+      {
+        "key": "dichiarazioni[0].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di aver preso visione dell'Informativa sul trattamento dei dati personali (http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf), aggiornata all'art. 13 del GDPR 2016/679, consultabile sul Sito Web Istituzionale (https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via) e sulla Home Page del servizio (http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali)."
+      },
+      {
+        "key": "dichiarazioni[0].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[0].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[0].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di aver preso visione dell'<a href=\"http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf\" target=\"_blank\">Informativa sul trattamento dei dati personali</a>, aggiornata all'art. 13 del GDPR 2016/679, consultabile sul <a href=\"https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via\" target=\"_blank\">Sito Web Istituzionale</a> e sulla <a href=\"http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali\" target=\"_blank\">Home Page del servizio</a>",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      }
+    ]
+  }
+}

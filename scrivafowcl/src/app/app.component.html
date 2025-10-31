@@ -1,0 +1,235 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<body class="fixed-sn light-blue-skin">
+  <div role="navigation" aria-label="navigazione nascosta per screen reader">
+    <button class="skip-link" (click)="goToElement('main')">Vai al contenuto principale</button>
+    <button class="skip-link" (click)="goToElement('footer')">Vai al footer</button>
+  </div>
+  <!--Top Navigation-->
+  <header>
+    <!--Navbar-->
+    <nav class="navbar navbar-expand bg-primary navbar-dark">
+      <div class="container-fluid">
+        <!-- Toggler/collapsibe Button -->
+        <button
+          type="button"
+          class="btn menu-button"
+          *ngIf="!(selected === 'accreditamento')"
+          (click)="toggleOpen()"
+        >
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </button>
+
+        <!-- Brand -->
+        <!-- <span>
+          <img src="assets/icon-navbar-info.svg" width="21px" />
+        </span> -->
+        <a id="pageTitle" class="navbar-brand" href="javascript:;" aria-label="scrivania">
+          {{ appTitle }}
+        </a>
+
+        <!-- Navbar links -->
+        <div class="nav-button-group">
+          <span>
+            <button class="btn-action" aria-label="help" (click)="onHelpClicked()">
+              <img src="assets/icon-navbar-info.svg" alt="Help" width="21px" />
+            </button>
+          </span>
+          <span>
+            <scriva-notifiche-button-count
+              (click)="toggleSidebarNotifiche()">
+            </scriva-notifiche-button-count>
+          </span>
+
+          <span ngbDropdown>
+            <button ngbDropdownToggle class="btn" type="button" id="dropToggleButton" aria-haspopup="true" aria-expanded="false">
+              <ng-container *ngIf="compilante; else menuFunzionario">
+                <span class="user-circle">
+                  {{ this.compilante.nome_compilante.charAt(0) + this.compilante.cognome_compilante.charAt(0) }}
+                </span>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right" id="userDropMenu" aria-labelledby="dropToggleButton">
+                  <button ngbDropdownItem class="btn btn-outline-primary dropdown-item" type="button" (click)="apriProfilo()">
+                    <i class="fa fa-user fa-lg mr-1" aria-hidden="true"></i> Profilo
+                  </button>
+                  <div class="dropdown-divider"></div>
+                  <button ngbDropdownItem class="btn btn-outline-primary dropdown-item" type="button" (click)="logout()">
+                    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Esci
+                  </button>
+                </div>
+              </ng-container>
+
+              <ng-template #menuFunzionario>
+                <span class="user-circle">
+                  {{ this.funzionario?.funzionario.nome_funzionario.charAt(0) + this.funzionario?.funzionario.cognome_funzionario.charAt(0) }}
+                </span>
+                <div ngbDropdownMenu class="dropdown-menu dropdown-menu-right" id="userDropMenu" aria-labelledby="dropToggleButton">
+                  <button ngbDropdownItem class="btn btn-outline-primary dropdown-item" type="button" (click)="logout()">
+                    <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i> Esci
+                  </button>
+                </div>
+              </ng-template>
+            </button>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!--/Top Navigation-->
+
+  <!-- Side Navbar -->
+  <div class="container-fluid page-content" *ngIf="loadContent; else errorBox">
+    <ng-sidebar-container>
+      <ng-sidebar
+        [(opened)]="!(selected === 'accreditamento') && opened"
+        [mode]="sidebarMode"
+        [position]="sidebarPosition"
+        [closeOnClickOutside]="closeOnClickOutside"
+        [closeOnClickBackdrop]="closeOnClickBackdrop"
+        [showBackdrop]="showBackdrop"
+        [animate]="animate"
+        [trapFocus]="trapFocus"
+        [autoFocus]="autoFocus"
+        [autoCollapseHeight]="autoCollapseHeight"
+        [autoCollapseWidth]="autoCollapseWidth"
+        [ariaLabel]="ariaLabel"
+        [keyClose]="false"
+        [dock]="dock"
+        [dockedSize]="'60px'"
+      >
+        <div class="card" [ngClass]="{ docked: dock, 'mobile-bar': sidebarMode === 'over' }">
+          <div *ngIf="sidebarMode !== 'over'" class="sidebar-item" style="margin-left: auto">
+            <span class="sidebar-icon">
+              <button class="btn-action" (click)="toggleExpansion()" aria-label="cambia visualizzazione sidebar">
+                <img *ngIf="!dock" src="assets/icon-sidebar-riduci.svg" alt="Riduci sidebar"/>
+                <img *ngIf="dock" src="assets/icon-sidebar-espandi.svg" alt="Espandi sidebar"/>
+              </button>
+            </span>
+          </div>
+
+          <div class="sidebar-item" [ngClass]="{ selected: 'home' === selected }" (click)="selectItem('home')">
+            <span class="sidebar-icon">
+              <button class="btn-action" aria-label="home">
+                <img src="assets/icon-sidebar-home.svg" alt="Home"/>
+              </button>
+            </span>
+            <span *ngIf="!dock">Home</span>
+          </div>
+
+          <!-- lista ambiti (dinamica) -->
+          <div *ngFor="let ambito of ambiti">
+            <div class="sidebar-item" [ngClass]="{ selected: ambito.cod_ambito.toLowerCase() === selected }" (click)="selectItem('ambito/' + ambito.cod_ambito)">
+              <span class="sidebar-icon">
+                <button class="btn-action" [attr.aria-label]="ambito.des_ambito">
+                  <img
+                    src="assets/icon-sidebar-{{ambito.cod_ambito.toLowerCase()}}.svg"
+                    alt="{{ ambito.des_ambito }}"
+                  />
+                </button>
+              </span>
+              <span *ngIf="!dock">{{ ambito.des_ambito }}</span>
+            </div>
+          </div>
+
+          <div class="sidebar-item" [ngClass]="{ selected: 'adempimenti' === selected }" (click)="selectItem('adempimenti')">
+            <span class="sidebar-icon">
+              <button class="btn-action" aria-label="tutti gli adempimenti">
+                <img src="assets/icon-sidebar-adempimenti.svg" alt="Adempimenti"/>
+              </button>
+            </span>
+            <span *ngIf="!dock">Tutti gli adempimenti</span>
+          </div>
+
+          <div class="sidebar-item" [ngClass]="{ selected: 'ricerca' === selected }" (click)="selectItem('ricerca')">
+            <span class="sidebar-icon">
+              <button class="btn-action" aria-label="ricerca istanze">
+                <img src="assets/icon-sidebar-cerca.svg" alt="Cerca"/>
+              </button>
+            </span>
+            <span *ngIf="!dock">Ricerca istanze</span>
+          </div>
+
+          <div class="sidebar-item" [ngClass]="{ selected: 'contatti' === selected }" (click)="selectItem('contatti')">
+            <span class="sidebar-icon">
+              <button class="btn-action" aria-label="contatti">
+                <img src="assets/icon-sidebar-contatti.svg" alt="Contatti"/>
+              </button>
+            </span>
+            <span *ngIf="!dock">Contatti</span>
+          </div>
+        </div>
+      </ng-sidebar>
+
+      <div ng-sidebar-content>
+        <!--Main layout-->
+        <main id="main">
+          <router-outlet></router-outlet>
+        </main>
+        <!--/Main layout-->
+      </div>
+    </ng-sidebar-container>
+    <!-- /Side Navbar -->
+  </div>
+
+  <!-- Sidebar Notifiche -->
+  <div id="sidebarNotifiche" [ngClass]="openedNotifiche ? 'openedSidebar' : 'closedSidebar'" *ngIf="openedNotifiche">
+    <!-- RICHIAMO IL COMPONENTE DI GESTIONE GRAFICA/LOGICA DELLA SIDE BAR -->    
+    <scriva-notifiche-sidebar
+      (onDettaglioNotifica)="onDettaglioNotifica()"
+      (onVaiAllaPratica)="onVaiAllaPratica()"
+      (onVaiATutteNotifiche)="onVaiATutteNotifiche()"
+    ></scriva-notifiche-sidebar>
+  </div>
+  <div id="opacityLayer" [ngClass]="openedNotifiche ? 'showLayout' : 'hideLayout'"  (click)="toggleSidebarNotifiche()"></div>
+
+  <ng-template #errorBox>
+    <span id="errorBox">
+      <div class="alert-box error">
+        <i class="icon icon-big fa fa-times-circle-o" aria-hidden="true"></i>
+        <span>
+          <p class="text-only">
+            <strong>{{ errorMessage }}</strong>
+          </p>
+        </span>
+      </div>
+    </span>
+  </ng-template>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <span class="bg-primary">
+      <div class="container-fluid">
+        <div class="row footer-logo">
+          <div class="col-4">
+            <img src="assets/logo-footer-regione.svg" class="logo-left" alt=""/>
+          </div>
+          <div class="col-4 text-center">
+            <img src="assets/logo-footer-europa-2x.png" class="logo-center" alt=""/>
+          </div>
+          <div class="col-4 text-right">
+            <img src="assets/logo-footer-piemonte-ccc.png" class="logo-right" alt=""/>
+          </div>
+        </div>
+      </div>
+    </span>
+  
+    <span class="bg-second-blue">
+      <div class="container-fluid">
+        <div class="row footer-link-group">
+          <div class="col-xs-4">Accessibilità</div>
+          <div class="col-xs-4">Note legali e privacy</div>
+          <div class="col-xs-4">Cookie policy</div>
+        </div>
+      </div>
+    </span>
+  </footer>
+  <!-- /Footer -->
+  <ngx-spinner></ngx-spinner>
+  <ngx-spinner name="notificheSpinner"></ngx-spinner>
+</body>

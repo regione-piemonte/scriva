@@ -1,0 +1,162 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<div class="card col-xl-12" id="containerDichiarazioni">
+	<form [formGroup]="formDichiarazioni" *ngIf="formDichiarazioni" id="formDichiarazioni">
+		<div>
+			<p>
+				<b>
+					Per procedere all'invio dell'istanza è necessario dichiarare quanto segue: 
+        		</b>
+			</p>
+		</div>
+
+		<!-- dchr_gdpr_1  [Per competenza territorio relativo a regione Piemonte] -->
+		<div class="form-group align-qdrdich" 
+			[ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_gdpr_1').valid && formDichiarazioni?.get('dchr_gdpr_1').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_gdpr_1">
+					<input					
+						id="dchr_gdpr_1" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_gdpr_1')"
+						(change)="setValid($event)"
+					/>
+					<span>						
+						* dichiara di aver preso visione dell'<a href="{{GDPR_docUrl}}{{cod_tipo_adempimento}}_gp_29_GDPR.pdf" target="_blank">Informativa sul trattamento dei dati personali</a>, aggiornata all’art. 13 del GDPR 2016/679, consultabile anche sul <a href={{this.acWebPiemonte}} target="_blank">sito web istituzionale</a> del soggetto gestore Regione Piemonte
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_gdpr_1').valid && formDichiarazioni?.get('dchr_gdpr_1').touched"   
+			>Campo obbligatorio
+		</p>	
+
+		<!-- dchr_gdpr_2  [Per competenza territorio DIVERSO da regione Piemonte]-->
+		<div *ngIf="acWebNotPiemonte" class="form-group align-qdrdich" 
+			[ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_gdpr_2').valid && formDichiarazioni?.get('dchr_gdpr_2').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_gdpr_2">
+					<input					
+						id="dchr_gdpr_2" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_gdpr_2')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di aver preso visione dell'<a href="{{GDPR_docUrl}}{{cod_tipo_adempimento}}_{{cod_competenza_territorio}}_GDPR.pdf" target="_blank">Informativa sul trattamento dei dati personali</a>, aggiornata all’art. 13 del GDPR 2016/679, consultabile anche sul <a href={{this.acWebNotPiemonte}} target="_blank">sito web istituzionale</a> del soggetto gestore {{comune_competenza}}
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_gdpr_2').valid && formDichiarazioni?.get('dchr_gdpr_2').touched"   
+			>Campo obbligatorio
+		</p>
+		
+      	<!-- dchr_dati_pers  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_dati_pers').valid && formDichiarazioni?.get('dchr_dati_pers').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_dati_pers">
+					<input					
+						id="dchr_dati_pers" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_dati_pers')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di aver verificato che gli elaborati progettuali sono firmati esclusivamente in formato digitale da tutti i professionisti che li hanno redatti e che non contengono dati personali eccedenti e non pertinenti
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_dati_pers').valid && formDichiarazioni?.get('dchr_dati_pers').touched"   
+			>Campo obbligatorio
+		</p>
+		
+      	<!-- dchr_pubbl_sito  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pubbl_sito').valid && formDichiarazioni?.get('dchr_pubbl_sito').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_pubbl_sito">
+					<input					
+						id="dchr_pubbl_sito" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_pubbl_sito')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di essere consapevole che l'Amministrazione pubblicherà la documentazione trasmessa con la presente istanza sul sito <a href={{this.serviziRegionePiemonteUrl}} target="_blank">Portale di pubblicazione di procedimenti e Osservazioni</a> ai sensi della L 241/90 e del D. Lgs. 33/2013, al fine di ricevere eventuali osservazioni
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pubbl_sito').valid && formDichiarazioni?.get('dchr_pubbl_sito').touched"   
+			>Campo obbligatorio
+		</p>
+
+      	<!-- dchr_pagam_bollo  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_bollo').valid && formDichiarazioni?.get('dchr_pagam_bollo').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_pagam_bollo">
+					<input					
+						id="dchr_pagam_bollo" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_pagam_bollo')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di essere consapevole che il pagamento del bollo, se dovuto e non assolto, potrà essere richiesto successivamente alla presentazione della presente istanza
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_bollo').valid && formDichiarazioni?.get('dchr_pagam_bollo').touched"   
+			>Campo obbligatorio
+		</p>			
+		
+      	<!-- dchr_sanzione  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_sanzione').valid && formDichiarazioni?.get('dchr_sanzione').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_sanzione">
+					<input					
+						id="dchr_sanzione" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_sanzione')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di essere consapevole delle sanzioni penali previste in caso di dichiarazioni non veritiere e di falsità negli atti e della conseguente decadenza dai benefici di cui agli artt. 75 e 76 del D.P.R. 445/2000
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_sanzione').valid && formDichiarazioni?.get('dchr_sanzione').touched"   
+			>Campo obbligatorio
+		</p>
+
+  </form>
+</div>
+

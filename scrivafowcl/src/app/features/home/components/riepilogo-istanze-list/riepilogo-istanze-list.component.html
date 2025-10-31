@@ -1,0 +1,53 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="istanza-list">
+  <div class="istanza-list-title">
+    <div class="image">
+      <img [src]="icon" alt=""/>
+    </div>
+    <div class="description">
+      <div>{{ title }}</div>
+      <div class="count">{{ count }}</div>
+    </div>
+  </div>
+
+  <ng-container *ngIf="istanze && istanze.length > 0; else noData">
+    <div class="row">
+      <div [class]="'istanza-list-item col-xl-' + 12 / colNum" *ngFor="let item of istanze">
+        <div class="set-ellipsis">
+          <a href="javascript:;" aria-label="visualizza istanza" (click)="visualizzaIstanza(item)">
+            <ng-container *ngIf="componente === 'FO' ">
+              Identificativo istanza {{ item.cod_istanza }} | {{ item.des_adempimento }}
+              <span *ngIf="item.den_oggetto" class="set-ellipsis"> {{ '|'+item.den_oggetto }}</span>
+            </ng-container>
+            <ng-container *ngIf="componente === 'BO' ">
+              Codice procedimento {{ item.cod_pratica }} | {{ item.des_adempimento }}
+              <span *ngIf="item.den_oggetto" class="set-ellipsis"> {{ '|'+item.den_oggetto }}</span>
+            </ng-container>
+          </a>
+        </div>
+        <span *ngIf="item.data_inserimento_istanza" class="date">
+          {{ item.data_inserimento_istanza | date: 'dd/MM/yy' }}
+        </span>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #noData>
+    <div class="row">
+      <div [class]="'istanza-list-item col-xl-' + 12 / colNum">
+        Nessuna istanza trovata
+      </div>
+    </div>
+  </ng-template>
+
+  <!-- <a (click)="onVediTutte()">Vedi tutte</a> -->
+  <button type="button" class="btn btn-link" (click)="onVediTutte()">Vedi tutte</button>
+</div>

@@ -1,0 +1,209 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<p class="bread-crumb">
+  <a href="javascript:;" (click)="goToSearchPage()" aria-label="ricerca">Ricerca</a> - <strong> Concludi Procedimento</strong>
+</p>
+
+<h1 class="heel">
+  Concludi Procedimento
+</h1>
+
+<div class="card">
+  <h2 class="title mb-4">
+    <strong>Istanza di riferimento</strong>
+  </h2>
+
+  <div class="row info">
+    <div class="col-12">
+      <p>Soggetto titolare</p>
+      <p class="info-value"> {{ denTitolareIstanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Identificativo istanza</p>
+      <p class="info-value"> {{ istanza?.cod_istanza }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Codice procedimento</p>
+      <p class="info-value"> {{ istanza?.cod_pratica }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Data inserimento</p>
+      <p class="info-value"> {{ istanza?.data_inserimento_istanza | date: 'dd/MM/yyyy' }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize"> {{ istanza?.stato_istanza.descrizione_stato_istanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Numero protocollo</p>
+      <p class="info-value"> {{ istanza?.num_protocollo_istanza }} </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Data protocollo</p>
+      <p class="info-value"> {{ istanza?.data_protocollo_istanza | date: 'dd/MM/yyyy' }} </p>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="dettaglioContainer">
+
+  <form [formGroup]="dettaglioForm">
+    <span class="help-box">
+      <h2 class="title">
+        <strong>Procedimento in corso</strong>
+      </h2>
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('proc_in_corso')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </span>
+
+    <div class="row">
+      <div class="form-group col-xl-4 col-md-6">
+        <label for="esitoProcedura">*Seleziona l'esito del procedimento</label>
+      </div>
+      <div class="form-group col-xl-4 col-md-6">
+        <select class="form-control" name="esitoProcedura" id="esitoProcedura" formControlName="esitoProcedura">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option [ngValue]="esito" *ngFor="let esito of listEsitoProcedura">
+            {{ esito.des_esito_procedimento }}
+          </option>
+        </select>
+        <app-form-error-message [control]="this.dettaglioForm.get('esitoProcedura')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-xl-4 col-md-6">
+        <label for="data">*Seleziona la data di conclusione del procedimento</label>
+      </div>
+      <div class="form-group col-xl-4 col-md-6">
+        <input type="date" class="form-control" id="dataConclProc" formControlName="dataConclProc"/>
+        <app-form-error-message [control]="this.dettaglioForm.get('dataConclProc')"></app-form-error-message>
+      </div> 
+    </div>
+
+    <ng-container *ngIf="showProcStatale">
+      <span class="help-box">
+        <h2 class="title">
+          <strong>Procedimento STATALE</strong>
+        </h2>
+        <button class="btn btn-primary help-btn" (click)="onHelpClicked('proc_statale')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button>
+      </span>
+
+      <div class="row">
+        <div class="form-group col-xl-4 col-md-6">
+          <label for="esitoProcStatale">Seleziona l'esito del procedimento STATALE</label>
+        </div>
+        <div class="form-group col-xl-4 col-md-6">
+          <select class="form-control" name="esitoProcStatale" id="esitoProcStatale" formControlName="esitoProcStatale" [compareWith]="compareEsito">
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option [ngValue]="esito" *ngFor="let esito of listEsitoProceduraStatale">
+              {{ esito.des_esito_procedimento }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="form-group col-xl-4 col-md-6">
+          <label for="statoProcStatale">Seleziona lo stato del procedimento STATALE</label> 
+        </div>
+         <div class="form-group col-xl-4 col-md-6">
+          <select class="form-control" name="statoProcStatale" id="statoProcStatale" formControlName="statoProcStatale">
+            <option [value]="null" class="option-hidden">Seleziona</option>
+            <option [ngValue]="stato" *ngFor="let stato of statiProcStatale">
+              {{ stato.des_estesa_stato_proced_statale }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </ng-container>
+
+    <!-- TEST  +COMPONENTE NOTE -->
+    <scriva-note></scriva-note>
+
+    <div class="row mt-4">
+      <div class="form-group col-md">
+        <label for="notaIstanza">Nota (max 1000 caratteri)</label>
+        <textarea class="form-control" id="notaIstanza" rows="4" formControlName="notaIstanza"></textarea>
+        <app-form-error-message [control]="this.dettaglioForm.get('notaIstanza')"></app-form-error-message>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <button
+          type="button"
+          class="btn add-container"
+          [disabled]="!dettaglioForm.get('notaIstanza').value || !dettaglioForm.get('notaIstanza').valid"
+          (click)="onAggiungiNota()"
+        >
+          <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi nota">
+          <span class="add-text">aggiungi</span>
+        </button>
+      </div>
+    </div>
+  </form>
+  <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+
+  <div class="mt-4" *ngIf="noteTableColumns.length > 0 && noteIstanza.length > 0" id="noteTableCard">
+    <h2 class="title">
+      <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+      <strong>Riepilogo note</strong>
+    </h2>
+    <ngx-datatable
+      class="material"
+      [rows]="noteIstanza"
+      [columns]="noteTableColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [headerHeight]="50"
+      [footerHeight]="10"
+      [rowHeight]="70"
+    ></ngx-datatable>
+  </div>
+</div>
+
+<div class="form-group text-left">
+  <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+    ANNULLA
+  </button>
+</div>
+
+<div class="buttons-container">
+  <button type="button" class="btn btn-large btn-link" (click)="onIndietro()">
+    INDIETRO
+  </button>
+  <button type="button" class="btn btn-large btn-primary" (click)="onConferma()">
+    CONFERMA
+  </button>
+</div>
+
+<!-- ngx-datatable templates -->
+<ng-template #dataTemplate let-row="row" ngx-datatable-cell-template>
+  <span>{{ row.data_nota | date: "dd/MM/yyyy" }}</span>
+</ng-template>
+
+<ng-template #flgRiservataTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox"
+    [checked]="row.ind_visibile === 'BO'"
+    (click)="setNotaRiservataFlag(row.id_nota_istanza, $event.target.checked)"
+  />
+</ng-template>
+
+<ng-template #azioniTemplate let-row="row">
+  <div class="actions">
+    <button class="btn-action" (click)="onRimuoviNota(row.gestUID)" aria-label="elimina">
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+    </button>
+  </div>
+</ng-template>

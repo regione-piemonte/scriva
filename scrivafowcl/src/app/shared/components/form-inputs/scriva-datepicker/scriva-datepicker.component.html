@@ -1,0 +1,175 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- FORM GROUP -->
+<div
+  class="form-group scriva-form-group"
+  [ngClass]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+  [ngStyle]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+>
+  <!-- LABEL -->
+  <scriva-input-label
+    [cssConfig]="cssConfig"
+    [dataConfig]="dataConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [idDOM]="idDOM"
+    [disableRequiredCheck]="disableRequired"
+  ></scriva-input-label>
+
+  <!-- CONTENITORE PER LA INPUT -->
+  <div class="row r-m--0 r-p--0">
+    <!-- COLONNA LABEL DI SINISTRA -->
+    <div
+      class="col-auto r-m--0 r-mr--15 r-p--0"
+      *scrivaMaintain="labelLeftTmpl"
+      [ngClass]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+      [ngStyle]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelLeft"
+      >
+      </scriva-input-label>
+    </div>
+
+    <!-- COLONNA DELLA INPUT -->
+    <div class="col r-m--0 r-p--0">
+      <ng-container *ngTemplateOutlet="scrivaDatepickerTmpl"></ng-container>
+    </div>
+
+    <!-- COLONNA LABEL DI DESTRA -->
+    <div
+      class="col-auto r-m--0 r-ml--15 r-p--0"
+      *scrivaMaintain="labelRightTmpl"
+      [ngClass]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_CLASS
+      "
+      [ngStyle]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_STYLE
+      "
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelRight"
+      >
+      </scriva-input-label>
+    </div>
+  </div>
+
+  <!-- FORM CONTROL - GESTIONE ERRORI -->
+  <scriva-form-control-error
+    [cssConfig]="cssConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [errMapFormControl]="mappaErroriFC"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-control-error>
+  <!-- FORM GROUP - GESTIONE ERRORI -->
+  <scriva-form-group-error
+    [cssConfig]="cssConfig"
+    [formGroup]="formGroup"
+    [errMapFormGroup]="mappaErroriFG"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-group-error>
+</div>
+
+<ng-template #scrivaDatepickerTmpl>
+  <!-- INPUT GROUP -->
+  <div class="input-group">
+    <!-- INPUT -->
+    <input
+      ngbDatepicker
+      readonly
+      #refScrivaDatePicker="ngbDatepicker"
+      class="form-control scriva-input-border scriva-input-calendario-readonly"
+      [id]="idDOM"
+      [name]="idFC"
+      [(ngModel)]="_value"
+      [disabled]="disabled"
+      [placeholder]="dataConfig?.placeholder || 'GG/MM/AAAA'"
+      [ngClass]="[
+        disabled ? 'sid-disabled' : '',
+        cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_CLASS,
+        (cssConfig.showErrorFC &&
+          formControl.invalid &&
+          (formSubmitted || formControl.dirty || formControl.touched)) ||
+        (cssConfig.showErrorFG &&
+          formGroup.invalid &&
+          formErrors &&
+          (formSubmitted || formGroup.dirty || formGroup.touched))
+          ? 'scriva-input-border-error'
+          : '',
+        conditionalClass
+      ]"
+      [ngStyle]="cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+      [footerTemplate]="footerScrivaDatepicker"
+      [minDate]="dataConfig.minDate"
+      [maxDate]="dataConfig.maxDate"
+      (click)="refScrivaDatePicker.toggle()"
+      (dateSelect)="onDateSelect()"
+    />
+    <!-- INPUT CALENDARIO - FOOTER -->
+    <ng-template #footerScrivaDatepicker>
+      <hr class="my-0" />
+      <!-- PULSANTE DI RESET DELL'INPUT -->
+      <button
+        class="btn btn-default btn-sm m-2 float-left"
+        (click)="resetCalendario(); refScrivaDatePicker.close()"
+      >
+        PULISCI
+      </button>
+      <!-- PULSANTE DI CHIUSURA DEL POPUP -->
+      <button
+        class="btn btn-primary btn-sm m-2 float-right"
+        (click)="refScrivaDatePicker.close()"
+      >
+        CHIUDI
+      </button>
+    </ng-template>
+    <!-- INPUT CALENDARIO - APPENDICE CON ICONA -->
+    <div class="input-group-append">
+      <button
+        type="button"
+        class="scriva-appendice-icona-calendario"
+        [ngClass]="{
+          'sid-disabled': disabled,
+          'scriva-input-border-error':
+            (cssConfig.showErrorFC &&
+              formControl.invalid &&
+              (formSubmitted || formControl.dirty || formControl.touched)) ||
+            (cssConfig.showErrorFG &&
+              formGroup.invalid &&
+              formErrors &&
+              (formSubmitted || formGroup.dirty || formGroup.touched))
+        }"
+        [disabled]="disabled"
+        (click)="refScrivaDatePicker.toggle()"
+      >
+        <!-- ICONA CALENDARIO ABILITATA -->
+        <ng-container *ngIf="!disabled">
+          <img [src]="iconCalendar" alt="Calendario" />
+        </ng-container>
+        <ng-container *ngIf="disabled">
+          <img [src]="iconCalendarDisabled" alt="Calendario (disattivato)" />
+        </ng-container>
+      </button>
+    </div>
+  </div>
+</ng-template>

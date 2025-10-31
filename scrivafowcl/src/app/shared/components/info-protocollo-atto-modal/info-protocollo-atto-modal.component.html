@@ -1,0 +1,62 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">{{ modalTitle }}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content" id="content">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="form-group col-md-6">
+        <label for="data">{{ labelData }}</label>
+        <input type="date" class="form-control" id="data" max="{{ today | date: 'yyyy-MM-dd' }}" formControlName="data"/>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="form-group col-md-8">
+        <label for="numero">{{ labelNumero }}</label>
+        <input type="text" class="form-control" id="numero" [maxlength]= "numProtocolloMaxLength" formControlName="numero"/>
+      </div>
+    </div>
+
+    <ng-container *ngIf="type === 'A'">
+      <div class="row">
+        <div class="form-group col-md-8">
+          <label for="data">Titolo</label>
+          <input type="text" class="form-control" id="titolo" [maxlength]= "titoloMaxLength" formControlName="titolo"/>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="form-group col-md-8">
+          <label for="data">Autore</label>
+          <input type="text" class="form-control" id="autore" [maxlength]= "autoreMaxLength" formControlName="autore"/>
+        </div>
+      </div>
+    </ng-container>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <div class="row">
+    <div class="col-md-auto push-left">
+      <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+        ANNULLA
+      </button>
+    </div>
+    <div class="col-md-auto push-right">
+      <button type="button" class="btn btn-large btn-primary" (click)="onConferma()">
+        CONFERMA
+      </button>
+    </div>
+  </div>
+</div>

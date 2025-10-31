@@ -1,0 +1,68 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- TABELLA Riferimenti Procedimento -->
+<div class="card">
+  <h2 class="title">
+    <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+    <strong>Riferimenti procedimento</strong>
+  </h2>
+  <ng-container *ngIf="insertEnabled">
+      <app-advanced-action-responsabile 
+        [isModal]="false"
+        [idIstanza]="istanza.id_istanza"
+        [tipiResponsabile]="tipiResponsabile"
+        [istanzaCompetenzaList]="istanzaCompetenzaList"
+        (emit)="onNewResponsabile($event)"
+      >
+
+      </app-advanced-action-responsabile> 
+  </ng-container>
+  <div class="row">
+    <div class="col">
+      <div class="alert-anchor" [id]="ALERTANCHOR"></div>
+    </div>
+  </div>
+  <ngx-datatable 
+    *ngIf="responsabili?.length>0"
+    class="material"
+    [rows]="responsabili"
+    [columns]="responsabiliColumns"
+    [columnMode]="ColumnMode.force"
+    [reorderable]="false"
+    [scrollbarH]="true"
+    [headerHeight]="80"
+    [footerHeight]="0"
+    rowHeight="auto"
+  ></ngx-datatable>
+</div>
+
+<ng-template #azioniVisibileTemplate let-row="row" ngx-datatable-cell-template>
+    <input type="checkbox"
+    [checked]="row?.flg_riservato"
+    [disabled]="false"
+    (click)="onFlagRiservatoToogle(row)"
+    />
+</ng-template>
+
+<ng-template #azioniTemplate let-row="row" ngx-datatable-cell-template>
+  <div class="row">
+    <div class="actions">
+      <button class="btn-action" (click)="clickOnEditResponsabile(row)" aria-label="modifica">
+        <img src="assets/icon-table-edit.svg" height="20px" alt="Modifica" />
+      </button>
+    </div>  
+    <div class="actions">
+      <button class="btn-action" aria-label="elimina"
+      (click)="clickOnDeleteResponsabile(row)">
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+    </button>
+    </div>  
+  </div>
+</ng-template>

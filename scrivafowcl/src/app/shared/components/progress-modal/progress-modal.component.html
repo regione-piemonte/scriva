@@ -1,0 +1,83 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">Caricamento allegati</h2>
+  <i *ngIf="hideProgressActive" class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content" id="content">
+  <div *ngIf="!(progressList?.length>0)">
+    Siamo in attesa dei primi dati sul caricamento allegati
+  </div>
+  <table *ngIf="progressList?.length>0" class="table">
+    <thead>
+      <tr>
+        <th scope="col" style="width: 20%">
+          Nome file 
+        </th>
+        <th scope="col" style="width: 10%">
+          Size
+        </th>
+        <th scope="col" style="width: 70%">
+          Progress (stimato)
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let progress of progressList; index as i">
+        <tr class="status-{{progress.status}}">
+          <td>
+            {{ progress.name}} 
+            <span style="display: none;">
+              {{ progress | json}} 
+            </span>
+          </td>
+          <td>
+            {{ progress.size | number }} MB
+          </td>
+          <td>
+            <div *ngIf="progress?.status!='error'" class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" 
+              [style.width]="progress.progress+'%'"
+              [class.bg-success] = "progress.progress>99"
+              [class.bg-danger] = "progress.progress<31"
+              [class.bg-warning] = "progress.progress>30 && progress.progress<61"
+              [class.bg-info] = "progress.progress>60 && progress.progress<100"
+              aria-valuemin="0" aria-valuemax="100">{{progress.progress | number: '1.0-0'}}</div>
+            </div>
+          </td>
+        </tr>
+        <tr *ngIf="progress.error">
+          <td colspan="3" style="border:0">
+            <div *ngIf="progress.error" role="alert" class="alert-box {{progress.typeMessage}}">
+              <i class="icon icon-big fa"
+              [class.fa-info-circle] = "progress.typeMessage=='info'"
+              [class.fa-times-circle-o] = "progress.typeMessage=='error'"
+               aria-hidden="true"></i>
+              <span>
+                <p class="text-only">{{ progress.error}}</p>
+              </span>
+            </div>
+          </td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>
+
+<div class="modal-footer">
+  <div class="row">
+    <div class="col-md-auto push-right">
+      <button [disabled]="!hideProgressActive" type="button" class="btn btn-large btn-primary" (click)="onDismiss()">
+        CHIUDI
+      </button>
+    </div>
+  </div>
+</div>

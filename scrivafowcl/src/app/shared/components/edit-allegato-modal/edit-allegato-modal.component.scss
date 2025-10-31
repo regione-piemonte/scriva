@@ -1,0 +1,90 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.modal-header {
+  align-items: center;
+  padding: 16px 20px 10px 30px;
+
+  .modal-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+
+  i {
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+}
+
+.content {
+  padding: 10px 30px 20px 30px;
+  overflow-x: auto;
+
+  form {
+    div.row {
+      align-items: flex-end;
+    }
+
+    .option-hidden {
+      display: none;
+    }
+
+    .checkbox-wrapper {
+      display: flex;
+      align-items: flex-start;
+    
+      input {
+        margin: 4px 10px 0 0;
+        width: 20px;
+        height: 20px;
+        min-width: 20px;
+      }
+    
+      .cbx-riservato {
+        margin: 0 0.5rem 0.5rem 0;
+      }
+    }
+    
+    .title {
+      font-weight: bold;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-top: 20px;
+      margin-bottom: 1rem;
+    }
+
+    .form-control.ng-touched.ng-invalid:not(form) {
+      border: 2px solid #a94442;
+    }
+  }
+}
+
+.modal-footer {
+  display: block;
+  padding: 16px 30px;
+
+  .push-left {
+    margin-right: auto;
+  }
+  
+  .push-right {
+    margin-left: auto;
+  }
+}
+
+.btn-link:focus {
+  box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+}
+
+.container-extra-info {
+  font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  padding-left: 0px;
+  padding-right: 0px;
+}

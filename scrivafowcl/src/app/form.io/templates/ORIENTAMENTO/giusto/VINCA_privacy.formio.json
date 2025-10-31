@@ -1,0 +1,86 @@
+{
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "COD_TIPOLOGIA_OGGETTO",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "PROGETTO"
+      },
+      {
+        "key": "dichiaro_label",
+        "type": "htmlelement",
+        "input": false,
+        "label": "diechiaro_label",
+        "content": "<b>Dichiaro:</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni.dchr_gdpr.des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni.dchr_gdpr.des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "di aver preso visione dell'Informativa sul trattamento dei dati personali (http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf), aggiornata all'art. 13 del GDPR 2016/679, consultabile sul Sito Web Istituzionale (https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via) e sulla Home Page del servizio (http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali)."
+      },
+      {
+        "key": "dichiarazioni.dchr_gdpr.obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni.dchr_gdpr.obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni.dchr_gdpr.check",
+        "type": "checkbox",
+        "input": true,
+        "label": "di aver preso visione dell'<a href=\"http://www.regione.piemonte.it/ambiente/valutazioni_ambientali/dwd/Informativa_privacy_PIVIA.pdf\" target=\"_blank\">Informativa sul trattamento dei dati personali</a>, aggiornata all'art. 13 del GDPR 2016/679, consultabile sul <a href=\"https://www.regione.piemonte.it/web/temi/ambiente-territorio/ambiente/valutazioni-ambientali/valutazione-impatto-ambientale-via\" target=\"_blank\">Sito Web Istituzionale</a> e sulla <a href=\"http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/804-valutazioni-e-adempimenti-ambientali\" target=\"_blank\">Home Page del servizio</a>.",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "defaultValue": false
+      }
+    ]
+  }
+}

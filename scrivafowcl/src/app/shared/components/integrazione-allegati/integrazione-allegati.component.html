@@ -1,0 +1,158 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div id="cardIntegrazioneAllegati" class="card action-group" *ngIf="btn_prosegui_integr">
+  <div style="text-align: right;">
+    <button class="btn btn-primary help-btn" style="margin-right: 1em;" (click)="onHelpClicked('prosegui')" aria-label="help">
+      <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+    </button>
+    <button [disabled]="disabled['btn_prosegui_integr_disabled']" type="button"
+      class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="clickBtn(btn_prosegui_integr)">
+      {{ btn_prosegui_integr.des_oggetto_app }}
+    </button>
+  </div>
+  <div>
+    <h2 class="extended-bottom-margins">Per completare l'operazione</h2>
+    <div class="row extended-bottom-margins">
+      <div class="col-md-8">
+        <h3>1. Scarica e prendi visione dei documenti interessati <button class="btn btn-primary help-btn"
+            (click)="onHelpClicked('download_elenco')" aria-label="help">
+            <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+          </button></h3>
+      </div>
+      <div class="col-md-4 text-right">
+        <button *ngIf="btn_download_elen_integ" [disabled]="disabled['btn_download_elen_integ_disabled']" type="button"
+          class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="clickBtn(btn_download_elen_integ)">
+          {{ btn_download_elen_integ.des_oggetto_app }}
+        </button>
+      </div>
+    </div>
+    <hr>
+
+    <h3>2. Compilare il testo di seguito (facoltativo) per aggigungere del testo libero nella lettera di 
+      trasmissione <button class="btn btn-primary help-btn" (click)="onHelpClicked('testo_lettera')"
+        aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button></h3>
+
+
+    <div class="row">
+      <div class="col-md-12">
+        <form [formGroup]="form" *ngIf="form" id="form">
+          <div class="row py-4">
+            <div class="form-group col-lg-8">
+              <textarea name="nota" id="nota" class="form-control" [formControl]="this.form?.get('nota')" rows="2"
+                style="width: 100%"></textarea>
+              <app-form-error-message [control]="this.form?.get('nota')"></app-form-error-message>
+            </div>
+            <div class="form-group col-lg-4">
+              <button [disabled]="disabled['btn_download_lett_accomp_disabled']"
+              type="button" class="btn btn-link"
+              (click)="this.form?.get('nota').setValue(null)">
+                Pulisci testo
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <h3>3. Scarica la lettera di trasmissione precompilata
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('download_lettera')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </h3>
+    <div class="row extended-bottom-margins">
+      <div class="col-md-12 text-right">
+        <button *ngIf="btn_download_lett_accomp" [disabled]="disabled['btn_download_lett_accomp_disabled']"
+          type="button" class="btn btn-large btn-outline-primary table-btn ml-auto"
+          (click)="clickBtn(btn_download_lett_accomp)">
+          {{ btn_download_lett_accomp.des_oggetto_app }}
+        </button>
+      </div>
+    </div>
+    <hr>
+
+
+    <h3>4. Carica la lettera di trasmissione firmata
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('upload_lettera_firmata')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </h3>
+
+    <div class="row">
+      <div class="col-md-12">
+        In caso di errore nel caricamento della lettera &egrave; possibile eliminare il file caricato ed effettuare
+        nuovamente lo scarico della lettera di trasmissione e procedere con i passaggi sucessivi
+      </div>
+      <div class="col-md-9 extended-bottom-margins">
+        Lettera:
+        <span
+          *ngIf="hasLettera"
+          class="file-name">{{
+          integrazioneIstanzaStatus.jsIntegrazioni.info_lettera_accompagnamento.lettera_accompagnamento.nome_file
+          }}</span>
+        <span
+          *ngIf="!hasLettera"
+          class="file-name">Nessuna lettera caricata</span>
+        <button 
+        *ngIf="hasLettera"
+        class="btn-action"  (click)="onDeleteLettera()"
+          aria-label="elimina lettera di accompagnamento firmata" title="elimina lettera di accompagnamento firmata">
+          <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+        </button>
+      </div>
+      <div class="col-md-3 extended-bottom-margins text-right">
+        <form>
+          <button *ngIf="btn_upload_lett_accomp" [disabled]="disabled['btn_upload_lett_accomp_disabled']" type="button"
+            class="btn btn-large btn-outline-primary table-btn ml-auto"
+            (click)="clickBtn(btn_upload_lett_accomp,fileInputLettAccomp)">
+            {{ btn_upload_lett_accomp.des_oggetto_app }}
+          </button>
+          <input #fileInputLettAccomp type="file" name="uploadedFileLettAccomp" id="uploadedFileLettAccomp" hidden
+            (change)="clickBtn(btn_upload_lett_accomp,fileInputLettAccomp,$event.target.files); $event.target.value = ''" />
+        </form>
+      </div>
+    </div>
+    <hr>
+    <h3>5. Premi conferma per consolidare ed inviare la documentazione
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('conferma_integrazione')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </h3>
+
+    <div class="row">
+      <div class="col-md-12 buttons-container">
+        <button type="button" [disabled]="disabled['btn_annulla_pubblica_disabled']"
+          class="btn btn-large btn-outline-primary table-btn" (click)="onAnnulla()">
+          Annulla
+        </button>
+
+        <button *ngIf="btn_integra_allegati && isRicIntegr" [disabled]="disabled['btn_integra_allegati_disabled']"
+          type="button" class="btn btn-large btn-outline-primary table-btn ml-auto"
+          (click)="clickBtn(btn_integra_allegati)">
+          {{ btn_integra_allegati.des_oggetto_app }}
+        </button>
+        <button *ngIf="btn_perfeziona_allegati && isPerfAllegati"
+          [disabled]="disabled['btn_perfeziona_allegati_disabled']" type="button"
+          class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="clickBtn(btn_perfeziona_allegati)">
+          {{ btn_perfeziona_allegati.des_oggetto_app }}
+        </button>
+        <button *ngIf="btn_integra_allegati_succ && isRicIntegrSucc"
+          [disabled]="disabled['btn_integra_allegati_succ_disabled']" type="button"
+          class="btn btn-large btn-outline-primary table-btn ml-auto" (click)="clickBtn(btn_integra_allegati_succ)">
+          {{ btn_integra_allegati_succ.des_oggetto_app }}
+        </button>
+      </div>
+    </div>
+
+
+
+
+  </div>
+</div>

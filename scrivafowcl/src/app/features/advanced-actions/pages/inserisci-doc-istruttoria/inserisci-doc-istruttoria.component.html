@@ -1,0 +1,95 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<scriva-bread-crumb
+  *ngIf="istanza && scrivaBreadCrumbItems"
+  [items]="scrivaBreadCrumbItems"
+  (emit)="emitEventChild($event)"
+>
+</scriva-bread-crumb>
+
+<!-- TITOLO DELLA PAGINA -->
+<scriva-page-title
+  *ngIf="istanza && titlePage"
+  [title]="titlePage"
+  [showUserInfo]="false"
+></scriva-page-title>
+
+<div class="card" *ngIf="!modeSuccess">
+  <h2 class="title mb-4">
+    <strong>Istanza di riferimento</strong>
+  </h2>
+
+  <div class="row info">
+    <div class="col-xl-12 col-md-6">
+      <p>Soggetto titolare</p>
+      <p class="info-value">{{ denTitolareIstanza }}</p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Identificativo istanza</p>
+      <p class="info-value">{{ istanza?.cod_istanza }}</p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Data inserimento</p>
+      <p class="info-value">
+        {{ istanza?.data_inserimento_istanza | date : 'dd/MM/yyyy - H:mm:ss' }}
+      </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize">
+        {{ istanza?.stato_istanza.descrizione_stato_istanza }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<ng-container *ngIf="!modeSuccess; else modeSuccessTemplate">
+  <div class="card" id="dettaglioContainer">
+    
+    <advanced-action-allegati *ngIf="istanza"
+      [istanza]="istanza"
+      [chiave]="chiave"
+      (emit)="emitEventChild($event)"
+      (onSingleFileUploaded$)="onSingleFileUploaded($event)"
+      (onMultiFileUploaded$)="onMultiFileUploaded($event)"
+      (onAllegatoUpdated$)="onAllegatoUpdated($event)"
+      (onAllegatoDeleted$)="onAllegatoDeleted($event)"
+      (onAllegatiPubblicati$)="onAllegatiPubblicati($event)"
+    ></advanced-action-allegati>
+    
+    <scriva-note
+      [noteIstanza]="noteIstanza"
+      [idIstanza]="idIstanza"
+      (emit)="emitEventChild($event)"
+      (onNotaInserted$)="onNotaInserted($event)"
+      (onNotaDeleted$)="onNotaDeleted($event)"
+    ></scriva-note>
+
+  </div>
+</ng-container>
+
+<advanced-action-footer
+  [showConferma]="registriModificheAttivi"
+  (emit)="emitEventChild($event)"
+></advanced-action-footer>
+
+<!-- Messaggio di succes  della azione avanzata -->
+<ng-template #modeSuccessTemplate>
+  <div class="row s-mt--30">
+    <div class="col">
+      <div class="alert-box success">
+        <i class="icon icon-big fa fa-check-circle-o" aria-hidden="true"></i>
+        <span>
+          <p class="text-only" [innerHTML]="confirmSuccessMessagge"></p>
+        </span>
+      </div>
+    </div>
+  </div>
+</ng-template>

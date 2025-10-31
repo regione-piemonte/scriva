@@ -1,0 +1,31 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="row">
+  <div class="col pn-col-checkbox">
+
+    <!-- CHECKBOX -->
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input pn-checkbox"
+        [id]="idPreferenzaNotifica"
+        [(ngModel)]="checkbox"
+        (change)="checkboxChange(checkbox)"
+      >
+      <label class="form-check-label pn-label" [attr.for]="idPreferenzaNotifica">
+        {{ canaleNotifica?.desCanaleNotifica }}
+      </label>
+
+      <span class="pn-icon">
+        <scriva-icon [icon]="canaleIcon"></scriva-icon>
+      </span>
+    </div>
+
+  </div>
+
+</div>

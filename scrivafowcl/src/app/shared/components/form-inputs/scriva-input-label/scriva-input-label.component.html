@@ -1,0 +1,52 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- LABEL -->
+<label
+  *scrivaRemove="!checkLabel && !checkExtraLabelRight"
+  [attr.for]="idDOM"
+  [ngClass]="[
+    cssConfig.customLabel | scrivaCssHandler : C_C.CSS_TYPE_CLASS,
+    isLabelLeft || isLabelRight ? 's-irl-adjust' : ''
+  ]"
+  [ngStyle]="cssConfig.customLabel | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+  [title]="dataConfig.title"
+>
+  <!-- * PER CAMPO REQUIRE -->
+  <ng-container *scrivaRemove="disableRequired">
+    <span
+      *ngIf="require"
+      [ngStyle]="{ visibility: hideLabel ? 'hidden' : 'visible' }"
+      [innerHTML]="'*'"
+    ></span>
+  </ng-container>
+  <!-- LABEL -->
+  <ng-container *scrivaMaintain="checkLabel">
+    <span
+      [innerHTML]="dataLabel"
+      [ngStyle]="{ visibility: hideLabel ? 'hidden' : 'visible' }"
+    ></span>
+  </ng-container>
+  <!-- TESTO DI AIUTO LATERALE -->
+  <ng-container *scrivaMaintain="checkExtraLabelRight">
+    <span
+      class="s-pl--5 scriva-suggerimento-label ellipsis"
+      [innerHTML]="dataConfig.extraLabelRight"
+      [ngStyle]="{ visibility: hideLabel ? 'hidden' : 'visible' }"
+    ></span>
+  </ng-container>
+</label>
+<!-- TESTO DI AIUTO SOTTOSTANTE -->
+<div
+  *scrivaMaintain="checkExtraLabelSub"
+  class="scriva-suggerimento-container scriva-suggerimento-label"
+  [ngStyle]="{ visibility: hideLabel ? 'hidden' : 'visible' }"
+>
+  <span [innerHTML]="dataConfig.extraLabelSub"></span>
+</div>

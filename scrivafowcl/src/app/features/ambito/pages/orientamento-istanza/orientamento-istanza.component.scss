@@ -1,0 +1,204 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+.page-container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center; problemi con lo stepper
+  justify-content: center;
+}
+
+.heel {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+  &::after {
+    content: '';
+    display: block;
+    position: relative;
+    top: 4px;
+    width: 60px;
+    height: 6px;
+    background-color: #b8191a;
+  }
+}
+
+.bread-crumb {
+  margin-top: 1.375rem;
+  a {
+    color: #006cb4;
+    cursor: pointer;
+  }
+}
+
+.card {
+  padding: 30px;
+  overflow-x: hidden;
+  margin-bottom: 30px;
+  box-shadow: 3px 3px 8px 0 #00000048;
+  form {
+    div.row {
+      align-items: flex-end;
+    }
+    // .form-control.ng-touched.ng-invalid:not(form) {
+    //   border: 2px solid #a94442;
+    // }
+  }
+
+  &.ac-card {
+    @media screen and (max-width: 1000px) {
+      width: 100%;
+    }
+    @media screen and (min-width: 1001px) {
+      width: 66%;
+    }
+  }
+}
+
+.help-text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+form {
+  // margin-bottom: 2rem;
+}
+
+// not working (see .ts for js solution):
+#seleziona_adempimento {
+  h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.option-hidden {
+  display: none;
+}
+
+.row-ac {
+  margin-top: 2rem;
+}
+
+.form-text {
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+:host ::ng-deep .help-btn {
+  padding: 0 6px;
+  background-color: transparent;
+  color: #006cb4;
+  border: transparent;
+  cursor: pointer;
+}
+
+:host ::ng-deep .formio-well {
+  .card {
+    padding: 0;
+    background-color: transparent !important;
+    box-shadow: none;
+    border: none;
+    
+    div[ref='nested-questionWell'] {
+      display: flex;
+    }
+  }
+}
+
+:host ::ng-deep .field-required:after {
+  content: none;
+}
+:host ::ng-deep .field-required:before {
+  color: black;
+  content: '*';
+}
+
+:host ::ng-deep .form-check {
+  padding-left: 1.85rem;
+}
+:host ::ng-deep .form-radio {
+  .form-check {
+    padding-left: 1.25rem;
+  }
+}
+
+:host ::ng-deep .form-check-input[type='checkbox'] {
+  margin-left: -2.3rem;
+}
+
+:host ::ng-deep input[type='checkbox'] {
+  height: 20px;
+  width: 20px;
+}
+
+:host ::ng-deep .formio-component-dich-orientamento {
+  div[ref='nested-dich-orientamento'] {
+    display: flex;
+    .gdpr {
+      padding-left: 6px;
+    }
+  }
+}
+
+/**
+ * Vado a modificare la classe di stile interna per gestire un errore grafico della libreria dove non colora di grigetto le select.
+ * @jira SCRIVA-1446
+ */
+:host ::ng-deep div[disabled] {
+  background-color: #e9ecef; // #EBEBE4;
+}
+
+:host ::ng-deep .formio-error-wrapper {
+  padding: 0;
+  background-color: transparent;
+}
+
+:host ::ng-deep .editRow {
+  color: #006cb4;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border: none;
+  }
+  i {
+    font-size: 1.3333333333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+}
+
+:host ::ng-deep .removeRow {
+  color: #c01c1c;
+  background-color: transparent;
+  border: none;
+  &:hover {
+    background-color: transparent;
+    border: none;
+  }
+  i {
+    font-size: 1.5em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+  }
+}

@@ -1,0 +1,242 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<div class="card col-xl-12" id="containerUploadDocumenti">
+    <span class="help-box">
+      <ng-container *ngIf="helpListLoaded">
+        <span [innerHTML]="getHelpBannerText('Intestazione_quadro_1')"></span>
+        <button class="btn btn-primary help-btn" (click)="onHelpClicked('testo_iniziale')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button>
+      </ng-container>
+    </span>
+    
+    <span class="help-box">      
+      <ng-container *ngIf="helpBannerTextShow  && acceptedFileTypes">
+        <span>{{helpTestoFormatoFile + ' '}}</span>      
+        <strong>{{acceptedFileTypes}}</strong>; peso massimo: <strong>{{maxFileSize}} MB</strong>
+      </ng-container>
+    </span>
+    
+    <span class="help-box">
+      <ng-container *ngIf="helpListLoaded">
+        <span [innerHTML]="getHelpBannerText('Intestazione_quadro_2')"></span>
+      </ng-container>        
+    </span>
+
+  <div class="alert-box warning" *ngIf="showAlertBanner">
+    <i class="icon icon-big fa fa-exclamation-circle" aria-hidden="true"></i>
+    <span>
+      <p class="text-only" [innerHTML]="alertText"></p>
+    </span>
+  </div>
+
+  <form [formGroup]="formAllegati" *ngIf="formAllegati" id="formAllegati">
+    <div class="row pt-4">
+      <div class="form-group col-lg-4">
+        <label for="categoria"><span *ngIf="setAsterisk"> * </span>Categoria allegato</label>
+        <select
+          [formControl]="formAllegati?.get('categoria')"
+          id="categoria"
+          class="form-control"
+          (change)="onChangeCategoria()"
+          [compareWith]="compareCategoria"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of categorie" [ngValue]="item">
+            {{ item.des_categoria_allegato }}<span *ngIf="item?.flg_obbligo"> * </span>
+          </option>
+        </select>
+        <app-form-error-message [control]="this.formAllegati?.get('categoria')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <div class="form-group col-lg-4">
+        <label for="tipologia"><span *ngIf="setAsterisk"> * </span> Tipologia allegato </label>
+        <select
+          [formControl]="formAllegati?.get('tipologia')"
+          id="tipologia"
+          class="form-control"
+          (change)="onChangeTipologia()"
+          [compareWith]="compareTipologia"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of tipiAllegato" [ngValue]="item">
+            {{ item.tipologia_allegato.des_tipologia_allegato }}<span *ngIf="item?.flg_obbligo"> * </span>
+          </option>
+        </select>
+        <app-form-error-message [control]="this.formAllegati?.get('tipologia')"></app-form-error-message>
+      </div>
+
+      <div *ngIf="!isFrontOffice" class="form-group col-lg-4 checkbox-wrapper">
+        <input class="cbx-riservato" type="checkbox" id="riservato" [formControl]="this.formAllegati?.get('riservato')"/>
+        <label for="riservato"> Documento ad accesso riservato </label>
+        <button class="btn btn-primary help-btn" (click)="onHelpClicked('flg_riservato')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button>
+        <app-form-error-message [control]="this.formAllegati?.get('riservato')"></app-form-error-message>
+      </div>
+    </div>
+    <div *ngIf="oggAppBtnProtocolla">
+      <h2 class="card-title" role="alert">
+        <strong>Dati di protocollazione</strong>
+      </h2>
+      <div class="row" style="align-items: flex-start">
+        <div class="form-group col">
+          <label for="data">Data di protocollo</label>
+          <input onkeydown="return false" type="date" class="form-control" id="data" [formControl]="this.formAllegati?.get('dataProtocolloAllegato')" max="{{ today | date: 'yyyy-MM-dd' }}"/>
+          <app-form-error-message [control]="formAllegati?.get('dataProtocolloAllegato')"></app-form-error-message>
+        </div>
+        <div class="form-group col">
+          <label for="numero">Numero di protocollo</label>
+          <input type="text" class="form-control" id="numero" [maxlength]="numProtocolloMaxLength" [formControl]="this.formAllegati?.get('numProtocolloAllegato')"/>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row pt-4" *ngIf="!isFrontOffice">
+      <div class="form-group col-md-auto">
+        <button
+          type="button"
+          class="btn btn-large btn-outline-primary"
+          [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK || !disableBtnRiferimentiAtto || additionalInfo?.atto"
+          (click)="onInserisciRiferimentiAtto()"
+        >
+          INSERISCI RIFERIMENTO ATTO
+        </button>
+      </div>
+    </div>
+        
+    <div *ngIf="additionalInfo?.atto" class="additional-info-riepilogo">
+      <h2 class="card-title" role="alert">
+        <strong>Dati di riferimento atto</strong>
+      </h2>
+      <div class="row">
+        <div class="col">
+          <strong>Data</strong>
+        </div>
+        <div class="col ">
+          <strong>Numero</strong>
+        </div>
+        <div class="col">
+          <strong>Azioni</strong>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          {{additionalInfo.atto.data | date: 'dd MMM yyyy' }}
+        </div>
+        <div class="col">
+          {{additionalInfo.atto.numero}}
+        </div>
+        <div class="col">
+          <button class="btn-action"
+            [disabled]="readonlyAllegati"
+            (click)="onInserisciRiferimentiAtto()"
+            aria-label="modifica"
+          >
+            <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica"/>
+          </button>
+          <button class="btn-action"
+            [disabled]="readonlyAllegati"
+            (click)="onDeleteRiferimentiAtto()"
+            aria-label="elimina"
+          >
+            <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-4">
+      <div class="form-group col-lg-8">
+        <label for="nota">
+          Nota/Motivazione documento (max {{ maxNote }} caratteri)
+          <span *ngIf="tipologiaSelezionata?.flg_nota"> * </span>
+        </label>
+        <button class="btn btn-primary help-btn" (click)="onHelpClicked('nota_motivo')" aria-label="help">
+          <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+        </button>
+        <textarea
+          name="nota"
+          id="nota"
+          class="form-control"
+          [formControl]="this.formAllegati?.get('nota')"
+          rows="5"
+          style="width: 100%"
+          maxlength="{{ maxNote }}"
+        ></textarea>
+
+        <app-form-error-message
+          [control]="this.formAllegati?.get('nota')"
+        ></app-form-error-message>
+      </div>
+    </div>
+  </form>
+
+  <div class="row"
+    *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE ||
+      attoreGestioneIstanza === gestioneEnum.WRITE_LOCK ||
+      attoreGestioneIstanza === codQuadro"
+  >
+    <div class="form-group col-md-auto">
+      <span>
+        <button
+          type="button"
+          class="btn btn-large btn-outline-primary"
+          [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK || readonlyAllegati"
+          (click)="onInserisciAllegato(fileInput)"
+        >
+          CARICA DOCUMENTO
+        </button>
+        <input
+          #fileInput
+          type="file"
+          name="uploadedFile"
+          id="uploadedFile"
+          multiple
+          accept="{{ acceptedFileTypes }}"
+          hidden
+          (change)="inserisciAllegato($event.target.files); $event.target.value = ''"
+        />
+      </span>
+    </div>
+    <div class="form-group col-md-auto">
+      <button
+        type="button"
+        class="btn btn-large btn-link"
+        [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK || readonlyAllegati"
+        (click)="annullaInserisciAllegato()"
+      >
+        ANNULLA
+      </button>
+    </div>
+  </div>
+</div>
+
+<app-card-riepilogo-allegati *ngIf="rows?.length > 0"
+  [allegati]="rows"
+  [oggAppBtnPubblica]="oggAppBtnPubblica"
+  [oggAppBtnProtocolla]="oggAppBtnProtocolla"
+  [istanza]="istanza"
+  [isFrontOffice]="isFrontOffice"
+  [codQuadro]="codQuadro"
+  [readonlyAllegati]="readonlyAllegati"  
+  (emit)="emitEventChild($event)"
+></app-card-riepilogo-allegati>
+
+<app-integrazione-allegati
+  *ngIf="istanza && isFrontOffice"
+  [istanza]="istanza"
+></app-integrazione-allegati>
+
+

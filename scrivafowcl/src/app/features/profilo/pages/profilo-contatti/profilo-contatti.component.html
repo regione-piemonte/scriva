@@ -1,0 +1,63 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="container-fluid profilo-section-container s-plr--0">
+    
+  <div class="row profilo-section-row">
+    <div class="col">
+      <div class="card profilo-section-card">
+        <form [formGroup]="pcForm">
+          
+          <!-- EMAIL -->
+          <scriva-profilo-dato-utente
+            [formControlName]="P_C.FC_EMAIL"
+            [form]="pcForm"
+            [idFormControl]="P_C.FC_EMAIL"
+            [label]="PC_C.LABEL_EMAIL"
+            [icon]="'fa-envelope-o'"
+            [actions]="PC_C.ACTIONS_EMAIL"
+            (onActionClick)="onActionClick($event)"
+          ></scriva-profilo-dato-utente>
+
+          <!-- <hr> -->
+          
+          <!-- TELEFONO -->
+          <!-- <scriva-profilo-dato-utente
+            [formControlName]="P_C.FC_TELEFONO"
+            [form]="pcForm"
+            [idFormControl]="P_C.FC_TELEFONO"
+            [label]="PC_C.LABEL_TELEFONO"
+            [icon]="'fa-phone'"
+            [actions]="PC_C.ACTIONS_TELEFONO"
+            (onActionClick)="onActionClick($event)"
+          ></scriva-profilo-dato-utente> -->
+          
+          <hr>
+
+          <!-- TERMINI_CONDIZIONI_USO -->
+          <scriva-profilo-dato-utente
+            [labelOnly]="true"
+            [label]="PC_C.LABEL_TERMINI_CONDIZIONI_USO"
+            [icon]="'fa-file-text-o'"
+            [actions]="PC_C.ACTIONS_TERMINI_CONDIZIONI_USO"
+            (onActionClick)="onActionClick($event)"
+          ></scriva-profilo-dato-utente>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row profilo-section-row s-mt--30">
+    <div class="col">
+      <div class="alert-anchor" [id]="PC_C.ALERT_ANCHOR"></div>
+    </div>
+  </div>
+
+</div>

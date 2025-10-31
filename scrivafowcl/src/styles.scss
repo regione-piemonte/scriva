@@ -1,0 +1,838 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+/* You can add global styles to this file, and also import other style files */
+// @import '~bootstrap/scss/bootstrap.scss';
+$fa-font-path: '../node_modules/font-awesome/fonts';
+@import '~font-awesome/scss/font-awesome';
+
+// ngx-datatable style
+@import '~@swimlane/ngx-datatable/index.css';
+@import '~@swimlane/ngx-datatable/themes/material.scss';
+@import '~@swimlane/ngx-datatable/assets/icons.css';
+
+.ngx-datatable {
+  &.material {
+    // box-shadow: none;
+
+    .datatable-header {
+      .datatable-header-cell {
+        white-space: normal;
+        display: flex;
+        align-items: center;
+        max-height: 55px;
+
+        .datatable-header-cell-template-wrap {
+          height: inherit;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          .datatable-header-cell-wrapper {
+            color: black;
+            font-size: 1rem;
+            font-weight: bold;
+            white-space: normal;
+          }
+
+          .sort-btn {
+            font-size: 1.1rem;
+            color: #006cb4;
+            position: absolute;
+            top: 42%;
+            right: 0;
+          }
+
+          .datatable-icon-sort-unset::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    // set max 2 lines with ellipsis
+    .datatable-body {
+      .datatable-row-wrapper {
+        .datatable-body-row {
+          .datatable-body-cell {
+            span {
+              max-width: 200px;
+              -webkit-box-orient: vertical;
+              overflow-wrap: break-word;
+              display: block;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+      }
+    }
+
+     .datatable-body {
+      .datatable-row-wrapper {
+        .datatable-body-row {
+          .datatable-body-cell {
+            .datatable-body-cell-label {
+              max-width: 200px;
+              -webkit-box-orient: vertical;
+              overflow-wrap: break-word;
+              display: block;
+              -webkit-line-clamp: 2;
+              line-clamp: 2;
+              text-overflow: ellipsis;
+
+              // span {
+              //   max-width: 200px;
+              //   -webkit-box-orient: vertical;
+              //   overflow-wrap: break-word;
+              //   display: block;
+              //   -webkit-line-clamp: 2;
+              //   line-clamp: 2;
+              //   overflow: hidden;
+              //   text-overflow: ellipsis;
+              // }
+            }
+          }
+        }
+      }}
+
+    .datatable-footer {
+      .page-count {
+        display: none;
+      }
+    }
+  }
+}
+
+.datatable-body {
+  height: auto !important;
+}
+
+.disabled {
+  pointer-events: none !important;
+  cursor: default;
+  img {
+    filter: grayscale(1);
+  }
+}
+
+// font Open Sans
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+// SCRIVA-1041
+.refresh_message {
+  animation: blinker 1.7s cubic-bezier(0.5, 0, 1, 1) infinite alternate;
+}
+@keyframes blinker {
+  to {
+    opacity: 0;
+  }
+}
+
+// Messages style
+.alert-box {
+  display: flex;
+  align-items: flex-start;
+  opacity: 1;
+  transition: opacity 5s cubic-bezier(0.98, 0.01, 1, 0.38);
+  padding: 22px 38px;
+  position: relative;
+
+  // SCRIVA-1041
+  i.close {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  i.icon-big {
+    font-size: 2rem !important;
+    // margin: 12px;
+  }
+
+  span {
+    margin-left: 20px;
+
+    p:last-of-type {
+      margin: 0;
+    }
+
+    p.text-only {
+      margin-top: 4px;
+    }
+  }
+
+  &.success {
+    background-color: #dff0d9;
+    border-left: 8px solid #61b87a;
+    i {
+      color: #61b87a;
+    }
+  }
+
+  &.error {
+    background-color: #fee7e8;
+    border-left: 8px solid #f41622;
+    i {
+      color: #f41622;
+    }
+  }
+
+  &.info {
+    background-color: #dbeef7;
+    border-left: 8px solid #006cb4;
+    i {
+      color: #006cb4;
+    }
+  }
+
+  &.warning {
+    background-color: #fdf9e5;
+    border-left: 8px solid #f8e60d;
+    i {
+      color: #f8e60d;
+    }
+  }
+}
+
+.mg-bt-20 {
+  margin-bottom: 20px;
+}
+
+// color constants
+$primary-color: #006cb4;
+$success-color: #28a745;
+$color-white: #fff;
+$color-disabled: #6c757d;
+$colos-pressed: #213366;
+$colo-accordion: #eaeaea;
+
+.scriva-blue {
+  color: $primary-color;
+}
+
+.scriva-accordion {
+  background-color: $colo-accordion;
+  padding: 30px;
+}
+
+// bootstrap-style-override
+.btn {
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+.btn-large {
+  font-size: 1rem;
+}
+
+.btn-outline-primary {
+  color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    color: $color-white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+
+  &:disabled {
+    color: $color-white;
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    color: $colos-pressed;
+    background-color: $color-white;
+    border-color: $colos-pressed;
+  }
+}
+
+.btn-primary {
+  color: $color-white;
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover {
+    color: $primary-color;
+    background-color: $color-white;
+    border-color: $primary-color;
+  }
+
+  &:disabled {
+    color: $color-white;
+    background-color: $color-disabled;
+    border-color: $color-disabled;
+  }
+
+  &:not(:disabled):not(.disabled):active {
+    color: $colos-pressed;
+    background-color: $color-white;
+    border-color: $colos-pressed;
+  }
+}
+
+.btn-success:hover {
+  color: $success-color;
+  background-color: $color-white;
+  border-color: $success-color;
+}
+
+.btn-link {
+  color: $primary-color;
+  padding: 6px 0;
+
+  &:hover {
+    color: $primary-color;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+  }
+}
+
+.btn-cerca {
+  width: 5.25rem;
+}
+
+.btn-prosegui {
+  width: 7.5rem;
+}
+
+.btn-avanti {
+  width: 6.125rem;
+}
+
+.btn-action {
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgb(38 143 255 / 50%);
+  }
+}
+
+.help-btn {
+  padding: 0 6px;
+  background-color: transparent;
+  color: #006cb4;
+  border: transparent;
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.form-control {
+  font-size: 0.875rem;
+}
+
+label {
+  font-size: 0.875rem;
+}
+
+/* FORM.IO CUSTOM CLASSES */
+
+// step riepilogo
+.table-custom-class {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+
+  i {
+    font-size: 1.8rem;
+  }
+
+  .editgrid-listgroup {
+    min-width: fit-content;
+
+    .list-group-item {
+      border-left: 0;
+      border-right: 0;
+      padding: 0.75rem 0;
+
+      .has-error {
+        display: none;
+      }
+
+      .row {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+
+        div {
+          //min-width: 150px;
+          max-width: 200px;
+          -webkit-box-orient: vertical;
+          overflow-wrap: break-word;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+          strong {
+            text-overflow: ellipsis;
+            overflow-x: hidden;
+          }
+        }
+      }
+    }
+
+    .list-group-item:first-child {
+      border-top: 0;
+    }
+
+    // .list-group-item:last-child {
+    //   border-bottom-right-radius: 0;
+    //   border-bottom-left-radius: 0;
+    // }
+  }
+}
+
+input[type='checkbox'] {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.card {
+  box-shadow: 3px 3px 8px 0 #00000048;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.alert-anchor {
+  width: 100%;
+  height: 1px;
+}
+
+/**
+ * #######################################
+ * PROGRAMMAZIONE CSS CON CLASSI DINAMICHE
+ * #######################################
+ */
+
+$sizes: (
+  a: auto,
+  0: 0px,
+  10: 10px,
+  15: 15px,
+  20: 20px,
+  30: 30px,
+  40: 40px,
+  50: 50px,
+);
+
+/**
+ * #####################
+ * COMMON MARGIN SPACING
+ * #####################
+ */
+
+@each $sizeValue, $size in $sizes {
+  /** Margini normali */
+  .s-m--#{$sizeValue} {
+    margin: $size;
+  }
+
+  .s-mt--#{$sizeValue} {
+    margin-top: $size;
+  }
+
+  .s-mr--#{$sizeValue} {
+    margin-right: $size;
+  }
+
+  .s-mb--#{$sizeValue} {
+    margin-bottom: $size;
+  }
+
+  .s-ml--#{$sizeValue} {
+    margin-left: $size;
+  }
+
+  .s-mtb--#{$sizeValue} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+
+  .s-mlr--#{$sizeValue} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+
+  /** Margini important */
+  .s-mi--#{$sizeValue} {
+    margin: $size !important;
+  }
+
+  .s-mti--#{$sizeValue} {
+    margin-top: $size !important;
+  }
+
+  .s-mri--#{$sizeValue} {
+    margin-right: $size !important;
+  }
+
+  .s-mbi--#{$sizeValue} {
+    margin-bottom: $size !important;
+  }
+
+  .s-mli--#{$sizeValue} {
+    margin-left: $size !important;
+  }
+
+  .s-mtbi--#{$sizeValue} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+
+  .s-mlri--#{$sizeValue} {
+    margin-left: $size !important;
+    margin-right: $size !important;
+  }
+}
+
+/**
+ * ######################
+ * COMMON PADDING SPACING
+ * ######################
+ */
+
+@each $sizeValue, $size in $sizes {
+  .s-p--#{$sizeValue} {
+    padding: $size;
+  }
+
+  .s-pt--#{$sizeValue} {
+    padding-top: $size;
+  }
+
+  .s-pr--#{$sizeValue} {
+    padding-right: $size;
+  }
+
+  .s-pb--#{$sizeValue} {
+    padding-bottom: $size;
+  }
+
+  .s-pl--#{$sizeValue} {
+    padding-left: $size;
+  }
+
+  .s-ptb--#{$sizeValue} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+
+  .s-plr--#{$sizeValue} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+}
+
+/**
+ * ############################################
+ * CLASSI DI STILE PER LA GESTIONE DELLE MODALI
+ * ############################################
+ */
+
+.scriva-modal-header,
+.scriva-modal-body {
+  padding-left: 30px !important;
+}
+
+.scriva-modal-title {
+  font-size: 20px !important;
+}
+
+.scriva-btn-x:focus {
+  outline: none !important;
+}
+
+.scriva-modal-body {
+  padding-right: 30px !important;
+}
+
+.scriva-modal-footer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* ################################# */
+/* STYLE CONDIVISI PER LE INPUT FORM
+/* ################################# */
+
+.scriva-input-border {
+  border-color: #dee2e6;
+}
+
+.scriva-input-border-error {
+  border-color: red !important;
+}
+
+.scriva-text-error {
+  color: red !important;
+}
+
+/* ####################### */
+/* CHECKBOX - RADIO BUTTON
+/* ####################### */
+
+.scriva-form-group {
+  margin-bottom: 0px;
+}
+
+.scriva-checkbox,
+.scriva-radio {
+  width: 20px;
+  height: 20px;
+}
+
+.scriva-checkbox-v,
+.scriva-radio-v {
+  margin-top: 0px !important;
+  margin-left: 0px !important;
+}
+
+/* ########### */
+/* INPUT LABEL
+/* ########### */
+
+.scriva-suggerimento-label {
+  font: normal normal normal 9px/0px Open Sans;
+  letter-spacing: 0px;
+  color: #000000de;
+  opacity: 1;
+}
+
+.scriva-suggerimento-container {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+/* #################### */
+/* INPUT CHECKBOX/RADIO
+/* #################### */
+
+.scriva-input-label-checkbox,
+.scriva-input-label-radio {
+  font: normal normal normal 14px/19px Open Sans;
+  letter-spacing: 0.16px;
+  color: #000000;
+  opacity: 1;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: none !important;
+  outline: none !important;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:focus-visible {
+    outline: none !important;
+  }
+}
+
+.scriva-input-label-checkbox-v,
+.scriva-input-label-radio-v {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.scriva-input-label-checkbox-v div,
+.scriva-input-label-radio-v div {
+  margin-left: 30px;
+}
+
+.scriva-input-border-error-checkbox,
+.scriva-input-border-error-radio {
+  outline: red auto 1px;
+}
+
+.scriva-input-textarea-standard {
+  height: 68px !important;
+}
+
+/**
+ * #############################
+ * FORM AND COMPONENT COMMON CSS
+ * #############################
+ */
+
+/* 
+ * Viene considerato un margin di 40px per ogni x<SIZE> calcolato come: <SIZE - 1>
+ * Quindi: quantità 40px per x2 = x(2 - 1) = 1
+ * Quindi: quantità 40px per x3 = x(3 - 1) = 2
+ * etc...
+ */
+$scriva-size-small: 133px;
+$scriva-size-small-x2: 306px;
+$scriva-size-small-x3: 479px;
+$scriva-size-standard: 279px;
+$scriva-size-standard-x2: 598px;
+$scriva-size-standard-x3: 917px;
+
+.scriva-input-datepicker-sm {
+  width: 96px;
+  max-width: 96px;
+}
+
+.scriva-input-small {
+  width: $scriva-size-small;
+}
+
+.scriva-col-small {
+  flex: 0 0 $scriva-size-small;
+}
+
+.scriva-input-small-x2 {
+  width: $scriva-size-small-x2;
+}
+
+.scriva-input-small-x3 {
+  width: $scriva-size-small-x3;
+}
+
+.scriva-container-standard,
+.scriva-input-standard {
+  width: $scriva-size-standard;
+}
+
+.scriva-col-standard {
+  flex: 0 0 $scriva-size-standard;
+}
+
+.scriva-input-standard-x2 {
+  width: $scriva-size-standard-x2;
+}
+
+.scriva-col-standard-x2 {
+  flex: 0 0 $scriva-size-standard-x2;
+}
+
+.scriva-container-standard-x3,
+.scriva-input-standard-x3 {
+  width: $scriva-size-standard-x3;
+}
+
+.scriva-col-standard-x3 {
+  flex: 0 0 $scriva-size-standard-x3;
+}
+
+.scriva-input-full {
+  width: 100%;
+}
+
+.scriva-suggerimento-container {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.scriva-input-content-standard,
+.scriva-input-content-small,
+.scriva-input-datepicker-sm {
+  font: normal normal normal 13px/19px Open Sans;
+  letter-spacing: -0.06px;
+  color: #212529;
+  opacity: 1;
+}
+
+.scriva-input-label-standard,
+.scriva-input-label-small,
+.scriva-checkbox-label-standard {
+  font: normal normal normal 14px/19px Open Sans;
+  letter-spacing: -0.07px;
+  color: #212529;
+}
+
+.hidescrollbar {
+  overflow: hidden;
+}
+
+.no-placeholder-on-focus:focus::placeholder {
+  color: transparent;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.display-none {
+  display: none;
+}
+
+.cancellato {
+  color: #cccccc;
+}
+
+.riga-selezionata {
+  background-color: #e5f5ff;
+}
+
+/**
+ * #####################
+ * CUSTOMIZZAZIONE MODAL
+ * #####################
+ */
+
+.scriva-dettaglio-progetto .modal-dialog {
+  $sdpModalSize: 1400px;
+  max-width: none;
+  width: $sdpModalSize;
+
+  @media (max-width: $sdpModalSize) {
+    width: 100%;
+  }
+}
+
+.formio-fieldset-check-input {
+  margin-left: 7px;
+}
+
+// tippy è la libreria dei tooltip di formio, c'è un bug grafico
+
+.tippy-content {
+  background-color: #333;
+  color: #fff;
+  border-radius: 4px;
+  line-height: 1.4;
+  font: 14px 'Helvetica', 'sans-serif';
+  padding: 5px 9px;
+  z-index: 1;
+}
+
+.tippy-arrow {
+  background-color: #333;
+  visibility: visible;
+  z-index: 10000;
+  inset: 0px auto auto 0px;
+  margin: 0px;
+}

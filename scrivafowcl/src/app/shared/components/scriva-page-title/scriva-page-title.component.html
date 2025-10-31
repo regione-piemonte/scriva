@@ -1,0 +1,30 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<ng-container *scrivaMaintain="showUserInfo">
+  <div id="pageTitle" class="spt-page-title"
+    [ngClass]="customContainer | scrivaCssHandler:C_C.CSS_TYPE_CLASS"
+    [ngStyle]="customContainer | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+  >
+    <h1 class="heel" [attr.aria-label]="pageTitle">
+      {{ pageTitle }}
+    </h1>
+  </div>
+</ng-container>
+
+<ng-container *scrivaMaintain="!showUserInfo">
+  <div id="pageTitle"
+    [ngClass]="customContainer | scrivaCssHandler:C_C.CSS_TYPE_CLASS"
+    [ngStyle]="customContainer | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+  >
+    <h1 class="heel" [attr.aria-label]="pageTitle">
+      {{ pageTitle }}
+    </h1>
+  </div>
+</ng-container>

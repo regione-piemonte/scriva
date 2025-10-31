@@ -1,0 +1,274 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<span id="operaContainer">
+  <app-oggetti-search
+    *ngIf="configOggetto?.ricerca_oggetto"
+    [actions$]="actionsOggettiSearch$"
+    [enabled]="this.attoreGestioneIstanza === this.gestioneEnum.WRITE"
+    [helpList]="helpList"
+    [idIstanza]="idIstanza"
+    [idSoggetti]="idSoggettiList"
+    [province]="province"
+    [qdrOggettoConfig]="configOggetto"
+    [configTipologiaOggetto]="configTipologiaOggetto"
+    (oggettiSearchEmitter)="search($event)"
+  ></app-oggetti-search>
+
+  <div
+    class="card"
+    *ngIf="opereList.length > 0 && searchResultsColumns.length > 1"
+    id="searchTableCard"
+  >
+    <span class="help-box">
+      <h2 class="card-title">
+        <span [innerHTML]="getHelpBannerText('risultati_ricerca')"></span>
+      </h2>
+    </span>
+    <ngx-datatable
+      class="material"
+      [rows]="opereList"
+      [columns]="searchResultsColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="selectedOpere"
+      [scrollbarV]="true"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [headerHeight]="50"
+      [footerHeight]="10"
+      [rowHeight]="70"
+      (select)="selectOpere($event)"
+    ></ngx-datatable>
+    <div>
+      <button
+        class="btn btn-large btn-outline-primary"
+        (click)="onAssocia()"
+        *ngIf="
+          attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+        "
+        [disabled]="
+          !selectedOpere ||
+          selectedOpere.length === 0 ||
+          (opereIstanza?.length > 0 &&
+            opereSelection === numerazione.SINGOLO) ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+        "
+      >
+        ASSOCIA A ISTANZA
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="card"
+    *ngIf="
+      associazioniOggettoIstanza?.length > 0 && associazioniColumns.length > 1
+    "
+    id="associazioniTableCard"
+  >
+    <span class="help-box">
+      <h2 class="card-title">
+        <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+        <span [innerHTML]="getHelpBannerText('oggetti_associati')"></span>
+      </h2>
+    </span>
+    <ngx-datatable
+      class="material"
+      [rows]="associazioniOggettoIstanza"
+      [columns]="associazioniColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="tableSelect"
+      [virtualization]="false"
+      [headerHeight]="50"
+      [footerHeight]="10"
+      [rowHeight]="70"
+      (select)="selectOperaAssociata($event)"
+    ></ngx-datatable>
+    <div *ngIf="showGeoRefBtn">
+      <button
+        class="btn btn-large btn-outline-primary"
+        style="width: 9.375rem"
+        [disabled]="disableGeoRefBtn"
+        (click)="georeferisci(true)"
+      >
+        GEOREFERISCI
+      </button>
+    </div>
+  </div>
+
+  <button
+    class="btn add-container"
+    (click)="addNew()"
+    *ngIf="
+      !showOperaForm &&
+      !(opereSelection === numerazione.SINGOLO && opereIstanza?.length > 0) &&
+      (attoreGestioneIstanza === gestioneEnum.WRITE ||
+        attoreGestioneIstanza === gestioneEnum.WRITE_LOCK)
+    "
+    [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+  >
+    <img
+      src="assets/icon-page-add.svg"
+      class="add-icon"
+      alt="Inserisci nuovo progetto"
+    />
+    <span class="add-text">inserisci nuovo</span>
+  </button>
+
+  <div
+    class="card no-padding"
+    id="operaFormCard"
+    *ngIf="showOperaForm && operaEdit"
+  >
+    <app-opera-form
+      [operaEdit]="operaEdit"
+      [componente]="componente"
+      [attoreGestioneIstanza]="attoreGestioneIstanza"
+      [idAdempimento]="idAdempimento"
+      [codTipoAdempimento]="codTipoAdempimento"
+      [configOggetto]="configOggetto"
+      [province]="province"
+      [tipologieOggetto]="tipologieOggetto"
+      [helpList]="helpList"
+      [disableBtn]="disableBtn"
+      [comuneSingolo]="comuneSingolo"
+      [showGeoRefBtn]="showGeoRefBtn"
+      [showViaconvinca]="showViaconvinca"
+      (dismiss)="onDismissForm()"
+      (closeEvent)="onCloseForm($event)"
+    >
+    </app-opera-form>
+  </div>
+</span>
+
+<!-- #region ngx-datatable templates -->
+<ng-template
+  #checkboxHeaderTemplate
+  ngx-datatable-header-template
+  let-value="value"
+  let-allRowsSelected="allRowsSelected"
+  let-selectFn="selectFn"
+>
+  <ng-container *ngIf="opereSelection === numerazione.MULTIPLO">
+    <input
+      type="checkbox"
+      [checked]="allRowsSelected"
+      (change)="selectFn(!allRowsSelected)"
+    />
+  </ng-container>
+</ng-template>
+<ng-template
+  #checkboxColTemplate
+  ngx-datatable-cell-template
+  let-value="value"
+  let-isSelected="isSelected"
+  let-onCheckboxChangeFn="onCheckboxChangeFn"
+>
+  <input
+    type="checkbox"
+    [checked]="isSelected"
+    (change)="onCheckboxChangeFn($event)"
+  />
+</ng-template>
+
+<ng-template #comuneTemplate let-row="row" ngx-datatable-cell-template>
+  <span [attr.title]="buildComuniList(row.ubicazione_oggetto)">
+    {{ buildComuniList(row.ubicazione_oggetto) }}
+  </span>
+</ng-template>
+<ng-template #ubicazioneTemplate let-row="row" ngx-datatable-cell-template>
+  <span [attr.title]="buildUbicazioneList(row.ubicazione_oggetto)">
+    {{ buildUbicazioneList(row.ubicazione_oggetto) }}
+  </span>
+</ng-template>
+<ng-template
+  #praticheCollegateTemplate
+  let-row="row"
+  ngx-datatable-cell-template
+>
+  <div class="pratiche-container">
+    <div class="pratiche-list-wrapper">
+      <div
+        *ngFor="
+          let element of buildPraticheCollegateArray(
+            row.pratica_collegata
+          ).slice(0, 2)
+        "
+      >
+        {{ element }}
+      </div>
+    </div>
+    <div>
+      <button
+        class="btn-action"
+        *ngIf="buildPraticheCollegateArray(row.pratica_collegata).length > 0"
+        (click)="showPraticheCollegateModal(row.pratica_collegata)"
+        aria-label="mostra procedimenti collegati"
+      >
+        <i class="fa fa-eye" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #azioniTemplate let-row="row">
+  <div class="actions">
+    <button
+      class="btn-action"
+      *ngIf="
+        row.id_oggetto_istanza &&
+        (attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK)
+      "
+      [ngClass]="{
+        disabled: attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      }"
+      (click)="showDetails(row, false, true)"
+      aria-label="modifica"
+    >
+      <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica" />
+    </button>
+    <button
+      class="btn-action"
+      (click)="showDetails(row, true, !!row.id_oggetto_istanza)"
+      aria-label="dettaglio"
+    >
+      <img
+        src="assets/icon-table-dettaglio.svg"
+        height="24px"
+        alt="Dettaglio"
+      />
+    </button>
+ <!-- Decommentato per la 1209 di BE e 1668 lato FE per funzioneelimina oggetto-->
+    <button
+      class="btn-action"
+      *ngIf="
+        row.id_oggetto_istanza &&
+        (attoreGestioneIstanza === gestioneEnum.WRITE ||
+          attoreGestioneIstanza === gestioneEnum.WRITE_LOCK)
+      "
+      [ngClass]="{
+        disabled: attoreGestioneIstanza === gestioneEnum.WRITE_LOCK
+      }"
+      (click)="onDelete(row)"
+      aria-label="elimina"
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina" />
+    </button>
+    
+  </div>
+</ng-template>
+<!-- #endregion -->
+

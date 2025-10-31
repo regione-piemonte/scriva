@@ -1,0 +1,110 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<p class="bread-crumb">
+  <a href="javascript:;" (click)="goToSearchPage()" aria-label="ricerca">Ricerca</a> - <strong> Prendi in carico</strong>
+</p>
+
+<h1 class="heel">
+  Prendi in carico
+</h1>
+
+<div class="card">
+  <h2 class="title mb-4">
+    <strong>Istanza di riferimento</strong>
+  </h2>
+
+  <div class="row info">
+    <div class="col-xl-12 col-md-6">
+      <p>Soggetto titolare</p>
+      <p class="info-value"> {{ denTitolareIstanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Identificativo istanza</p>
+      <p class="info-value"> {{ istanza?.cod_istanza }}  </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Data inserimento</p>
+      <p class="info-value"> {{ istanza?.data_inserimento_istanza | date: 'dd/MM/yyyy - H:mm:ss' }}  </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize"> {{ istanza?.stato_istanza.descrizione_stato_istanza }} </p>
+    </div>
+  </div>
+</div>
+
+<div class="card" id="dettaglioContainer">
+  <form [formGroup]="infoForm">
+    <div class="row" *ngIf="acList?.length > 1">
+      <div class="form-group col-xl-auto col-md-6">
+        <label for="ac">Seleziona l'autorità competente di riferimento</label>
+      </div>
+      <div class="form-group col-xl-4 col-md-6">
+        <select class="form-control" name="ac" id="ac" formControlName="ac" [compareWith]="compareAC">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option [ngValue]="ac" *ngFor="let ac of acList">
+            {{ ac.des_competenza_territorio }}
+          </option>
+        </select>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="form-group col-md-3">
+        <button
+          type="button"
+          class="btn btn-large btn-outline-primary"
+          [disabled]="!enableBtnProtocolla"
+          (click)="onInserisciDatiProtocollazione()"
+        >
+          INSERISCI ___DATI PROTOCOLLAZIONE
+        </button>
+      </div>
+      <div class="form-group col-md-3" *ngIf="istanza?.num_protocollo_istanza">
+        <p><strong>Numero protocollo</strong></p>
+        <span>{{istanza.num_protocollo_istanza}}</span>
+      </div>
+      <div class="form-group col-md-3" *ngIf="istanza?.data_protocollo_istanza">
+        <p><strong>Data protocollo</strong></p>
+        <span>{{istanza.data_protocollo_istanza}}</span>
+      </div>
+    </div>
+  
+    <div class="row mt-4">
+      <div class="form-group col-md">
+        <label for="notaIstanza">Nota (max 1000 caratteri)</label>
+        <textarea class="form-control" id="notaIstanza" rows="4" formControlName="notaIstanza"></textarea>
+        <app-form-error-message [control]="this.infoForm.get('notaIstanza')"></app-form-error-message>
+      </div>
+  
+      <div class="form-group col-md-auto">
+        <button
+          type="button"
+          class="btn add-container"
+          [disabled]="!infoForm.get('notaIstanza').value || !infoForm.get('notaIstanza').valid"
+          (click)="onAggiungiNota()"
+        >
+          <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi nota">
+          <span class="add-text">aggiungi</span>
+        </button>
+      </div>
+    </div>
+  </form>
+  
+<scriva-note></scriva-note>
+
+<div class="buttons-container">
+  <button type="button" class="btn btn-large btn-link" (click)="onIndietro()">
+    INDIETRO
+  </button>
+  <button type="button" class="btn btn-large btn-primary" *ngIf="selectedAC" (click)="onConferma()">
+    CONFERMA
+  </button>
+</div>

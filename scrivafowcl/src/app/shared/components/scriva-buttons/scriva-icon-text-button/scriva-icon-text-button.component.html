@@ -1,0 +1,50 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- PULSANTE ICONA SINISTRA -->
+<ng-container *scrivaRemove="cssConfig.labelLeft">
+  <!-- PULSANTE -->
+  <button type="button" class="btn btn-sitb"
+    [attr.title]="dataConfig?.label || ''"
+    [disabled]="disabled"
+    [ngClass]="[(cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_CLASS)]"
+    [ngStyle]="cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+    (click)="onClick.emit()"
+  >
+    <div class="sitb-inline">
+      <scriva-icon [icon]="dataConfig?.icon"></scriva-icon>
+    </div>
+    <div class="sitb-inline sitb-label-r" *ngIf="dataConfig.label"
+      [ngClass]="[(cssConfig?.customLabel | scrivaCssHandler:C_C.CSS_TYPE_CLASS)]"
+      [ngStyle]="cssConfig?.customLabel | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+      [innerHTML]="dataConfig.label"
+    ></div>
+  </button>
+</ng-container>
+
+<!-- PULSANTE ICONA SINISTRA -->
+<ng-container *scrivaMaintain="cssConfig.labelLeft">
+  <!-- PULSANTE -->
+  <button type="button" class="btn btn-sitb"
+    [attr.title]="dataConfig?.label || ''"
+    [disabled]="disabled"
+    [ngClass]="[(cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_CLASS)]"
+    [ngStyle]="cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+    (click)="onClick.emit()"
+  >
+    <div class="sitb-inline sitb-label-l" *ngIf="dataConfig.label"
+      [ngClass]="[(cssConfig?.customLabel | scrivaCssHandler:C_C.CSS_TYPE_CLASS)]"
+      [ngStyle]="cssConfig?.customLabel | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+      [innerHTML]="dataConfig.label"
+    ></div>
+    <div class="sitb-inline">
+      <scriva-icon [icon]="dataConfig?.icon"></scriva-icon>
+    </div>
+  </button>
+</ng-container>

@@ -1,0 +1,23 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="form-group text-left">
+  <button *ngIf="showAnnulla" type="button" class="btn btn-large btn-link" (click)="clickEmit('onAnnulla')">
+    ANNULLA
+  </button>
+</div>
+
+<div class="buttons-container">
+  <button *ngIf="showIndietro" type="button" class="btn btn-large btn-link" (click)="clickEmit('onIndietro')">
+    INDIETRO
+  </button>
+  <button *ngIf="showConferma" type="button" class="btn btn-large btn-primary" [disabled]="disable" (click)="clickEmit('onConferma')">
+    CONFERMA
+  </button>
+</div>

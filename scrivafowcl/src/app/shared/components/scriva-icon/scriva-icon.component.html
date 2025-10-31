@@ -1,0 +1,22 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<ng-container *scrivaMaintain="iconConfig.asset">
+  <img [src]="iconAsset" class="scriva-icon" [attr.alt]="iconConfig.alt"/>
+</ng-container>
+
+<ng-container *scrivaMaintain="!iconConfig.asset">
+  <i class="fa"
+    [attr.aria-label]="iconConfig.alt"
+    [ngClass]="[iconConfig.icon, (iconConfig?.customCss | scrivaCssHandler:C_C.CSS_TYPE_CLASS)]"
+    [ngStyle]="iconConfig?.customCss | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+  >
+    {{ iconConfig.label || ''}}
+  </i>
+</ng-container>

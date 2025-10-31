@@ -1,0 +1,33 @@
+/*
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+ */
+export enum StatoIstanzaEnum {
+  TUTTE = 'TUTTE', // non presente in DB
+  BOZZA = 'BOZZA',
+  CONCLUSA = 'CONCLUSA',
+  DA_ASSEGNARE = 'DA_ASSEGNARE',
+  DA_ASSEGNARE_UNICO = 'DA_ASSEGNARE_UNICO',
+  CONFERMATA_DA_INVIARE = 'CONFERMATA_DA_INVIARE',
+  DA_CONFERMARE_INTEG = 'DA_CONFERMARE_INTEG',
+  DA_FIRMARE = 'DA FIRMARE',
+  DA_FIRMARE_LETTERA = 'DA_FIRMARE_LETTERA',
+  DA_SCARICARE_ELENCO = 'DA_SCARICARE_ELENCO',
+  DA_SCARICARE_LETTERA = 'DA_SCARICARE_LETTERA',
+  FIRMATA = 'FIRMATA',
+  IN_CORSO = 'IN CORSO',
+  INSERITA_BO = 'INSERITA BO',
+  PERF_ALLEGATI = 'PERF_ALLEGATI',
+  PRESA_IN_CARICO = 'PRESA IN CARICO',
+  PRESENTATA = 'PRESENTATA',
+  RIC_INTEGR = 'RIC_INTEGR',
+  RIC_INTEGR_SUCC = 'RIC_INTEGR_SUCC',
+  RIFIUTATA = 'RIFIUTATA',
+  SOSPESA = 'SOSPESA'
+}
+

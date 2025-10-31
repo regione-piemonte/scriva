@@ -1,0 +1,120 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<scriva-modal-header
+  [title]="PCME_C.MODAL_TITLE"
+  (onClickClose)="modalDismiss()"
+></scriva-modal-header>
+
+<!-- BODY -->
+<div class="modal-body scriva-modal-body" [id]="PCME_C.ALERT_ANCHOR">
+  <div class="container-fluid s-plr--0">
+    
+    <!-- FORM DELLA MODALE -->
+    <form [formGroup]="pcmeForm" (onSubmit)="confermaEmail()">
+      <!-- PROBLMEA NOTO: https://github.com/angular/angular/issues/22910 -->
+      <div class="workaround-checkbox">
+        <button autofocus></button>
+      </div>
+
+      <!-- AUTORIZZAZIONE -->
+      <div class="row">
+        <div class="col">
+          <scriva-checkbox #scrivaCheckboxAutorizzo
+            [formControlName]="PCME_C.FC_AUTORIZZO"
+            [idFormControl]="PCME_C.FC_AUTORIZZO"
+            [formGroup]="pcmeForm"
+            [cssConfig]="inputs.autorizzoConfig.css"
+            [dataConfig]="inputs.autorizzoConfig.data"
+            [dataSource]="inputs.autorizzoConfig.source"
+            [errMapFormControl]="PCME_EM.MAP_ACCONSENTO"
+            [formSubmitted]="pcmeFormSubmitted"
+            [onlyLastValue]="true"
+            [disableRequiredCheck]="false"
+          ></scriva-checkbox>
+        </div>
+      </div>
+
+
+      <div class="row s-mt--20">
+        <div class="col-6">
+          <!-- INPUT PER EMAIL -->
+          <scriva-email [formControlName]="PCME_C.FC_EMAIL"
+            [idFormControl]="PCME_C.FC_EMAIL"
+            [formGroup]="pcmeForm"
+            [cssConfig]="inputs.emailConfig.css"
+            [dataConfig]="inputs.emailConfig.data"
+            [errMapFormControl]="PCME_EM.MAP_EMAIL"
+            [formSubmitted]="pcmeFormSubmitted"
+            [disableRequiredCheck]="false"
+          ></scriva-email>
+        </div>
+      </div>
+      
+      <div class="row s-mt--15">
+        <div class="col-5">
+          <!-- INPUT PER EMAIL RIPETI -->
+          <scriva-email [formControlName]="PCME_C.FC_EMAIL_RIPETI"
+            [idFormControl]="PCME_C.FC_EMAIL_RIPETI"
+            [formGroup]="pcmeForm"
+            [cssConfig]="inputs.ripetiEmailConfig.css"
+            [dataConfig]="inputs.ripetiEmailConfig.data"
+            [errMapFormControl]="PCME_EM.MAP_EMAIL_RIPETI"
+            [errMapFormGroup]="PCME_EM.MAP_FORM_EMAIL_RIPETI_EMAIL"
+            [formSubmitted]="pcmeFormSubmitted"
+            [disableRequiredCheck]="false"
+          ></scriva-email>
+        </div>
+        <div class="col-7 pcme-mt-15 col-confermaEmail">
+          <!-- CONFERMA EMAIL PER OTP -->
+          <scriva-primary-button
+            [dataConfig]="PCME_C.BTN_MODAL_CONFERMA_EMAIL"
+            (onClick)="confermaEmail()">
+          </scriva-primary-button>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="row s-mt--50">
+      <div class="col">
+        <strong>Inserire il codice verifica inviato all'indirizzo e-mail indicato</strong>
+      </div>
+    </div>
+    <div class="row s-mt--15">
+      <div class="col-6">
+        <div class="form-group scriva-form-group">
+          <label>{{ PCME_C.LABEL_CODICE_OTP }}</label>
+          <input type="text" class="form-control scriva-input-border"
+            [(ngModel)]="codiceOTP"
+            [placeholder]="PCME_C.LABEL_CODICE_OTP"
+          >
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</div>
+
+<!-- GESTIONE DEL RIMBORSO -->
+<div class="modal-footer scriva-modal-footer">
+  <!-- ANNULLA -->
+  <scriva-link-button class="s-mri--a"
+    [dataConfig]="PCME_C.BTN_MODAL_ANNULLA"
+    (onClick)="resetModificaEmail()">
+  </scriva-link-button>
+
+  <!-- CONFERMA -->
+  <scriva-primary-button
+    [dataConfig]="PCME_C.BTN_MODAL_CONFERMA"
+    [disable]="!allowSalvaEmail"
+    (onClick)="modificaEmail()">
+  </scriva-primary-button>
+</div>

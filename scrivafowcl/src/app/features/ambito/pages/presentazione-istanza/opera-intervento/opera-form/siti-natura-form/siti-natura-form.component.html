@@ -1,0 +1,88 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">{{modalTitle}}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content container py-4" id="content">
+  <form [formGroup]="form">
+    <div class="row">
+      <div class="form-group col-md-9">
+        <h4 class="title" for="sitoReteNatura">Siti Rete Natura 2000</h4>
+        <div id="sitoReteNatura">{{ sitoNatura.des_sito_natura_2000 }}</div>
+      </div>
+      <div class="form-group col-md-3">
+        <h4 class="title" for="tipoSito">Tipo Sito</h4>
+        <div id="tipoSito">{{ sitoNatura.tipo_natura_2000.des_tipo_natura_2000 }}</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12">
+        <h4 class="title" for="ente_gestore">Ente Gestore</h4>
+        <div id="ente_gestore">{{ sitoNatura.competenza_territorio.des_competenza_territorio }}</div>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-12 radio-wrapper">
+        <label for="elementiDiscontinuitaQuestion">
+          <span *ngIf="dettaglioOggetto.siti_rete_natura?.elementi_discontinuita?.obbligatorio">*</span>
+          {{ dettaglioOggetto.siti_rete_natura?.elementi_discontinuita?.label }}
+        </label>
+        <div id="elementiDiscontinuitaQuestion">
+          <div class="form-check form-check-inline">
+            <input type="radio" name="elementi-discontinuita" id="elementiDiscontinuitaTrue" value="si" [formControl]="form?.get('flg_elemento_discontinuita')">
+            <label for="elementiDiscontinuitaTrue">Sì</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input type="radio" name="elementi-discontinuita" id="elementiDiscontinuitaFalse" value="no" [formControl]="form?.get('flg_elemento_discontinuita')">
+            <label for="elementiDiscontinuitaFalse">No</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" >
+      <div class="form-group col-md-12" *ngIf="form?.get('flg_elemento_discontinuita').value === 'si'">
+        <label for="des_elemento_discontinuita">*Descrivere</label>
+        <input type="text" class="form-control" id="des_elemento_discontinuita" [formControl]="form?.get('des_elemento_discontinuita')"/>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col-md-6" *ngIf="dettaglioOggetto.siti_rete_natura?.elementi_discontinuita?.distanza?.visibile">
+        <label for="num_distanza"><span *ngIf="dettaglioOggetto.siti_rete_natura?.elementi_discontinuita?.distanza?.obbligatorio">*</span>{{dettaglioOggetto.siti_rete_natura?.elementi_discontinuita?.distanza?.label}}</label>
+        <input type="number" class="form-control" id="num_distanza" [formControl]="form?.get('num_distanza')"/>
+        <app-form-error-message [control]="form.get('num_distanza')"></app-form-error-message>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <div class="row" *ngIf="!readonly">
+      <div  class="col-md-auto push-left">
+          <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+              ANNULLA
+          </button>
+      </div>
+      <div class="col-md-auto push-right">
+          <button type="button" class="btn btn-large btn-primary" [disabled]="!form.valid" (click)="onConferma()">
+              SALVA MODIFICHE
+          </button>
+      </div>
+  </div>
+  <div class="row" *ngIf="readonly">
+    <div class="col-md-auto push-right">
+      <button type="button" class="btn btn-large btn-primary" (click)="onDismiss()">
+        CHIUDI
+      </button>
+    </div>
+  </div>
+</div>

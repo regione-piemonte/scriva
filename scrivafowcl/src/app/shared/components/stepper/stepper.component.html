@@ -1,0 +1,86 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="stepper-header row">
+  <div class="list" #list>
+   
+    <div class="step-item col" 
+   
+      [class.clickable] = "step.state.clickable || step.completed === true"
+      [ngClass]="{ active: selectedIndex === i }" (click)="click(step)"
+      *ngFor="let step of steps; let i = index">
+
+      <div class="line">
+        <div></div>
+      </div>
+
+      <ng-container *ngIf="step.stepLabel; else showLabelText"
+        [ngTemplateOutlet]="step.stepLabel.template">
+      </ng-container>
+
+      <ng-template #showLabelText>
+        <span class="circle-shade" [ngClass]="{ 'circle-full': step.completed === true || selectedIndex === i }">
+          {{ i + 1 }}
+        </span>
+        <div class="label-text" [ngClass]="{'label-selected': selectedIndex === i}">
+          {{ step.label }}
+          <!-- <span [innerHTML]="step.label"></span> -->
+        </div>
+      </ng-template>
+
+      <div class="line">
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroller fw-bold" (click)="scroll(list,-1)" [class.disable]="!canScrollStart(list)" id="scroll-left">
+    <img alt="Scroll left" class="img-change-btn" src="assets/icon-stepper-arrow-circle-left-solid.svg">
+  </div>
+  <div class="scroller fw-bold" [class.disable]="!canScrollEnd(list)" (click)="scroll(list,1)">
+    <img alt="Scroll right" class="img-change-btn" src="assets/icon-stepper-arrow-circle-right-solid.svg">
+  </div>
+
+</div>
+
+<div class="stepper-content">
+  <ng-container
+    [ngTemplateOutlet]="selected ? selected.content : null">
+  </ng-container>
+
+  
+  <app-stepper-footer
+  [showNext]="showNextButton"
+  [showPrevious]="showBackButton"
+  (avanti)="onAvanti()"
+  (indietro)="onIndietro()"
+></app-stepper-footer>
+
+
+  <!-- <div class="buttons-container">
+    <div class="next">
+      <button
+        class="btn btn-success btn-avanti"
+        *ngIf="selected.completed"
+        (click)="onAvanti(selectedIndex)"
+      >
+        AVANTI
+      </button>
+    </div>
+    <div class="previous">
+      <button
+        class="btn btn-link"
+        *ngIf="selectedIndex !== 0"
+        cdkStepperPrevious
+      >
+        INDIETRO
+      </button>
+    </div>
+  </div> -->
+</div>

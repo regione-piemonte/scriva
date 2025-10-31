@@ -1,0 +1,811 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+
+<div class="card col-xl-12" id="containerDichiarazioni">
+	<form [formGroup]="formDichiarazioni" *ngIf="formDichiarazioni" id="formDichiarazioni">
+		<div>
+			<p>
+				<b>
+				Per procedere nella compilazione dell’istanza occorre selezionare (prendendone visione) le dichiarazioni necessarie: 
+        		</b>
+			</p>
+		</div>
+
+		<!-- dchr_via_prel  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_via_prel">
+					<input 
+						id="dchr_via_prel" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich1_num', 'dich1_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_via_prel')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a valutazione preliminare (d.lgs.152/2006, art. 6, comma 9) conclusasi con atto/provvedimento
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich1_num" 
+							class="form-control" 
+							type="text"							
+							[formControl]="formDichiarazioni?.get('dich1_num')"			
+							(keydown)="soloNumeri($event)"				
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich1_data" 
+								class="form-control input" 
+								type="date" 
+								[formControl]="formDichiarazioni?.get('dich1_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<p class="errore" 
+			   *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_prel').value && !formDichiarazioni?.get('dich1_num').valid && formDichiarazioni?.get('dich1_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_prel').value && !formDichiarazioni?.get('dich1_data').valid && formDichiarazioni?.get('dich1_data').touched"   
+			>Campo obbligatorio</p>
+		</div>
+
+    	<!-- dchr_via_ver  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_via_ver">
+					<input 
+						id="dchr_via_ver" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich2_num', 'dich2_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_via_ver')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a verifica di assoggettabilità a VIA (d.lgs.152/2006, art. 19), conclusasi con atto/provvedimento
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich2_num" 
+							class="form-control" 
+							type="text"
+							[formControl]="formDichiarazioni?.get('dich2_num')"
+							(keydown)="soloNumeri($event)"
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich2_data" 
+								class="form-control input" 
+								type="date" [formControl]="formDichiarazioni?.get('dich2_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="errore" 
+				*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_ver').value && !formDichiarazioni?.get('dich2_num').valid && formDichiarazioni?.get('dich2_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_ver').value && !formDichiarazioni?.get('dich2_data').valid && formDichiarazioni?.get('dich2_data').touched"   
+		 	>Campo obbligatorio</p>	
+		</div>
+		
+    	<!-- dchr_via_sco  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_via_sco">
+					<input 
+						id="dchr_via_sco" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich3_num', 'dich3_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_via_sco')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a consultazione preventiva (d.lgs.152/2006, art. 20), conclusasi con atto/provvedimento 
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich3_num" 
+							class="form-control" 
+							type="text"							
+							[formControl]="formDichiarazioni?.get('dich3_num')"
+							(keydown)="soloNumeri($event)"
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich3_data" 
+								class="form-control input" 
+								type="date" [formControl]="formDichiarazioni?.get('dich3_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="errore" 
+			   *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_sco').value && !formDichiarazioni?.get('dich3_num').valid && formDichiarazioni?.get('dich3_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_via_sco').value && !formDichiarazioni?.get('dich3_data').valid && formDichiarazioni?.get('dich3_data').touched"   
+			>Campo obbligatorio</p>				
+		</div>
+		
+    	<!-- dchr_def_imp_amb  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_def_imp_amb">
+					<input 
+						id="dchr_def_imp_amb" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich4_num', 'dich4_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_def_imp_amb')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a fase di consultazione per la definizione dei contenuti dello studio di impatto ambientale (d.lgs.152/2006, art. 21), conclusasi con atto/provvedimento 
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich4_num" 
+							class="form-control" 
+							type="text"							
+							[formControl]="formDichiarazioni?.get('dich4_num')"
+							(keydown)="soloNumeri($event)"
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich4_data" 
+								class="form-control input" 
+								type="date" [formControl]="formDichiarazioni?.get('dich4_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="errore" 
+			   *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_def_imp_amb').value && !formDichiarazioni?.get('dich4_num').valid && formDichiarazioni?.get('dich4_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_def_imp_amb').value && !formDichiarazioni?.get('dich4_data').valid && formDichiarazioni?.get('dich4_data').touched"   
+			>Campo obbligatorio</p>				
+		</div>
+		
+    	<!-- dchr_prov_autoriz  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_prov_autoriz">
+					<input 
+						id="dchr_prov_autoriz" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich5_num', 'dich5_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_prov_autoriz')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a fase preliminare al provvedimento autorizzatorio unico regionale (d.lgs.152/2006, art. 26-bis), conclusasi con atto/provvedimento
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich5_num" 
+							class="form-control" 
+							type="text" 
+							[formControl]="formDichiarazioni?.get('dich5_num')"
+							(keydown)="soloNumeri($event)"
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich5_data" 
+								class="form-control input" 
+								type="date" 
+								[formControl]="formDichiarazioni?.get('dich5_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="errore" 
+			   *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_prov_autoriz').value && !formDichiarazioni?.get('dich5_num').valid && formDichiarazioni?.get('dich5_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_prov_autoriz').value && !formDichiarazioni?.get('dich5_data').valid && formDichiarazioni?.get('dich5_data').touched"   
+			>Campo obbligatorio</p>				
+		</div>     
+		
+    	<!-- dchr_imp_amb  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_imp_amb">
+					<input 
+						id="dchr_imp_amb" 
+						class="form-check-input" 
+						type="checkbox" 
+						(change)="abilitaCampi($event, 'dich6_num', 'dich6_data')" 
+						[formControl]="formDichiarazioni?.get('dchr_imp_amb')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a valutazione di impatto ambientale (d.lgs.152/2006, art. 27-bis), conclusasi con atto/provvedimento
+					</span>
+				</label>
+			</div>
+		</div>
+		<div class="form-group dich-num-date-box">
+			<div ref="nested-dich">
+				<div class="form-component-title">
+					<p>
+						n.
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-number">
+					<div>
+						<input 
+							id="dich6_num" 
+							class="form-control" 
+							type="text" 
+							[formControl]="formDichiarazioni?.get('dich6_num')"
+							(keydown)="soloNumeri($event)"							
+						/>						
+					</div>
+				</div>
+				<div class="form-component-title">
+					<p>
+						del
+					</p>
+					<div class="form-errors invalid-feedback" ref="messageContainer">
+					</div>
+				</div>
+				<div class="form-group form-component-data">
+					<div>
+						<div class="input-group">
+							<input 
+								id="dich6_data" 
+								class="form-control input" 
+								type="date" 
+								[formControl]="formDichiarazioni?.get('dich6_data')"
+								max="{{ today | date: 'yyyy-MM-dd' }}"
+								(keydown)="bloccaDigitazione($event)"
+							/>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<p class="errore" 
+			   *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_imp_amb').value && !formDichiarazioni?.get('dich6_num').valid && formDichiarazioni?.get('dich6_num').touched || attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_imp_amb').value && !formDichiarazioni?.get('dich6_data').valid && formDichiarazioni?.get('dich6_data').touched"   
+			>Campo obbligatorio</p>				
+		</div>     
+
+    	<!-- dchr_dib_pub  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_dib_pub">
+					<input 
+						id="dchr_dib_pub" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_dib_pub')"
+					/>
+					<span>
+						dichiara che il progetto è stato sottoposto a procedura di dibattito pubblico ai sensi dell’art. 22 del d.lgs. 50/2016
+					</span>
+				</label>
+			</div>
+		</div>
+
+		<!-- Radio True - dchr_strum_urbani  -->
+		<div [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_strum_urbani').valid && formDichiarazioni?.get('dchr_strum_urbani').touched}">
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_strum_urbani_true">
+						<input 
+							id="dchr_strum_urbani_true" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_strum_urbani"
+							value="Si"
+							[formControl]="formDichiarazioni?.get('dchr_strum_urbani')"
+							(change)="resettaSelectVoci()" 
+						/>
+						<span>
+							* dichiara che il progetto è conforme ai vigenti strumenti urbanistici e quindi non necessita di variante urbanistica
+						</span>
+					</label>
+				</div>
+			</div>
+	
+			<!-- Radio False - dchr_strum_urbani  -->
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_strum_urbani_false">
+						<input 
+							id="dchr_strum_urbani_false" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_strum_urbani"
+							value="No"
+							[formControl]="formDichiarazioni?.get('dchr_strum_urbani')"
+							(change)="resettaSelectVoci()" 
+						/>
+						<span>
+							* dichiara che il progetto non è conforme ai vigenti strumenti urbanistici e che il progetto rientra nelle casistiche per la variante semplificata ai sensi della l.r. 56/1977, articolo
+						</span>
+					</label>
+				</div>
+			</div>	
+		</div>
+		<p  class="errore mt-1" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_strum_urbani').valid && formDichiarazioni?.get('dchr_strum_urbani').touched"   
+			>Campo obbligatorio
+		</p>
+
+		<!-- Select - dchr_strum_urbani_voci  -->
+		<div class="form-group align-qdrdich" *ngIf="flagVisualizzaSelect">			 
+			<div class="form-check checkbox">				
+				<select id="dchr_strum_urbani_voci"
+						class="select-voci"
+						[formControl]="formDichiarazioni?.get('dchr_strum_urbani_voci')"
+						(change)="displayTextarea()"
+				>
+					<option value="null"><span>Seleziona</span></option>
+					<option value="17Bis Comma 2"><span>17bis comma 2</span></option>
+					<option value="17Bis Comma 4"><span>17bis comma 4</span></option>
+					<option value="17Bis Comma 6"><span>17bis comma 6</span></option>
+					<option value="17Bis Comma 15bis"><span>17bis comma 15 bis</span></option>
+					<option value="altro"><span>altro</span></option>
+				</select>				
+			</div>
+		</div>
+		<p  class="errore mt-1" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_strum_urbani_voci').valid && formDichiarazioni?.get('dchr_strum_urbani_voci').touched"   
+			>Campo obbligatorio
+		</p>		
+
+		<!-- dchr_strum_urbani_textarea -->
+		<div class="form-group align-qdrdich" *ngIf="flagVisualizzaTexarea">
+			<div class="form-check checkbox">	
+				<textarea id="dchr_strum_urbani_textarea"						  
+						  [formControl]="formDichiarazioni?.get('dchr_strum_urbani_textarea')"
+	 			 ></textarea>
+			</div>
+		</div>
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && flagVisualizzaTexarea && !formDichiarazioni?.get('dchr_strum_urbani_textarea').valid && formDichiarazioni?.get('dchr_strum_urbani_textarea').touched"   
+	 		>Campo obbligatorio
+		</p>		
+
+		<!-- dchr_strum_urbani - Descrizione di Coda -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<p>
+					A tal fine si allegano gli elaborati previsti dalla vigente normativa, comprensivi degli elaborati relativi alla procedura di VAS
+				</p>
+			</div>
+		</div>
+
+		<!-- dchr_imp_transf  -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_imp_transf">
+					<input 
+						id="dchr_imp_transf" 
+						class="form-check-input" 
+						type="checkbox"						
+						[formControl]="formDichiarazioni?.get('dchr_imp_transf')"
+						(change)="abilitaImpTransf()"						
+					/>
+					<span>
+						dichiara che il progetto può avere impatti transfrontalieri sui seguenti Stati:
+					</span>
+				</label>
+			</div>
+		</div>
+
+		<!-- dchr_imp_transf_textarea -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">	
+				<textarea id="dchr_imp_transf_textarea"						  
+						  [formControl]="formDichiarazioni?.get('dchr_imp_transf_textarea')"
+						  (change)="abilitaCheck($event, 'dchr_imp_transf_textarea')"
+	 			 ></textarea>
+			</div>
+		</div>
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && formDichiarazioni?.get('dchr_imp_transf').value && !formDichiarazioni?.get('dchr_imp_transf_textarea').valid && formDichiarazioni?.get('dchr_imp_transf_textarea').touched"   
+	 		>Campo obbligatorio
+		</p>			
+
+		<!-- dchr_imp_transfi - Descrizione di Coda -->
+		<div class="form-group align-qdrdich">
+			<div class="form-check checkbox">
+				<p>
+					e pertanto è soggetto alle procedure di cui all’art. 32 del d.lgs.152/2006
+				</p>
+			</div>
+		</div>
+  
+    <!-- dchr_pub_doc_website  -->
+		<div class="form-group align-qdrdich" 
+			 [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pub_doc_website').valid && formDichiarazioni?.get('dchr_pub_doc_website').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_pub_doc_website">
+					<input 
+						id="dchr_pub_doc_website" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_pub_doc_website')"
+						(change)="setValid($event)"
+					/>
+					<span [innerHTML]="DVAL_C.dichiarazioneACPubVAL | dichiarazioneVIAHTML : paramsDichiarazioneACPubVAL : cod_competenza_territorio ">
+						<!-- * dichiara di essere consapevole che l'Amministrazione pubblicherà la documentazione trasmessa con la presente istanza (d.lgs.152/2006, art. 27-bis, comma 2) sul sito web istituzionale <a href="http://www.sistemapiemonte.it/cms/privati/ambiente-e-energia/servizi/540-valutazioni-ambientali" target="_blank">Valutazioni ambientali</a> -->
+					</span>
+				</label>
+			</div>
+		</div>
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pub_doc_website').valid && formDichiarazioni?.get('dchr_pub_doc_website').touched"   
+			>Campo obbligatorio
+		</p>	
+
+      	<!-- dchr_doc_amm_nopubb  -->
+		  <div class="form-group align-qdrdich" 
+		       [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_doc_amm_nopubb').valid && formDichiarazioni?.get('dchr_doc_amm_nopubb').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_doc_amm_nopubb">
+					<input					
+						id="dchr_doc_amm_nopubb" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_doc_amm_nopubb')"
+						(change)="setValid($event)"
+					/>
+					<span *ngIf="doc_amm_nopubb"> * </span>
+					<span>
+						dichiara di essere consapevole che gli allegati documentali appartenenti alla categoria allegati denominata “Ulteriore documentazione amministrativa e facoltativa (non oggetto di pubblicazione)” non saranno resi accessibili al pubblico
+					</span>
+				</label>
+			</div>
+		</div>		
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_doc_amm_nopubb').valid && formDichiarazioni?.get('dchr_doc_amm_nopubb').touched"
+			>Campo obbligatorio
+		</p>						
+
+      	<!-- dchr_doc_segr_ind_com  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE &&  !formDichiarazioni?.get('dchr_doc_segr_ind_com').valid && formDichiarazioni?.get('dchr_doc_segr_ind_com').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_doc_segr_ind_com">
+					<input					
+						id="dchr_doc_segr_ind_com" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_doc_segr_ind_com')"
+						(change)="setValid($event)"
+					/>
+					<span *ngIf="doc_segr_ind_com"> * </span>
+					<span>
+						richiede che, per ragioni di segreto industriale o commerciale, ai sensi dell’art. 9, comma 4 del d.lgs. 152/2006, non siano resi pubblici gli elaborati inseriti nella cartella allegati denominata “Documentazione soggetta al segreto industriale o commerciale”, per le Motivazioni indicate nella seguente tabella:
+					</span>
+				</label>
+			</div>
+		</div>
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_doc_segr_ind_com').valid && formDichiarazioni?.get('dchr_doc_segr_ind_com').touched"   
+			>Campo obbligatorio
+		</p>			
+		<!-- doc_segr_ind_com_tab_Arr -->
+		<div class="form-group align-qdrdich" *ngIf="doc_segr_ind_com">
+			<div class="form-check checkbox">
+				<table>
+					<thead>
+					  <tr>
+						<th>Codice elaborato</th>
+						<th>Motivazione</th>
+						<th>Nome file</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr  *ngFor="let riga of doc_segr_ind_com_tab_Arr">
+						<td class="sin">{{ riga.cod_allegato }}</td>
+						<td class="centro">{{ riga.note }}</td>
+						<td class="destra">{{ riga.nome_allegato }}</td>
+					  </tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>		
+		
+      	<!-- dchr_elab_firma  -->
+		  <div class="form-group align-qdrdich" 
+		  	   [ngClass]="{error:attoreGestioneIstanza === gestioneEnum.WRITE &&  !formDichiarazioni?.get('dchr_elab_firma').valid && formDichiarazioni?.get('dchr_elab_firma').touched}">
+			<div class="form-check checkbox">
+				<label class="form-check-label" for="dchr_elab_firma">
+					<input					
+						id="dchr_elab_firma" 
+						class="form-check-input" 
+						type="checkbox" 
+						[formControl]="formDichiarazioni?.get('dchr_elab_firma')"
+						(change)="setValid($event)"
+					/>
+					<span>
+						* dichiara di aver verificato che gli elaborati progettuali sono firmati esclusivamente in formato digitale da tutti i professionisti che li hanno redatti e che non contengono dati personali eccedenti e non pertinenti
+					</span>
+				</label>
+			</div>		
+		</div>	
+		<p class="errore" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_elab_firma').valid && formDichiarazioni?.get('dchr_elab_firma').touched"   
+			>Campo obbligatorio
+		</p>
+
+    <!-- dchr_info_dati_personali  [Per competenza territorio relativo a regione Piemonte] -->
+		<div class="form-group align-qdrdich" 
+      [ngClass]="{
+        error: attoreGestioneIstanza === gestioneEnum.WRITE &&
+               !formDichiarazioni?.get('dchr_info_dati_personali').valid &&
+               formDichiarazioni?.get('dchr_info_dati_personali').touched}"
+    >
+      <div class="form-check checkbox">
+        <label class="form-check-label" for="dchr_info_dati_personali">
+          <input					
+            id="dchr_info_dati_personali" 
+            class="form-check-input" 
+            type="checkbox" 
+            [formControl]="formDichiarazioni?.get('dchr_info_dati_personali')"
+            (change)="setValid($event)"
+          />
+          <!-- REGIONE PIEMONTE -->
+          <span *ngIf="isACPrincipaleRegionePiemonte"
+            [innerHTML]="'* ' + (cod_tipo_adempimento | dichiarazioniVIARegionePiemonte : codiciAutoritaCompetenti.regionePiemonte : acWebPiemonte)"
+          >
+          </span>
+          <!-- AC SPECIFICA, NON REGIONE PIEMONTE -->
+          <span *ngIf="!isACPrincipaleRegionePiemonte"
+            [innerHTML]="'* ' + (cod_tipo_adempimento | dichiarazioniVIAACSpecifica : codiciAutoritaCompetenti.regionePiemonte : acWebPiemonte : cod_tipo_adempimento : cod_competenza_territorio : acWebNotPiemonte : comune_competenza)"
+          >
+          </span>
+        </label>
+      </div>		
+    </div>	
+    <p class="errore" 
+      *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE &&
+             !formDichiarazioni?.get('dchr_info_dati_personali').valid &&
+             formDichiarazioni?.get('dchr_info_dati_personali').touched"   
+      >Campo obbligatorio
+    </p>
+		
+		<!-- Radio True - dchr_pagam_bollo  -->
+		<div [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_bollo').valid && formDichiarazioni?.get('dchr_pagam_bollo').touched}">
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_pagam_bollo_true">
+						<input 
+							id="dchr_pagam_bollo_true" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_pagam_bollo"
+							value="Si"
+							[formControl]="formDichiarazioni?.get('dchr_pagam_bollo')"							
+						/>
+						<span>
+							* dichiara che il proponente è soggetto al pagamento dell'imposta di bollo ai sensi del DPR n. 642/1972 e che alla presente istanza è stata allegata la documentazione attestante il pagamento
+						</span>
+					</label>
+				</div>
+			</div>
+	
+			<!-- Radio False - dchr_pagam_bollo  -->
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_pagam_bollo_false">
+						<input 
+							id="dchr_pagam_bollo_false" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_pagam_bollo"
+							value="No"
+							[formControl]="formDichiarazioni?.get('dchr_pagam_bollo')"							
+						/>
+						<span>
+							* dichiara che il proponente è esente dal pagamento dell'imposta di bollo ai sensi del DPR n. 642/1972
+						</span>
+					</label>
+				</div>
+			</div>	
+		</div>
+		<p  class="errore mt-1" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_bollo').valid && formDichiarazioni?.get('dchr_pagam_bollo').touched"   
+			>Campo obbligatorio
+		</p>
+		
+		<!-- Radio True - dchr_pagam_oneri_istruttori  -->
+		<div [ngClass]="{error: attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_oneri_istruttori').valid && formDichiarazioni?.get('dchr_pagam_oneri_istruttori').touched}">
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_pagam_oneri_istruttori_true">
+						<input 
+							id="dchr_pagam_oneri_istruttori_true" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_pagam_oneri_istruttori"
+							value="Si"
+							[formControl]="formDichiarazioni?.get('dchr_pagam_oneri_istruttori')"							
+						/>
+						<span>
+							* dichiara di aver pagato gli oneri istruttori di cui all’art.12, comma 1, della l.r. 13/2023 e che alla presente
+							istanza è stata allegata la relativa documentazione prevista dalla d.g.r. n. 15-8403 del 8 aprile 2024, All. A, par. 2.2
+							(ricevuta di avvenuto pagamento del contributo; dichiarazione sostitutiva di atto notorio attestante il valore delle
+							opere da realizzare e l’importo del contributo dovuto; quadro economico generale inerente il valore complessivo delle
+							opere da realizzare; computo metrico estimativo)
+						</span>
+					</label>
+				</div>
+			</div>
+	
+			<!-- Radio False - dchr_pagam_oneri_istruttori  -->
+			<div class="form-group align-qdrdich">
+				<div class="form-check checkbox">
+					<label class="form-check-label" for="dchr_pagam_oneri_istruttori_false">
+						<input 
+							id="dchr_pagam_oneri_istruttori_false" 
+							class="form-check-input" 
+							type="radio" 
+							name="dchr_pagam_oneri_istruttori"
+							value="No"
+							[formControl]="formDichiarazioni?.get('dchr_pagam_oneri_istruttori')"							
+						/>
+						<span>
+							* dichiara che il proponente è un’amministrazione pubblica come definita dall’art.1, comma 2, del d.lgs. 165/2001, e che
+							pertanto è escluso dal pagamento degli oneri istruttori ai sensi dell’art. 12, comma 4 della l.r. 13/2023
+						</span>
+					</label>
+				</div>
+			</div>	
+		</div>
+		<p  class="errore mt-1" 
+			*ngIf="attoreGestioneIstanza === gestioneEnum.WRITE && !formDichiarazioni?.get('dchr_pagam_oneri_istruttori').valid && formDichiarazioni?.get('dchr_pagam_oneri_istruttori').touched"   
+			>Campo obbligatorio
+		</p>
+	
+		<!-- dchr_note  -->
+		<div class="form-group align-qdrdich">
+			<label class="form-check-label note" for="dchr_note">
+				<span>
+					Eventuali annotazioni
+				</span>
+				<textarea id="dchr_note" class="mt-2"						  
+						  [formControl]="formDichiarazioni?.get('dchr_note')"
+				></textarea>
+			</label>
+		</div>
+		
+  
+  </form>
+</div>
+

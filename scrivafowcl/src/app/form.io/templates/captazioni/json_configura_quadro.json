@@ -1,0 +1,4184 @@
+{
+  "POZZO": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "id_oggetto_istanza",
+        "type": "hidden",
+        "input": true,
+        "label": "idOggettoIstanza",
+        "tableView": true,
+        "customDefaultValue": "value = form.oggettoIstanza.id_oggetto_istanza;"
+      },
+      {
+        "key": "identificativo",
+        "type": "hidden",
+        "input": true,
+        "label": "identificativo",
+        "tableView": true,
+        "customDefaultValue": "value = form.oggetto.cod_scriva;"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "<strong>Pozzo {{form.oggetto.cod_scriva}}</strong>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "DATI_IDENTIFICATIVI",
+        "type": "panel",
+        "input": false,
+        "label": "Dati identificativi",
+        "title": "<strong>Dati identificativi</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "DATI_IDENTIFICATIVI.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": true
+          },
+          {
+            "key": "title_di_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_1",
+            "content": "<strong>Dati identificativi</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 8,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.denominazione",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Denominazione",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 500,
+                      "customMessage": "Il campo può contenere un massimo di 500 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggettoIstanza.den_oggetto;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.codice_scriva",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Codice ROC",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      },
+                      {
+                        "name": "enableLogic_2",
+                        "actions": [
+                          {
+                            "name": "enableAction_2",
+                            "type": "property",
+                            "state": true,
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "javascript",
+                          "simple": {
+                            "eq": "FO",
+                            "show": true,
+                            "when": "form.componente"
+                          },
+                          "javascript": "result = form.componente === 'FO';"
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "required": true,
+                      "maxLength": 50,
+                      "customMessage": "Il campo è obbligatorio e può contenere un massimo di 50 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggetto.cod_scriva;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_2",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_2",
+            "content": "<strong>Localizzazione dell'opera</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_2",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_2",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.comune",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Comune",
+                    "disabled": true,
+                    "tableView": false,
+                    "customDefaultValue": "value = form.oggettoIstanza.ubicazione_oggetto[0].comune.denom_comune;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.localita",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Località",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 250,
+                      "customMessage": "Il campo può contenere un massimo di 250 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggettoIstanza.ubicazione_oggetto[0].des_localita;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_3",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_3",
+            "content": "Dati catastali:",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_3",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_3",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.cod_catastale",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Codice catastale",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].cod_belfiore;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.sezione",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Sezione",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].sezione;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.foglio",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Foglio",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].foglio;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.particella",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Particella",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].particella;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_4",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_4",
+            "content": "<strong>Altri elementi identificativi</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_4",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_4",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.profondita",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Profondità (m)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,4}$)|(^\\d{1,4}[,]\\d{1,2}$)",
+                      "customMessage": "Indicare un massimo di 4 cifre intere e 2 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.quota_p_c",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Quota del Piano Campagna s.l.m. (m)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,4}$)",
+                      "customMessage": "Inserire un numero intero di massimo 4 cifre"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.quota_base_acquifero",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Quota della base dell'acquifero s.l.m. (m)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,4}$)",
+                      "customMessage": "Inserire un numero intero di massimo 4 cifre"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "columns_di_5",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_5",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Appartenenza ad un campo pozzi",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Pozzo artesiano",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.presa_alternativa",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Presa alternativa",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 50,
+                      "customMessage": "Il campo può contenere un massimo di 50 caratteri"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic_2",
+                "actions": [
+                  {
+                    "name": "enableAction_2",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet campoPozzi = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.appartenenza_campo_pozzi;\nlet pozzoArtes = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.pozzo_artesiano;\nresult = (!codScriva || !campoPozzi || !pozzoArtes);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "ESERCIZIO_DELLA_CAPTAZIONE",
+        "type": "panel",
+        "input": false,
+        "label": "Esercizio della captazione",
+        "title": "<strong>Esercizio della captazione</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "ESERCIZIO_DELLA_CAPTAZIONE.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": true
+          },
+          {
+            "key": "title_ec_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_ec_1",
+            "content": "<strong>Esercizio della captazione</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_ec_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_ec_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_massima",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Portata massima derivabile (l/s)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Indicare un massimo di 7 cifre intere e 4 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_media",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Portata media annua derivabile (l/s)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "custom": "valid = (Number(input.replace(',','.')) <= Number(data.ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_massima.replace(',','.'))) ? true : 'error'",
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Indicare un valore inferiore alla portata massima, utilizzando un massimo di 7 cifre intere e 4 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.volume_massimo",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Volume massimo di concessione (m<sup>3</sup>)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                      "customMessage": "Indicare un massimo di 9 cifre intere e 5 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "ESERCIZIO_DELLA_CAPTAZIONE.qta_risorsa_captata",
+            "type": "editgrid",
+            "input": true,
+            "label": "<strong>Quantità di risorsa prelevata dall'opera</strong>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "saveRow": "AGGIUNGI",
+            "validate": {
+              "required": true,
+              "customMessage": "Inserire almeno un periodo"
+            },
+            "removeRow": "ANNULLA",
+            "rowDrafts": false,
+            "tableView": false,
+            "templates": {
+              "row": "<div class=\"row\">\n      {% util.eachComponent(components, function(component) { %}\n        {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n          <div class=\"col-sm-2\">\n            {{ getView(component, row[component.key]) }}\n          </div>\n        {% } %}\n      {% }) %}\n      {% if (!instance.disabled) { %}\n        <div class=\"col-sm-2\">\n          <div class=\"btn-group pull-right\">\n            <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n            {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n              <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n            {% } %}\n          </div>\n        </div>\n      {% } %}\n    </div>"
+            },
+            "addAnother": "AGGIUNGI PERIODO",
+            "components": [
+              {
+                "key": "columns_ec_2",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ec_2",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_da",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Dal (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_a",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Al (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              },
+              {
+                "key": "columns_ec_3",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ec_3",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "q_massima",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata massima istantanea (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                          "customMessage": "Indicare un massimo di 7 cifre intere e 4 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "q_media",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata media (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "valid = (Number(input.replace(',','.')) <= Number(row.q_massima.replace(',','.'))) ? true : 'error'",
+                          "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                          "customMessage": "Indicare un valore inferiore alla portata massima, utilizzando un massimo di 7 cifre intere e 4 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "volume_max_anno",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Volume massimo annuo (m<sup>3</sup>)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                          "customMessage": "Indicare un massimo di 9 cifre intere e 5 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "save_ESERCIZIO_DELLA_CAPTAZIONE",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic_2",
+                "actions": [
+                  {
+                    "name": "enableAction_2",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "result = data.ESERCIZIO_DELLA_CAPTAZIONE.qta_risorsa_captata.length < 1;"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "DATI_STRUTTURALI",
+        "type": "panel",
+        "input": false,
+        "label": "Dati strutturali",
+        "title": "<strong>Dati strutturali</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "DATI_STRUTTURALI.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": true
+          },
+          {
+            "key": "title_ds_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_ds_1",
+            "content": "<strong>Dati strutturali</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_ds_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_ds_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_STRUTTURALI.dati_strutturali.data_costruzione",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Data di costruzione (gg/mm/aaaa)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "custom": "let isValid=true; \nif(input){\n  const d = moment(input,'DD/MM/YYYY');\n  isValid = d.isValid() ; \n} \n\n valid = isValid ? true : 'invalid';",
+                      "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])[/]\\d{4}$)",
+                      "customMessage": "Data non valida"
+                    },
+                    "tableView": true,
+                    "validateOn": "blur",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_STRUTTURALI.dati_strutturali.tipo_falda",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Superficiale",
+                          "value": "superficiale"
+                        },
+                        {
+                          "label": "Profonda",
+                          "value": "profonda"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Tipo falda",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "DATI_STRUTTURALI.diametro_colonna",
+            "type": "editgrid",
+            "input": true,
+            "label": "<strong>Valori del diametro della colonna</strong>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "saveRow": "AGGIUNGI",
+            "removeRow": "ANNULLA",
+            "rowDrafts": false,
+            "tableView": false,
+            "templates": {
+              "row": "<div class=\"row\">\n      {% util.eachComponent(components, function(component) { %}\n        {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n          <div class=\"col-sm-2\">\n            {{ getView(component, row[component.key]) }}\n          </div>\n        {% } %}\n      {% }) %}\n      {% if (!instance.disabled) { %}\n        <div class=\"col-sm-2\">\n          <div class=\"btn-group pull-right\">\n            <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n            {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n              <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n            {% } %}\n          </div>\n        </div>\n      {% } %}\n    </div>"
+            },
+            "addAnother": "AGGIUNGI TRATTO",
+            "components": [
+              {
+                "key": "columns_ds_2",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ds_2",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "tratto",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Tratto",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "required": true,
+                          "maxLength": 20,
+                          "customMessage": "Il campo è obbligatorio, univoco e può contenere un massimo di 20 caratteri"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "diametro",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Diametro (mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,4}$)|(^\\d{1,4}[,]\\d{1,2}$)",
+                          "required": true,
+                          "customMessage": "Il campo è obbligatorio e può contenere un massimo di 4 cifre intere e 2 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "profondita_da",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Profondità da (m)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,3}$)|(^\\d{1,3}[,]\\d{1,2}$)",
+                          "required": true,
+                          "customMessage": "Il campo è obbligatorio e può contenere un massimo di 3 cifre intere e 2 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "profondita_a",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Profondità a (m)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,3}$)|(^\\d{1,3}[,]\\d{1,2}$)",
+                          "required": true,
+                          "customMessage": "Il campo è obbligatorio e può contenere un massimo di 3 cifre intere e 2 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "save_DATI_STRUTTURALI",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic_2",
+                "actions": [
+                  {
+                    "name": "enableAction_2",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let data_costruzione_invalid=false; \nif(data.DATI_STRUTTURALI.dati_strutturali.data_costruzione){\n  const d = moment(data.DATI_STRUTTURALI.dati_strutturali.data_costruzione,'DD/MM/YYYY');\n  data_costruzione_invalid = !d.isValid() ; \n} \nresult = !data.DATI_STRUTTURALI.dati_strutturali.tipo_falda || data_costruzione_invalid;"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "POMPE_IDRAULICHE",
+        "type": "panel",
+        "input": false,
+        "label": "Pompe idrauliche",
+        "title": "<strong>Pompe idrauliche</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "POMPE_IDRAULICHE.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": false
+          },
+          {
+            "key": "POMPE_IDRAULICHE.pompe_idrauliche",
+            "type": "editgrid",
+            "input": true,
+            "label": "<strong>Pompe idrauliche</strong>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "saveRow": "AGGIUNGI",
+            "removeRow": "ANNULLA",
+            "rowDrafts": false,
+            "tableView": false,
+            "templates": {
+              "row": "<div class=\"row\">\n      {% util.eachComponent(components, function(component) { %}\n        {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n          <div class=\"col-sm-2\">\n            {{ getView(component, row[component.key]) }}\n          </div>\n        {% } %}\n      {% }) %}\n      {% if (!instance.disabled) { %}\n        <div class=\"col-sm-2\">\n          <div class=\"btn-group pull-right\">\n            <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n            {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n              <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n            {% } %}\n          </div>\n        </div>\n      {% } %}\n    </div>"
+            },
+            "addAnother": "AGGIUNGI POMPA",
+            "components": [
+              {
+                "key": "columns_pi_1",
+                "type": "columns",
+                "input": false,
+                "label": "columns_pi_1",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "pompa",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Pompa",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "required": true,
+                          "maxLength": 20,
+                          "customMessage": "Il campo è obbligatorio, univoco e può contenere un massimo di 20 caratteri"
+                        },
+                        "tableView": true,
+                        "customDefaultValue": "//if (data.POMPE_IDRAULICHE && data.POMPE_IDRAULICHE.pompe_idrauliche && data.POMPE_IDRAULICHE.pompe_idrauliche.length > 0) {\nif (data.POMPE_IDRAULICHE.pompe_idrauliche.length > 0) {\n  value = data.POMPE_IDRAULICHE.pompe_idrauliche[data.POMPE_IDRAULICHE.pompe_idrauliche.length - 1].pompa + 1;\n} else {\n  value = 1;\n}",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "potenza_motore",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Potenza del motore (kW))",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,2}$)",
+                          "customMessage": "Indicare un massimo di 7 cifre intere e 2 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "portata_max",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata massima estraibile (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,6}$)|(^\\d{1,6}[,]\\d{1,5}$)",
+                          "customMessage": "Indicare un massimo di 6 cifre intere e 5 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "prevalenza",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Prevalenza (m)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,5}$)|(^\\d{1,5}[,]\\d{1,2}$)",
+                          "customMessage": "Indicare un massimo di 5 cifre intere e 2 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "save_POMPE_IDRAULICHE",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      }
+    ]
+  },
+  "label": "Opere di captazione",
+  "componentName": "CaptazioniComponent",
+  "PRESA_DA_ACQUE_SUPERFICIALI": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "id_oggetto_istanza",
+        "type": "hidden",
+        "input": true,
+        "label": "idOggettoIstanza",
+        "tableView": true,
+        "customDefaultValue": "value = form.oggettoIstanza.id_oggetto_istanza;"
+      },
+      {
+        "key": "identificativo",
+        "type": "hidden",
+        "input": true,
+        "label": "identificativo",
+        "tableView": true,
+        "customDefaultValue": "value = form.oggetto.cod_scriva;"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "<strong>Presa {{form.oggetto.cod_scriva}}</strong>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "DATI_IDENTIFICATIVI",
+        "type": "panel",
+        "input": false,
+        "label": "Dati identificativi",
+        "title": "<strong>Dati identificativi</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "DATI_IDENTIFICATIVI.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": true
+          },
+          {
+            "key": "title_di_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_1",
+            "content": "<strong>Dati identificativi</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 8,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.denominazione",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Denominazione",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 500,
+                      "customMessage": "Il campo può contenere un massimo di 500 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggettoIstanza.den_oggetto;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.codice_scriva",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Codice ROC",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      },
+                      {
+                        "name": "enableLogic_2",
+                        "actions": [
+                          {
+                            "name": "enableAction_2",
+                            "type": "property",
+                            "state": true,
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "javascript",
+                          "simple": {
+                            "eq": "FO",
+                            "show": true,
+                            "when": "form.componente"
+                          },
+                          "javascript": "result = form.componente === 'FO';"
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "required": true,
+                      "maxLength": 50,
+                      "customMessage": "Il campo è obbligatorio e può contenere un massimo di 50 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggetto.cod_scriva;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_2",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_2",
+            "content": "<strong>Localizzazione dell'opera</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_2",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_2",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.comune",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Comune",
+                    "disabled": true,
+                    "tableView": false,
+                    "customDefaultValue": "value = form.oggettoIstanza.ubicazione_oggetto[0].comune.denom_comune;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.localita",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Località",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 250,
+                      "customMessage": "Il campo può contenere un massimo di 250 caratteri"
+                    },
+                    "tableView": true,
+                    "customDefaultValue": "value = form.oggettoIstanza.ubicazione_oggetto[0].des_localita;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_3",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_3",
+            "content": "Dati catastali:",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_3",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_3",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.cod_catastale",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Codice catastale",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].cod_belfiore;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.sezione",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Sezione",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].sezione;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.foglio",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Foglio",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].foglio;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 3,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "TODEL.DATI_IDENTIFICATIVI.particella",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Particella",
+                    "disabled": true,
+                    "tableView": true,
+                    "customDefaultValue": "let v=null;\nif(form.oggettoIstanza.ubicazione_oggetto \n&& form.oggettoIstanza.ubicazione_oggetto.length>0\n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali \n&& form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali.length>0\n){\n  v = form.oggettoIstanza.ubicazione_oggetto[0].dati_catastali[0].particella;   \n}\nvalue = v;",
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "title_di_4",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_di_4",
+            "content": "<strong>Altri elementi identificativi</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_di_4",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_4",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.sponda_opera",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Destra",
+                          "value": "destra"
+                        },
+                        {
+                          "label": "Sinistra",
+                          "value": "sinistra"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Sponda su cui insiste l'opera",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.gall_filtr_tub_dren",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Galleria filtrante o tubazione drenante",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.captazione_subalveo",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Captazione da subalveo",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "columns_di_5",
+            "type": "columns",
+            "input": false,
+            "label": "columns_di_5",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.presa_canale",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Presa da canale (sub-derivazione)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_IDENTIFICATIVI.altri_elementi_identificativi.presa_alternativa",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Presa alternativa codice ROC l.r. 22/99",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 50,
+                      "customMessage": "Il campo può contenere un massimo di 50 caratteri"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "save_DATI_IDENTIFICATIVI",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic_2",
+                "actions": [
+                  {
+                    "name": "enableAction_2",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "let codScriva = data.DATI_IDENTIFICATIVI.codice_scriva;\nlet sponda = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.sponda_opera;\nlet galleria = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.gall_filtr_tub_dren;\nlet subalveo = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.captazione_subalveo;\nlet canale = data.DATI_IDENTIFICATIVI.altri_elementi_identificativi.presa_canale;\nresult = (!codScriva || !sponda || !galleria || !subalveo || !canale);"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "ESERCIZIO_DELLA_CAPTAZIONE",
+        "type": "panel",
+        "input": false,
+        "label": "Esercizio della captazione",
+        "title": "<strong>Esercizio della captazione</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "ESERCIZIO_DELLA_CAPTAZIONE.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": false
+          },
+          {
+            "key": "title_ec_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_ec_1",
+            "content": "<strong>Esercizio della captazione</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_ec_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_ec_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_massima",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Portata massima derivabile (l/s)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Indicare un massimo di 7 cifre intere e 4 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_media",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Portata media annua derivabile (l/s)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "custom": "valid = (Number(input.replace(',','.')) <= Number(data.ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.q_massima.replace(',','.'))) ? true : 'error'",
+                      "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                      "customMessage": "Indicare un valore inferiore alla portata massima, utilizzando un massimo di 7 cifre intere e 4 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "ESERCIZIO_DELLA_CAPTAZIONE.esercizio_captazione.volume_massimo",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Volume massimo di concessione (m<sup>3</sup>)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                      "customMessage": "Indicare un massimo di 9 cifre intere e 5 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "ESERCIZIO_DELLA_CAPTAZIONE.qta_risorsa_captata",
+            "type": "editgrid",
+            "input": true,
+            "label": "<strong>Quantità di risorsa prelevata dall'opera</strong>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "saveRow": "AGGIUNGI",
+            "removeRow": "ANNULLA",
+            "rowDrafts": false,
+            "tableView": false,
+            "templates": {
+              "row": "<div class=\"row\">\n      {% util.eachComponent(components, function(component) { %}\n        {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n          <div class=\"col-sm-2\">\n            {{ getView(component, row[component.key]) }}\n          </div>\n        {% } %}\n      {% }) %}\n      {% if (!instance.disabled) { %}\n        <div class=\"col-sm-2\">\n          <div class=\"btn-group pull-right\">\n            <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n            {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n              <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n            {% } %}\n          </div>\n        </div>\n      {% } %}\n    </div>"
+            },
+            "addAnother": "AGGIUNGI PERIODO",
+            "components": [
+              {
+                "key": "columns_ec_2",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ec_2",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_da",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Dal (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_a",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Al (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              },
+              {
+                "key": "columns_ec_3",
+                "type": "columns",
+                "input": false,
+                "label": "columns_ec_3",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "q_massima",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata massima istantanea (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                          "customMessage": "Indicare un massimo di 7 cifre intere e 4 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "q_media",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata media (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "valid = (Number(input.replace(',','.')) <= Number(row.q_massima.replace(',','.'))) ? true : 'error'",
+                          "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                          "customMessage": "Indicare un valore inferiore alla portata massima, utilizzando un massimo di 7 cifre intere e 4 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 4,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "volume_max_anno",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Volume massimo annuo (m<sup>3</sup>)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                          "customMessage": "Indicare un massimo di 9 cifre intere e 5 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "save_ESERCIZIO_DELLA_CAPTAZIONE",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "RILASCIO_A_VALLE_DELLA_PRESA",
+        "type": "panel",
+        "input": false,
+        "label": "Rilascio a valle della presa",
+        "title": "<strong>Rilascio a valle della presa</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "RILASCIO_A_VALLE_DELLA_PRESA.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": true
+          },
+          {
+            "key": "title_rv_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_rv_1",
+            "content": "<strong>Rilascio a valle della presa</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_rv_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_rv_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "RILASCIO_A_VALLE_DELLA_PRESA.rilascio_a_valle_della_presa.dispositivi_rilascio",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Presenza dispositivi per il rilascio",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "validate": {
+                      "required": true,
+                      "customMessage": "Campo obbligatorio"
+                    },
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 6,
+                "offset": 0,
+                "components": []
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "RILASCIO_A_VALLE_DELLA_PRESA.rilascio_imposto",
+            "type": "editgrid",
+            "input": true,
+            "label": "<strong>Rilascio imposto</strong>",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "saveRow": "AGGIUNGI",
+            "removeRow": "ANNULLA",
+            "rowDrafts": false,
+            "tableView": false,
+            "templates": {
+              "row": "<div class=\"row\">\n      {% util.eachComponent(components, function(component) { %}\n        {% if (!component.hasOwnProperty('tableView') || component.tableView) { %}\n          <div class=\"col-sm-2\">\n            {{ getView(component, row[component.key]) }}\n          </div>\n        {% } %}\n      {% }) %}\n      {% if (!instance.disabled) { %}\n        <div class=\"col-sm-2\">\n          <div class=\"btn-group pull-right\">\n            <button class=\"btn btn-default btn-light btn-sm editRow\"><i class=\"{{ iconClass('pencil') }}\"></i></button>\n            {% if (!instance.hasRemoveButtons || instance.hasRemoveButtons()) { %}\n              <button class=\"btn btn-danger btn-sm removeRow\"><i class=\"{{ iconClass('trash') }}\"></i></button>\n            {% } %}\n          </div>\n        </div>\n      {% } %}\n    </div>"
+            },
+            "addAnother": "AGGIUNGI PERIODO",
+            "components": [
+              {
+                "key": "columns_rv_2",
+                "type": "columns",
+                "input": false,
+                "label": "columns_rv_2",
+                "columns": [
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_da",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Dal (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 2,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "periodo_a",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Al (gg/mm)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "custom": "const d = moment(input,'DD/MM');\n\nvalid = d.isValid() ? true : 'invalid';\n",
+                          "pattern": "(^([0-2]{0,1}[0-9]|3[0,1])[/]([1-9]|0[1-9]|1[0-2])$)",
+                          "required": true,
+                          "customMessage": "Data non valida"
+                        },
+                        "tableView": true,
+                        "validateOn": "blur",
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  },
+                  {
+                    "pull": 0,
+                    "push": 0,
+                    "size": "md",
+                    "width": 3,
+                    "offset": 0,
+                    "components": [
+                      {
+                        "key": "portata",
+                        "type": "textfield",
+                        "input": true,
+                        "label": "Portata (l/s)",
+                        "logic": [
+                          {
+                            "name": "enableLogic",
+                            "actions": [
+                              {
+                                "name": "enableAction",
+                                "type": "property",
+                                "state": "true",
+                                "property": {
+                                  "type": "boolean",
+                                  "label": "Disabled",
+                                  "value": "disabled"
+                                }
+                              }
+                            ],
+                            "trigger": {
+                              "type": "simple",
+                              "simple": {
+                                "eq": "DISABLED",
+                                "show": true,
+                                "when": "disableFlag"
+                              }
+                            }
+                          }
+                        ],
+                        "validate": {
+                          "pattern": "(^\\d{1,6}$)|(^\\d{1,6}[,]\\d{1,5}$)",
+                          "required": true,
+                          "customMessage": "Il campo è obbligatorio e può contenere un massimo di 6 cifre intere e 5 cifre decimali"
+                        },
+                        "tableView": true,
+                        "hideOnChildrenHidden": false
+                      }
+                    ]
+                  }
+                ],
+                "tableView": false
+              }
+            ]
+          },
+          {
+            "key": "columns_rv_2",
+            "type": "columns",
+            "input": false,
+            "label": "columns_rv_2",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "RILASCIO_A_VALLE_DELLA_PRESA.dmv_modulato",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "si"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "DMV modulato",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "RILASCIO_A_VALLE_DELLA_PRESA.tipologia_modulazione",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Tipo A 10%",
+                          "value": "tipo A 10%"
+                        },
+                        {
+                          "label": "Tipo A 20%",
+                          "value": "tipo A 20%"
+                        },
+                        {
+                          "label": "Tipo B",
+                          "value": "tipo B"
+                        },
+                        {
+                          "label": "Non specificato",
+                          "value": "non specificato"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Tipologia di modulazione",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "RILASCIO_A_VALLE_DELLA_PRESA.deroga_DMV",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sì",
+                          "value": "sì"
+                        },
+                        {
+                          "label": "No",
+                          "value": "no"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "In deroga al DMV",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "columns_rv_3",
+            "type": "columns",
+            "input": false,
+            "label": "columns_rv_3",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 8,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "RILASCIO_A_VALLE_DELLA_PRESA.ulteriori_obblighi",
+                    "rows": 2,
+                    "type": "textarea",
+                    "input": true,
+                    "label": "Specificare ulteriori obblighi, se presenti",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "maxLength": 500,
+                      "customMessage": "Il campo può contenere un massimo di 500 caratteri"
+                    },
+                    "tableView": true,
+                    "autoExpand": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "save_RILASCIO_A_VALLE_DELLA_PRESA",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic_2",
+                "actions": [
+                  {
+                    "name": "enableAction_2",
+                    "type": "property",
+                    "state": true,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "javascript",
+                  "javascript": "result = !data.RILASCIO_A_VALLE_DELLA_PRESA.rilascio_a_valle_della_presa.dispositivi_rilascio;"
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      },
+      {
+        "key": "DATI_INFRASTRUTTURALI",
+        "type": "panel",
+        "input": false,
+        "label": "Dati infrastrutturali",
+        "title": "<strong>Dati infrastrutturali</strong>",
+        "collapsed": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "DATI_INFRASTRUTTURALI.mandatory",
+            "type": "hidden",
+            "input": true,
+            "label": "mandatoryFlg",
+            "tableView": true,
+            "defaultValue": false
+          },
+          {
+            "key": "title_inf_1",
+            "type": "htmlelement",
+            "input": false,
+            "label": "title_inf_1",
+            "content": "<strong>Sbarramento</strong>",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "columns_inf_1",
+            "type": "columns",
+            "input": false,
+            "label": "columns_inf_1",
+            "columns": [
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_INFRASTRUTTURALI.sbarramento.tipologia",
+                    "data": {
+                      "values": [
+                        {
+                          "label": "Sbarramento precario",
+                          "value": "sbarramento precario"
+                        },
+                        {
+                          "label": "Traverse con organi di regolazione",
+                          "value": "traverse con organi di regolazione"
+                        },
+                        {
+                          "label": "Traverse senza organi di regolazione",
+                          "value": "traverse senza organi di regolazione"
+                        },
+                        {
+                          "label": "Altro sbarramento",
+                          "value": "altro sbarramento"
+                        },
+                        {
+                          "label": "Piccola diga",
+                          "value": "piccola diga"
+                        },
+                        {
+                          "label": "Grande diga",
+                          "value": "grande diga"
+                        },
+                        {
+                          "label": "Non definito",
+                          "value": "non definito"
+                        }
+                      ]
+                    },
+                    "type": "select",
+                    "input": true,
+                    "label": "Tipologia",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "widget": "choicesjs",
+                    "tableView": true,
+                    "placeholder": "Seleziona",
+                    "searchEnabled": false,
+                    "selectThreshold": 0.3,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_INFRASTRUTTURALI.sbarramento.altezza",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Altezza",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,4}$)|(^\\d{1,4}[,]\\d{1,2}$)",
+                      "customMessage": "Indicare un massimo di 4 cifre intere e 2 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              },
+              {
+                "pull": 0,
+                "push": 0,
+                "size": "md",
+                "width": 4,
+                "offset": 0,
+                "components": [
+                  {
+                    "key": "DATI_INFRASTRUTTURALI.sbarramento.volume_invaso",
+                    "type": "textfield",
+                    "input": true,
+                    "label": "Volume max d'invaso (m<sup>3</sup>)",
+                    "logic": [
+                      {
+                        "name": "enableLogic",
+                        "actions": [
+                          {
+                            "name": "enableAction",
+                            "type": "property",
+                            "state": "true",
+                            "property": {
+                              "type": "boolean",
+                              "label": "Disabled",
+                              "value": "disabled"
+                            }
+                          }
+                        ],
+                        "trigger": {
+                          "type": "simple",
+                          "simple": {
+                            "eq": "DISABLED",
+                            "show": true,
+                            "when": "disableFlag"
+                          }
+                        }
+                      }
+                    ],
+                    "validate": {
+                      "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,2}$)",
+                      "customMessage": "Indicare un massimo di 9 cifre intere e 2 cifre decimali"
+                    },
+                    "tableView": true,
+                    "hideOnChildrenHidden": false
+                  }
+                ]
+              }
+            ],
+            "tableView": false
+          },
+          {
+            "key": "save_DATI_INFRASTRUTTURALI",
+            "type": "button",
+            "event": "saveBtnClick",
+            "input": true,
+            "label": "SALVA MODIFICHE",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "theme": "default",
+            "action": "event",
+            "tableView": false,
+            "customClass": "btn-outline-primary float-right",
+            "showValidations": false
+          }
+        ],
+        "collapsible": true
+      }
+    ]
+  }
+}

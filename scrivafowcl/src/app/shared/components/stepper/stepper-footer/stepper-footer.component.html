@@ -1,0 +1,21 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="buttons-container">
+    <div class="next">
+        <button class="btn btn-large btn-success btn-avanti" [disabled]="disableNext" *ngIf="showNext" (click)="onAvanti()">
+            AVANTI
+        </button>
+    </div>
+    <div class="previous">
+        <button class="btn btn-large btn-link" *ngIf="showPrevious" (click)="onIndietro()">
+            INDIETRO
+        </button>
+    </div>
+</div>

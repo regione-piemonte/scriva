@@ -1,0 +1,200 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- FORM GROUP -->
+<div
+  class="form-group scriva-form-group"
+  [ngClass]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+  [ngStyle]="cssConfig.customForm | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+>
+  <!-- LABEL -->
+  <scriva-input-label
+    [cssConfig]="cssConfig"
+    [dataConfig]="dataConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [idDOM]="idDOM"
+    [disableRequiredCheck]="disableRequired"
+  ></scriva-input-label>
+
+  <!-- CONTENITORE PER LA INPUT -->
+  <div class="row s-m--0 s-p--0">
+    <!-- COLONNA LABEL DI SINISTRA -->
+    <div
+      class="col-auto s-m--0 s-mr--15 s-p--0"
+      *scrivaMaintain="labelLeftTmpl"
+      [ngClass]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_CLASS"
+      [ngStyle]="cssConfig.labelColLeft | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelLeft"
+      ></scriva-input-label>
+    </div>
+
+    <!-- COLONNA DELLA INPUT -->
+    <div class="col s-m--0 s-p--0">
+      <!-- CONTAINER PER IL REFRESH DEL DOM -->
+      <ng-container *ngIf="refreshDOM">
+        <ng-container *ngTemplateOutlet="scrivaSelectTmpl"></ng-container>
+        <ng-container
+          *ngTemplateOutlet="scrivaSelectMultipleTmpl"
+        ></ng-container>
+      </ng-container>
+    </div>
+
+    <!-- COLONNA LABEL DI DESTRA -->
+    <div
+      class="col-auto s-m--0 s-ml--15 s-p--0"
+      *scrivaMaintain="labelRightTmpl"
+      [ngClass]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_CLASS
+      "
+      [ngStyle]="
+        cssConfig.labelColRight | scrivaCssHandler : C_C.CSS_TYPE_STYLE
+      "
+    >
+      <scriva-input-label
+        [cssConfig]="cssConfig"
+        [dataConfig]="dataConfig"
+        [idFormControl]="idFC"
+        [formGroup]="formGroup"
+        [idDOM]="idDOM"
+        [disableRequiredCheck]="disableRequired"
+        [position]="labelRight"
+      ></scriva-input-label>
+    </div>
+  </div>
+
+  <!-- FORM CONTROL - GESTIONE ERRORI -->
+  <scriva-form-control-error
+    [cssConfig]="cssConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [errMapFormControl]="mappaErroriFC"
+    [formSubmitted]="formSubmitted"
+    [ignoreDefault]="ignoreDefault"
+  ></scriva-form-control-error>
+  <!-- FORM GROUP - GESTIONE ERRORI -->
+  <scriva-form-group-error
+    [cssConfig]="cssConfig"
+    [formGroup]="formGroup"
+    [errMapFormGroup]="mappaErroriFG"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-group-error>
+</div>
+
+<!-- TEMPLATE SELECT -->
+<ng-template #scrivaSelectTmpl>
+  <!-- SELECT -->
+  <div *scrivaRemove="dataConfig.multiple">
+    <select
+      [id]="idDOM"
+      [name]="idFC"
+      [(ngModel)]="_value"
+      [disabled]="disabled"
+      #scrivaSelectRef
+      class="custom-select scriva-input-border ellipsis"
+      [ngClass]="[
+        cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_CLASS,
+        checkValidation &&
+        ((cssConfig.showErrorFC &&
+          formControl.invalid &&
+          (formSubmitted || formControl.dirty || formControl.touched)) ||
+          (cssConfig.showErrorFG &&
+            formGroup.invalid &&
+            formErrors &&
+            (formSubmitted || formGroup.dirty || formGroup.touched)))
+          ? 'scriva-input-border-error'
+          : '',
+        conditionalClass
+      ]"
+      [ngStyle]="cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_STYLE"
+      (change)="onSelectChange(); scrivaSelectRef.blur()"
+    >
+      <option
+        *ngFor="let element of source"
+        class="ellipsis"
+        [ngValue]="element"
+        [title]="
+          element | scrivaOptionValue : propertyToShow : dataConfig.customOption
+        "
+        [disabled]="element.__disabled"
+        [selected]="element.__selected"
+        [ngClass]="
+          (dataConfig.customOptionClass | scrivaExecute : element) || []
+        "
+        [ngStyle]="
+          (dataConfig.customOptionStyle | scrivaExecute : element) || {}
+        "
+      >
+        {{
+          element | scrivaOptionValue : propertyToShow : dataConfig.customOption
+        }}
+      </option>
+    </select>
+  </div>
+</ng-template>
+
+<!-- TEMPLATE SELECT MULTIPLA -->
+<ng-template #scrivaSelectMultipleTmpl>
+  <!-- MULTI SELECT -->
+  <div *scrivaMaintain="dataConfig.multiple">
+    <select
+      multiple
+      [id]="idDOM"
+      [name]="idFC"
+      [(ngModel)]="_value"
+      [disabled]="disabled"
+      #scrivaSelectRef
+      class="custom-select scriva-input-border"
+      [ngClass]="[
+        cssConfig.customInput !== undefined ? cssConfig.customInput : '',
+        checkValidation &&
+        ((cssConfig.showErrorFC &&
+          formControl.invalid &&
+          (formSubmitted || formControl.dirty || formControl.touched)) ||
+          (cssConfig.showErrorFG &&
+            formGroup.invalid &&
+            formErrors &&
+            (formSubmitted || formGroup.dirty || formGroup.touched)))
+          ? 'scriva-input-border-error'
+          : '',
+        conditionalClass
+      ]"
+      (change)="onSelectChange()"
+    >
+      <option
+        *ngFor="let element of source"
+        class="ellipsis"
+        [ngValue]="element"
+        [title]="
+          element | scrivaOptionValue : propertyToShow : dataConfig.customOption
+        "
+        [disabled]="element.__disabled"
+        [selected]="element.__selected"
+        [ngClass]="
+          (dataConfig.customOptionClass | scrivaExecute : element) || []
+        "
+        [ngStyle]="
+          (dataConfig.customOptionStyle | scrivaExecute : element) || {}
+        "
+      >
+        {{
+          element | scrivaOptionValue : propertyToShow : dataConfig.customOption
+        }}
+      </option>
+    </select>
+  </div>
+</ng-template>

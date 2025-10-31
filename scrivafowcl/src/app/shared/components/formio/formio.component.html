@@ -1,0 +1,24 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<div class="card" id="formContainer">
+  <formio #ngFormio id="form"
+    [form]="customForm"
+    [refresh]="triggerRefresh"
+    [submission]="submission"
+    [readOnly]="readOnly"
+    [options]="formioOptions"
+    [renderOptions]="renderOptions"
+    (customEvent)="onCustomEvent($event)"
+    (change)="onChange($event)"
+  ></formio>
+</div>
+

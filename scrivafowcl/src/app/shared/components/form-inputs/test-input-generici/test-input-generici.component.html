@@ -1,0 +1,142 @@
+APP INPUT GENERICI
+<form [formGroup]="mainForm">
+  <scriva-checkbox
+    [formControlName]="TEST_CONSTS.CHECKBOX_FORM"
+    [idFormControl]="TEST_CONSTS.CHECKBOX_FORM"
+    [cssConfig]="formInputs.testInputCheckboxConfig.css"
+    [dataConfig]="formInputs.testInputCheckboxConfig.data"
+    [dataSource]="formInputs.testInputCheckboxConfig.source"
+    [formGroup]="mainForm"
+    [onlyLastValue]="true"
+  >
+  </scriva-checkbox>
+
+  <scriva-datepicker
+    [formControlName]="TEST_CONSTS.DATE_FORM"
+    [idFormControl]="TEST_CONSTS.DATE_FORM"
+    [cssConfig]="formInputs.testInputDateConfig.css"
+    [dataConfig]="formInputs.testInputDateConfig.data"
+    [formGroup]="mainForm"
+  >
+  </scriva-datepicker>
+
+  <scriva-email
+    [formControlName]="TEST_CONSTS.EMAIL_FORM"
+    [cssConfig]="formInputs.testInputEmailConfig.css"
+    [dataConfig]="formInputs.testInputEmailConfig.data"
+    [idFormControl]="TEST_CONSTS.EMAIL_FORM"
+    [formGroup]="mainForm"
+    [errMapFormControl]="EM.MAP_FORM_CONTROL_REQUIRED"
+    [formSubmitted]="mainFormSubmitted"
+    [disableRequiredCheck]="false"
+  ></scriva-email>
+
+  <scriva-number
+    [formControlName]="TEST_CONSTS.NUMBER_FORM"
+    [idFormControl]="TEST_CONSTS.NUMBER_FORM"
+    [cssConfig]="formInputs.testInputNumberConfig.css"
+    [dataConfig]="formInputs.testInputNumberConfig.data"
+    [formGroup]="mainForm"
+  >
+  </scriva-number>
+
+  <scriva-number-formatted
+    [formControlName]="TEST_CONSTS.NUMBER_FORMATTED_FORM"
+    [idFormControl]="TEST_CONSTS.NUMBER_FORMATTED_FORM"
+    [cssConfig]="formInputs.testInputNumberFormattedConfig.css"
+    [dataConfig]="formInputs.testInputNumberFormattedConfig.data"
+    [formGroup]="mainForm"
+  ></scriva-number-formatted>
+
+  <scriva-number-it-format
+    [formControlName]="TEST_CONSTS.NUMBER_IT_FORMATTED_FORM"
+    [idFormControl]="TEST_CONSTS.NUMBER_IT_FORMATTED_FORM"
+    [cssConfig]="formInputs.testInputNumberItFormatConfig.css"
+    [dataConfig]="formInputs.testInputNumberItFormatConfig.data"
+    [errMapFormControl]="EM.MAP_FORM_CONTROL_REQUIRED"
+    [formGroup]="mainForm"
+    [formSubmitted]="mainFormSubmitted"
+    [disableRequiredCheck]="false"
+    [truncate]="true"
+  >
+  </scriva-number-it-format>
+
+  <scriva-radio
+    [formControlName]="TEST_CONSTS.RADIO_FORM"
+    [idFormControl]="TEST_CONSTS.RADIO_FORM"
+    [formGroup]="mainForm"
+    [cssConfig]="formInputs.testInputRadioConfig.css"
+    [dataConfig]="formInputs.testInputRadioConfig.data"
+    [dataSource]="formInputs.testInputRadioConfig.source"
+  >
+  </scriva-radio>
+
+  <scriva-search
+    [formControlName]="TEST_CONSTS.SEARCH_FORM"
+    [cssConfig]="formInputs.testInputSearchConfig.css"
+    [dataConfig]="formInputs.testInputSearchConfig.data"
+    [idFormControl]="TEST_CONSTS.SEARCH_FORM"
+    [formGroup]="mainForm"
+    [errMapFormControl]="EM.MAP_FORM_CONTROL_REQUIRED"
+    [formSubmitted]="mainFormSubmitted"
+  >
+  </scriva-search>
+
+  <scriva-select
+    [formControlName]="TEST_CONSTS.ANNO_FORM"
+    [cssConfig]="formInputs.testInputSelectConfig.css"
+    [dataConfig]="formInputs.testInputSelectConfig.data"
+    [idFormControl]="TEST_CONSTS.ANNO_FORM"
+    [formGroup]="mainForm"
+    [errMapFormControl]="EM.MAP_FORM_CONTROL_REQUIRED"
+    [formSubmitted]="mainFormSubmitted"
+    [dataSource]="listaAnni"
+    [propertyToShow]="TEST_CONSTS.PROPERTY_ANNO"
+    [disableRequiredCheck]="false"
+    [listenToRefreshData]="true"
+  >
+  </scriva-select>
+
+  <scriva-text
+    [formControlName]="TEST_CONSTS.TEXT_FORM"
+    [idFormControl]="TEST_CONSTS.TEXT_FORM"
+    [cssConfig]="formInputs.testInputTextConfig.css"
+    [dataConfig]="formInputs.testInputTextConfig.data"
+    [formGroup]="mainForm"
+  >
+  </scriva-text>
+
+  <scriva-text-fake
+    [formControlName]="TEST_CONSTS.TEXT_FAKE_FORM"
+    [idFormControl]="TEST_CONSTS.TEXT_FAKE_FORM"
+    [cssConfig]="formInputs.testInputTextFakeConfig.css"
+    [dataConfig]="formInputs.testInputTextFakeConfig.data"
+    [formGroup]="mainForm"
+  >
+  </scriva-text-fake>
+
+  <scriva-textarea
+    [formControlName]="TEST_CONSTS.TEXTAREA_FORM"
+    [idFormControl]="TEST_CONSTS.TEXTAREA_FORM"
+    [cssConfig]="formInputs.testInputTextareaConfig.css"
+    [dataConfig]="formInputs.testInputTextareaConfig.data"
+    [formGroup]="mainForm"
+    [formSubmitted]="mainFormSubmitted"
+    [errMapFormGroup]="EM.MAP_FORM_GROUP_REQUIRED"
+  >
+  </scriva-textarea>
+
+  <scriva-typeahead
+    [formControlName]="TEST_CONSTS.TYPEAHEAD_FORM"
+    [cssConfig]="formInputs.testInputTypeaheadConfig.css"
+    [dataConfig]="formInputs.testInputTypeaheadConfig.data"
+    [idFormControl]="TEST_CONSTS.TYPEAHEAD_FORM"
+    [formGroup]="mainForm"
+    [errMapFormControl]="EM.MAP_FORM_CONTROL_REQUIRED"
+    [formSubmitted]="mainFormSubmitted"
+    [allowUserInput]="false"
+    [autoCompleteOnBlur]="true"
+    [disableRequiredCheck]="false"
+    [toUpperCase]="true"
+  ></scriva-typeahead>
+</form>

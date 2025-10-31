@@ -1,0 +1,54 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">Dettaglio informazioni</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onClose()"></i>
+</div>
+
+<div class="content" [id]="ALERT_TARGET_MODALE">
+  <ng-container *ngIf="validFormIo">
+    <formio #ngFormio id="form"
+      [form]="customForm"
+      [submission]="formioSubmission"
+      [refresh]="triggerRefresh"
+      [readOnly]="readOnlyFormIo"
+      [options]="formioOptions"
+      [renderOptions]="renderOptions"
+      (customEvent)="onCustomEvent($event)"
+      (change)="onFormioChange($event)"
+      (ready)="onFormioReady($event)"
+    ></formio>
+  </ng-container>
+</div>
+
+<div class="modal-footer">
+  <div class="row" *ngIf="showChiudi">
+    <div class="col-md-auto push-right">
+      <button type="button" class="btn btn-large btn-primary" (click)="onClose()">
+        CHIUDI
+      </button>
+    </div>
+  </div>
+  <div class="row" *ngIf="!showChiudi && showModalSalva">
+    <div class="col-auto">
+      <button type="button" class="btn btn-large btn-link" (click)="onClose(true)">
+        ANNULLA
+      </button>
+    </div>
+    <div class="col">
+      <!-- RIEMPITIVO ADATTABILE -->
+    </div>
+    <div class="col-auto">
+      <button type="button" class="btn btn-large btn-primary" (click)="onSaveChanges()">
+        SALVA MODIFICHE
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,192 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">Dati procedimento</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onClose()"></i>
+</div>
+
+<div class="content" id="formInserisciInfoGenerali">
+  <form [formGroup]="formInserisciInfoGenerali">
+    <ng-container
+      *ngTemplateOutlet="
+        formInfoGenerali;
+        context: {
+          formGroup: formInserisciInfoGenerali
+        }
+      "
+    ></ng-container>
+  </form>
+
+  <p><small class="form-text text-muted">*Campo obbligatorio</small></p>
+</div>
+
+<div class="modal-footer">
+  <div class="row">
+    <div class="col-md-auto push-left">
+      <button
+        type="button"
+        class="btn btn-large btn-link"
+        (click)="onClose()"
+      >
+        ANNULLA
+      </button>
+    </div>
+    <div class="col-md-auto push-right">
+      <button
+        type="button"
+        class="btn btn-large btn-primary"
+        [disabled]="!isEditing || dateError || !formInserisciInfoGenerali?.valid"
+        (click)="onConferma()"
+      >
+        CONFERMA
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #formInfoGenerali let-formGroup="formGroup">
+
+  <h3 class="title">Dati protocollazione</h3>
+  <div class="row">
+    <div class="form-group col-md-6 col-xl-2">
+      <label for="dataProtocollo">Data di protocollo</label>
+      <input
+        onkeydown="return false"
+        [formControl]="formGroup.get('dataProtocollo')"
+        type="date"
+        class="form-control"
+        id="dataProtocollo"
+        max="{{ today | date: 'yyyy-MM-dd' }}"
+      />
+    </div>
+    <div class="form-group col-md-6 col-xl-3">
+      <label for="numeroProtocollo">Numero di protocollo</label>
+      <input
+        [formControl]="formGroup.get('numeroProtocollo')"
+        type="text"
+        class="form-control"
+        id="numeroProtocollo"
+      />
+    </div>
+  </div>
+  
+  <h3 *ngIf="showOsservazioni" class="title">Periodo osservazioni</h3>
+  <div *ngIf="showOsservazioni" class="row">
+    <div class="form-group col-md-6 col-xl-2">
+      <label for="dataInizio_PO">Data inizio</label>
+      <input
+        [formControl]="formGroup.get('dataInizio_PO')"
+        type="date"
+        class="form-control"
+        id="dataInizio_PO"
+        (change)="checkDataFineInizio()"
+      />
+    </div>
+    <div class="form-group col-md-6 col-xl-2">
+      <label for="dataFine_PO">Data fine</label>
+      <input
+        [formControl]="formGroup.get('dataFine_PO')"
+        type="date"
+        class="form-control"
+        id="dataFine_PO"
+        (change)="checkDataFineInizio()"
+      />
+      <div *ngIf="dateError" class="error-message">
+        Data fine non può essere antecedente alla data inizio
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col-md-6 col-xl-2">
+      <label for="termineProcedimento_PO">Termine procedimento</label>
+      <input
+        [formControl]="formGroup.get('termineProcedimento_PO')"
+        type="date"
+        class="form-control"
+        id="termineProcedimento_PO"
+      />
+    </div>
+    <div class="form-group col-sm-6 col-xl-2">
+      <label for="dataPubblicazione_PO">Data pubblicazione</label>
+      <input
+        [formControl]="formGroup.get('dataPubblicazione_PO')"
+        type="date"
+        class="form-control"
+        id="dataPubblicazione_PO"
+      />
+    </div>
+  </div>
+
+  <advanced-action-responsabili
+    *ngIf="istanza && tipiResponsabile"  
+    [isRiepilogoModal]="'true'"
+    [istanza]="istanza"
+    [responsabili]="responsabili"
+    [tipiResponsabile]="tipiResponsabile"
+    [istanzaCompetenzaList]="istanzaCompetenzaList"
+    (emit)="emitEventChild($event)"
+  >
+  </advanced-action-responsabili>
+
+  <advanced-action-integrazioni
+    *ngIf="istanza && integrazioni && integrazioni.length>0"  
+    [isRiepilogoModal]="'true'"
+    [istanza]="istanza"
+    [integrazioni]="integrazioni"
+    (emit)="emitEventChild($event)"
+  >
+  </advanced-action-integrazioni>
+
+  <!-- TABELLA Concludi Procedimento -->
+  <div *ngIf="isPresentEndingProcess" class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Concludi Procedimento</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Esito procedimento</td>
+          <td>
+            <select
+              [formControl]="formInserisciInfoGenerali.get('esitoProcedimento_CP')"
+              class="form-control"
+              [compareWith]="compareEsitoProcedimento"
+              style="max-width: 180px;"
+            >
+              <option [value]="null" class="option-hidden">Seleziona</option>
+              <option *ngFor="let esito of listEsitoProcedura" [ngValue]="esito">
+                {{ esito.des_esito_procedimento }}
+              </option>
+            </select>
+            <app-form-error-message
+              [control]="this.formInserisciInfoGenerali.get('esitoProcedimento_CP')"
+            ></app-form-error-message>
+          </td>
+        </tr>
+
+        <tr>
+          <td>Data Provvedimento conclusivo</td>
+          <td>
+            <input [formControl]="formInserisciInfoGenerali.get('dataConclusione_CP')"
+                    type="date"
+                    class="form-control"
+                    style="max-width: 180px;"
+                    />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</ng-template>

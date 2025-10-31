@@ -1,0 +1,33 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="row" *ngIf="checkNotificheApplicative">
+    <ng-container *ngFor="let notificaApplicativa of notificheApplicative;">
+        <div class="col-xl-4 col-md-6 mb-4">
+            <scriva-notifica-card 
+                [notifica]="notificaApplicativa"
+                (onNotificaCancellata)="onNotificaCancellata($event)"
+                (onNotificaLetta)="onNotificaLetta($event)"
+                (onDettaglioNotifica)="onDettaglioNotifica($event)"
+                (onVaiAlProcedimento)="navigateToPratica($event)"
+            >
+
+            </scriva-notifica-card>
+        </div>
+    </ng-container>
+</div>
+<div class="see-all" *ngIf="isEnableVediTutte">
+    <button (click)="navigateToNotifiche()" type="button" class="btn btn-link">Vedi tutte</button>
+</div>
+<!-- ANCHOR PER GLI ALERT DELLA PAGINA -->
+<div class="row">
+    <div class="col">
+        <div class="alert-anchor" [id]="ALERT_ANCHOR"></div>
+    </div>
+</div>

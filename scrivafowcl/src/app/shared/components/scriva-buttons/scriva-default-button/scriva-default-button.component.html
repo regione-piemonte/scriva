@@ -1,0 +1,22 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- PULSANTE NORMALE -->
+<ng-container>
+  <!-- PULSANTE -->
+  <button type="button" class="btn"
+    [attr.title]="dataConfig?.label || ''"
+    [disabled]="disabled"
+    [ngClass]="[(cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_CLASS), scrivaButtonTypes.default]"
+    [ngStyle]="cssConfig?.customButton | scrivaCssHandler:C_C.CSS_TYPE_STYLE"
+    (click)="onClick.emit()"
+  >
+    {{ dataConfig?.label || '' }}
+  </button>
+</ng-container>

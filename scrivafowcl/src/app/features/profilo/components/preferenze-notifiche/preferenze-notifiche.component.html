@@ -1,0 +1,28 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<ng-container *ngIf="checkPreferenzeNotifiche">
+  <ng-container *ngFor="let preferenzaNotifica of preferenzeNotifiche; index as i; last as isLast">
+
+    <scriva-preferenza-notifica
+      [preferenzaNotifica]="preferenzaNotifica"
+      (preferenzaChanged)="onPreferenzaNotificaChanged($event)"
+    ></scriva-preferenza-notifica>
+
+    <!-- SE NON E' L'ULTIMO ELEMENTO CICLATO, AGGIUNGO UN SEPARATORE -->
+    <ng-container *ngIf="!isLast">
+      <hr>
+    </ng-container>
+
+  </ng-container>
+</ng-container>
+
+<ng-container *ngIf="!checkPreferenzeNotifiche">
+  Non sono presenti configurazioni per la gestione notifiche dell'utente compilante.
+</ng-container>

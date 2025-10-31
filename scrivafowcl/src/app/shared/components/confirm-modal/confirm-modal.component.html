@@ -1,0 +1,26 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">{{ data.title }}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="activeModal.close(-1)"></i>
+</div>
+<div class="modal-body">
+  <span [innerHTML]="data.content"></span>
+</div>
+<div class="modal-footer" *ngIf="data.buttons.length > 0">
+  <button
+    *ngFor="let b of data.buttons; index as i"
+    type="button"
+    [class]="'btn btn-large ' + b?.type"
+    (click)="activeModal.close(i)"
+  >
+    {{ b.label }}
+  </button>
+</div>

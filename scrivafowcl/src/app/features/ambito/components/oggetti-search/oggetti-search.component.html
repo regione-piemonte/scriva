@@ -1,0 +1,95 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="card col-xl-8" id="searchFormCard">
+  <div style="display: none;">
+    {{ qdrOggettoConfig | json }}
+  </div>
+  <span class="help-box">
+    <p class="text-only" [innerHTML]="helpText">
+
+    </p>
+    <button *ngIf="helpModalText" class="btn btn-primary help-btn" (click)="onHelpClicked()" aria-label="help">
+      <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+    </button>
+  </span>
+  <form [formGroup]="ricercaForm" (ngSubmit)="oggettiSearchFormSubmit()">
+    <div class="row">
+      <div class="form-group col-md" *ngIf="criteriRicerca.provincia | mostraCriterioRicerca">
+        <label for="provincia"
+          [innerHTML]="criteriRicerca.provincia | labelCriterioRicerca">
+        </label>
+        <select class="form-control" [name]="provinciaFCN" [id]="provinciaFCN" [formControlName]="provinciaFCN">
+          <option [value]="" class="option-hidden">{{ COMMON_CONST.DEFAULT_SELECT_VALUE }}</option>
+          <option [ngValue]="provincia" *ngFor="let provincia of province">
+            {{provincia.denom_provincia}}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group col-md" *ngIf="criteriRicerca.id_comune | mostraCriterioRicerca">
+        <label for="id_comune"
+          [innerHTML]="criteriRicerca.id_comune | labelCriterioRicerca">
+        </label>
+        <select class="form-control" [name]="comuneFCN" [id]="comuneFCN" [formControlName]="comuneFCN">
+          <option [value]="" class="option-hidden">{{ COMMON_CONST.DEFAULT_SELECT_VALUE }}</option>
+          <option [ngValue]="comune.id_comune" *ngFor="let comune of ricercaComuniList"> {{comune.denom_comune}}
+          </option>
+        </select>
+        <app-form-error-message [control]="this.ricercaForm.get(comuneFCN)"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md" *ngIf="criteriRicerca.cf_soggetto | mostraCriterioRicerca">
+        <label for="cf_soggetto" 
+          [innerHTML]="criteriRicerca.cf_soggetto | labelCriterioRicerca"
+        ></label>
+        <select class="form-control"
+          [name]="codiceFiscaleSoggettoFCN"
+          [id]="codiceFiscaleSoggettoFCN"
+          [formControlName]="codiceFiscaleSoggettoFCN"
+          (change)="soggettoChanged();"
+        >
+          <option [value]="emptyValue" class="option-hidden">
+            {{ COMMON_CONST.DEFAULT_SELECT_VALUE }}
+          </option>
+          <option [ngValue]="soggetto" *ngFor="let soggetto of setSoggettiLogic$ | async">
+            <div [innerHTML]="descrizioneSoggettiLogic | scrivaExecute:soggetto"></div>
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div *ngFor="let criterio_ricerca of criteriRicerca | keyvalue" class="row ">
+      <ng-container *ngIf="criterio_ricerca?.key">
+        <!-- Comune e provincia sono casi particolari -->
+        <div class="form-group col-md" *ngIf="criterio_ricerca.value | mostraCriterioRicercaGenerico:criterio_ricerca.key">
+          <label [for]="criterio_ricerca.key"
+            [innerHTML]="criterio_ricerca.value | labelCriterioRicerca">
+          </label>
+          <input type="text" class="form-control" [id]="criterio_ricerca.key" [formControlName]="criterio_ricerca.key" />
+          <app-form-error-message [control]="ricercaForm.get(criterio_ricerca.key)"></app-form-error-message>
+        </div>
+      </ng-container>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md">
+        <small class="form-text text-muted">*Campo obbligatorio</small>
+      </div>
+      <div class="form-group col-md d-flex justify-content-end">
+        <button class="btn btn-outline-primary btn-cerca" type="submit" [disabled]="!enabled">
+          CERCA
+        </button>
+      </div>
+    </div>
+
+  </form>
+</div>

@@ -1,0 +1,365 @@
+{
+  "label": "Dati generali",
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "Compila i dati generali della richiesta di concessione.",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "string_campo_obbligatorio",
+        "tag": "small",
+        "type": "htmlelement",
+        "input": false,
+        "label": "string_campo_obbligatorio",
+        "content": "*Campo obbligatorio",
+        "className": "text-muted",
+        "tableView": false,
+        "customClass": "form-text",
+        "refreshOnChange": false
+      },
+      {
+        "key": "section_title_dati",
+        "tag": "div",
+        "type": "htmlelement",
+        "attrs": [
+          {
+            "attr": "style",
+            "value": "margin-top: 2rem;"
+          }
+        ],
+        "input": false,
+        "label": "section_title_dati",
+        "content": "<b>Dati identificativi</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "datiColumns",
+        "type": "columns",
+        "input": false,
+        "label": "Columns",
+        "columns": [
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": [
+              {
+                "key": "JS_DATI_IDENTIFICATIVI.specie_der",
+                "data": {
+                  "values": [
+                    {
+                      "label": "Grande",
+                      "value": "Grande"
+                    },
+                    {
+                      "label": "Piccola",
+                      "value": "Piccola"
+                    },
+                    {
+                      "label": "Licenza di attingimento",
+                      "value": "Licenza_di_attingimento"
+                    }
+                  ]
+                },
+                "type": "select",
+                "input": true,
+                "label": "Specie della derivazione",
+                "logic": [
+                  {
+                    "name": "enableLogic",
+                    "actions": [
+                      {
+                        "name": "enableAction",
+                        "type": "property",
+                        "state": "true",
+                        "property": {
+                          "type": "boolean",
+                          "label": "Disabled",
+                          "value": "disabled"
+                        }
+                      }
+                    ],
+                    "trigger": {
+                      "type": "simple",
+                      "simple": {
+                        "eq": "DISABLED",
+                        "show": true,
+                        "when": "disableFlag"
+                      }
+                    }
+                  }
+                ],
+                "widget": "choicesjs",
+                "validate": {
+                  "required": true
+                },
+                "tableView": true,
+                "placeholder": "Seleziona",
+                "searchEnabled": false,
+                "selectThreshold": 0.3,
+                "hideOnChildrenHidden": false
+              }
+            ]
+          },
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": []
+          },
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": []
+          }
+        ],
+        "tableView": false
+      },
+      {
+        "key": "section_title_esercizio",
+        "tag": "div",
+        "type": "htmlelement",
+        "attrs": [
+          {
+            "attr": "style",
+            "value": "margin-top: 2rem;"
+          }
+        ],
+        "input": false,
+        "label": "section_title_esercizio",
+        "content": "<b>Esercizio della derivazione</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "esercizioColumns",
+        "type": "columns",
+        "input": false,
+        "label": "Columns",
+        "columns": [
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": [
+              {
+                "key": "JS_ESERCIZIO_DERIVAZIONE.q_max_der",
+                "type": "textfield",
+                "input": true,
+                "label": "Portata massima istantanea (l/s)",
+                "logic": [
+                  {
+                    "name": "enableLogic",
+                    "actions": [
+                      {
+                        "name": "enableAction",
+                        "type": "property",
+                        "state": "true",
+                        "property": {
+                          "type": "boolean",
+                          "label": "Disabled",
+                          "value": "disabled"
+                        }
+                      }
+                    ],
+                    "trigger": {
+                      "type": "simple",
+                      "simple": {
+                        "eq": "DISABLED",
+                        "show": true,
+                        "when": "disableFlag"
+                      }
+                    }
+                  }
+                ],
+                "validate": {
+                  "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                  "required": true,
+                  "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 7 cifre intere e un massimo di 4 cifre decimali"
+                },
+                "tableView": true,
+                "hideOnChildrenHidden": false
+              }
+            ]
+          },
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": [
+              {
+                "key": "JS_ESERCIZIO_DERIVAZIONE.q_med_der",
+                "type": "textfield",
+                "input": true,
+                "label": "Portata media di prelievo (l/s)",
+                "logic": [
+                  {
+                    "name": "enableLogic",
+                    "actions": [
+                      {
+                        "name": "enableAction",
+                        "type": "property",
+                        "state": "true",
+                        "property": {
+                          "type": "boolean",
+                          "label": "Disabled",
+                          "value": "disabled"
+                        }
+                      }
+                    ],
+                    "trigger": {
+                      "type": "simple",
+                      "simple": {
+                        "eq": "DISABLED",
+                        "show": true,
+                        "when": "disableFlag"
+                      }
+                    }
+                  }
+                ],
+                "validate": {
+                  "custom": "valid = (Number(input.replace(',','.')) <= Number(data.JS_ESERCIZIO_DERIVAZIONE.q_max_der.replace(',','.'))) ? true : 'error'",
+                  "pattern": "(^\\d{1,7}$)|(^\\d{1,7}[,]\\d{1,4}$)",
+                  "required": true,
+                  "customMessage": "Campo obbligatorio e numerico. Indicare un valore inferiore alla portata massima istantanea, utilizzando un massimo di 7 cifre intere e un massimo di 4 cifre decimali"
+                },
+                "tableView": true,
+                "hideOnChildrenHidden": false
+              }
+            ]
+          },
+          {
+            "pull": 0,
+            "push": 0,
+            "size": "md",
+            "width": 4,
+            "offset": 0,
+            "components": [
+              {
+                "key": "JS_ESERCIZIO_DERIVAZIONE.vol_max_ann_der",
+                "type": "textfield",
+                "input": true,
+                "label": "Volume massimo annuo (m<sup>3</sup>)",
+                "logic": [
+                  {
+                    "name": "enableLogic",
+                    "actions": [
+                      {
+                        "name": "enableAction",
+                        "type": "property",
+                        "state": "true",
+                        "property": {
+                          "type": "boolean",
+                          "label": "Disabled",
+                          "value": "disabled"
+                        }
+                      }
+                    ],
+                    "trigger": {
+                      "type": "simple",
+                      "simple": {
+                        "eq": "DISABLED",
+                        "show": true,
+                        "when": "disableFlag"
+                      }
+                    }
+                  }
+                ],
+                "validate": {
+                  "pattern": "(^\\d{1,9}$)|(^\\d{1,9}[,]\\d{1,5}$)",
+                  "required": true,
+                  "customMessage": "Campo obbligatorio e numerico. Indicare un massimo di 9 cifre intere e un massimo di 5 cifre decimali"
+                },
+                "tableView": true,
+                "hideOnChildrenHidden": false
+              }
+            ]
+          }
+        ],
+        "tableView": false
+      },
+      {
+        "key": "section_title_note",
+        "tag": "div",
+        "type": "htmlelement",
+        "attrs": [
+          {
+            "attr": "style",
+            "value": "margin-top: 1rem;"
+          }
+        ],
+        "input": false,
+        "label": "section_title_note",
+        "content": "<b>Note</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "JS_NOTE.note_derivazione",
+        "rows": 2,
+        "type": "textarea",
+        "input": true,
+        "label": "Indicare eventuali note se necessarie (max 500 caratteri)",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "maxLength": 500,
+          "customMessage": "Il testo delle note è troppo lungo"
+        },
+        "tableView": true,
+        "autoExpand": false
+      }
+    ]
+  },
+  "componentName": "FormioDatiGeneraliComponent"
+}

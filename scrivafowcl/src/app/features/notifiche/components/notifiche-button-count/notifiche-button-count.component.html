@@ -1,0 +1,15 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<button (click)="onClick.emit()" class="btn-action" aria-label="notifiche">
+  <img src="assets/icon-navbar-campanella.svg" alt="Notifiche" height="26px" />
+  <span class="unread" *ngIf="checkNotificheNonLette">
+    {{ notificheNonLette }}
+  </span>
+</button>

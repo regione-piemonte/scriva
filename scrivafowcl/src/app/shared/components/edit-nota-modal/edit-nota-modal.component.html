@@ -1,0 +1,59 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header">
+  <h2 class="modal-title">{{modalTitle}}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div class="content" id="content">
+  <form  [formGroup]="editForm">
+    <div class="row py-4">
+      <div class="form-group col-lg-12">
+        <textarea
+          class="form-control"
+          name="nota"
+          id="nota"
+          formControlName="nota"
+          rows="12"
+          style="width: 100%"
+          [maxlength]="maxNote" 
+          [readonly]="disableBtn"
+        ></textarea>
+        <span class="mes-max">Nota procedimento massimo {{ maxNote }} caratteri.</span>
+        <app-form-error-message [control]="this.editForm?.get('nota')"></app-form-error-message>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer">
+  <div class="row">
+    <ng-container *ngIf="!disableBtn; else btnClose">
+        <div  class="col-md-auto push-left">
+            <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+                ANNULLA
+            </button>
+        </div>
+        <div *ngIf="!disableBtn" class="col-md-auto push-right">
+            <button type="button" class="btn btn-large btn-primary" (click)="onConferma()">
+                CONFERMA
+            </button>
+        </div>
+    </ng-container>
+
+    <ng-template #btnClose>
+        <div class="col-md-auto push-left">
+            <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+                CHIUDI
+            </button>
+        </div>
+    </ng-template>
+  </div>
+</div>

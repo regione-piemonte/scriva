@@ -1,0 +1,106 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="container-fluid scriva-accordion s-m--0">
+
+  <!-- DICHIARAZIONE DEL FORM -->
+  <form [formGroup]="nsForm" (ngSubmit)="confermaFiltri()">
+
+    <div class="row">
+      <div class="col scriva-col-standard">
+        <!-- STATO NOTIFICA -->
+        <scriva-select 
+          [formControlName]="NS_C.FC_STATO_NOTIFICA"
+          [idFormControl]="NS_C.FC_STATO_NOTIFICA"
+          [formGroup]="nsForm"
+          [cssConfig]="inputs.statoNotificaConfig.css"
+          [dataConfig]="inputs.statoNotificaConfig.data"
+          [dataSource]="listaStatiNotifica"
+          [propertyToShow]="NS_C.PROPERTY_STATO_NOTIFICA"
+        ></scriva-select>
+      </div>
+      <div class="col">
+        <!-- PROCEDIMENTO -->
+        <scriva-select 
+          [formControlName]="NS_C.FC_PROCEDIMENTO"
+          [idFormControl]="NS_C.FC_PROCEDIMENTO"
+          [formGroup]="nsForm"
+          [cssConfig]="inputs.procedimentoConfig.css"
+          [dataConfig]="inputs.procedimentoConfig.data"
+          [dataSource]="listaProcedimenti"
+          [propertyToShow]="NS_C.PROPERTY_PROCEDIMENTO"
+        ></scriva-select>        
+      </div>
+    </div>
+
+    <div class="row s-mt--30">
+      <div class="col scriva-col-small s-pr--0">
+        <!-- DATA INIZIO FILTRO -->          
+        <scriva-datepicker
+          [formControlName]="NS_C.FC_DATA_DA"
+          [idFormControl]="NS_C.FC_DATA_DA"
+          [cssConfig]="inputs.dataDaConfig.css"
+          [dataConfig]="inputs.dataDaConfig.data"
+          [formGroup]="nsForm"
+          [formSubmitted]="nsFormSubmitted"
+          [errMapFormGroup]="NS_EM.MAP_DATE_DA_DATE_A"
+        ></scriva-datepicker>
+      </div>
+      <div class="col scriva-col-small">
+        <!-- DATA FINE FILTRO -->  
+        <scriva-datepicker
+          [formControlName]="NS_C.FC_DATA_A"
+          [idFormControl]="NS_C.FC_DATA_A"
+          [cssConfig]="inputs.dataAConfig.css"
+          [dataConfig]="inputs.dataAConfig.data"
+          [formGroup]="nsForm"
+          [formSubmitted]="nsFormSubmitted"
+          [errMapFormGroup]="NS_EM.MAP_DATE_DA_DATE_A"
+        ></scriva-datepicker>
+      </div>
+
+      <div class="col-6">
+        <!-- NUMERO ISTANZA -->
+        <scriva-text
+          [formControlName]="NS_C.FC_NUMERO_ISTANZA"
+          [idFormControl]="NS_C.FC_NUMERO_ISTANZA"
+          [cssConfig]="inputs.numeroIstanzaConfig.css"
+          [dataConfig]="inputs.numeroIstanzaConfig.data"
+          [formGroup]="nsForm"
+        ></scriva-text>
+      </div>
+    </div>
+    
+    <!-- PULSANTI DI GESTIONE FORM -->
+    <div class="row s-mt--30">
+      <div class="col-auto s-mr--a">
+        <!-- RESET FILTRI -->
+        <scriva-link-button
+          [dataConfig]="NS_C.BTN_RESETTA_FILTRI"
+          (onClick)="resettaFiltri()">
+        </scriva-link-button>
+      </div>
+      <div class="col-auto">
+        <!-- CONFERMA FILTRI -->
+        <scriva-primary-button class="s-ml--a"
+          [dataConfig]="NS_C.BTN_CONFERMA_FILTRI"
+          (onClick)="confermaFiltri()">
+        </scriva-primary-button>
+      </div>
+    </div>
+
+  </form>
+  
+  <div class="row s-mt--30">
+    <div class="col">
+      <div class="alert-anchor" [id]="NS_C.ALERT_ANCHOR"></div>
+    </div>
+  </div>
+
+</div>

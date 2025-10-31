@@ -1,0 +1,93 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div class="modal-header" *ngIf="isModal">
+  <h2 class="modal-title">{{modalTitle}}</h2>
+  <i class="fa fa-times" aria-label="chiudi" (click)="onDismiss()"></i>
+</div>
+
+<div [class.content]="isModal" id="content">
+  <form  [formGroup]="form">
+    <div class="row py-4">
+      <div class="form-group col-md-6">
+        <label for="tipoResponsabile">Tipologia Riferimento</label>
+        <select
+          [formControl]="form?.get('tipoResponsabile')"
+          id="tipoResponsabile"
+          class="form-control"
+          [compareWith]="compareTipoResponsabile"
+        >
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option *ngFor="let item of tipiResponsabile" [ngValue]="item">
+            {{ item.des_tipo_responsabile }}
+          </option>
+        </select>
+        <!-- <app-form-error-message [control]="this.form?.get('tipoResponsabile')"></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md-6">
+        <div *ngIf="ctrList?.length>1">
+          <ng-container>
+            <label for="nominativoResponsabile">*Seleziona Riferimento</label>
+            <select [formControl]="form?.get('scegliResponsabile')" id="scegliResponsabile" class="form-control">
+              <option [value]="null" class="option-hidden">Seleziona</option>
+              <option *ngFor="let item of ctrList" [ngValue]="item">
+                {{ item.nominativo_responsabile }}
+              </option>
+            </select>
+            <app-form-error-message [control]="!this.form?.get('tipoResponsabile')"></app-form-error-message>
+          </ng-container>
+        </div>
+      </div>
+      <div class="form-group col-md-6">
+        <label for="nominativoResponsabile">Nominativo</label>
+        <input type="text" class="form-control" id="nominativoResponsabile" [formControl]="this.form?.get('nominativoResponsabile')"/>
+        <!-- <app-form-error-message [control]="this.form?.get('tipoResponsabile') && this.form?.get('nominativoResponsabile')"></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md-6">
+        <label for="recapitoResponsabile">Recapito</label>
+        <input type="text" class="form-control" id="recapitoResponsabile" [formControl]="this.form?.get('recapitoResponsabile')"/>
+        <!-- <app-form-error-message [control]="this.form?.get('recapitoResponsabile')"></app-form-error-message> -->
+      </div>
+      <div class="form-group col-md-6 checkbox-wrapper">
+        <input class="cbx-riservato" type="checkbox"  [(ngModel)]="isCheckedFlgRiservato" id="flgRiservato" [formControl]="this.form?.get('flgRiservato')"/>
+        <label for="flgRiservato">Visibile su portale</label>
+        <app-form-error-message [control]="this.form?.get('flgRiservato')"></app-form-error-message>
+      </div>
+      <div class="form-group col-md-auto" *ngIf="!istanzaResponsabile?.id_istanza_responsabile">
+        <button 
+          type="button"
+          class="btn add-container"
+          [disabled]="!form.valid || form.value.tipoResponsabile === 'null'"
+          (click)="onAdd()"
+        >
+          <img src="assets/icon-page-add.svg" class="add-icon" alt="Aggiungi nota">
+          <span class="add-text">aggiungi</span>
+        </button>
+      </div>
+      <div class="form-group col-md-12">
+        <small class="form-text text-muted">*Campo obbligatorio</small>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="modal-footer" *ngIf="isModal">
+  <div class="row">
+      <div  class="col-md-auto push-left">
+          <button type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+              ANNULLA
+          </button>
+      </div>
+      <div *ngIf="!readonly" class="col-md-auto push-right">
+          <button type="button" class="btn btn-large btn-primary" [disabled]="!form.valid" (click)="onConferma()">
+              CONFERMA
+          </button>
+      </div>
+  </div>
+</div>

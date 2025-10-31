@@ -1,0 +1,129 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<span id="dettaglioContainer">
+  <div class="card col-xl-12">
+    <span class="help-box">
+      <p class="text-only">Completa le informazioni per il progetto statale</p>
+      <button class="btn btn-primary help-btn" (click)="onHelpClicked('info_quadro')" aria-label="help">
+        <i class="fa fa-question-circle fa-lg" aria-hidden="true"></i>
+      </button>
+    </span>
+
+    <form [formGroup]="dettaglioForm" *ngIf="isFormReady">
+      <div class="row">
+        <div class="form-group col-md-4" *ngIf="codAdempimento === 'VRN'">
+          <label for="dataConsegna">Data consegna documentazione</label>
+          <input type="date" class="form-control" id="dataConsegna" max="{{ today | date: 'yyyy-MM-dd HH:mm:ss' }}" formControlName="dataConsegna"/>
+        </div>
+
+        <div class="form-group col-md-4" *ngIf="codAdempimento === 'PAR'">
+          <label for="dataPubblicazione">Data pubblicazione avviso web</label>
+          <input type="date" class="form-control" id="dataPubblicazione" formControlName="dataPubblicazione"/>
+        </div>
+
+        <!-- SCRIVA-1032 info da togliere
+        <div class="form-group col-md-4">
+          <label for="numeroProtocollazione">Numero protocollazione</label>
+          <input type="text" class="form-control" id="numeroProtocollazione" formControlName="numeroProtocollazione"/>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="dataProtocollazione">Data protocollazione</label>
+          <input type="date" class="form-control" id="dataProtocollazione" formControlName="dataProtocollazione"/>
+        </div> -->
+      </div>
+
+      <div class="row">
+        <!-- SCRIVA-1032 info da togliere
+        <div class="form-group col-md-4">
+          <label for="scadenzaConsultazione">Scadenza consultazione al pubblico</label>
+          <input type="date" class="form-control" id="scadenzaConsultazione" formControlName="scadenzaConsultazione"/>
+        </div>
+        
+        <div class="form-group col-md-4">
+          <label for="scadenzaProcedimento">Scadenza procedimento</label>
+          <input type="date" class="form-control" id="scadenzaProcedimento" formControlName="scadenzaProcedimento"/>
+        </div> -->
+        
+        <div class="form-group col-md-6">
+          <label for="urlElaborati">URL esterna elaborati progettuali</label>
+          <input type="text" class="form-control" id="urlElaborati" placeholder="Formato corretto: https:// o http:// (Es. https://va.mite.gov.it)" formControlName="urlElaborati"/>
+        </div>
+      </div>
+
+      <!-- SCRIVA-1032 info da togliere
+      <div class="row">
+        <div class="form-group col-md-4">
+          <label for="direzioneCompetente">Direzione competente</label>
+          <input type="text" class="form-control" id="direzioneCompetente" formControlName="direzioneCompetente"/>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="rappresentanteNucleo">Rappresentante del nucleo</label>
+          <input type="text" class="form-control" id="rappresentanteNucleo" formControlName="rappresentanteNucleo"/>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="responsabileProc">Responsabile procedimento</label>
+          <input type="text" class="form-control" id="responsabileProc" formControlName="responsabileProc"/>
+        </div>
+      </div> -->
+
+      <div class="row">
+        <!-- SCRIVA-1032 info da togliere
+        <div class="form-group col-md-4">
+          <label for="annoRegistro">*Anno registro</label>
+          <input type="text" class="form-control" id="annoRegistro" formControlName="annoRegistro"/>
+          <app-form-error-message [control]="this.dettaglioForm.get('annoRegistro')"></app-form-error-message>
+        </div> -->
+        
+        <div class="form-group col-md-4 checkbox-wrapper">
+          <input type="checkbox" id="flgLegge443" formControlName="flgLegge443"/>
+          <label for="flgLegge443">Legge 443/2001</label>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="form-group text-left" id="divAnnulla"
+    *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+  >
+    <button type="button" class="btn btn-large btn-link" [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK" (click)="onAnnulla()">
+      ANNULLA
+    </button>
+  </div>
+</span>
+
+<!-- ngx-datatable templates -->
+<ng-template #dataTemplate let-row="row" ngx-datatable-cell-template>
+  <span>{{ row.data_nota | date: "dd/MM/yyyy" }}</span>
+</ng-template>
+
+<!-- <ng-template #flgRiservataTemplate let-row="row" ngx-datatable-cell-template>
+  <input type="checkbox" [checked]="row.ind_visibile === 'BO'"
+    [disabled]="attoreGestioneIstanza !== gestioneEnum.WRITE"
+    (click)="setNotaRiservataFlag(row.id_nota_istanza, $event.target.checked)"/>
+</ng-template> -->
+
+<!-- <ng-template #azioniTemplate let-row="row">
+  <div class="actions">
+    <button class="btn-action"
+      *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+      [ngClass]="{ disabled: attoreGestioneIstanza === gestioneEnum.WRITE_LOCK }"
+      (click)="onRimuoviNota(row.gestUID)" aria-label="elimina"
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+    </button>
+  </div>
+</ng-template> -->
+
+

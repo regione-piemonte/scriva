@@ -1,0 +1,193 @@
+{
+  "display": "form",
+  "components": [{
+          "key": "title",
+          "type": "htmlelement",
+          "input": false,
+          "label": "HTML",
+          "content": "<h2><strong>DATI GENERALI</strong></h2>",
+          "tableView": false,
+          "refreshOnChange": false
+      }, {
+          "key": "datiGeneraliHeaderColumns",
+          "type": "columns",
+          "input": false,
+          "label": "Dati Generali Header Columns",
+          "columns": [{
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "specie",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "specie",
+                          "content": "<b>Specie della derivazione</b>",
+                          "tableView": false,
+                          "refreshOnChange": false,
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "portataMassima",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "portataMassima",
+                          "content": "<b>Portata massima istantanea (l/s)</b>",
+                          "tableView": false,
+                          "refreshOnChange": false,
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "portataMedia",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "portataMedia",
+                          "content": "<b>Portata media di prelievo (l/s)</b>",
+                          "tableView": false,
+                          "refreshOnChange": false,
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "valumeAnnuo",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "valumeAnnuo",
+                          "content": "<b>Volume massimo annuo (m<sup>3</sup>)</b>",
+                          "tableView": false,
+                          "refreshOnChange": false,
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }
+          ],
+          "tableView": false
+      }, {
+          "key": "headerHLine",
+          "tag": "hr",
+          "type": "htmlelement",
+          "input": false,
+          "label": "HTML",
+          "tableView": false,
+          "refreshOnChange": false
+      }, {
+          "key": "datiGeneraliColumns",
+          "type": "columns",
+          "input": false,
+          "label": "Dati Generali Columns",
+          "columns": [{
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "specieValue",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "specieValue",
+                          "content": "{{submission.data.JS_DATI_IDENTIFICATIVI?.specie_der}}",
+                          "tableView": false,
+                          "refreshOnChange": true,
+                          "customConditional": "show = submission.data.JS_DATI_IDENTIFICATIVI?.specie_der;",
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "portataMassimaValue",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "portataMassimaValue",
+                          "content": "{{submission.data.JS_ESERCIZIO_DERIVAZIONE?.q_max_der}}",
+                          "tableView": false,
+                          "refreshOnChange": true,
+                          "customConditional": "show = submission.data.JS_ESERCIZIO_DERIVAZIONE?.q_max_der;",
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "portataMediaValue",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "portataMediaValue",
+                          "content": "{{submission.data.JS_ESERCIZIO_DERIVAZIONE?.q_med_der}}",
+                          "tableView": false,
+                          "refreshOnChange": true,
+                          "customConditional": "show = submission.data.JS_ESERCIZIO_DERIVAZIONE?.q_med_der;",
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }, {
+                  "pull": 0,
+                  "push": 0,
+                  "size": "md",
+                  "width": 3,
+                  "offset": 0,
+                  "components": [{
+                          "key": "valumeAnnuoValue",
+                          "tag": "span",
+                          "type": "htmlelement",
+                          "input": false,
+                          "label": "valumeAnnuoValue",
+                          "content": "{{submission.data.JS_ESERCIZIO_DERIVAZIONE?.vol_max_ann_der}}",
+                          "tableView": false,
+                          "refreshOnChange": true,
+                          "customConditional": "show = submission.data.JS_ESERCIZIO_DERIVAZIONE?.vol_max_ann_der;",
+                          "hideOnChildrenHidden": false
+                      }
+                  ]
+              }
+          ],
+          "tableView": false
+      }, {
+          "key": "headerHLine1",
+          "tag": "hr",
+          "type": "htmlelement",
+          "input": false,
+          "label": "HTML",
+          "tableView": false,
+          "refreshOnChange": false
+      }
+  ]
+}

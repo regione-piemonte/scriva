@@ -1,0 +1,17 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<div id="headerQuadro">
+  {{ desAdempimento }} &#8212; Identificativo istanza <strong>{{ istanza?.cod_istanza }}</strong> &#8212; 
+  Codice procedimento <strong>{{ istanza?.cod_pratica }}</strong> &#8212; 
+  Stato <strong>{{ istanza?.stato_istanza.descrizione_stato_istanza }}</strong> 
+  <button class="btn-action" *ngIf="istanza" (click)="onDownload()" aria-label="download">
+    <img src="assets/icon-table-download.svg" height="22px" alt="Download"/>
+  </button>
+</div>

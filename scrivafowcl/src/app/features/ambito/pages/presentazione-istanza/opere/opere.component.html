@@ -1,0 +1,183 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<app-header-quadro [istanza]="istanza"></app-header-quadro>
+
+<div [id]="GEECO_ALERT_CONTAINER"></div>
+
+<span [id]="OPERE_CONSTS.ALERT_TARGET_OPERA">
+  
+  <app-oggetti-search *ngIf="configQuadro"
+    [actions$]="actionsOggettiSearch$"    
+    [enabled]="attoreGestioneIstanza === gestioneEnum.WRITE"
+    [helpText]="OPERE_CONSTS.HEADER_RICERCA_OPERE"
+    [idIstanza]="idIstanza"
+    [province]="province"
+    [qdrOggettoConfig]="configQuadro"
+    [configTipologiaOggetto]="configTipologiaOggetto"
+    [codiceRicercaSuccesso]="OPERE_CONSTS.CODE_SUCCESSO_RICERCA"
+    (oggettiSearchEmitter)="onElementiCercati($event)"
+  ></app-oggetti-search>
+
+  <div class="card col-xl-8">
+    <p>{{ OPERE_CONSTS.ALTERNATIVA_RICERCA_OPERE }}</p>
+    <div class="row">
+      <div class="form-group col-md">
+        <button type="button"
+          class="btn btn-outline-primary"
+          [disabled]="attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+          (click)="onInserisciSuMappa()"
+        >
+          INSERISCI SU MAPPA
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card" *ngIf="searchResults.length > 0 && searchResultsColumns.length > 0" id="searchTableCard">
+    <h2 class="card-title">
+      {{ OPERE_CONSTS.SELEZIONA_OPERE_ASSOCIARE }}
+    </h2>
+    <ngx-datatable
+      class="material"
+      [rows]="searchResults"
+      [columns]="searchResultsColumns"
+      [columnMode]="ColumnMode.force"
+      [reorderable]="false"
+      [selected]="selectedOpere"
+      [scrollbarV]="false"
+      [scrollbarH]="true"
+      [selectionType]="selectionType"
+      [headerHeight]="80"
+      [footerHeight]="10"
+      [rowHeight]="70"
+      (select)="selectOpere($event)"
+    ></ngx-datatable>
+    <div>
+      <button class="btn btn-large btn-outline-primary" (click)="onAssocia()"
+        *ngIf="attoreGestioneIstanza === gestioneEnum.WRITE || attoreGestioneIstanza === gestioneEnum.WRITE_LOCK"
+        [disabled]="!(selectedOpere?.length > 0)"
+      >
+        ASSOCIA OPERA
+      </button>
+    </div>
+  </div>
+
+  <div class="card" *ngIf="oggettiIstanza?.length > 0 && associazioniColumns.length > 0" id="associazioniTableCard">
+    <span *ngFor="let tipo of tipologieOpere">
+      <ng-container *ngIf="filterOggettiIstanzaByTipologia(tipo).length > 0">
+        <h2 class="card-title">
+          <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+          <strong>{{ getTableTitle(tipo) }}</strong>
+        </h2>
+        <ngx-datatable
+          class="material"
+          [rows]="filterOggettiIstanzaByTipologia(tipo)"
+          [columns]="associazioniColumns"
+          [columnMode]="ColumnMode.force"
+          [reorderable]="false"
+          [scrollbarV]="false"
+          [scrollbarH]="true"
+          [headerHeight]="50"
+          [footerHeight]="10"
+          [rowHeight]="70"
+        ></ngx-datatable>
+      </ng-container>
+    </span>
+  </div>
+</span>
+
+<!-- #region ngx-datatable templates -->
+<ng-template #checkboxHeaderTemplate
+  ngx-datatable-header-template
+  let-value="value"
+  let-allRowsSelected="allRowsSelected"
+  let-selectFn="selectFn"
+>
+  <input type="checkbox" [checked]="allRowsSelected" (change)="selectFn(!allRowsSelected)"/>
+</ng-template>
+<ng-template #checkboxColTemplate
+  ngx-datatable-cell-template
+  let-value="value"
+  let-isSelected="isSelected"
+  let-onCheckboxChangeFn="onCheckboxChangeFn"
+>
+  <input type="checkbox" [checked]="isSelected" (change)="onCheckboxChangeFn($event)" />
+</ng-template>
+
+<!-- TEMPLATE PER COMUNI OPERA -->
+<ng-template #comuneProvinciaOperaTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereComuniOggettoIstanza"
+    [title]="row | opereComuniOggettoIstanza"
+  ></span>
+</ng-template>
+<!-- TEMPLATE PER COMUNI OGGETTO ISTANZA -->
+<ng-template #comuneProvinciaOggIstTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereComuniOggettoIstanza"
+    [title]="row | opereComuniOggettoIstanza"
+  ></span>
+</ng-template>
+
+<!-- TEMPLATE PER CODICE SCRIVA OPERA -->
+<ng-template #codiceScrivaOperaTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereCodiceScrivaOpera"
+    [title]="row | opereCodiceScrivaOpera"
+  ></span>
+</ng-template>
+<!-- TEMPLATE PER CODICE SCRIVA OGGETTO ISTANZA -->
+<ng-template #codiceRilievoOperaTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereCodiceRilievoOpera"
+    [title]="row | opereCodiceRilievoOpera"
+  ></span>
+</ng-template>
+<!-- TEMPLATE PER CODICE SCRIVA OGGETTO ISTANZA -->
+<ng-template #codiceScrivaOggIstTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereCodiceScrivaOggettoIstanza:opere"
+    [title]="row | opereCodiceScrivaOggettoIstanza:opere"
+  ></span>
+</ng-template>
+
+<ng-template #localitaTemplate let-row="row">
+  <span 
+    [innerHTML]="row | opereLocalitaOggettoIstanza"
+    [title]="row | opereLocalitaOggettoIstanza"
+  ></span>
+</ng-template>
+
+<ng-template #azioniTemplate let-row="row">
+  <div class="actions">
+    <button class="btn-action" aria-label="modifica"
+      *ngIf="row.id_oggetto_istanza && checkModificaOggIst"
+      [ngClass]="{ disabled: isAttoreGestioneIstanzaWRITELOCK }"
+      (click)="showDetails(row, false, false)"
+    >
+      <img src="assets/icon-table-edit.svg" height="24px" alt="Modifica"/>
+    </button>
+    <button class="btn-action" aria-label="dettaglio"
+      (click)="showDetails(row, true, true)"
+    >
+      <img src="assets/icon-table-dettaglio.svg" height="24px" alt="Dettaglio"/>
+    </button>
+    <button class="btn-action" aria-label="elimina"
+      *ngIf="row.id_oggetto_istanza && checkEliminaOggIst"
+      [ngClass]="{ disabled: isAttoreGestioneIstanzaWRITELOCK }"
+      (click)="deleteOggettoIstanzaTable(row)" 
+    >
+      <img src="assets/icon-table-elimina.svg" height="20px" alt="Elimina"/>
+    </button>
+  </div>
+</ng-template>
+<!-- #endregion -->
+
+

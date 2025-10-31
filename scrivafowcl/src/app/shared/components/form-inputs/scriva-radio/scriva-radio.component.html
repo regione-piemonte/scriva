@@ -1,0 +1,75 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<!-- FORM GROUP -->
+<div
+  ngbRadioGroup
+  [(ngModel)]="_value"
+  [id]="idDOM"
+  [name]="idFC"
+  [disabled]="disabled"
+  class="form-group scriva-form-group"
+  [ngClass]="cssConfig.customForm"
+  (change)="onRadioChange()"
+>
+  <!-- FORM RADIO | CONFIGURABILE PER ORIZZONTALE O VERTICALE -->
+  <div
+    class="form-check"
+    [ngClass]="[
+      cssConfig.customFormCheck,
+      dataConfig.orientation === FI_C.HORIZONTAL ? 'form-check-inline' : ''
+    ]"
+    *ngFor="let radio of source"
+  >
+    <!-- LABEL -->
+    <label ngbButtonLabel class="" [ngClass]="cssConfig.customLabel">
+      <!-- INPUT -->
+      <input
+        ngbButton
+        [disabled]="radio.disabled || false"
+        [value]="radio"
+        type="radio"
+        class="form-check-input scriva-radio scriva-input-border"
+        [ngClass]="[
+          cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_CLASS,
+          (cssConfig.showErrorFC &&
+            formControl.invalid &&
+            (formSubmitted || formControl.dirty || formControl.touched)) ||
+          (cssConfig.showErrorFG &&
+            formGroup.invalid &&
+            formErrors &&
+            (formSubmitted || formGroup.dirty || formGroup.touched))
+            ? 'scriva-input-border-error-radio'
+            : ''
+        ]"
+        [ngStyle]="
+          cssConfig.customInput | scrivaCssHandler : C_C.CSS_TYPE_STYLE
+        "
+      />
+      <!-- ETICHETTA DEL RADIO -->
+      <div [innerHtml]="radio[propertyToShow]"></div>
+    </label>
+  </div>
+
+  <!-- FORM CONTROL - GESTIONE ERRORI -->
+  <scriva-form-control-error
+    [cssConfig]="cssConfig"
+    [idFormControl]="idFC"
+    [formGroup]="formGroup"
+    [errMapFormControl]="mappaErroriFC"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-control-error>
+  <!-- FORM GROUP - GESTIONE ERRORI -->
+  <scriva-form-group-error
+    [cssConfig]="cssConfig"
+    [formGroup]="formGroup"
+    [errMapFormGroup]="mappaErroriFG"
+    [formSubmitted]="formSubmitted"
+  ></scriva-form-group-error>
+</div>

@@ -1,0 +1,1780 @@
+{
+  "label": "Dichiarazioni",
+  "imports": {
+    "DOCAMM": true,
+    "DOCSEGR": true,
+    "GETISTANZACOMPETENZAACP": true
+  },
+  "jsonForm": {
+    "display": "form",
+    "components": [
+      {
+        "key": "disableFlag",
+        "type": "hidden",
+        "input": true,
+        "label": "disableFlag",
+        "tableView": true,
+        "defaultValue": "ENABLED"
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "<b>Per procedere nella compilazione dell’istanza occorre selezionare (prendendone visione) le dichiarazioni necessarie:</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni[1].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_via_ver"
+      },
+      {
+        "key": "dichiarazioni[1].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto è stato già sottoposto a verifica di assoggettabilità a VIA (d.lgs.152/2006, art. 19), conclusasi con atto/provvedimento n."
+      },
+      {
+        "key": "dichiarazioni[1].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[1].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[1].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto è stato già sottoposto a verifica di assoggettabilità a VIA (d.lgs.152/2006, art. 19), conclusasi con atto/provvedimento",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-inline align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dich1",
+        "type": "container",
+        "input": true,
+        "label": "dich1",
+        "tableView": false,
+        "components": [
+          {
+            "key": "title",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "title",
+            "content": "n.",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "num",
+            "mask": false,
+            "type": "number",
+            "input": true,
+            "label": "numero",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "delimiter": false,
+            "hideLabel": true,
+            "tableView": false,
+            "applyMaskOn": "change",
+            "inputFormat": "plain",
+            "requireDecimal": false,
+            "truncateMultipleSpaces": false
+          },
+          {
+            "key": "data",
+            "type": "datetime",
+            "input": true,
+            "label": "data",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "format": "dd-MM-yyyy",
+            "widget": {
+              "mode": "single",
+              "type": "calendar",
+              "format": "dd-MM-yyyy",
+              "locale": "en",
+              "maxDate": null,
+              "minDate": null,
+              "time_24hr": false,
+              "allowInput": true,
+              "enableTime": false,
+              "noCalendar": false,
+              "hourIncrement": 1,
+              "disableWeekdays": false,
+              "disableWeekends": false,
+              "minuteIncrement": 1,
+              "displayInTimezone": "viewer",
+              "useLocaleSettings": false
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "datePicker": {
+              "disableWeekdays": false,
+              "disableWeekends": false
+            },
+            "enableTime": false,
+            "enableMaxDateInput": false,
+            "enableMinDateInput": false
+          }
+        ],
+        "customClass": "dich-num-date-box"
+      },
+      {
+        "key": "dichiarazioni[2].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_via_prel"
+      },
+      {
+        "key": "dichiarazioni[2].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto è stato già sottoposto a valutazione preliminare (d.lgs.152/2006, art. 6, comma 9) conclusasi con atto/provvedimento n.______ del __gg/mm/aaaa__;"
+      },
+      {
+        "key": "dichiarazioni[2].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[2].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[2].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto è stato già sottoposto a valutazione preliminare (d.lgs.152/2006, art. 6, comma 9) conclusasi con atto/provvedimento",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-inline align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dich2",
+        "type": "container",
+        "input": true,
+        "label": "dich3",
+        "tableView": false,
+        "components": [
+          {
+            "key": "title",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "title",
+            "content": "n.",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "num",
+            "mask": false,
+            "type": "number",
+            "input": true,
+            "label": "numero",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "delimiter": false,
+            "hideLabel": true,
+            "tableView": false,
+            "applyMaskOn": "change",
+            "inputFormat": "plain",
+            "requireDecimal": false,
+            "truncateMultipleSpaces": false
+          },
+          {
+            "key": "data",
+            "type": "datetime",
+            "input": true,
+            "label": "data",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "format": "dd-MM-yyyy",
+            "widget": {
+              "mode": "single",
+              "type": "calendar",
+              "format": "dd-MM-yyyy",
+              "locale": "en",
+              "maxDate": null,
+              "minDate": null,
+              "time_24hr": false,
+              "allowInput": true,
+              "enableTime": false,
+              "noCalendar": false,
+              "hourIncrement": 1,
+              "disableWeekdays": false,
+              "disableWeekends": false,
+              "minuteIncrement": 1,
+              "displayInTimezone": "viewer",
+              "useLocaleSettings": false
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "datePicker": {
+              "disableWeekdays": false,
+              "disableWeekends": false
+            },
+            "enableTime": false,
+            "enableMaxDateInput": false,
+            "enableMinDateInput": false
+          }
+        ],
+        "customClass": "dich-num-date-box"
+      },
+      {
+        "key": "dichiarazioni[3].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_dett_elab"
+      },
+      {
+        "key": "dichiarazioni[3].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "per il progetto è stata richiesta la definizione del livello di dettaglio degli elaborati progettuali ai fini del procedimento di VIA (d.lgs.152/2006, art. 20) conclusasi con atto n."
+      },
+      {
+        "key": "dichiarazioni[3].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[3].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[3].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "per il progetto è stata richiesta la definizione del livello di dettaglio degli elaborati progettuali ai fini del procedimento di VIA (d.lgs.152/2006, art. 20) conclusasi con atto",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-inline align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dich3",
+        "type": "container",
+        "input": true,
+        "label": "dich4",
+        "tableView": false,
+        "components": [
+          {
+            "key": "title",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "title",
+            "content": "n.",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "num",
+            "mask": false,
+            "type": "number",
+            "input": true,
+            "label": "numero",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "delimiter": false,
+            "hideLabel": true,
+            "tableView": false,
+            "applyMaskOn": "change",
+            "inputFormat": "plain",
+            "requireDecimal": false,
+            "truncateMultipleSpaces": false
+          },
+          {
+            "key": "data",
+            "type": "datetime",
+            "input": true,
+            "label": "data",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "format": "dd-MM-yyyy",
+            "widget": {
+              "mode": "single",
+              "type": "calendar",
+              "format": "dd-MM-yyyy",
+              "locale": "en",
+              "maxDate": null,
+              "minDate": null,
+              "time_24hr": false,
+              "allowInput": true,
+              "enableTime": false,
+              "noCalendar": false,
+              "hourIncrement": 1,
+              "disableWeekdays": false,
+              "disableWeekends": false,
+              "minuteIncrement": 1,
+              "displayInTimezone": "viewer",
+              "useLocaleSettings": false
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "datePicker": {
+              "disableWeekdays": false,
+              "disableWeekends": false
+            },
+            "enableTime": false,
+            "enableMaxDateInput": false,
+            "enableMinDateInput": false
+          }
+        ],
+        "customClass": "dich-num-date-box"
+      },
+      {
+        "key": "dichiarazioni[4].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_via_sco"
+      },
+      {
+        "key": "dichiarazioni[4].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "per il progetto è stata richiesta la fase di consultazione per la definizione dei contenuti dello studio di impatto ambientale (d.lgs.152/2006, art. 21) conclusasi con atto n."
+      },
+      {
+        "key": "dichiarazioni[4].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[4].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[4].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "per il progetto è stata richiesta la fase di consultazione per la definizione dei contenuti dello studio di impatto ambientale (d.lgs.152/2006, art. 21) conclusasi con atto",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-inline align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dich4",
+        "type": "container",
+        "input": true,
+        "label": "dich6",
+        "tableView": false,
+        "components": [
+          {
+            "key": "title",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "title",
+            "content": "n.",
+            "tableView": false,
+            "refreshOnChange": false
+          },
+          {
+            "key": "num",
+            "mask": false,
+            "type": "number",
+            "input": true,
+            "label": "numero",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "delimiter": false,
+            "hideLabel": true,
+            "tableView": false,
+            "applyMaskOn": "change",
+            "inputFormat": "plain",
+            "requireDecimal": false,
+            "truncateMultipleSpaces": false
+          },
+          {
+            "key": "data",
+            "type": "datetime",
+            "input": true,
+            "label": "data",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "format": "dd-MM-yyyy",
+            "widget": {
+              "mode": "single",
+              "type": "calendar",
+              "format": "dd-MM-yyyy",
+              "locale": "en",
+              "maxDate": null,
+              "minDate": null,
+              "time_24hr": false,
+              "allowInput": true,
+              "enableTime": false,
+              "noCalendar": false,
+              "hourIncrement": 1,
+              "disableWeekdays": false,
+              "disableWeekends": false,
+              "minuteIncrement": 1,
+              "displayInTimezone": "viewer",
+              "useLocaleSettings": false
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "datePicker": {
+              "disableWeekdays": false,
+              "disableWeekends": false
+            },
+            "enableTime": false,
+            "enableMaxDateInput": false,
+            "enableMinDateInput": false
+          }
+        ],
+        "customClass": "dich-num-date-box"
+      },
+      {
+        "key": "dichiarazioni[5].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_dib_pubb"
+      },
+      {
+        "key": "dichiarazioni[5].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto è stato oggetto di procedura di dibattito pubblico ai sensi dell’art. 22 del d.lgs. 50/2016;"
+      },
+      {
+        "key": "dichiarazioni[5].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[5].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[5].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto è stato oggetto di procedura di dibattito pubblico ai sensi dell’art. 22 del d.lgs. 50/2016;",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-inline align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "title",
+        "type": "htmlelement",
+        "input": false,
+        "label": "title",
+        "content": "<b>* Conformità strumenti Urbanistici ?</b>",
+        "tableView": false,
+        "refreshOnChange": false
+      },
+      {
+        "key": "dichiarazioni[6].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[6].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_urbanistici_conforme"
+      },
+      {
+        "key": "dichiarazioni[6].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[6].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto è conforme ai vigenti strumenti urbanistici e quindi non necessita di variante urbanistica;"
+      },
+      {
+        "key": "dichiarazioni[6].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[6].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[6].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto è conforme ai vigenti strumenti urbanistici e quindi non necessita di variante urbanistica;",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          },
+          {
+            "name": "selectone",
+            "actions": [
+              {
+                "name": "skip-required",
+                "type": "property",
+                "state": false,
+                "property": {
+                  "type": "boolean",
+                  "label": "Required",
+                  "value": "validate.required"
+                }
+              },
+              {
+                "name": "disable-check",
+                "type": "property",
+                "state": true,
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "true",
+                "show": true,
+                "when": "dichiarazioni[7].check"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[7].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[7].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_urbanistici_non_conforme"
+      },
+      {
+        "key": "dichiarazioni[7].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[7].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto non è conforme ai vigenti strumenti urbanistici e richiede la variante ai sensi della l.r. 56/1977, articolo _(selezionare la voce di interesse – vedi commento a latere)__; A tal fine si allegano gli elaborati previsti dalla vigente normativa, comprensivi degli elaborati relativi alla procedura di VAS."
+      },
+      {
+        "key": "dichiarazioni[7].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[7].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[7].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto non è conforme ai vigenti strumenti urbanistici e richiede la variante ai sensi della l.r. 56/1977, articolo:",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          },
+          {
+            "name": "selectone",
+            "actions": [
+              {
+                "name": "skip-required",
+                "type": "property",
+                "state": false,
+                "property": {
+                  "type": "boolean",
+                  "label": "Required",
+                  "value": "validate.required"
+                }
+              },
+              {
+                "name": "disable-check",
+                "type": "property",
+                "state": true,
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "true",
+                "show": true,
+                "when": "dichiarazioni[6].check"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "container",
+        "type": "container",
+        "input": true,
+        "label": "ContainerSelect",
+        "tableView": false,
+        "components": [
+          {
+            "key": "select",
+            "data": {
+              "values": [
+                {
+                  "label": "17bis comma2",
+                  "value": "17BisComma2"
+                },
+                {
+                  "label": "17bis comma 4",
+                  "value": "17BisComma4"
+                },
+                {
+                  "label": "17bis comma 6",
+                  "value": "17BisComma6"
+                },
+                {
+                  "label": "17bis comma 15 bis",
+                  "value": "17BisComma15bis"
+                },
+                {
+                  "label": "altro",
+                  "value": "altro"
+                }
+              ]
+            },
+            "type": "select",
+            "input": true,
+            "label": "Select",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "widget": "choicesjs",
+            "hideLabel": true,
+            "tableView": true,
+            "placeholder": "seleziona",
+            "searchEnabled": false
+          },
+          {
+            "key": "altro",
+            "type": "textarea",
+            "input": true,
+            "label": "Altro",
+            "logic": [
+              {
+                "name": "showAltro",
+                "actions": [
+                  {
+                    "name": "visible",
+                    "type": "property",
+                    "state": false,
+                    "property": {
+                      "type": "boolean",
+                      "label": "Hidden",
+                      "value": "hidden"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "altro",
+                    "show": true,
+                    "when": "select"
+                  }
+                }
+              },
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "hidden": true,
+            "hideLabel": true,
+            "tableView": true,
+            "autoExpand": false,
+            "applyMaskOn": "change"
+          }
+        ],
+        "customClass": "container-input"
+      },
+      {
+        "key": "container1",
+        "type": "container",
+        "input": true,
+        "label": "ContainerLabel",
+        "tableView": false,
+        "components": [
+          {
+            "key": "html",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "HTML",
+            "content": "A tal fine si allegano gli elaborati previsti dalla vigente normativa, comprensivi degli elaborati relativi alla procedura di VAS.",
+            "tableView": false,
+            "refreshOnChange": false
+          }
+        ],
+        "customClass": "container-label"
+      },
+      {
+        "key": "dichiarazioni[8].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[8].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_transfront"
+      },
+      {
+        "key": "dichiarazioni[8].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[8].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "il progetto può avere impatti transfrontalieri sui seguenti Stati:"
+      },
+      {
+        "key": "dichiarazioni[8].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[8].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[8].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "il progetto può avere impatti transfrontalieri sui seguenti Stati:",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "customMessage": "Campo facoltativo"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "container3",
+        "type": "container",
+        "input": true,
+        "label": "ContainerInput",
+        "tableView": false,
+        "components": [
+          {
+            "key": "stato",
+            "type": "textarea",
+            "input": true,
+            "label": "Stato",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "hideLabel": true,
+            "tableView": true,
+            "autoExpand": false,
+            "applyMaskOn": "change"
+          }
+        ],
+        "customClass": "container-input"
+      },
+      {
+        "key": "container",
+        "type": "container",
+        "input": true,
+        "label": "ContainerLabel",
+        "tableView": false,
+        "components": [
+          {
+            "key": "html",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "HTML",
+            "content": "e pertanto è soggetto alle procedure di cui all’art. 32 del d.lgs.152/2006.",
+            "tableView": false,
+            "refreshOnChange": false
+          }
+        ],
+        "customClass": "container-label"
+      },
+      {
+        "key": "dichiarazioni[9].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[9].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_elenco_allegati"
+      },
+      {
+        "key": "dichiarazioni[9].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[9].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "si dichiara di essere consapevole che l'Amministrazione pubblicherà sul sito web delle Valutazioni ambientali della {PH_ACP_DES_COMPETENZA_TERRITORIO} ({ PH_ACP_SITO_WEB }) la documentazione trasmessa con la presente istanza (d.lgs.152/2006, art. 27bis, comma 2);"
+      },
+      {
+        "key": "dichiarazioni[9].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[9].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "formioWellDich",
+        "type": "well",
+        "input": false,
+        "label": "formio-well-dich",
+        "hideLabel": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "dichiarazioni[9].check",
+            "type": "checkbox",
+            "input": true,
+            "label": "Checkbox",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "validate": {
+              "required": true,
+              "customMessage": "Campo obbligatorio"
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "customClass": "html-dich-checkbox align-qdrdich",
+            "defaultValue": false
+          },
+          {
+            "key": "dichiarazioni[9].label",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "HTML",
+            "content": "<span>si dichiara di essere consapevole che l'Amministrazione pubblicherà sul sito web delle Valutazioni ambientali della {{form.imports.ISTANZACOMPETENZAACP[0].competenza_territorio.des_competenza_territorio}}. ({{form.imports.ISTANZACOMPETENZAACP[0].competenza_territorio.sito_web}}) la documentazione trasmessa con la presente istanza (d.lgs.152/2006, art. 27bis, comma 2);</span>",
+            "tableView": false,
+            "customClass": "html-dich-label",
+            "refreshOnChange": false
+          }
+        ],
+        "customClass": "formio-well-dich"
+      },
+      {
+        "key": "dichiarazioni[10].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[10].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dich_segreto_industriale"
+      },
+      {
+        "key": "dichiarazioni[10].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[10].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "si richiede che, per ragioni di segreto industriale o commerciale, ai sensi dell’art. 9, comma 4 del d.lgs. 152/2006, non siano resi pubblici gli elaborati inseriti nella cartella allegati denominata “Documentazione soggetta al segreto industriale”, per la seguente Motivazione"
+      },
+      {
+        "key": "dichiarazioni[10].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[10].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[10].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "si richiede che, per ragioni di segreto industriale o commerciale, ai sensi dell’art. 9, comma 4 del d.lgs. 152/2006, non siano resi pubblici gli elaborati inseriti nella cartella allegati denominata “Documentazione soggetta al segreto industriale”, per la seguente Motivazione",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          },
+          {
+            "name": "checkDOCSEGR",
+            "actions": [
+              {
+                "name": "makeRequired",
+                "type": "property",
+                "state": true,
+                "property": {
+                  "type": "boolean",
+                  "label": "Required",
+                  "value": "validate.required"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "javascript",
+              "javascript": "try {\n  if(form.imports.DOCSEGR) {\n    result = true\n  } else {\n    result = false\n  }\n}catch(e){return false}"
+            }
+          }
+        ],
+        "validate": {
+          "required": false,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "container3",
+        "type": "container",
+        "input": true,
+        "label": "ContainerInput",
+        "tableView": false,
+        "components": [
+          {
+            "key": "motivazione",
+            "type": "textfield",
+            "input": true,
+            "label": "Motivazione",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "hideLabel": true,
+            "tableView": true,
+            "applyMaskOn": "change"
+          }
+        ],
+        "customClass": "container-input-riga"
+      },
+      {
+        "key": "dichiarazioni[11].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[11].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_alleg_no_pubb"
+      },
+      {
+        "key": "dichiarazioni[11].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[11].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "si dichiara di essere consapevole che gli allegati documentali appartenenti alla categoria allegati denominata “Documentazione amministrativa facoltativa non oggetto di pubblicazione” non saranno resi accessibili al pubblico;"
+      },
+      {
+        "key": "dichiarazioni[11].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[11].obbligatorio",
+        "tableView": false,
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[11].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "si dichiara di essere consapevole che gli allegati documentali appartenenti alla categoria allegati denominata “Documentazione amministrativa facoltativa non oggetto di pubblicazione” non saranno resi accessibili al pubblico;",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          },
+          {
+            "name": "checkDOCAMM",
+            "actions": [
+              {
+                "name": "makeRequired",
+                "type": "property",
+                "state": true,
+                "property": {
+                  "type": "boolean",
+                  "label": "Required",
+                  "value": "validate.required"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "javascript",
+              "javascript": "try {\n  if(form.imports.DOCAMM) {\n    result = true\n  } else {\n    result = false\n  }\n}catch(e){return false}"
+            }
+          }
+        ],
+        "validate": {
+          "required": false,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false,
+        "customConditional": "form.imports?.DOCAMM ? valid = true : valid = false"
+      },
+      {
+        "key": "dichiarazioni[12].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[12].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_firma_dig"
+      },
+      {
+        "key": "dichiarazioni[12].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[12].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "si dichiara di aver verificato che gli elaborati progettuali sono firmati esclusivamente in formato digitale da tutti i professionisti che li hanno redatti e che non contengono dati personali eccedenti e non pertinenti;"
+      },
+      {
+        "key": "dichiarazioni[12].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[12].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "dichiarazioni[12].check",
+        "type": "checkbox",
+        "input": true,
+        "label": "si dichiara di aver verificato che gli elaborati progettuali sono firmati esclusivamente in formato digitale da tutti i professionisti che li hanno redatti e che non contengono dati personali eccedenti e non pertinenti;",
+        "logic": [
+          {
+            "name": "enableLogic",
+            "actions": [
+              {
+                "name": "enableAction",
+                "type": "property",
+                "state": "true",
+                "property": {
+                  "type": "boolean",
+                  "label": "Disabled",
+                  "value": "disabled"
+                }
+              }
+            ],
+            "trigger": {
+              "type": "simple",
+              "simple": {
+                "eq": "DISABLED",
+                "show": true,
+                "when": "disableFlag"
+              }
+            }
+          }
+        ],
+        "validate": {
+          "required": true,
+          "customMessage": "Campo obbligatorio"
+        },
+        "tableView": false,
+        "persistent": false,
+        "customClass": "dich-align-required align-qdrdich",
+        "defaultValue": false
+      },
+      {
+        "key": "dichiarazioni[13].cod_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[13].cod_dichiarazione",
+        "tableView": false,
+        "defaultValue": "dchr_gdpr"
+      },
+      {
+        "key": "dichiarazioni[13].des_dichiarazione",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[13].des_dichiarazione",
+        "tableView": false,
+        "defaultValue": "si dichiara di aver preso visione dell'Informativa sul trattamento dei dati personali, aggiornata all’art. 13 del DGPR 2016/679, consultabile sul sito web istituzionale link sito web dell’autorità competente {da capire ancora dove memorizzarla} e sulla Home Page del servizio della specifica AC……...{ PH_ACP_SITO_WEB }"
+      },
+      {
+        "key": "dichiarazioni[13].obbligatorio",
+        "type": "hidden",
+        "input": true,
+        "label": "dichiarazioni[13].obbligatorio",
+        "tableView": false,
+        "defaultValue": true
+      },
+      {
+        "key": "formioWellDich",
+        "type": "well",
+        "input": false,
+        "label": "formio-well-dich",
+        "hideLabel": true,
+        "tableView": false,
+        "components": [
+          {
+            "key": "dichiarazioni[13].check",
+            "type": "checkbox",
+            "input": true,
+            "label": "Checkbox",
+            "logic": [
+              {
+                "name": "enableLogic",
+                "actions": [
+                  {
+                    "name": "enableAction",
+                    "type": "property",
+                    "state": "true",
+                    "property": {
+                      "type": "boolean",
+                      "label": "Disabled",
+                      "value": "disabled"
+                    }
+                  }
+                ],
+                "trigger": {
+                  "type": "simple",
+                  "simple": {
+                    "eq": "DISABLED",
+                    "show": true,
+                    "when": "disableFlag"
+                  }
+                }
+              }
+            ],
+            "validate": {
+              "required": true,
+              "customMessage": "Campo obbligatorio"
+            },
+            "hideLabel": true,
+            "tableView": false,
+            "customClass": "html-dich-checkbox align-qdrdich",
+            "defaultValue": false
+          },
+          {
+            "key": "dichiarazioni[13].label",
+            "type": "htmlelement",
+            "attrs": [
+              {
+                "attr": "",
+                "value": ""
+              }
+            ],
+            "input": false,
+            "label": "HTML",
+            "content": "<span>si dichiara di aver preso visione dell'Informativa sul trattamento dei dati personali, aggiornata all’art. 13 del DGPR 2016/679, consultabile sul sito web istituzionale link sito web dell’autorità competente {da capire ancora dove memorizzarla} e sulla Home Page del servizio della specifica AC {{form.imports.ISTANZACOMPETENZAACP[0].competenza_territorio.sito_web}}</span>",
+            "tableView": false,
+            "customClass": "html-dich-label",
+            "refreshOnChange": false
+          }
+        ],
+        "customClass": "formio-well-dich"
+      },
+      {
+        "key": "eventuali_annotazioni",
+        "type": "textarea",
+        "input": true,
+        "label": "Eventuali annotazioni",
+        "tableView": true,
+        "autoExpand": false,
+        "applyMaskOn": "change"
+      }
+    ]
+  }
+}

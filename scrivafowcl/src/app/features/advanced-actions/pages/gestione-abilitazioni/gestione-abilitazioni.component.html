@@ -1,0 +1,158 @@
+<!--
+ * ========================LICENSE_START=================================
+ * 
+ * Copyright (C) 2025 Regione Piemonte
+ * 
+ * SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+ * SPDX-License-Identifier: EUPL-1.2
+ * =========================LICENSE_END==================================
+-->
+<p class="bread-crumb">
+  <a href="javascript:;" (click)="goToRicerca()" aria-label="ricerca">Ricerca</a> - <strong> Gestione</strong>
+</p>
+
+<h1 class="heel">
+  Gestione abilitazioni
+</h1>
+
+<div class="card" id="formCard">
+  <span class="section-title">
+    Istanza di riferimento
+  </span>
+
+  <!-- <div class="row info">
+    <div class="col-md-3">
+      <p>Soggetto titolare</p>
+      <p class="info-value"> --- </p>
+    </div>
+    <div class="col-md-9">
+      <p>Codice procedimento</p>
+      <p class="info-value"> {{ istanza?.cod_pratica }} </p>
+    </div>
+    <div class="col-md-3">
+      <p>Identificativo istanza</p>
+      <p class="info-value"> {{ istanza?.cod_istanza }}  </p>
+    </div>
+    <div class="col-md-9">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize"> {{ istanza?.stato_istanza.descrizione_stato_istanza }} </p>
+    </div>
+    <div class="col-md-3">
+      <p>Data inserimento</p>
+      <p class="info-value"> {{ istanza?.data_inserimento_istanza | date: 'dd/MM/yyyy - H:mm:ss' }}  </p>
+    </div>
+  </div> -->
+
+  <div class="row info">
+    <div class="col-12">
+      <p>Soggetto titolare</p>
+      <p class="info-value"> {{ denTitolareIstanza }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Identificativo istanza</p>
+      <p class="info-value"> {{ istanza?.cod_istanza }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Codice procedimento</p>
+      <p class="info-value"> {{ istanza?.cod_pratica }} </p>
+    </div>
+    <div class="col-xl-3 col-md-6">
+      <p>Data inserimento</p>
+      <p class="info-value"> {{ istanza?.data_inserimento_istanza | date: 'dd/MM/yyyy - H:mm:ss' }}  </p>
+    </div>
+    <div class="col-xl-9 col-md-6">
+      <p>Stato procedimento</p>
+      <p class="info-value capitalize"> {{ istanza?.stato_istanza.descrizione_stato_istanza }} </p>
+    </div>
+  </div>
+
+  <span class="section-title">
+    Indica il Codice Fiscale della persona fisica da abilitare e scegli il tipo di abilitazione:
+  </span>
+
+  <form [formGroup]="abilitazioneForm">
+    <div class="row">
+      <div class="form-group col-md-4">
+        <input type="text" class="form-control" id="codFis" formControlName="codFiscale">
+        <app-form-error-message [control]="this.abilitazioneForm.get('codFiscale')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-4">
+        <label for="abilit">*Abilitazione</label>
+        <select class="form-control" name="tipoAbilitazione" id="abilit" formControlName="tipoAbilitazione">
+          <option [value]="null" class="option-hidden">Seleziona</option>
+          <option [ngValue]="tipo" *ngFor="let tipo of tipiAbilitazione">
+            {{ tipo.des_tipo_abilitazione }}
+          </option>
+        </select>
+        <app-form-error-message [control]="this.abilitazioneForm.get('tipoAbilitazione')"></app-form-error-message>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group col-md-auto">
+        <button type="button" class="btn btn-large btn-outline-primary" (click)="onInserisciAbilitazione()">
+          INSERISCI ABILITAZIONE
+        </button>
+      </div>
+      <div class="form-group col-md-auto">
+        <button  type="button" class="btn btn-large btn-link" (click)="onAnnulla()">
+          ANNULLA
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="card" id="resultsCard" *ngIf="showTable && columns?.length > 0">
+  <p class="table-title">
+    <i class="icon fa fa-check-circle-o" aria-hidden="true"></i>
+    <strong>Riepilogo abilitazioni inserite</strong>
+  </p>
+
+  <ngx-datatable
+    class="material"
+    [rows]="abilitazioni"
+    [columns]="columns"
+    [columnMode]="ColumnMode.force"
+    [reorderable]="false"
+    [scrollbarH]="true"
+    [scrollbarV]="false"
+    [headerHeight]="80"
+    [footerHeight]="false"
+    rowHeight="auto"
+    [messages]="{ emptyMessage: 'Nessuna abilitazione presente' }"
+  ></ngx-datatable>
+</div>
+
+<ng-template #nominativoTemplate let-row="row" ngx-datatable-cell-template>
+  {{ row.compilante?.nome_compilante }} {{ row.compilante?.cognome_compilante }}
+</ng-template>
+
+<ng-template #dataInizioTemplate let-row="row" ngx-datatable-cell-template>
+  {{ getFormattedDate(row.data_inizio?.split('T')[0]) }}
+</ng-template>
+
+<ng-template #dataRevocaTemplate let-row="row" ngx-datatable-cell-template>
+  {{ getFormattedDate(row.data_revoca?.split('T')[0]) }}
+</ng-template>
+
+<ng-template #soggAbilitanteTemplate let-row="row" ngx-datatable-cell-template>
+  {{ compilante.nome_compilante }} {{ compilante.cognome_compilante }}
+</ng-template>
+
+<ng-template #azioniTemplate let-row="row" ngx-datatable-cell-template>
+  <button class="btn-action" (click)="onRevoca(row)" aria-label="revoca">
+    <i class="fa fa-registered fa-lg" *ngIf="!row.data_revoca" aria-hidden="true"></i>
+  </button>
+</ng-template>
+
+<div class="buttons-container">
+  <div>
+    <button class="btn btn-large btn-link" (click)="onIndietro()">
+      INDIETRO
+    </button>
+  </div>
+</div>
