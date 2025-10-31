@@ -1,0 +1,32 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class='min-vh-100 d-flex flex-column'>
+    <app-header></app-header>
+    <div class='background-container container-fluid px-0 pt-60 flex-grow-1 d-flex'>
+        <div class='overlay w-100 loader' *ngIf='loadingService.spinner$ | async'>
+            <div class='progress-spinner progress-spinner-active m-auto'>
+                <span class='sr-only'>Caricamento...</span>
+            </div>
+        </div>
+        <div class='menu-container' *ngIf="showMenu">
+            <ng-content select='app-menu'></ng-content>
+        </div>
+        <div class='float-left'
+             [class.body-container]="showMenu"
+             [class.w-100]="!showMenu"
+             [ngClass]='{full: !menuStatus}'
+        >
+            <app-notification-container
+                  *ngIf="notificationService.notifications.length > 0"></app-notification-container>
+            <ng-content select='router-outlet'></ng-content>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

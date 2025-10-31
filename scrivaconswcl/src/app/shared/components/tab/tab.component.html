@@ -1,0 +1,34 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<ul class="nav nav-tabs nav-tabs-hidescroll hidescroll-ico mx-4 mt-2" style="background: #F7F7F7;">
+  <li class="nav-item" *ngFor="let tabElement of tabElements">
+    <a [ngClass]="{
+        'nav-link': true,
+        active: tabElement.link == activeElement
+      }"
+      [attr.aria-selected]="tabElement.link == activeElement"
+      [routerLink]="tabElement.link"
+      [tabindex]="tabElement.disabled == true ? -1 : 0"
+      (click)="changeActive(tabElement.link)"
+      style="background: #F7F7F7;">
+      <app-icon *ngIf="tabElement.icon != undefined"
+        [name]="tabElement.icon.name"
+        [type]="tabElement.icon.type"
+        [cssClass]="tabElement.icon.cssClass"
+        [fill]="tabElement.icon.fill"
+        [size]="tabElement.icon.size"
+        [color]="tabElement.icon.color"
+        [padding]="tabElement.icon.padding"
+        [baseHref]="tabElement.icon.baseHref"
+      ></app-icon>
+      {{ tabElement.title }}
+    </a>
+  </li>
+</ul>

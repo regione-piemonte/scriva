@@ -1,0 +1,69 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="page">
+    <app-breadcrumbs [overrideBreadcrumbs]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="practice-detail row">
+        <div class="col-12">
+            <h1>
+                {{ 'AVVISI.LIST.TITLE' | translate }}
+            </h1>
+        </div>
+        <div class="col-12">
+            <div class="separator">&nbsp;</div>
+        </div>
+
+        <!--    <div class="col-12">-->
+        <!--      <h6 class="m-0 pt-2">{{ ambito?.des_ambito }}</h6>-->
+        <!--      <h6 class="m-0">{{ tipoAdempimento?.des_tipo_adempimento }}</h6>-->
+        <!--    </div>-->
+    </div>
+</div>
+
+<div class="row pl-0">
+  <span class="col pl-0">
+    <div class="total-elements pl-1">
+      {{ getNumberOfElements() }}
+        {{ 'UTILS.TABLE.NUMBER_OF_ELEMENTS' | translate }}
+    </div>
+  </span>
+</div>
+<app-card
+      [containerStyle]="
+    'box-shadow: 1px 2px 8px #c4c4c4 !important; border-radius: 0 !important;'
+  "
+>
+    <app-card-body>
+        <app-table
+              [columns]="columns"
+              [dataSource]="dataSource"
+              [showPager]="true"
+        ></app-table>
+    </app-card-body>
+</app-card>
+
+<app-back></app-back>
+
+<ng-template #settingsTemplate let-row="row">
+    <a class="list-item px-0 pt-1 cursor-pointer" (click)="onDetail(row)">
+        <app-icon
+              *ngIf="detailIcon.icon != undefined"
+              [name]="detailIcon.icon.name"
+              [type]="detailIcon.icon.type"
+              [cssClass]="detailIcon.icon.cssClass"
+              [fill]="detailIcon.icon.fill"
+              [size]="detailIcon.icon.size"
+              [color]="detailIcon.icon.color"
+              [padding]="detailIcon.icon.padding"
+              [baseHref]="detailIcon.icon.baseHref"
+              title="{{ 'PRACTICE.LIST.ICONS.PAPER' | translate }}"
+        ></app-icon>
+    </a>
+</ng-template>

@@ -1,0 +1,57 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div
+  class="container-pagination mt-4"
+  [class.firstPage]="isFirstPage()"
+  [class.lastPage]="isLastPage()"
+>
+  <nav class="pagination-wrapper justify-content-end">
+    <ul class="pagination my-auto">
+      <li *ngIf="pages.length > 1" (click)="prev()">
+        <svg class="icon cursor-pointer navs chevron-left">
+          <use
+            [attr.xlink:href]="
+              iconBaseUrl +
+              '/bootstrap-italia/dist/svg/sprite.svg#it-chevron-left'
+            "
+          ></use>
+        </svg>
+      </li>
+
+      <span class="rounded pagesSpan" *ngFor="let elPage of pages">
+        <li>
+          <app-pager-item
+            [active]="page == elPage"
+            [page]="elPage"
+            (pageChange)="onChangePage(elPage)"
+          ></app-pager-item>
+        </li>
+      </span>
+
+      <li *ngIf="pages.length > 1" (click)="next()">
+        <svg class="icon cursor-pointer navs chevron-right">
+          <use
+            [attr.xlink:href]="
+              iconBaseUrl +
+              '/bootstrap-italia/dist/svg/sprite.svg#it-chevron-right'
+            "
+          ></use>
+        </svg>
+      </li>
+    </ul>
+
+    <app-pager-size
+      *ngIf="showSize"
+      [size]="perPage"
+      (sizeChange)="onChangeSize($event)"
+    >
+    </app-pager-size>
+  </nav>
+</div>

@@ -1,0 +1,59 @@
+{
+  "service": [
+    {
+      "label": "Servizio Valutazione Impatto Ambientale",
+      "level": [
+        {
+          "label": "Progetto puntuali",
+          "type": "geojson",
+          "enable": true,
+          "geojson": [
+            { "type": "MultiPoint", "coordinates": [[20.2617, 10.554]] }
+          ]
+        },
+        {
+          "label": "Progetti lineari",
+          "type": "geojson",
+          "enable": true,
+          "geojson": [
+            {
+              "type": "FeatureCollection",
+              "features": [
+                {
+                  "type": "Feature",
+                  "properties": {},
+                  "geometry": {
+                    "type": "LineString",
+                    "coordinates": [
+                      [-111.4453125, 51.944264879028765],
+                      [-108.45703125, 42.4234565179383],
+                      [-95.97656249999999, 37.16031654673677]
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Progetti areali",
+          "type": "geojson",
+          "enable": true,
+          "geojson": [
+            {
+              "type": "Polygon",
+              "coordinates": [
+                [
+                  [-97.22, 48.98],
+                  [-96.58, 45.94],
+                  [-104.03, 45.94],
+                  [-104.05, 48.99]
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<app-card [containerStyle]="'box-shadow: 1px 2px 8px #C4C4C4; margin: 0;'">
+  <app-card-header>
+    <h6>
+      {{ 'PRACTICE.DETAIL.RECAP.TITLE' | translate }}
+    </h6>
+  </app-card-header>
+  <app-card-body>
+    <div class="row">
+      <div *ngIf="pratica?.cod_pratica" class="col-12 col-sm-6 col-md-4 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.COD_PRATICA' | translate }}
+        </div>
+        <div class="header-view-text">
+          {{ pratica?.cod_pratica }}
+        </div>
+      </div>
+      <div *ngIf="pratica?.cod_istanza" class="col-12 col-sm-6 col-md-4 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.IDENTIFICATIVO' | translate }}
+        </div>
+        <div class="header-view-text">
+          {{ pratica?.cod_istanza }}
+        </div>
+      </div>
+      <div class="col-12 row py-3" *ngFor="let comp of competenzaPratica; let first = first">
+        <ng-container [ngTemplateOutlet]="competenzaTemplate" [ngTemplateOutletContext]="{
+            first: first,
+            statale: false,
+            comp: comp
+          }"></ng-container>
+        <div class="col-12 bottom-divider"></div>
+      </div>
+
+      <div class="col-12 row py-3" *ngFor="let comp of competenzaStatale; let first = first">
+        <ng-container [ngTemplateOutlet]="competenzaTemplate" [ngTemplateOutletContext]="{
+            first: first,
+            statale: true,
+            comp: comp
+          }"></ng-container>
+        <div class="col-12 bottom-divider"></div>
+      </div>
+
+      <div *ngIf="pratica?.oggetto_istanza.length>0" class="col-12 py-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.PROGETTO' | translate }}
+        </div>
+        <div class="header-view-text">
+          {{
+          pratica?.oggetto_istanza && pratica?.oggetto_istanza[0].den_oggetto
+          }}
+        </div>
+      </div>
+      <div *ngIf="categorie.length>0" class="col-12 col-sm-6 col-md-4 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.CATEGORIA_PROG' | translate }}
+        </div>
+        <div class="header-view-text">
+          <span *ngFor="let categoria of categorie; let last = last">
+            {{ categoria?.categoria_oggetto?.cod_categoria_oggetto
+            }}<span *ngIf="!last">, </span>
+          </span>
+        </div>
+      </div>
+      <div *ngIf="flagValutazioneIncidenza" class="col-12 col-sm-6 col-md-4 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.VALUTAZIONE_INC' | translate }}
+        </div>
+        <div class="header-view-text">
+          <input id="VALUTAZIONE_INC" type="checkbox" [checked]="flagValutazioneIncidenza" (click)="preventSet()" />
+        </div>
+      </div>
+      <div *ngIf="pratica?.oggetto_istanza.length>0" class="col-12 py-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.LOCALIZZAZIONE' | translate }}
+        </div>
+        <div class="header-view-text">
+          <span *ngFor="let oggetto of pratica?.oggetto_istanza">
+            <span *ngFor="
+                let ubicazioni of oggetto?.ubicazione_oggetto;
+                let last = last
+              ">
+              <!--/**@jessica */-->
+              {{ ubicazioni?.comune.denom_comune }} ({{ubicazioni?.comune.provincia.sigla_provincia}})<span *ngIf="!last">, </span>
+            </span>
+          </span>
+        </div>
+      </div>
+      <!-- col-12 con JIRA SCRIVA-910 -->
+      <div class="col-12 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.DESCR' | translate }}
+        </div>
+        <div class="header-view-text">
+          {{
+          pratica?.oggetto_istanza && pratica?.oggetto_istanza[0].des_oggetto
+          }}
+        </div>
+      </div>
+      <div *ngIf="proponente" class="col-12 py-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.PROPONENTE' | translate }}
+        </div>
+        <div class="header-view-text">
+          {{ proponente }}
+        </div>
+      </div>
+
+      <div class="col-12 py-3" *ngIf="pratica?.responsabili_istanza">
+        <app-table-simple [title]="titleResponsabili" [columns]="columnsResponsabili"
+          [data]="dataResponsabili"></app-table-simple>
+      </div>
+
+      <div *ngIf="flagInfraStrategica" class="col-12 col-sm-6 col-md-4 pb-3">
+        <div class="header-label">
+          {{ 'PRACTICE.DETAIL.FIELDS.INF_STRATEGICA' | translate }}
+        </div>
+        <div class="header-view-text">
+          <input id="INF_STRATEGICA" type="checkbox" [checked]="flagInfraStrategica" (click)="preventSet()" />
+        </div>
+      </div>
+    </div>
+  </app-card-body>
+</app-card>
+
+<ng-template #competenzaTemplate let-first="first" let-statale="statale" let-comp="comp">
+  <div *ngIf="comp?.des_competenza_territorio" class="col-12 pb-3">
+    <div class="header-label">
+      {{
+      (statale
+      ? first
+      ? 'PRACTICE.DETAIL.FIELDS.AUTORITA_STATALE_COMP'
+      : 'PRACTICE.DETAIL.FIELDS.OTHER_AUTORITA_STATALE_COMP'
+      : first
+      ? 'PRACTICE.DETAIL.FIELDS.AUTORITA_COMP'
+      : 'PRACTICE.DETAIL.FIELDS.OTHER_AUTORITA_COMP'
+      ) | translate
+      }}
+    </div>
+    <div class="header-view-text">
+      <span class="d-block">
+        {{ comp?.des_competenza_territorio }}
+      </span>
+    </div>
+  </div>
+  <div *ngIf="comp?.sito_web" class="col-12 col-sm-6 col-md-4 pb-3">
+    <div class="header-label">
+      {{ 'PRACTICE.DETAIL.FIELDS.SITO_WEB' | translate }}
+    </div>
+    <div class="header-view-text">
+      {{comp?.sito_web}}
+    </div>
+  </div>
+  <div *ngIf="comp?.des_mail_pec" class="col-12 col-sm-6 col-md-4 pb-3">
+    <div class="header-label">
+      {{ 'PRACTICE.DETAIL.FIELDS.PEC' | translate }}
+    </div>
+    <div class="header-view-text">
+      {{comp?.des_mail_pec}}
+    </div>
+  </div>
+</ng-template>

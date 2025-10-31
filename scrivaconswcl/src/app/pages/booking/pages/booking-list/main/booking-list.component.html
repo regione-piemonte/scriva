@@ -1,0 +1,54 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class='page'>
+
+  <app-breadcrumbs></app-breadcrumbs>
+
+  <div class='row mt-4 mx-4 list-container shadow'>
+    <div class='table-responsive table-list mx-auto'>
+      <div class='row'>
+        <span class='col'>
+          <div class='float-left total-elements mt-4 ml-2 '>
+            {{ getNumberOfElements() }} {{ 'UTILS.TABLE.NUMBER_OF_ELEMENTS' | translate }}
+          </div>
+        </span>
+      </div>
+
+      <app-table
+        [columns]='columns'
+        [dataSource]='dataSource'
+        [showPager]='true'
+      ></app-table>
+    </div>
+  </div>
+
+  <div class='row mx-auto pb-4 justify-content-center footer-section'>
+    <button type='button'
+            class='btn btn-primary m-4 float-right newButton'
+            routerLink='./new' type='button'>
+      {{ 'BOOKING.LIST.ADD_BUTTON' | translate }}
+    </button>
+  </div>
+</div>
+
+<ng-template let-row='row' #userTemplate>
+  {{ row.user.firstName }} {{ row.user.lastName }}
+</ng-template>
+
+<ng-template #settingsTemplate let-row='row'>
+  <app-dropdown
+    [togglerIcon]='iconDropDownMenu'
+    [items]='dropdownMenu'
+    [content]='row'
+  ></app-dropdown>
+</ng-template>
+
+
+

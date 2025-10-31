@@ -1,0 +1,64 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<button
+      (click)="show===!show"
+      class="btn btn-dropdown dropdown-toggle"
+      type="button"
+      id="dropdownMenuButton"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+>
+    <app-icon
+          [name]="togglerIcon.name"
+          [type]="togglerIcon.type"
+          [cssClass]="togglerIcon.cssClass"
+          [fill]="togglerIcon.fill"
+          [size]="togglerIcon.size"
+          [color]="togglerIcon.color"
+          [padding]="togglerIcon.padding"
+          [baseHref]="togglerIcon.baseHref"
+          *ngIf="!useAvatar"
+    ></app-icon>
+
+    <div class="avatar avatar-dropdown" *ngIf="useAvatar">
+        <p [attr.aria-hidden]="true">{{ avatarContent }}</p>
+        <span class="sr-only">{{ avatarContent }}</span>
+    </div>
+</button>
+
+<div aria-labelledby="dropdownMenuButton"
+     [class.show]="show"
+     class="dropdown-menu dropdown-menu-right">
+    <ng-container
+          *ngFor="let item of items; last as isLast; first as isFirst"
+    >
+        <button *ngIf="!isHidden(item, content)" (click)="item.onClick({ item: item, optContent: content })"
+                class="dropdown-item" type="button">
+            <app-icon
+                  *ngIf="item.icon != undefined"
+                  [name]="item.icon.name"
+                  [type]="item.icon.type"
+                  [cssClass]="item.icon.cssClass"
+                  [fill]="item.icon.fill"
+                  [size]="item.icon.size"
+                  [color]="item.icon.color"
+                  [padding]="item.icon.padding"
+                  [baseHref]="item.icon.baseHref"
+            ></app-icon>
+            {{ item.label }}
+            <ng-container *ngIf="item.detail">
+                <br/>
+                {{ item.detail }}</ng-container
+            >
+        </button>
+        <div _ngcontent-kcm-c0="" class="dropdown-divider" *ngIf="!isLast"></div>
+    </ng-container>
+</div>

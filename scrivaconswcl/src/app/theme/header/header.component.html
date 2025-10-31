@@ -1,0 +1,66 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="it-header-wrapper it-header-sticky fixed-top">
+    <div class="it-nav-wrapper">
+        <div class="it-header-center-wrapper it-small-header custom-header">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="it-header-center-content-wrapper">
+                            <div class="it-brand-wrapper d-inline-flex pl-0">
+                                <div class="menu-icon" (window:resize)="onResize($event)">
+                                    <app-icon
+                                          [name]="'it-burger'"
+                                          [fill]="'#ffffff'"
+                                          (click)="openMenu()"
+                                    ></app-icon>
+                                </div>
+                                <div class="it-brand-text pl-3 text-white">
+                                    <a routerLink="home"><h3 class="no_toc mb-0">{{ 'APP.NAME' | translate }}</h3></a>
+                                </div>
+                            </div>
+
+                            <div class="it-right-zone">
+
+                                <button type="button" class="btn pb-1 px-1 pt-0" (click)="onHelp()">
+                                    <app-icon name="eng-scriva-white-help" type="eng" cssClass="cursor-pointer mx-2" size="small"
+                                        fill="#005095"></app-icon>
+                                </button>
+
+                                <app-dropdown
+                                      *nbIsGranted="['viewUser', 'info']"
+                                      [useAvatar]="true"
+                                      [avatarContent]="avatarContent"
+                                      [items]="dropdownMenu"
+                                ></app-dropdown>
+
+                                <!-- SCRIVA 1431 fix momentanea per messa in produzione -->
+                                <!-- <button *nbIsGranted="['viewUser', 'login']"
+                                  class="btn btn-outline-primary custom-button login-button"
+                                  (click)="onLogin()"
+                                >
+                                  <app-icon 
+                                    [name]="'eng-scriva-login'"
+                                    [fill]="'#ffffff'"
+                                    [type]="'eng'"
+                                    size="small"
+                                  ></app-icon>
+                                  <span style="font-size: 18px" class="ml-3">
+                                    <b>{{ 'HEADER.LOGIN' | translate }}</b>
+                                  </span>
+                              </button> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

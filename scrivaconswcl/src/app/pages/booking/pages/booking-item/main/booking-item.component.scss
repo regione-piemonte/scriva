@@ -1,0 +1,76 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.page {
+  background-color: #ffffff;
+}
+
+.header-new {
+  background: #f7f7f7 0% 0% no-repeat;
+  border: 1px solid #008cdc;
+  height: 89px;
+}
+
+.header-new-title {
+  font: normal normal 300 16px/22px Open Sans;
+  letter-spacing: 0;
+  color: #212529;
+}
+
+.header-new-text {
+  font: normal normal 600 16px/22px Open Sans;
+  letter-spacing: 0;
+  color: #212529;
+}
+
+.section-title {
+  text-align: left;
+  font: normal normal bold 16px/22px Open Sans;
+  letter-spacing: 0;
+  color: #008cdc;
+}
+
+.footer-section {
+  background: #e5e5e5 0% 0% no-repeat padding-box;
+  border: 1px solid #e5e5e5;
+  height: 80px;
+  justify-content: space-around !important;
+}
+
+.save-button {
+  width: 133px;
+  height: 48px;
+  background: #005095 0% 0% no-repeat padding-box !important;
+  border-radius: 6px;
+}
+.back-button {
+  width: 140px;
+  height: 48px;
+
+  border-radius: 6px;
+}
+
+
+.button-text {
+  font: normal normal bold 14px Open Sans;
+  color: #ffffff;
+}
+
+.fileLabelText {
+  text-align: left;
+  font: normal normal normal 16px/22px Open Sans;
+  letter-spacing: 0;
+  color: #212529;
+}
+
+.file-name-text {
+  font: normal normal normal 16px/22px Open Sans;
+  color: #212529;
+}
+

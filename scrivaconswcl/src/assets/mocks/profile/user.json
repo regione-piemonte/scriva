@@ -1,0 +1,12 @@
+{
+  "codiceFiscale": "string",
+  "cognome": "Bianchi",
+  "idBackOffice": 1,
+  "idGruppo": 1,
+  "idRuolo": 1,
+  "nome": "Luca",
+  "useCase": [
+    "string"
+  ],
+  "username": "marioRossi46"
+}

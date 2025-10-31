@@ -1,0 +1,21 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div [ngClass]="classes"
+     id="accordionEx"
+     role="tablist">
+    <app-accordion-header [card]="card"></app-accordion-header>
+    <div [attr.id]="card?.name" class="collapse" role="tabpanel">
+        <ng-container 
+             [ngTemplateOutlet]="card?.template" 
+             [ngTemplateOutletContext]="{data:card?.templateData}">
+        </ng-container>
+    </div>
+</div>
+

@@ -1,0 +1,67 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+ng-select.color-status-danger .ng-select-container,
+ng-select.color-status-danger .ng-select-container:hover {
+  border-color: #ff3d71 !important;
+}
+
+.ng-select-container {
+  box-shadow: none;
+  padding: 0.584rem;
+  height: 2.5rem !important;
+  max-height: 32px !important;
+  color: $active_input_color;
+  border-radius: 0.25rem;
+  min-height: 32px !important;
+}
+
+.ng-select .ng-clear-wrapper .ng-clear {
+  display: none !important;
+}
+
+.ng-select .ng-clear-wrapper {
+  background-image: url('/assets/images/x.png');
+  background-repeat: round;
+  width: 10px !important;
+  height: 10px;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option {
+  padding: 8px 11px !important;
+  font-size: 13px !important;
+}
+
+.ng-select .ng-select-container .ng-value-container {
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+}
+
+.ng-select .ng-select-container .ng-value,
+.ng-placeholder {
+  font-size: 13px !important;
+}
+
+.ng-select.ng-select-single .ng-select-container .ng-value-container .ng-input {
+  left: -1px !important;
+  top: 0 !important;
+  max-height: 32px !important;
+
+  input {
+    max-height: 32px !important;
+  }
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+  background-color: #80b8f3 !important;
+}
+
+.ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-selected {
+  background-color: #80b8f3 !important;
+}

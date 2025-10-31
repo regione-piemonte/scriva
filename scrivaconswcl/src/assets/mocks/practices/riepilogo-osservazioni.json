@@ -1,0 +1,52 @@
+[
+    {
+        "allegatoIstanza": {
+            "id_istanza": 351,
+            "tipologia_allegato":{ 
+                "id_tipologia_allegato": 10, 
+                "cod_tipologia_allegato": "10-tipol", 
+                "des_tipologia_allegato": "Sintesi in linguaggio non tecnico",
+                "ordinamento_tipologia_allegato": 10,
+                "flg_attivo":true,"categoria_allegato": {
+                    "id_categoria_allegato":8,
+                    "cod_categoria_allegato":"SNTS-NOTECN",
+                    "des_categoria_allegato":"Sintesi in linguaggio non tecnico",
+                    "ordinamento_categoria_allegato":8,
+                    "flg_attivo":true
+                }
+            },
+            "flg_riservato":false,
+            "cod_allegato":"test",
+            "nome_allegato":"test_abcd.pdf",
+            "data_upload":  "2021-09-12T22:00:00.000+0000",
+            "dimensione_upload" : "300.00 MB",
+            "note": "test"
+        } ,
+        "file": "il binario"
+    },
+    {
+        "allegatoIstanza": {
+            "id_istanza": 352,
+            "tipologia_allegato":{ 
+                "id_tipologia_allegato": 11, 
+                "cod_tipologia_allegato": "10-tipol", 
+                "des_tipologia_allegato": "Sintesi in linguaggio non tecnico",
+                "ordinamento_tipologia_allegato": 10,
+                "flg_attivo":true,"categoria_allegato": {
+                    "id_categoria_allegato":8,
+                    "cod_categoria_allegato":"SNTS-NOTECN",
+                    "des_categoria_allegato":"Sintesi in linguaggio non tecnico",
+                    "ordinamento_categoria_allegato":8,
+                    "flg_attivo":true
+                }
+            },
+            "flg_riservato":false,
+            "cod_allegato":"test",
+            "nome_allegato":"test-luca.pdf",
+            "data_upload":  "2021-07-12T22:00:00.000+0000",
+            "dimensione_upload" : "100.00 MB",
+            "note": "test"
+        } ,
+        "file": "il binario"
+    }
+]

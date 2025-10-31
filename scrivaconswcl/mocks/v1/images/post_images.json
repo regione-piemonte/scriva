@@ -1,0 +1,525 @@
+{
+  "code": "OK",
+  "error": null,
+  "result": {
+      "first": false,
+      "last": false,
+      "totalPages": 3327,
+      "totalElements": 33262,
+      "size": 10,
+      "number": 1,
+      "sort": [
+          {
+              "direction": "ASC",
+              "property": "id",
+              "ignoreCase": false,
+              "nullHandling": "NATIVE",
+              "ascending": true,
+              "descending": false
+          }
+      ],
+      "numberOfElements": 10,
+      "content": [
+          {
+              "id": 627,
+              "autore": {
+                  "id": 192,
+                  "nome": ".",
+                  "cognome": "GRECO GIANNI",
+                  "enteAppartenenza": null,
+                  "indirizzo": "ASS.REGIONALE PIANIFICAZIONE AREE PROTETTE",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": "gianni.greco@regione.piemonte.it",
+                  "telefono": "",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 1,
+                  "descrizione": "Inverno"
+              },
+              "tema": {
+                  "id": 31,
+                  "descrizione": "Architettura tipica/Etnografia"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 3813,
+              "descrizione": "Paesaggio innevato e baita con tetto in paglia ",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 628,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/97397",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 2,
+                  "descrizione": "Primavera"
+              },
+              "tema": {
+                  "id": 25,
+                  "descrizione": "Paesaggio"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 169,
+              "descrizione": "Paesaggio, fioritura di ranuncoli, sullo sfondo Bec D'Orel e Monte Bussaglia",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 629,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/97397",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 2,
+                  "descrizione": "Primavera"
+              },
+              "tema": {
+                  "id": 25,
+                  "descrizione": "Paesaggio"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 170,
+              "descrizione": "Veduta del lago inferiore Frisson e costa Lausea, versante con copertura di pino uncinato",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 630,
+              "autore": {
+                  "id": 192,
+                  "nome": ".",
+                  "cognome": "eeee",
+                  "enteAppartenenza": null,
+                  "indirizzo": "ASS.REGIONALE PIANIFICAZIONE AREE PROTETTE",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": "eeee.ggggggggg@regione.italiana.it",
+                  "telefono": "",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 1,
+                  "descrizione": "Inverno"
+              },
+              "tema": {
+                  "id": 31,
+                  "descrizione": "Architettura tipica/Etnografia"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 3815,
+              "descrizione": "Paesaggio innevato, baita con tetto in paglia",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 631,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/97397",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 2,
+                  "descrizione": "Primavera"
+              },
+              "tema": {
+                  "id": 25,
+                  "descrizione": "Paesaggio"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 174,
+              "descrizione": "Veduta del monte Frisson, rododendri",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 632,
+              "autore": {
+                  "id": 192,
+                  "nome": ".",
+                  "cognome": "cognome",
+                  "enteAppartenenza": null,
+                  "indirizzo": "ASS.REGIONALE PIANIFICAZIONE AREE PROTETTE",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": "eeee.ggggggggg@regione.italiana.it",
+                  "telefono": "",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 1,
+                  "descrizione": "Inverno"
+              },
+              "tema": {
+                  "id": 31,
+                  "descrizione": "Architettura tipica/Etnografia"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 3814,
+              "descrizione": "Paesaggio con neve, fienile in località Tetto Curnel",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 633,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/9779977",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 1,
+                  "descrizione": "Inverno"
+              },
+              "tema": {
+                  "id": 27,
+                  "descrizione": "Fauna"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 192,
+              "descrizione": "Pettirosso su ramo di faggio",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 634,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/999333",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 3,
+                  "descrizione": "Estate"
+              },
+              "tema": {
+                  "id": 27,
+                  "descrizione": "Fauna"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 193,
+              "descrizione": "PERSA CON PRESTITO N. 1615 - Nidiacei di sparviere nel bosco di faggio",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 637,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/71717171",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 3,
+                  "descrizione": "Estate"
+              },
+              "tema": {
+                  "id": 27,
+                  "descrizione": "Fauna"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 194,
+              "descrizione": "Nido di sparviere in bosco di faggio",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          },
+          {
+              "id": 638,
+              "autore": {
+                  "id": 149,
+                  "nome": ".",
+                  "cognome": "ARCHIVIO PARCO NAT. ALPI MARITTIME A.P.N.A.M.",
+                  "enteAppartenenza": null,
+                  "indirizzo": " CORSO DANTE LIVIO BIANCO 5 - 12010 VALDIERI (CN)",
+                  "cap": null,
+                  "istatComune": null,
+                  "mail": null,
+                  "telefono": "0171/87654",
+                  "pec": null,
+                  "privacy": false,
+                  "note": null,
+                  "tipoSoggetto": {
+                      "id": 1,
+                      "descrizione": "Autore"
+                  }
+              },
+              "stagione": {
+                  "id": 2,
+                  "descrizione": "Primavera"
+              },
+              "tema": {
+                  "id": 25,
+                  "descrizione": "Paesaggio"
+              },
+              "ecomuseo": {
+                  "id": 1,
+                  "descrizione": "-- Non specificato --"
+              },
+              "modAcquisizione": {
+                  "id": 4,
+                  "descrizione": "Istituzionale"
+              },
+              "tipoImmagine": {
+                  "id": 1,
+                  "descrizione": "Diapositiva"
+              },
+              "dataScatto": null,
+              "dataAcquisizione": "15/12/1994",
+              "flgRestrizioni": false,
+              "numeroImmagine": 175,
+              "descrizione": "Veduta del lago superiore Frisson e monte Frisson, rododendri",
+              "codAreaProtetta": "a8",
+              "codRn2000": "IT1160056",
+              "note": null,
+              "supportoList": null
+          }
+      ]
+  }
+}

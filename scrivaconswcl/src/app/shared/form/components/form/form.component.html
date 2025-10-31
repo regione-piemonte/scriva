@@ -1,0 +1,41 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<form [formGroup]="form" (submit)="save.emit(form.value)">
+    <app-form-inputs
+          [filter]="form.filter"
+          [controls]="form.controls"
+          [form]="form"
+    ></app-form-inputs>
+
+    <app-button
+          *ngIf="showFooter()"
+          class="float-right"
+          [size]="'sm'"
+          [color]="'primary'"
+          (click)="save.emit(form.value)"
+          [disabled]="!form.valid"
+    >
+        <div btnContent>{{ form?.footer.submit.text | translate }}</div>
+    </app-button>
+
+    <app-button
+          *ngIf="showFooter() && showClearButton()"
+          class="float-right mr-4"
+          [size]="'sm'"
+          [outline]="true"
+          [color]="'primary'"
+          (click)="resetForm()"
+          [disabled]="!form.valid"
+    >
+        <div btnContent>{{ form?.footer.clear.text | translate }}</div>
+    </app-button>
+
+    <input #htmlInputSubmit type="submit" style="display: none;"/>
+</form>

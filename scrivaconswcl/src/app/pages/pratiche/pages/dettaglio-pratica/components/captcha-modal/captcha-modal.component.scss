@@ -1,0 +1,21 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+button:focus, button:active, button {
+    box-shadow: none !important;
+}
+
+.rotateBtn {
+    animation: rotate 0.25s ease-in-out 0s;
+}
+  
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

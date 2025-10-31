@@ -1,0 +1,180 @@
+[
+  {
+      "id_istanza": 200,
+      "cod_istanza": "VER-2021-0174",
+      "stato_istanza": {
+          "cod_stato_istanza": "CONCLUSA",
+          "des_stato_istanza": "Conclusa"
+      },
+      "adempimento": {
+          "cod_adempimento": "VER",
+          "des_adempimento": "Verifica di assoggettabilità a VIA",
+          "cod_tipo_adempimento": "VIA",
+          "des_tipo_adempimento": "Valutazione di Impatto Ambientale"
+      },
+      "numero_protocollo": 0,
+      "data_inserimento_istanza": "2021-07-12T22:00:00.000+0000",
+      "data_modifica_istanza": "2021-07-12T22:00:00.000+0000",
+      "data_pubblicazione": "2021-12-14T15:40:58.969+0000",
+      "des_stato_sintesi_pagamento": "DA EFFETTUARE",
+      "data_inizio_osservazione": "2021-12-15T09:28:12.241+0000",
+      "data_fine_osservazione": "2021-12-20T09:28:12.241+0000",
+      "competenza_territorio": [
+          {
+              "id_competenza_territorio": 1,
+              "comune_competenza": {
+                  "id_comune": 3459,
+                  "cod_istat_comune": "001272",
+                  "cod_belfiore_comune": "L219",
+                  "denom_comune": "TORINO",
+                  "data_inizio_validita": "2006-09-20",
+                  "dt_id_comune": 12915,
+                  "dt_id_comune_prev": 7004,
+                  "dt_id_comune_next": 0,
+                  "cap_comune": "00000",
+                  "provincia": {
+                      "id_provincia": 1,
+                      "cod_provincia": "001",
+                      "denom_provincia": "TORINO",
+                      "sigla_provincia": "TO",
+                      "data_inizio_validita": "1861-01-01",
+                      "regione": {
+                          "id_regione": 1,
+                          "cod_regione": "01",
+                          "denom_regione": "PIEMONTE",
+                          "data_inizio_validita": "1861-01-01",
+                          "nazione": {
+                              "id_nazione": 1,
+                              "cod_istat_nazione": "100",
+                              "denom_nazione": "ITALIA",
+                              "data_inizio_validita": "2010-12-31",
+                              "dt_id_stato": 418,
+                              "dt_id_stato_prev": 1,
+                              "dt_id_stato_next": 0,
+                              "id_origine": 1,
+                              "cod_iso2": "00"
+                          }
+                      }
+                  }
+              },
+              "tipo_competenza": {
+                  "id_tipo_competenza": 2,
+                  "cod_tipo_competenza": "REGIONALE",
+                  "des_tipo_competenza": "Regionale",
+                  "des_tipo_competenza_estesa": "Competenza Regionale",
+                  "ordinamento_tipo_competenza": 2
+              },
+              "cod_competenza_territorio": "A1600A",
+              "des_competenza_territorio": "Regione Piemonte",
+              "indirizzo_competenza": "Via Principe Amedeo",
+              "num_civico_indirizzo": "17",
+              "cap_competenza": "10123"
+          }
+      ],
+      "oggetto_istanza": [
+          {
+              "id_oggetto_istanza": 144,
+              "cod_scriva": "313",
+              "den_oggetto": "prova opera",
+              "des_oggetto": "Descrizione dell'opera",
+              "tipologia_oggetto": {
+                  "id_tipologia_oggetto": 0,
+                  "cod_tipologia_oggetto": "GENERICA",
+                  "des_tipologia_oggetto": "Tipologia Generica",
+                  "natura_oggetto": {
+                      "id_natura_oggetto": 2,
+                      "cod_natura_oggetto": "PROGETTO",
+                      "des_natura_oggetto": "Progetto"
+                  }
+              },
+              "ubicazione_oggetto": [
+                  {
+                      "id_oggetto_istanza": 144,
+                      "comune": {
+                          "id_comune": 3459,
+                          "cod_istat_comune": "001272",
+                          "cod_belfiore_comune": "L219",
+                          "denom_comune": "TORINO",
+                          "data_inizio_validita": "2006-09-20",
+                          "dt_id_comune": 12915,
+                          "dt_id_comune_prev": 7004,
+                          "dt_id_comune_next": 0,
+                          "cap_comune": "00000",
+                          "provincia": {
+                              "id_provincia": 1,
+                              "cod_provincia": "001",
+                              "denom_provincia": "TORINO",
+                              "sigla_provincia": "TO",
+                              "data_inizio_validita": "1861-01-01",
+                              "regione": {
+                                  "id_regione": 1,
+                                  "cod_regione": "01",
+                                  "denom_regione": "PIEMONTE",
+                                  "data_inizio_validita": "1861-01-01",
+                                  "nazione": {
+                                      "id_nazione": 1,
+                                      "cod_istat_nazione": "100",
+                                      "denom_nazione": "ITALIA",
+                                      "data_inizio_validita": "2010-12-31",
+                                      "dt_id_stato": 418,
+                                      "dt_id_stato_prev": 1,
+                                      "dt_id_stato_next": 0,
+                                      "id_origine": 1,
+                                      "cod_iso2": "00"
+                                  }
+                              }
+                          }
+                      }
+                  }
+              ]
+          }
+      ],
+      "soggetto_istanza": [
+          {
+              "id_soggetto_istanza": 405,
+              "codice_fiscale": "09205650154",
+              "natura_giuridica": {
+                  "cod_natura_giuridica": "N1",
+                  "des_natura_giuridica": "Società Semplice"
+              },
+              "partita_iva": "35834583458",
+              "denominazione": "TECNICA DEI DATI ",
+              "comune_sede_legale": {
+                  "id_comune": 8727,
+                  "cod_istat_comune": "001013",
+                  "cod_belfiore_comune": "A518",
+                  "denom_comune": "AVIGLIANA",
+                  "data_inizio_validita": "1861-01-01",
+                  "dt_id_comune": 392,
+                  "dt_id_comune_prev": 0,
+                  "dt_id_comune_next": 0,
+                  "cap_comune": "00000",
+                  "provincia": {
+                      "id_provincia": 1,
+                      "cod_provincia": "001",
+                      "denom_provincia": "TORINO",
+                      "sigla_provincia": "TO",
+                      "data_inizio_validita": "1861-01-01",
+                      "regione": {
+                          "id_regione": 1,
+                          "cod_regione": "01",
+                          "denom_regione": "PIEMONTE",
+                          "data_inizio_validita": "1861-01-01",
+                          "nazione": {
+                              "id_nazione": 1,
+                              "cod_istat_nazione": "100",
+                              "denom_nazione": "ITALIA",
+                              "data_inizio_validita": "2010-12-31",
+                              "dt_id_stato": 418,
+                              "dt_id_stato_prev": 1,
+                              "dt_id_stato_next": 0,
+                              "id_origine": 1
+                          }
+                      }
+                  }
+              }
+          }
+      ],
+      "flg_osservazione": false
+  }
+]

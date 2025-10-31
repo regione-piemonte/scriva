@@ -1,0 +1,45 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="table-container">
+  <table [class]="tableClass">
+    <thead
+      *ngIf="showHeader"
+      app-table-thead
+      [columns]="columns"
+      [dataSource]="dataSource"
+      [selected]="selected"
+      [rowIdentity]="rowIdentity"
+      (checkboxToggle)="checkboxToggleHeader($event)"
+    ></thead>
+
+    <tbody app-table-tbody
+      [emptyMessage]="emptyMessage"
+      [columns]="columns"
+      [dataSource]="dataSource"
+      [selected]="selected"
+      [rowIdentity]="rowIdentity"
+      [rowDetail]="rowDetail"
+      [rowDetailBorder]="rowDetailBorder"
+      [showEmptyMessage]="showEmptyMessage"
+      (rowClick)="rowClick.emit($event)"
+      (checkboxToggle)="checkboxToggleRow($event)"
+    ></tbody>
+  </table>
+
+  <app-pager
+    class="align-self-center"
+    *ngIf="showPager && (dataSource.rows$ | async)?.length"
+    [page]="dataSource.tablePage.pageNumber"
+    [perPage]="dataSource.tablePage.size"
+    [count]="dataSource.tablePage.totalElements"
+    (changePage)="pagerChange($event)"
+    (changeSize)="sizeChange($event)"
+  ></app-pager>
+</div>

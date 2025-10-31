@@ -1,0 +1,66 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<main>
+    <div class="w-100">
+        <div class="header-image"></div>
+
+        <div class="container home-container">
+ <!--  Provvisorio: oscuramento pre-avvio scriva-1491 -->   
+          <div class='pt-4 row'>
+                <div class='col-8'>
+                    <div class="alert-box info mb-0">
+                        <span>
+                            <span class="text-only" [innerHTML]="'SERVICE_HOME.TEXT' | translate">
+                            </span>
+                            <app-icon
+                                  name="eng-remark"
+                                  type="eng"
+                                  cssClass="cursor-pointer"
+                                  size="extra-small"
+                                  fill="#005095"
+                                  title="{{ 'PRACTICE.LIST.ICONS.NEW_REMARK' | translate }}"
+                            ></app-icon>
+                            <span class="text-only" [innerHTML]="'SERVICE_HOME.TEXT2' | translate">
+                            </span>
+                        </span>
+                    </div>
+                </div>
+            </div> 
+            <div class="home">
+                <div class="row pb-4" *ngFor='let a of mappedResponse|keyvalue'>
+                    <h5 class='col-12 title mb-0' [ngStyle]="{color:a.value.config.color}">
+                        <img [src]="a.value.config.icon" [alt]="a.value.config.title">
+                        {{ a.value.config.title }}</h5>
+                    <div class='col-12 col-sm-6 col-md-4' *ngFor="let adempimento of a.value.adempimenti">
+                        <app-card>
+                            <app-card-header>
+                                <div class='ambito-container'>
+                                    {{ adempimento.cod_tipo_adempimento }} - {{ adempimento.des_tipo_adempimento }}
+                                </div>
+                            </app-card-header>
+                            <app-card-body>
+                                <div class='text-container'>
+                                    Servizio di consultazione procedimenti
+                                </div>
+
+                                <div class='row m-0'>
+                                    <div class='col-12 text-right'>
+                                        <button type='button' class='btn button-card text-right'
+                                                (click)='onNavigateList(adempimento)'>{{ 'SERVICE_HOME.GO' | translate }}</button>
+                                    </div>
+                                </div>
+                            </app-card-body>
+                        </app-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

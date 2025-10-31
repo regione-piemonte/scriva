@@ -1,0 +1,27 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class='header-nav col-12 pt-3 pl-0'>
+    <!--    <a routerLink='/home'>-->
+    <!--        <app-icon-->
+    <!--              [name]="'eng-home-solid'"-->
+    <!--              [type]="'eng'"-->
+    <!--              [cssClass]="'cursor-pointer mb-1 mr-2'"-->
+    <!--              [fill]="'#005095'"-->
+    <!--              [size]="'extra-small'"-->
+    <!--        ></app-icon>-->
+    <!--    </a>-->
+    <span class='no_toc mb-0 align-middle small' *ngFor='let route of routesLabels'>
+        <a class='text-decoration-none' *ngIf='route.href != undefined' [routerLink]='route.href'
+           [queryParams]="route.query">
+            {{ route.label | translate }} /
+        </a>
+        <span class="font-weight-bolder" *ngIf='route.href == undefined'>{{ route.label | translate }} </span>
+    </span>
+</div>

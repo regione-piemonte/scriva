@@ -1,0 +1,40 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.heel {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1.25rem;
+    margin-bottom: 2.25rem;
+    text-align: left;
+    font: normal normal bold 24px / 33px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+  
+    &::after {
+      content: '';
+      display: block;
+      position: relative;
+      top: 4px;
+      width: 60px;
+      height: 6px;
+      background-color: #b8191a;
+    }
+  }
+  
+  .row {
+    div {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  p {
+    font: normal normal normal 16px / 21px Open Sans;
+    letter-spacing: 0;
+  }

@@ -1,0 +1,94 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<app-card
+      [containerStyle]="
+    'box-shadow: 1px 2px 8px #C4C4C4; margin: 0; margin-top: 25px'
+  "
+      *ngIf="dataSource"
+>
+    <app-card-header>
+        <div class="header-insert pb-4" style="font-weight: bold; font-size: 16px">
+            {{ 'OSSERVAZIONI.RIEPILOGO.TITLE' | translate }}
+        </div>
+    </app-card-header>
+    <app-card-body>
+        <app-table
+              [columns]="columns"
+              [dataSource]="dataSource"
+              [showPager]="true"
+        ></app-table>
+    </app-card-body>
+    <app-card-footer *ngIf="dataSource?.rows?.length > 0">
+        <div class="row">
+            <div class="col-6">
+                <button
+                      type="button"
+                      (click)="exportCSV()"
+                      class="btn btn-primary custom-button float-left"
+                >
+                    {{ 'DOCUMENTI.BUTTON.EXPORT_CSV' | translate }}
+                </button>
+            </div>
+            <div class="col-6">
+                <button
+                      type="button"
+                      (click)="exportAllFile()"
+                      class="btn btn-primary custom-button float-right"
+                >
+                    {{ 'DOCUMENTI.BUTTON.DOWNLOAD_ALL' | translate }}
+                </button>
+            </div>
+
+        </div>
+    </app-card-footer>
+</app-card>
+<div
+      class="row"
+      style="margin-top: 20px; margin-left: 5px"
+      *ngIf="totalElements && canCreateObs" 
+>
+    <div class="col-auto">
+        <input type="checkbox" [(ngModel)]="selected" value="true" name="sel"/>
+    </div>
+    <div class="col-10">
+        <div class="header-view-text">
+            {{ 'OSSERVAZIONI.RIEPILOGO.DICHIARAZIONE' | translate }}
+        </div>
+    </div>
+    <div class="col-12 col-sm-6 pt-4" style="text-align: left">
+        <!--        <button type="button" class="btn reset-btn">-->
+        <!--            {{ 'OSSERVAZIONI.BUTTONS.BACK' | translate }}-->
+        <!--        </button>-->
+    </div>
+    <div
+          class="col-12 col-sm-6 pt-4"
+          style="text-align: right"
+          *ngIf="selected && !isSubmitted"
+          (click)="onSendOsservazione()"
+    >
+        <button type="button" class="btn btn-primary custom-button">
+            {{ 'OSSERVAZIONI.BUTTONS.INVIA_OSS' | translate }}
+        </button>
+    </div>
+</div>
+
+<ng-template #settingsTemplate let-row="row">
+    <a class="list-item px-0 pt-1 cursor-pointer" (click)="onDeleteAllegato(row)" *ngIf="canCreateObs">
+        <app-icon
+              name="eng-delete"
+              type="eng"
+              cssClass="cursor-pointer mx-2 mt-1"
+              size="small"
+              fill="#005095"
+              title="{{ 'OSSERVAZIONI.ICONS.DELETE' | translate }}"
+        >
+        </app-icon>
+    </a>
+</ng-template>

@@ -1,0 +1,23 @@
+{
+  "app": {
+    "name": "csi-template",
+    "label": "csi template"
+  },
+  "buildsDir": "dist",
+  "sources": {
+    "updateVersion": {
+      "replacingTag": "{version}",
+      "filePath": "dist/index.html"
+    },
+    "sourcePath": "."
+  },
+  "remote": {
+    "deploy": {
+      "host": "11.36.89.158",
+      "port": 22,
+      "user": "root",
+      "password": "3fd324df",
+      "angularDestinationPath": "/var/www/html/csi-template"
+    }
+  }
+}

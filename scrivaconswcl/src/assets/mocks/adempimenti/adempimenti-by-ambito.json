@@ -1,0 +1,87 @@
+[
+    {
+      "ambito": {
+        "cod_ambito": "Ambito 01",
+        "des_ambito": "Ambito DESC 01",
+        "des_estesa_ambito": "Ambito DESC estesa 01",
+        "gestUID": "Ambito UID 01",
+        "id_ambito": 1
+      },
+      "cod_tipo_adempimento": "Adempimento 01",
+      "des_estesa_tipo_adempimento": "Adempimento DESC estesa 01",
+      "des_tipo_adempimento": "Adempimento DESC 01",
+      "id_ambito": 1,
+      "id_tipo_adempimento": 1,
+      "ordinamento_tipo_adempimento": 1,
+      "preferito": 1,
+      "uuid_index": "Adempimento UUID 01"
+    },
+    {
+      "ambito": {
+        "cod_ambito": "Ambito 01",
+        "des_ambito": "Ambito DESC 01",
+        "des_estesa_ambito": "Ambito DESC estesa 01",
+        "gestUID": "Ambito UID 01",
+        "id_ambito": 1
+      },
+      "cod_tipo_adempimento": "Adempimento 02",
+      "des_estesa_tipo_adempimento": "Adempimento DESC estesa 02",
+      "des_tipo_adempimento": "Adempimento DESC 02",
+      "id_ambito": 2,
+      "id_tipo_adempimento": 2,
+      "ordinamento_tipo_adempimento": 2,
+      "preferito": 2,
+      "uuid_index": "Adempimento UUID 02"
+    },
+    {
+      "ambito": {
+        "cod_ambito": "Ambito 01",
+        "des_ambito": "Ambito DESC 01",
+        "des_estesa_ambito": "Ambito DESC estesa 01",
+        "gestUID": "Ambito UID 01",
+        "id_ambito": 1
+      },
+      "cod_tipo_adempimento": "Adempimento 03",
+      "des_estesa_tipo_adempimento": "Adempimento DESC estesa 03",
+      "des_tipo_adempimento": "Adempimento DESC 03",
+      "id_ambito": 3,
+      "id_tipo_adempimento": 3,
+      "ordinamento_tipo_adempimento": 3,
+      "preferito": 3,
+      "uuid_index": "Adempimento UUID 03"
+    },
+    {
+      "ambito": {
+        "cod_ambito": "Ambito 01",
+        "des_ambito": "Ambito DESC 01",
+        "des_estesa_ambito": "Ambito DESC estesa 01",
+        "gestUID": "Ambito UID 01",
+        "id_ambito": 1
+      },
+      "cod_tipo_adempimento": "Adempimento 04",
+      "des_estesa_tipo_adempimento": "Adempimento DESC estesa 04",
+      "des_tipo_adempimento": "Adempimento DESC 04",
+      "id_ambito": 4,
+      "id_tipo_adempimento": 4,
+      "ordinamento_tipo_adempimento": 4,
+      "preferito": 4,
+      "uuid_index": "Adempimento UUID 04"
+    },
+    {
+      "ambito": {
+        "cod_ambito": "Ambito 01",
+        "des_ambito": "Ambito DESC 01",
+        "des_estesa_ambito": "Ambito DESC estesa 01",
+        "gestUID": "Ambito UID 01",
+        "id_ambito": 1
+      },
+      "cod_tipo_adempimento": "Adempimento 05",
+      "des_estesa_tipo_adempimento": "Adempimento DESC estesa 05",
+      "des_tipo_adempimento": "Adempimento DESC 05",
+      "id_ambito": 5,
+      "id_tipo_adempimento": 5,
+      "ordinamento_tipo_adempimento": 5,
+      "preferito": 5,
+      "uuid_index": "Adempimento UUID 05"
+    }
+]

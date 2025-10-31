@@ -1,0 +1,125 @@
+[
+  {
+    "id_allegato_istanza": 166,
+    "id_istanza": 170,
+    "uuid_index": "69837b22-df3f-11eb-ac18-c3977edcc39c",
+    "flg_riservato": false,
+    "cod_allegato": "ALTRA-DOC-403",
+    "nome_allegato": "old_201480540439724.pdf",
+    "dimensione_upload": 26912,
+    "data_upload": "2021-07-07 18:21:41",
+    "flg_cancellato": false,
+    "ind_firma": 0,
+    "id_istanza_attore": 613,
+    "id_funzionario": 0,
+    "id_allegato_istanza_padre": 0,
+    "flg_da_pubblicare": false,
+    "id_istanza_osservazione": 0,
+    "tipologia_allegato": {
+      "id_tipologia_allegato": 3,
+      "cod_tipologia_allegato": "4-tipol",
+      "des_tipologia_allegato": "Dati riservati",
+      "ordinamento_tipologia_allegato": 3,
+      "flg_attivo": true,
+      "categoria_allegato": {
+        "id_categoria_allegato": 3,
+        "cod_categoria_allegato": "ALTRA-DOC",
+        "des_categoria_allegato": "Ulteriore documentazione",
+        "ordinamento_categoria_allegato": 3,
+        "flg_attivo": true
+      }
+    },
+    "tipo_integra_allegato": {
+      "id_tipo_integra_allegato": 0
+    },
+    "classe_allegato": {
+      "id_classe_allegato": 1,
+      "cod_classe_allegato": "ELAB_PROGETTUALI",
+      "des_classe_allegato": "Elaborati progettuali",
+      "ordinamento_classe_allegato": 1,
+      "flg_attivo": true
+    }
+  },
+  {
+    "id_allegato_istanza": 125,
+    "id_istanza": 96,
+    "uuid_index": "67e1c30f-c9e3-11eb-835d-2b2d2b646ad3",
+    "flg_riservato": false,
+    "cod_allegato": "ALTRA-DOC-362",
+    "nome_allegato": "ProvaDiegoUpload.png",
+    "dimensione_upload": 13425,
+    "data_upload": "2021-06-10 14:00:10",
+    "flg_cancellato": false,
+    "ind_firma": 0,
+    "id_istanza_attore": 203,
+    "id_funzionario": 0,
+    "id_allegato_istanza_padre": 166,
+    "flg_da_pubblicare": false,
+    "id_istanza_osservazione": 0,
+    "tipologia_allegato": {
+      "id_tipologia_allegato": 12,
+      "cod_tipologia_allegato": "12-tipol",
+      "des_tipologia_allegato": "Dati riservati",
+      "ordinamento_tipologia_allegato": 12,
+      "flg_attivo": true,
+      "categoria_allegato": {
+        "id_categoria_allegato": 3,
+        "cod_categoria_allegato": "ALTRA-DOC",
+        "des_categoria_allegato": "Ulteriore documentazione",
+        "ordinamento_categoria_allegato": 3,
+        "flg_attivo": true
+      }
+    },
+    "tipo_integra_allegato": {
+      "id_tipo_integra_allegato": 0
+    },
+    "classe_allegato": {
+      "id_classe_allegato": 1,
+      "cod_classe_allegato": "ELAB_PROGETTUALI",
+      "des_classe_allegato": "Elaborati progettuali",
+      "ordinamento_classe_allegato": 1,
+      "flg_attivo": true
+    }
+  },
+  {
+    "id_allegato_istanza": 104,
+    "id_istanza": 101,
+    "uuid_index": "2d622f79-c7a6-11eb-835d-2b2d2b646ad3",
+    "flg_riservato": false,
+    "cod_allegato": "ALTRA-DOC-341",
+    "nome_allegato": "Elenco autorizzazioni.pdf",
+    "dimensione_upload": 169951,
+    "data_upload": "2021-06-07 17:36:50",
+    "flg_cancellato": false,
+    "ind_firma": 0,
+    "id_istanza_attore": 213,
+    "id_funzionario": 0,
+    "id_allegato_istanza_padre": 0,
+    "flg_da_pubblicare": false,
+    "id_istanza_osservazione": 0,
+    "tipologia_allegato": {
+      "id_tipologia_allegato": 23,
+      "cod_tipologia_allegato": "23-tipol",
+      "des_tipologia_allegato": "Documentazione soggetta al segreto industriale",
+      "ordinamento_tipologia_allegato": 23,
+      "flg_attivo": true,
+      "categoria_allegato": {
+        "id_categoria_allegato": 3,
+        "cod_categoria_allegato": "ALTRA-DOC",
+        "des_categoria_allegato": "Ulteriore documentazione",
+        "ordinamento_categoria_allegato": 3,
+        "flg_attivo": true
+      }
+    },
+    "tipo_integra_allegato": {
+      "id_tipo_integra_allegato": 0
+    },
+    "classe_allegato": {
+      "id_classe_allegato": 1,
+      "cod_classe_allegato": "ELAB_PROGETTUALI",
+      "des_classe_allegato": "Elaborati progettuali",
+      "ordinamento_classe_allegato": 1,
+      "flg_attivo": true
+    }
+  }
+]

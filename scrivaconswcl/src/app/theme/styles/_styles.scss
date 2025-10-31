@@ -1,0 +1,149 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.toRead {
+  height: 80px;
+  background-color: #eeeeee !important;
+  font-weight: bold;
+  align-items: center;
+  display: flex;
+}
+
+.row_table_comunications {
+  vertical-align: middle;
+  height: 80px;
+}
+
+.toRead-light {
+  font-size: regular;
+  font-weight: normal;
+  vertical-align: middle;
+  height: 80px;
+}
+
+.total-rows {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.text-semi-dark {
+  color: $semi_dark;
+}
+
+.font-size-regular {
+  font-size: 1rem;
+}
+
+.red {
+  background-color: red;
+}
+
+.font-size-18 {
+  font-size: 1.125rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bold {
+  font-weight: 700 !important;
+}
+
+.fileName {
+  color: $primary_color;
+}
+
+.divider {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.bg-grey {
+  background-color: $background_light;
+}
+
+.box-border-left {
+  border-left: 1px solid $border_color;
+}
+
+.box-border-right {
+  border-right: 1px solid $border_color;
+}
+
+.text-disabled {
+  color: #666666 !important;
+}
+
+a.cal-event-action.ng-star-inserted {
+  color: #000000;
+  text-decoration: none;
+}
+
+.close-icon {
+  font-size: 2.25rem !important;
+}
+
+.close-button-icon nb-icon {
+  height: 2rem !important;
+  width: 2rem !important;
+}
+
+.search-button-icon nb-icon {
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+}
+
+.icon-menu-size {
+  max-width: 20px;
+  max-height: 18px;
+}
+
+.btn-primary:hover:not(.disabled),
+.btn-outline-primary:hover:not(.disabled) {
+  color: white !important;
+  background-color: #213366 !important;
+}
+
+.custom-button-outline {
+  color: #0060c1 !important;
+  border: 2px solid #0060c1 !important;
+  border-radius: 5px !important;
+  font: normal normal bold 14px/14px Open Sans !important;
+  padding: 9px 20px !important;
+}
+
+.custom-button-outline:hover:not(.disabled) {
+  text-decoration: underline;
+}
+
+.custom-button-outline:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.px-15px {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+.pr-15px {
+  padding-right: 15px !important;
+}
+
+.pl-15px {
+  padding-left: 15px !important;
+}
+
+.exit-icon {
+  fill: #006cb4;
+}
+
+.dropdown-item:hover app-icon .exit-icon {
+  fill: #ffffff;
+}

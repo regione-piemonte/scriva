@@ -1,0 +1,25 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="alert-box info mb-0">
+    <app-icon
+          name="eng-scriva-info"
+          type="eng"
+          cssClass="cursor-pointer mx-2"
+          size="small"
+          fill="#005095"
+          title="{{ title | translate }}"
+    ></app-icon>
+    <span>
+        <h3 *ngIf="title">{{ title | translate }}</h3>
+        <p class="text-only">
+            {{ text | translate }}
+        </p>
+    </span>
+</div>

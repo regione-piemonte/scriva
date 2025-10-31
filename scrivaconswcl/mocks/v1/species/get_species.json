@@ -1,0 +1,56 @@
+{
+  "code": "200",
+  "error": "string",
+  "result": {
+    "list": {
+      "content": [
+        {
+          "descrizione": "string",
+          "genere_s": "string",
+          "id": 0,
+          "id_specie_genere": 0,
+          "nome_comune": "string"
+        },
+        {
+          "descrizione": "string2",
+          "genere_s": "string2",
+          "id": 1,
+          "id_specie_genere": 0,
+          "nome_comune": "string2"
+        },
+        {
+          "descrizione": "string3",
+          "genere_s": "string3",
+          "id": 2,
+          "id_specie_genere": 0,
+          "nome_comune": "string3"
+        }
+      ],
+      "empty": false,
+      "first": true,
+      "last": false,
+      "number": 10,
+      "numberOfElements": 10,
+      "pageable": {
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 0,
+        "paged": true,
+        "sort": {
+          "empty": true,
+          "sorted": true,
+          "unsorted": true
+        },
+        "unpaged": true
+      },
+      "size": 10,
+      "sort": {
+        "empty": true,
+        "sorted": true,
+        "unsorted": true
+      },
+      "totalElements": 30,
+      "totalPages": 3
+    }
+  }
+}

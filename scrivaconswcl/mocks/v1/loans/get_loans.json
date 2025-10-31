@@ -1,0 +1,59 @@
+{
+  "code": "200",
+  "error": "string",
+  "result": {
+    "list": {
+      "content": [
+        {
+          "dataPrestito": "2021-02-02T16:47:11.837Z",
+          "dataRestituzionePrevista": "2021-02-02T16:47:11.837Z",
+          "idMotivazionePrestito": 0,
+          "idPrestatario": 0,
+          "nota": "string",
+          "stato": "string"
+        },
+        {
+          "dataPrestito": "2021-02-02T16:47:11.837Z",
+          "dataRestituzionePrevista": "2021-02-02T16:47:11.837Z",
+          "idMotivazionePrestito": 0,
+          "idPrestatario": 0,
+          "nota": "string2",
+          "stato": "string2"
+        },
+        {
+          "dataPrestito": "2021-02-02T16:47:11.837Z",
+          "dataRestituzionePrevista": "2021-02-02T16:47:11.837Z",
+          "idMotivazionePrestito": 0,
+          "idPrestatario": 0,
+          "nota": "string3",
+          "stato": "string3"
+        }
+      ],
+      "empty": false,
+      "first": true,
+      "last": false,
+      "number": 10,
+      "numberOfElements": 10,
+      "pageable": {
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 0,
+        "paged": true,
+        "sort": {
+          "empty": true,
+          "sorted": true,
+          "unsorted": true
+        },
+        "unpaged": true
+      },
+      "size": 10,
+      "sort": {
+        "empty": true,
+        "sorted": true,
+        "unsorted": true
+      },
+      "totalElements": 30,
+      "totalPages": 3
+    }
+  }
+}

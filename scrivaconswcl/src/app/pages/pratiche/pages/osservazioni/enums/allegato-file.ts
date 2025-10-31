@@ -1,0 +1,14 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+export enum AllegatoFile {
+    MaxDimensionMb = 5,
+    PdfType = 'application/pdf',
+    DocType = 'application/doc',
+}

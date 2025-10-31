@@ -1,0 +1,41 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="col-12 mx-4 badges-header pl-0" *ngIf="filters != undefined">
+  <span *ngIf="filters.length">{{ 'IMAGES.LIST.FILTERS_HEADER' | translate }}</span>
+  <div>
+    <span class="badge badge-pill filter-badge mx-1 mt-2 mb-1"
+      *ngFor="let filter of filters">
+      <ng-container
+        *ngIf="filter.value != '' && filter.value != null"
+        [ngTemplateOutlet]="badgeTemplate"
+        [ngTemplateOutletContext]="{
+          $implicit: filter
+        }"
+      ></ng-container>
+    </span>
+  </div>
+</div>
+
+<ng-template #badgeTemplate let-filter>
+  <div class="row">
+    <span class="key-badge pl-2 mx-auto my-auto font-weight-light">
+      {{ filter.key | titlecase }} :
+    </span>
+    <span class="value-badge mx-auto my-auto font-weight-bold">
+      {{ filter.value | titlecase }}
+    </span>
+      <app-icon class="remove-badge cursor-pointer mx-auto my-auto"
+        [name]="'it-close'"
+        [fill]="'#000000'"
+        [size]="'small'"
+        (click)="closeFilter(filter)"
+        ></app-icon>
+  </div>
+</ng-template>

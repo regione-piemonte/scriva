@@ -1,0 +1,47 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<ng-container *ngIf="notification && alertVisible">
+
+        <div [ngClass]="classes" class="w-100 alert-box custom-notification mb-0" role="alert" id="{{notification.id}}"
+            [attr.aria-labelledby]="h5Id">
+            <div class="box-relative">
+                <!-- pulsante di chiusura X -->
+                <app-button *ngIf="notification.dismissable" class="buttonX" [type]="'button'" [icon]="true" [btnClassName]="'alert-close'"
+                    [outline]="false" [block]="true" [size]="'small'" (click)="closeAlert()">
+                    <app-icon btnContent [name]="'it-close'" [size]="'small'"></app-icon>
+                    <span class="sr-only">{{ closeText }}</span>
+                </app-button>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-auto col-icon">
+                            <app-icon title="{{ notification.title | translate }}" [name]="notification.icon"
+                                [type]="'eng'" [size]="'medium'" *ngIf="notification.icon"></app-icon>
+                        </div>
+                        <div class="col mg-r-20">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col col-title">
+                                        <h3 [attr.id]="h5Id" [innerHTML]="notification.title | translate"></h3>
+                                    </div>
+                                </div>
+                                <div class="row row-desc">
+                                    <div class="col">
+                                        <div class="box-text" [innerHTML]="notification.text | translate"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</ng-container>

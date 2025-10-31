@@ -1,0 +1,397 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "scrivacons": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "preserveSymlinks": true,
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "allowedCommonJsDependencies": [
+              "semver",
+              "lodash",
+              "moment",
+              "rxjs"
+            ],
+            "assets": [
+              "src/assets",
+              "src/favicon.ico",
+              "src/favicon.png",
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*.svg",
+                "input": "src/assets/icons",
+                "output": "./svg"
+              },
+              {
+                "glob": "*.svg",
+                "input": "node_modules/bootstrap-italia/dist/svg",
+                "output": "./bootstrap-italia/dist/svg/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/bootstrap-italia/dist/fonts",
+                "output": "./scrivaconsweb/bootstrap-italia/dist/fonts/"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./"
+             }
+            ],
+            "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/bootstrap-italia/dist/css/bootstrap-italia.min.css",
+              "src/app/theme/styles/styles.scss",
+              "node_modules/leaflet/dist/leaflet.css",
+              "node_modules/leaflet.control.layers.tree/L.Control.Layers.Tree.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.js",
+              "node_modules/popper.js/dist/umd/popper.min.js",
+              "node_modules/bootstrap/js/dist/index.js",
+              "node_modules/bootstrap/js/dist/util.js",
+              "node_modules/bootstrap/js/dist/dropdown.js",
+              "node_modules/bootstrap-italia/dist/js/bootstrap-italia.min.js"
+            ]
+          },
+          "configurations": {
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractCss": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "assets": [
+                "src/assets",
+                "src/favicon.ico",
+                "src/favicon.png",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "assets"
+                },
+                {
+                  "glob": "**/*.svg",
+                  "input": "src/assets/icons",
+                  "output": "./svg"
+                },
+                {
+                  "glob": "*.svg",
+                  "input": "node_modules/bootstrap-italia/dist/svg",
+                  "output": "./bootstrap-italia/dist/svg/"
+                },
+                {
+                  "glob": "**/*.ttf",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff2",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./"
+                }
+              ]
+            },
+            "dev": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "outputPath": "dist/scrivaconswcl/dev",
+              "sourceMap": {
+                "scripts": true,
+                "styles": true,
+                "vendor": true
+              },
+              "namedChunks": false,
+              "extractCss": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "assets": [
+                "src/assets",
+                "src/favicon.ico",
+                "src/favicon.png",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "assets"
+                },
+                {
+                  "glob": "**/*.svg",
+                  "input": "src/assets/icons",
+                  "output": "./svg"
+                },
+                {
+                  "glob": "*.svg",
+                  "input": "node_modules/bootstrap-italia/dist/svg",
+                  "output": "./bootstrap-italia/dist/svg/"
+                },
+                {
+                  "glob": "**/*.ttf",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff2",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./"
+                }
+              ]
+            },
+            "test": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.test.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "outputPath": "dist/scrivaconswcl/tst-rp-01",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractCss": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "assets": [
+                "src/assets",
+                "src/favicon.ico",
+                "src/favicon.png",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "assets"
+                },
+                {
+                  "glob": "**/*.svg",
+                  "input": "src/assets/icons",
+                  "output": "./svg"
+                },
+                {
+                  "glob": "*.svg",
+                  "input": "node_modules/bootstrap-italia/dist/svg",
+                  "output": "./bootstrap-italia/dist/svg/"
+                },
+                {
+                  "glob": "**/*.ttf",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff2",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./"
+                }
+              ]
+            },
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "outputPath": "dist/scrivaconswcl/prod-rp-01",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractCss": true,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "assets": [
+                "src/assets",
+                "src/favicon.ico",
+                "src/favicon.png",
+                {
+                  "glob": "**/*",
+                  "input": "src/assets",
+                  "output": "assets"
+                },
+                {
+                  "glob": "**/*.svg",
+                  "input": "src/assets/icons",
+                  "output": "./svg"
+                },
+                {
+                  "glob": "*.svg",
+                  "input": "node_modules/bootstrap-italia/dist/svg",
+                  "output": "./bootstrap-italia/dist/svg/"
+                },
+                {
+                  "glob": "**/*.ttf",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                  "glob": "**/*.woff2",
+                  "input": "node_modules/bootstrap-italia/dist/fonts",
+                  "output": "./bootstrap-italia/dist/fonts/"
+                },
+                {
+                "glob": "**/*",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "./"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "host": "localhost",
+            "port": 4200,
+            "baseHref": "/scrivaconsweb/",
+            "browserTarget": "scrivacons:build:dev",
+            "proxyConfig": "buildfiles/proxy.conf.js"
+          },
+          "configurations": {
+            "local": {
+              "browserTarget": "scrivacons:build:local"
+            },
+            "dev": {
+              "browserTarget": "scrivacons:build:dev"
+            },
+            "production": {
+              "browserTarget": "scrivacons:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "scrivacons:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json"
+            ],
+            "typeCheck": true,
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "scrivacons:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "scrivacons:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "scrivacons",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    },
+    "@schematics/angular:directive": {}
+  },
+  "cli": {
+    "analytics": false
+  }
+}

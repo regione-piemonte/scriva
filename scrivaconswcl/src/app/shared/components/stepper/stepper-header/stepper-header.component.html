@@ -1,0 +1,23 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="stepper-header-container">
+    <div class="steppers">
+        <ul class="steppers-header">
+            <li *ngFor="let step of steps; let i = index" 
+                [ngClass]="{'confirmed': step.value === 'done', 'active no-line': step.value === 'current'}"
+            >
+                <span *ngIf="step.value === 'done'" class="steppers-number"><svg class="icon steppers-success"><use xlink:href="/bootstrap-italia/dist/svg/sprite.svg#it-check"></use></svg><span class="sr-only">Confermato</span></span>
+                <span *ngIf="step.value !== 'done'" class="steppers-number"><span class="sr-only">Step </span>{{i}}</span>
+                {{step.name}}
+                <span *ngIf="step.value === 'current'" class="sr-only">Attivo</span>
+            </li>
+        </ul>
+    </div>
+</div>

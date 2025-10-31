@@ -1,0 +1,93 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<ng-container *ngIf='dataSource.rows$ | async as rows'>
+    <ng-container *ngIf='rows.length; else noItems'>
+        <ng-container *ngFor='let row of rows; let index = index'>
+            <tr>
+                <!-- TODO: richiamare un metodo sul template non è performante spostare la logica in una direttiva o su un pipe -->
+                <td
+                      *ngFor='let column of columns; let last = last'
+                      [class]='getClass(row, column)'
+                      [attr.data-toggle]="column.rowDetailIcon ? 'collapse' : null"
+                      [attr.data-target]='
+            column.rowDetailIcon ? getAccordionDataTarget(index) : null
+          '
+                      [attr.aria-expanded]='column.rowDetailIcon ? false : null'
+                      [style.width.%]='column.width'
+                      [class.ptbody]="!last"
+                      (click)='!column.rowDetailIcon && onRowClick(row)'
+                >
+                    <app-checkbox-input
+                          *ngIf='column.checkboxable'
+                          name='rowCheckbox{{ index }}'
+                          [checked]='checked(row)'
+                          (click)='$event.stopPropagation()'
+                          (change)='
+              $event.stopPropagation();
+              checkboxToggle.emit({ row: row, event: $event })
+            '
+                    ></app-checkbox-input>
+
+                    <!-- TODO: richiamare un metodo sul template non è performante spostare la logica in una direttiva o su un pipe -->
+                    <span>
+            <ng-container
+                  *ngIf='column.cellTemplate; else valueContent'
+                  [ngTemplateOutlet]='column.cellTemplate'
+                  [ngTemplateOutletContext]='{
+                row: row
+              }'
+            ></ng-container>
+
+            <ng-template #valueContent>{{ getValue(row, column) }}</ng-template>
+          </span>
+                    <app-icon
+                          *ngIf='column.rowDetailIcon'
+                          class='float-right'
+                          color='primary'
+                          size='small'
+                          icon='it-expand'
+                    >
+                    </app-icon>
+                </td>
+            </tr>
+
+            <tr *ngIf='rowDetail'>
+                <td
+                      [attr.colspan]='columns.length + 2'
+                      class='hiddenRow hide-bottom-border'
+                >
+                    <div
+                          [id]='getAccordionId(index)'
+                          class='collapse'
+                          [class.collapse-show-border]='rowDetailBorder'
+                          [attr.data-id]='index'
+                    >
+                        <ng-container
+                              *ngTemplateOutlet='
+                rowDetail;
+                context: {
+                  $implicit: 1,
+                  row: row
+                }
+              '
+                        ></ng-container>
+                    </div>
+                </td>
+            </tr>
+        </ng-container>
+    </ng-container>
+    <ng-template #noItems>
+        <tr>
+            <div class='text-center border-0 -mb-16' [attr.colspan]='columns?.length'>
+                <app-helper [text]="emptyMessage" [title]="'UTILS.TABLE.NO_ITEMS'"></app-helper>
+            </div>
+        </tr>
+    </ng-template>
+</ng-container>

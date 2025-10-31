@@ -1,0 +1,198 @@
+{
+    "code": "OK",
+    "error": null,
+    "result": {
+        "first": null,
+        "last": null,
+        "totalPages": null,
+        "totalElements": null,
+        "size": null,
+        "number": null,
+        "sort": null,
+        "numberOfElements": null,
+        "content": {
+            "id": 669,
+            "archivio": {
+                "id": 1,
+                "descrizione": "BDI"
+            },
+            "autore": {
+                "id": 194,
+                "nome": ".",
+                "cognome": "aaaa",
+                "enteAppartenenza": "TORINO",
+                "indirizzo": "C.SO shrldu 123 TORINO",
+                "cap": null,
+                "istatComune": null,
+                "mail": "aaaa@mailll.it",
+                "telefono": "011/63456000",
+                "pec": null,
+                "privacy": false,
+                "note": null,
+                "tipoSoggetto": {
+                    "id": 1,
+                    "descrizione": "Autore"
+                }
+            },
+            "stagione": {
+                "id": 3,
+                "descrizione": "Estate"
+            },
+            "tema": {
+                "id": 26,
+                "descrizione": "Vegetazione "
+            },
+            "ecomuseo": {
+                "id": 1,
+                "descrizione": "-- Non specificato --"
+            },
+            "modAcquisizione": {
+                "id": 1,
+                "descrizione": "Acquisto"
+            },
+            "tipoImmagine": {
+                "id": 1,
+                "descrizione": "Diapositiva"
+            },
+            "dataScatto": null,
+            "dataAcquisizione": "16/04/1996",
+            "flgRestrizioni": false,
+            "numeroImmagine": 7386,
+            "descrizione": "Veduta sulla val Grande",
+            "codAreaProtetta": "a8",
+            "codRn2000": "IT1160056",
+            "note": null,
+            "dataInserimento": "18/01/2001",
+            "dataAggiornamento": "18/01/2001",
+            "utente": {
+                "id": 0,
+                "nome": "ADMIN",
+                "cognome": "ADMIN",
+                "codiceFiscale": "00000000000",
+                "nroAccessi": 0,
+                "dataPrimoAccesso": "03/01/2021",
+                "dataUltimoAccesso": "03/01/2021",
+                "profilo": {
+                    "id": 1,
+                    "descrizione": "GESTORE"
+                }
+            },
+            "supportoList": [
+                {
+                    "id": 264,
+                    "tipoSupporto": {
+                        "id": 1,
+                        "descrizione": "Diapositiva"
+                    },
+                    "formato": {
+                        "id": 6,
+                        "descrizione": "24*36"
+                    },
+                    "risoluzione": {
+                        "id": 8,
+                        "descrizione": "Diapo"
+                    },
+                    "orientamento": {
+                        "id": 2,
+                        "descrizione": "Landscape"
+                    },
+                    "stato": {
+                        "id": 1,
+                        "descrizione": "Buono"
+                    },
+                    "tipoEstensioneFile": {
+                        "id": 0,
+                        "descrizione": "-- Non specificato --"
+                    },
+                    "disponibile": true,
+                    "perso": false,
+                    "danneggiato": false,
+                    "note": null,
+                    "uidIndexFileSpr": null
+                },
+                {
+                    "id": 200264,
+                    "tipoSupporto": {
+                        "id": 2,
+                        "descrizione": "Digitale"
+                    },
+                    "formato": {
+                        "id": 6,
+                        "descrizione": "24*36"
+                    },
+                    "risoluzione": {
+                        "id": 8,
+                        "descrizione": "Diapo"
+                    },
+                    "orientamento": {
+                        "id": 2,
+                        "descrizione": "Landscape"
+                    },
+                    "stato": {
+                        "id": 1,
+                        "descrizione": "Buono"
+                    },
+                    "tipoEstensioneFile": {
+                        "id": 1,
+                        "descrizione": "JPEG"
+                    },
+                    "disponibile": true,
+                    "perso": false,
+                    "danneggiato": false,
+                    "note": null,
+                    "uidIndexFileSpr": "AA SCANNERIZ 2015\\A01 VEG 00 I\\7386.jpg"
+                },
+                {
+                    "id": 300264,
+                    "tipoSupporto": {
+                        "id": 2,
+                        "descrizione": "Digitale"
+                    },
+                    "formato": {
+                        "id": 6,
+                        "descrizione": "24*36"
+                    },
+                    "risoluzione": {
+                        "id": 8,
+                        "descrizione": "Diapo"
+                    },
+                    "orientamento": {
+                        "id": 2,
+                        "descrizione": "Landscape"
+                    },
+                    "stato": {
+                        "id": 1,
+                        "descrizione": "Buono"
+                    },
+                    "tipoEstensioneFile": {
+                        "id": 2,
+                        "descrizione": "TIFF"
+                    },
+                    "disponibile": true,
+                    "perso": false,
+                    "danneggiato": false,
+                    "note": null,
+                    "uidIndexFileSpr": "AA SCANNERIZ 2015\\A01 VEG 00 I\\7386.tif"
+                }
+            ],
+            "specieList": [
+                {
+                    "id": 150,
+                    "nomeLatino": "Verbascum thapsus",
+                    "nomeVolgare": "Verbasco tasso barbasso",
+                    "genere": "Verbascum",
+                    "famiglia": "Scrophulariaceae",
+                    "ordine": "Scrophulariales",
+                    "classe": "Magnoliopsida",
+                    "philum": "Magnoliophyta"
+                }
+            ],
+            "tipoZonaList": [
+                {
+                    "id": 6,
+                    "descrizione": "Montagna"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,68 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class='row'>
+  <div class='col-12'>
+    <div class='row'>
+      <div
+        *ngIf='hasFile || control.placeholder'
+        class='col-9 col-sm-9 col-md-9 d-flex align-items-center'
+      >
+        <span class='font-size-14'>
+          {{ hasFile ? file?.name : (control.placeholder | translate) }}
+        </span>
+      </div>
+      <div class='col-3 col-sm-3 col-md-3'>
+        <app-button
+          class='float-right'
+          icon
+          size='small'
+          [color]="hasFile ? 'danger' : 'primary'"
+          (click)='btnClick()'
+        >
+          <app-icon
+            *ngIf='!hasFile'
+            class='d-inline-flex'
+            icon='it-search'
+            color='white'
+          >
+          </app-icon>
+          <app-icon
+            *ngIf='hasFile'
+            class='d-inline-flex'
+            icon='it-delete'
+            color='white'
+          >
+          </app-icon>
+          <span style='margin-left: 0.25em' class='d-none d-md-inline'>{{
+            hasFile
+              ? ("UTILS_REMOVE" | translate)
+              : (control.buttonPlaceholder | translate)
+            }}</span>
+        </app-button>
+
+        <app-button
+          *ngIf='hasFile && control.showUploadBtn'
+          class='ml-2'
+          icon
+          size='small'
+          (click)='control.upload(file)'
+        >
+          <app-icon class='d-inline-flex' icon='it-upload' color='white'>
+          </app-icon>
+          <span class='d-none d-md-inline'>
+            {{ control.labelUploadBtn | translate }}
+          </span>
+        </app-button>
+      </div>
+
+      <input #fileTag type='file' class='d-none' />
+    </div>
+  </div>
+</div>

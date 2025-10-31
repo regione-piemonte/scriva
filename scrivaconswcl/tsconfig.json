@@ -1,0 +1,68 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "importHelpers": true,
+    "module": "es2020",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es2015",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "paths": {
+      "@app/*": [
+        "./app/*"
+      ],
+      "@assets/*": [
+        "./assets/*"
+      ],
+      "@config": [
+        "./config/index.ts"
+      ],
+      "@core/": [
+        "./app/core"
+      ],
+      "@core/*": [
+        "./app/core/*"
+      ],
+      "@eng-ds/api-client": [
+        "app/core/api-client/public-api.ts"
+      ],
+      "@eng-ds/logger": [
+        "app/core/logger/public-api.ts"
+      ],
+      "@eng-ds/translate": [
+        "app/core/translate/public-api.ts"
+      ],
+      "@env/*": [
+        "./environments/*"
+      ],
+      "@pages/*": [
+        "./app/pages/*"
+      ],
+      "@theme/*": [
+        "./app/theme/*"
+      ],
+      "@shared": [
+        "./app/shared"
+      ],
+      "@shared/*": [
+        "./app/shared/*"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "tslint-language-service"
+      }
+    ]
+  }
+}

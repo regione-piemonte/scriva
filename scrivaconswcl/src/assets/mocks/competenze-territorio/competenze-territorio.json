@@ -1,0 +1,89 @@
+[
+  {
+    "cap_competenza": "string",
+    "cod_competenza_territorio": "string",
+    "cod_suap": "string",
+    "comune_competenza": {
+      "cap_comune": "string",
+      "cod_belfiore_comune": "string",
+      "cod_istat_comune": "string",
+      "data_fine_validita": "2021-12-15T15:47:45.846Z",
+      "data_inizio_validita": "2021-12-15T15:47:45.846Z",
+      "denom_comune": "string",
+      "dt_id_comune": 0,
+      "dt_id_comune_next": 0,
+      "dt_id_comune_prev": 0,
+      "id_comune": 0,
+      "id_provincia": 0,
+      "provincia": {
+        "cod_provincia": "string",
+        "data_fine_validita": "2021-12-15T15:47:45.846Z",
+        "data_inizio_validita": "2021-12-15T15:47:45.846Z",
+        "denom_provincia": "string",
+        "id_provincia": 0,
+        "id_regione": 0,
+        "regione": {
+          "cod_regione": "string",
+          "data_fine_validita": "2021-12-15T15:47:45.846Z",
+          "data_inizio_validita": "2021-12-15T15:47:45.846Z",
+          "denom_regione": "string",
+          "id_nazione": 0,
+          "id_regione": 0,
+          "nazione": {
+            "cod_belfiore_nazione": "string",
+            "cod_istat_nazione": "string",
+            "data_fine_validita": "2021-12-15T15:47:45.846Z",
+            "data_inizio_validita": "2021-12-15T15:47:45.846Z",
+            "denom_nazione": "string",
+            "dt_id_stato": 0,
+            "dt_id_stato_next": 0,
+            "dt_id_stato_prev": 0,
+            "id_nazione": 0,
+            "id_origine": 0,
+            "cod_iso2": "string"
+          }
+        },
+        "sigla_provincia": "string"
+      }
+    },
+    "data_fine_validita": "2021-12-15T15:47:45.847Z",
+    "data_inizio_validita": "2021-12-15T15:47:45.847Z",
+    "des_competenza_territorio": "string",
+    "des_competenza_territorio_estesa": "string",
+    "des_email": "string",
+    "des_email_pec": "string",
+    "ente_creditore": {
+      "bic_accredito": "string",
+      "cf_ente_creditore": "string",
+      "denominazione_ente_creditore": "string",
+      "flg_aderisce_piemontepay": true,
+      "flg_attivo": true,
+      "iban_accredito": "string",
+      "id_ente_creditore": 0,
+      "indirizzo_tesoreria": "string"
+    },
+    "flg_adesione_adempimento": true,
+    "flg_principale": true,
+    "gestAttoreIns": "string",
+    "gestAttoreUpd": "string",
+    "gestUID": "string",
+    "id_competenza_territorio": 0,
+    "id_comune_competenza": 0,
+    "id_ente_creditore": 0,
+    "id_tipo_competenza": 0,
+    "ind_visibile": "string",
+    "indirizzo_competenza": "string",
+    "num_civico_indirizzo": "string",
+    "orario": "string",
+    "responsabile": "string",
+    "sito_web": "string",
+    "tipo_competenza": {
+      "cod_tipo_competenza": "string",
+      "des_tipo_competenza": "string",
+      "des_tipo_competenza_estesa": "string",
+      "id_tipo_competenza": 0,
+      "ordinamento_tipo_competenza": 0
+    },
+    "url_oneri_previsti": "string"
+  }
+]

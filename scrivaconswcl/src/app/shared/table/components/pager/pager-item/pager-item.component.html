@@ -1,0 +1,14 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<span (click)="!active && handleItemClick()">
+  <a [class]="getClassName()" [attr.aria-current]="this.active ? 'page' : null">
+        {{ page }}
+  </a>
+</span>

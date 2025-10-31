@@ -1,0 +1,37 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<tr *ngIf="(dataSource.rows$ | async)?.length > 0">
+  <th *ngFor="let column of columns; let last = last" scope="col" [class.ptable-30px]="!last"
+    [class.pbottomtable-30px]="true" [style.width.%]="column.width">
+    <!-- TODO: richiamare un metodo sul template non è performante spostare la logica in una direttiva o su un pipe -->
+    <app-checkbox-input *ngIf="column.checkboxable" name="headerCheckbox" [checked]="checkboxChecked()"
+      [indeterminate]="checkboxIndeterminate()"
+      (change)="$event.stopPropagation(); checkboxToggle.emit($event)"></app-checkbox-input>
+
+    <!-- TODO: richiamare un metodo sul template non è performante spostare la logica in una direttiva o su un pipe -->
+    <span *ngIf="column.sortable && column.name" (click)="sort($event, column)" class="sort cursor-pointer"
+      [ngClass]="currentDirection(column.prop)">
+      {{ column.name }}
+      <span class="thead-sortable-column-icon-span">
+        <app-icon [name]="'it-arrow-up-triangle'" [cssClass]="
+            'cursor-pointer icon-primary top ' +
+            (currentDirection(column.prop) === 'desc' ? 'hidden' : '')
+          " [type]="'it'" [size]="'small'">
+        </app-icon>
+        <app-icon [name]="'it-arrow-down-triangle'" [cssClass]="
+            'cursor-pointer icon-primary bottom ' +
+            (currentDirection(column.prop) === 'asc' ? 'hidden' : '')
+          " [type]="'it'" [size]="'small'">
+        </app-icon>
+      </span>
+    </span>
+    <span *ngIf="!column.sortable">{{ column.name }}</span>
+  </th>
+</tr>

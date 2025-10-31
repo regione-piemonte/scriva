@@ -1,0 +1,77 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<app-header-navigation></app-header-navigation>
+
+<div class='page mx-4 mb-5 mt-3 pt-4 shadow'>
+
+  <div class='rounded-lg header-new mx-4' *ngIf='formMode === "EDIT"'>
+    <div class='row p-2 my-2'>
+      <div class='col ml-3 my-auto'>
+        <span class='header-new-title'>{{ 'BOOKING.EDIT.HEADER.ID' | translate }}</span>
+        <div class='header-new-text'>{{ booking.id }}</div>
+      </div>
+      <div class='col ml-3 my-auto'>
+        <span class='header-new-title'>{{ 'BOOKING.EDIT.HEADER.BOOKING_DATE' | translate }}</span>
+        <div class='header-new-text'>{{ booking.bookingDate | date : 'dd/MM/yyyy HH:mm' }}</div>
+      </div>
+      <div class='col ml-3 my-auto'>
+        <span class='header-new-title'>{{ 'BOOKING.EDIT.HEADER.START_DATE' | translate }}</span>
+        <div class='header-new-text'>{{ booking.startDate | date : 'dd/MM/yyyy HH:mm' }}</div>
+      </div>
+      <div class='col ml-3 my-auto'>
+        <span class='header-new-title'>{{ 'BOOKING.EDIT.HEADER.END_DATE' | translate }}</span>
+        <div class='header-new-text'>{{ booking.endDate | date : 'dd/MM/yyyy HH:mm' }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class='row m-4'>
+    <span
+      class='border border-top-0 border-left-0 border-right-0 w-50'
+      style='height: 40px; border-color: #008CDC !important;'>
+      <span class='section-title' *ngIf='formMode === "EDIT"'>
+        {{ 'BOOKING.EDIT.TITLE' | translate }}
+      </span>
+      <span class='section-title' *ngIf='formMode === "CREATE"'>
+        {{ 'BOOKING.NEW.TITLE' | translate }}
+      </span>
+    </span>
+  </div>
+
+  <div class='px-4'>
+    <app-form [form]='form'></app-form>
+  </div>
+
+  <div class='row mx-auto justify-content-center footer-section'>
+    <button class='btn btn-outline-primary my-auto back-button btn-sm header-view-button'
+            data-dismiss='modal'
+            type='button'
+            [routerLink]="'/booking'"
+    >
+      <span>
+      {{'BOOKING.FORM.CANCEL' | translate}}
+      </span>
+    </button>
+    <button class='btn btn-primary save-button my-auto'
+            (click)='onSave()'
+    >
+      <app-icon
+        [name]="'eng-save'"
+        [type]="'eng'"
+        [cssClass]="'cursor-pointer'"
+        [fill]="'#FFFFFF'"
+        [size]="'small'"
+      ></app-icon>
+      <span class='button-text'>
+        &nbsp; {{ 'BOOKING.FORM.SAVE' | translate }}
+       </span>
+    </button>
+  </div>
+</div>

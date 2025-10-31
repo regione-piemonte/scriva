@@ -1,0 +1,139 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<app-card *ngIf="initTable">
+    <app-card-body>
+        <div class="col-12 py-3" *ngIf="pratica?.oggetto_istanza[0].siti_natura_2000">
+            <app-table-simple [title]="titleRete2000" [columns]="columnsRete2000" [data]="dataRete2000"></app-table-simple>
+        </div>
+        <div class="col-12 py-3" *ngIf="pratica?.oggetto_istanza[0].aree_protette">
+            <app-table-simple [title]="titleAreeProtette" [columns]="columnsAreeProtette"
+                [data]="dataAreeProtette"></app-table-simple>
+        </div>
+    </app-card-body>
+</app-card>
+
+
+<app-card [containerStyle]="'box-shadow: 1px 2px 8px #C4C4C4;'">
+    <app-card-header>
+        <h6>{{ 'PRACTICE.PROCEDURE.TITLE' | translate }}</h6>
+    </app-card-header>
+    <app-card-body>
+        <div class="row mb-4">
+            <div *ngIf="pratica?.data_protocollo" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.DETAIL.FIELDS.DATA_PRES_PROG' | translate }}
+                </div>
+                <div class="header-view-text">
+                    {{ pratica.data_protocollo | date: 'dd/MM/yyyy' }}
+                </div>
+            </div>
+
+            <div *ngIf="pratica?.data_inizio_osservazione" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div *ngIf="pratica?.data_inizio_osservazione.length ===1">
+                    <div class="header-label">
+                        {{ 'PRACTICE.DETAIL.FIELDS.DATA_PUBBL_AVVISO' | translate }}
+                    </div>
+                    <div class="header-view-text">
+                        {{pratica.data_inizio_osservazione | date: 'dd/MM/yyyy'}}
+                    </div>
+                </div>
+                <div *ngIf="pratica?.data_inizio_osservazione?.length >1">
+                    <div class="header-label">
+                        {{ 'PRACTICE.DETAIL.FIELDS.DATA_PUBBL_AVVISO' | translate }}
+                    </div>
+                    <div class="header-view-text">
+                        <ul class="simple-list">
+                            <li *ngFor="let data_avvio of pratica?.data_inizio_osservazione">
+                                {{ data_avvio | date: 'dd/MM/yyyy' }}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div *ngIf="pratica?.data_fine_osservazione" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.DETAIL.FIELDS.DATA_SCAD_OSS' | translate }}
+                </div>
+                <div class="header-view-text">
+                    {{ pratica.data_fine_osservazione | date: 'dd/MM/yyyy' }}
+                </div>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div *ngIf="pratica?.data_scadenza_procedimento" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.PROCEDURE.ENDING' | translate }}
+                </div>
+                <div class="header-view-text">
+                    <span>{{
+                        pratica.data_scadenza_procedimento | date: 'dd/MM/yyyy'
+                        }}</span>
+                </div>
+            </div>
+            <div *ngIf="pratica?.stato_istanza?.label_stato" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.PROCEDURE.STATUS' | translate }}
+                </div>
+                <div class="header-view-text">
+                    <span >{{ pratica.stato_istanza.label_stato}}</span>
+                </div>
+            </div>
+            <div *ngIf="pratica?.esito_procedimento?.des_esito_procedimento" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.PROCEDURE.RESULT' | translate }}
+                </div>
+                <div class="header-view-text">
+                    <span>{{ pratica.esito_procedimento.des_esito_procedimento }}</span>
+                </div>
+            </div>
+            <div class="col-12 pb-3" *ngIf="pratica?.procedimento_statale?.url_portale_esterno">
+                <div class="header-view-text">
+                    <a [href]="pratica.procedimento_statale.url_portale_esternoLOCAL" target="_blank">
+                        {{ pratica.procedimento_statale.url_portale_esternoLOCAL }}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4 border-bottom">
+            <div *ngIf="pratica?.data_conclusione_procedimento" class="col-12 col-sm-6 col-md-4 pb-3">
+                <div class="header-label">
+                    {{ 'PRACTICE.PROCEDURE.PROVV_CONCLUSO' | translate }}
+                </div>
+                <div class="header-view-text">
+                    <span>{{
+                        pratica.data_conclusione_procedimento | date: 'dd/MM/yyyy'
+                        }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="showAttiProcedimento" class="mb-4 border-bottom row">
+            <div class="col-sm-6 col-md-4 pb-3"></div>
+            <div *ngIf="showAttiProcedimento" class="col-12 pb-3">
+              <div class="header-view-text">
+                <app-table
+                [columns]="columnsAttiProcedimento"
+                [dataSource]="dataSourceAttiProcedimento"
+                [showPager]="false"
+                [showEmptyMessage]="false"  
+              ></app-table>
+              </div>
+            </div>
+        </div>
+        <h6 style="font-size: medium">
+            {{ 'PRACTICE.NOTES.TITLE' | translate }}
+        </h6>
+        <app-table [columns]="columns" [dataSource]="dataSource" [showPager]="true" [showEmptyMessage]="false">
+        </app-table>
+
+    </app-card-body>
+</app-card>

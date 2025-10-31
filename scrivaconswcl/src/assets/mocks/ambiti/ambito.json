@@ -1,0 +1,16 @@
+[
+    {
+      "cod_ambito": "ambiente",
+      "des_ambito": "Ambiente",
+      "des_estesa_ambito": "Ambiente",
+      "gestUID": "AMB",
+      "id_ambito": 1
+    },
+    {
+        "cod_ambito": "forestale",
+        "des_ambito": "Forestale",
+        "des_estesa_ambito": "Forestale",
+        "gestUID": "FOR",
+        "id_ambito": 2
+      }
+  ]

@@ -1,0 +1,47 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="row">
+    <div class="row col-12 justify-content-center m-0">
+        <img
+              *ngIf="captchaElement"
+              [src]="captchaElement.captchaImg"
+              alt="Captcha"
+              width="100%"
+        />
+    </div>
+    <div class="row col-12 justify-content-center">
+        <input
+              type="text"
+              class="col-9"
+              placeholder="Inserisci captcha"
+              #captchaInput
+        />
+        <button
+              class="btn"
+              (click)="reloadCaptcha(true)"
+              [ngClass]="{ rotateBtn: isClicked === true }"
+        >
+            <app-icon
+                  [name]="'eng-scriva-reload'"
+                  [type]="'eng'"
+                  [cssClass]="'cursor-pointer'"
+                  [size]="'small'"
+            ></app-icon>
+        </button>
+    </div>
+    <div class="col-12 my-4">
+        <button class="btn btn-primary float-right" (click)="downloadFile()">
+            Scarica
+        </button>
+        <button class="btn reset-btn" (click)="closeModal()">
+            Annulla
+        </button>
+    </div>
+</div>

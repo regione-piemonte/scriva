@@ -1,0 +1,50 @@
+{
+  "code": "200",
+  "error": "string",
+  "result": {
+    "list": {
+      "content": [
+        {
+          "descrizione": "string",
+          "id": 0,
+          "id_padre": 0
+        },
+        {
+          "descrizione": "string2",
+          "id": 1,
+          "id_padre": 0
+        },
+        {
+          "descrizione": "string3",
+          "id": 2,
+          "id_padre": 0
+        }
+      ],
+      "empty": false,
+      "first": true,
+      "last": false,
+      "number": 10,
+      "numberOfElements": 10,
+      "pageable": {
+        "offset": 0,
+        "pageNumber": 0,
+        "pageSize": 0,
+        "paged": true,
+        "sort": {
+          "empty": true,
+          "sorted": true,
+          "unsorted": true
+        },
+        "unpaged": true
+      },
+      "size": 10,
+      "sort": {
+        "empty": true,
+        "sorted": true,
+        "unsorted": true
+      },
+      "totalElements": 30,
+      "totalPages": 3
+    }
+  }
+}

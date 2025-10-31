@@ -1,0 +1,97 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.page {
+  background-color: #f7f7f7;
+}
+
+.total-elements {
+  flex: 1;
+  text-align: left;
+  font: normal normal normal 16px/22px Open Sans;
+  letter-spacing: 0;
+  color: #5f5e5e;
+  opacity: 1;
+}
+
+.accordion-toggle[aria-expanded='true'] .icon-collapsed {
+  display: none;
+}
+
+.accordion-toggle[aria-expanded='false'] .icon-collapsed {
+  display: block;
+}
+
+.accordion-toggle[aria-expanded='true'] .icon-expanded {
+  display: block;
+}
+
+.accordion-toggle[aria-expanded='false'] .icon-expanded {
+  display: none;
+}
+
+.advanced-search-btn {
+  width: 15%;
+  text-align: center;
+  // padding: 0;
+  border: none;
+  padding: 16px 10px;
+}
+
+.custom-margin {
+  margin: 0 2rem;
+}
+
+.newButton {
+  background: #005095 0% 0% no-repeat padding-box !important;
+}
+
+.custom-active-button[aria-expanded='true'] {
+  background-color: #006dba;
+  color: white;
+  border-color: #006dba;
+}
+
+.searchButton {
+  background-color: #005095;
+  height: 48px;
+  width: 113px;
+  margin-right: 8px;
+}
+
+.clearButton {
+  border: #005095 solid 1px;
+  height: 48px;
+  width: 113px;
+  margin-left: 8px;
+}
+
+.list-container {
+  margin-bottom: 40px;
+  background-color: #fff;
+}
+
+.table-list {
+  background-color: #fff;
+  width: 97%;
+}
+
+.custom-margin {
+  margin: 0 2rem;
+}
+
+.custom-active-button[aria-expanded='true'] {
+  background-color: #006dba;
+  color: white;
+  border-color: #006dba;
+}

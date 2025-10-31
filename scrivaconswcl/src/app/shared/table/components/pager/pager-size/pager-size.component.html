@@ -1,0 +1,51 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="dropdown">
+  <a
+    class="btn btn-dropdown dropdown-toggle"
+    id="dropdownMenuButton"
+    href="#"
+    type="button"
+    data-toggle="dropdown"
+    aria-haspopup="true"
+    aria-expanded="false"
+  >
+    <span class="list-header">
+      {{ size }} {{ 'UTILS.TABLE.SIZE_PAGE_SELECT' | translate }}
+    </span>
+    <app-icon
+      [name]="'it-collapse'"
+      [cssClass]="'cursor-pointer navs'"
+      [type]="'it'"
+      [size]="'medium'"
+      fill="#212529"
+    >
+    </app-icon>
+  </a>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="link-list-wrapper">
+      <ul class="link-list">
+        <li *ngFor="let sizeEl of sizes">
+          <a
+            class="list-item px-0"
+            [ngClass]="sizeEl == size ? 'disabled' : 'active'"
+            [attr.aria-current]="sizeEl === size ? null : 'page'"
+            (click)="handleItemClick(sizeEl)"
+          >
+            <span class="mx-2">
+              {{ sizeEl }} {{ 'UTILS.TABLE.SIZE_PAGE_SELECT' | translate }}
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

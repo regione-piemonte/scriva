@@ -1,0 +1,131 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="pt-4">
+  <div class="d-flex flex-column">
+    <div class="col-12">
+      <h1>
+        {{ 'OBSERVATIONS.TITLE' | translate }}
+      </h1>
+    </div>
+    <div class="col-12">
+      <div class="separator">&nbsp;</div>
+    </div>
+    <div class="row button-row" style="padding-top: 30px; line-height: 40px">
+      <div class="col-auto col-button-stato" *ngFor="let stato of ossStati">
+        <button
+          type="button"
+          class="btn btn-stato-oss"
+          [ngClass]="{
+            'btn-primary': selectedStatus === stato.label,
+            'btn-outline-primary': selectedStatus !== stato.label
+          }"
+          (click)="onChangeStatus(stato.label)"
+        >
+          {{ stato.label }} ({{ stato.value }})
+        </button>
+      </div>
+      <div class="col text-right" *ngIf="listRows > 0">
+        <button
+          type="button"
+          class="btn btn-outline-primary custom-button"
+          (click)="exportCSV()"
+        >
+          {{ 'UTILS.TABLE.DOWNLOAD_EXCEL' | translate }}
+        </button>
+      </div>
+    </div>
+
+    <!-- <div class="row observation-btn">
+          <button (click)="filterObs(1)">Inserita ({{ossInserite}})</button>
+          <button (click)="filterObs(2)">Inviata ({{ossInviate}})</button>
+          <button (click)="filterObs(3)">Pubblicata ({{ossPubblicate}})</button>
+          <button (click)="filterObs(4)">Tutte ({{ossTotali}})</button>
+        </div> -->
+  </div>
+
+  <ng-container *ngIf="notificationErCancOssConfig">
+    <div class="mg-t-25">
+      <app-notification
+        [notification]="notificationErCancOssConfig"
+      ></app-notification>
+    </div>
+  </ng-container>
+
+  <app-card>
+    <app-card-body>
+      <app-table
+        [columns]="columns"
+        [dataSource]="dataSource"
+        [showPager]="true"
+      ></app-table>
+    </app-card-body>
+  </app-card>
+</div>
+
+<ng-template let-row="row" #codPratica>
+  <span>{{ row.istanza?.cod_pratica | truncate }}</span>
+</ng-template>
+<ng-template let-row="row" #ademp>
+  <span>{{ row.istanza?.adempimento.des_adempimento | truncate }}</span>
+</ng-template>
+
+<ng-template let-row="row" #stato>
+  <span>{{ row.stato_osservazione.des_stato_osservazione }}</span>
+</ng-template>
+
+<ng-template let-row="row" #settingsTemplate>
+  <!-- CHECK VISUALIZZAZIONE ICONA -->
+  <ng-container *ngIf="(row | modificaOsservazioneAttiva)">
+    <!-- Bottone di dettaglio -->
+     <a class="list-item px-0 pt-1 cursor-pointer" (click)="onDetail(row)">
+      <app-icon title="{{ 'PRACTICE.LIST.ICONS.EDIT_REMARK' | translate }}"
+        [name]="'eng-scriva-edit'"
+        [type]="'eng'"
+        [cssClass]="'cursor-pointer'"
+        [size]="'small'"
+      ></app-icon>
+    </a>
+  </ng-container>
+  <ng-container *ngIf="!(row | modificaOsservazioneAttiva)">
+    <!-- Bottone di dettaglio -->
+    <a class="list-item px-0 pt-1 cursor-pointer" (click)="onDetail(row)">
+      <app-icon title="{{ 'PRACTICE.LIST.ICONS.VIEW_REMARK' | translate }}"
+        [name]="'eng-scriva-view-detail'"
+        [type]="'eng'"
+        [cssClass]="'mt-1'"
+        [size]="'small'"
+      ></app-icon>
+    </a>
+  </ng-container>
+
+  <!--Bottone di eliminazione-->
+  <!-- CHECK VISUALIZZAZIONE ICONA -->
+  <ng-container *ngIf="(row | cancellaOsservazioneAttiva)">
+    <a class="list-item px-0 pt-1 cursor-pointer" (click)="onDelete(row)">
+      <app-icon title="{{ 'PRACTICE.LIST.ICONS.DELETE_REMARK' | translate }}"
+        [name]="'eng-delete'"
+        [type]="'eng'"
+        [cssClass]="'cursor-pointer'"
+        [size]="'small'"
+      ></app-icon>
+    </a>
+  </ng-container>
+  <ng-container *ngIf="!(row | cancellaOsservazioneAttiva)">
+    <a class="list-item px-0">
+      <app-icon 
+        [name]="'eng-disabled-delete'"
+        [type]="'eng'"
+        [cssClass]="'disabled'"
+        [size]="'small'"
+      ></app-icon>
+    </a>
+  </ng-container>
+
+</ng-template>

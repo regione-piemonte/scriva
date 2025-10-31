@@ -1,0 +1,27 @@
+[
+  {
+    "cod_adempimento": "adempimento0X",
+    "des_adempimento": "adempimento di test 0X",
+    "des_estesa_adempimento": "adempimento di test 0X esteso",
+    "id_adempimento": 0,
+    "id_tipo_adempimento": 0,
+    "ordinamento_adempimento": 0,
+    "tipo_adempimento": {
+    "ambito": {
+        "cod_ambito": "ambito0X",
+        "des_ambito": "ambito di test 0X",
+        "des_estesa_ambito": "ambito di test 0X esteso",
+        "gestUID": "randomUID",
+        "id_ambito": 0
+    },
+    "cod_tipo_adempimento": "codiceTipo0X",
+    "des_estesa_tipo_adempimento": "tipo adempimento di test 0X esteso",
+    "des_tipo_adempimento": "tipo adempimento di test 0X",
+    "id_ambito": 0,
+    "id_tipo_adempimento": 0,
+    "ordinamento_tipo_adempimento": 0,
+    "preferito": 0,
+    "uuid_index": "randomUUID-Index0X"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+{
+  "startDate": "2021-01-14T19:25:47.700Z",
+  "endDate": "2021-01-20T19:25:47.700Z",
+  "bookingDate": "2021-01-11T19:25:47.700Z",
+  "id": 1,
+  "address": "Via delle iacuzzi 13",
+  "city": {
+    "id": 3,
+    "denominazione": "Roma"
+  },
+  "amount": 120,
+  "dicount": 10,
+  "dicountCode": "1sd5fsd45fsd54s54",
+  "notes": "Eventuali note di chi prenota",
+  "user": {
+    "firstName": "Mario",
+    "lastName": "Rossi",
+    "company": "Eng"
+  }
+}

@@ -1,0 +1,30 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class='row pt-5'>
+  <div class='col-md-12'>
+    <div class='flex-centered col-xl-4 col-lg-6 col-md-8 col-sm-12'>
+      <h2 class='title'>
+        {{ 'NOT_AUTHORIZED.TITLE' | translate }}
+      </h2>
+      <small
+        class='sub-title'
+        [translate]="'NOT_AUTHORIZED.SUB_TITLE'"
+      ></small>
+      <div class='home-button'>
+        <button type='button'
+                (click)='goToHome()'
+                class='btn btn-primary m-4 home-button'
+                type='button'>
+          {{ 'NOT_AUTHORIZED.GO_TO_HOME' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

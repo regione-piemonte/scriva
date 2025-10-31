@@ -1,0 +1,72 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+@import '../../styles/variables';
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 11000;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.pt-60 {
+  padding-top: $header_height;
+}
+
+.loader {
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  height: 100%;
+  margin: auto;
+  vertical-align: middle;
+  display: flex;
+}
+
+.background-container {
+  background-color: #f1f3f8;
+  .body-container {
+    width: calc(100% - (240px + 75px));
+    width: -moz-calc(100% - (240px + 75px));
+    width: -webkit-calc(100% - (240px + 75px));
+    padding-left: 25px;
+    padding-right: 110px;
+    margin-bottom: 20px;
+    @media screen and (min-width: 769px) and (max-width: 1280px) {
+      width: calc(100% - (240px + 15px));
+      width: -moz-calc(100% - (240px + 15px));
+      width: -webkit-calc(100% - (240px + 15px));
+      padding-right: 15px;
+    }
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      padding-right: 15px;
+    }
+    &.full {
+      width: calc(100% - (80px + 75px));
+      width: -moz-calc(100% - (80px + 75px));
+      width: -webkit-calc(100% - (80px + 75px));
+      @media screen and (min-width: 769px) and (max-width: 1280px) {
+        width: calc(100% - (80px + 15px));
+        width: -moz-calc(100% - (80px + 15px));
+        width: -webkit-calc(100% - (80px + 15px));
+      }
+      @media screen and (max-width: 768px) {
+        width: 100%;
+      }
+    }
+  }
+}

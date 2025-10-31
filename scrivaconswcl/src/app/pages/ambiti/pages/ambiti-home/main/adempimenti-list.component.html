@@ -1,0 +1,47 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<main>
+  <div class='adempimenti row'>
+    <div class='col-12 '>
+      <h1>
+        {{ 'ADEMPIMENTI.TITLE' | translate }} {{ titolo }}
+      </h1>
+    </div>
+    <div class='col-12'>
+      <div class='separator'>&nbsp;</div>
+    </div>
+    <div class='col-12 col-sm-6 col-md-4' *ngFor='let tipiAdempimento of tipiAdempimenti'>
+      <app-card>
+        <app-card-header>
+          <div class='ambito-container'>
+            {{ tipiAdempimento.ambito.des_ambito }}
+          </div>
+        </app-card-header>
+        <app-card-body>
+          <div class='text-container'>
+            {{ tipiAdempimento.des_tipo_adempimento }}
+          </div>
+        </app-card-body>
+        <app-card-footer>
+          <div class='row'>
+            <div class='col-6 text-left'>
+              <button type='button' class='button-card text-left' (click)='onShowAlert(tipiAdempimento)'
+                      *ngIf='tipiAdempimento.mostra_avvisi'>{{ 'HOME.MORE_BUTTON' | translate }}</button>
+            </div>
+            <div class='col-6 text-right'>
+              <button type='button' class='button-card text-right'
+                      (click)='onNavigateList(tipiAdempimento)'>{{ 'HOME.SEARCH_BUTTON' | translate }}</button>
+            </div>
+          </div>
+        </app-card-footer>
+      </app-card>
+    </div>
+  </div>
+</main>

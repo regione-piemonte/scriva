@@ -1,0 +1,139 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<!--
+<div
+  [ngSwitch]='field.inputType'
+  [class.form-group]="
+    field.inputType !== 'divider' &&
+    field.inputType !== 'checkbox' &&
+    field.inputType !== 'radios'
+  "
+  [class.mt-3]="field.inputType === 'file' || field.inputType === 'dialog-file'"
+  [class]="field.formGroupClass.join(' ')"
+>
+-->
+<div
+  [ngSwitch]='field.inputType'
+  [class.form-group]="
+    field.inputType !== 'divider' &&
+    field.inputType !== 'checkbox'
+  "
+  [class.mt-3]="field.inputType === 'file' || field.inputType === 'dialog-file'"
+  [class]="field.formGroupClass.join(' ')"
+>
+  <app-input-label
+    *ngIf="
+      field.inputType !== 'divider' &&
+      field.inputType !== 'noop' &&
+      field.inputType !== 'button'
+    "
+    [field]='field'
+    [name]='name'
+    [filter]='filter'
+  ></app-input-label>
+
+  <div *ngSwitchCase="'nop'">
+    <app-nop-input></app-nop-input>
+  </div>
+
+  <!-- Input type: text -->
+  <app-textbox-input
+    *ngSwitchCase="'textbox'"
+    [control]='field'
+    [name]='name'
+  ></app-textbox-input>
+
+  <app-file-input
+    *ngSwitchCase="'file'"
+    [control]='field'
+    [name]='name'
+  ></app-file-input>
+
+  <app-dialog-file-input
+    *ngSwitchCase="'dialog-file'"
+    [control]='field'
+    [name]='name'
+  ></app-dialog-file-input>
+
+  <!-- Input type: textarea -->
+  <app-texarea-input
+    *ngSwitchCase="'textarea'"
+    [control]='field'
+    [name]='name'
+  ></app-texarea-input>
+
+  <!-- Input type: select -->
+  <app-select-input
+    *ngSwitchCase="'select'"
+    [control]='field'
+  ></app-select-input>
+
+  <!-- Input type: autocomplete -->
+  <app-autocomplete-input
+    *ngSwitchCase="'autocomplete'"
+    [control]='field'
+  ></app-autocomplete-input>
+
+  <!-- Input type: autocomplete -->
+  <app-autocomplete-with-insert-input
+    *ngSwitchCase="'autocomplete-with-insert'"
+    [control]='field'
+  ></app-autocomplete-with-insert-input>
+
+  <!-- Input type: autocomplete-add-btn -->
+  <app-autocomplete-add-btn-input
+    *ngSwitchCase="'autocomplete-add-btn'"
+    [control]='field'>
+  </app-autocomplete-add-btn-input>
+
+  <!-- Input type: checkbox -->
+  <app-checkbox-input
+    *ngSwitchCase="'checkbox'"
+    [name]='name'
+    [control]='field'
+  ></app-checkbox-input>
+
+  <!-- Input type: radios -->
+  <app-radios-input
+    *ngSwitchCase="'radios'"
+    [control]='field'
+  ></app-radios-input>
+
+  <!-- Input type: divider -->
+  <app-divider-input
+    *ngSwitchCase="'divider'"
+    [control]='field'
+  ></app-divider-input>
+
+  <!-- Input type: button -->
+  <app-button-input
+    *ngSwitchCase="'button'"
+    [control]='field'
+  ></app-button-input>
+
+  <!-- Input type: list only readonly -->
+  <app-list-input *ngSwitchCase="'list'" [control]='field'></app-list-input>
+
+  <!-- Input type: date -->
+  <app-date-input
+    *ngSwitchCase="
+      field.inputType === 'date' || field.inputType === 'date-range'
+        ? field.inputType
+        : ''
+    "
+    [control]='field'
+  ></app-date-input>
+
+  <!-- Show info detail -->
+  <app-validation-input-message
+    *ngIf="field.inputType !== 'divider' && field.inputType !== 'noop'"
+    [statusMessage]='field.statusMessage'
+  ></app-validation-input-message>
+</div>

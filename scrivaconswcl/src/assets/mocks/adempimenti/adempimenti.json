@@ -1,0 +1,121 @@
+[
+    {
+        "ambito": {
+            "cod_ambito": "ambito01",
+            "des_ambito": "ambito di test 01",
+            "des_estesa_ambito": "ambito di test 01 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 1
+        },
+        "cod_tipo_adempimento": "codiceTipo01",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 01 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 01",
+        "id_ambito": 1,
+        "id_tipo_adempimento": 1,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index01"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito02",
+            "des_ambito": "ambito di test 02",
+            "des_estesa_ambito": "ambito di test 02 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 2
+        },
+        "cod_tipo_adempimento": "codiceTipo02",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 02 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 02",
+        "id_ambito": 2,
+        "id_tipo_adempimento": 2,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index02"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito03",
+            "des_ambito": "ambito di test 03",
+            "des_estesa_ambito": "ambito di test 03 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 3
+        },
+        "cod_tipo_adempimento": "codiceTipo03",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 03 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 03",
+        "id_ambito": 3,
+        "id_tipo_adempimento": 3,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index03"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito04",
+            "des_ambito": "ambito di test 04",
+            "des_estesa_ambito": "ambito di test 04 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 4
+        },
+        "cod_tipo_adempimento": "codiceTipo04",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 04 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 04",
+        "id_ambito": 4,
+        "id_tipo_adempimento": 4,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index04"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito05",
+            "des_ambito": "ambito di test 05",
+            "des_estesa_ambito": "ambito di test 05 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 5
+        },
+        "cod_tipo_adempimento": "codiceTipo05",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 05 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 05",
+        "id_ambito": 5,
+        "id_tipo_adempimento": 5,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index05"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito06",
+            "des_ambito": "ambito di test 06",
+            "des_estesa_ambito": "ambito di test 06 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 6
+        },
+        "cod_tipo_adempimento": "codiceTipo06",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 06 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 06",
+        "id_ambito": 6,
+        "id_tipo_adempimento": 6,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index06"
+    },
+    {
+        "ambito": {
+            "cod_ambito": "ambito07",
+            "des_ambito": "ambito di test 07",
+            "des_estesa_ambito": "ambito di test 07 esteso",
+            "gestUID": "randomUID",
+            "id_ambito": 7
+        },
+        "cod_tipo_adempimento": "codiceTipo07",
+        "des_estesa_tipo_adempimento": "tipo adempimento di test 07 esteso",
+        "des_tipo_adempimento": "tipo adempimento di test 07",
+        "id_ambito": 7,
+        "id_tipo_adempimento": 7,
+        "ordinamento_tipo_adempimento": 0,
+        "preferito": 0,
+        "uuid_index": "randomUUID-Index07"
+    }
+]

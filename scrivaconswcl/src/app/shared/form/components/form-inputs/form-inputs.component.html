@@ -1,0 +1,24 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="row">
+    <div
+          *ngFor="let field of $any(controls) | keyvalue: this.keyvaluePipeCompareFn"
+          class="align-self-top px-15px"
+          [class]="field.value.size?.toClass() || 'col-12 p-0'"
+    >
+        <app-form-input
+              [field]="field.value"
+              [name]="field.key"
+              [form]="form"
+              [filter]="filter"
+        ></app-form-input>
+    </div>
+</div>
+

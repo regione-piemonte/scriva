@@ -1,0 +1,96 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div class="menu" [ngClass]="{ closed: !menuStatus }">
+    <div class="fixed">
+        <div class="toogle-menu">
+            <div class="menu-icon-open" [ngClass]="{ hidden: menuStatus }">
+                <app-icon
+                      [name]="'eng-menu-open'"
+                      [type]="'eng'"
+                      [cssClass]="'cursor-pointer'"
+                      [fill]="'#016CB4'"
+                      (click)="openMenu()"
+                >
+                </app-icon>
+            </div>
+            <div class="menu-icon-close" [ngClass]="{ hidden: !menuStatus }">
+                <app-icon
+                      [name]="'eng-menu-close'"
+                      [type]="'eng'"
+                      [cssClass]="'cursor-pointer'"
+                      [fill]="'#016CB4'"
+                      (click)="closeMenu()"
+                >
+                </app-icon>
+            </div>
+        </div>
+        <ul class="link-list" [ngStyle]="{ width: !menuStatus ? '80px' : '240px' }">
+            <ng-container *ngFor="let item of menuItems">
+                <li
+                      [ngClass]="{
+            current: currentItem.indexOf(item.activeCheck) >= 0,
+            'underline-on-hover': menuStatus
+          }"
+                      tabindex="0"
+                      (keydown.enter)="navigateTo(item.link)"
+                      class="cursor-pointer"
+                      appFocusRemover
+                      (click)="navigateTo(item.link)"
+                      *ngIf="!item.hidden"
+                >
+                    <a class="cursor-pointer">
+                        <div *ngIf='item.link!=="/contatti"' class="row">
+                            <div class="col-2">
+                                <app-icon
+                                      [name]="item.icon"
+                                      [fill]="'#016CB4'"
+                                      [type]="item.icon.substring(0, item.icon.indexOf('-'))"
+                                      *ngIf="item.icon"
+                                      [size]="'small'"
+                                      [cssClass]="'icon-menu-size'"
+                                      class="mr-4"
+                                ></app-icon>
+                            </div>
+                            <div class="col-10" *ngIf="menuStatus ">
+                                {{ item.title | translate }}
+                                <span *ngIf="item.private && !isLoggedIn" class="private">
+                                    {{ 'MENU.PRIVATE'|translate }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <div *ngIf='item.link==="/contatti"' class="row">
+                            <div class="col-2">
+                                <div>
+                                    <img class="dim-icon" src="assets/images/icon-sidebar-contatti.svg" alt="Contatti">
+                                </div>
+                            </div>
+                            <div class="col-10" *ngIf="menuStatus ">
+                                {{ item.title | translate }}
+                                <span *ngIf="item.private && !isLoggedIn" class="private">
+                                    {{ 'MENU.PRIVATE'|translate }}
+                                </span>
+                            </div>
+                        </div>
+
+                    </a>
+                </li>
+            </ng-container
+            >
+        </ul>
+    </div>
+</div>
+<div
+      class="background-mobile-menu"
+      [ngClass]="{ open: menuStatus }"
+      (click)="closeMenu()"
+>
+    &nbsp;
+</div>

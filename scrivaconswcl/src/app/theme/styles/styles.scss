@@ -1,0 +1,85 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@import './variables';
+@import './styles';
+
+@import '~@ng-select/ng-select/themes/default.theme.css';
+@import '~bootstrap-italia/src/scss/bootstrap-italia';
+
+@import './input';
+@import './ng-select';
+@import './table';
+@import './datatable';
+
+.toast {
+  position: relative !important;
+  width: 100% !important;
+  margin: auto;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0 !important;
+
+  @media (min-width: 567px) {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  @media (max-width: 566px) {
+    padding: 0 16px !important;
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+.toast-body {
+  padding: 0 !important;
+}
+
+.toast-container {
+  left: 0;
+  right: 0;
+}
+
+.reset-btn {
+  color: #006dba;
+  padding: 10px 12px;
+}
+
+.reset-btn:hover {
+  color: #006dba;
+  text-decoration: underline;
+  background: transparent !important;
+  border: none !important;
+}
+
+.mg-t-25 {
+  margin-top: 25px;
+}
+
+.datatable-checkbox input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+  border: 2px solid #f2f2f2;
+}
+
+.riga-selezionata {
+  background-color: #e5f5ff;
+}
+
+.disabled {
+  color: #808080 !important;
+}

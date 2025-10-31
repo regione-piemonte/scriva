@@ -1,0 +1,252 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<app-card [containerStyle]="'box-shadow: 1px 2px 8px #C4C4C4;'">
+    <app-card-header>
+        <h6>
+            {{ 'PRACTICE.DETAIL.DOCUMENTI.TITLE' | translate | uppercase }} ({{getNumberOfElements()}} documenti)
+            <button type="button" class="btn pb-1 px-1 pt-0" (click)="onHelp()">
+                <app-icon [size]="'extra-small'" [name]="'eng-scriva-help'" [type]="'eng'"></app-icon>
+            </button>
+        </h6>
+    </app-card-header>
+    <app-card-body>
+        <div class="row pt-2 pb-5">
+            <div class="col-12">
+                <ngx-datatable *ngIf="rows?.length > 0; else noItems" rowHeight="auto"
+                    [columnMode]="ColumnMode.force"
+                    [headerHeight]="80"
+                    [footerHeight]="0"
+                    [treeFromRelation]="'treeParentId'"
+                    [treeToRelation]="'treeId'"
+                    [rows]="rows"
+                    [draggable]="false"
+                    [selected]="selectedRows"
+                    [selectionType]="SelectionType.checkbox"
+                    [rowClass]="handleRowStyles"
+                    [displayCheck]="displayCheck"
+                    [scrollbarH]="true"
+                    [messages]="messages"
+                    (treeAction)="onTreeAction($event)"
+                    (select)="onSelect($event)"
+                  >
+                    <ngx-datatable-column 
+                      [width]="40"
+                      [sortable]="false"
+                      [canAutoResize]="false"
+                      [draggable]="false"
+                      [resizeable]="false"
+                      [headerCheckboxable]="true"
+                      [checkboxable]="true"
+                    ></ngx-datatable-column>
+
+                    <ngx-datatable-column 
+                      name="{{ 'PRACTICE.DETAIL.DOCUMENTI.FIELDS.CLASSIFICAZIONE_DOC' | translate | spezzaParoleHTML }}"
+                      width="175"
+                      max-width="175"
+                      [isTreeColumn]="true"
+                      [sortable]="false"
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        {{ row.columns.alberatura }}
+                      </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column 
+                      width="150"
+                      max-width="200"
+                      cellClass="break-all"
+                      name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.NOME_FILE' | translate | spezzaParoleHTML }}"
+                      [sortable]="false"
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="force-break-spaces text-center"
+                          [title]="row.columns.isFileNode ? row.columns.nome : ''"
+                        >
+                          {{ row.columns.isFileNode ? row.columns.nome : '' }}
+                        </div>
+                      </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column 
+                      width="175"
+                      max-width="225"
+                      cellClass="break-all"
+                      name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.NOME_FILE_CORRELATO' | translate | spezzaParoleHTML }}"
+                      [sortable]="false"
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="force-break-spaces text-center"
+                          [title]="row.columns.isFileNode ? row.columns.nome_correlato : ''"
+                        >
+                          {{ row.columns.isFileNode ? row.columns.nome_correlato : '' }}
+                        </div>
+                      </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column 
+                      width="175"
+                      max-width="200"
+                      name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.CATEGORIA_ALLEGATO' | translate | spezzaParoleHTML }}"
+                      [sortable]="false" 
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="force-break-spaces text-center"
+                          [title]="row.columns.categoria"
+                        >
+                          {{ row.columns.categoria }}
+                        </div>
+                      </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column
+                      width="200"
+                      max-width="275"
+                      name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.TIPOLOGIA_ALLEGATO' | translate | spezzaParoleHTML }}"
+                      [sortable]="false"
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="force-break-spaces text-center"
+                          [title]="row.columns.isFileNode ? row.columns.tipologia : ''"
+                        >
+                          {{ row.columns.isFileNode ? row.columns.tipologia : '' }}
+                        </div>
+                      </ng-template>
+                    </ngx-datatable-column>
+                    
+                    <!-- 
+                    <ngx-datatable-column name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.COD_ELABORATO' | translate}}" [sortable]="false">
+                        <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{ row.columns.isFileNode ? row.columns.codice : '' }}
+                        </ng-template>
+                    </ngx-datatable-column>
+
+                    <ngx-datatable-column name="{{'PRACTICE.DETAIL.DOCUMENTI.FIELDS.DATA_PUB' | translate}}" width="175" [sortable]="false">
+                        <ng-template let-row="row" ngx-datatable-cell-template>
+                            {{ row.columns.isFileNode ? (row.columns.dataPubblicazione | date: 'dd/MM/yyyy') : '' }}
+                        </ng-template>
+                    </ngx-datatable-column>
+                    -->
+
+                    <ngx-datatable-column
+                      width="100"
+                      min-width="100"
+                      max-width="100"
+                      name="{{ 'PRACTICE.DETAIL.DOCUMENTI.FIELDS.DIMENSIONE' | translate | spezzaParoleHTML }}"
+                      [sortable]="false"
+                    >
+                      <!-- HEADER -->
+                      <ng-template ngx-datatable-header-template let-column="column">
+                        <div class="force-break-spaces text-center" [innerHTML]="column?.name"></div>
+                      </ng-template>
+                      <!-- CELL -->
+                      <ng-template let-row="row" ngx-datatable-cell-template>
+                        <div class="force-break-spaces text-center"
+                          [title]="row.columns.isFileNode ? (row.columns.dimensione | fileDimension) : ''"
+                        >
+                          {{ row.columns.isFileNode ? (row.columns.dimensione | fileDimension) : '' }}
+                        </div>
+                      </ng-template>
+                    </ngx-datatable-column>
+
+                    <!-- <ngx-datatable-column [sortable]="false" cellClass="align-middle">
+                        <ng-template let-row="row" ngx-datatable-cell-template>
+                            <button
+                                  type="button"
+                                  class="btn p-0"
+                                  (click)="onDownload(row)"
+                                  *ngIf="row.columns.isFileNode"
+                            >
+                                <app-icon
+                                      [name]="'eng-scriva-download'"
+                                      [type]="'eng'"
+                                      [cssClass]="'cursor-pointer'"
+                                      [size]="'small'"
+                                >
+                                </app-icon>
+                            </button>
+                        </ng-template>
+                    </ngx-datatable-column> -->
+                </ngx-datatable>
+                <ng-template #noItems>
+                    <div class='text-center border-0 -mb-16' [attr.colspan]='columns?.length'>
+                        <app-helper [text]=" 'UTILS.TABLE.EMPTY'" [title]="'UTILS.TABLE.NO_ITEMS'"></app-helper>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 text-left">
+                <button type="button" class="btn text-left custom-button-outline" (click)="exportGenericFile('csv')" [disabled]="!rows || rows?.length === 0">
+                    {{ 'PRACTICE.DETAIL.DOCUMENTI.BUTTON.EXPORT_CSV' | translate | uppercase }}
+                </button>
+            </div>
+            <!--
+            <div class="col-3 text-center">
+              <button
+                type="button"
+                class="btn btn-primary text-left custom-button"
+                (click)="exportGenericFile('zip')"
+              >
+                {{ 'PRACTICE.DETAIL.DOCUMENTI.BUTTON.ZIP' | translate }}
+              </button>
+            </div>-->
+            <div class="col-6 text-right">
+                <button [disabled]="!rows || rows?.length === 0" type="button" class="btn text-right custom-button-outline" (click)="onDownloadSelected()">
+                    {{ 'PRACTICE.DETAIL.DOCUMENTI.BUTTON.DOWNLOAD_SELECTED' | translate | uppercase }}
+                </button>
+            </div>
+        </div>
+    </app-card-body>
+</app-card>
+<ng-container *ngIf="notificationErScaricaSelConfig">
+    <div class="mg-t-25">
+        <app-notification [notification]="notificationErScaricaSelConfig"></app-notification>
+    </div>
+</ng-container>
+<ng-container *ngIf="notificationErCaptcha">
+    <div class="mg-t-25">
+        <app-notification [notification]="notificationErCaptcha"></app-notification>
+    </div>
+</ng-container>
+<ng-container *ngIf="notificationErDownload">
+    <div class="mg-t-25">
+        <app-notification [notification]="notificationErDownload"></app-notification>
+    </div>
+</ng-container>
+<ng-container *ngIf="notificationErDownloadZip">
+    <div class="mg-t-25">
+        <app-notification [notification]="notificationErDownload"></app-notification>
+    </div>
+</ng-container>

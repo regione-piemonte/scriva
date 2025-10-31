@@ -1,0 +1,18 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div [ngClass]="classes" class="{{card?.header?.cssClass}}" role="tab">
+    <ng-container [ngTemplateOutlet]="card?.header?.template" *ngIf="card?.header?.template"></ng-container>
+    <a data-toggle="collapse"
+       [attr.data-target]="'#'+card?.name" aria-expanded="false" *ngIf="!card?.header?.template">
+        <h5 class="label-text float-left my-auto ml-1">
+            {{ card?.header?.title }}
+        </h5>
+    </a>
+</div>

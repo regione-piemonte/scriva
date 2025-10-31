@@ -1,0 +1,137 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.home {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  h1 {
+    text-align: left;
+    font: normal normal bold 24px/33px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  .separator {
+    width: 60px;
+    height: 5px;
+    background: #b91818 0% 0% no-repeat padding-box;
+  }
+
+  .ambito-container {
+    text-align: left;
+    font: normal normal bold 16px/21px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+    min-height: 65px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .text-container {
+    text-align: left;
+    font: normal normal normal 16px/21px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+    min-height: 65px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .button-card {
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    font: normal normal bold 18px/24px Open Sans;
+    color: #006cb4;
+    letter-spacing: 0;
+  }
+}
+
+.header-image {
+  max-width: 100vw;
+  height: 240px;
+  background: transparent url('~assets/images/header.png') no-repeat;
+  width: 100%;
+  background-size: cover;
+  background-position: 0 0;
+  z-index: 1;
+}
+
+.home-container {
+  max-width: 100%;
+  padding-left: 97px;
+  padding-right: 116px;
+  margin: 0;
+  @media screen and (max-width: 1280px) {
+    padding-right: 21px;
+    padding-left: 37px;
+  }
+}
+
+.alert-box {
+  margin-bottom: 1.875rem;
+}
+
+.alert-box.info {
+  background-color: #dbeef7;
+  border-left: 8px solid #006cb4;
+}
+
+.alert-box {
+  font-size: 0.875rem;
+}
+
+.alert-box.info i {
+  color: #006cb4;
+}
+
+.alert-box {
+  display: flex;
+  align-items: flex-start;
+  opacity: 1;
+  transition: opacity 5s cubic-bezier(0.98, 0.01, 1, 0.38);
+  padding: 20px;
+}
+
+.alert-box i.icon-big {
+  font-size: 1.5rem !important;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-box h3 {
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.alert-box span p.text-only {
+  margin-top: 4px;
+}
+
+.alert-box span p:last-of-type {
+  margin: 0;
+}
+
+.title {
+  font: normal normal bold 20px/26px Open Sans;
+}

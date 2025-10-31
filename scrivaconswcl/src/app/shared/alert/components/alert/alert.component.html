@@ -1,0 +1,36 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div [ngClass]="classes" role="alert" id="{{alertId}}"
+    [attr.aria-labelledby]="h5Id">
+    <div class="alert-icon">
+        <app-icon btnContent
+            [name]="alert.icon"
+            [size]="'small'"
+            [fill]="alertIconFill"
+            *ngIf="alert.icon"
+        ></app-icon>
+    </div>
+    <h5 [attr.id]="h5Id">
+        {{alert.title | translate}}
+    </h5>
+    <p>
+        {{alert.text | translate}}
+    </p>
+    <app-button [type]="'button'"
+        [icon]="true"
+        [btnClassName]="'alert-close'"
+        *ngIf="alert.dismissable">
+        <app-icon btnContent
+            [name]="'it-close'"
+            [size]="'small'"
+        ></app-icon>
+        <span class="sr-only">{{ closeText }}</span>
+    </app-button>
+</div>

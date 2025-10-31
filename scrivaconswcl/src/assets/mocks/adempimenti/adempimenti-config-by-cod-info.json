@@ -1,0 +1,14 @@
+[
+    {
+      "chiave": "chiave",
+      "des_adempimento": "adempimento di test 0X",
+      "des_informazione_scriva": "info scriva test",
+      "gestUID": "Ambito UID 01",
+      "id_adempimento": 0,
+      "id_adempimento_config": 0,
+      "id_informazione_scriva": 0,
+      "note": "note note note",
+      "ordinamento": 0,
+      "valore": "valore test"
+    }
+  ]

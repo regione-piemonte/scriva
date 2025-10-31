@@ -1,0 +1,58 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div>
+    <app-breadcrumbs [overrideBreadcrumbs]="breadcrumbs"></app-breadcrumbs>
+
+    <div class="practices row">
+        <div class="col-12">
+            <h1>
+                {{ 'PRACTICE.DETAIL.TITLE' | translate }}
+            </h1>
+        </div>
+        <div class="col-12">
+            <div class="separator" style="margin-bottom: 30px">&nbsp;</div>
+        </div>
+        <div class="col-12">
+            <app-card
+                  [containerStyle]="
+          'box-shadow: 1px 2px 8px #c4c4c4; background-color: #F7F7F7;  margin: 0;'
+        "
+            >
+                <app-card-body>
+                    <!-- Ordinamento modificato con JIRA SCRIVA-910 -->
+                    <app-riepilogo-pratica></app-riepilogo-pratica>
+                    <app-istruttoria-pratica></app-istruttoria-pratica>
+                    <app-card
+                          *ngIf="hasGeoflag"
+                          [containerStyle]="'box-shadow: 1px 2px 8px #C4C4C4'">
+                        <app-card-header
+                        ><h6>
+                            {{ 'PRACTICE.DETAIL.MAP.TITLE' | translate }}
+                        </h6></app-card-header
+                        >
+                        <app-card-body>
+                            <a class="map-link" [routerLink]="['mappa']" [queryParams]="{fromSearch:fromSearch}">{{
+                              'PRACTICE.DETAIL.MAP.TEXT' | translate
+                                }}</a>
+                        </app-card-body>
+                    </app-card
+                    >
+                    <app-allegati-pratica
+                          [id_istanza]="id_istanza"
+                          [cod_pratica]="cod_pratica"
+                    ></app-allegati-pratica>
+
+                </app-card-body>
+            </app-card>
+
+            <app-back></app-back>
+        </div>
+    </div>
+</div>

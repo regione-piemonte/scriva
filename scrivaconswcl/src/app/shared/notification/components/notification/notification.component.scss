@@ -1,0 +1,119 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.custom-notification {
+  //position: auto !important;
+  position: inherit !important;
+  display: block !important;
+}
+
+.alert-box {
+  align-items: flex-start;
+  font-size: 0.875rem;
+  gap: 20px;
+  border-radius: 0;
+  padding: 22px 38px;
+  @media (max-width: 566px) {
+    padding: 24px 16px 32px;
+  }
+}
+
+.alert-box.info {
+  border: 0;
+  background-color: #dbeef7;
+  border-left: 8px solid #006cb4;
+}
+
+.alert-box.warning {
+  border: 0;
+  background-color: #fdf9e5;
+  border-left: 8px solid #f8e60d;
+}
+
+.alert-box.error {
+  border: 0;
+  background-color: #fee7e8;
+  border-left: 8px solid #f41622;
+}
+
+.alert-box.success {
+  border: 0;
+  background-color: #dff0d9;
+  border-left: 8px solid #61b87a;
+}
+
+.alert-box.info i {
+  color: #006cb4;
+}
+
+.alert-box i.icon-big {
+  font-size: 1.5rem !important;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.alert-box h3 {
+  text-align: left;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 22px;
+  margin-bottom: 0px !important;
+}
+
+.box-text {
+    font-family: 'Open Sans';
+      font-size: 14px;
+      font-weight: normal;
+      line-height: 20px;
+}
+
+.alert-box span p.text-only {
+  margin-top: 4px;
+  font: normal normal normal 14px/20px Open Sans;
+}
+
+.alert-box span p:last-of-type {
+  margin: 0;
+}
+
+.buttonX {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1;
+}
+
+.box-relative {
+  position: relative;
+}
+
+.col-icon {
+  padding-left: 0px;
+  padding-right: 20px;
+}
+
+.col-title {
+  height: 32px;
+  padding-top: 4px
+}
+
+.row-desc {
+  margin-top: 10px;
+}
+.mg-r-20 {
+  margin-right: 20px;
+}

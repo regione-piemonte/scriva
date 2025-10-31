@@ -1,0 +1,73 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.osservazioni-title {
+  padding-top: 20px;
+
+  h1 {
+    text-align: left;
+    font: normal normal bold 24px/33px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  .separator {
+    width: 60px;
+    height: 5px;
+    background: #b91818 0% 0% no-repeat padding-box;
+  }
+}
+.detail-row {
+  padding-top: 1.5rem;
+}
+.header-view-text {
+  font: normal normal bold 13px/19px Open Sans;
+  overflow-wrap: break-word;
+  font-weight: 100;
+}
+.col-view-text {
+  margin-right: 90px;
+}
+.header-label {
+  padding-bottom: 10px;
+  font: normal normal normal 14px/19px Open Sans;
+  font-weight: bold;
+}
+.custom-button-download {
+  display: inline-block;
+  color: white;
+  font: normal normal 14px Open Sans;
+  padding: 12px 17px;
+  background: #0060c1 0% 0% no-repeat padding-box;
+  border: 2px solid #0060c1;
+}
+.custom-button {
+  font: normal normal bold 16px/22px Open Sans;
+  padding: 10px 12px;
+  border-radius: 5px !important;
+}
+
+.custom-button-annulla {
+  font: normal normal 14px Open Sans;
+  padding: 12px 17px;
+  color: #006dba;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: none;
+}
+.upload-button {
+  display: inline-block;
+  font: normal normal 14px Open Sans;
+  padding: 12px 17px;
+  color: #006dba;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 2px solid #006dba;
+}
+.hidden-file {
+  display: none;
+}

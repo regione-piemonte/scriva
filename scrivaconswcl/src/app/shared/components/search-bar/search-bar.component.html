@@ -1,0 +1,28 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<span class="search-bar">
+  <input type="text" class="form-control ds-input"
+         #searchInput id="search-input" name="search-input"  [(ngModel)]="query"
+         [placeholder]="'Ricerca libera'" aria-label="Cerca..."
+         autocomplete="off" spellcheck="false" role="combobox"
+         aria-autocomplete="list" aria-expanded="false"
+         aria-owns="algolia-autocomplete-listbox-0" dir="auto">
+  <a aria-label="Cerca"
+     class="rounded-icon rounded-circle float-right px-2 pt-1 pb-2"
+     (click)="onSearch(searchInput.value)">
+    <app-icon
+      [name]="'eng-search-solid'"
+      [type]="'eng'"
+      [fill]="'#FFFFFF'"
+      [cssClass]="'cursor-pointer'"
+      [size]="'small'"
+    ></app-icon>
+  </a>
+</span>

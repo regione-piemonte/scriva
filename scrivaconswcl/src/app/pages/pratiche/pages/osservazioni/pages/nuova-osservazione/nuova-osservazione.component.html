@@ -1,0 +1,221 @@
+<!--
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+-->
+<div>
+  <app-breadcrumbs [overrideBreadcrumbs]="breadcrumbs"></app-breadcrumbs>
+
+  <div class="osservazioni-title row">
+    <div class="col-12">
+      <h1>
+        {{ 'OSSERVAZIONI.TITLE' | translate }}
+      </h1>
+    </div>
+    <div class="col-12">
+      <div class="separator" style="margin-bottom: 30px">&nbsp;</div>
+    </div>
+    <div class="col-12"></div>
+  </div>
+
+  <ng-container *ngIf="notificationSuccInvioConfig">
+    <div class="mg-t-25">
+      <app-notification
+        [notification]="notificationSuccInvioConfig"
+      ></app-notification>
+    </div>
+  </ng-container>
+
+    <app-card
+      [containerStyle]="
+        'box-shadow: 1px 2px 8px #c4c4c4; background-color: #F7F7F7;'
+      "
+    >
+      <app-card-body>
+        <app-card
+          [containerStyle]="
+            'box-shadow: 1px 2px 8px #C4C4C4; margin: 0; padding-bottom: 0px'
+          "
+        >
+          <app-card-header>
+            <h5 style="font-weight: bold; font-size: 18px !important">
+              {{ 'OSSERVAZIONI.FIELDS.TITLE' | translate }}
+            </h5>
+            <h5 style="font-weight: normal; font-size: 18px !important">
+              {{ pratica?.adempimento.des_adempimento }}
+            </h5>
+          </app-card-header>
+          <app-card-body>
+            <div class="row" style="padding-top: 20px">
+              <div class="col-12 col-sm-3 pb-3">
+                <div class="header-label">
+                  {{ 'PRACTICE.DETAIL.FIELDS.COD_PRATICA' | translate }}
+                </div>
+                <div class="header-view-text">
+                  {{ pratica?.cod_pratica }}
+                </div>
+              </div>
+              <div *ngIf="competenzaPrincipale" class="col-12 col-sm-3 pb-3">
+                <div class="header-label">
+                  {{ 'OSSERVAZIONI.FIELDS.AUTORITA_COMP_PRINC' | translate }}
+                </div>
+                <div class="header-view-text">
+                  <span
+                    class="d-block"
+                    *ngFor="let comp of competenzaPrincipale; let last = last"
+                    >{{ comp?.des_competenza_territorio
+                    }}<span *ngIf="!last">, </span></span
+                  >
+                </div>
+              </div>
+              <!-- <div class='col-sm-6 col-md-8'></div> -->
+              <div *ngIf="pratica?.stato_istanza" class="col-12 col-sm-3 pb-4">
+                <div class="header-label">
+                  {{ 'OSSERVAZIONI.FIELDS.STATO_PRATICA' | translate }}
+                </div>
+                <div class="header-view-text">
+                  {{ pratica.stato_istanza.label_stato }}
+                </div>
+              </div>
+              <div *ngIf="pratica?.data_fine_osservazione" class="col-12 col-sm-3 pb-4">
+                <div class="header-label">
+                  {{ 'OSSERVAZIONI.FIELDS.SCAD_OSS' | translate }}
+                </div>
+                <div class="header-view-text">
+                  {{ pratica.data_fine_osservazione | date: 'dd/MM/yyyy' }}
+                </div>
+              </div>
+              <div *ngIf="pratica?.oggetto_istanza" class="col-12 col-sm-12 pb-4">
+                <div class="header-label">
+                  {{ 'OSSERVAZIONI.FIELDS.DENOM_PROG' | translate }}
+                </div>
+                <div class="header-view-text">
+                  {{
+                    pratica.oggetto_istanza &&
+                      pratica?.oggetto_istanza[0].den_oggetto
+                  }}
+                </div>
+              </div>
+              <div *ngIf="pratica?.oggetto_istanza" class="col-12 col-sm-12 pb-4">
+                <div class="header-label">
+                  {{ 'OSSERVAZIONI.FIELDS.LOCALIZZAZIONE' | translate }}
+                </div>
+                <div class="header-view-text">
+                  <span *ngFor="let oggetto of pratica?.oggetto_istanza">
+                    <span
+                      *ngFor="
+                        let ubicazioni of oggetto?.ubicazione_oggetto;
+                        let last = last
+                      "
+                    >
+                      {{ ubicazioni?.comune.denom_comune
+                      }} ({{ubicazioni?.comune.provincia.sigla_provincia}})<span *ngIf="!last">, </span>
+                    </span><!--/**@jessica */-->
+                  </span>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 pb-4" *ngIf="proponente">
+                <div class="header-label">
+                  {{ 'PRACTICE.DETAIL.FIELDS.PROPONENTE' | translate }}
+                </div>
+                <div class="header-view-text">
+                  {{ proponente }}
+                </div>
+              </div>
+
+              <ng-container *ngIf="canCreateObs">
+                <div class="col-12 col-sm-3 pb-4">
+                  <button
+                    type="button"
+                    class="btn btn-primary custom-button"
+                    (click)="downloadOsservazione()"
+                  >
+                    {{ 'OSSERVAZIONI.BUTTONS.DOWNLOAD_OSS' | translate }}
+                  </button>
+                </div>
+                <div class="col-12 col-sm-3 pb-4">
+                  <button
+                    type="button"
+                    class="btn btn-primary custom-button"
+                    (click)="downloadPrivacy()"
+                  >
+                    {{ 'OSSERVAZIONI.BUTTONS.DOWNLOAD_PRIVACY' | translate }}
+                  </button>
+                </div>
+              </ng-container>
+            </div>
+
+            <ng-container *ngIf="canCreateObs">
+              <div
+                class="header-insert pb-4"
+                style="font-weight: bold; font-size: 16px"
+              >
+                {{ 'OSSERVAZIONI.TITLE_INSERT' | translate }}
+              </div>
+              <app-form
+                *ngIf="inserisciOssForm"
+                [form]="inserisciOssForm"
+              ></app-form>
+              <div class="row">
+                <div class="col-12 pb-4">
+                  <label
+                    for="file"
+                    class="custom-button btn btn-primary mb-0 float-right"
+                    [class.disabled]="!inserisciOssForm?.valid"
+                  >
+                    {{ 'OSSERVAZIONI.BUTTONS.CARICA_OSS' | translate }}
+                  </label>
+                  <input
+                    #allegatoFile
+                    id="file"
+                    class="hidden-file form-control"
+                    type="file"
+                    [disabled]="!inserisciOssForm?.valid"
+                    (change)="onFileChange($event)"
+                  />
+
+                  <button
+                    type="button"
+                    class="btn reset-btn shadow-none"
+                    (click)="clearForm()"
+                  >
+                    {{ 'OSSERVAZIONI.BUTTONS.ANNULLA' | translate }}
+                  </button>
+                </div>
+              </div>
+            </ng-container>
+          </app-card-body>
+        </app-card>
+
+        <ng-container *ngIf="notificationErFileNamingConfig">
+          <div class="mg-t-25">
+            <app-notification
+              [notification]="notificationErFileNamingConfig"
+            ></app-notification>
+          </div>
+        </ng-container>
+
+        <app-riepilogo-osservazioni
+          [id_osservazione]="idOsservazione"
+          [refreshList]="refreshList"
+          [canCreateObs]="canCreateObs"
+          [isSubmitted]="isSubmitted"
+          (onSave)="onPutOsservazione()"
+        ></app-riepilogo-osservazioni>
+      </app-card-body>
+    </app-card>
+
+    <ng-container *ngIf="notificationErFileObbligConfig">
+      <div class="mg-t-25">
+        <app-notification
+          [notification]="notificationErFileObbligConfig"
+        ></app-notification>
+      </div>
+    </ng-container>
+
+    <app-back></app-back>
+</div>

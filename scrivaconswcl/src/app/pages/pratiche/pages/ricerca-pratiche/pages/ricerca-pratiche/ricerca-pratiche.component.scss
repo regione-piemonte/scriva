@@ -1,0 +1,73 @@
+/*
+* ========================LICENSE_START=================================
+* 
+* Copyright (C) 2025 Regione Piemonte
+* 
+* SPDX-FileCopyrightText: (C) Copyright 2025 Regione Piemonte
+* SPDX-License-Identifier: EUPL-1.2
+* =========================LICENSE_END==================================
+*/
+.practice-detail {
+  padding-top: 20px;
+
+  h1 {
+    text-align: left;
+    font: normal normal bold 24px/33px Open Sans;
+    letter-spacing: 0;
+    color: #000000;
+  }
+
+  .separator {
+    width: 60px;
+    height: 5px;
+    background: #b91818 0% 0% no-repeat padding-box;
+  }
+}
+
+::ng-deep app-card {
+  .card-container {
+    box-shadow: 1px 2px 8px #c4c4c4 !important;
+    border-radius: 0 !important;
+  }
+}
+
+.total-elements {
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 1;
+  padding-top: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.custom-margin {
+  margin: 0 2rem;
+}
+
+.custom-button {
+  font: normal normal bold 16px/22px Open Sans;
+  padding: 10px 12px;
+  border: 2px solid transparent;
+  border-radius: 5px !important;
+}
+
+.custom-button:hover {
+  font: normal normal bold 16px/22px Open Sans !important;
+  padding: 10px 12px !important;
+  color: #0060c1 !important;
+  background: transparent !important;
+  border: 2px solid #0060c1 !important;
+  border-radius: 5px !important;
+}
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.info-text {
+  font: normal normal normal 16px/22px Open Sans;
+}
+
+.link {
+  color: #006dba;
+  text-decoration: underline;
+}
