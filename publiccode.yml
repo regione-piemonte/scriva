@@ -9,6 +9,9 @@ platforms:
   - web
 categories:
   - business-process-management
+  - payment-gateway
+usedBy:
+  - Regione Piemonte
 developmentStatus: stable
 softwareType: standalone/web
 description:
@@ -21,33 +24,62 @@ description:
       gestione dei procedimenti ambientali, coerente con il modello generale per
       l’ICT della PA italiana promosso da AgID.
 
-
-      Il servizio corrispondente è disponibile a questi indirizzi:
+      Il servizio corrispondente è disponibile ai seguenti indirizzi
 
       https://scriva-servizi.regione.piemonte.it/scrivafoweb
 
       https://scrivabo-servizi.regione.piemonte.it/scrivafoweb
 
       https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
-            	  
-      SCRIVA risponde a una duplice esigenza:
-            - Offrire un punto di vista inter-tematico, raccordando (in ottica di user centered design) i procedimenti dei diversi business afferenti allo stesso richiedente o intervento/opera/attività sul territorio.
-      - Gestire trasversalmente logiche comuni rispetto a funzioni di:
-              - **Scrivania**: query & reporting, gestione stati/eventi, bacheca notifiche, scadenziario
-              - **Processo**: deleghe/procure, anagrafiche soggetti/oggetti
-              - **Integrazione**: georeferenziazione, protocollazione & gestione documentale, pagamenti
-              - **Interazione**: tra stakeholder e sistemi coinvolti, permettendo alle PA di dialogare su un procedimento all’interno della soluzione o ingaggiando sistemi esterni (es: SUAP)
+
+
+      SCRIVA intende offrire un punto di vista inter-tematico, di raccordo dei
+      procedimenti in ottica user centered design, connettendo diversi business
+      afferenti allo stesso richiedente o intervento/opera/attività sul territorio.
+
+      Permette di gestire trasversalmente logiche comuni sfruttando la metafora
+      della **Scrivania**, del richiedente e del funzionario incaricato.
+
+      Offre strumenti di gestione stati/eventi, bacheca notifiche, scadenziario.
+
+      Permette di trattare un **Adempimento** come un **processo**con le relative
+      deleghe/procure ed anagrafiche soggetti/oggetti.
+
+      Esempi di adempimenti trattati sono quelli relativi a
+
+      • **VIA**
+
+      • **VINCA**
+
+      • **Derivazioni**
+
+
+      Pone l'accento sui concetti di **Integrazione** ed **Interazione** con diversi
+      sistemi e piattaforme, come per esempio
+
+      • sistemi di **georeferenziazione**,
+
+      • sistemi di **protocollazione & gestione documentale**,
+
+      • sistemi come il **SUAP**,
+
+      • **piattaforme di pagamento**
+
 
       SCRIVA semplifica, dematerializza e armonizza i servizi pubblici regionali
       relativi alle procedure ambientali rivolti a imprese, professionisti e
       cittadini, attraverso una nuova modalità di interazione e un maggiore
       livello di integrazione dei servizi regionali con la PA.
 
-            ### Componenti funzionali
 
-            - **Front Office**: scrivania del Richiedente (privato, persona fisica o giuridica, anche PA) che interagisce con la PA per la presentazione di un’istanza
+      Il sistema può essere visto come somma di due macro componenti funzionali
 
-            - **Back Office**: scrivania del Funzionario (soggetto pubblico destinatario dell’istanza) che prende in carico la pratica e la gestisce coinvolgendo gli Enti Terzi
+      • **Front Office**: scrivania del Richiedente (privato, persona fisica o
+      giuridica) che interagisce con la PA per la presentazione di un’istanza.
+
+      • **Back Office**: scrivania del Funzionario (soggetto pubblico destinatario
+      dell’istanza) che prende in carico la pratica e la gestisce coinvolgendo gli
+      Enti Terzi.
 
       L’applicativo prevede moduli di front-end web che interagiscono tramite
       API con moduli di back-end dove risiede la logica di business e che
@@ -65,11 +97,12 @@ description:
       - gestione Scrivania del funzionario
       - strumenti di query & reporting
       - gestione stati/eventi, bacheca notifiche, scadenziario
-      - "gestione Processo: deleghe/procure, anagrafiche soggetti/oggetti"
-      - "gestione Integrazione: georeferenziazione, protocollazione,
-        documentale, pagamenti"
-      - "gestione Interazione: tra sistemi coinvolti, focus sul procedimento"
-      - "integrazione con sistemi esterni (es: SUAP)"
+      - gestione Processo con deleghe/procure, anagrafiche soggetti/oggetti
+      - integrazione con georeferenziazione
+      - integrazione con protocollazione e gestione documentale
+      - integrazione con piattaforma pagamenti
+      - integrazione con sistemi esterni come il SUAP
+      - gestione interazione tra sistemi coinvolti, focus sul procedimento
 legal:
   license: EUPL-1.2
 maintenance:
