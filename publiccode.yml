@@ -10,8 +10,6 @@ platforms:
 categories:
   - business-process-management
   - payment-gateway
-organisation:
-  uri: urn:x-italian-pa:r_piemon
 usedBy:
   - Regione Piemonte
 developmentStatus: stable
@@ -121,7 +119,7 @@ localisation:
   localisationReady: false
   availableLanguages:
     - it-IT
-IT:
+it:
   countryExtensionVersion: "1.0"
   conforme:
     lineeGuidaDesign: true
