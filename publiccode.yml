@@ -9,8 +9,11 @@ platforms:
 categories:
   - business-process-management
   - payment-gateway
-usedBy:
-  - Regione Piemonte
+organisation:
+  uri: urn:x-italian-pa:r_piemon
+fundedBy:
+  - name: Regione Piemonte
+    uri: urn:x-italian-pa:r_piemon
 developmentStatus: stable
 softwareType: standalone/web
 description:
@@ -23,14 +26,10 @@ description:
       gestione dei procedimenti ambientali, coerente con il modello generale per
       l’ICT della PA italiana promosso da AgID.
 
-      Il servizio corrispondente è disponibile ai seguenti indirizzi
-
-      https://scriva-servizi.regione.piemonte.it/scrivafoweb
-
-      https://scrivabo-servizi.regione.piemonte.it/scrivafoweb
-
-      https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
-
+      Il servizio corrispondente è disponibile ai seguenti indirizzi:
+            https://scriva-servizi.regione.piemonte.it/scrivafoweb
+            https://scrivabo-servizi.regione.piemonte.it/scrivafoweb
+            https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
 
       SCRIVA intende offrire un punto di vista inter-tematico, di raccordo dei
       procedimenti in ottica user centered design, connettendo diversi business
@@ -46,45 +45,25 @@ description:
       relative deleghe/procure ed anagrafiche soggetti/oggetti.
 
       Esempi di adempimenti trattati sono quelli relativi a
-
-      • **VIA**
-
-      • **VINCA**
-
-      • **Derivazioni**
-
+            • **VIA**
+            • **VINCA**
+            • **Derivazioni**
 
       Pone l'accento sui concetti di **Integrazione** ed **Interazione** con
       diversi sistemi e piattaforme, come per esempio
+            • sistemi di **georeferenziazione**,
+            • sistemi di **protocollazione & gestione documentale**,
+            • sistemi come il **SUAP**,
+            • **piattaforme di pagamento**
 
-      • sistemi di **georeferenziazione**,
-
-      • sistemi di **protocollazione & gestione documentale**,
-
-      • sistemi come il **SUAP**,
-
-      • **piattaforme di pagamento**
-
-
-      SCRIVA semplifica, dematerializza e armonizza i servizi pubblici regionali
-      relativi alle procedure ambientali rivolti a imprese, professionisti e
-      cittadini, attraverso una nuova modalità di interazione e un maggiore
-      livello di integrazione dei servizi regionali con la PA.
-
-
-      Il sistema può essere visto come somma di due macro componenti funzionali
-
-      • **Front Office**: scrivania del Richiedente (privato, persona fisica o
-      giuridica) che interagisce con la PA per la presentazione di un’istanza.
-
-      • **Back Office**: scrivania del Funzionario (soggetto pubblico
-      destinatario dell’istanza) che prende in carico la pratica e la gestisce
-      coinvolgendo gli Enti Terzi.
+       SCRIVA semplifica, dematerializza e armonizza i servizi pubblici regionali relativi alle procedure ambientali rivolti a imprese, professionisti e cittadini, attraverso una nuova modalità di interazione e un maggiore livello di integrazione dei servizi regionali con la PA.
+      Il sistema può essere visto come somma di due macro componenti funzionali 
+            • **Front Office**: scrivania del Richiedente (privato, persona fisica o giuridica) che interagisce con la PA per la presentazione di un’istanza.
+            • **Back Office**: scrivania del Funzionario (soggetto pubblico destinatario dell’istanza) che prende in carico la pratica e la gestisce coinvolgendo gli Enti Terzi.
 
       L’applicativo prevede moduli di front-end web che interagiscono tramite
       API con moduli di back-end dove risiede la logica di business e che
       accedono al DB.
-
 
       SCRIVA segue il paradigma **SPA Single Page Application**: la componente
       di interfaccia (Angular o Form.io) ha una corrispondente componente di
@@ -110,24 +89,17 @@ maintenance:
   contacts:
     - name: Antonello Navarretta
       email: antonello.navarretta@csi.it
-      phone: +39 0113168
     - name: Silvia Cordero
       email: silvia.cordero@csi.it
-      phone: +39 0113168
 localisation:
   localisationReady: false
   availableLanguages:
     - it-IT
-it:
+IT:
   countryExtensionVersion: "1.0"
-  conforme:
-    lineeGuidaDesign: true
-    modelloInteroperabilita: true
-    misureMinimeSicurezza: true
-    gdpr: true
   piattaforme:
     spid: true
     cie: true
+    anpr: true
+    pagopa: true
     io: true
-  riuso:
-    codiceIPA: r_piemon
