@@ -1,19 +1,17 @@
-publiccodeYmlVersion: '0.5.0'
+publiccodeYmlVersion: 0.4.0
 name: SCRIVA
 applicationSuite: Regione Piemonte Sistema Informativo Ambiente
 url: https://github.com/regione-piemonte/scriva
 softwareVersion: 1.0.0
-releaseDate: 2025-06-30
+releaseDate: 2025-06-03
+logo: OSSCRIVA.png
 platforms:
   - web
 categories:
   - business-process-management
   - payment-gateway
-organisation:
-  uri: urn:x-italian-pa:r_piemon
-fundedBy:
-  - name: Regione Piemonte
-    uri: urn:x-italian-pa:r_piemon
+usedBy:
+  - Regione Piemonte
 developmentStatus: stable
 softwareType: standalone/web
 description:
@@ -26,55 +24,23 @@ description:
       gestione dei procedimenti ambientali, coerente con il modello generale per
       l’ICT della PA italiana promosso da AgID.
 
-      Il servizio corrispondente è disponibile ai seguenti indirizzi:
-            https://scriva-servizi.regione.piemonte.it/scrivafoweb
-            https://scrivabo-servizi.regione.piemonte.it/scrivafoweb
-            https://scriva-servizi.regione.piemonte.it/scrivaconsweb/
+      Permette di gestire trasversalmente logiche comuni tramite un Front Office
+      (Scrivania del richiedente) ed un Back Office (Scrivania del Funzionario)
+      per i procedimenti di tipo concessorio (VIA, VINCA, DERIVAZIONI...).
 
-      SCRIVA intende offrire un punto di vista inter-tematico, di raccordo dei
-      procedimenti in ottica user centered design, connettendo diversi business
-      afferenti allo stesso richiedente o intervento/opera/attività sul
-      territorio.
+      Si integra con sistemi di protocollazione, gestione documentale, SUAP,
+      georeferenzazione delle opere, piattaforme di pagamento.
 
-      Permette di gestire trasversalmente logiche comuni sfruttando la metafora
-      della **Scrivania**, del richiedente e del funzionario incaricato.
-
-      Offre strumenti di gestione stati/eventi, bacheca notifiche, scadenziario.
-
-      Permette di trattare un **Adempimento** come un **processo**con le
-      relative deleghe/procure ed anagrafiche soggetti/oggetti.
-
-      Esempi di adempimenti trattati sono quelli relativi a
-            • **VIA**
-            • **VINCA**
-            • **Derivazioni**
-
-      Pone l'accento sui concetti di **Integrazione** ed **Interazione** con
-      diversi sistemi e piattaforme, come per esempio
-            • sistemi di **georeferenziazione**,
-            • sistemi di **protocollazione & gestione documentale**,
-            • sistemi come il **SUAP**,
-            • **piattaforme di pagamento**
-
-       SCRIVA semplifica, dematerializza e armonizza i servizi pubblici regionali relativi alle procedure ambientali rivolti a imprese, professionisti e cittadini, attraverso una nuova modalità di interazione e un maggiore livello di integrazione dei servizi regionali con la PA.
-      Il sistema può essere visto come somma di due macro componenti funzionali 
-            • **Front Office**: scrivania del Richiedente (privato, persona fisica o giuridica) che interagisce con la PA per la presentazione di un’istanza.
-            • **Back Office**: scrivania del Funzionario (soggetto pubblico destinatario dell’istanza) che prende in carico la pratica e la gestisce coinvolgendo gli Enti Terzi.
-
-      L’applicativo prevede moduli di front-end web che interagiscono tramite
-      API con moduli di back-end dove risiede la logica di business e che
-      accedono al DB.
-
-      SCRIVA segue il paradigma **SPA Single Page Application**: la componente
-      di interfaccia (Angular o Form.io) ha una corrispondente componente di
-      back-end (Java) che espone API REST e accede al DB (indirettamente).
+      SCRIVA è realizzato seguendo il paradigma SPA Single Page Application, ed
+      espone delle REST API di integrazione con altri sistemi. tramite apposito
+      backend.
     documentation: https://www.servizi.piemonte.it/srv/scrivania-richiedente/rsr/dwd/manuale_scrivania_del_richiedente.pdf
     features:
       - gestione dei procedimenti ambientali, coerente con il modello AgID
       - gestione documentazione intervento/opera/attività sul territorio
       - gestione Scrivania del richiedente
       - gestione Scrivania del funzionario
-      - strumenti di query & reporting
+      - strumenti di query e reporting
       - gestione stati/eventi, bacheca notifiche, scadenziario
       - gestione Processo con deleghe/procure, anagrafiche soggetti/oggetti
       - integrazione con georeferenziazione
@@ -94,12 +60,17 @@ maintenance:
 localisation:
   localisationReady: false
   availableLanguages:
-    - it-IT
-IT:
+    - it
+it:
   countryExtensionVersion: "1.0"
+  conforme:
+    lineeGuidaDesign: true
+    modelloInteroperabilita: true
+    misureMinimeSicurezza: true
+    gdpr: true
   piattaforme:
     spid: true
     cie: true
-    anpr: true
-    pagopa: true
     io: true
+  riuso:
+    codiceIPA: r_piemon
