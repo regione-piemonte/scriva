@@ -1,4 +1,4 @@
-publiccodeYmlVersion: '0.5.0'
+publiccodeYmlVersion: 0.5.0
 name: SCRIVA
 applicationSuite: Regione Piemonte Sistema Informativo Ambiente
 url: https://github.com/regione-piemonte/scriva
@@ -95,11 +95,3 @@ localisation:
   localisationReady: false
   availableLanguages:
     - it-IT
-IT:
-  countryExtensionVersion: "1.0"
-  piattaforme:
-    spid: true
-    cie: true
-    anpr: true
-    pagopa: true
-    io: true
