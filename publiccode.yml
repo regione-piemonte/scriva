@@ -68,7 +68,6 @@ description:
       SCRIVA segue il paradigma **SPA Single Page Application**: la componente
       di interfaccia (Angular o Form.io) ha una corrispondente componente di
       back-end (Java) che espone API REST e accede al DB (indirettamente).
-    documentation: https://www.servizi.piemonte.it/srv/scrivania-richiedente/rsr/dwd/manuale_scrivania_del_richiedente.pdf
     features:
       - gestione dei procedimenti ambientali, coerente con il modello AgID
       - gestione documentazione intervento/opera/attività sul territorio
