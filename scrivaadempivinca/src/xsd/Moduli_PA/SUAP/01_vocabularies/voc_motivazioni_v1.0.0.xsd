@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vmot="../01_vocabularies/motivazioni"
+  targetNamespace="../01_vocabularies/motivazioni" elementFormDefault="qualified"
+  attributeFormDefault="qualified" version="1.0.0" xml:lang="it">
+  <xsd:simpleType name="motivazioni_voc">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Perche non pertinenti" />
+      <xsd:enumeration value="per altri motivi" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

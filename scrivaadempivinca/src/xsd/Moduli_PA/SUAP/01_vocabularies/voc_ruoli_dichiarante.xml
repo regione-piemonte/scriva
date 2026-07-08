@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+             xmlns:html="http://www.w3.org/1999/xhtml/">
+  <Identification>
+    <ShortName>IT:SUAP:CL:RuoliDichiarante</ShortName>
+    <LongName>Elenco Ruoli Dichiarante</LongName>
+    <Version>1.0.0</Version>
+    <CanonicalUri/>
+    <CanonicalVersionUri/>
+    <Agency>
+      <ShortName>RP</ShortName>
+      <LongName xml:lang="it">Regione Piemonte</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Key Id="id_ruolo_dichiarante">
+      <ShortName>id_ruolo_dichiarante</ShortName>
+      <Data Type="xsd:nonNegativeInteger"/>
+    </Key>
+    <Key Id="cod_ruolo_dichiarante">
+      <ShortName>cod_ruolo_dichiarante</ShortName>
+      <Data Type="xsd:string"/>
+    </Key>
+    <Column Id="des_ruolo_dichiarante" Use="required">
+      <ShortName>des_ruolo_dichiarante</ShortName>
+      <Data Type="xsd:string"/>
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="id_ruolo_dichiarante">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ruolo_dichiarante">
+        <SimpleValue>DEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_ruolo_dichiarante">
+        <SimpleValue>Delegato senza potere di firma (firmatario legale rappresentante/proponente)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_ruolo_dichiarante">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ruolo_dichiarante">
+        <SimpleValue>LEG</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_ruolo_dichiarante">
+        <SimpleValue>Legale Rappresentante</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_ruolo_dichiarante">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ruolo_dichiarante">
+        <SimpleValue>DEL_FIRMA</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_ruolo_dichiarante">
+        <SimpleValue>Delegato con potere di firma</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_ruolo_dichiarante">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ruolo_dichiarante">
+        <SimpleValue>ALTRO_DEL</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_ruolo_dichiarante">
+        <SimpleValue>Delegato senza potere di firma (firmatario altro delegato)</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

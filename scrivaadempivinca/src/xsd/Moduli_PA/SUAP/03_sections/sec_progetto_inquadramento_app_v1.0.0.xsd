@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:einqproapp="../02_entities/inquadramento_progetto_app"
+  xmlns:sproinqapp="../03_sections/progetto_inquadramento_app"
+  targetNamespace="../03_sections/progetto_inquadramento_app"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/inquadramento_progetto_app"
+    schemaLocation="../02_entities/ent_inquadramento_progetto_app_v1.0.0.xsd" />
+
+  <xsd:complexType name="progetto_inquadramento_app_ctype">
+    <xsd:sequence>
+      <xsd:element name="inquadramento_progetto_app" type="einqproapp:inquadramento_progetto_app_ctype" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="progetto_inquadramento_app" type="sproinqapp:progetto_inquadramento_app_ctype" />
+</xsd:schema>

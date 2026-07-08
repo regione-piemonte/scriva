@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:eref="../02_entities/referente"
+  xmlns:econtambrp="../02_entities/contatti_ambiente_rp"
+  xmlns:ssogref="../03_sections/soggetto_referente"
+  targetNamespace="../03_sections/soggetto_referente"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/referente"
+    schemaLocation="../02_entities/ent_referente_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/contatti_ambiente_rp"
+    schemaLocation="../02_entities/ent_contatti_ambiente_rp_v1.0.0.xsd" />
+
+  <xsd:complexType name="soggetto_referente_ctype">
+    <xsd:sequence>
+      <xsd:element name="referente" type="eref:referente_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="contatti_referente" type="econtambrp:contatti_ambiente_rp_ctype" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="soggetto_referente" type="ssogref:soggetto_referente_ctype" />
+</xsd:schema>

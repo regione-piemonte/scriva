@@ -1,0 +1,3568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+  xmlns:html="http://www.w3.org/1999/xhtml/">
+  <Identification>
+    <ShortName>IT:SUAP:CL:SitiNatura2000</ShortName>
+    <LongName>Elenco Siti Natura</LongName>
+    <Version>1.0.0</Version>
+    <CanonicalUri />
+    <CanonicalVersionUri />
+    <Agency>
+      <ShortName>RP</ShortName>
+      <LongName xml:lang="it">Regione Piemonte</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Key Id="codice_amministrativo_nome">
+      <ShortName>codice_amministrativo_nome</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Key Id="codice_amministrativo">
+      <ShortName>codice_amministrativo</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Column Id="nome" Use="required">
+      <ShortName>nome</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="cod_ente" Use="required">
+      <ShortName>cod_ente</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="nome_ente" Use="required">
+      <ShortName>nome_ente</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="cod_tipo_ente" Use="required">
+      <ShortName>cod_tipo_ente</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110001 - Rocca di Cavour</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110001</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Rocca di Cavour</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110002 - Collina di Superga</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Collina di Superga</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110004 - Stupinigi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stupinigi</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110005 - Vauda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110005</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Vauda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110006 - Orsiera - Rocciavre'</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110006</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Orsiera - Rocciavre'</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110007 - Laghi di Avigliana</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110007</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Laghi di Avigliana</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110008 - Madonna della Neve sul Monte Lera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110008</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Madonna della Neve sul Monte Lera</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110009 - Bosco del Vaj e Bosc Grand</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110009</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bosco del Vaj e Bosc Grand</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110010 - Gran Bosco di Salbertrand</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110010</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Gran Bosco di Salbertrand</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110013 - Monti Pelati e Torre Cives</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110013</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Monti Pelati e Torre Cives</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110014 - Stura di Lanzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110014</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stura di Lanzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110015 - Confluenza Po - Pellice</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110015</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po - Pellice</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110016 - Confluenza Po - Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110016</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po - Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110017 - Lanca di Santa Marta (confluenza Po-Banna)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110017</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lanca di Santa Marta (confluenza Po-Banna)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110018 - Confluenza Po - Orco - Malone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110018</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po - Orco - Malone</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110019 - Baraccone (confluenza Po-Dora Baltea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110019</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Baraccone (confluenza Po-Dora Baltea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110020 - Lago di Viverone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110020</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Viverone</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110021 - Laghi di Ivrea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110021</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Laghi di Ivrea</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110022 - Stagno di Oulx</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110022</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stagno di Oulx</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110024 - Lanca di San Michele</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110024</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lanca di San Michele</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110025 - Po Morto di Carignano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110025</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Po Morto di Carignano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110026 - Champlas - Colle Sestriere</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110026</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Champlas - Colle Sestriere</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110027 - Boscaglie di Tasso di Giaglione (Val Clarea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110027</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boscaglie di Tasso di Giaglione (Val Clarea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110029 - Pian della Mussa (Balme)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110029</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Pian della Mussa (Balme)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110030 - Oasi xerotermiche della Val di Susa - Orrido di Chianocco</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110030</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi xerotermiche della Val di Susa - Orrido di Chianocco</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110031 - Valle Thuras</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110031</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Valle Thuras</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110032 - Oasi del Pra - Barant</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110032</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi del Pra - Barant</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110033 - Stazioni di Myricaria germanica</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110033</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stazioni di Myricaria germanica</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110034 - Laghi di Meugliano e Alice</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110034</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Laghi di Meugliano e Alice</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110035 - Stagni di Poirino - Favari</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110035</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stagni di Poirino - Favari</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110036 - Lago di Candia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110036</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Candia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110038 - Col Basset (Sestriere)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110038</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Col Basset (Sestriere)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110039 - Rocciamelone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110039</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Rocciamelone</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110040 - Oasi xerotermica di Oulx - Auberge</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110040</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi xerotermica di Oulx - Auberge</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110042 - Oasi xerotermica di Oulx - Amazas</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110042</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi xerotermica di Oulx - Amazas</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110043 - Pendici del Monte Chaberton</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110043</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Pendici del Monte Chaberton</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110044 - Bardonecchia - Val Fredda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110044</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bardonecchia - Val Fredda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110045 - Bosco di Pian Pra' (Rora')</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110045</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bosco di Pian Pra' (Rora')</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110047 - Scarmagno - Torre Canavese (Morena Destra d'Ivrea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110047</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Scarmagno - Torre Canavese (Morena Destra d'Ivrea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110048 - Grotta del Pugnetto</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110048</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Grotta del Pugnetto</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110049 - Les Arnaud e Punta Quattro Sorelle</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110049</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Les Arnaud e Punta Quattro Sorelle</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110050 - Mulino Vecchio (Fascia Fluviale del Po)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110050</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Mulino Vecchio (Fascia Fluviale del Po)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110051 - Peschiere e Laghi di Pralormo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110051</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Peschiere e Laghi di Pralormo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110052 - Oasi xerotermica di Puys (Beaulard)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110052</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi xerotermica di Puys (Beaulard)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110053 - Valle della Ripa (Argentera)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110053</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Valle della Ripa (Argentera)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110055 - Arnodera - Colle Montabone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110055</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Arnodera - Colle Montabone</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110057 - Serra di Ivrea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110057</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Serra di Ivrea</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110058 - Cima Fournier e Lago Nero</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110058</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Cima Fournier e Lago Nero</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110061 - Lago di Maglione</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110061</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Maglione</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110062 - Stagno interrato di Settimo Rottaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110062</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stagno interrato di Settimo Rottaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110063 - Boschi e paludi di Bellavista</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110063</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boschi e paludi di Bellavista</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110064 - Palude di Romano Canavese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110064</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Palude di Romano Canavese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110070 - Meisino (confluenza Po-Stura)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110070</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Meisino (confluenza Po-Stura)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110079 - La Mandria</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110079</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>La Mandria</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110080 - Val Troncea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110080</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Val Troncea</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110081 - Monte Musine' e Laghi di Caselette</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110081</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Monte Musine' e Laghi di Caselette</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1110084 - Boschi umidi e stagni di Cumiana</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1110084</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boschi umidi e stagni di Cumiana</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120002 - Bosco della Partecipanza di Trino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bosco della Partecipanza di Trino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120003 - Monte Fenera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Monte Fenera</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120004 - Baraggia di Rovasenda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Baraggia di Rovasenda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120005 - Garzaia di Carisio</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120005</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Garzaia di Carisio</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120006 - Val Mastallone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120006</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Val Mastallone</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120007 - Palude di S. Genuario</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120007</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Palude di S. Genuario</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120008 - Fontana Gigante (Tricerro)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120008</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Fontana Gigante (Tricerro)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120010 - Lame del Sesia e Isolone di Oldenico</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120010</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lame del Sesia e Isolone di Oldenico</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120013 - Isolotto del Ritano (Dora Baltea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120013</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Isolotto del Ritano (Dora Baltea)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120014 - Garzaia del rio Druma</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120014</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Garzaia del rio Druma</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120016 - Laghetto di Sant'Agostino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120016</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Laghetto di Sant'Agostino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120021 - Risaie vercellesi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120021</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Risaie vercellesi</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120023 - Isola di S. Maria</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120023</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Isola di S. Maria</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120025 - Lama del Badiotto e Garzaia della Brarola</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120025</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lama del Badiotto e Garzaia della Brarola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120026 - Stazioni di Isoetes malinverniana</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120026</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stazioni di Isoetes malinverniana</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120027 - Alta Valsesia e Valli Otro, Vogna, Gronda, Artogna e Sorba</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120027</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alta Valsesia e Valli Otro, Vogna, Gronda, Artogna e Sorba</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120028 - Alta Val Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120028</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alta Val Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120029 - Paludi di San Genuario e San Silvestro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120029</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Paludi di San Genuario e San Silvestro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1120030 - Sponde fluviali di Palazzolo V.se</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1120030</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Sponde fluviali di Palazzolo V.se</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1130001 - La Bessa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1130001</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>La Bessa</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1130002 - Val Sessera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1130002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Val Sessera</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1130003 - Baraggia di Candelo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1130003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Baraggia di Candelo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1130004 - Lago di Bertignano (Viverone) e stagno presso la str. per Roppolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1130004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Bertignano (Viverone) e stagno presso la str. per Roppolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140001 - Fondo Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140001</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Fondo Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140003 - Campello Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Campello Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140004 - Alta Val Formazza</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alta Val Formazza</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140006 - Greto del fiume Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140006</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Greto del fiume Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140007 - Boleto - M.te Avigno</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140007</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boleto - M.te Avigno</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140011 - Val Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140011</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Val Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>334</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente Parco Nazionale della Val Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140013 - Lago di Mergozzo e Mont'Orfano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140013</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Mergozzo e Mont'Orfano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140016 - Alpi Veglia e Devero - Monte Giove</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140016</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alpi Veglia e Devero - Monte Giove</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>412</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140017 - Fiume Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140017</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Fiume Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140018 - Alte Valli Anzasca, Antrona, Bognanco</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140018</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alte Valli Anzasca, Antrona, Bognanco</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>412</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140019 - Monte Rosa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140019</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Monte Rosa</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140020 - Alta Val Strona e Val Segnara</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140020</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alta Val Strona e Val Segnara</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140021 - Val Formazza</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140021</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Val Formazza</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>419</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia del Verbano Cusio Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1140023 - Lago di Mergozzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1140023</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lago di Mergozzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150001 - Valle del Ticino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150001</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Valle del Ticino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150002 - Lagoni di Mercurago</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Lagoni di Mercurago</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150003 - Palude di Casalbeltrame</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Palude di Casalbeltrame</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150004 - Canneti di Dormelletto</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Canneti di Dormelletto</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150005 - Agogna Morta (Borgolavezzaro)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150005</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Agogna Morta (Borgolavezzaro)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150007 - Baraggia di Pian del Rosa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150007</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Baraggia di Pian del Rosa</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150008 - Baraggia di Bellinzago</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150008</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Baraggia di Bellinzago</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1150010 - Garzaie novaresi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1150010</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Garzaie novaresi</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160003 - Oasi di Crava Morozzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Oasi di Crava Morozzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160007 - Sorgenti del Belbo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160007</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Sorgenti del Belbo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160009 - Confluenza Po-Bronda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160009</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po-Bronda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160010 - Bosco del Merlino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160010</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bosco del Merlino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160011 - Parco di Racconigi e boschi lungo il T.te Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160011</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Parco di Racconigi e boschi lungo il T.te Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160012 - Boschi e rocche del Roero</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160012</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boschi e rocche del Roero</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160013 - Confluenza Po - Varaita</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160013</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po - Varaita</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160016 - Stazione di muschi calcarizzanti - Comba Seviana e Comba Barmarossa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160016</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stazione di muschi calcarizzanti - Comba Seviana e Comba Barmarossa</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160017 - Stazione di Linum narbonense</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160017</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stazione di Linum narbonense</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160018 - Sorgenti del T.te Maira, Bosco di Saretto, Rocca Provenzale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160018</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Sorgenti del T.te Maira, Bosco di Saretto, Rocca Provenzale</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160020 - Bosco di Bagnasco</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160020</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bosco di Bagnasco</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160021 - Gruppo del Tenibres</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160021</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Gruppo del Tenibres</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160023 - Vallone di Orgials - Colle della Lombarda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160023</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Vallone di Orgials - Colle della Lombarda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160024 - Colle e Lago della Maddalena, Val Puriac</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160024</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Colle e Lago della Maddalena, Val Puriac</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160026 - Faggete di Pamparato, Tana del Forno, Grotta delle Turbiglie e
+          Grotte di Bossea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160026</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Faggete di Pamparato, Tana del Forno, Grotta delle Turbiglie e Grotte di Bossea</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160029 - Colonie di chirotteri di S. Vittoria e Monticello d'Alba</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160029</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Colonie di chirotteri di S. Vittoria e Monticello d'Alba</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160035 - M. Antoroto</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160035</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>M. Antoroto</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160036 - Stura di Demonte</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160036</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stura di Demonte</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160037 - Grotta di Rio Martino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160037</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Grotta di Rio Martino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160040 - Stazioni di Euphorbia valliniana Belli</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160040</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stazioni di Euphorbia valliniana Belli</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160041 - Boschi e colonie di chirotteri di Staffarda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160041</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Boschi e colonie di chirotteri di Staffarda</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160054 - Fiume Tanaro e Stagni di Neive</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160054</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Fiume Tanaro e Stagni di Neive</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160056 - Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160056</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160057 - Alte Valli Pesio e Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160057</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alte Valli Pesio e Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160058 - Gruppo del Monviso e Bosco dell'Aleve'</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160058</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Gruppo del Monviso e Bosco dell'Aleve'</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160059 - Zone umide di Fossano e Sant'Albano Stura</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160059</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Zone umide di Fossano e Sant'Albano Stura</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160060 - Altopiano di Bainale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160060</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Altopiano di Bainale</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160061 - Alto Caprauna</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160061</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alto Caprauna</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160062 - Alte Valli Stura e Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160062</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Alte Valli Stura e Maira</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160065 - Comba di Castelmagno</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160065</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Comba di Castelmagno</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160067 - Vallone dell'Arma</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160067</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Vallone dell'Arma</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1160071 - Greto e risorgive del Torrente Stura</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1160071</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Greto e risorgive del Torrente Stura</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>420</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Regione Piemonte - Settore Biodiversità e aree naturali</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1170001 - Rocchetta Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1170001</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Rocchetta Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1170002 - Valmanera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1170002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Valmanera</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1170003 - Stagni di Belangero (Asti)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1170003</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Stagni di Belangero (Asti)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1170005 - Verneto di Rocchetta Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1170005</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Verneto di Rocchetta Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180002 - Torrente Orba</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180002</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Torrente Orba</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180004 - Greto dello Scrivia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180004</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Greto dello Scrivia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>415</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Provincia di Alessandria</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180005 - Ghiaia Grande (Fiume Po)</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180005</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Ghiaia Grande (Fiume Po)</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180009 - Strette della Val Borbera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180009</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Strette della Val Borbera</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180010 - Langhe di Spigno Monferrato</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180010</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Langhe di Spigno Monferrato</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180011 - Massiccio dell'Antola, M.te Carmo, M.te Legna</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180011</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Massiccio dell'Antola, M.te Carmo, M.te Legna</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180017 - Bacino del Rio Miseria</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180017</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bacino del Rio Miseria</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180025 - Dorsale Monte Ebro - Monte Chiappo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180025</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Dorsale Monte Ebro - Monte Chiappo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180026 - Capanne di Marcarolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180026</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Capanne di Marcarolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180027 - Confluenza Po - Sesia - Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180027</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Confluenza Po - Sesia - Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180028 - Fiume Po - tratto vercellese alessandrino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180028</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Fiume Po - tratto vercellese alessandrino</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180030 - Calanchi di Rigoroso, Sottovalle e Carrosio</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180030</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Calanchi di Rigoroso, Sottovalle e Carrosio</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180031 - Basso Scrivia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180031</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Basso Scrivia</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1180032 - Bric Montariolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1180032</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Bric Montariolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZSC/SIC</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo_nome">
+        <SimpleValue>IT1201000 - Gran Paradiso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>IT1201000</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome">
+        <SimpleValue>Gran Paradiso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_ente">
+        <SimpleValue>333</SimpleValue>
+      </Value>
+      <Value ColumnRef="tipo_rete_natura2000">
+        <SimpleValue>ZPS e ZSC/SIC coincidenti</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_ente">
+        <SimpleValue>Ente Parco Nazionale Gran Paradiso</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipo_ente">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:erd="../02_entities/ruolo_dichiarante"
+  xmlns:epers="../02_entities/persona"
+  xmlns:econtambrp="../02_entities/contatti_ambiente_rp"
+  xmlns:eindita="../02_entities/indirizzo_italiano"
+  xmlns:eindest="../02_entities/indirizzo_estero"
+  xmlns:ssogdic="../03_sections/soggetto_dichiarante"
+  targetNamespace="../03_sections/soggetto_dichiarante"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/ruolo_dichiarante"
+    schemaLocation="../02_entities/ent_ruolo_dichiarante_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/persona"
+    schemaLocation="../02_entities/ent_persona_v1.0.6.xsd" />
+  <xsd:import namespace="../02_entities/contatti_ambiente_rp"
+    schemaLocation="../02_entities/ent_contatti_ambiente_rp_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/indirizzo_estero"
+    schemaLocation="../02_entities/ent_indirizzo_estero_v1.0.6.xsd" />
+  <xsd:import namespace="../02_entities/indirizzo_italiano"
+    schemaLocation="../02_entities/ent_indirizzo_italiano_v1.0.6.xsd" />
+
+  <xsd:complexType name="soggetto_dichiarante_ctype">
+    <xsd:sequence>
+      <xsd:element name="ruolo_dichiarante" type="erd:ruolo_dichiarante_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="dati_dichiarante" type="epers:persona_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="contatti_dichiarante" type="econtambrp:contatti_ambiente_rp_ctype" minOccurs="1"
+        maxOccurs="1" />
+      <xsd:choice>
+        <xsd:element name="residenza_italiana" type="eindita:indirizzo_italiano_ctype" />
+        <xsd:element name="residenza_estera" type="eindest:indirizzo_estero_ctype" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="soggetto_dichiarante" type="ssogdic:soggetto_dichiarante_ctype" />
+</xsd:schema>

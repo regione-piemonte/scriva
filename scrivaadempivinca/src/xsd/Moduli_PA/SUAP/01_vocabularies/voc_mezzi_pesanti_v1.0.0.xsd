@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vmp="../01_vocabularies/mezzi_pesanti"
+  targetNamespace="../01_vocabularies/mezzi_pesanti" elementFormDefault="qualified"
+  attributeFormDefault="qualified" version="1.0.0" xml:lang="it">
+  <xsd:simpleType name="mezzi_pesanti_voc">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Autocarri" />
+      <xsd:enumeration value="Dumper" />
+      <xsd:enumeration value="Autogru" />
+      <xsd:enumeration value="Gru" />
+      <xsd:enumeration value="Betoniera" />
+      <xsd:enumeration value="Asfaltatrici" />
+      <xsd:enumeration value="Rulli vibranti" />
+      <xsd:enumeration value="Compressori" />
+      <xsd:enumeration value="Generatori" />
+      <xsd:enumeration value="Perforatrici" />
+      <xsd:enumeration value="Altri mezzi pesanti" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

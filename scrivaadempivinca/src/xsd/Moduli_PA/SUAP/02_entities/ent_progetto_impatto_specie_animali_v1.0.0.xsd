@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:episa="../02_entities/progetto_impatto_specie_animali"
+    targetNamespace="../02_entities/progetto_impatto_specie_animali"
+    elementFormDefault="qualified" attributeFormDefault="qualified"
+    version="1.0.0" xml:lang="it">
+
+    <xsd:complexType name="progetto_impatto_specie_animali_ctype">
+        <xsd:sequence>
+            <xsd:element name="impatto_specie_animali_non_pertinente" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="dati_progetto_impatto_specie_animali" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="interventi_allevamento_specie_animali" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_interventi_allevamento_specie_animali" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="conforme_normativa_specie_animali" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="progetto_impatto_specie_animali" type="episa:progetto_impatto_specie_animali_ctype" />
+</xsd:schema>

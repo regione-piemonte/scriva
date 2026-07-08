@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:einqproapp="../02_entities/inquadramento_progetto_app"
+    xmlns:vlocal="../01_vocabularies/localizzazione"
+    xmlns:ccodelist="../commons/codelist"
+    xmlns:canncl="../commons/xsdAnnotations"
+    targetNamespace="../02_entities/inquadramento_progetto_app"
+    elementFormDefault="qualified" attributeFormDefault="qualified"
+    version="1.0.0" xml:lang="it">
+
+    <xsd:import namespace="../commons/codelist" schemaLocation="../commons-codelist.xsd"/>
+    <xsd:import namespace="../commons/xsdAnnotations" schemaLocation="../commons-xsd-annotations.xsd"/>
+    <xsd:import namespace="../01_vocabularies/localizzazione" schemaLocation="../01_vocabularies/voc_localizzazione_v1.0.0.xsd"/>
+
+    <xsd:complexType name="inquadramento_progetto_app_ctype">
+        <xsd:sequence>
+            <xsd:element name="tipologia_progetto" type="ccodelist:CodeType" minOccurs="1" maxOccurs="unbounded" >
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <canncl:codeListReference>
+                            <canncl:ShortName>IT:SUAP:CL:TipologieOggetto</canncl:ShortName>
+                        </canncl:codeListReference>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="desc_altra_tipologia_progetto" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="localizzazione_progetto" type="vlocal:localizzazione_voc" minOccurs="1" maxOccurs="unbounded"/>
+            <xsd:element name="desc_altra_localizzazione" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="altro_progetto_collegato" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="desc_progetto_collegato" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="conforme_normativa" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="atto_misure_sito_specifiche_PdG" type="xsd:string" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="motivo_non_conformita_PdG" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="conforme_natura_2000" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="atto_misure_natura_2000" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="motivo_non_conformita_natura_2000" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="flg_piano_forestale" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="inquadramento_progetto_app" type="einqproapp:inquadramento_progetto_app_ctype" />
+</xsd:schema>

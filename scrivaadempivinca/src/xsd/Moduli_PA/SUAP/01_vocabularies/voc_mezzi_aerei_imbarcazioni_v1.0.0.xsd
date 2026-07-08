@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vmai="../01_vocabularies/mezzi_aerei_imbarcazioni"
+  targetNamespace="../01_vocabularies/mezzi_aerei_imbarcazioni" elementFormDefault="qualified"
+  attributeFormDefault="qualified" version="1.0.0" xml:lang="it">
+  <xsd:simpleType name="mezzi_aerei_imbarcazioni_voc">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Elicotteri" />
+      <xsd:enumeration value="Aerei" />
+      <xsd:enumeration value="Droni" />
+      <xsd:enumeration value="Teleferiche" />
+      <xsd:enumeration value="Barche" />
+      <xsd:enumeration value="Chiatte" />
+      <xsd:enumeration value="Pontoni" />
+      <xsd:enumeration value="Altri mezzi aerei o imbarcazioni" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vmmt="../01_vocabularies/mezzi_movimento_terra"
+  targetNamespace="../01_vocabularies/mezzi_movimento_terra" elementFormDefault="qualified"
+  attributeFormDefault="qualified" version="1.0.0" xml:lang="it">
+  <xsd:simpleType name="mezzi_movimento_terra_voc">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Escavatori" />
+      <xsd:enumeration value="Ragni" />
+      <xsd:enumeration value="Pale caricatrici" />
+      <xsd:enumeration value="Terne" />
+      <xsd:enumeration value="Skid loader" />
+      <xsd:enumeration value="Altri mezzi per il movimento terra" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

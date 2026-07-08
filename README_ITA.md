@@ -85,13 +85,13 @@ Una istanza di web server, consigliato apache web server ( https://httpd.apache.
 Per il build è previsto l'uso di apache Ant (https://ant.apache.org/)
 
 Infine, anche per quanto concerne l'autenticazione e la profilazione degli utenti del sistema, scriva è integrato con servizi trasversali del sistema informativo regionale ("Shibboleth"), di conseguenza per un utilizzo in un altro contesto occorre avere a disposizione servizi analoghi o integrare moduli opportuni che svolgano analoghe funzionalità.
- 
+
 
 # Installazione
 
 Creare lo schema del DB, tramite gli script della componente scrivadb.
- 
-Configurare il datasource nel file application.properties 
+
+Configurare il datasource nel file application.properties
 
 Configurare i web server e definire gli opportuni Virtual Host e "location" - per utilizzare il protocollo https occorre munirsi di adeguati certificati SSL.
 
@@ -114,6 +114,9 @@ Per il versionamento del software si usa la tecnica Semantic Versioning (http://
 
 # License
 
-SPDX-License-Identifier: EUPL-1.2-or-later .\
-Questo software è distribuito con licenza EUPL-1.2 .\
-Consultare il file LICENSE.txt per i dettagli sulla licenza.
+SPDX-License-Identifier: EUPL-1.2-or-later
+
+Questo software è distribuito con licenza **EUPL-1.2**.\
+Consultare il file `LICENSE.txt` per i dettagli sulla licenza.
+
+La documentazione del prodotto è distribuita con licenza **Creative Commons Attribution 4.0 International**.

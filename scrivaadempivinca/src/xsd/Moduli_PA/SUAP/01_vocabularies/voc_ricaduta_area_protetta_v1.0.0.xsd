@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:vrac="../01_vocabularies/ricaduta_area_protetta"
+  targetNamespace="../01_vocabularies/ricaduta_area_protetta" elementFormDefault="qualified"
+  attributeFormDefault="qualified" version="1.0.0" xml:lang="it">
+  <xsd:simpleType name="ricaduta_area_protetta_voc">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="Ricade totalmente/parzialmente" />
+      <xsd:enumeration value="Non ricade ma possibili interferenze" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

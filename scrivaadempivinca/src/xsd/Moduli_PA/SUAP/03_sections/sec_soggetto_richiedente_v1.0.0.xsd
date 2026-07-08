@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:eimpresa="../02_entities/impresa"
+            xmlns:eindest="../02_entities/indirizzo_estero"
+            xmlns:eiscrea="../02_entities/iscrizione_REA"
+            xmlns:eindita="../02_entities/indirizzo_italiano"
+            xmlns:econtambrp="../02_entities/contatti_ambiente_rp"
+            xmlns:ssogric="../03_sections/soggetto_richiedente"
+            targetNamespace="../03_sections/soggetto_richiedente"
+            elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/impresa"
+               schemaLocation="../02_entities/ent_impresa_v1.0.6.xsd"/>
+  <xsd:import namespace="../02_entities/indirizzo_estero"
+               schemaLocation="../02_entities/ent_indirizzo_estero_v1.0.6.xsd"/>
+  <xsd:import namespace="../02_entities/iscrizione_REA"
+               schemaLocation="../02_entities/ent_iscrizione_REA_v1.0.6.xsd"/>
+  <xsd:import namespace="../02_entities/indirizzo_italiano"
+            schemaLocation="../02_entities/ent_indirizzo_italiano_v1.0.6.xsd"/>
+  <xsd:import namespace="../02_entities/contatti_ambiente_rp"
+            schemaLocation="../02_entities/ent_contatti_ambiente_rp_v1.0.0.xsd"/>
+
+
+  <xsd:complexType name="soggetto_richiedente_ctype">
+    <xsd:sequence>
+      <xsd:element name="impresa" type="eimpresa:impresa_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="iscrizione_rea" type="eiscrea:iscrizione_REA_ctype" minOccurs="0" maxOccurs="1"/>
+      <xsd:choice>
+        <xsd:element name="sede_legale_italiana" type="eindita:indirizzo_italiano_ctype" />
+        <xsd:element name="sede_legale_estera" type="eindest:indirizzo_estero_ctype" />
+      </xsd:choice>
+      <xsd:element name="contatti" type="econtambrp:contatti_ambiente_rp_ctype" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+<xsd:element name="soggetto_richiedente" type="ssogric:soggetto_richiedente_ctype"/>
+
+</xsd:schema>

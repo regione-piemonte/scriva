@@ -128,5 +128,7 @@ Dopo aver seguito le indicazioni dell'installazione, procedere al build dei pacc
 
 SPDX-License-Identifier: EUPL-1.2-or-later
 
-Questo software è distribuito con licenza **EUPL-1.2**.  
+Questo software è distribuito con licenza **EUPL-1.2**.\
 Consultare il file `LICENSE.txt` per i dettagli sulla licenza.
+
+La documentazione del prodotto è distribuita con licenza **Creative Commons Attribution 4.0 International**.

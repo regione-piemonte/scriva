@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+  xmlns:html="http://www.w3.org/1999/xhtml/">
+  <Identification>
+    <ShortName>IT:SUAP:CL:VincoloProgetto</ShortName>
+    <LongName>Elenco Vincolo Progetto</LongName>
+    <Version>1.0.0</Version>
+    <CanonicalUri />
+    <CanonicalVersionUri />
+    <Agency>
+      <ShortName>RP</ShortName>
+      <LongName xml:lang="it">Regione Piemonte</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Key Id="codice_vincolo_progetto">
+      <ShortName>codice_vincolo_progetto</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Column Id="descrizione_vincolo_progetto" Use="required">
+      <ShortName>descrizione_vincolo_progetto</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="codice_vincolo_progetto">
+        <SimpleValue>VIDR</SimpleValue>
+      </Value>
+      <Value ColumnRef="descrizione_vincolo_progetto">
+        <SimpleValue>Vincolo idrogeologico (L.R. 45/1989)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_vincolo_progetto">
+        <SimpleValue>VPAE</SimpleValue>
+      </Value>
+      <Value ColumnRef="descrizione_vincolo_progetto">
+        <SimpleValue>Vincoli paesaggistici (d.Lgs 42/2004)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_vincolo_progetto">
+        <SimpleValue>VCVC</SimpleValue>
+      </Value>
+      <Value ColumnRef="descrizione_vincolo_progetto">
+        <SimpleValue>Usi Civici (L.R. 29/2009)</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_vincolo_progetto">
+        <SimpleValue>VPAI</SimpleValue>
+      </Value>
+      <Value ColumnRef="descrizione_vincolo_progetto">
+        <SimpleValue>Piano stralcio per l'Assetto Idrogeologico, PAI (DPCM del 24/52001, DGR n. 64-7417 del 7/4/2014)</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

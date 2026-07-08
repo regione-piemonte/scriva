@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:epish="../02_entities/progetto_impatto_suolo_habitat"
+  xmlns:episv="../02_entities/progetto_impatto_specie_vegetali"
+  xmlns:episa="../02_entities/progetto_impatto_specie_animali"
+  xmlns:epimm="../02_entities/progetto_impatto_mezzi_meccanici"
+  xmlns:epiman="../02_entities/progetto_impatto_manifestazioni"
+  xmlns:epiir="../02_entities/progetto_impatto_inquinamento_rifiuti"
+  xmlns:epiirip="../02_entities/progetto_impatto_interventi_ripetuti"
+  xmlns:sproimp="../03_sections/progetto_impatti"
+  targetNamespace="../03_sections/progetto_impatti"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/progetto_impatto_suolo_habitat"
+    schemaLocation="../02_entities/ent_progetto_impatto_suolo_habitat_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_specie_vegetali"
+    schemaLocation="../02_entities/ent_progetto_impatto_specie_vegetali_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_specie_animali"
+    schemaLocation="../02_entities/ent_progetto_impatto_specie_animali_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_mezzi_meccanici"
+    schemaLocation="../02_entities/ent_progetto_impatto_mezzi_meccanici_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_manifestazioni"
+    schemaLocation="../02_entities/ent_progetto_impatto_manifestazioni_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_inquinamento_rifiuti"
+    schemaLocation="../02_entities/ent_progetto_impatto_inquinamento_rifiuti_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/progetto_impatto_interventi_ripetuti"
+    schemaLocation="../02_entities/ent_progetto_impatto_interventi_ripetuti_v1.0.0.xsd" />
+
+  <xsd:complexType name="progetto_impatti_ctype">
+    <xsd:sequence>
+      <xsd:element name="progetto_impatto_suolo_habitat" type="epish:progetto_impatto_suolo_habitat_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_specie_vegetali" type="episv:progetto_impatto_specie_vegetali_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_specie_animali" type="episa:progetto_impatto_specie_animali_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_mezzi_meccanici" type="epimm:progetto_impatto_mezzi_meccanici_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_manifestazioni" type="epiman:progetto_impatto_manifestazioni_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_inquinamento_rifiuti" type="epiir:progetto_impatto_inquinamento_rifiuti_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:element name="progetto_impatto_interventi_ripetuti" type="epiirip:progetto_impatto_interventi_ripetuti_ctype" minOccurs="1" maxOccurs="1" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="progetto_impatti" type="sproimp:progetto_impatti_ctype" />
+</xsd:schema>

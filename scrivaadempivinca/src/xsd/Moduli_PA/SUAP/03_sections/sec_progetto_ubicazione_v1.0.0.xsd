@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:ep="../02_entities/progetto"
+  xmlns:eip="../02_entities/indirizzo_progetto"
+  xmlns:ecp="../02_entities/comune_progetto"
+  xmlns:edaca="../02_entities/dati_catastali"
+  xmlns:esn="../02_entities/sito_natura_2000"
+  xmlns:esni="../02_entities/sito_natura_2000_interferito"
+  xmlns:spu="../03_sections/progetto_ubicazione"
+  xmlns:eap="../02_entities/area_protetta"
+  xmlns:ecoogeo="../02_entities/coordinate_geografiche"
+  targetNamespace="../03_sections/progetto_ubicazione"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/progetto"
+    schemaLocation="../02_entities/ent_progetto_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/indirizzo_progetto"
+    schemaLocation="../02_entities/ent_indirizzo_progetto_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/comune_progetto"
+    schemaLocation="../02_entities/ent_comune_progetto_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/dati_catastali"
+    schemaLocation="../02_entities/ent_dati_catastali_v1.0.6.xsd" />
+  <xsd:import namespace="../02_entities/sito_natura_2000"
+    schemaLocation="../02_entities/ent_sito_natura_2000_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/sito_natura_2000_interferito"
+    schemaLocation="../02_entities/ent_sito_natura_2000_interferito_v1.0.0.xsd" />
+  <xsd:import namespace="../02_entities/area_protetta"
+    schemaLocation="../02_entities/ent_area_protetta_v1.0.0.xsd" />
+
+  <xsd:complexType name="indirizzo_progetto_dati_catastali_ctype">
+    <xsd:sequence>
+      <xsd:element name="indirizzo_progetto" type="eip:indirizzo_progetto_ctype" minOccurs="1"
+        maxOccurs="1" />
+      <xsd:element name="dati_catastali" type="edaca:dati_catastali_ctype" minOccurs="0"
+        maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="comune_progetto_dati_catastali_ctype">
+    <xsd:sequence>
+      <xsd:element name="comune_progetto" type="ecp:comune_progetto_ctype" minOccurs="1"
+        maxOccurs="1" />
+      <xsd:element name="dati_catastali" type="edaca:dati_catastali_ctype" minOccurs="0"
+        maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="progetto_ubicazione_ctype">
+    <xsd:sequence>
+      <xsd:element name="progetto" type="ep:progetto_ctype" minOccurs="1" maxOccurs="1" />
+      <xsd:choice  minOccurs="1" maxOccurs="unbounded">
+        <xsd:element name="indirizzo_progetto_dati_catastali" type="spu:indirizzo_progetto_dati_catastali_ctype" />
+        <xsd:element name="comune_progetto_dati_catastali" type="spu:comune_progetto_dati_catastali_ctype" />
+      </xsd:choice>
+      <xsd:element name="sito_natura_2000" type="esn:sito_natura_2000_ctype" minOccurs="1" maxOccurs="unbounded" />
+      <xsd:element name="sito_natura_2000_interferito" type="esni:sito_natura_2000_interferito_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="area_protetta" type="eap:area_protetta_ctype" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="progetto_ubicazione" type="spu:progetto_ubicazione_ctype" />
+</xsd:schema>

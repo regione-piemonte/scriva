@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:epimm="../02_entities/progetto_impatto_mezzi_meccanici"
+    xmlns:vmmt="../01_vocabularies/mezzi_movimento_terra"
+    xmlns:vmp="../01_vocabularies/mezzi_pesanti"
+    xmlns:vmai="../01_vocabularies/mezzi_aerei_imbarcazioni"
+    targetNamespace="../02_entities/progetto_impatto_mezzi_meccanici"
+    elementFormDefault="qualified" attributeFormDefault="qualified"
+    version="1.0.0" xml:lang="it">
+
+    <xsd:import namespace="../01_vocabularies/mezzi_movimento_terra"
+        schemaLocation="../01_vocabularies/voc_mezzi_movimento_terra_v1.0.0.xsd" />
+    <xsd:import namespace="../01_vocabularies/mezzi_pesanti"
+        schemaLocation="../01_vocabularies/voc_mezzi_pesanti_v1.0.0.xsd" />
+    <xsd:import namespace="../01_vocabularies/mezzi_aerei_imbarcazioni"
+        schemaLocation="../01_vocabularies/voc_mezzi_aerei_imbarcazioni_v1.0.0.xsd" />
+
+    <xsd:complexType name="mezzo_movimento_terra_ctype">
+        <xsd:sequence>
+            <xsd:element name="tipo_mezzo_movimento_terra" type="vmmt:mezzi_movimento_terra_voc" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="desc_mezzo_movimento_terra" type="xsd:string" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="mezzo_pesante_ctype">
+        <xsd:sequence>
+            <xsd:element name="tipo_mezzo_pesante" type="vmp:mezzi_pesanti_voc" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="desc_mezzo_pesante" type="xsd:string" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="mezzo_aereo_imbarcazione_ctype">
+        <xsd:sequence>
+            <xsd:element name="tipo_mezzo_aereo_imbarcazione" type="vmai:mezzi_aerei_imbarcazioni_voc" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="desc_mezzo_aereo_imbarcazione" type="xsd:string" minOccurs="0" maxOccurs="1" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="progetto_impatto_mezzi_meccanici_ctype">
+        <xsd:sequence>
+            <xsd:element name="impatto_non_pertinente" type="xsd:boolean" minOccurs="1" maxOccurs="1" />
+            <xsd:element name="dati_progetto_impatto_mezzi_meccanici" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:choice minOccurs="1" maxOccurs="unbounded">
+                            <xsd:element name="mezzo_movimento_terra" type="epimm:mezzo_movimento_terra_ctype" />
+                            <xsd:element name="mezzo_pesante" type="epimm:mezzo_pesante_ctype" />
+                            <xsd:element name="mezzo_aereo_imbarcazione" type="epimm:mezzo_aereo_imbarcazione_ctype" />
+                        </xsd:choice>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="progetto_impatto_mezzi_meccanici" type="epimm:progetto_impatto_mezzi_meccanici_ctype" />
+</xsd:schema>

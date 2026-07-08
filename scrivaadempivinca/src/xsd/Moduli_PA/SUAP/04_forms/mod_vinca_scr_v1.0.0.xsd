@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+           xmlns:vincascr="../04_forms/vinca_scr"
+           xmlns:ssogric="../03_sections/soggetto_richiedente"
+           xmlns:ssogdic="../03_sections/soggetto_dichiarante"
+           xmlns:ssogref="../03_sections/soggetto_referente"
+           xmlns:spu="../03_sections/progetto_ubicazione"
+           xmlns:sproinq="../03_sections/progetto_inquadramento"
+           xmlns:sproimp="../03_sections/progetto_impatti"
+
+           targetNamespace="../04_forms/vinca_scr"
+           elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../03_sections/soggetto_richiedente"
+             schemaLocation="../03_sections/sec_soggetto_richiedente_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/soggetto_referente"
+             schemaLocation="../03_sections/sec_soggetto_referente_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/soggetto_dichiarante"
+             schemaLocation="../03_sections/sec_soggetto_dichiarante_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/progetto_ubicazione"
+             schemaLocation="../03_sections/sec_progetto_ubicazione_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/progetto_inquadramento"
+             schemaLocation="../03_sections/sec_progetto_inquadramento_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/progetto_impatti"
+             schemaLocation="../03_sections/sec_progetto_impatti_v1.0.0.xsd"/>
+
+
+  <xsd:complexType name="mod_vinca_scr_ctype">
+    <xsd:sequence>
+      <xsd:element name="soggetto_richiedente" type="ssogric:soggetto_richiedente_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="soggetto_dichiarante" type="ssogdic:soggetto_dichiarante_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="soggetto_referente" type="ssogref:soggetto_referente_ctype" minOccurs="0" maxOccurs="unbounded"/>
+      <xsd:element name="progetto_ubicazione" type="spu:progetto_ubicazione_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="progetto_inquadramento" type="sproinq:progetto_inquadramento_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="progetto_impatti" type="sproimp:progetto_impatti_ctype" minOccurs="1" maxOccurs="1"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="vinca_scr" type="vincascr:mod_vinca_scr_ctype"/>
+
+</xsd:schema>

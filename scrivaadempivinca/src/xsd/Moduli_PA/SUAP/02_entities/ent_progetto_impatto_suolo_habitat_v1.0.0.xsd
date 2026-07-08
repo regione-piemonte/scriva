@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:epish="../02_entities/progetto_impatto_suolo_habitat"
+    xmlns:vtus="../01_vocabularies/trasformazione_uso_suolo"
+    targetNamespace="../02_entities/progetto_impatto_suolo_habitat"
+    elementFormDefault="qualified" attributeFormDefault="qualified"
+    version="1.0.0" xml:lang="it">
+
+    <xsd:import namespace="../01_vocabularies/trasformazione_uso_suolo" schemaLocation="../01_vocabularies/voc_trasformazione_uso_suolo_v1.0.0.xsd"/>
+
+    <xsd:complexType name="progetto_impatto_suolo_habitat_ctype">
+        <xsd:sequence>
+            <xsd:element name="impatto_suolo_habitat_non_pertinente" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+            <xsd:element name="dati_progetto_impatto_suolo_habitat" minOccurs="0" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="trasformazione_uso_suolo" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="tipo_trasformazione" type="vtus:trasformazione_uso_suolo_voc" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="desc_tipo_trasformazione" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="movimenti_terra" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_movimenti_terra" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="livellamento_spietramento" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_livellamento_spietramento" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="aree_cantiere_stoccaggio" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_aree_cantiere_stoccaggio" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="piste_accesso" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_piste_accesso" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="ripristino_piste" type="xsd:boolean" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="desc_ripristino_piste" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="tecniche_ingegneria_naturalistica" type="xsd:boolean" minOccurs="1" maxOccurs="1"/>
+                        <xsd:element name="desc_tecniche_ingegneria_naturalistica" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                        <xsd:element name="altre_informazioni" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="progetto_impatto_suolo_habitat" type="epish:progetto_impatto_suolo_habitat_ctype" />
+</xsd:schema>

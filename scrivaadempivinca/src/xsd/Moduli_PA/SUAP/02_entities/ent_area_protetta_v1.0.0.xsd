@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+
+            xmlns:eap="../02_entities/area_protetta"
+            xmlns:vrac="../01_vocabularies/ricaduta_area_protetta"
+
+            xmlns:ccodelist="../commons/codelist"
+            xmlns:canncl="../commons/xsdAnnotations"
+            xmlns:ctipi="../commons/tipi"
+
+            targetNamespace="../02_entities/area_protetta"
+            elementFormDefault="qualified" attributeFormDefault="qualified"
+            version="1.0.0" xml:lang="it">
+
+    <xsd:import namespace="../commons/xsdAnnotations" schemaLocation="../commons-xsd-annotations.xsd"/>
+    <xsd:import namespace="../commons/codelist" schemaLocation="../commons-codelist.xsd"/>
+    <xsd:import namespace="../commons/tipi" schemaLocation="../commons-tipi.xsd"/>
+    <xsd:import namespace="../01_vocabularies/ricaduta_area_protetta" schemaLocation="../01_vocabularies/voc_ricaduta_area_protetta_v1.0.0.xsd"/>
+
+    <xsd:complexType name="area_protetta_ctype">
+        <xsd:sequence>
+            <xsd:element name="nome_area_protetta" type="ccodelist:CodeType" minOccurs="1" maxOccurs="1" >
+                <xsd:annotation>
+                    <xsd:appinfo>
+                        <canncl:codeListReference>
+                            <canncl:ShortName>IT:SUAP:CL:AreeProtette</canncl:ShortName>
+                        </canncl:codeListReference>
+                    </xsd:appinfo>
+                </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="ricaduta_area_protetta" type="vrac:ricaduta_area_protetta_voc" minOccurs="1" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:element name="area_protetta" type="eap:area_protetta_ctype"/>
+</xsd:schema>

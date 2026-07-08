@@ -1,0 +1,3113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+  xmlns:html="http://www.w3.org/1999/xhtml/">
+  <Identification>
+    <ShortName>IT:SUAP:CL:AreeProtette</ShortName>
+    <LongName>Elenco Aree Protette</LongName>
+    <Version>1.0.0</Version>
+    <CanonicalUri />
+    <CanonicalVersionUri />
+    <Agency>
+      <ShortName>RP</ShortName>
+      <LongName xml:lang="it">Regione Piemonte</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Key Id="codice_amministrativo">
+      <ShortName>codice_amministrativo</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Column Id="codice_euap" Use="required">
+      <ShortName>codice_euap</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="nome_area_protetta" Use="required">
+      <ShortName>nome_area_protetta</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="codice_tipo_area_protetta" Use="required">
+      <ShortName>codice_tipo_area_protetta</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="descr_tipo_area_protetta" Use="required">
+      <ShortName>descr_tipo_area_protetta</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="codice_tipo_patrimonialita" Use="required">
+      <ShortName>codice_tipo_patrimonialita</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="descr_tipo_patrimonialita" Use="required">
+      <ShortName>descr_tipo_patrimonialita</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="codice_ente_gestore" Use="required">
+      <ShortName>codice_ente_gestore</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="descr_ente_gestore" Use="required">
+      <ShortName>descr_ente_gestore</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="codice_tipo_ente" Use="required">
+      <ShortName>codice_tipo_ente</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+    <Column Id="descr_tipo_ente" Use="required">
+      <ShortName>descr_tipo_ente</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0210</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Crea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0882</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Oropa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0360</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Orta</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0359</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Belmonte</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0755</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Domodossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0358</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Ghiffa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0361</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva speciale del Sacro Monte di Varallo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RS</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva speciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>413</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione dei Sacri Monti</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0208</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Gran Bosco di Salbertrand</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a10</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0219</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale delle Capanne di Marcarolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a12</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0220</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale delle Lame del Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a13</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0209</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Monte Fenera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a14</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0218</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Ticino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a15</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0206</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dei Lagoni di Mercurago</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a16</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0221</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale di Rocchetta Tanaro</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a17</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0204</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dell'Alta Val Sesia e Alta Val Strona</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>410</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette della Valle Sesia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1056</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dell'Alpe Veglia e dell'Alpe Devero</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>412</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dell'Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1229</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dell'Alta Valle Antrona</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>412</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dell'Ossola</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18quater</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dell'Alta Val Borbera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18quinquies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18sexies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Bosco della Partecipanza e delle Grange Vercellesi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a18ter</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1253</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0217</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale della Val Troncea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0223</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale Orsiera-Rocciavre'</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0205</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dei Laghi di Avigliana</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0224</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale La Mandria</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0222</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale di Stupinigi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a7</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0215</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale della Collina di Superga</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a8</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1057</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>a9</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0214</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Marguareis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1059</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Lago di Candia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0886</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Monte San Giorgio</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0887</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Monte Tre Denti - Freidour</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0884</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale di Conca Cialancia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0883</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale del Colle del Lys</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0216</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale della Rocca di Cavour</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>b6bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale dei cinque laghi d'Ivrea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>bbis1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco naturale Gesso Stura</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAT</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>416</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Comune di Cuneo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>amministrazione locale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0366</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dell'Orrido di Chianocco</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c17</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1276</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Mulino Vecchio</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c18</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1281</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dell'Isolotto del Ritano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c19</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0357</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Rocca San Giovanni - Saben</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c19bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1230</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale delle Grotte del Bandito</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1058</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dell'Orrido di Foresto</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>400</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Cozie</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c21</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1278</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Paesana</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c22</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1279</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Paracollo, Ponte pesci vivi</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c23</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1272</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale Fontane</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c24</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1265</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Confluenza del Bronda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c25</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1269</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Confluenza del Pellice</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c26</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1271</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Confluenza del Varaita</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c27</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0352</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dei Ciciu del Villar</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c27bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1231</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale Grotte di Bossea</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c28</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0370</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale delle Sorgenti del Belbo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c29</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0365</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Crava-Morozzo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c3</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0348</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Vauda</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c30</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0362</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Torrente Orba</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c37</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0344</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Garzaia di Villarboit</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c38</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0368</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Garzaia di Carisio</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c39</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0350</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Palude di Casalbeltrame</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c39bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1236</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Castelnuovo Scrivia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c4</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0347</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Madonna della Neve sul Monte Lera</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c40</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0345</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Valle Andona, Valle Botto e Valle Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c41</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0369</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Val Sarmassa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c42</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0349</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale delle Baragge</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c44</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0356</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Parco Burcina Felice Piacenza</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c45</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0351</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dei Canneti di Dormelletto</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c46</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0346</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Fondo Toce</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c47</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1197</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Bosco Solivo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49bis</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0367</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Bessa</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49decies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Rio Bragna</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49duodecies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Bosco del Merlino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49novies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale delle Rocche di Antignano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49octies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale degli Stagni di Belangero</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49quater</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0355</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Monte Mesma</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49quaterdecies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1235</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale Spina verde</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49quinquies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0354</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Colle di Buccione</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>409</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Ticino e del Lago Maggiore</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49septies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1234</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Neirone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>406</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dell'Appennino piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49sexies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1254</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale della Grotta di Rio Martino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>405</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Monviso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49ter</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0363</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale di Benevagienna</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49terdecies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale delle Grotte di Aisone</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>403</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette delle Alpi Marittime</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c49undecies</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue></SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Paludo e Rivi di Moasca</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>408</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione del Parco paleontologico astigiano</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c5</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0455</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Ponte del Diavolo</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>401</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette dei Parchi reali</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>c6</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0353</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Bosco del Vaj</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>R</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Regionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>421</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente di gestione delle aree protette del Po piemontese</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>G</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente strumentale regionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>d1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0888</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dello Stagno di Oulx</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>d2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0757</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale dei Monti Pelati</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Provinciale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>414</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Città Metropolitana di Torino</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>P</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>provincia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>e1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP1060</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Riserva naturale del Brich Zumaglia</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>RN</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Riserva naturale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Locale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>417</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Unione Montana Valle Cervo – La Bursch</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>L</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>amministrazione locale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>n1</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0006</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco Nazionale del Gran Paradiso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco nazionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Nazionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>333</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente Parco Nazionale Gran Paradiso</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente parco nazionale</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="codice_amministrativo">
+        <SimpleValue>n2</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_euap">
+        <SimpleValue>EUAP0014</SimpleValue>
+      </Value>
+      <Value ColumnRef="nome_area_protetta">
+        <SimpleValue>Parco Nazionale della Val Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_area_protetta">
+        <SimpleValue>PNAZ</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_area_protetta">
+        <SimpleValue>Parco nazionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_patrimonialita">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_patrimonialita">
+        <SimpleValue>Nazionale</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_ente_gestore">
+        <SimpleValue>334</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_ente_gestore">
+        <SimpleValue>Ente Parco Nazionale della Val Grande</SimpleValue>
+      </Value>
+      <Value ColumnRef="codice_tipo_ente">
+        <SimpleValue>N</SimpleValue>
+      </Value>
+      <Value ColumnRef="descr_tipo_ente">
+        <SimpleValue>ente parco nazionale</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>

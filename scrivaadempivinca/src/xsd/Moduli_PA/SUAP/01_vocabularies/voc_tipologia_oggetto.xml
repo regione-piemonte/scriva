@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<gc:CodeList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:gc="http://docs.oasis-open.org/codelist/ns/genericode/1.0/"
+  xmlns:html="http://www.w3.org/1999/xhtml/">
+  <Identification>
+    <ShortName>IT:SUAP:CL:TipologieOggetto</ShortName>
+    <LongName>Elenco Tipologie Oggetto</LongName>
+    <Version>1.0.0</Version>
+    <CanonicalUri />
+    <CanonicalVersionUri />
+    <Agency>
+      <ShortName>RP</ShortName>
+      <LongName xml:lang="it">Regione Piemonte</LongName>
+    </Agency>
+  </Identification>
+  <ColumnSet>
+    <Key Id="id_tipologia_oggetto">
+      <ShortName>id_tipologia_oggetto</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Key Id="cod_tipologia_oggetto">
+      <ShortName>cod_tipologia_oggetto</ShortName>
+      <Data Type="xsd:string" />
+    </Key>
+    <Column Id="des_tipologia_oggetto" Use="required">
+      <ShortName>des_tipologia_oggetto</ShortName>
+      <Data Type="xsd:string" />
+    </Column>
+  </ColumnSet>
+  <SimpleCodeList>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>500</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>ATT_AGRICOLE</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Attività agricole</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>501</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>ATT_CAVA_MINIERA</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Attività di cava o minerarie</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>502</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>ATT_FORESTALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Attività forestali</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>503</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>MANIFESTAZIONI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Manifestazioni motoristiche, ciclistiche, gare cinofile, eventi artistici, musicali, sportivi, pirotecnici, gare, raduni</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>504</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>MNT_OPERE_ESISTENTI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Manutenzione di opere ed infrastrutture esistenti</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>505</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>MNT_FOSSI_CANALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Manutenzione e sistemazione di fossi, canali, corsi d'acqua</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>506</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>MIGLIORAM_AMBIENTALI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Miglioramenti ambientali</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>507</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>PRD_ENERGIA</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Produzione di energia</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>508</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>NUOVE_OPERE</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Realizzazione ex novo di opere, infrastrutture ed edifici</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>509</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>MNT_EDF</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Ristrutturazione / manutenzione edifici DPR 380/2001</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>510</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>USO_MEZZIMOT_DRONI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Uso mezzi a motore e droni</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>511</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>USO_RISORSE_IDRI</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Uso risorse idriche</SimpleValue>
+      </Value>
+    </Row>
+    <Row>
+      <Value ColumnRef="id_tipologia_oggetto">
+        <SimpleValue>512</SimpleValue>
+      </Value>
+      <Value ColumnRef="cod_tipologia_oggetto">
+        <SimpleValue>ALTRO</SimpleValue>
+      </Value>
+      <Value ColumnRef="des_tipologia_oggetto">
+        <SimpleValue>Altro</SimpleValue>
+      </Value>
+    </Row>
+  </SimpleCodeList>
+</gc:CodeList>
