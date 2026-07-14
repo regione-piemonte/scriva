@@ -11,6 +11,7 @@
            xmlns:spu="../03_sections/progetto_ubicazione"
            xmlns:sproinq="../03_sections/progetto_inquadramento"
            xmlns:sproimp="../03_sections/progetto_impatti"
+           xmlns:savs="../03_sections/allegati_vinca_scr"
 
            targetNamespace="../04_forms/vinca_scr"
            elementFormDefault="qualified" version="1.0.0" xml:lang="it">
@@ -27,6 +28,8 @@
              schemaLocation="../03_sections/sec_progetto_inquadramento_v1.0.0.xsd"/>
   <xsd:import namespace="../03_sections/progetto_impatti"
              schemaLocation="../03_sections/sec_progetto_impatti_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/allegati_vinca_scr"
+             schemaLocation="../03_sections/sec_allegati_vinca_scr_v1.0.0.xsd"/>
 
 
   <xsd:complexType name="mod_vinca_scr_ctype">
@@ -37,6 +40,7 @@
       <xsd:element name="progetto_ubicazione" type="spu:progetto_ubicazione_ctype" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="progetto_inquadramento" type="sproinq:progetto_inquadramento_ctype" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="progetto_impatti" type="sproimp:progetto_impatti_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="allegati_vinca_scr" type="savs:allegati_vinca_scr_ctype" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 

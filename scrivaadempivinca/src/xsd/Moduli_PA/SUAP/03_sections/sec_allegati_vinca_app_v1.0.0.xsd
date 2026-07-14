@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:efile="../02_entities/files"
+  xmlns:sava="../03_sections/allegati_vinca_app"
+  targetNamespace="../03_sections/allegati_vinca_app"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/files" schemaLocation="../02_entities/ent_files_v1.0.6.xsd"/>
+
+  <xsd:complexType name="allegati_vinca_app_ctype">
+    <xsd:sequence>
+      <xsd:element name="delega" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="ricevuta_di_avvenuto_pagamento_dell_imposta_di_bollo" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="documentazione_progettuale_del_P_I_A_comprensiva_della_cantieristica" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="planimetria_di_progetto_intervento_e_delle_eventuali_aree_di_cantiere" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="inquadramento_territoriale_a_scala_adeguata" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="ortofoto_con_localizzazione_delle_aree_di_P_I_A_e_delle_eventuali_aree_di_cantiere" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="documentazione_fotografica_ante_operam" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="piano_di_gestione_forestale_o_equivalente" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="altra_documentazione_fornita" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="documentazione_soggetta_a_segreto_industriale_o_commerciale_d_lgs_152_2006_art_9_comma_4" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="file_vettoriali_shape_della_localizzazione_del_P_I_A" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="relazione_di_incidenza_complessiva" type="efile:file_ctype" minOccurs="1" maxOccurs="unbounded" />
+      <xsd:element name="raccolta_dati_inerenti_i_siti_della_RN2000_interessati_e_specifici_dell_area_interferita" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="analisi_ed_individuazione_delle_incidenze_sui_siti_RN2000" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="valutazione_del_livello_di_significativita_delle_incidenze" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="individuazione_e_descrizione_delle_eventuali_misure_di_mitigazione" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="conclusioni_dello_studio_di_incidenza" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="bibliografia_sitografia" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="allegati_vinca_app" type="sava:allegati_vinca_app_ctype" />
+</xsd:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ##################################################### -->
+<!-- # Copyright Regione Piemonte - 2026                 # -->
+<!-- # SPDX-License-Identifier: CC-BY-4.0                # -->
+<!-- ##################################################### -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:efile="../02_entities/files"
+  xmlns:savs="../03_sections/allegati_vinca_scr"
+  targetNamespace="../03_sections/allegati_vinca_scr"
+  elementFormDefault="qualified" version="1.0.0" xml:lang="it">
+
+  <xsd:import namespace="../02_entities/files" schemaLocation="../02_entities/ent_files_v1.0.6.xsd"/>
+
+  <xsd:complexType name="allegati_vinca_scr_ctype">
+    <xsd:sequence>
+      <xsd:element name="relazione_descrittiva_progetto_intervento_e_dell_eventuale_cantiere" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="planimetria_di_progetto_intervento_e_delle_eventuali_aree_di_cantiere" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="inquadramento_territoriale_a_scala_adeguata" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="ortofoto_con_localizzazione_delle_aree_di_P_I_A_e_delle_eventuali_aree_di_cantiere" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="documentazione_fotografica_ante_operam" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="condizioni_d_obbligo" type="efile:file_ctype" minOccurs="1" maxOccurs="unbounded" />
+      <xsd:element name="piano_di_gestione_forestale_o_equivalente" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="volo_drone_o_altro_velivolo_a_motore" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="cronoprogramma" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="programma_e_organizzazione_dettagliata_per_manifestazioni_gare_ed_eventi" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="altra_documentazione_fornita" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="file_vettoriali_shape_della_localizzazione_del_P_I_A" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="ricevuta_di_avvenuto_pagamento_dell_imposta_di_bollo" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="delega" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+      <xsd:element name="documentazione_soggetta_a_segreto_industriale_o_commerciale_d_lgs_152_2006_art_9_comma_4" type="efile:file_ctype" minOccurs="0" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:element name="allegati_vinca_scr" type="savs:allegati_vinca_scr_ctype" />
+</xsd:schema>

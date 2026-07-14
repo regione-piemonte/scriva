@@ -10,6 +10,7 @@
            xmlns:ssogref="../03_sections/soggetto_referente"
            xmlns:spu="../03_sections/progetto_ubicazione"
            xmlns:sproinqapp="../03_sections/progetto_inquadramento_app"
+           xmlns:sava="../03_sections/allegati_vinca_app"
 
            targetNamespace="../04_forms/vinca_app"
            elementFormDefault="qualified" version="1.0.0" xml:lang="it">
@@ -24,6 +25,8 @@
              schemaLocation="../03_sections/sec_progetto_ubicazione_v1.0.0.xsd"/>
   <xsd:import namespace="../03_sections/progetto_inquadramento_app"
              schemaLocation="../03_sections/sec_progetto_inquadramento_app_v1.0.0.xsd"/>
+  <xsd:import namespace="../03_sections/allegati_vinca_app"
+             schemaLocation="../03_sections/sec_allegati_vinca_app_v1.0.0.xsd"/>
 
 
   <xsd:complexType name="mod_vinca_app_ctype">
@@ -33,6 +36,7 @@
       <xsd:element name="soggetto_referente" type="ssogref:soggetto_referente_ctype" minOccurs="0" maxOccurs="unbounded"/>
       <xsd:element name="progetto_ubicazione" type="spu:progetto_ubicazione_ctype" minOccurs="1" maxOccurs="1"/>
       <xsd:element name="progetto_inquadramento_app" type="sproinqapp:progetto_inquadramento_app_ctype" minOccurs="1" maxOccurs="1"/>
+      <xsd:element name="allegati_vinca_app" type="sava:allegati_vinca_app_ctype" minOccurs="1" maxOccurs="1"/>
     </xsd:sequence>
   </xsd:complexType>
 
